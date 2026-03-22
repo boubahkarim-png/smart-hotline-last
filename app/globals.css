@@ -1,5 +1,9 @@
 @import "tailwindcss";
+@source "../app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../hooks/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../lib/**/*.{js,ts,jsx,tsx,mdx}";
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #0f172a; background: #fff; }
+body { font-family: system-ui, -apple-system, sans-serif; color: #0f172a; background: #fff; }
