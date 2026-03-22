@@ -1,59 +1,77 @@
+'use client'
 import Link from 'next/link'
-import type { Metadata } from 'next'
+import { useGeo } from '@/hooks/useGeo'
+import { CONTACT } from '@/lib/nav'
 
-export const metadata: Metadata = {
-  title: "Agents IA Vocaux 24/7 | Smart Hotline Agency",
-  description: "Sophie, votre agente IA vocale en francais natif. Repond en 2 secondes, disponible 24/7.",
+const FEATURES = [
+  {'icon': '📞', 'title': 'Réponse instantanée', 'desc': 'Moins de 2 secondes, 24h/24, 7j/7, sans temps d’attente.'},
+  {'icon': '🗓️', 'title': 'Prise de rendez-vous', 'desc': 'Synchronisé avec Google Calendar, Calendly. Confirmation auto.'},
+  {'icon': '❓', 'title': 'FAQ automatisée', 'desc': 'Répond aux questions fréquentes : horaires, tarifs, adresse.'},
+  {'icon': '🔄', 'title': 'Transfert intelligent', 'desc': 'Détecte les situations complexes, transfert vers conseiller.'},
+  {'icon': '📝', 'title': 'Prise de messages', 'desc': 'Enregistre nom, numéro, motif — transmis par email ou CRM.'},
+  {'icon': '📊', 'title': 'Transcriptions & analyses', 'desc': 'Chaque appel transcrit. Tendances et insights mensuels.'},
+]
+const STEPS = [
+  {'n': '1', 't': 'Configuration de Sophie', 'd': 'Personnalisation de la voix, du script et de la base de connaissance.'},
+  {'n': '2', 't': 'Test & validation', 'd': 'Simulation d’appels réels pour valider les réponses.'},
+  {'n': '3', 't': 'Intégration', 'd': 'Connexion à votre numéro existant en moins de 24h.'},
+  {'n': '4', 't': 'Go live & optimisation', 'd': 'Sophie gère vos appels. Tableau de bord en temps réel.'},
+]
+
+function CTAButtons({ slug }: { slug: string }) {
+  const { geo, loading } = useGeo()
+  const showPhone = !loading && geo.showPhone
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 mb-6">
+      <Link href={`/fr/contact?service=${slug}`}
+        className="bg-white text-violet-800 font-bold px-7 py-3.5 rounded-xl hover:bg-violet-50 text-center shadow-lg">
+        Démo Sans Engagement
+      </Link>
+      {showPhone ? (
+        <a href={`tel:${CONTACT.phone}`}
+          className="border-2 border-white text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white text-violet-800 transition-all text-center">
+          {CONTACT.phoneDisplay}
+        </a>
+      ) : (
+        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
+          className="border-2 border-white text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white text-violet-800 transition-all text-center">
+          💬 WhatsApp 24/7
+        </a>
+      )}
+    </div>
+  )
 }
 
-export default function AgentsIA() {
+export default function Page() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 to-purple-700 text-white py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-slate-900 to-violet-800 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-[55%]">
-              <span className="inline-block bg-purple-500 bg-opacity-50 text-purple-100 text-sm px-3 py-1 rounded-full mb-5">
-                🤖 Nouveau — Agents IA Vocaux
+              <span className="inline-block bg-white bg-opacity-20 text-white text-sm px-3 py-1 rounded-full mb-5">
+                🤖 Agents IA Vocaux
               </span>
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
-                Sophie, votre Agente IA<br/>24/7 en Francais Natif
+              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight">
+                Sophie, votre IA<br/>en Français Natif 24/7
               </h1>
-              <p className="text-lg text-purple-100 mb-8">
-                Reponse en moins de 2 secondes. Francais natif Quebec, France, Belgique. Jusqu&apos;a 70% moins cher qu&apos;un agent traditionnel. Transfert vers conseiller si besoin.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <Link href="/fr/contact?service=ia"
-                  className="bg-white text-purple-700 font-bold px-7 py-3.5 rounded-xl hover:bg-purple-50 text-center shadow-lg">
-                  Demo Gratuite
-                </Link>
-                <Link href="/fr/tarifs"
-                  className="border-2 border-white text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white hover:text-purple-700 text-center">
-                  Voir les Tarifs
-                </Link>
-              </div>
+              <p className="text-lg text-white text-opacity-90 mb-8">Réponse en moins de 2 secondes. Français natif Québec, France, Belgique, Suisse. Jusqu’à 70% moins cher qu’un agent traditionnel.</p>
+              <CTAButtons slug="ia"/>
               <div className="flex flex-wrap gap-3">
-                {["Reponse 2 sec", "Francais natif", "24/7", "-70% couts"].map(b => (
-                  <span key={b} className="bg-white bg-opacity-15 text-sm px-3 py-1.5 rounded-full">✓ {b}</span>
+                {['Réponse 2 sec', 'Français natif', '24/7', 'Tarif/minute'].map(b => (
+                  <span key={b} className="bg-white bg-opacity-15 text-sm px-3 py-1.5 rounded-full">&#10003; {b}</span>
                 ))}
               </div>
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80"
-                  alt="Agent IA Sophie"
+                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80" alt="Agent IA Sophie"
                   className="rounded-2xl shadow-2xl w-full object-cover"
-                  style={{maxHeight:'380px', objectFit:'cover'}}
-                />
-                <div className="absolute -bottom-4 -left-4 bg-white text-gray-900 rounded-xl p-3.5 shadow-xl">
+                  style={{maxHeight:'380px', objectFit:'cover'}}/>
+                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-lg">⚡</div>
-                    <div>
-                      <p className="font-bold text-sm">&lt; 2 secondes</p>
-                      <p className="text-xs text-gray-500">temps de reponse</p>
-                    </div>
+                    <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-xl">⚡</div>
+                    <div><p className="font-black text-sm">{"< 2 secondes"}</p><p className="text-slate-500 text-xs">temps de réponse</p></div>
                   </div>
                 </div>
               </div>
@@ -62,123 +80,47 @@ export default function AgentsIA() {
         </div>
       </section>
 
-      {/* AI vs Human comparison */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">IA vs Agent Traditionnel</h2>
-            <div className="w-16 h-1 bg-purple-600 mx-auto rounded"/>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="text-left p-4 font-semibold">Critere</th>
-                  <th className="text-center p-4 font-semibold text-purple-600">Sophie IA</th>
-                  <th className="text-center p-4 font-semibold text-gray-500">Agent Classique</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Disponibilite", "24/7/365", "Horaires limites"],
-                  ["Temps de reponse", "< 2 secondes", "20-40 secondes"],
-                  ["Cout moyen", "CA$7-9/h", "CA$19-25/h"],
-                  ["Volume simultane", "Illimite", "1 appel a la fois"],
-                  ["Formation", "Immediate", "2-4 semaines"],
-                  ["Langues", "FR natif + EN", "Selon conseiller"],
-                ].map(([crit, ai, human], i) => (
-                  <tr key={crit} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="p-4 font-medium">{crit}</td>
-                    <td className="p-4 text-center text-purple-600 font-semibold">{ai}</td>
-                    <td className="p-4 text-center text-gray-500">{human}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[40%]">
-              <img
-                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80"
-                alt="IA vocale technologie"
-                className="rounded-2xl shadow-xl w-full object-cover"
-                style={{maxHeight:'360px', objectFit:'cover'}}
-              />
-            </div>
-            <div className="w-full lg:w-[55%]">
-              <h2 className="text-3xl font-bold mb-6">Tout ce que fait Sophie</h2>
-              {[
-                { icon: "📞", t: "Reponse instantanee", d: "Repond en moins de 2 secondes, 24h/24, 7j/7, sans temps d&apos;attente." },
-                { icon: "🗓️", t: "Prise de rendez-vous", d: "Synchronise avec Google Calendar, Calendly. Confirmation automatique." },
-                { icon: "❓", t: "FAQ automatisee", d: "Repond aux questions frequentes: horaires, tarifs, adresse, services." },
-                { icon: "🔄", t: "Transfert intelligent", d: "Detecte les situations complexes et transfere vers conseiller humain." },
-                { icon: "📝", t: "Prise de messages", d: "Enregistre nom, numero, motif — transmis par email ou CRM." },
-                { icon: "📊", t: "Rapports detailles", d: "Chaque appel transcrit et analyse. Tendances et insights mensuels." },
-              ].map(({icon, t, d}) => (
-                <div key={t} className="flex gap-4 mb-5">
-                  <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center text-xl flex-shrink-0">{icon}</div>
-                  <div>
-                    <h3 className="font-bold mb-1">{t}</h3>
-                    <p className="text-gray-500 text-sm" dangerouslySetInnerHTML={{__html: d}}/>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-20 bg-purple-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">Tarifs Agents IA</h2>
-            <p className="text-gray-500">Jusqu&apos;a 70% moins cher qu&apos;un agent traditionnel</p>
-            <div className="w-16 h-1 bg-purple-600 mx-auto rounded mt-3"/>
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
+            <div className="w-16 h-1 bg-violet-600 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              {name:"Starter", price:"7", desc:"Ideal PME < 200 appels/mois"},
-              {name:"Professional", price:"9", desc:"PME 200-800 appels/mois"},
-              {name:"Business", price:"8", desc:"800-2000 appels/mois", pop:true},
-              {name:"Enterprise", price:"7", desc:"Volume illimite"},
-            ].map(({name, price, desc, pop}) => (
-              <div key={name} className={`bg-white rounded-2xl p-6 relative ${pop ? 'border-2 border-purple-500 shadow-xl' : 'border border-gray-200'}`}>
-                {pop && <div className="absolute -top-3.5 left-1/2 -translate-x-1/2"><span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Populaire</span></div>}
-                <div className="text-3xl mb-3">🤖</div>
-                <h3 className="font-bold mb-1">{name}</h3>
-                <p className="text-gray-500 text-xs mb-3">{desc}</p>
-                <div className="text-4xl font-extrabold text-purple-600 mb-1">CA${price}</div>
-                <p className="text-gray-400 text-sm mb-5">/heure</p>
-                <Link href={`/fr/contact?plan=ia-${name.toLowerCase()}`}
-                  className={`block text-center py-2.5 rounded-lg font-semibold text-sm ${pop ? 'bg-purple-600 text-white hover:bg-purple-700' : 'border-2 border-purple-600 text-purple-600 hover:bg-purple-50'}`}>
-                  Choisir
-                </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {FEATURES.map(({icon, title, desc}: any) => (
+              <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+                <div className="text-3xl mb-4">{icon}</div>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{title}</h3>
+                <p className="text-slate-500 text-sm">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-gradient-to-br from-purple-900 to-purple-600 py-16">
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">Comment ça fonctionne</h2>
+          {STEPS.map(({n, t, d}: any) => (
+            <div key={n} className="flex gap-5 mb-8 items-start">
+              <div className="w-12 h-12 bg-violet-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
+              <div className="pt-1">
+                <h3 className="font-bold text-slate-900 text-lg mb-1">{t}</h3>
+                <p className="text-slate-500">{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-br from-slate-900 to-violet-800 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-bold mb-3">Essayez Sophie gratuitement</h2>
-          <p className="text-purple-100 mb-8">Demo en direct. Aucune carte de credit requise.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/fr/contact" className="bg-white text-purple-700 font-bold px-8 py-4 rounded-xl hover:bg-purple-50">
-              Demo Gratuite
-            </Link>
-            <a href="https://wa.me/15148190559" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-purple-700">
-              WhatsApp 24/7
-            </a>
-          </div>
+          <h2 className="text-3xl font-black mb-3">Prêt à démarrer?</h2>
+          <p className="text-white text-opacity-80 mb-8">Essai 2 semaines — sans engagement.</p>
+          <CTAButtons slug="ia"/>
+          <p className="text-white text-opacity-60 text-sm mt-4">
+            <Link href="/fr/tarifs" className="underline hover:text-white">Voir tous les tarifs</Link>
+          </p>
         </div>
       </section>
     </>
