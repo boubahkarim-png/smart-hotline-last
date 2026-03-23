@@ -1,19 +1,15 @@
+'use client'
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: "Smart Hotline Agency | Centre d'Appels & IA pour PME",
-  description: "Centre d'appels externalisé pour PME. Conseillers & agents IA vocaux 24/7.",
-}
+import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, UsersIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const SERVICES = [
-  { icon: '', title: 'Appels Entrants',  desc: 'Réception 24/7. Zéro appel manqué.', href: '/fr/reception', bg: 'bg-blue-100', color: 'text-blue-700' },
-  { icon: '', title: 'Appels Sortants',  desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
-  { icon: '', title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
-  { icon: '', title: 'Support Client',   desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
-  { icon: '️', title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-indigo-100', color: 'text-indigo-700' },
+  { Icon: PhoneIcon, title: 'Appels Entrants', desc: 'Réception 24/7. Zéro appel manqué.', href: '/fr/reception', bg: 'bg-blue-100', color: 'text-blue-700' },
+  { Icon: MegaphoneIcon, title: 'Appels Sortants', desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
+  { Icon: BotIcon, title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
+  { Icon: HeadphonesIcon, title: 'Support Client', desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
+  { Icon: DatabaseIcon, title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-indigo-100', color: 'text-indigo-700' },
 ]
 
 const STEPS = [
@@ -58,13 +54,13 @@ export default function FrHome() {
               <div className="mt-6 mb-8">
                 <GeoAwareCTA lang="fr"/>
               </div>
-              <div className="flex flex-wrap gap-3">
-                {['Essai 2 semaines', 'RGPD conforme', '24/7', 'Setup 48h'].map(b => (
-                  <span key={b} className="flex items-center gap-1.5 bg-white/10 border border-white/10 text-slate-200 text-sm px-3 py-1.5 rounded-full">
-                    &#10003; {b}
-                  </span>
-                ))}
-              </div>
+<div className="flex flex-wrap gap-3">
+      {[{icon: ClockIcon, text: 'Essai 2 semaines'}, {icon: ShieldCheckIcon, text: 'RGPD conforme'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
+        <span key={text} className="flex items-center gap-1.5 bg-white/10 border border-white/10 text-slate-200 text-sm px-3 py-1.5 rounded-full">
+          <Icon className="w-4 h-4" /> {text}
+        </span>
+      ))}
+      </div>
             </div>
             {/* IMAGE RIGHT 40% */}
             <div className="w-full lg:w-[40%]">
@@ -73,15 +69,17 @@ export default function FrHome() {
                   alt="Equipe Smart Hotline"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">&#9989;</div>
-                    <div>
-                      <p className="font-black text-slate-900 text-xl leading-none">500+</p>
-                      <p className="text-slate-500 text-xs mt-0.5">PME satisfaites</p>
-                    </div>
-                  </div>
-                </div>
+<div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+            <CheckIcon className="w-6 h-6 text-green-600" />
+          </div>
+          <div>
+            <p className="font-black text-slate-900 text-xl leading-none">500+</p>
+            <p className="text-slate-500 text-xs mt-0.5">PME satisfaites</p>
+          </div>
+        </div>
+      </div>
                 <div className="absolute -top-5 -right-5 bg-violet-600 rounded-2xl p-4 shadow-xl text-white">
                   <p className="font-black text-2xl leading-none">98%</p>
                   <p className="text-violet-200 text-xs mt-0.5">Satisfaction</p>
@@ -112,19 +110,21 @@ export default function FrHome() {
             <p className="text-slate-500 text-lg">Tout ce dont votre PME a besoin pour sa relation client</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-            {SERVICES.map(({ icon, title, desc, href, bg, color, badge }: any) => (
-              <Link key={href} href={href}
-                className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
-                <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center text-2xl mb-4`}>{icon}</div>
-                <div className="flex items-start gap-2 mb-2">
-                  <h3 className="font-bold text-slate-900">{title}</h3>
-                  {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
-                </div>
-                <p className="text-slate-500 text-sm mb-3">{desc}</p>
-                <span className="text-blue-700 text-sm font-semibold group-hover:underline">En savoir plus &#8594;</span>
-              </Link>
-            ))}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+      {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any) => (
+        <Link key={href} href={href}
+          className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
+            <Icon className={`w-6 h-6 ${color}`} />
+          </div>
+          <div className="flex items-start gap-2 mb-2">
+            <h3 className="font-bold text-slate-900">{title}</h3>
+            {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
+          </div>
+          <p className="text-slate-500 text-sm mb-3">{desc}</p>
+          <span className="text-blue-700 text-sm font-semibold group-hover:underline">En savoir plus →</span>
+        </Link>
+      ))}
           </div>
         </div>
       </section>
@@ -144,13 +144,17 @@ export default function FrHome() {
                 R&#233;ponse en moins de 2 secondes. Fran&#231;ais natif Qu&#233;bec, France, Belgique, Suisse.
                 Jusqu&#39;&#224; 70% moins cher qu&#39;un agent traditionnel.
               </p>
-              <ul className="space-y-3 mb-8">
-                {['Réponse en moins de 2 secondes','Français natif multi-région','Transfert intelligent vers conseiller','Jusqu’à 70% moins cher','Disponible 24/7 sans temps d’attente'].map(f => (
-                  <li key={f} className="flex items-center gap-3 text-slate-700">
-                    <span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">&#10003;</span>
-                    {f}
-                  </li>
-                ))}
+<ul className="space-y-3 mb-8">
+      {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => {
+        const features = ['Réponse en moins de 2 secondes', 'Français natif multi-région', 'Transfert intelligent vers conseiller', 'Jusqu\'à 70% moins cher', 'Disponible 24/7 sans temps d\'attente']
+        return (
+        <li key={i} className="flex items-center gap-3 text-slate-700">
+          <span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <Icon className="w-4 h-4" />
+          </span>
+          {features[i]}
+        </li>
+      )})}
               </ul>
               <Link href="/fr/agents-ia" className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-violet-700 transition-colors">
                 Découvrir les Agents IA &#8594;
@@ -195,9 +199,9 @@ export default function FrHome() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map(({ q, name, role, av }) => (
               <div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <div className="flex gap-0.5 mb-4">
-                  {[0,1,2,3,4].map(i => <span key={i} className="text-amber-400 text-lg">&#9733;</span>)}
-                </div>
+<div className="flex gap-0.5 mb-4">
+        {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
+      </div>
                 <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{q}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>

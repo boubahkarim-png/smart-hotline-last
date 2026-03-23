@@ -34,7 +34,7 @@ export const PRICES: Record<Currency, CurrencyConfig> = {
     crm: [289, 439, 699],
   },
   EUR: {
-    symbol: '\u20ac', code: 'EUR', locale: 'fr-FR',
+    symbol: '€', code: 'EUR', locale: 'fr-FR',
     outbound_trial: 11,
     outbound: [13, 12, 11, 10],
     ai_per_min: [0.09, 0.11, 0.08, 0.07],
@@ -52,7 +52,7 @@ export const PRICES: Record<Currency, CurrencyConfig> = {
     crm: [249, 379, 599],
   },
   CHF: {
-    symbol: 'CHF\u00a0', code: 'CHF', locale: 'fr-CH',
+    symbol: 'CHF ', code: 'CHF', locale: 'fr-CH',
     outbound_trial: 12,
     outbound: [15, 14, 13, 12],
     ai_per_min: [0.11, 0.14, 0.10, 0.08],
