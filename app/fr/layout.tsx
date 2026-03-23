@@ -4,7 +4,7 @@ import Popup from '@/components/Popup'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Smart Hotline Agency | Centre d\u2019Appels & IA pour PME',
+  title: 'Smart Hotline Agency | Centre d’Appels & IA pour PME',
   description: 'Externalisez votre relation client. Conseillers professionnels et IA 24/7.',
 }
 

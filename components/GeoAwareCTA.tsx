@@ -16,7 +16,7 @@ export default function GeoAwareCTA({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
       <div className="flex flex-col sm:flex-row gap-3 mb-4">
         <Link href={contactHref}
           className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-7 py-4 rounded-xl hover:bg-blue-50 shadow-xl transition-all">
-          {fr ? 'D\u00e9mo Sans Engagement' : 'Free Demo'} &rarr;
+          {fr ? 'Démo Sans Engagement' : 'Free Demo'} &rarr;
         </Link>
         {showPhone ? (
           <a href={"tel:" + CONTACT.phone}
@@ -34,14 +34,14 @@ export default function GeoAwareCTA({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
         {!loading && (
           <>
             <span className="text-blue-200">
-              {fr ? `Essai 2 semaines \u2014 ${sym}${trial}/h` : `2-week trial \u2014 ${sym}${trial}/h`}
+              {fr ? `Essai 2 semaines — ${sym}${trial}/h` : `2-week trial — ${sym}${trial}/h`}
             </span>
             <span className="text-blue-300 text-xs">{content.marketNote}</span>
           </>
         )}
         <a href={CONTACT.calendly} target="_blank" rel="noopener noreferrer"
           className="text-blue-300 hover:text-white transition-colors underline underline-offset-2 text-xs">
-          &#128197; {fr ? 'R\u00e9server une consultation' : 'Book a consultation'}
+          &#128197; {fr ? 'Réserver une consultation' : 'Book a consultation'}
         </a>
       </div>
     </div>

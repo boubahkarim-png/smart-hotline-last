@@ -80,8 +80,8 @@ export default function Tarifs() {
       <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-extrabold mb-4">Tarifs Transparents</h1>
-          <p className="text-xl text-blue-200 mb-4">20 \u00e0 40% moins chers que le march\u00e9</p>
-          <p className="text-blue-300 text-sm">Prix adapt\u00e9s automatiquement \u00e0 votre r\u00e9gion</p>
+          <p className="text-xl text-blue-200 mb-4">20 à 40% moins chers que le marché</p>
+          <p className="text-blue-300 text-sm">Prix adaptés automatiquement à votre région</p>
         </div>
       </section>
 
@@ -89,33 +89,33 @@ export default function Tarifs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* OUTBOUND */}
-          <PricingSlider title="Appels Sortants" subtitle="Conseillers professionnels \u2014 facturation \u00e0 l\u2019heure" accentColor="bg-blue-700">
+          <PricingSlider title="Appels Sortants" subtitle="Conseillers professionnels — facturation à l’heure" accentColor="bg-blue-700">
 
             {/* Trial card */}
             <div className="flex-shrink-0 w-72 snap-start bg-amber-50 border-2 border-amber-300 rounded-2xl p-6 relative">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                 <span className="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Offre Essai</span>
               </div>
-              <h3 className="font-bold text-lg text-slate-900 mb-1">D\u00e9marrage</h3>
+              <h3 className="font-bold text-lg text-slate-900 mb-1">Démarrage</h3>
               <p className="text-slate-500 text-sm mb-4 min-h-[40px]">20h/semaine, 2 semaines</p>
               <div className="mb-1">
                 <span className="text-4xl font-extrabold text-amber-600">{fmt(prices.outbound_trial)}</span>
               </div>
               <p className="text-slate-400 text-sm mb-3">/heure</p>
               <p className="text-amber-700 text-xs font-semibold bg-amber-100 rounded-lg p-2 mb-5">
-                OU : 1 semaine offerte \u2014 payez seulement 3 semaines
+                OU : 1 semaine offerte — payez seulement 3 semaines
               </p>
               <Link href="/fr/contact?plan=essai"
                 className="block text-center py-2.5 px-4 rounded-xl font-semibold text-sm bg-amber-500 text-white hover:bg-amber-600">
-                D\u00e9marrer l\u2019Essai
+                Démarrer l’Essai
               </Link>
             </div>
 
             {[
-              { name: "Starter", desc: "20h/semaine", i: 0, features: ["Conseiller d\u00e9di\u00e9", "Scripts sur mesure", "Rapport quotidien"] },
-              { name: "Professionnel", desc: "40h/semaine", i: 1, popular: true, features: ["2 conseillers", "CRM int\u00e9gr\u00e9", "Rapport temps r\u00e9el"] },
-              { name: "Business", desc: "80h/semaine", i: 2, features: ["4 conseillers", "Manager d\u00e9di\u00e9", "SLA garanti"] },
-              { name: "Enterprise", desc: "120h/semaine \u2014 3 agents", i: 3, features: ["6 conseillers", "Account manager", "Tarif d\u00e9gressif"] },
+              { name: "Starter", desc: "20h/semaine", i: 0, features: ["Conseiller dédié", "Scripts sur mesure", "Rapport quotidien"] },
+              { name: "Professionnel", desc: "40h/semaine", i: 1, popular: true, features: ["2 conseillers", "CRM intégré", "Rapport temps réel"] },
+              { name: "Business", desc: "80h/semaine", i: 2, features: ["4 conseillers", "Manager dédié", "SLA garanti"] },
+              { name: "Enterprise", desc: "120h/semaine — 3 agents", i: 3, features: ["6 conseillers", "Account manager", "Tarif dégressif"] },
             ].map(({ name, desc, i, popular, features }) => (
               <PricingCard key={name}
                 name={name} desc={desc}
@@ -130,13 +130,13 @@ export default function Tarifs() {
           {/* AI AGENTS */}
           <PricingSlider
             title="Agents IA Vocaux"
-            subtitle="Tarification \u00e0 la minute \u2014 march\u00e9 -30% \u2014 disponible 24/7"
+            subtitle="Tarification à la minute — marché -30% — disponible 24/7"
             accentColor="bg-violet-600">
             {[
-              { name: "Starter", desc: "Jusqu\u2019\u00e0 1\u00a0000 min/mois", i: 0, features: ["R\u00e9ponse < 2 sec", "Fran\u00e7ais natif", "Prise de messages"] },
-              { name: "Professionnel", desc: "Jusqu\u2019\u00e0 3\u00a0000 min/mois", i: 1, popular: true, features: ["Tout Starter +", "Prise de RDV", "Int\u00e9gration CRM"] },
-              { name: "Business", desc: "Jusqu\u2019\u00e0 8\u00a0000 min/mois", i: 2, features: ["Tout Pro +", "Transfert conseiller", "Tableau de bord"] },
-              { name: "Enterprise", desc: "Volume illimit\u00e9", i: 3, features: ["Tout Business +", "SLA 99.9%", "Support prioritaire"] },
+              { name: "Starter", desc: "Jusqu’à 1 000 min/mois", i: 0, features: ["Réponse < 2 sec", "Français natif", "Prise de messages"] },
+              { name: "Professionnel", desc: "Jusqu’à 3 000 min/mois", i: 1, popular: true, features: ["Tout Starter +", "Prise de RDV", "Intégration CRM"] },
+              { name: "Business", desc: "Jusqu’à 8 000 min/mois", i: 2, features: ["Tout Pro +", "Transfert conseiller", "Tableau de bord"] },
+              { name: "Enterprise", desc: "Volume illimité", i: 3, features: ["Tout Business +", "SLA 99.9%", "Support prioritaire"] },
             ].map(({ name, desc, i, popular, features }) => (
               <PricingCard key={name}
                 name={name} desc={desc}
@@ -149,11 +149,11 @@ export default function Tarifs() {
           </PricingSlider>
 
           {/* INBOUND */}
-          <PricingSlider title="Appels Entrants" subtitle="Forfaits mensuels \u2014 conseillers d\u00e9di\u00e9s" accentColor="bg-teal-600">
+          <PricingSlider title="Appels Entrants" subtitle="Forfaits mensuels — conseillers dédiés" accentColor="bg-teal-600">
             {[
-              { name: "Basic", desc: "Jusqu\u2019\u00e0 500 appels/mois", i: 0, features: ["R\u00e9ception 24/7", "Bilingue FR/EN", "Rapport mensuel"] },
-              { name: "Advanced", desc: "Jusqu\u2019\u00e0 1\u00a0500 appels/mois", i: 1, popular: true, features: ["Tout Basic +", "Transfert intelligent", "Rapport hebdo"] },
-              { name: "Premium", desc: "Jusqu\u2019\u00e0 2\u00a0500 appels/mois", i: 2, features: ["Tout Advanced +", "Conseiller d\u00e9di\u00e9", "SLA garanti"] },
+              { name: "Basic", desc: "Jusqu’à 500 appels/mois", i: 0, features: ["Réception 24/7", "Bilingue FR/EN", "Rapport mensuel"] },
+              { name: "Advanced", desc: "Jusqu’à 1 500 appels/mois", i: 1, popular: true, features: ["Tout Basic +", "Transfert intelligent", "Rapport hebdo"] },
+              { name: "Premium", desc: "Jusqu’à 2 500 appels/mois", i: 2, features: ["Tout Advanced +", "Conseiller dédié", "SLA garanti"] },
             ].map(({ name, desc, i, popular, features }) => (
               <PricingCard key={name}
                 name={name} desc={desc}
@@ -166,11 +166,11 @@ export default function Tarifs() {
           </PricingSlider>
 
           {/* SUPPORT */}
-          <PricingSlider title="Support Client" subtitle="Tickets, email, chat \u2014 multi-canal" accentColor="bg-cyan-600">
+          <PricingSlider title="Support Client" subtitle="Tickets, email, chat — multi-canal" accentColor="bg-cyan-600">
             {[
-              { name: "Basic", desc: "Jusqu\u2019\u00e0 300 tickets/mois", i: 0, features: ["Email + t\u00e9l\u00e9phone", "Rapport mensuel", "R\u00e9ponse < 8h"] },
-              { name: "Pro", desc: "Jusqu\u2019\u00e0 800 tickets/mois", i: 1, popular: true, features: ["Tout Basic +", "Chat live", "R\u00e9ponse < 4h"] },
-              { name: "Premium", desc: "Volume illimit\u00e9", i: 2, features: ["Tout Pro +", "WhatsApp Business", "R\u00e9ponse < 2h"] },
+              { name: "Basic", desc: "Jusqu’à 300 tickets/mois", i: 0, features: ["Email + téléphone", "Rapport mensuel", "Réponse < 8h"] },
+              { name: "Pro", desc: "Jusqu’à 800 tickets/mois", i: 1, popular: true, features: ["Tout Basic +", "Chat live", "Réponse < 4h"] },
+              { name: "Premium", desc: "Volume illimité", i: 2, features: ["Tout Pro +", "WhatsApp Business", "Réponse < 2h"] },
             ].map(({ name, desc, i, popular, features }) => (
               <PricingCard key={name}
                 name={name} desc={desc}
@@ -183,11 +183,11 @@ export default function Tarifs() {
           </PricingSlider>
 
           {/* CRM */}
-          <PricingSlider title="CRM & Listes" subtitle="SuiteCRM int\u00e9gr\u00e9 + listes de prospection" accentColor="bg-indigo-600">
+          <PricingSlider title="CRM & Listes" subtitle="SuiteCRM intégré + listes de prospection" accentColor="bg-indigo-600">
             {[
-              { name: "Starter", desc: "500 contacts/mois", i: 0, features: ["CRM SuiteCRM", "500 leads/mois", "Int\u00e9gration email"] },
-              { name: "Pro", desc: "2\u00a0000 contacts + listes", i: 1, popular: true, features: ["Tout Starter +", "Listes B2B/B2C", "Automatisations"] },
-              { name: "Enterprise", desc: "Illimit\u00e9 + sur mesure", i: 2, features: ["Tout Pro +", "Int\u00e9grations custom", "Account manager"] },
+              { name: "Starter", desc: "500 contacts/mois", i: 0, features: ["CRM SuiteCRM", "500 leads/mois", "Intégration email"] },
+              { name: "Pro", desc: "2 000 contacts + listes", i: 1, popular: true, features: ["Tout Starter +", "Listes B2B/B2C", "Automatisations"] },
+              { name: "Enterprise", desc: "Illimité + sur mesure", i: 2, features: ["Tout Pro +", "Intégrations custom", "Account manager"] },
             ].map(({ name, desc, i, popular, features }) => (
               <PricingCard key={name}
                 name={name} desc={desc}
@@ -201,8 +201,8 @@ export default function Tarifs() {
 
           {/* Custom */}
           <div className="text-center bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl p-12 text-white">
-            <h3 className="text-2xl font-bold mb-3">Volume sup\u00e9rieur ou solution sur mesure?</h3>
-            <p className="text-blue-200 mb-8">Nous cr\u00e9ons des offres personnalis\u00e9es pour les grandes \u00e9quipes et les besoins sp\u00e9cifiques.</p>
+            <h3 className="text-2xl font-bold mb-3">Volume supérieur ou solution sur mesure?</h3>
+            <p className="text-blue-200 mb-8">Nous créons des offres personnalisées pour les grandes équipes et les besoins spécifiques.</p>
             <Link href="/fr/contact?plan=sur-mesure"
               className="inline-block bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               Demander un Devis

@@ -5,28 +5,28 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Smart Hotline Agency | Centre d'Appels & IA pour PME",
-  description: "Centre d'appels externalis\u00e9 pour PME. Conseillers & agents IA vocaux 24/7.",
+  description: "Centre d'appels externalisé pour PME. Conseillers & agents IA vocaux 24/7.",
 }
 
 const SERVICES = [
-  { icon: '', title: 'Appels Entrants',  desc: 'R\u00e9ception 24/7. Z\u00e9ro appel manqu\u00e9.', href: '/fr/reception', bg: 'bg-blue-100', color: 'text-blue-700' },
-  { icon: '', title: 'Appels Sortants',  desc: 'Prospection & leads qualifi\u00e9s.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
-  { icon: '', title: 'Agents IA Vocaux', desc: 'Sophie r\u00e9pond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
+  { icon: '', title: 'Appels Entrants',  desc: 'Réception 24/7. Zéro appel manqué.', href: '/fr/reception', bg: 'bg-blue-100', color: 'text-blue-700' },
+  { icon: '', title: 'Appels Sortants',  desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
+  { icon: '', title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
   { icon: '', title: 'Support Client',   desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
-  { icon: '\ufe0f', title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-indigo-100', color: 'text-indigo-700' },
+  { icon: '️', title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-indigo-100', color: 'text-indigo-700' },
 ]
 
 const STEPS = [
   { n: '1', t: 'Consultation', d: 'Analyse gratuite de vos besoins en 30 min' },
-  { n: '2', t: 'Personnalisation', d: 'Scripts et configuration \u00e0 votre image' },
-  { n: '3', t: 'D\u00e9marrage 48h', d: 'Vos appels pris en charge rapidement' },
-  { n: '4', t: 'Suivi continu', d: 'Rapports, optimisation et support d\u00e9di\u00e9' },
+  { n: '2', t: 'Personnalisation', d: 'Scripts et configuration à votre image' },
+  { n: '3', t: 'Démarrage 48h', d: 'Vos appels pris en charge rapidement' },
+  { n: '4', t: 'Suivi continu', d: 'Rapports, optimisation et support dédié' },
 ]
 
 const TESTIMONIALS = [
-  { q: 'Smart Hotline nous a permis de para\u00eetre plus grand. Service vraiment impressionnant pour notre PME.', name: 'Marc Lefebvre', role: 'Fondateur, TechInnov', av: 'ML' },
-  { q: 'ROI incroyable. Plus aucune opportunit\u00e9 manqu\u00e9e depuis que nous travaillons ensemble.', name: 'Sophie Dubois', role: 'Directrice, Cabinet Comptable', av: 'SD' },
-  { q: 'Un des meilleurs investissements. Gestion totale de mes appels et leads qualifi\u00e9s.', name: 'Jean-Pierre Tremblay', role: 'Propri\u00e9taire, Restaurant Le Gourmet', av: 'JT' },
+  { q: 'Smart Hotline nous a permis de paraître plus grand. Service vraiment impressionnant pour notre PME.', name: 'Marc Lefebvre', role: 'Fondateur, TechInnov', av: 'ML' },
+  { q: 'ROI incroyable. Plus aucune opportunité manquée depuis que nous travaillons ensemble.', name: 'Sophie Dubois', role: 'Directrice, Cabinet Comptable', av: 'SD' },
+  { q: 'Un des meilleurs investissements. Gestion totale de mes appels et leads qualifiés.', name: 'Jean-Pierre Tremblay', role: 'Propriétaire, Restaurant Le Gourmet', av: 'JT' },
 ]
 
 export default function FrHome() {
@@ -95,7 +95,7 @@ export default function FrHome() {
       {/* STATS */}
       <section className="bg-white border-b border-slate-100 py-10">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{n:'500+',l:'PME Satisfaites'},{n:'98%',l:'Satisfaction Client'},{n:'40%',l:'\u00c9conomie de temps'},{n:'24/7',l:'Disponibilit\u00e9'}].map(({n,l}) => (
+          {[{n:'500+',l:'PME Satisfaites'},{n:'98%',l:'Satisfaction Client'},{n:'40%',l:'Économie de temps'},{n:'24/7',l:'Disponibilité'}].map(({n,l}) => (
             <div key={l}>
               <p className="text-4xl font-black text-blue-700">{n}</p>
               <p className="text-slate-500 text-sm mt-1 font-medium">{l}</p>
@@ -145,7 +145,7 @@ export default function FrHome() {
                 Jusqu&#39;&#224; 70% moins cher qu&#39;un agent traditionnel.
               </p>
               <ul className="space-y-3 mb-8">
-                {['R\u00e9ponse en moins de 2 secondes','Fran\u00e7ais natif multi-r\u00e9gion','Transfert intelligent vers conseiller','Jusqu\u2019\u00e0 70% moins cher','Disponible 24/7 sans temps d\u2019attente'].map(f => (
+                {['Réponse en moins de 2 secondes','Français natif multi-région','Transfert intelligent vers conseiller','Jusqu’à 70% moins cher','Disponible 24/7 sans temps d’attente'].map(f => (
                   <li key={f} className="flex items-center gap-3 text-slate-700">
                     <span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">&#10003;</span>
                     {f}
@@ -153,7 +153,7 @@ export default function FrHome() {
                 ))}
               </ul>
               <Link href="/fr/agents-ia" className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-violet-700 transition-colors">
-                D\u00e9couvrir les Agents IA &#8594;
+                Découvrir les Agents IA &#8594;
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -215,7 +215,7 @@ export default function FrHome() {
       {/* FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Pr\u00eat \u00e0 transformer votre relation client?</h2>
+          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à transformer votre relation client?</h2>
           <p className="text-blue-200 text-lg mb-10">Configuration en 48h. Sans engagement.</p>
           <GeoAwareCTA lang="fr"/>
         </div>
