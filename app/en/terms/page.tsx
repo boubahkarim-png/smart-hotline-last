@@ -1,20 +1,62 @@
 import Link from 'next/link'
 
-export default function Page() {
+export const metadata = { title: "Terms & Conditions | Smart Hotline Agency" }
+
+export default function Terms() {
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-5xl mb-4">📄</div>
-          <h1 className="text-4xl font-bold mb-3">Terms & Conditions</h1>
+      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"/>
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-violet-500 opacity-10 rounded-full blur-3xl"/>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <h1 className="text-4xl lg:text-5xl font-black mb-4">Terms & Conditions</h1>
+          <p className="text-blue-200 text-lg">Terms and conditions of our services</p>
         </div>
       </section>
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gray-600 text-lg mb-8">Page coming soon. Contact us for more information.</p>
-          <Link href="/en/contact" className="inline-block bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700">
-            Contact Us
-          </Link>
+
+      <section className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
+            <p className="text-sm text-gray-500">Last updated: January 1, 2026</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">1. Purpose</h2>
+            <p>These Terms & Conditions govern the contractual relationship between Smart Hotline Agency and its clients for the provision of outsourced communication services.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">2. Services</h2>
+            <p>Smart Hotline Agency offers call center services, voice AI agents, customer support and CRM services for SMEs.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">3. Pricing and Payment</h2>
+            <p>Prices are indicated in Canadian dollars (CA$) excluding taxes. Payment is monthly by credit card or bank transfer. Invoices are issued on the 1st of each month.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">4. Commitment</h2>
+            <p>Contracts have no minimum commitment. The free 2-week trial allows you to evaluate our services risk-free.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">5. Termination</h2>
+            <p>Any contract can be terminated with 30 days notice. The free 2-week trial can be cancelled at any time without fees.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">6. Liability</h2>
+            <p>Smart Hotline Agency undertakes to provide its services with due care. Our liability is limited to direct and foreseeable damages.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900">7. Contact</h2>
+            <p>Smart Hotline Agency | direction@smart-hotline.com | +1 514 819-0559</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-2xl lg:text-3xl font-black mb-4">Ready to Get Started?</h2>
+          <p className="text-blue-200 mb-8">Free 2-week trial. No commitment.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/en/pricing" className="inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 py-3.5 rounded-xl font-bold hover:bg-slate-100 transition-colors">
+              View Pricing
+            </Link>
+            <Link href="/en" className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-blue-600 transition-colors">
+              Back to Home
+            </Link>
+          </div>
         </div>
       </section>
     </>
