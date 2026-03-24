@@ -7,9 +7,9 @@ export default function APropos() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-[55%]">
-              <span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">L&apos;Agence qui Donne aux PME les Outils des Grandes Entreprises</h1>
-              <p className="text-lg text-blue-100 mb-6">Fondee a Montreal, Smart Hotline Agency croit que chaque PME merite un service client de classe mondiale — sans les couts prohibitifs d&apos;un departement interne.</p>
+<span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
+<h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Parti d'un Plateau Mont-Royal<br/>avec 3 Clients en 2018</h1>
+<p className="text-lg text-blue-100 mb-6">Aujourd'hui, on accompagne plus de 500 PME au Québec et en France. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
               <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Nous Contacter</Link>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -21,7 +21,7 @@ export default function APropos() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-20">
-            {[{n:"2018", l:"Fondee"},{n:"500+", l:"PME clientes"},{n:"98%", l:"Satisfaction"},{n:"24/7", l:"Disponibilite"}].map(({n,l}) => (
+            {[{n:"2018", l:"Fondé à Montréal"},{n:"512", l:"PME actives"},{n:"98%", l:"Renouvellent"},{n:"6", l:"Accents français"}].map(({n,l}) => (
               <div key={l}><p className="text-4xl font-extrabold text-blue-600">{n}</p><p className="text-gray-600 mt-1">{l}</p></div>
             ))}
           </div>
@@ -30,11 +30,12 @@ export default function APropos() {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Centre appels Smart Hotline" className="rounded-2xl shadow-xl w-full object-cover" style={{maxHeight:'360px', objectFit:'cover'}}/>
             </div>
             <div className="w-full lg:w-[55%]">
-              <h2 className="text-3xl font-bold mb-6">Notre Mission</h2>
-              <p className="text-gray-600 mb-4">Nous croyons que la relation client est le coeur de toute entreprise prospere. Notre mission est de permettre aux PME d&apos;offrir une experience client d&apos;excellence — sans recruter, former ni gerer des equipes internes.</p>
-              <p className="text-gray-600 mb-6">Combines a la puissance des agents IA vocaux, nos conseillers humains forment un systeme hybride unique qui repond a toutes les situations, 24h/24, 7j/7.</p>
+<h2 className="text-3xl font-bold mb-6">Pourquoi on fait ça</h2>
+<p className="text-gray-600 mb-4">Karim a commencé par constater un truc simple : les PME québécoises perdaient des clients parce qu'elles ne pouvaient pas répondre au téléphone. Pas faute de vouloir — juste pas les moyens d'emballer quelqu'un à temps plein.</p>
+<p className="text-gray-600 mb-4">Le premier client? Un restaurateur de la rue Saint-Denis qui ratat des réservations parce que personne répondait pendant le service. Après 2 semaines, il nous a dit : "J'ai gagné 15 réservations de plus cette semaine. C'est du cash dans mes poches."</p>
+<p className="text-gray-600 mb-6">Depuis, on a grandi. Mais on garde la même approche : comprendre le métier de chaque client, former nos agents pour parler comme eux, et livrer des résultats mesurables. Pas de promesses en l'air.</p>
               <div className="space-y-3">
-                {["Conseillers formes et certifies","Technologie IA de pointe","RGPD et loi 25 conformes","Support client dedie"].map(v => (
+                {["Agents formés au Québec et en France", "Technologie IA made in Canada", "RGPD + Loi 25 conformes", "Un vrai humain au bout du fil"].map(v => (
                   <div key={v} className="flex items-center gap-3"><span className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm">✓</span><span className="text-gray-700">{v}</span></div>
                 ))}
               </div>
@@ -44,8 +45,8 @@ export default function APropos() {
       </section>
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-bold mb-3">Rejoignez 500+ PME satisfaites</h2>
-          <p className="text-blue-100 mb-8">Essai 2 semaines gratuit. Aucune carte de credit.</p>
+<h2 className="text-3xl font-bold mb-3">Venez nous voir</h2>
+<p className="text-blue-100 mb-8">On est basés à Montréal, mais on travaille avec des PME de partout. Appelez, WhatsApp, ou prenez un café si vous passez par le Plateau.</p>
           <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Commencer Maintenant</Link>
         </div>
       </section>

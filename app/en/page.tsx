@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
-import VideoHero from '@/components/VideoHero'
+
 import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const SERVICES = [
@@ -79,13 +79,6 @@ export default function EnHome() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* SECTION 1.5: VIDEO HERO */}
-      <section className="bg-white py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoHero />
         </div>
       </section>
 

@@ -56,7 +56,7 @@ export default function Page() {
               <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
                 Multipliez vos Leads<br/>avec nos Conseillers
               </h1>
-              <p className="text-lg text-slate-600 mb-8">Prospection, télémarketing, prise de RDV. Nos conseillers experts transforment vos cibles en clients avec des résultats mesurables.</p>
+              <p className="text-lg text-slate-600 mb-8">Prospection, télémarketing, prise de rendez-vous. Nos conseillers connaissent l'art de décrocher des rendez-vous — sans faire peur à vos prospects.</p>
               <CTAButtons slug="emission"/>
               <div className="flex flex-wrap gap-3">
                 {['Leads qualifiés', 'CRM inclus', 'Scripts optimisés', 'Reporting daily'].map(b => (
@@ -74,7 +74,7 @@ export default function Page() {
                     <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
                       <TrendingIcon className="w-5 h-5 text-emerald-600" />
                     </div>
-                    <div><p className="font-black text-sm">+40% de leads</p><p className="text-slate-500 text-xs">en moyenne</p></div>
+                    <div><p className="font-black text-sm">+40% de RDV</p><p className="text-slate-500 text-xs">en moyenne</p></div>
                   </div>
                 </div>
               </div>

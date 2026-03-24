@@ -14,9 +14,9 @@ const STATS = [
   { value: "50K+", label: "Appels traites/mois" },
 ]
 const TESTIMONIALS = [
-  { quote: "Depuis qu'on travaille avec Smart Hotline, on ne manque plus jamais un appel. Leur equipe est professionnelle et reactive.", author: "Marie D.", role: "Directrice, Clinique du Parc", rating: 5 },
-  { quote: "Les agents IA ont reduit nos couts de 60% tout en ameliorant la qualite du service. Incroyable technologie!", author: "Pierre L.", role: "CEO, TechStart Inc.", rating: 5 },
-  { quote: "Service impeccable. Nos clients sont satisfaits et notre taux de conversion a augmente de 35%.", author: "Sophie M.", role: "Responsable commercial, BatiPro", rating: 5 },
+{ quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
+{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5 },
+{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5 },
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
@@ -29,8 +29,8 @@ export default function Services() {
     <>
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-extrabold mb-5">Nos Solutions</h1>
-          <p className="text-lg text-blue-100 mb-8">Tout ce dont votre PME a besoin pour sa relation client — sous un seul toit.</p>
+<h1 className="text-4xl lg:text-5xl font-extrabold mb-5">Tout ce qu'il vous faut<br/>Pour gérer vos clients</h1>
+<p className="text-lg text-blue-100 mb-8">Réception, prospection, IA, support — on s'occupe de tout. Vous vous concentrez sur votre business, point final.</p>
           <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Demo Gratuite</Link>
         </div>
       </section>

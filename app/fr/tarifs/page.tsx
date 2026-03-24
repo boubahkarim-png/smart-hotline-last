@@ -220,14 +220,14 @@ export default function Tarifs() {
         <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
       </div>
       <div className="space-y-4">
-        {[
-          { q: 'Combien de temps pour démarrer?', a: 'La mise en service prend 48h maximum après signature. Nous configurons vos scripts, formons les conseillers et testons ensemble avant le lancement.' },
-          { q: 'Y a-t-il un engagement minimum?', a: 'Non. Tous nos forfaits sont sans engagement. Vous pouvez modifier ou annuler à tout moment avec un préavis de 7 jours.' },
-          { q: 'Comment sont facturés les appels?', a: 'Appels sortants: facturés à l\'heure réellement utilisée. Appels entrants: forfait mensuel incluant un volume d\'appels. Agents IA: facturation à la minute.' },
-          { q: 'Quelles langues parlez-vous?', a: 'Français natif (Québec, France, Belgique, Suisse) et anglais. Nos agents IA supportent ces 2 langues avec des accents régionaux.' },
-          { q: 'Puis-je changer de forfait en cours?', a: 'Absolument. Vous pouvez upgrader ou downgrader à tout moment. La facturation est ajustée au prorata.' },
-          { q: 'Mes données sont-elles sécurisées?', a: '100% RGPD conforme. Hébergement au Canada/UE. Chiffrement bout en bout. Aucune donnée vendue ou partagée.' },
-        ].map(({ q, a }, i) => (
+{[
+{ q: 'Vraiment, combien de temps pour démarrer?', a: 'En général 48h. Mais ça dépend de vous. Si vous nous donnez vos scripts et infos aujourd\'hui, on peut être opérationnels demain. Le plus long, c\'est souvent de vous décider — et ça, on comprend.' },
+{ q: 'Y a-t-il un engagement minimum?', a: 'Non, zéro. Vous pouvez arrêter du jour au lendemain avec 7 jours de préavis. Pourquoi? Parce qu\'on sait que si ça fonctionne pas, vous partirez anyway. Autant être transparents.' },
+{ q: 'Comment ça fonctionne la facturation?', a: 'Simple. Sortants : vous payez les heures réellement utilisées. Entrants : forfait mensuel. Agents IA : à la minute. Pas de frais cachés, pas de surprise sur la facture.' },
+{ q: 'Quels accents vous avez?', a: 'Québec (standard et joual léger), France (parisien et régional), Belgique, Suisse. Pour l\'IA, c\'est au choix. Pour les conseillers humains, on vous assigne quelqu\'un qui matche votre clientèle.' },
+{ q: 'Puis-je changer de forfait?', a: 'Oui, à tout moment. Up ou down. La facturation s\'ajuste au prorata. Si vous grandissez, on grandit avec vous. Si vous ralentissez, on s\'adapte.' },
+{ q: 'Mes données sont-elles sécurisées?', a: 'Hébergement au Canada (et UE pour clients européens). Chiffrement bout en bout. RGPD + Loi 25. On ne vend rien, on ne partage rien. Vos données = vos données.' },
+].map(({ q, a }, i) => (
           <details key={i} className="group bg-white rounded-2xl border border-slate-200 overflow-hidden">
             <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
               <span className="font-semibold text-slate-900 pr-4">{q}</span>
@@ -251,11 +251,11 @@ export default function Tarifs() {
         <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          { q: 'Tarifs imbattables et service impeccable. Le ROI a ete visible des le premier mois.', name: 'Marie-Claire Dupont', role: 'CEO, StartupTech Montreal', av: 'MD' },
-          { q: 'J\'ai reduit mes couts de 40% par rapport a un employe interne. Et zero appel manque.', name: 'Philippe Martin', role: 'Fondateur, Agence Digitale Lyon', av: 'PM' },
-          { q: 'Essai de 2 semaines convaincant. L\'equipe a parfaitement compris notre activite.', name: 'Stephanie Bernier', role: 'Directrice, Cabinet Conseil Paris', av: 'SB' },
-        ].map(({ q, name, role, av }) => (
+{[
+{ q: "J'ai comparé 3 centres d'appels. Vous êtes le seul où les agents comprennent vraiment ce que je fais. Et ça se sent quand mes clients appellent.", name: 'Marie-Claire Dupont', role: 'CEO, StartupTech — Mile-End, Montréal', av: 'MD' },
+{ q: "Mon comptable m'a dit : 'Tu devrais engager une réceptionniste.' J'ai dit non, j'ai pris Smart Hotline. Résultat? 40% moins cher, et je peux scaler demain si je veux.", name: 'Philippe Martin', role: 'Fondateur, AgenceDigitale — Lyon, France', av: 'PM' },
+{ q: "Pendant l'essai de 2 semaines, ils ont pris 87 appels pour moi. J'ai signé le contrat le jour 10. Pas besoin de plus.", name: 'Stéphanie Bernier', role: 'Directrice, Cabinet Conseil — Paris 11e', av: 'SB' },
+].map(({ q, name, role, av }) => (
           <div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
             <div className="flex gap-0.5 mb-4">
               {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
@@ -308,8 +308,8 @@ export default function Tarifs() {
   {/* FINAL CTA SECTION - dark gradient */}
   <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20 text-white">
     <div className="max-w-4xl mx-auto px-4 text-center">
-      <h2 className="text-3xl lg:text-4xl font-black mb-4">Pret a reduire vos couts de 40%?</h2>
-      <p className="text-blue-200 text-lg mb-8">Essai gratuit de 2 semaines. Sans engagement. Resultats garantis.</p>
+<h2 className="text-3xl lg:text-4xl font-black mb-4">Pret a economiser 40% sur vos appels?</h2>
+<p className="text-blue-200 text-lg mb-8">Essai de 2 semaines. Si c'est pas pour vous, on vous laisse tranquille. Pas de pression.</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link href="/fr/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
           Demander un Devis Gratuit

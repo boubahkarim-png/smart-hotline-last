@@ -56,10 +56,10 @@ export default function Page() {
               <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
                 Réception 24/7<br/>Zéro Appel Manqué
               </h1>
-              <p className="text-lg text-slate-600 mb-8">Nos conseillers répondent en votre nom à toute heure. Experience client premium, vous concentrez sur votre métier.</p>
+              <p className="text-lg text-slate-600 mb-8">Nos conseillers répondent à votre place. Vrai français du Québec ou de France. Vos clients entendent quelqu'un qui maîtrise le sujet — pas un script robotique.</p>
               <CTAButtons slug="reception"/>
               <div className="flex flex-wrap gap-3">
-                {['24/7 inclus', 'Bilingue FR/EN', 'Setup 48h', 'Scripts sur mesure'].map(b => (
+                {['24/7, même la nuit', 'Accents FR/EN au choix', 'Setup en 48h', 'Scripts qui vous ressemblent'].map(b => (
                   <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-green-600" /> {b}</span>
                 ))}
               </div>
@@ -69,14 +69,14 @@ export default function Page() {
                 <img src="/smart-hotline-last/images/reception-hero.jpg" alt="Conseillere reception appels"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                      <CheckIcon className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div><p className="font-black text-sm">98% satisfaction</p><p className="text-slate-500 text-xs">clients PME</p></div>
-                  </div>
-                </div>
+<div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
+<div className="flex items-center gap-2.5">
+<div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+<CheckIcon className="w-5 h-5 text-green-600" />
+</div>
+<div><p className="font-black text-sm">98% renouvellent</p><p className="text-slate-500 text-xs">après l'essai</p></div>
+</div>
+</div>
               </div>
             </div>
           </div>

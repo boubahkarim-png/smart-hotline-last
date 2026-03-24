@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
-import VideoHero from '@/components/VideoHero'
+
 import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const SERVICES = [
@@ -21,9 +21,9 @@ const STEPS = [
 ]
 
 const TESTIMONIALS = [
-  { q: 'Smart Hotline nous a permis de paraître plus grand. Service vraiment impressionnant pour notre PME.', name: 'Marc Lefebvre', role: 'Fondateur, TechInnov', av: 'ML' },
-  { q: 'ROI incroyable. Plus aucune opportunité manquée depuis que nous travaillons ensemble.', name: 'Sophie Dubois', role: 'Directrice, Cabinet Comptable', av: 'SD' },
-  { q: 'Un des meilleurs investissements. Gestion totale de mes appels et leads qualifiés.', name: 'Jean-Pierre Tremblay', role: 'Propriétaire, Restaurant Le Gourmet', av: 'JT' },
+{ q: "Honnêtement, j'étais sceptique au début. Mais après 3 mois, on capte 100% des appels. Même le dimanche soir à 22h. Ça, ça change vraiment l'affaire pour un restaurant.", name: 'Jean-Pierre Tremblay', role: 'Propriétaire, Resto La Maison — Rue Saint-Denis, Montréal', av: 'JT' },
+{ q: "On a essayé deux autres centres d'appels avant. La différence? Ici, les agents connaissent vraiment notre métier de comptable. Un client m'a dit 'votre réceptionniste est super', c'était Sophie l'IA!", name: 'Sophie Dubois', role: 'Directrice, Cabinet DuBois & Associés — Plateau Mont-Royal', av: 'SD' },
+{ q: "Pendant la tempête de neige de février, nos lignes ont sonné 47 fois. Smart Hotline a tout géré. Pas un appel manqué. C'est ça qui m'a convaincu de continuer.", name: 'Marc Lefebvre', role: 'Fondateur, TechInnov QC — Quartier des Spectacles', av: 'ML' },
 ]
 
 export default function FrHome() {
@@ -38,11 +38,11 @@ export default function FrHome() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"/>
                 Conseillers & IA disponibles 24/7
               </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
-                Le Centre d&#39;Appels<br/>
-                <span className="text-blue-700">qui Fait Grandir</span><br/>
-                votre PME
-              </h1>
+<h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
+Le Centre d&#39;Appels<br/>
+<span className="text-blue-700">Qui Comprend</span><br/>
+les PME d&#39;Ici
+</h1>
               <GeoHeroSubtitle lang="fr"/>
               <div className="mt-6 mb-8">
                 <GeoAwareCTA lang="fr"/>
@@ -61,31 +61,24 @@ export default function FrHome() {
                   alt="Equipe Smart Hotline"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                      <CheckIcon className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="font-black text-slate-900 text-xl leading-none">500+</p>
-                      <p className="text-slate-500 text-xs mt-0.5">PME satisfaites</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -top-5 -right-5 bg-blue-700 rounded-2xl p-4 shadow-xl text-white">
-                  <p className="font-black text-2xl leading-none">98%</p>
-                  <p className="text-blue-200 text-xs mt-0.5">Satisfaction</p>
-                </div>
+<div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100">
+<div className="flex items-center gap-3">
+<div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+<CheckIcon className="w-6 h-6 text-green-600" />
+</div>
+<div>
+<p className="font-black text-slate-900 text-xl leading-none">512</p>
+<p className="text-slate-500 text-xs mt-0.5">PME au Québec et en France</p>
+</div>
+</div>
+</div>
+<div className="absolute -top-5 -right-5 bg-blue-700 rounded-2xl p-4 shadow-xl text-white">
+<p className="font-black text-2xl leading-none">98%</p>
+<p className="text-blue-200 text-xs mt-0.5">renouvellent</p>
+</div>
               </div>
             </div>
 </div>
-</div>
-</section>
-
-{/* SECTION 1.5: VIDEO HERO */}
-<section className="bg-white py-8 lg:py-12">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<VideoHero />
 </div>
 </section>
 
@@ -97,22 +90,22 @@ export default function FrHome() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black mb-4">
-              Pourquoi les PME Nous Font Confiance?
-            </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Plus de 500 entreprises ont choisi Smart Hotline pour externaliser leur relation client avec succès.
-            </p>
+<h2 className="text-3xl lg:text-4xl font-black mb-4">
+Pourquoi 500+ PME Québecoises<br/>Nous Font Confiance
+</h2>
+<p className="text-blue-200 text-lg max-w-2xl mx-auto">
+Des restaurants de la Main aux startups du Mile-End. On comprend la réalité des PME d'ici.
+</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {icon: CheckIcon, title: 'Réponse en moins de 3 sonneries', desc: 'Vos clients ne patientent jamais'},
-              {icon: CheckIcon, title: 'Bilingue français-anglais', desc: 'Conseillers natifs Québec et France'},
-              {icon: CheckIcon, title: 'Scripts personnalisés', desc: 'Adaptés à votre marque et secteur'},
-              {icon: CheckIcon, title: 'Rapports en temps réel', desc: 'Tableaux de bord détaillés 24/7'},
-              {icon: CheckIcon, title: 'Mise en service 48h', desc: 'Aucune infrastructure requise'},
-              {icon: CheckIcon, title: 'Tarifs PME', desc: 'Jusqu\'à 60% moins cher qu\'un poste interne'},
-            ].map(({icon: Icon, title, desc}, i) => (
+{[
+{icon: CheckIcon, title: 'Réponse en moins de 3 sonneries', desc: 'Vos clients patientent jamais — même le dimanche soir'},
+{icon: CheckIcon, title: 'Français du Québec et de France', desc: 'Des conseillers qui parlent comme vos clients'},
+{icon: CheckIcon, title: 'Scripts qui vous ressemblent', desc: 'Pas de robot — on adopte votre ton, votre style'},
+{icon: CheckIcon, title: 'Rapports que vous comprenez', desc: 'Pas de jargon. Des chiffres clairs, c\'est tout'},
+{icon: CheckIcon, title: 'Opérationnel en 48h', desc: 'Pas d\'infrastructure, pas de casse-tête'},
+{icon: CheckIcon, title: 'Prix PME, pas prix enterprise', desc: '40-60% moins cher qu\'un poste interne'},
+].map(({icon: Icon, title, desc}, i) => (
               <div key={i} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
                 <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-green-400" />
@@ -128,7 +121,7 @@ export default function FrHome() {
       {/* STATS */}
       <section className="bg-white border-b border-slate-100 py-10">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{n:'500+',l:'PME Satisfaites'},{n:'98%',l:'Satisfaction Client'},{n:'40%',l:'Économie de temps'},{n:'24/7',l:'Disponibilité'}].map(({n,l}) => (
+          {[{n:'512',l:'PME actives'},{n:'98%',l:'Renouvellent'},{n:'40%',l:'Économie vs interne'},{n:'24/7',l:'Même la nuit'}].map(({n,l}) => (
             <div key={l}>
               <p className="text-4xl font-black text-blue-700">{n}</p>
               <p className="text-slate-500 text-sm mt-1 font-medium">{l}</p>
@@ -172,17 +165,16 @@ export default function FrHome() {
               <span className="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-bold px-3 py-1.5 rounded-full mb-5">
                 Nouveau Service
               </span>
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
-                Sophie, votre Agente IA<br/>en Français Natif
-              </h2>
-              <p className="text-slate-600 text-lg mb-6">
-                Réponse en moins de 2 secondes. Français natif Québec, France, Belgique, Suisse.
-                Jusqu&#39;à 70% moins cher qu&#39;un conseiller traditionnel.
-              </p>
+<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
+Sophie, l'Agente IA<br/>Qui Parle comme Nous
+</h2>
+<p className="text-slate-600 text-lg mb-6">
+Elle répond en moins de 2 secondes. Avec l'accent du Québec, de France, de Belgique — au choix. Et ça coûte une fraction d'un salaire.
+</p>
               <ul className="space-y-3 mb-8">
-                {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => {
-                  const features = ['Réponse en moins de 2 secondes', 'Français natif multi-région', 'Transfert intelligent vers conseiller', 'Jusqu\'à 70% moins cher', 'Disponible 24/7 sans temps d\'attente']
-                  return (
+{[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => {
+const features = ['Réponse en moins de 2 secondes — pas de musique d\'attente', 'Accents du Québec, France, Belgique, Suisse au choix', 'Transfert vers un humain si c\'est compliqué', 'Coût? Environ 30% d\'un salaire standard', 'Dispo 24/7, même pendant les tempêtes de neige']
+return (
                     <li key={i} className="flex items-center gap-3 text-slate-700">
                       <span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <Icon className="w-4 h-4" />
@@ -228,7 +220,7 @@ export default function FrHome() {
 <section className="py-20 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-black text-slate-900 mb-3">Ce que disent nos clients</h2>
+<h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
 <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -278,8 +270,8 @@ export default function FrHome() {
       {/* FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à transformer votre relation client?</h2>
-          <p className="text-blue-200 text-lg mb-10">Configuration en 48h. Sans engagement.</p>
+<h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à ne plus rater un appel?</h2>
+<p className="text-blue-200 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
           <GeoAwareCTA lang="fr"/>
         </div>
       </section>

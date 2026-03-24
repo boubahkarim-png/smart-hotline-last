@@ -56,10 +56,10 @@ export default function Page() {
               <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
                 Sophie, votre IA<br/>en Français Natif 24/7
               </h1>
-              <p className="text-lg text-slate-600 mb-8">Réponse en moins de 2 secondes. Français natif Québec, France, Belgique, Suisse. Jusqu'à 70% moins cher qu'un agent traditionnel.</p>
+              <p className="text-lg text-slate-600 mb-8">Elle répond en 2 secondes max. Avec l'accent que vous voulez. Et le meilleur? Vos clients ne savent pas que c'est de l'IA — ils pensent juste que votre réceptionniste est super efficace.</p>
               <CTAButtons slug="ia"/>
               <div className="flex flex-wrap gap-3">
-                {['Réponse 2 sec', 'Français natif', '24/7', 'Tarif/minute'].map(b => (
+                {['Réponse < 2 sec', 'Accent au choix', '24/7 même la nuit', 'Tarif à la minute'].map(b => (
                   <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-violet-600" /> {b}</span>
                 ))}
               </div>
@@ -74,7 +74,7 @@ export default function Page() {
                     <div className="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
                       <BoltIcon className="w-5 h-5 text-violet-600" />
                     </div>
-                    <div><p className="font-black text-sm">{"< 2 secondes"}</p><p className="text-slate-500 text-xs">temps de réponse</p></div>
+                    <div><p className="font-black text-sm">{"2 secondes max"}</p><p className="text-slate-500 text-xs">pas de musique d'attente</p></div>
                   </div>
                 </div>
               </div>
