@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-03-24",
+  "project": "Smart Hotline",
+  "videos": [
+    {
+      "id": "video_001",
+      "title": "Smart Hotline - Agence de Centres d'Appels",
+      "description": "Video showcasing Smart Hotline as a call center agency offering AI and human agents",
+      "duration": "15-30s",
+      "style": "Professional corporate",
+      "prompt_hailuo": "Professional call center office in Montreal, diverse team of agents wearing headsets answering calls, modern workspace with computers and screens showing call statistics, warm lighting, corporate atmosphere, text overlay 'Smart Hotline - Votre Partenaire Call Center'",
+      "prompt_kling": "Cinematic shot of a modern call center, camera panning through rows of professional agents with headsets, bright LED screens showing real-time analytics, smooth slow motion, 4K quality, business professional atmosphere, ending with Smart Hotline logo animation",
+      "prompt_luma": "Smart call center technology, split screen showing human agents and AI assistant working together, modern office environment in Canada, blue and white color scheme, professional voiceover about bilingual services, animated statistics and graphs",
+      "tools": {
+        "hailuo": "https://hailuoai.com/",
+        "kling": "https://klingai.com/",
+        "luma": "https://lumalabs.ai/dream-machine"
+      },
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": "video_002",
+      "title": "AI Voice Agents Demo",
+      "description": "Demonstration of AI-powered voice agents handling calls in French and English",
+      "duration": "20-30s",
+      "style": "Tech futuristic",
+      "prompt_hailuo": "Futuristic AI voice agent visualization, holographic assistant speaking with sound waves, bilingual French English text appearing, modern tech interface, blue neon accents, smooth animations showing voice recognition technology",
+      "prompt_kling": "Advanced AI avatar answering phone calls, realistic digital human face with natural expressions, voice waveforms animating, split screen showing French and English language processing, cinematic quality, depth of field effects",
+      "prompt_luma": "AI technology concept, neural network visualization transforming into voice waves, futuristic holographic display showing call center analytics, bilingual communication flow, tech startup aesthetic with blue and purple gradients",
+      "tools": {
+        "hailuo": "https://hailuoai.com/",
+        "kling": "https://klingai.com/",
+        "luma": "https://lumalabs.ai/dream-machine"
+      },
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": "video_003",
+      "title": "Client Testimonial & Results",
+      "description": "Testimonial video showing client success stories and call center performance metrics",
+      "duration": "15-25s",
+      "style": "Trust building",
+      "prompt_hailuo": "Happy business owner in professional office, shaking hands with Smart Hotline representative, graphs and charts showing improved call center metrics, testimonials floating as text, warm professional lighting, Canadian business setting",
+      "prompt_kling": "Professional testimonial video, successful entrepreneur speaking to camera with Smart Hotline office in background, animated statistics showing 40% improvement in customer satisfaction, confident tone, cinematic shallow depth of field, corporate documentary style",
+      "prompt_luma": "Client success story visualization, before and after comparison of call center performance, animated dashboards showing metrics improvement, satisfied customers giving thumbs up, professional Canadian business environment, trust-building color palette",
+      "tools": {
+        "hailuo": "https://hailuoai.com/",
+        "kling": "https://klingai.com/",
+        "luma": "https://lumalabs.ai/dream-machine"
+      },
+      "status": "pending",
+      "priority": "medium"
+    }
+  ],
+  "instructions": {
+    "step_1": "Open each tool URL (Hailuo, Kling, or Luma)",
+    "step_2": "Create a free account if needed",
+    "step_3": "Copy the corresponding prompt and paste it into the video generator",
+    "step_4": "Generate the video and download it",
+    "step_5": "Save the video to this directory with the naming convention: video_001_hailuo.mp4",
+    "step_6": "Update the status in video_samples.json to 'completed'"
+  },
+  "notes": [
+    "Hailuo AI offers unlimited free video generation",
+    "Kling AI provides 66 free credits per day (best quality)",
+    "Luma Dream Machine offers 30 free generations per month",
+    "Recommended: Try all three tools and select the best results"
+  ]
+}

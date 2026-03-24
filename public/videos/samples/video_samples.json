@@ -1,0 +1,29 @@
+[
+  {
+    "id": "video_001",
+    "title": "Smart Hotline - Agence de Centres d'Appels",
+    "description": "Video showcasing Smart Hotline as a call center agency offering AI and human agents",
+    "duration": "15-30s",
+    "generated_videos": [],
+    "selected_video": null,
+    "status": "pending"
+  },
+  {
+    "id": "video_002",
+    "title": "AI Voice Agents Demo",
+    "description": "Demonstration of AI-powered voice agents handling calls in French and English",
+    "duration": "20-30s",
+    "generated_videos": [],
+    "selected_video": null,
+    "status": "pending"
+  },
+  {
+    "id": "video_003",
+    "title": "Client Testimonial & Results",
+    "description": "Testimonial video showing client success stories and call center performance metrics",
+    "duration": "15-25s",
+    "generated_videos": [],
+    "selected_video": null,
+    "status": "pending"
+  }
+]

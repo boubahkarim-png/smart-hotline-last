@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hotline - Video Samples Generator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        .video-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .video-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .video-title { font-size: 1.5rem; color: #00d4ff; }
+        .video-duration {
+            background: #7b2cbf;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .video-desc {
+            color: #aaa;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .prompts-section h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .prompt-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid;
+        }
+        .prompt-box.hailuo { border-color: #ff6b6b; }
+        .prompt-box.kling { border-color: #4ecdc4; }
+        .prompt-box.luma { border-color: #ffe66d; }
+        .prompt-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .prompt-text {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .tools-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .tool-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .tool-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .tool-btn.hailuo { background: linear-gradient(135deg, #ff6b6b, #ee5a5a); color: #fff; }
+        .tool-btn.kling { background: linear-gradient(135deg, #4ecdc4, #44a08d); color: #fff; }
+        .tool-btn.luma { background: linear-gradient(135deg, #ffe66d, #f4d03f); color: #1a1a2e; }
+        .instructions {
+            background: rgba(123, 44, 191, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #7b2cbf;
+        }
+        .instructions h2 { color: #7b2cbf; margin-bottom: 20px; }
+        .instructions ol { padding-left: 20px; }
+        .instructions li { margin-bottom: 10px; line-height: 1.6; color: #ccc; }
+        .copy-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover { background: rgba(255,255,255,0.2); }
+        .tip-box {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid #00d4ff;
+            padding: 15px 20px;
+            margin-top: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        .tip-box strong { color: #00d4ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Smart Hotline Video Samples</h1>
+        <p class="subtitle">Generate 3 promotional videos using free AI tools</p>
+
+        <div class="instructions">
+            <h2>📋 How to Generate Videos</h2>
+            <ol>
+                <li>Click on a tool button below (Hailuo, Kling, or Luma)</li>
+                <li>Create a free account if needed (all tools have free tiers)</li>
+                <li>Copy the prompt from the video card</li>
+                <li>Paste the prompt into the video generator</li>
+                <li>Generate and download the video</li>
+                <li>Save as: <code>video_001_hailuo.mp4</code> in this folder</li>
+            </ol>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="video-card">
+            <div class="video-header">
+                <h2 class="video-title">Video 1: Smart Hotline - Agence de Centres d'Appels</h2>
+                <span class="video-duration">15-30s</span>
+            </div>
+            <p class="video-desc">Professional video showcasing Smart Hotline as a call center agency offering AI and human agents for Canadian businesses.</p>
+            
+            <div class="prompts-section">
+                <h3>📝 Prompts (click to copy)</h3>
+                
+                <div class="prompt-box hailuo">
+                    <div class="prompt-label">
+                        <span>🔴 Hailuo AI (Unlimited Free)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Professional call center office in Montreal, diverse team of agents wearing headsets answering calls, modern workspace with computers and screens showing call statistics, warm lighting, corporate atmosphere, text overlay 'Smart Hotline - Votre Partenaire Call Center'</p>
+                </div>
+
+                <div class="prompt-box kling">
+                    <div class="prompt-label">
+                        <span>🟢 Kling AI (Best Quality - 66 free credits/day)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Cinematic shot of a modern call center, camera panning through rows of professional agents with headsets, bright LED screens showing real-time analytics, smooth slow motion, 4K quality, business professional atmosphere, ending with Smart Hotline logo animation</p>
+                </div>
+
+                <div class="prompt-box luma">
+                    <div class="prompt-label">
+                        <span>🟡 Luma Dream Machine (30 free/month)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Smart call center technology, split screen showing human agents and AI assistant working together, modern office environment in Canada, blue and white color scheme, professional voiceover about bilingual services, animated statistics and graphs</p>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <h3>🛠️ Generate with:</h3>
+                <div class="tools-grid">
+                    <a href="https://hailuoai.com/" target="_blank" class="tool-btn hailuo">🔴 Hailuo AI</a>
+                    <a href="https://klingai.com/" target="_blank" class="tool-btn kling">🟢 Kling AI</a>
+                    <a href="https://lumalabs.ai/dream-machine" target="_blank" class="tool-btn luma">🟡 Luma</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+            <div class="video-header">
+                <h2 class="video-title">Video 2: AI Voice Agents Demo</h2>
+                <span class="video-duration">20-30s</span>
+            </div>
+            <p class="video-desc">Demonstration of AI-powered voice agents handling calls in French and English, showcasing cutting-edge technology.</p>
+            
+            <div class="prompts-section">
+                <h3>📝 Prompts (click to copy)</h3>
+                
+                <div class="prompt-box hailuo">
+                    <div class="prompt-label">
+                        <span>🔴 Hailuo AI (Unlimited Free)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Futuristic AI voice agent visualization, holographic assistant speaking with sound waves, bilingual French English text appearing, modern tech interface, blue neon accents, smooth animations showing voice recognition technology</p>
+                </div>
+
+                <div class="prompt-box kling">
+                    <div class="prompt-label">
+                        <span>🟢 Kling AI (Best Quality)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Advanced AI avatar answering phone calls, realistic digital human face with natural expressions, voice waveforms animating, split screen showing French and English language processing, cinematic quality, depth of field effects</p>
+                </div>
+
+                <div class="prompt-box luma">
+                    <div class="prompt-label">
+                        <span>🟡 Luma Dream Machine</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">AI technology concept, neural network visualization transforming into voice waves, futuristic holographic display showing call center analytics, bilingual communication flow, tech startup aesthetic with blue and purple gradients</p>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <h3>🛠️ Generate with:</h3>
+                <div class="tools-grid">
+                    <a href="https://hailuoai.com/" target="_blank" class="tool-btn hailuo">🔴 Hailuo AI</a>
+                    <a href="https://klingai.com/" target="_blank" class="tool-btn kling">🟢 Kling AI</a>
+                    <a href="https://lumalabs.ai/dream-machine" target="_blank" class="tool-btn luma">🟡 Luma</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+            <div class="video-header">
+                <h2 class="video-title">Video 3: Client Testimonial & Results</h2>
+                <span class="video-duration">15-25s</span>
+            </div>
+            <p class="video-desc">Testimonial video showing client success stories and call center performance metrics improvement.</p>
+            
+            <div class="prompts-section">
+                <h3>📝 Prompts (click to copy)</h3>
+                
+                <div class="prompt-box hailuo">
+                    <div class="prompt-label">
+                        <span>🔴 Hailuo AI (Unlimited Free)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Happy business owner in professional office, shaking hands with Smart Hotline representative, graphs and charts showing improved call center metrics, testimonials floating as text, warm professional lighting, Canadian business setting</p>
+                </div>
+
+                <div class="prompt-box kling">
+                    <div class="prompt-label">
+                        <span>🟢 Kling AI (Best Quality)</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Professional testimonial video, successful entrepreneur speaking to camera with Smart Hotline office in background, animated statistics showing 40% improvement in customer satisfaction, confident tone, cinematic shallow depth of field, corporate documentary style</p>
+                </div>
+
+                <div class="prompt-box luma">
+                    <div class="prompt-label">
+                        <span>🟡 Luma Dream Machine</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-text">Client success story visualization, before and after comparison of call center performance, animated dashboards showing metrics improvement, satisfied customers giving thumbs up, professional Canadian business environment, trust-building color palette</p>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <h3>🛠️ Generate with:</h3>
+                <div class="tools-grid">
+                    <a href="https://hailuoai.com/" target="_blank" class="tool-btn hailuo">🔴 Hailuo AI</a>
+                    <a href="https://klingai.com/" target="_blank" class="tool-btn kling">🟢 Kling AI</a>
+                    <a href="https://lumalabs.ai/dream-machine" target="_blank" class="tool-btn luma">🟡 Luma</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Hailuo AI offers unlimited free generations, so you can try multiple variations. Kling AI has the best quality but limited daily credits. Generate multiple versions and select the best one!
+        </div>
+    </div>
+
+    <script>
+        function copyPrompt(btn) {
+            const promptText = btn.parentElement.nextElementSibling.textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            });
+        }
+    </script>
+</body>
+</html>
