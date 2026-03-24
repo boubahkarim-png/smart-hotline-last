@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
+import VideoHero from '@/components/VideoHero'
 import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const SERVICES = [
@@ -77,11 +78,18 @@ export default function FrHome() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+</div>
+</div>
+</section>
 
-      {/* SECTION 2: DARK - NO IMAGE */}
+{/* SECTION 1.5: VIDEO HERO */}
+<section className="bg-white py-8 lg:py-12">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<VideoHero />
+</div>
+</section>
+
+{/* SECTION 2: DARK - NO IMAGE */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"/>

@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-24",
+  "videos": [
+    {
+      "id": "brand_fr",
+      "filename": "brand_fr.mp4",
+      "type": "brand",
+      "language": "fr",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "brand_en",
+      "filename": "brand_en.mp4",
+      "type": "brand",
+      "language": "en",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "agent_fr",
+      "filename": "agent_fr.mp4",
+      "type": "agent",
+      "language": "fr",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "agent_en",
+      "filename": "agent_en.mp4",
+      "type": "agent",
+      "language": "en",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "testimonial_fr",
+      "filename": "testimonial_fr.mp4",
+      "type": "testimonial",
+      "language": "fr",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    },
+    {
+      "id": "testimonial_en",
+      "filename": "testimonial_en.mp4",
+      "type": "testimonial",
+      "language": "en",
+      "status": "placeholder",
+      "duration": 1,
+      "resolution": "1920x1080"
+    }
+  ]
+}

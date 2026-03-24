@@ -1,0 +1,59 @@
+{
+  "project": "Smart Hotline Agency",
+  "version": "1.0.0",
+  "generated_at": "2026-03-24",
+  "videos": [
+    {
+      "id": "promo-1-reception",
+      "title": "Reception Desk Scene",
+      "duration": "15s",
+      "prompt": "Professional reception desk scene. A friendly bilingual receptionist (woman, 30s, professional attire) answers a phone call in a modern office. She smiles warmly, speaks briefly in French then English, takes notes efficiently. Soft natural lighting, corporate aesthetic. Camera slowly zooms in on her professional demeanor.",
+      "negative_prompt": "blurry, low quality, cartoon, anime, text overlay, watermark, logo, subtitles",
+      "style": "corporate professional",
+      "aspect_ratio": "16:9",
+      "suggested_tools": [
+        "Hailuo AI",
+        "Kling AI",
+        "Luma Dream Machine"
+      ],
+      "output_filename": "reception-promo.mp4"
+    },
+    {
+      "id": "promo-2-team",
+      "title": "Team Collaboration Scene",
+      "duration": "12s",
+      "prompt": "Modern call center environment. Diverse team of 4 customer service agents (mixed gender, ages 25-45) working at ergonomic workstations with headsets. They type on computers, smile during calls, help each other. Bright office with plants and natural light. Steadicam movement capturing authentic teamwork.",
+      "negative_prompt": "blurry, low quality, cartoon, anime, text overlay, watermark, logo, crowded, chaotic",
+      "style": "bright modern office",
+      "aspect_ratio": "16:9",
+      "suggested_tools": [
+        "Hailuo AI",
+        "Kling AI",
+        "Luma Dream Machine"
+      ],
+      "output_filename": "team-collab.mp4"
+    },
+    {
+      "id": "promo-3-success",
+      "title": "Client Success Moment",
+      "duration": "10s",
+      "prompt": "Business professional (man, 40s, suit) in bright modern office receives a call. His face lights up with satisfaction, he nods approvingly at the excellent service. He gestures thumbs up toward camera. Warm golden hour lighting through large windows. Celebratory professional atmosphere.",
+      "negative_prompt": "blurry, low quality, cartoon, anime, text overlay, watermark, logo, dark, gloomy",
+      "style": "warm professional",
+      "aspect_ratio": "16:9",
+      "suggested_tools": [
+        "Hailuo AI",
+        "Kling AI",
+        "Luma Dream Machine"
+      ],
+      "output_filename": "client-success.mp4"
+    }
+  ],
+  "instructions": {
+    "step_1": "Open generate.html in a browser",
+    "step_2": "Copy prompts to your preferred AI video tool",
+    "step_3": "Generate videos (Hailuo, Kling, or Luma)",
+    "step_4": "Download generated videos to public/videos/promo/",
+    "step_5": "Rename files to match output_filename in scripts.json"
+  }
+}
