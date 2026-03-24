@@ -1,8 +1,7 @@
 'use client'
-import { useState } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
-import type { Metadata } from 'next'
+import { StarIcon } from '@/components/Icons'
 
 function PricingSlider({
   title, subtitle, accentColor, children
@@ -205,12 +204,124 @@ export default function Tarifs() {
             <p className="text-blue-200 mb-8">Nous créons des offres personnalisées pour les grandes équipes et les besoins spécifiques.</p>
             <Link href="/fr/contact?plan=sur-mesure"
               className="inline-block bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
-              Demander un Devis
-            </Link>
-          </div>
+        Demander un Devis
+        </Link>
+      </div>
 
-        </div>
-      </section>
-    </>
+    </div>
+  </section>
+
+  {/* FAQ SECTION - bg-slate-50 */}
+  <section className="py-20 bg-slate-50">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-3">Questions Fréquentes</h2>
+        <p className="text-slate-500">Tout ce que vous devez savoir avant de commencer</p>
+        <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+      </div>
+      <div className="space-y-4">
+        {[
+          { q: 'Combien de temps pour démarrer?', a: 'La mise en service prend 48h maximum après signature. Nous configurons vos scripts, formons les conseillers et testons ensemble avant le lancement.' },
+          { q: 'Y a-t-il un engagement minimum?', a: 'Non. Tous nos forfaits sont sans engagement. Vous pouvez modifier ou annuler à tout moment avec un préavis de 7 jours.' },
+          { q: 'Comment sont facturés les appels?', a: 'Appels sortants: facturés à l\'heure réellement utilisée. Appels entrants: forfait mensuel incluant un volume d\'appels. Agents IA: facturation à la minute.' },
+          { q: 'Quelles langues parlez-vous?', a: 'Français natif (Québec, France, Belgique, Suisse) et anglais. Nos agents IA supportent ces 2 langues avec des accents régionaux.' },
+          { q: 'Puis-je changer de forfait en cours?', a: 'Absolument. Vous pouvez upgrader ou downgrader à tout moment. La facturation est ajustée au prorata.' },
+          { q: 'Mes données sont-elles sécurisées?', a: '100% RGPD conforme. Hébergement au Canada/UE. Chiffrement bout en bout. Aucune donnée vendue ou partagée.' },
+        ].map(({ q, a }, i) => (
+          <details key={i} className="group bg-white rounded-2xl border border-slate-200 overflow-hidden">
+            <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+              <span className="font-semibold text-slate-900 pr-4">{q}</span>
+              <span className="w-6 h-6 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </span>
+            </summary>
+            <div className="px-5 pb-5 text-slate-600 leading-relaxed">{a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* TESTIMONIALS SECTION - bg-white */}
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-3">Ce que disent nos clients</h2>
+        <p className="text-slate-500">Plus de 500 PME nous font confiance</p>
+        <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { q: 'Tarifs imbattables et service impeccable. Le ROI a ete visible des le premier mois.', name: 'Marie-Claire Dupont', role: 'CEO, StartupTech Montreal', av: 'MD' },
+          { q: 'J\'ai reduit mes couts de 40% par rapport a un employe interne. Et zero appel manque.', name: 'Philippe Martin', role: 'Fondateur, Agence Digitale Lyon', av: 'PM' },
+          { q: 'Essai de 2 semaines convaincant. L\'equipe a parfaitement compris notre activite.', name: 'Stephanie Bernier', role: 'Directrice, Cabinet Conseil Paris', av: 'SB' },
+        ].map(({ q, name, role, av }) => (
+          <div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+            <div className="flex gap-0.5 mb-4">
+              {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
+            </div>
+            <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{q}&rdquo;</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>
+              <div>
+                <p className="font-bold text-slate-900 text-sm">{name}</p>
+                <p className="text-slate-500 text-xs">{role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* HOW IT WORKS SECTION - bg-slate-50 */}
+  <section className="py-20 bg-slate-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-3">Comment ça marche</h2>
+        <p className="text-slate-500">De l\'appel initial au deploiement en 4 etapes</p>
+        <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {[
+          { n: '1', t: 'Appel Decouverte', d: '30 min pour comprendre vos besoins et objectifs' },
+          { n: '2', t: 'Proposition', d: 'Devis personnalise sous 24h avec tarifs adaptes' },
+          { n: '3', t: 'Configuration', d: 'Scripts, formation et tests en 48h' },
+          { n: '4', t: 'Lancement', d: 'Vos appels pris en charge, suivi en temps reel' },
+        ].map(({ n, t, d }) => (
+          <div key={n} className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">{n}</div>
+            <h3 className="font-bold text-slate-900 text-lg mb-2">{t}</h3>
+            <p className="text-slate-500 text-sm">{d}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-12 text-center">
+        <Link href="/fr/contact" className="inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-800 transition-colors">
+          Demarrer Maintenant
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </Link>
+      </div>
+    </div>
+  </section>
+
+  {/* FINAL CTA SECTION - dark gradient */}
+  <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20 text-white">
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      <h2 className="text-3xl lg:text-4xl font-black mb-4">Pret a reduire vos couts de 40%?</h2>
+      <p className="text-blue-200 text-lg mb-8">Essai gratuit de 2 semaines. Sans engagement. Resultats garantis.</p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link href="/fr/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
+          Demander un Devis Gratuit
+        </Link>
+        <a href="tel:+15148190559" className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          +1 514 819-0559
+        </a>
+      </div>
+      <p className="text-blue-300 text-sm mt-8">Ouvert 24/7 - Reponse immediate</p>
+    </div>
+  </section>
+  </>
   )
 }
