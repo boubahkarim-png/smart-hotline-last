@@ -216,39 +216,39 @@ return (
         </div>
       </section>
 
-{/* TESTIMONIALS */}
-<section className="py-20 bg-white">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
-<div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-{TESTIMONIALS.map(({ q, name, role, av }) => (
-<div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-<div className="flex gap-0.5 mb-4">
-{[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
-</div>
-<p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{q}&rdquo;</p>
-<div className="flex items-center gap-3">
-<div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>
-<div>
-<p className="font-bold text-slate-900 text-sm">{name}</p>
-<p className="text-slate-500 text-xs">{role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
-</section>
+      {/* SECTION 7: DARK - TESTIMONIALS */}
+      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black mb-3">Ce que nos clients disent vraiment</h2>
+            <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {TESTIMONIALS.map(({ q, name, role, av }) => (
+              <div key={name} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+                <div className="flex gap-0.5 mb-4">
+                  {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
+                </div>
+                <p className="text-blue-100 mb-5 leading-relaxed italic">&ldquo;{q}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>
+                  <div>
+                    <p className="font-bold text-white text-sm">{name}</p>
+                    <p className="text-blue-200 text-xs">{role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-<h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à ne plus rater un appel?</h2>
-<p className="text-blue-200 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
-          <GeoAwareCTA lang="fr"/>
+      {/* SECTION 8: WHITE - FINAL CTA */}
+      <section className="bg-white py-20 border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Prêt à ne plus rater un appel?</h2>
+          <p className="text-slate-600 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
+          <Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Démarrer Maintenant</Link>
         </div>
       </section>
     </>
