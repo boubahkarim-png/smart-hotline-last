@@ -31,28 +31,27 @@ export default function Services() {
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-extrabold mb-5">Tout ce qu'il vous faut<br/>Pour gérer vos clients</h1>
-          <p className="text-lg text-blue-100 mb-8">Réception, prospection, IA, support — on s'occupe de tout. Vous vous concentrez sur votre business, point final.</p>
-          <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Demo Gratuite</Link>
+          <p className="text-lg text-blue-100 mb-8">On s'occupe de votre téléphone pendant que vous vous occupez de votre business. Simple comme bonjour.</p>
+          <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Essai Gratuit</Link>
         </div>
       </section>
       
-      {/* SECTION 2: DARK SERVICES OVERVIEW */}
+      {/* SECTION 2: DARK - SERVICES OVERVIEW */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Des solutions complètes pour votre réussite</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Des solutions qui font vraiment la différence</h2>
           <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Que vous ayez besoin de gérer vos appels entrants, de développer votre prospection,
-            d'automatiser avec l'IA ou d'optimiser votre support client, nous avons la solution adaptée.
+            Du décroché de téléphone au suivi client, on gère tout ça pour que tu puisses te concentrer sur ce que tu fais le mieux.
           </p>
         </div>
       </section>
       
-      {/* SECTION 3: LIGHT SERVICES GRID */}
+      {/* SECTION 3: LIGHT - SERVICES GRID */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Nos Services</h2>
-            <p className="text-slate-500 text-lg">Des solutions sur mesure pour chaque besoin de votre entreprise</p>
+            <p className="text-slate-500 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
