@@ -16,10 +16,10 @@ type: 'website',
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/smart-hotline-late2/en/',
+    canonical: 'https://boubahkarim-png.github.io/smart-hotline-last/en/',
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/smart-hotline-late2/fr/',
-      'en-CA': 'https://boubahkarim-png.github.io/smart-hotline-late2/en/',
+      'fr-CA': 'https://boubahkarim-png.github.io/smart-hotline-last/fr/',
+      'en-CA': 'https://boubahkarim-png.github.io/smart-hotline-last/en/',
     },
   },
 }
