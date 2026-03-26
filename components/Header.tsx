@@ -1,21 +1,24 @@
 'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { NAV_FR, NAV_EN, CONTACT } from '@/lib/nav'
 import { useGeo } from '@/hooks/useGeo'
+import { getOtherLangPath } from '@/lib/i18n'
 import type { Lang } from '@/lib/i18n'
 
 interface Props {
   lang: Lang
-  otherLangHref: string
 }
 
-export default function Header({ lang, otherLangHref }: Props) {
+export default function Header({ lang }: Props) {
+  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [ddOpen, setDdOpen] = useState(false)
   const { geo, loading } = useGeo()
   const nav = lang === 'fr' ? NAV_FR : NAV_EN
   const otherLabel = lang === 'fr' ? 'EN' : 'FR'
+  const otherLangHref = getOtherLangPath(pathname || '/', lang)
   const showPhone = !loading && geo.showPhone
   const contactHref = lang === 'fr' ? '/fr/contact' : '/en/contact'
   const ctaLabel = lang === 'fr' ? 'Demo Gratuite' : 'Free Demo'

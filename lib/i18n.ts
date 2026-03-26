@@ -5,6 +5,23 @@
 
 export type Lang = 'fr' | 'en'
 
+export function getOtherLangPath(pathname: string, currentLang: Lang): string {
+  const otherLang = currentLang === 'fr' ? 'en' : 'fr'
+  const segments = pathname.split('/').filter(Boolean)
+  
+  if (segments.length === 0) {
+    return `/${otherLang}`
+  }
+  
+  if (segments[0] === 'fr' || segments[0] === 'en') {
+    segments[0] = otherLang
+  } else {
+    segments.unshift(otherLang)
+  }
+  
+  return '/' + segments.join('/')
+}
+
 export const T = {
   fr: {
     hero_title: "Centre d'Appels & IA pour PME",
