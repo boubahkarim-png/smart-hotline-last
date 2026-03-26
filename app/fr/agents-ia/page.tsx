@@ -165,26 +165,26 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: LIGHT - FEATURES */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
-            <div className="w-16 h-1 bg-violet-600 mx-auto rounded"/>
+{/* SECTION 3: LIGHT - FEATURES */}
+  <section className="py-20 bg-slate-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
+        <div className="w-16 h-1 bg-violet-600 mx-auto rounded"/>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {FEATURES.map(({icon: Icon, title, desc}: any) => (
+          <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+          <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+            <Icon className="w-6 h-6 text-violet-700" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {FEATURES.map(({icon: Icon, title, desc}: any) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-violet-700" />
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{title}</h3>
-                <p className="text-slate-500 text-sm">{desc}</p>
-              </div>
-            ))}
-          </div>
+          <h3 className="font-bold text-lg text-slate-900 mb-2">{title}</h3>
+          <p className="text-slate-500 text-sm">{desc}</p>
         </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </section>
 
       {/* SECTION 4: LIGHT - HOW IT WORKS */}
       <section className="py-20 bg-white">

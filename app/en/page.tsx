@@ -122,22 +122,22 @@ export default function EnHome() {
             <p className="text-slate-500 text-lg">Everything your SMB needs for customer relations</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
-            {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any, i: number) => (
-              <Link key={href} href={href}
-                className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover-lift transition-all group animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>
-                <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
-                  <Icon className={`w-6 h-6 ${color}`} />
-                </div>
-                <div className="flex items-start gap-2 mb-2">
-                  <h3 className="font-bold text-slate-900">{title}</h3>
-                  {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
-                </div>
-                <p className="text-slate-500 text-sm mb-3">{desc}</p>
-                <span className="text-blue-700 text-sm font-semibold group-hover:underline">Learn more &rarr;</span>
-              </Link>
-            ))}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any, i: number) => (
+          <Link key={href} href={href}
+          className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover-lift transition-all group animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>
+          <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
+            <Icon className={`w-6 h-6 ${color}`} />
           </div>
+          <div className="flex items-start gap-2 mb-2">
+            <h3 className="font-bold text-slate-900">{title}</h3>
+            {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
+          </div>
+          <p className="text-slate-500 text-sm mb-3">{desc}</p>
+          <span className="text-blue-700 text-sm font-semibold group-hover:underline">Learn more &rarr;</span>
+        </Link>
+        ))}
+      </div>
         </div>
       </section>
 

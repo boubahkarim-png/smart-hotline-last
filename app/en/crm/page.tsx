@@ -97,17 +97,17 @@ export default function Page() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">What's Included</h2>
             <p className="text-purple-200 text-lg max-w-2xl mx-auto">Everything you need to manage your contacts and sales.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {FEATURES.map(({icon: Icon, title, desc}: any) => (
-              <div key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-purple-300" />
-                </div>
-                <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-                <p className="text-purple-200 text-sm">{desc}</p>
-              </div>
-            ))}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {FEATURES.map(({icon: Icon, title, desc}: any) => (
+          <div key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+          <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+            <Icon className="w-6 h-6 text-purple-300" />
           </div>
+          <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
+          <p className="text-purple-200 text-sm">{desc}</p>
+        </div>
+        ))}
+      </div>
         </div>
       </section>
 
