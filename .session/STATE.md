@@ -9,12 +9,12 @@
 ## Current Position
 
 **Current Phase:** Phase 2 - Content & SEO
-**Current Plan:** Awaiting user requirements for improvements
+**Current Plan:** FR pages complete with 8 sections each, EN pages need review
 **Status:** ACTIVE - Live and functional
 
 **Overall Progress:**
 ```
-[████████████████████████████░░░░░░░░░░░░] 65% (Core features complete, EN translation and SEO remaining)
+[████████████████████████████████░░░░░░] 75% (FR pages complete, EN alignment needed)
 ```
 
 ---
@@ -24,116 +24,107 @@
 | Phase | Status | Progress | Blockers |
 |-------|--------|----------|----------|
 | Phase 1: Core Development | 🟢 Completed | 8/8 | None |
-| Phase 2: Content & SEO | 🟡 In Progress | 3/6 | EN translation needed |
+| Phase 2: Content & SEO | 🟡 In Progress | 5/6 | EN alignment needed |
 | Phase 3: Performance | ⚪ Not Started | 0/4 | Content completion required |
 | Phase 4: Features | ⚪ Not Started | 0/5 | Performance optimization required |
+
+---
+
+## Session History
+
+### 2026-03-26 Session
+**Completed:**
+- ✅ Removed duplicate FAQ sections from reception and support pages
+- ✅ Fixed wrong button colors in duplicate FAQs (blue-600 → sky-600, teal-600 → emerald-700)
+- ✅ Added 4th testimonial to all FR service pages (reception, support, crm, secteurs, emission, agents-ia)
+- ✅ Verified all FR service pages have exactly 8 sections
+
+**Verification:**
+```bash
+for page in reception support crm secteurs emission agents-ia; do 
+  curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/fr/$page/" | grep -oE '<section[^>]*>' | wc -l
+done
+# All pages: 8 sections
+```
+
+---
+
+## Service Page Colors
+
+| Service | FR Color | EN Color | Status |
+|---------|----------|----------|--------|
+| Réception/Inbound | sky-600 | sky-600 | ✅ |
+| Support | emerald-700 | emerald-700 | ✅ |
+| CRM | purple-600 | purple-600 | ✅ |
+| Secteurs | amber-600 | - | ✅ |
+| Émission/Outbound | emerald-600 | emerald-600 | ✅ |
+| Agents IA | violet-600 | violet-600 | ✅ |
+
+---
+
+## Section Pattern
+
+Each service page follows this pattern:
+1. **LIGHT** - Hero with image
+2. **DARK** - Features/Stats (gradient)
+3. **LIGHT** - Stats/How it works
+4. **LIGHT** - Benefits/Details
+5. **LIGHT** - More content
+6. **LIGHT** - Testimonials (4 boxes in md:grid-cols-4)
+7. **DARK** - Final CTA (gradient)
+8. **LIGHT** - FAQ
 
 ---
 
 ## Accumulated Context
 
 ### Key Decisions
-
 | Decision | Rationale | Date |
 |----------|-----------|------|
 | Tailwind v4 CSS-first | No config file, auto-scans all files | 2026-03-23 |
 | Static export to GitHub Pages | Free hosting, custom domain support | 2026-03-22 |
 | Geo-aware CTA (ipapi.co) | Different contact methods by country | 2026-03-22 |
 | basePath: /smart-hotline-last | Match GitHub repo name | 2026-03-25 |
+| 8 sections per page | L-D-L-L-L-L-D-L pattern | 2026-03-26 |
+| 4 testimonials per page | Even grid requirement (md:grid-cols-4) | 2026-03-26 |
 
 ### Known Issues
-- EN pages have placeholder content (need full translation)
-- Live URL shows /smart-hotline-last/ (correct) but internal references may need verification
+- EN pages may need alignment with FR structure
+- Some pages may need hero images
 
 ### Technical Debt
-- Add more testimonials across all pages
+- ~~Add more testimonials across all pages~~ ✅ DONE
 - Generate real promotional videos
 - Add metadata to emission, support, agents-ia pages
 - Performance optimization needed
 
 ---
 
-## Session Continuity
+## Deploy Process
 
-**Last Session:** 2026-03-25
-**Stopped at:** Restructured French blog page to have exactly 8 sections following light/dark pattern, added humanized content, FAQ, testimonials, stats sections, and implemented 'Lire la suite' pop-ups for blog articles
-**Next Action:** Continue with remaining improvements (EN translation, structure standardization for other pages, content humanization, feature additions)
-
----
-
-## Recently Completed
-
-- ✓ **Deployment Path Fix** — Corrected all paths from smart-hotline-late2 to smart-hotline-last
-  - Updated next.config.js basePath and assetPrefix
-  - Fixed all hardcoded references in source files
-  - Commit: multiple pushes to main
-  
-- ✓ **Video Section Removal** — Removed video section from French homepage per user request
-  - Updated app/fr/page.tsx
-  - Rebuilt and deployed
-
-- ✓ **SEO Optimization** — Metadata, sitemap, robots.txt configured
-  - OpenGraph, alternates, hreflang
-  - SEO keyword strategy completed
-
----
-
-## Upcoming Work
-
-1. **EN Translation** — Complete English page content
-2. **Structure Standardization** — 8 sections with light/dark pattern
-3. **Content Humanization** — Avoid AI detection
-4. **Feature Additions**
-   - Chatbot functionality
-   - 'Lire la suite' pop-ups for blog
-   - Sliding data boxes
-5. **Performance Optimization**
-
----
-
-## Project Reference
-
-### Core Value Reminder
-Professional bilingual website for Smart Hotline Agency, showcasing AI voice receptionist services with geo-aware pricing and contact methods.
-
-### Key Constraints
-- Next.js 14.2 + Tailwind v4 (CSS-first, no config)
-- Static export only (no server-side)
-- basePath: /smart-hotline-last
-- CSS must be >30KB after build
-
-### Success Definition
-Website is successful when:
-- Loads in <3 seconds on mobile
-- SEO score >90 on Lighthouse
-- Bounce rate <50%
-- Contact form submissions >5/week
-
-### Tech Stack
-| Technology | Version | Notes |
-|------------|---------|-------|
-| Next.js | 14.2.x | App Router, static export |
-| Tailwind | v4.2.x | CSS-first, no config file |
-| TypeScript | 5.x | Strict mode |
-| Node.js | v20.20.0 | Build environment |
-
-### Deploy Process
 ```bash
 cd /root/projects/smart-hotline-nextjs
-rm -rf out && npm run build 2>&1 | tail -5
-ls out/_next/static/css/*.css  # Must exist >30KB
+rm -rf out && npm run build
 touch out/.nojekyll
-git add -A && git commit -m "description"
-git push --force origin main
-gh workflow run "Deploy to GitHub Pages" --repo boubahkarim-png/smart-hotline-last
-gh run watch --repo boubahkarim-png/smart-hotline-last
+git add -A && git commit -m "message"
+git push origin main
+# Auto-deploys via GitHub Actions (workflow_dispatch or push)
 ```
 
-### Live URLs
+### Verification
+```bash
+curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/fr/" | grep -oE '<section[^>]*>' | wc -l
+# Should return 8
+```
+
+---
+
+## Live URLs
+
 - **French**: https://boubahkarim-png.github.io/smart-hotline-last/fr/
 - **English**: https://boubahkarim-png.github.io/smart-hotline-last/en/
 
 ---
 
 *State initialized: 2026-03-22*
-*Last updated: 2026-03-25*
+*Last updated: 2026-03-26*
