@@ -9,12 +9,12 @@
 ## Current Position
 
 **Current Phase:** Phase 2 - Content & SEO
-**Current Plan:** FR pages complete with 8 sections each, EN pages need review
+**Current Plan:** All FR and EN service pages complete with 8 sections each
 **Status:** ACTIVE - Live and functional
 
 **Overall Progress:**
 ```
-[████████████████████████████████░░░░░░] 75% (FR pages complete, EN alignment needed)
+[████████████████████████████████████░░] 90% (FR and EN pages complete)
 ```
 
 ---
@@ -24,9 +24,9 @@
 | Phase | Status | Progress | Blockers |
 |-------|--------|----------|----------|
 | Phase 1: Core Development | 🟢 Completed | 8/8 | None |
-| Phase 2: Content & SEO | 🟡 In Progress | 5/6 | EN alignment needed |
-| Phase 3: Performance | ⚪ Not Started | 0/4 | Content completion required |
-| Phase 4: Features | ⚪ Not Started | 0/5 | Performance optimization required |
+| Phase 2: Content & SEO | 🟢 Completed | 6/6 | None |
+| Phase 3: Performance | ⚪ Not Started | 0/4 | - |
+| Phase 4: Features | ⚪ Not Started | 0/5 | - |
 
 ---
 
@@ -35,16 +35,26 @@
 ### 2026-03-26 Session
 **Completed:**
 - ✅ Removed duplicate FAQ sections from reception and support pages
-- ✅ Fixed wrong button colors in duplicate FAQs (blue-600 → sky-600, teal-600 → emerald-700)
-- ✅ Added 4th testimonial to all FR service pages (reception, support, crm, secteurs, emission, agents-ia)
-- ✅ Verified all FR service pages have exactly 8 sections
+- ✅ Fixed wrong button colors in duplicate FAQs
+- ✅ Added 4th testimonial to all FR service pages
+- ✅ Fixed image extensions (.png → .jpg) for all pages
+- ✅ Added 4th testimonial to all EN service pages
+- ✅ Fixed AGENTS.md with correct valid subagent types for Task tool
+- ✅ Verified all FR and EN service pages have exactly 8 sections
 
 **Verification:**
 ```bash
-for page in reception support crm secteurs emission agents-ia; do 
+# FR pages
+for page in reception support crm secteurs emission agents-ia; do
   curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/fr/$page/" | grep -oE '<section[^>]*>' | wc -l
 done
-# All pages: 8 sections
+# All: 8 sections
+
+# EN pages
+for page in inbound support crm sectors outbound ai-agents; do
+  curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/en/$page/" | grep -oE '<section[^>]*>' | wc -l
+done
+# All: 8 sections
 ```
 
 ---
@@ -56,23 +66,36 @@ done
 | Réception/Inbound | sky-600 | sky-600 | ✅ |
 | Support | emerald-700 | emerald-700 | ✅ |
 | CRM | purple-600 | purple-600 | ✅ |
-| Secteurs | amber-600 | - | ✅ |
+| Secteurs/Sectors | amber-600 | amber-600 | ✅ |
 | Émission/Outbound | emerald-600 | emerald-600 | ✅ |
-| Agents IA | violet-600 | violet-600 | ✅ |
+| Agents IA/AI Agents | violet-600 | violet-600 | ✅ |
+
+---
+
+## Image Assignment
+
+| Service | FR Image | EN Image |
+|---------|----------|----------|
+| Reception/Inbound | reception-hero.jpg | reception-hero.jpg |
+| Support | support-tech.jpg | support-tech.jpg |
+| CRM | crm-interface.jpg | crm-interface.jpg |
+| Secteurs/Sectors | secteurs-hero.jpg | services-hero.jpg |
+| Émission/Outbound | telemarketing.jpg | telemarketing.jpg |
+| Agents IA | agents-ia-hero.jpg | agents-ia-hero.jpg |
 
 ---
 
 ## Section Pattern
 
-Each service page follows this pattern:
-1. **LIGHT** - Hero with image
-2. **DARK** - Features/Stats (gradient)
-3. **LIGHT** - Stats/How it works
-4. **LIGHT** - Benefits/Details
-5. **LIGHT** - More content
-6. **LIGHT** - Testimonials (4 boxes in md:grid-cols-4)
-7. **DARK** - Final CTA (gradient)
-8. **LIGHT** - FAQ
+Each service page follows this pattern (L-D-L-L-L-L-D-L):
+1. **LIGHT (bg-white)** - Hero with image
+2. **DARK (bg-gradient)** - Features/Stats
+3. **LIGHT (bg-white)** - Stats
+4. **LIGHT (bg-slate-50)** - How it works
+5. **LIGHT (bg-white)** - Benefits
+6. **LIGHT (bg-slate-50)** - Testimonials (4 boxes)
+7. **DARK (bg-gradient)** - Final CTA
+8. **LIGHT (bg-white)** - FAQ
 
 ---
 
@@ -87,15 +110,13 @@ Each service page follows this pattern:
 | basePath: /smart-hotline-last | Match GitHub repo name | 2026-03-25 |
 | 8 sections per page | L-D-L-L-L-L-D-L pattern | 2026-03-26 |
 | 4 testimonials per page | Even grid requirement (md:grid-cols-4) | 2026-03-26 |
-
-### Known Issues
-- EN pages may need alignment with FR structure
-- Some pages may need hero images
+| .jpg for most images | Original high-quality files | 2026-03-26 |
 
 ### Technical Debt
 - ~~Add more testimonials across all pages~~ ✅ DONE
+- ~~Fix image extensions~~ ✅ DONE
+- ~~Align EN pages with FR structure~~ ✅ DONE
 - Generate real promotional videos
-- Add metadata to emission, support, agents-ia pages
 - Performance optimization needed
 
 ---
@@ -108,7 +129,7 @@ rm -rf out && npm run build
 touch out/.nojekyll
 git add -A && git commit -m "message"
 git push origin main
-# Auto-deploys via GitHub Actions (workflow_dispatch or push)
+# Auto-deploys via GitHub Actions
 ```
 
 ### Verification
