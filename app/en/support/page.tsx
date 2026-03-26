@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, MailIcon, ChatIcon, TicketIcon, MobileIcon, AnalyticsIcon, CheckIcon, HeadphonesIcon, StarIcon, UsersIcon, ClockIcon, ShieldCheckIcon, StarIcon, BoltIcon } from '@/components/Icons'
+import { PhoneIcon, MailIcon, ChatIcon, TicketIcon, MobileIcon, AnalyticsIcon, CheckIcon, HeadphonesIcon, StarIcon, UsersIcon, ClockIcon, ShieldCheckIcon, BoltIcon } from '@/components/Icons'
 
 const FEATURES = [
   {icon: PhoneIcon, title: 'Phone Support', desc: 'Inbound calls, escalation, proactive callbacks.'},
