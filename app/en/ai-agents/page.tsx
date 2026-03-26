@@ -174,7 +174,7 @@ export default function Page() {
           <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
           <div className="w-16 h-1 bg-violet-600 mx-auto rounded"/>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {FEATURES.map(({icon: Icon, title, desc}: any) => (
             <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
               <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
@@ -213,7 +213,7 @@ export default function Page() {
           <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
           <p className="text-slate-500">Real results from real businesses.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {TESTIMONIALS.map(({quote, author, role}) => (
             <div key={author} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
               <p className="text-slate-700 mb-4 italic">"{quote}"</p>

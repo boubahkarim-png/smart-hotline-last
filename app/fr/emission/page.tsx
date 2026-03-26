@@ -161,7 +161,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
             <div className="w-16 h-1 bg-emerald-600 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map(({icon: Icon, title, desc}: any) => (
               <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
@@ -198,7 +198,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
             <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {TESTIMONIALS.map(({quote, name, role, initials}) => (
               <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="flex gap-0.5 mb-4">
@@ -243,38 +243,45 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 7: DARK - ADDITIONAL BENEFITS */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-3">Avantages supplémentaires</h2>
-            <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <ShieldCheckIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Conformité totale</h3>
-              <p className="text-slate-500 text-sm">Respect des réglementations telemarketing les plus strictes, avec enregistrement conforme et gestion optimale des listes d'exclusion.</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <UsersIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Évolution constante</h3>
-              <p className="text-slate-500 text-sm">Mises à jour régulières des scripts et stratégies basées sur les retours terrain et les meilleures pratiques de l'industrie.</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <ClockIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Support dédié</h3>
-              <p className="text-slate-500 text-sm">Équipe de support disponible pour optimiser vos campagnes en temps réel et répondre à toutes vos questions opérationnelles.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* SECTION 7: DARK - ADDITIONAL BENEFITS */}
+<section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-20 text-white">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-white mb-3">Avantages supplémentaires</h2>
+<div className="w-16 h-1 bg-emerald-400 mx-auto rounded-full"/>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+<div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center mb-4">
+<ShieldCheckIcon className="w-6 h-6 text-emerald-300" />
+</div>
+<h3 className="font-bold text-lg text-white mb-2">Conformité totale</h3>
+<p className="text-slate-300 text-sm">Respect des réglementations telemarketing, enregistrement conforme et gestion des listes d\'exclusion.</p>
+</div>
+<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+<div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center mb-4">
+<UsersIcon className="w-6 h-6 text-emerald-300" />
+</div>
+<h3 className="font-bold text-lg text-white mb-2">Évolution constante</h3>
+<p className="text-slate-300 text-sm">Mises à jour des scripts et stratégies basées sur les retours terrain.</p>
+</div>
+<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+<div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center mb-4">
+<ClockIcon className="w-6 h-6 text-emerald-300" />
+</div>
+<h3 className="font-bold text-lg text-white mb-2">Support dédié</h3>
+<p className="text-slate-300 text-sm">Équipe disponible pour optimiser vos campagnes en temps réel.</p>
+</div>
+<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+<div className="w-12 h-12 bg-emerald-500/30 rounded-xl flex items-center justify-center mb-4">
+<CheckIcon className="w-6 h-6 text-emerald-300" />
+</div>
+<h3 className="font-bold text-lg text-white mb-2">Garantie résultats</h3>
+<p className="text-slate-300 text-sm">SLA garanti avec suivi des performances et rapports détaillés.</p>
+</div>
+</div>
+</div>
+</section>
 
       {/* SECTION 8: LIGHT - FINAL CTA */}
       <section className="py-20 bg-slate-50">

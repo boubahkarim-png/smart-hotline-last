@@ -240,7 +240,7 @@ export default function BlogFr() {
               Explorez notre collection complète d'articles sur la relation client, l'IA vocale et la prospection téléphonique
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {POSTS.map(({ title, date, cat, img, excerpt }) => (
               <article key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group cursor-pointer">
                 <img src={img} alt={title} className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"/>

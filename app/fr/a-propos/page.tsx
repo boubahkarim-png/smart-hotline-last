@@ -36,7 +36,7 @@ export default function APropos() {
               une relation client irréprochable, adaptée à leurs besoins spécifiques.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {icon: "🎯", title: "Excellence Opérationnelle", desc: "Nous visons la perfection dans chaque interaction client"},
               {icon: "💬", title: "Communication Authentique", desc: "Nos agents parlent comme vos clients, avec votre ton et votre style"},
@@ -164,7 +164,7 @@ export default function APropos() {
             <p className="text-slate-500 text-lg">L'innovation qui fait la différence pour votre PME</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {icon: "🤖", title: "IA Vocale Avancée", desc: "Sophie comprend le contexte, les accents et les nuances culturelles"},
               {icon: "🔗", title: "Intégrations Simples", desc: "Connexion directe avec vos outils: CRM, calendriers, help desks"},

@@ -161,7 +161,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
             <div className="w-16 h-1 bg-violet-600 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map(({icon: Icon, title, desc}: any) => (
               <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
@@ -198,7 +198,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
             <div className="w-16 h-1 bg-violet-600 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {TESTIMONIALS.map(({quote, name, role, initials}) => (
               <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="flex gap-0.5 mb-4">
@@ -250,7 +250,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-3">Avantages supplémentaires</h2>
             <div className="w-16 h-1 bg-violet-600 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
               <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
                 <ShieldCheckIcon className="w-6 h-6 text-violet-700" />
@@ -262,19 +262,26 @@ export default function Page() {
               <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
                 <UsersIcon className="w-6 h-6 text-violet-700" />
               </div>
-              <h3 className="font-bold text-lg text-slate-900 mb-2">Évolution constante</h3>
-              <p className="text-slate-500 text-sm">Mises à jour régulières incluant de nouvelles fonctionnalités basé sur les retours clients et les avancées technologiques.</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
-                <ClockIcon className="w-6 h-6 text-violet-700" />
-              </div>
-              <h3 className="font-bold text-lg text-slate-900 mb-2">Support dédié</h3>
-              <p className="text-slate-500 text-sm">Équipe de support disponible pour vous accompagner dans l'utilisation quotidienne de Sophie et répondre à vos questions.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<h3 className="font-bold text-lg text-slate-900 mb-2">Évolution constante</h3>
+<p className="text-slate-500 text-sm">Mises à jour régulières incluant de nouvelles fonctionnalités basé sur les retours clients et les avancées technologiques.</p>
+</div>
+<div className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+<div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+<ClockIcon className="w-6 h-6 text-violet-700" />
+</div>
+<h3 className="font-bold text-lg text-slate-900 mb-2">Support dédié</h3>
+<p className="text-slate-500 text-sm">Équipe de support disponible pour vous accompagner dans l\'utilisation quotidienne de Sophie.</p>
+</div>
+<div className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+<div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+<CheckIcon className="w-6 h-6 text-violet-700" />
+</div>
+<h3 className="font-bold text-lg text-slate-900 mb-2">Analyse continue</h3>
+<p className="text-slate-500 text-sm">Tableau de bord avec statistiques détaillées et optimisation automatique des réponses.</p>
+</div>
+</div>
+</div>
+</section>
 
       {/* SECTION 8: DARK - FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">

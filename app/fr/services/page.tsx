@@ -54,7 +54,7 @@ export default function Services() {
             <p className="text-slate-500 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {SERVICES.map(({icon, title, desc, href, badge}) => (
               <Link key={href} href={href} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group">
                 <div className="text-5xl mb-5">{icon}</div>
@@ -88,7 +88,7 @@ export default function Services() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">Ce que disent nos clients</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {TESTIMONIALS.map(({quote, author, role, rating}) => (
               <div key={author} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                 <div className="flex mb-4">
@@ -125,7 +125,7 @@ export default function Services() {
       {/* SECTION 7: LIGHT ADDITIONAL VALUE */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Pourquoi choisir Smart Hotline?</h3>
               <p className="text-gray-600 mb-6">

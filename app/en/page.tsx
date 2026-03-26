@@ -121,7 +121,7 @@ export default function EnHome() {
             <p className="text-slate-500 text-lg">Everything your SMB needs for customer relations</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
             {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any, i: number) => (
               <Link key={href} href={href}
                 className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover-lift transition-all group animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>

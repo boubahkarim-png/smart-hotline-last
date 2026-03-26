@@ -76,7 +76,7 @@ export default function Sectors() {
       <h2 className="text-3xl font-black text-slate-900 mb-3">Industries We Specialize In</h2>
       <div className="w-16 h-1 bg-amber-700 mx-auto rounded"/>
      </div>
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {SECTORS.map(({icon, name, desc, examples}) => (
        <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
         <div className="text-4xl mb-4">{icon}</div>
@@ -133,7 +133,7 @@ export default function Sectors() {
       <h2 className="text-3xl font-black text-slate-900 mb-3">Success Stories by Industry</h2>
       <div className="w-16 h-1 bg-amber-700 mx-auto rounded-full"/>
      </div>
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
       {TESTIMONIALS.map(({quote, name, role, initials}) => (
        <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
         <div className="flex gap-0.5 mb-4">

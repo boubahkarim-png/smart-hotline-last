@@ -103,7 +103,7 @@ export default function Page() {
       {/* 2. Metrics - Dark */}
       <section className="bg-gradient-to-r from-slate-900 to-teal-900 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-white text-center">
             {METRICS.map(({v, l, Icon}) => (
               <div key={l} className="flex flex-col items-center">
                 <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-3">
@@ -124,7 +124,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
             <div className="w-16 h-1 bg-emerald-700 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map(({icon: Icon, title, desc}: any) => (
               <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
@@ -187,7 +187,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
             <div className="w-16 h-1 bg-emerald-700 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {TESTIMONIALS.map(({quote, author, role}) => (
               <div key={author} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
                 <div className="flex gap-1 mb-3">

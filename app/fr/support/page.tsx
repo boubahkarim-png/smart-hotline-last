@@ -166,7 +166,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">Ce que nos clients disent</h2>
 <div className="w-16 h-1 bg-emerald-700 mx-auto rounded"></div>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 {TESTIMONIALS.map((t, i) => (
 <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
 <div className="flex gap-0.5 mb-4">

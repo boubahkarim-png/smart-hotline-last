@@ -89,7 +89,7 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map(({icon: Icon, title, desc}: any) => (
               <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">

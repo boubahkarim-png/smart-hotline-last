@@ -221,7 +221,7 @@ Start Trial
             <p className="text-slate-500">Over 500 SMEs trust us</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { q: 'I compared 3 call centers. You\'re the only one where agents actually understand what I do. And it shows when my clients call.', name: 'Sarah Mitchell', role: 'CEO, TechStart Montreal', av: 'SM' },
               { q: 'My accountant said: "You should hire a receptionist." I said no, took Smart Hotline. Result? 40% cheaper, and I can scale tomorrow if I want.', name: 'Michael Brown', role: 'Founder, Digital Agency NYC', av: 'MB' },

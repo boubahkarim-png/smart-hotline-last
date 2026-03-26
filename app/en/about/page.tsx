@@ -36,7 +36,7 @@ export default function About() {
               We believe customer relationships are the heart of every successful business. Our mission is to enable SMEs to deliver excellent customer experiences — without recruiting, training or managing in-house teams.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {icon: "🎯", title: "Customer-Centric Approach", desc: "We put your customers at the center of everything we do"},
               {icon: "💬", title: "Authentic Communication", desc: "Our agents speak like your customers, with your tone and style"},
@@ -163,7 +163,7 @@ Our success comes from combining experienced professionals with practical AI too
             <p className="text-slate-500 text-lg">Innovation that makes the difference for your SME</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {icon: "🤖", title: "Advanced Voice AI", desc: "Sophie understands context, accents and cultural nuances"},
               {icon: "🔗", title: "Simple Integrations", desc: "Direct connection with your existing tools: CRM, calendars, help desks"},
@@ -214,7 +214,7 @@ Our success comes from combining experienced professionals with practical AI too
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>
                   <div>
                     <p className="font-bold text-slate-900 text-sm">{name}</p>
-                    <p className="text-slate-500 text-xs">{role}</p>
+                    <p className="text-slate-300 text-xs">{role}</p>
                   </div>
                 </div>
               </div>
