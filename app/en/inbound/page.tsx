@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, GlobeIcon, FileIcon, ChartIcon, TransferIcon, BoltIcon, CheckIcon, UsersIcon, ShieldIcon, ClockIcon, StarIcon } from '@/components/Icons'
+import { PhoneIcon, GlobeIcon, FileIcon, ChartIcon, TransferIcon, BoltIcon, CheckIcon, UsersIcon, ShieldCheckIcon, ClockIcon, StarIcon } from '@/components/Icons'
 
 const FEATURES = [
   {'icon': PhoneIcon, 'title': '24/7 Reception', 'desc': 'Your calls answered at all hours, weekends and holidays included.'},
@@ -169,7 +169,7 @@ export default function Page() {
               <div className="bg-gradient-to-br from-blue-50 to-slate-100 rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center">
-                    <ShieldIcon className="w-6 h-6 text-white" />
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-slate-900 text-lg">GDPR Compliant</h3>
                 </div>
