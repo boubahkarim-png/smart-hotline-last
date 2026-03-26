@@ -5,8 +5,6 @@ import { useState } from 'react'
 interface FormData {
   name: string
   email: string
-  phone: string
-  company: string
   message: string
   source: string
 }
@@ -21,34 +19,34 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    phone: '',
-    company: '',
     message: '',
     source: source
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [error, setError] = useState('')
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false)
 
   const fr = lang === 'fr'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    if (!acceptedPrivacy) {
+      setError(fr ? 'Veuillez accepter la politique de confidentialité.' : 'Please accept the privacy policy.')
+      return
+    }
+
     setStatus('sending')
     setError('')
 
     try {
-      // SuiteCRM API endpoint
       const response = await fetch('http://194.163.187.192:8090/module/Leads', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           first_name: formData.name.split(' ')[0] || formData.name,
           last_name: formData.name.split(' ').slice(1).join(' ') || '',
           email1: formData.email,
-          phone_work: formData.phone,
-          account_name: formData.company,
           description: formData.message,
           lead_source: formData.source,
           status: 'New',
@@ -57,18 +55,16 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
       })
 
       if (!response.ok) {
-        // Fallback: store in local API
         const fallbackResponse = await fetch('/api/leads', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
         })
-        
         if (!fallbackResponse.ok) throw new Error('Submission failed')
       }
 
       setStatus('success')
-      setFormData({ name: '', email: '', phone: '', company: '', message: '', source })
+      setFormData({ name: '', email: '', message: '', source })
       onSuccess?.()
     } catch (err) {
       setStatus('error')
@@ -92,9 +88,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           {fr ? 'Merci !' : 'Thank you!'}
         </h3>
         <p className="text-green-700">
-          {fr 
-            ? 'Nous vous contacterons dans les 24 heures.' 
-            : 'We will contact you within 24 hours.'}
+          {fr ? 'Nous vous contacterons dans les 2 heures.' : 'We will contact you within 2 hours.'}
         </p>
       </div>
     )
@@ -104,7 +98,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1.5">
-          {fr ? 'Nom complet' : 'Full name'} *
+          {fr ? 'Nom' : 'Name'} *
         </label>
         <input
           type="text"
@@ -134,39 +128,12 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
 
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1.5">
-          {fr ? 'Téléphone' : 'Phone'}
-        </label>
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
-          placeholder="+1 514 555-1234"
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">
-          {fr ? 'Entreprise' : 'Company'}
-        </label>
-        <input
-          type="text"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
-          placeholder={fr ? 'Nom de votre entreprise' : 'Your company name'}
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">
-          {fr ? 'Message' : 'Message'}
+          {fr ? 'Message' : 'Message'} *
         </label>
         <textarea
           name="message"
           rows={4}
+          required
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
@@ -179,6 +146,23 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           {error}
         </div>
       )}
+
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="privacy"
+          checked={acceptedPrivacy}
+          onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+          className="mt-1 w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500"
+        />
+        <label htmlFor="privacy" className="text-sm text-slate-600">
+          {fr ? (
+            <>J'accepte la <a href="/fr/confidentialite" className="text-blue-600 hover:underline">politique de confidentialité</a> (RGPD)</>
+          ) : (
+            <>I accept the <a href="/en/privacy" className="text-blue-600 hover:underline">privacy policy</a> (GDPR)</>
+          )}
+        </label>
+      </div>
 
       <button
         type="submit"
@@ -195,7 +179,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           </>
         ) : (
           <>
-            {fr ? 'Demander une démo gratuite' : 'Request a free demo'}
+            {fr ? 'Recevoir Mon Analyse Gratuite' : 'Get My Free Analysis'}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -203,10 +187,8 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
         )}
       </button>
 
-      <p className="text-xs text-slate-500 text-center">
-        {fr 
-          ? 'En soumettant ce formulaire, vous acceptez d\'être contacté par Smart Hotline.'
-          : 'By submitting this form, you agree to be contacted by Smart Hotline.'}
+      <p className="text-sm text-slate-500 text-center font-medium">
+        {fr ? 'Réponse garantie sous 2h • Aucun engagement' : 'Response guaranteed within 2h • No commitment'}
       </p>
     </form>
   )
