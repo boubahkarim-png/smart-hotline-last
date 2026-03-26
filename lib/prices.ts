@@ -45,10 +45,10 @@ export const PRICES_CA: CurrencyConfig = {
   ai_monthly: [249, 799, 1999],
   ai_minutes: [500, 2000, 6000],
   ai_per_min: [0.40, 0.32, 0.25],
-  // Inbound Reception - Starter high, Pro/Business lower
-  inbound: [699, 700, 1700],
+  // Inbound Reception - Starter high, Pro/Business higher
+  inbound: [699, 999, 2499],
   inbound_calls: [100, 300, 1000],
-  inbound_per_call: [5.50, 2.00, 1.50],
+  inbound_per_call: [6.50, 4.00, 2.50],
   // Customer Support - Multi-channel
   support: [849, 1799, 4199],
   support_channels: [1, 3, 5],
@@ -72,10 +72,10 @@ export const PRICES_EU: CurrencyConfig = {
   ai_monthly: [199, 649, 1649],
   ai_minutes: [500, 2000, 6000],
   ai_per_min: [0.35, 0.28, 0.22],
-  // Inbound Reception - Starter high, Pro/Business lower
-  inbound: [599, 600, 1500],
+  // Inbound Reception - Starter high, Pro/Business higher
+  inbound: [599, 899, 2199],
   inbound_calls: [100, 300, 1000],
-  inbound_per_call: [5.00, 1.80, 1.30],
+  inbound_per_call: [5.50, 3.50, 2.20],
   // Customer Support
   support: [699, 1499, 3499],
   support_channels: [1, 3, 5],
@@ -99,10 +99,10 @@ export const PRICES_US: CurrencyConfig = {
   ai_monthly: [199, 649, 1649],
   ai_minutes: [500, 2000, 6000],
   ai_per_min: [0.35, 0.28, 0.22],
-  // Inbound Reception - Starter high, Pro/Business lower
-  inbound: [599, 600, 1500],
+  // Inbound Reception - Starter high, Pro/Business higher
+  inbound: [599, 899, 2199],
   inbound_calls: [100, 300, 1000],
-  inbound_per_call: [5.00, 1.80, 1.30],
+  inbound_per_call: [5.50, 3.50, 2.20],
   // Customer Support
   support: [699, 1499, 3499],
   support_channels: [1, 3, 5],
@@ -126,10 +126,10 @@ export const PRICES_CH: CurrencyConfig = {
   ai_monthly: [249, 799, 1999],
   ai_minutes: [500, 2000, 6000],
   ai_per_min: [0.45, 0.35, 0.28],
-  // Inbound Reception - Starter high, Pro/Business lower
-  inbound: [749, 750, 1800],
+  // Inbound Reception - Starter high, Pro/Business higher
+  inbound: [749, 1099, 2699],
   inbound_calls: [100, 300, 1000],
-  inbound_per_call: [6.00, 2.20, 1.60],
+  inbound_per_call: [7.00, 4.50, 2.80],
   // Customer Support
   support: [849, 1799, 4199],
   support_channels: [1, 3, 5],
