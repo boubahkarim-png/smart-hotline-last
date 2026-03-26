@@ -27,7 +27,8 @@ const TESTIMONIALS = [
   {quote: 'Our response time dropped from 24h to under 4h. Clients are impressed.', author: 'Marie L.', role: 'E-commerce Founder'},
   {quote: 'They learned our product in a week. Feels like an in-house team.', author: 'Thomas B.', role: 'SaaS Director'},
   {quote: 'Finally a partner who understands French SME reality.', author: 'Sophie M.', role: 'Agency CEO'},
-]
+  {quote: 'We tried 3 other services before. This is the only one that truly gets our customers.', author: 'David R.', role: 'Tech Startup Founder'},
+  ]
 const FAQS = [
   {q: 'What channels do you cover?', a: 'Phone, email, live chat, WhatsApp Business, and social media. We adapt to where your customers are.'},
   {q: 'How fast can you start?', a: 'After the audit, we can be live within 5 business days. Training your team on your products takes another week.'},

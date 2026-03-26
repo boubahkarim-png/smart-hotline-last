@@ -30,7 +30,9 @@ const INDUSTRIES = [
 const TESTIMONIALS = [
   {'quote': 'We were missing 40% of calls. Now? Zero. The ROI was obvious within the first month.', 'author': 'Marie D.', 'role': 'Dental Clinic Manager'},
   {'quote': 'Professional, reliable, and our clients can\'t tell it\'s not our own team.', 'author': 'Thomas B.', 'role': 'Law Firm Partner'},
-]
+  {'quote': 'The setup took 48 hours. By Friday, we were live. Really smooth experience.', 'author': 'Jennifer L.', 'role': 'Real Estate Broker'},
+  {'quote': 'Best decision we made this year. No more missed calls, happy clients, and our staff can actually focus.', 'author': 'Michael K.', 'role': 'Restaurant Owner'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()

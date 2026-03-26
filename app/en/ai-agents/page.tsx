@@ -30,7 +30,8 @@ const TESTIMONIALS = [
   {'quote': "We were missing 40% of calls during peak hours. Sophie caught every single one last month. That's 127 potential clients we would've lost.", 'author': 'Dr. Martin K.', 'role': 'Dental Clinic Owner'},
   {'quote': "Honestly thought AI callers would feel robotic. But my clients keep thanking me for the 'receptionist' who's always helpful. They don't even know it's AI.", 'author': 'Sarah L.', 'role': 'Real Estate Agent'},
   {'quote': "We pay less for Sophie than we did for one part-time receptionist — and Sophie works nights, weekends, holidays. No complaints, no sick days.", 'author': 'Jean-Pierre M.', 'role': 'Law Firm Partner'},
-]
+  {'quote': "At first I was skeptical. But honestly? Clients don't notice a thing. These are real conversations.", 'author': 'Pierre H.', 'role': 'Manager, Houde & Sons Garage'},
+  ]
 
 const FAQS = [
   {'q': "Will callers know they're talking to AI?", 'a': "Most don't notice. Sophie speaks naturally, handles interruptions, and adjusts her pace. We've had clients' customers specifically compliment 'your lovely receptionist.'"},

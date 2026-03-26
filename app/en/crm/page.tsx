@@ -24,7 +24,8 @@ const TESTIMONIALS = [
   {q: "Before, our leads were in 3 different Excel files. Now everything is in one place. We don't lose anything anymore.", name: 'Marie-Claire Beaumont', role: 'Sales Director, Solutions Pro QC', av: 'MB'},
   {q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy for $500 with emails that no longer existed.", name: 'François Gagnon', role: 'Founder, InnoTech Montreal', av: 'FG'},
   {q: "We doubled our conversion rate in 4 months. CRM + outbound calls makes a huge difference.", name: 'Isabelle Tremblay', role: 'Sales Manager, Groupe Nordik', av: 'IT'},
-]
+  {q: "The training took 2 hours. Next day, we were operational. It's really not complicated like they said.", name: 'Michael Richard', role: 'CEO, Richard & Sons Construction', av: 'MR'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()

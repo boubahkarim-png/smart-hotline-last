@@ -18,10 +18,11 @@ const STATS = [
  { value: "24/7", label: "Availability" },
 ]
 const TESTIMONIALS = [
- { quote: "As a restaurant owner, I was missing 30% of calls during service. Smart Hotline changed everything. Reservations doubled.", name: "Marco R.", role: "Owner, Trattoria Milano — Little Italy", initials: "MR" },
- { quote: "In healthcare, every call matters. Their team handles scheduling perfectly. My staff can focus on patients.", name: "Dr. Sarah K.", role: "Clinic Director, HealthFirst Medical — Downtown", initials: "SK" },
- { quote: "Real estate is 24/7. Missed calls = missed deals. Since Smart Hotline, I never miss a lead.", name: "James T.", role: "Broker, Prime Realty — Westmount", initials: "JT" },
-]
+  { quote: "As a restaurant owner, I was missing 30% of calls during service. Smart Hotline changed everything. Reservations doubled.", name: "Marco R.", role: "Owner, Trattoria Milano — Little Italy", initials: "MR" },
+  { quote: "In healthcare, every call matters. Their team handles scheduling perfectly. My staff can focus on patients.", name: "Dr. Sarah K.", role: "Clinic Director, HealthFirst Medical — Downtown", initials: "SK" },
+  { quote: "Real estate is 24/7. Missed calls = missed deals. Since Smart Hotline, I never miss a lead.", name: "James T.", role: "Broker, Prime Realty — Westmount", initials: "JT" },
+  { quote: "In legal, every call counts. They filter emergencies perfectly and book appointments just right.", name: "Claire D.", role: "Partner, Dupont & Mercier Law", initials: "CD" },
+  ]
 const FAQ = [
  { question: "Do you have experience in my industry?", answer: "Yes! We serve over 20 industries across North America and Europe. Our agents are trained specifically for each sector." },
  { question: "How quickly can you adapt to my specific needs?", answer: "Our setup takes 24-48 hours. We create custom scripts and train dedicated agents for your industry." },

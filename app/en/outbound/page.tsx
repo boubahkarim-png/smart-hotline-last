@@ -36,7 +36,14 @@ const PROCESS = [
   {'title': 'Custom Strategy', 'desc': 'Tailored targeting, messaging, and agent training for your specific offer.'},
   {'title': 'Agent Assignment', 'desc': 'Dedicated agents trained on your product and equipped with your scripts.'},
   {'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
-]
+  ]
+
+const TESTIMONIALS = [
+  {quote: 'Our qualified appointments doubled in 2 months. The team really understands our industry.', author: 'Jean-François L.', role: 'Sales Director, TechPlus Solutions'},
+  {quote: 'Lead quality is exceptional. We spend less time filtering and more time closing.', author: 'Marie-Chantal D.', role: 'Owner, Dubois Consulting'},
+  {quote: 'Daily reporting lets us adjust strategy in real time. It\'s a real partnership.', author: 'Patrick G.', role: 'CEO, Gagnon Strategies'},
+  {quote: 'We stopped Google ads for their service. Cost per lead is 3x cheaper and leads are actually qualified.', author: 'Stephane O.', role: 'Founder, Olivier & Associates'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
