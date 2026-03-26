@@ -16,7 +16,7 @@ export default function GeoAwareCTA({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
       <div className="flex flex-col sm:flex-row gap-3 mb-4">
         <Link href={contactHref}
           className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-7 py-4 rounded-xl hover:bg-blue-50 shadow-xl transition-all">
-          {fr ? 'Démo Sans Engagement' : 'Free Demo'} &rarr;
+          {fr ? 'Voir Comment Ça Marche' : 'Free Demo'} &rarr;
         </Link>
         {showPhone ? (
           <a href={"tel:" + CONTACT.phone}

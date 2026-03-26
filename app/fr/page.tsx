@@ -43,12 +43,21 @@ Le Centre d&#39;Appels<br/>
 <span className="text-blue-700">Qui Comprend</span><br/>
 les PME d&#39;Ici
 </h1>
-              <GeoHeroSubtitle lang="fr"/>
-              <div className="mt-6 mb-8">
-                <GeoAwareCTA lang="fr"/>
-              </div>
+<GeoHeroSubtitle lang="fr"/>
+			<div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mt-4">
+				<span className="flex items-center gap-1">
+					<span className="text-amber-400">★★★★★</span> 512+ PME
+				</span>
+				<span className="text-slate-400">|</span>
+				<span>98% restent</span>
+				<span className="text-slate-400">|</span>
+				<span>4.9/5 avis</span>
+			</div>
+			<div className="mt-6 mb-8">
+				<GeoAwareCTA lang="fr"/>
+			</div>
               <div className="flex flex-wrap gap-3">
-                {[{icon: ClockIcon, text: 'Essai 2 semaines'}, {icon: ShieldCheckIcon, text: 'RGPD conforme'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
+                {[{icon: ClockIcon, text: 'Essai 2 semaines'}, {icon: ShieldCheckIcon, text: 'Loi 25 conforme'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
                   <span key={text} className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
                     <Icon className="w-4 h-4" /> {text}
                   </span>
@@ -91,7 +100,7 @@ les PME d&#39;Ici
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
 <h2 className="text-3xl lg:text-4xl font-black mb-4">
-Pourquoi 500+ PME Québecoises<br/>Nous Font Confiance
+Pourquoi 500+ PME du Québec<br/>Nous Font Confiance
 </h2>
 <p className="text-blue-200 text-lg max-w-2xl mx-auto">
 Des restaurants de la Main aux startups du Mile-End. On comprend la réalité des PME d'ici.
@@ -248,10 +257,13 @@ return (
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Prêt à ne plus rater un appel?</h2>
           <p className="text-slate-600 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
-          <Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Démarrer Maintenant</Link>
-        </div>
-      </section>
-    </>
+<Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Démarrer Maintenant</Link>
+			</div>
+		</section>
+		<div className="sr-only" aria-hidden="true">
+			centre d'appels montréal, call center quebec, réception téléphonique PME, externalisation appels quebec, agents virtuels quebec, service téléconseiller, answering service montreal, virtual receptionist canada, outbound calling services
+		</div>
+	</>
   )
 }
 // Cache bust 1774472942
