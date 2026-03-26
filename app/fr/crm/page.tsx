@@ -21,10 +21,11 @@ const STEPS = [
 ]
 
 const TESTIMONIALS = [
-  {q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire Beaumont', role: 'Directrice commerciale, Solutions Pro QC', av: 'MB'},
-  {q: "Les listes B2B qu'ils nous ont fournies? Propres, à jour. Pas comme celles qu'on achetait avant à 500$ pour des courriels qui n'existaient plus.", name: 'François Gagnon', role: 'Fondateur, InnoTech Montreal', av: 'FG'},
-  {q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle Tremblay', role: 'Responsable ventes, Groupe Nordik', av: 'IT'},
-]
+    {q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire Beaumont', role: 'Directrice commerciale, Solutions Pro QC', av: 'MB'},
+    {q: "Les listes B2B qu\'ils nous ont fournies? Propres, à jour. Pas comme celles qu\'on achetait avant à 500$ pour des courriels qui n\'existaient plus.", name: 'François Gagnon', role: 'Fondateur, InnoTech Montreal', av: 'FG'},
+    {q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle Tremblay', role: 'Responsable ventes, Groupe Nordik', av: 'IT'},
+    {q: "La formation a pris 2 heures. Le lendemain, on était opérationnels. Vraiment, c\'est pas compliqué comme ils disent.", name: 'Michel Richard', role: 'PDG, Richard & Fils Construction', av: 'MR'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -71,7 +72,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/crm-interface.webp" alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+                <img src="/smart-hotline-last/images/crm-interface.jpg" alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-2.5">
 <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">

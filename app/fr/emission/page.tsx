@@ -29,24 +29,30 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Notre nombre de rendez-vous qualifiés a doublé en 2 mois. L'équipe comprend vraiment notre industrie et sait comment parler à nos prospects.",
-    name: "Jean-François Lambert",
-    role: "Directeur des ventes, Solutions TechPlus",
-    initials: "JFL"
+  quote: "Notre nombre de rendez-vous qualifiés a doublé en 2 mois. L\'équipe comprend vraiment notre industrie et sait comment parler à nos prospects.",
+  name: "Jean-François Lambert",
+  role: "Directeur des ventes, Solutions TechPlus",
+  initials: "JFL"
   },
   {
-    quote: "La qualité des leads est exceptionnelle. On passe moins de temps à filtrer et plus de temps à conclure des ventes.",
-    name: "Marie-Chantal Dubois",
-    role: "Propriétaire, Dubois Consulting",
-    initials: "MCD"
+  quote: "La qualité des leads est exceptionnelle. On passe moins de temps à filtrer et plus de temps à conclure des ventes.",
+  name: "Marie-Chantal Dubois",
+  role: "Propriétaire, Dubois Consulting",
+  initials: "MCD"
   },
   {
-    quote: "Le reporting quotidien nous permet d'ajuster notre stratégie en temps réel. C'est un véritable partenariat, pas juste un service.",
-    name: "Patrick Gagnon",
-    role: "PDG, Gagnon Stratégies",
-    initials: "PG"
+  quote: "Le reporting quotidien nous permet d\'ajuster notre stratégie en temps réel. C\'est un véritable partenariat, pas juste un service.",
+  name: "Patrick Gagnon",
+  role: "PDG, Gagnon Stratégies",
+  initials: "PG"
+  },
+  {
+  quote: "On a arrêté les annonces Google pour leur service. Coût par lead 3x moins cher et les leads sont vraiment qualifiés.",
+  name: "Stéphane Olivier",
+  role: "Fondateur, Olivier & Associés",
+  initials: "SO"
   }
-]
+  ]
 
 const FAQ = [
   {
@@ -111,7 +117,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/telemarketing.webp" alt="Conseiller appels sortants"
+                <img src="/smart-hotline-last/images/telemarketing.jpg" alt="Conseiller appels sortants"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

@@ -13,7 +13,7 @@ export default function MentionsLegales() {
 <p className="text-slate-600 text-lg mb-6">Informations légales concernant Smart Hotline Agency</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/smart-hotline-last/images/main-hero.webp" alt="Mentions Légales" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.png" alt="Mentions Légales" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>

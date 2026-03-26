@@ -29,24 +29,30 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Sophie a transformé notre service client. On ne rate plus aucun appel, même pendant nos périodes de pointe.",
-    name: "Marie-Claude Lévesque",
-    role: "Directrice opérationnelle, Clinique SantéPlus",
-    initials: "MCL"
+  quote: "Sophie a transformé notre service client. On ne rate plus aucun appel, même pendant nos périodes de pointe.",
+  name: "Marie-Claude Lévesque",
+  role: "Directrice opérationnelle, Clinique SantéPlus",
+  initials: "MCL"
   },
   {
-    quote: "L'installation a été rapide et l'équipe extrêmement professionnelle. Nos clients pensent que c'est une vraie personne qui répond!",
-    name: "Daniel Bouchard",
-    role: "Propriétaire, Bouchard Mécanique",
-    initials: "DB"
+  quote: "L\'installation a été rapide et l\'équipe extrêmement professionnelle. Nos clients pensent que c\'est une vraie personne qui répond!",
+  name: "Daniel Bouchard",
+  role: "Propriétaire, Bouchard Mécanique",
+  initials: "DB"
   },
   {
-    quote: "Le rapport qualité-prix est imbattable. On économise près de 60% comparé à une réceptionniste à temps plein.",
-    name: "Isabelle Morin",
-    role: "Comptable associée, Fiduciaire LMN",
-    initials: "IM"
+  quote: "Le rapport qualité-prix est imbattable. On économise près de 60% comparé à une réceptionniste à temps plein.",
+  name: "Isabelle Morin",
+  role: "Comptable associée, Fiduciaire LMN",
+  initials: "IM"
+  },
+  {
+  quote: "Au début j\'étais sceptique. Mais honnêtement? Les clients ne se rendent compte de rien. C\'sont des vraies conversations.",
+  name: "Pierre Houde",
+  role: "Gérant, Garage Houde & Frères",
+  initials: "PH"
   }
-]
+  ]
 
 const FAQ = [
   {
@@ -111,7 +117,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/agents-ia-hero.webp" alt="Agent IA Sophie"
+                <img src="/smart-hotline-last/images/agents-ia-hero.png" alt="Agent IA Sophie"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

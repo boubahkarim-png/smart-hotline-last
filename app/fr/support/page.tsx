@@ -12,10 +12,11 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', av: 'CR'},
-  {q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', av: 'JP'},
-  {q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', av: 'ML'},
-]
+    {q: "On reçoit des questions sur nos produits toute la journée. Avant, c\'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', av: 'CR'},
+    {q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu\'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', av: 'JP'},
+    {q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', av: 'ML'},
+    {q: "On a réduit notre temps de réponse de 4 jours à 2 heures. Nos clients n\'en reviennent pas. L\'équipe est super professionnelle.", name: 'Sylvie Bouchard', role: 'Directrice, Logiciels Bouchard Inc.', av: 'SB'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -59,7 +60,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/support-hero.webp" alt="Support client" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+                <img src="/smart-hotline-last/images/support-hero.png" alt="Support client" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-2.5">
 <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
@@ -203,17 +204,6 @@ export default function Page() {
 </div>
 <Link href="/fr/contact?service=support" className="inline-block mt-8 bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl hover:bg-emerald-800">Démarrer Maintenant</Link>
 </div>
-</section>
-      <section className="bg-white py-20 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Questions fréquentes</h2>
-          <div className="text-left space-y-4 mt-8">
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Quels canaux gérez-vous?</summary><p className="text-slate-600 mt-2">Téléphone, email, chat sur votre site, WhatsApp, et même les réseaux sociaux. Tout est centralisé.</p></details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Comment escaladez-vous les problèmes?</summary><p className="text-slate-600 mt-2">On a un protocole clair. Problème simple = on répond. Problème complexe = on vous transfère avec le contexte.</p></details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Combien de temps pour former l'équipe?</summary><p className="text-slate-600 mt-2">Environ 1 semaine. On apprend vos produits, vos processus, et votre façon de parler aux clients.</p></details>
-          </div>
-          <Link href="/fr/contact?service=support" className="inline-block mt-8 bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700">Démarrer Maintenant</Link>
-        </div>
       </section>
     </>
   )

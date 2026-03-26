@@ -25,18 +25,30 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Smart Hotline comprend vraiment notre secteur de la restauration. Ils gèrent nos réservations et nos livraisons avec une efficacité impressionnante.",
-    name: "Marie-Lucie Boucher",
-    role: "Propriétaire, Restaurant Le Petit Jérôme",
-    initials: "MLB"
+  quote: "Smart Hotline comprend vraiment notre secteur de la restauration. Ils gèrent nos réservations et nos livraisons avec une efficacité impressionnante.",
+  name: "Marie-Lucie Boucher",
+  role: "Propriétaire, Restaurant Le Petit Jérôme",
+  initials: "MLB"
   },
   {
-    quote: "Grâce à leur service d'émission d'appels, nous avons augmenté nos prises de rendez-vous de 60% en 3 mois.",
-    name: "Thomas Girard",
-    role: "Directeur, Clinique Médicale Plus",
-    initials: "TG"
+  quote: "Grâce à leur service d\'émission d\'appels, nous avons augmenté nos prises de rendez-vous de 60% en 3 mois.",
+  name: "Thomas Girard",
+  role: "Directeur, Clinique Médicale Plus",
+  initials: "TG"
+  },
+  {
+  quote: "Dans notre domaine juridique, chaque appel compte. Ils filtrent parfaitement les urgences et prennent les rendez-vous comme il faut.",
+  name: "Claire Dupont",
+  role: "Associée, Cabinet Dupont & Mercier",
+  initials: "CD"
+  },
+  {
+  quote: "On est dans le BTP, c\'est pas toujours évident de gérer les appels sur les chantiers. Eux, ils captent notre réalité et ça fait toute la différence.",
+  name: "Réjean Lavoie",
+  role: "Propriétaire, Construction Lavoie",
+  initials: "RL"
   }
-]
+  ]
 
 const FAQ = [
   {
@@ -97,7 +109,7 @@ export default function Secteurs() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/secteurs-hero.webp" alt="Diversité des secteurs desservis"
+                <img src="/smart-hotline-last/images/secteurs-hero.png" alt="Diversité des secteurs desservis"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

@@ -12,10 +12,11 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "J\'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine parce que j\'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre Lacroix', role: 'Propriétaire, Bistro du Vieux-Montréal', av: 'PL'},
-  {q: "C\'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C\'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie Mercier', role: 'Directrice, Clinique Médicale Plateau', av: 'SM'},
-  {q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André Dubé', role: 'Gérant, Magasin Électronique QC', av: 'MD'},
-]
+    {q: "J\'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine parce que j\'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre Lacroix', role: 'Propriétaire, Bistro du Vieux-Montréal', av: 'PL'},
+    {q: "C\'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C\'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie Mercier', role: 'Directrice, Clinique Médicale Plateau', av: 'SM'},
+    {q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André Dubé', role: 'Gérant, Magasin Électronique QC', av: 'MD'},
+    {q: "On a essayé 3 autres services avant. C\'est le seul où les conseillers comprennent vraiment notre business. Nos clients sont contents, c\'est tout ce qui compte.", name: 'Nathalie Tremblay', role: 'Directrice, Cabinet Juridique Tremblay & Associés', av: 'NT'},
+  ]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -62,7 +63,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/reception-hero.webp" alt="Réception d\'appels" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+                <img src="/smart-hotline-last/images/reception-hero.png" alt="Réception d\'appels" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-2.5">
 <div className="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center">
@@ -233,30 +234,6 @@ Voir une démo →
 Démarrer Maintenant
 </Link>
 </div>
-</section>
-
-      {/* SECTION 8: LIGHT - FAQ */}
-      <section className="bg-white py-20 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Questions fréquentes</h2>
-          <div className="text-left space-y-4 mt-8">
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Combien de temps pour démarrer?</summary>
-              <p className="text-slate-600 mt-2">En général 48 heures. On prend le temps de bien comprendre votre entreprise avant de commencer.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Est-ce que je peux changer les scripts?</summary>
-              <p className="text-slate-600 mt-2">Absolument. C'est votre entreprise — vous décidez comment on répond. On ajuste quand vous voulez.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Comment je reçois les messages?</summary>
-              <p className="text-slate-600 mt-2">Par SMS, email, ou appel — vous choisissez. Les messages urgents sont transmis immédiatement.</p>
-            </details>
-          </div>
-          <Link href="/fr/contact?service=reception" className="inline-block mt-8 bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700">
-            Démarrer Maintenant
-          </Link>
-        </div>
       </section>
     </>
   )
