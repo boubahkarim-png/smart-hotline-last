@@ -41,7 +41,6 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
-      {/* SECTION 1: LIGHT - Hero */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -49,9 +48,7 @@ export default function Page() {
               <span className="inline-flex items-center gap-2 bg-teal-100 text-teal-700 text-sm px-3 py-1 rounded-full mb-5">
                 <HeadphonesIcon className="w-4 h-4" /> Support Client
               </span>
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-                Support Client<br/>Qui Ressemble à Vous
-              </h1>
+              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">Support Client Qui Ressemble à Vous</h1>
               <p className="text-lg text-slate-600 mb-8">Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des réponses rapides, en français, par des vrais humains.</p>
               <CTAButtons slug="support"/>
               <div className="flex flex-wrap gap-3">
@@ -68,7 +65,7 @@ export default function Page() {
                     <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
                       <ClockIcon className="w-5 h-5 text-teal-600" />
                     </div>
-                    <div><p className="font-black text-sm">Réponse < 2h</p><p className="text-slate-500 text-xs">en moyenne</p></div>
+                    <div><p className="font-black text-sm">Réponse &lt; 2h</p><p className="text-slate-500 text-xs">en moyenne</p></div>
                   </div>
                 </div>
               </div>
@@ -76,8 +73,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 2: DARK - Features */}
       <section className="bg-gradient-to-br from-slate-900 via-teal-950 to-teal-900 text-white py-20 lg:py-24 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
@@ -100,18 +95,14 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 3: LIGHT - Stats */}
       <section className="bg-white border-b border-slate-100 py-10">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div><p className="text-4xl font-black text-teal-600">98%</p><p className="text-slate-500 text-sm mt-1">Satisfaction client</p></div>
-          <div><p className="text-4xl font-black text-teal-600">< 2h</p><p className="text-slate-500 text-sm mt-1">Temps de réponse</p></div>
+          <div><p className="text-4xl font-black text-teal-600">&lt; 2h</p><p className="text-slate-500 text-sm mt-1">Temps de réponse</p></div>
           <div><p className="text-4xl font-black text-teal-600">50K+</p><p className="text-slate-500 text-sm mt-1">Tickets/mois</p></div>
           <div><p className="text-4xl font-black text-teal-600">24/7</p><p className="text-slate-500 text-sm mt-1">Disponibilité</p></div>
         </div>
       </section>
-
-      {/* SECTION 4: LIGHT - How it works */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -142,8 +133,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 5: LIGHT - Benefits */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -156,9 +145,7 @@ export default function Page() {
                 <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Escalade intelligente vers votre équipe</li>
                 <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Rapports hebdomadaires sur les tendances</li>
               </ul>
-              <Link href="/fr/contact?service=support" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-teal-700 transition-colors">
-                Voir une démo →
-              </Link>
+              <Link href="/fr/contact?service=support" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-teal-700 transition-colors">Voir une démo →</Link>
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
@@ -173,8 +160,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 6: LIGHT - Testimonials */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -200,40 +185,23 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 7: DARK - Final CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-teal-800 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à améliorer votre support?</h2>
           <p className="text-teal-200 text-lg mb-10 max-w-2xl mx-auto">Des clients plus satisfaits, moins de stress pour votre équipe. On commence ensemble.</p>
           <CTAButtons slug="support"/>
-          <p className="text-teal-300 text-sm mt-6">
-            <Link href="/fr/tarifs" className="underline hover:text-white">Voir les tarifs</Link> · <Link href="/fr/contact" className="underline hover:text-white">Nous contacter</Link>
-          </p>
+          <p className="text-teal-300 text-sm mt-6"><Link href="/fr/tarifs" className="underline hover:text-white">Voir les tarifs</Link> · <Link href="/fr/contact" className="underline hover:text-white">Nous contacter</Link></p>
         </div>
       </section>
-
-      {/* SECTION 8: LIGHT - FAQ */}
       <section className="bg-white py-20 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black text-slate-900 mb-4">Questions fréquentes</h2>
           <div className="text-left space-y-4 mt-8">
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Quels canaux gérez-vous?</summary>
-              <p className="text-slate-600 mt-2">Téléphone, email, chat sur votre site, WhatsApp, et même les réseaux sociaux. Tout est centralisé.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Comment escaladez-vous les problèmes?</summary>
-              <p className="text-slate-600 mt-2">On a un protocole clair. Problème simple = on répond. Problème complexe = on vous transfère avec le contexte.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Combien de temps pour former l'équipe?</summary>
-              <p className="text-slate-600 mt-2">Environ 1 semaine. On apprend vos produits, vos processus, et votre façon de parler aux clients.</p>
-            </details>
+            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Quels canaux gérez-vous?</summary><p className="text-slate-600 mt-2">Téléphone, email, chat sur votre site, WhatsApp, et même les réseaux sociaux. Tout est centralisé.</p></details>
+            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Comment escaladez-vous les problèmes?</summary><p className="text-slate-600 mt-2">On a un protocole clair. Problème simple = on répond. Problème complexe = on vous transfère avec le contexte.</p></details>
+            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer"><summary className="font-bold text-slate-900">Combien de temps pour former l'équipe?</summary><p className="text-slate-600 mt-2">Environ 1 semaine. On apprend vos produits, vos processus, et votre façon de parler aux clients.</p></details>
           </div>
-          <Link href="/fr/contact?service=support" className="inline-block mt-8 bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700">
-            Démarrer Maintenant
-          </Link>
+          <Link href="/fr/contact?service=support" className="inline-block mt-8 bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700">Démarrer Maintenant</Link>
         </div>
       </section>
     </>
