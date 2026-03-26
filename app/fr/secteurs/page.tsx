@@ -2,18 +2,18 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, BoltIcon, ShieldCheckIcon, UsersIcon, ClockIcon } from '@/components/Icons'
+import { PhoneIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, BoltIcon, ShieldCheckIcon, UsersIcon, ClockIcon, UtensilsIcon, HeartIcon, BuildingIcon, CarIcon, ScaleIcon, HammerIcon, ComputerIcon, CartIcon, GraduationIcon } from '@/components/Icons'
 
 const SECTORS = [
-  { icon: "🍽️", name: "Restauration", desc: "Reservations, livraisons, service client. Ne manquez aucune commande.", examples: ["Restaurants", "Traiteurs", "Dark kitchens"] },
-  { icon: "🏥", name: "Sante & Cliniques", desc: "Prise de RDV, rappels patients, urgences. Disponible 24/7.", examples: ["Cliniques", "Medecins", "Physiotherapie"] },
-  { icon: "🏢", name: "Immobilier", desc: "Qualification des acheteurs, visites, suivi des leads.", examples: ["Agences", "Courtiers", "Promoteurs"] },
-  { icon: "🚗", name: "Automobile", desc: "Service apres-vente, RDV atelier, relance clients.", examples: ["Concessionnaires", "Garages", "Location"] },
-  { icon: "⚖️", name: "Services Juridiques", desc: "Filtrage des appels, prise de RDV, urgences juridiques.", examples: ["Cabinets avocats", "Notaires", "Huissiers"] },
-  { icon: "🏗️", name: "Construction & BTP", desc: "Devis, suivi chantiers, coordination sous-traitants.", examples: ["Entrepreneurs", "Architectes", "Renovations"] },
-  { icon: "💻", name: "Tech & SaaS", desc: "Support niveau 1, onboarding clients, escalades.", examples: ["Startups", "SaaS", "Agences web"] },
-  { icon: "🛒", name: "E-commerce", desc: "SAV, retours, suivi commandes, fidelisation.", examples: ["Boutiques online", "Marketplaces", "Dropshipping"] },
-  { icon: "🎓", name: "Education & Formation", desc: "Inscriptions, questions, suivi eleves et parents.", examples: ["Ecoles", "Centres formation", "Tuteurs"] },
+{ icon: UtensilsIcon, name: "Restauration", desc: "Reservations, livraisons, service client. Ne manquez aucune commande.", examples: ["Restaurants", "Traiteurs", "Dark kitchens"] },
+{ icon: HeartIcon, name: "Sante & Cliniques", desc: "Prise de RDV, rappels patients, urgences. Disponible 24/7.", examples: ["Cliniques", "Medecins", "Physiotherapie"] },
+{ icon: BuildingIcon, name: "Immobilier", desc: "Qualification des acheteurs, visites, suivi des leads.", examples: ["Agences", "Courtiers", "Promoteurs"] },
+{ icon: CarIcon, name: "Automobile", desc: "Service apres-vente, RDV atelier, relance clients.", examples: ["Concessionnaires", "Garages", "Location"] },
+{ icon: ScaleIcon, name: "Services Juridiques", desc: "Filtrage des appels, prise de RDV, urgences juridiques.", examples: ["Cabinets avocats", "Notaires", "Huissiers"] },
+{ icon: HammerIcon, name: "Construction & BTP", desc: "Devis, suivi chantiers, coordination sous-traitants.", examples: ["Entrepreneurs", "Architectes", "Renovations"] },
+{ icon: ComputerIcon, name: "Tech & SaaS", desc: "Support niveau 1, onboarding clients, escalades.", examples: ["Startups", "SaaS", "Agences web"] },
+{ icon: CartIcon, name: "E-commerce", desc: "SAV, retours, suivi commandes, fidelisation.", examples: ["Boutiques online", "Marketplaces", "Dropshipping"] },
+{ icon: GraduationIcon, name: "Education & Formation", desc: "Inscriptions, questions, suivi eleves et parents.", examples: ["Ecoles", "Centres formation", "Tuteurs"] },
 ]
 
 const STATS = [
@@ -145,24 +145,24 @@ export default function Secteurs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">Nos Secteurs d'Expertise</h2>
-            <div className="w-16 h-1 bg-amber-600 mx-auto rounded"/>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SECTORS.slice(0, 4).map(({icon, name, desc, examples}) => (
-              <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-3xl">{icon}</span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{name}</h3>
-                <p className="text-slate-500 text-sm">{desc}</p>
-                <div className="mt-4">
-                  <span className="text-slate-600 text-sm font-medium">Exemples : {examples.join(', ')}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<div className="w-16 h-1 bg-amber-600 mx-auto rounded"/>
+</div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+{SECTORS.slice(0, 4).map(({icon: Icon, name, desc, examples}) => (
+<div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+<div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+<Icon className="w-6 h-6 text-amber-600" />
+</div>
+<h3 className="font-bold text-lg text-slate-900 mb-2">{name}</h3>
+<p className="text-slate-500 text-sm">{desc}</p>
+<div className="mt-4">
+<span className="text-slate-600 text-sm font-medium">Exemples : {examples.join(\', \')}</span>
+</div>
+</div>
+))}
+</div>
+</div>
+</section>
 
       {/* SECTION 4: LIGHT - HOW WE WORK */}
       <section className="py-20 bg-white">
