@@ -15,7 +15,7 @@ export default function About() {
               <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Contact Us</Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/about-hero.jpg" alt="Smart Hotline Team" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="/smart-hotline-last/images/about-hero.webp" alt="Smart Hotline Team" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -199,12 +199,13 @@ Our success comes from combining experienced professionals with practical AI too
               Hear directly from our clients about the impact we've made on their businesses
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              {q: "Smart Hotline made us look bigger. Truly impressive service for our SMB.", name: 'Marc Lefebvre', role: 'Founder, TechInnov', av: 'ML' },
-              {q: "Incredible ROI. No missed opportunities since we started working together.", name: 'Sophie Dubois', role: 'Director, Accounting Firm', av: 'SD' },
-              {q: "One of the best investments. Total call management and qualified leads.", name: 'Jean-Pierre Tremblay', role: 'Owner, Restaurant Le Gourmet', av: 'JT' }
-            ].map(({q, name, role, av}) => (
+{q: "Smart Hotline made us look bigger. Truly impressive service for our SMB.", name: 'Marc Lefebvre', role: 'Founder, TechInnov', av: 'ML' },
+    {q: "Incredible ROI. No missed opportunities since we started working together.", name: 'Sophie Dubois', role: 'Director, Accounting Firm', av: 'SD' },
+    {q: "One of the best investments. Total call management and qualified leads.", name: 'Jean-Pierre Tremblay', role: 'Owner, Restaurant Le Gourmet', av: 'JT' },
+    {q: "Their team understood our industry in just 2 weeks. Tripled our appointments without increasing costs.", name: 'François Martel', role: 'Sales Director, Quartier Realty', av: 'FM' }
+  ].map(({q, name, role, av}) => (
               <div key={name} className="text-center">
                 <div className="flex gap-0.5 mb-4">
                   {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}

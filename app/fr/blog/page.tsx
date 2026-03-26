@@ -73,24 +73,10 @@ const FAQ = [
 ]
 
 const TESTIMONIALS = [
-  {
-    quote: "Smart Hotline a changé notre façon de gérer les appels. On a gagné 30% en efficacité et nos clients sont plus satisfaits.",
-    name: "Marie-Chantal Dubois",
-    role: "Directrice Opérations, Clinique SantéPlus",
-    avatar: "MC"
-  },
-  {
-    quote: "La flexibilité de leur approche hybride IA/humain nous a permis de réduire nos coûts de 40% tout en améliorant notre disponibilité.",
-    name: "Jean-Michel Leclerc",
-    role: "PDG, Boutique Mode Urbaine",
-    avatar: "JL"
-  },
-  {
-    quote: "Pendant la tempête du siècle, leurs agents ont assuré une continuité de service parfaite. Aucun appel manqué, aucun client frustré.",
-    name: "Sophie Bertrand",
-    role: "Propriaire, Bistro Le Petit Coin",
-    avatar: "SB"
-  }
+  { quote: "Smart Hotline a changé notre façon de gérer les appels. On a gagné 30% en efficacité et nos clients sont plus satisfaits.", name: "Marie-Chantal Dubois", role: "Directrice Opérations, Clinique SantéPlus", avatar: "MC" },
+  { quote: "La flexibilité de leur approche hybride IA/humain nous a permis de réduire nos coûts de 40% tout en améliorant notre disponibilité.", name: "Jean-Michel Leclerc", role: "PDG, Boutique Mode Urbaine", avatar: "JL" },
+  { quote: "Pendant la tempête du siècle, leurs agents ont assuré une continuité de service parfaite. Aucun appel manqué, aucun client frustré.", name: "Sophie Bertrand", role: "Propriétaire, Bistro Le Petit Coin", avatar: "SB" },
+  { quote: "Leur équipe a compris notre secteur en 2 semaines. On a triplé nos prises de rendez-vous sans augmenter nos coûts.", name: "François Martel", role: "Directeur Commercial, Immobilière du Quartier", avatar: "FM" }
 ]
 
 const STATS = [
@@ -122,7 +108,7 @@ Découvrez nos analyses, stratégies et meilleures pratiques pour optimiser votr
 </p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/smart-hotline-last/images/main-hero.jpg" alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.webp" alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
@@ -201,7 +187,7 @@ Découvrez nos analyses, stratégies et meilleures pratiques pour optimiser votr
             <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent</h2>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {TESTIMONIALS.map(({ quote, name, role, avatar }) => (
               <div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
                 <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{quote}&rdquo;</p>

@@ -78,7 +78,7 @@ export default function FrContact() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/contact-hero.png" alt="Contactez Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="/smart-hotline-last/images/contact-hero.webp" alt="Contactez Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function FrContact() {
       {/* SECTION 3: LIGHT - HOW WE HELP */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Analyse Gratuite</h3>
               <p className="text-gray-600">
@@ -255,7 +255,7 @@ export default function FrContact() {
       {/* SECTION 6: LIGHT - WHY CHOOSE US */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-slate-50 rounded-2xl p-6">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Notre Engagement Qualité</h3>
               <ul className="space-y-4">
@@ -321,7 +321,7 @@ export default function FrContact() {
       {/* SECTION 7: LIGHT - ADDITIONAL INFO */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-6">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Questions Fréquentes</h3>
               <div className="space-y-3">

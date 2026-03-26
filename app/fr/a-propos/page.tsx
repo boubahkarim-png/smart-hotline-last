@@ -14,7 +14,7 @@ export default function APropos() {
               <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Nous Contacter</Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/about-hero.jpg" alt="Equipe Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="/smart-hotline-last/images/about-hero.webp" alt="Equipe Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

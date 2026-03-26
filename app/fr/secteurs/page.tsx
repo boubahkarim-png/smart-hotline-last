@@ -97,7 +97,7 @@ export default function Secteurs() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/secteurs-hero.jpg" alt="Diversité des secteurs desservis"
+                <img src="/smart-hotline-last/images/secteurs-hero.webp" alt="Diversité des secteurs desservis"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

@@ -91,7 +91,7 @@ export default function EnHome() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/main-hero.jpg"
+                <img src="/smart-hotline-last/images/main-hero.webp"
                   alt="Smart Hotline Team"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>
@@ -170,7 +170,7 @@ export default function EnHome() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/agents-ia-hero.jpg"
+              <img src="/smart-hotline-last/images/agents-ia-hero.webp"
                 alt="AI Agent Sophie"
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>

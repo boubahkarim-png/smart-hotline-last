@@ -43,7 +43,7 @@ Smart Hotline Blog
 <p className="text-lg text-slate-600 mb-6">Tips, strategies and insights to optimize your customer relationships.</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/smart-hotline-last/images/main-hero.jpg" alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.webp" alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
@@ -120,7 +120,7 @@ Smart Hotline Blog
       <section className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-10">Browse by Category</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {CATEGORIES.map(({name, color}) => (
               <Link key={name} href="#" className={`${color} rounded-xl p-5 text-center hover:opacity-80 transition-opacity`}>
                 <span className="font-semibold">{name}</span>
