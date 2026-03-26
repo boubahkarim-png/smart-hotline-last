@@ -55,7 +55,7 @@ const FAQ = [
   },
   {
     question: "Est-ce que mes données sont sécurisées ?",
-    answer: "Oui, nous sommes entièrement conformes au RGPD et utilisons un chiffrement de niveau bancaire pour toutes vos données."
+    answer: "Oui, nous sommes entièrement conformes au RGPD et utilisons un chiffrement solide pour toutes vos données."
   },
   {
     question: "Puis-je personnaliser l'accent et le langage ?",

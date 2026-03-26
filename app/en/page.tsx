@@ -2,8 +2,14 @@
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
+import GeoTestimonials from '@/components/GeoTestimonials'
+import GeoStats from '@/components/GeoStats'
+import GeoHeroStats from '@/components/GeoHeroStats'
+import GeoComplianceBadge from '@/components/GeoComplianceBadge'
+import GeoWhyUsSection from '@/components/GeoWhyUsSection'
+import { useGeo } from '@/hooks/useGeo'
 
-import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
+import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, ClockIcon } from '@/components/Icons'
 
 const SERVICES = [
   { Icon: PhoneIcon, title: 'Inbound Calls', desc: '24/7 reception. Zero missed calls.', href: '/en/inbound', bg: 'bg-blue-100', color: 'text-blue-700' },
@@ -11,7 +17,6 @@ const SERVICES = [
   { Icon: BotIcon, title: 'AI Voice Agents', desc: 'Sophie answers in 2 sec, 24/7.', href: '/en/ai-agents', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'New' },
   { Icon: HeadphonesIcon, title: 'Client Support', desc: 'Tickets, email, chat, WhatsApp.', href: '/en/support', bg: 'bg-teal-100', color: 'text-teal-700' },
   { Icon: DatabaseIcon, title: 'CRM & Lists', desc: 'SuiteCRM + B2B/B2C lists.', href: '/en/crm', bg: 'bg-indigo-100', color: 'text-indigo-700' },
-  { Icon: MegaphoneIcon, title: 'Industry Expertise', desc: 'Healthcare, real estate, legal...', href: '/en/sectors', bg: 'bg-orange-100', color: 'text-orange-700' },
 ]
 
 const STEPS = [
@@ -21,51 +26,67 @@ const STEPS = [
   { n: '4', t: 'Ongoing Support', d: 'Reports, optimization, dedicated support' },
 ]
 
-const TESTIMONIALS = [
-  { q: 'Smart Hotline made us look bigger. Truly impressive service for our SMB.', name: 'Marc Lefebvre', role: 'Founder, TechInnov', av: 'ML' },
-  { q: 'Best money we spend each month. No missed opportunities since we started.', name: 'Sophie Dubois', role: 'Director, Accounting Firm', av: 'SD' },
-  { q: 'One of the best investments. Total call management and qualified leads.', name: 'Jean-Pierre Tremblay', role: 'Owner, Restaurant Le Gourmet', av: 'JT' },
-]
+function GeoLocationBadge({ lang }: { lang: 'fr' | 'en' }) {
+  const { geo, loading } = useGeo(lang)
+  
+  if (loading) return <span className="text-slate-400 text-sm">...</span>
+  
+  const countryCode = geo.country === 'Canada' ? 'CA' :
+                      geo.country === 'United States' ? 'US' :
+                      geo.country === 'United Kingdom' ? 'GB' : 'OTHER'
+  
+  const labels: Record<string, string> = {
+    'CA': 'Montreal, Canada',
+    'US': 'New York, USA',
+    'GB': 'United Kingdom',
+    'OTHER': 'International'
+  }
+  
+  return (
+    <span className="text-slate-400 text-sm">{labels[countryCode] || 'International'}</span>
+  )
+}
 
 export default function EnHome() {
   return (
     <>
-      {/* Hidden SEO keywords for search engines */}
       <div className="sr-only" aria-hidden="true">
         call center montreal, answering service quebec, virtual receptionist canada, outsourced call center, phone answering service, inbound call center, outbound calling services, customer support outsourcing, AI voice agents
       </div>
-      {/* SECTION 1: LIGHT HERO - Text LEFT, Image RIGHT */}
+      
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-14">
-      <div className="w-full lg:w-[55%] animate-slide-left">
-        <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-medium px-4 py-1.5 rounded-full mb-6 animate-float">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"/>
-          Agents & AI available 24/7
-        </div>
-        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
-          Never Miss<br/>
-          <span className="gradient-text-animated">Another Call</span>
-        </h1>
-      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mt-4 mb-6">
-        <span className="flex items-center gap-1">
-          <span className="text-amber-400">★★★★★</span> 500+ SMBs
-        </span>
-        <span className="text-slate-400">|</span>
-        <span>98% stay</span>
-        <span className="text-slate-400">|</span>
-        <span>4.9/5 reviews</span>
-      </div>
+            <div className="w-full lg:w-[55%] animate-slide-left">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-medium px-4 py-1.5 rounded-full mb-6 animate-float">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"/>
+                Agents & AI available 24/7
+              </div>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
+                Never Miss<br/>
+                <span className="gradient-text-animated">Another Call</span>
+              </h1>
+              <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mt-4 mb-6">
+                <span className="flex items-center gap-1">
+                  <span className="text-amber-400">*****</span>
+                  <GeoLocationBadge lang="en" />
+                </span>
+              </div>
               <GeoHeroSubtitle lang="en"/>
               <div className="mt-6 mb-8">
                 <GeoAwareCTA lang="en"/>
               </div>
               <div className="flex flex-wrap gap-3">
-                {[{icon: ClockIcon, text: '2 week trial'}, {icon: ShieldCheckIcon, text: 'Law 25 Compliant'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
-                  <span key={text} className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
-                    <Icon className="w-4 h-4" /> {text}
-                  </span>
-                ))}
+                <span className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
+                  <ClockIcon className="w-4 h-4" /> 2 week trial
+                </span>
+                <GeoComplianceBadge lang="en" />
+                <span className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
+                  <ClockIcon className="w-4 h-4" /> 24/7
+                </span>
+                <span className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
+                  <CheckIcon className="w-4 h-4" /> Setup 48h
+                </span>
               </div>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -75,15 +96,7 @@ export default function EnHome() {
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-2xl border border-slate-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                      <CheckIcon className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="font-black text-slate-900 text-xl leading-none">500+</p>
-                      <p className="text-slate-500 text-xs mt-0.5">Satisfied SMBs</p>
-                    </div>
-                  </div>
+                  <GeoHeroStats lang="en" />
                 </div>
                 <div className="absolute -top-5 -right-5 bg-blue-700 rounded-2xl p-4 shadow-xl text-white">
                   <p className="font-black text-2xl leading-none">98%</p>
@@ -95,55 +108,12 @@ export default function EnHome() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK - WHY CHOOSE US */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"/>
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-violet-500 opacity-10 rounded-full blur-3xl"/>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
-<h2 className="text-3xl lg:text-4xl font-black mb-4">
-        What 500+ Businesses Already Know
-      </h2>
-      <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-        Over 500 companies have chosen Smart Hotline to outsource their customer relations.
-      </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {icon: CheckIcon, title: 'Answer in under 3 rings', desc: 'Your clients never wait'},
-              {icon: CheckIcon, title: 'French-English bilingual', desc: 'Native agents from Quebec and France'},
-              {icon: CheckIcon, title: 'Custom scripts', desc: 'We sound like you'},
-              {icon: CheckIcon, title: 'Real-time reports', desc: 'Detailed dashboards 24/7'},
-              {icon: CheckIcon, title: 'Setup in 48h', desc: 'No infrastructure required'},
-              {icon: CheckIcon, title: 'SMB pricing', desc: 'Up to 60% cheaper than in-house'},
-        ].map(({icon: Icon, title, desc}, i) => (
-          <div key={i} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover-lift transition-all animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>
-                <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-green-400" />
-                </div>
-                <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                <p className="text-blue-200 text-sm">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GeoWhyUsSection lang="en" />
 
-      {/* STATS */}
       <section className="bg-white border-b border-slate-100 py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{n:'500+',l:'Satisfied SMBs'},{n:'98%',l:'Client Satisfaction'},{n:'40%',l:'Time Saved'},{n:'24/7',l:'Availability'}].map(({n,l}) => (
-            <div key={l}>
-              <p className="text-4xl font-black text-blue-700">{n}</p>
-              <p className="text-slate-500 text-sm mt-1 font-medium">{l}</p>
-            </div>
-          ))}
-        </div>
+        <GeoStats lang="en" />
       </section>
 
-      {/* SERVICES */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -152,9 +122,9 @@ export default function EnHome() {
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-      {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any, i: number) => (
-      <Link key={href} href={href}
-        className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover-lift transition-all group animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>
+            {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }: any, i: number) => (
+              <Link key={href} href={href}
+                className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover-lift transition-all group animate-fade-in-up" style={{animationDelay: `${i * 100}ms`}}>
                 <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
                   <Icon className={`w-6 h-6 ${color}`} />
                 </div>
@@ -163,14 +133,13 @@ export default function EnHome() {
                   {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
                 </div>
                 <p className="text-slate-500 text-sm mb-3">{desc}</p>
-                <span className="text-blue-700 text-sm font-semibold group-hover:underline">Learn more →</span>
+                <span className="text-blue-700 text-sm font-semibold group-hover:underline">Learn more &rarr;</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* AI FEATURE - WITH IMAGE */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -182,8 +151,7 @@ export default function EnHome() {
                 Sophie, your Native<br/>French AI Agent
               </h2>
               <p className="text-slate-600 text-lg mb-6">
-                Response in under 2 seconds. Native French from Quebec, France, Belgium, Switzerland.
-                Up to 70% cheaper than traditional agents.
+                Response in under 2 seconds. Native French accents for your region. Up to 70% cheaper than traditional agents.
               </p>
               <ul className="space-y-3 mb-8">
                 {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => {
@@ -198,7 +166,7 @@ export default function EnHome() {
                   )})}
               </ul>
               <Link href="/en/ai-agents" className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-violet-700 transition-colors">
-                Discover AI Agents →
+                Discover AI Agents &rarr;
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -211,7 +179,6 @@ export default function EnHome() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -230,34 +197,16 @@ export default function EnHome() {
         </div>
       </section>
 
-      {/* SECTION 7: DARK - TESTIMONIALS */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map(({ q, name, role, av }) => (
-              <div key={name} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
-                <div className="flex gap-0.5 mb-4">
-                  {[StarIcon, StarIcon, StarIcon, StarIcon, StarIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
-                </div>
-                <p className="text-blue-100 mb-5 leading-relaxed italic">&ldquo;{q}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{av}</div>
-                  <div>
-                    <p className="font-bold text-white text-sm">{name}</p>
-                    <p className="text-blue-200 text-xs">{role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GeoTestimonials lang="en" />
         </div>
       </section>
 
-      {/* SECTION 8: LIGHT - FINAL CTA */}
       <section className="bg-white py-20 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to Stop Missing Calls?</h2>

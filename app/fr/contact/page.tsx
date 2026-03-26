@@ -95,7 +95,7 @@ export default function FrContact() {
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Analyse Gratuite</h3>
               <p className="text-gray-600">
                 Consultation de 30 minutes pour comprendre vos besoins spécifiques
-                et vous proposer une solution sur mesure.
+                et vous proposer une solution adaptée.
               </p>
             </div>
             <div className="text-center">

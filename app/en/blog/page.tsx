@@ -100,7 +100,7 @@ export default function Blog() {
             <div className="text-center md:text-left">
               <p className="text-blue-600 font-semibold text-sm mb-1">EDITOR'S PICK</p>
               <h3 className="text-2xl font-bold mb-3">Marie Dubois, Head of Customer Success</h3>
-              <p className="text-gray-600 mb-4">Marie has spent 12 years helping businesses transform their customer experience. Her articles on outsourcing strategies have helped hundreds of SMEs make smarter decisions.</p>
+              <p className="text-gray-600 mb-4">Marie has spent 12 years helping businesses improve their customer service. Her articles on outsourcing have helped many SMEs make better decisions.</p>
               <Link href="#" className="text-blue-600 font-semibold hover:underline">Read all articles by Marie →</Link>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Blog() {
       {/* Section 7: DARK - CTA */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-900 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Experience?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Improve Your Customer Service?</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">Join 200+ businesses that improved their customer satisfaction by 40% with our call center solutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">Get a Free Quote</Link>

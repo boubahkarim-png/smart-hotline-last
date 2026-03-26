@@ -264,7 +264,7 @@ export default function Page() {
                 What happens after hours?
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="text-slate-600 mt-4">Our night team takes over seamlessly. Urgent calls get routed based on your escalation rules — we never leave a caller hanging.</p>
+              <p className="text-slate-600 mt-4">Our night team handles calls directly. Urgent calls get routed based on your rules — we never leave a caller waiting.</p>
             </details>
             <details className="bg-slate-50 rounded-xl p-6 group">
               <summary className="font-bold text-slate-900 cursor-pointer flex justify-between items-center">

@@ -133,7 +133,7 @@ export default function FrHome() {
                   {badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold flex-shrink-0">{badge}</span>}
                 </div>
                 <p className="text-slate-500 text-sm mb-3">{desc}</p>
-                <span className="text-blue-700 text-sm font-semibold group-hover:underline">En savoir plus -></span>
+                <span className="text-blue-700 text-sm font-semibold group-hover:underline">En savoir plus &rarr;</span>
               </Link>
             ))}
           </div>
@@ -166,7 +166,7 @@ export default function FrHome() {
                   )})}
               </ul>
               <Link href="/fr/agents-ia" className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-violet-700 transition-colors">
-                Decouvrir les Agents IA ->
+                Decouvrir les Agents IA &rarr;
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">

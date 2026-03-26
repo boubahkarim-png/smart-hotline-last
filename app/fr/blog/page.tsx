@@ -17,7 +17,7 @@ const POSTS = [
     cat: "IA", 
     img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80", 
     excerpt: "Comparaison complète pour vous aider à faire le bon choix selon votre activité et budget.",
-    content: "L'arrivée des agents IA vocaux a révolutionné l'industrie des centres d'appels. Mais faut-il vraiment choisir entre l'IA et l'humain, ou peut-on bénéficier du meilleur des deux mondes ? Nous analysons en profondeur les forces et limites de chaque approche pour vous aider à prendre une décision éclairée."
+    content: "L'arrivée des agents IA vocaux a changé l'industrie des centres d'appels. Mais faut-il vraiment choisir entre l'IA et l'humain, ou peut-on bénéficier du meilleur des deux mondes ? Nous analysons les forces et limites de chaque approche pour vous aider à prendre une décision."
   },
   { 
     title: "Comment qualifier vos leads au téléphone: guide complet", 
@@ -25,7 +25,7 @@ const POSTS = [
     cat: "Prospection", 
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80", 
     excerpt: "Les techniques et scripts utilisés par nos meilleurs conseillers pour qualifier efficacement.",
-    content: "La qualification efficace des leads est l'art de transformer un simple appel téléphonique en opportunité commerciale qualifiée. Dans ce guide complet, nous dévoilons les techniques éprouvées, les scripts gagnants et les stratégies psychologiques utilisés par nos meilleurs conseillers pour maximiser vos taux de conversion."
+    content: "La qualification efficace des leads est l'art de transformer un simple appel téléphonique en opportunité commerciale qualifiée. Dans ce guide, nous partageons les techniques et les scripts que nos conseillers utilisent pour maximiser vos taux de conversion."
   },
   { 
     title: "Taux de satisfaction client: les KPIs à surveiller", 
@@ -41,7 +41,7 @@ const POSTS = [
     cat: "Secteurs", 
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80", 
     excerpt: "Témoignage de 3 restaurants qui ont doublé leurs réservations en 30 jours.",
-    content: "L'industrie de la restauration fait face à des défis uniques en matière de gestion des réservations et du service client. À travers trois témoignages concrets de restaurants montréalais, nous montrons comment un centre d'appels spécialisé peut transformer radicalement votre opérationnel et votre rentabilité."
+    content: "L'industrie de la restauration fait face à des défis uniques en matière de gestion des réservations et du service client. À travers trois témoignages concrets de restaurants montréalais, nous montrons comment un centre d'appels peut vous faire gagner du temps et de l'argent."
   },
   { 
     title: "RGPD et centre d'appels: ce qu'il faut savoir", 
@@ -74,7 +74,7 @@ const FAQ = [
 
 const TESTIMONIALS = [
   {
-    quote: "Smart Hotline a transformé notre service client. Nous avons gagné 30% en efficacité et nos clients sont plus satisfaits que jamais.",
+    quote: "Smart Hotline a changé notre façon de gérer les appels. On a gagné 30% en efficacité et nos clients sont plus satisfaits.",
     name: "Marie-Chantal Dubois",
     role: "Directrice Opérations, Clinique SantéPlus",
     avatar: "MC"
@@ -267,8 +267,8 @@ export default function BlogFr() {
       {/* SECTION 8: DARK - CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à améliorer votre relation client ?</h2>
-          <p className="text-blue-200 text-lg mb-10">Découvrez comment nos solutions peuvent transformer votre entreprise.</p>
+          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à mieux gérer vos appels ?</h2>
+          <p className="text-blue-200 text-lg mb-10">Découvrez comment nos solutions peuvent aider votre entreprise.</p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <Link href="/fr/reception" className="flex-1 bg-white/20 backdrop-blur hover:bg-white/25 text-white font-bold px-6 py-3 rounded-xl hover:bg-white/30 transition-all border border-white/20">
               Appels Entrants

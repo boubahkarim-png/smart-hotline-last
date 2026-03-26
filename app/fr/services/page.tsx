@@ -199,7 +199,7 @@ export default function Services() {
       {/* SECTION 8: DARK FINAL CTA */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à transformer votre relation client?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à mieux gérer vos appels?</h2>
           <p className="text-lg text-blue-100 mb-8">Consultation gratuite. Sans engagement. Résultats garantis.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Consultation Gratuite</Link>
