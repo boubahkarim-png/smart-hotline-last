@@ -6,7 +6,7 @@ export default function GeoHeroSubtitle({ lang = 'fr' }: { lang?: 'fr' | 'en' })
 
   if (loading) return (
     <p className="text-lg text-slate-300 leading-relaxed">
-      Conseillers professionnels et agents IA vocaux 24/7. Externalisation simple, résultats immédiats.
+      Professional agents and AI voice agents 24/7. Simple outsourcing, immediate results.
     </p>
   )
 

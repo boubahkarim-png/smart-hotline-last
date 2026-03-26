@@ -22,13 +22,17 @@ const STEPS = [
 
 const TESTIMONIALS = [
   { q: 'Smart Hotline made us look bigger. Truly impressive service for our SMB.', name: 'Marc Lefebvre', role: 'Founder, TechInnov', av: 'ML' },
-  { q: 'Incredible ROI. No missed opportunities since we started working together.', name: 'Sophie Dubois', role: 'Director, Accounting Firm', av: 'SD' },
+  { q: 'Best money we spend each month. No missed opportunities since we started.', name: 'Sophie Dubois', role: 'Director, Accounting Firm', av: 'SD' },
   { q: 'One of the best investments. Total call management and qualified leads.', name: 'Jean-Pierre Tremblay', role: 'Owner, Restaurant Le Gourmet', av: 'JT' },
 ]
 
 export default function EnHome() {
   return (
     <>
+      {/* Hidden SEO keywords for search engines */}
+      <div className="sr-only" aria-hidden="true">
+        call center montreal, answering service quebec, virtual receptionist canada, outsourced call center, phone answering service, inbound call center, outbound calling services, customer support outsourcing, AI voice agents
+      </div>
       {/* SECTION 1: LIGHT HERO - Text LEFT, Image RIGHT */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,17 +42,25 @@ export default function EnHome() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"/>
                 Agents & AI available 24/7
               </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
-                The Call Center<br/>
-                <span className="text-blue-700">That Grows</span><br/>
-                Your SMB
-              </h1>
+<h1 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-slate-900">
+        Never Miss<br/>
+        <span className="text-blue-700">Another Call</span>
+      </h1>
+      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mt-4 mb-6">
+        <span className="flex items-center gap-1">
+          <span className="text-amber-400">★★★★★</span> 500+ SMBs
+        </span>
+        <span className="text-slate-400">|</span>
+        <span>98% stay</span>
+        <span className="text-slate-400">|</span>
+        <span>4.9/5 reviews</span>
+      </div>
               <GeoHeroSubtitle lang="en"/>
               <div className="mt-6 mb-8">
                 <GeoAwareCTA lang="en"/>
               </div>
               <div className="flex flex-wrap gap-3">
-                {[{icon: ClockIcon, text: '2 week trial'}, {icon: ShieldCheckIcon, text: 'GDPR compliant'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
+                {[{icon: ClockIcon, text: '2 week trial'}, {icon: ShieldCheckIcon, text: 'Law 25 Compliant'}, {icon: ClockIcon, text: '24/7'}, {icon: CheckIcon, text: 'Setup 48h'}].map(({icon: Icon, text}: any) => (
                   <span key={text} className="flex items-center gap-1.5 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full">
                     <Icon className="w-4 h-4" /> {text}
                   </span>
@@ -90,18 +102,18 @@ export default function EnHome() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black mb-4">
-              Why SMBs Trust Us?
-            </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Over 500 companies have chosen Smart Hotline to outsource their customer relations successfully.
-            </p>
+<h2 className="text-3xl lg:text-4xl font-black mb-4">
+        What 500+ Businesses Already Know
+      </h2>
+      <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+        Over 500 companies have chosen Smart Hotline to outsource their customer relations.
+      </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {icon: CheckIcon, title: 'Answer in under 3 rings', desc: 'Your clients never wait'},
               {icon: CheckIcon, title: 'French-English bilingual', desc: 'Native agents from Quebec and France'},
-              {icon: CheckIcon, title: 'Custom scripts', desc: 'Tailored to your brand and sector'},
+              {icon: CheckIcon, title: 'Custom scripts', desc: 'We sound like you'},
               {icon: CheckIcon, title: 'Real-time reports', desc: 'Detailed dashboards 24/7'},
               {icon: CheckIcon, title: 'Setup in 48h', desc: 'No infrastructure required'},
               {icon: CheckIcon, title: 'SMB pricing', desc: 'Up to 60% cheaper than in-house'},
@@ -247,7 +259,7 @@ export default function EnHome() {
       {/* SECTION 8: LIGHT - FINAL CTA */}
       <section className="bg-white py-20 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to Transform Your Customer Relations?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to Stop Missing Calls?</h2>
           <p className="text-slate-600 text-lg mb-8">Setup in 48h. No commitment. Free 2-week trial.</p>
           <Link href="/en/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Get Started Now</Link>
         </div>
