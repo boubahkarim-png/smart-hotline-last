@@ -91,7 +91,7 @@ export default function EnHome() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/main-hero.png"
+                <img src="/smart-hotline-last/images/main-hero.jpg"
                   alt="Smart Hotline Team"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>

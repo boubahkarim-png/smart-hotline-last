@@ -43,7 +43,7 @@ Smart Hotline Blog
 <p className="text-lg text-slate-600 mb-6">Tips, strategies and insights to optimize your customer relationships.</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/smart-hotline-last/images/main-hero.png" alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.jpg" alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
