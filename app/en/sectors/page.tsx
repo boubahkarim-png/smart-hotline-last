@@ -141,10 +141,10 @@ Our expertise covers over 20 industries across North America and Europe. Special
      </div>
      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
       {TESTIMONIALS.map(({quote, name, role, initials}) => (
-       <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-        <div className="flex gap-0.5 mb-4">
-         {[1,2,3,4,5].map(i => <span key={i} className="text-amber-400 text-xl">★</span>)}
-        </div>
+<div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+<div className="flex gap-0.5 mb-4" role="img" aria-label="5 out of 5 stars">
+{[1,2,3,4,5].map(i => <span key={i} className="text-amber-400 text-xl" aria-hidden="true">★</span>)}
+</div>
         <p className="text-slate-700 mb-5 leading-relaxed italic">"{quote}"</p>
         <div className="flex items-center gap-3">
          <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>

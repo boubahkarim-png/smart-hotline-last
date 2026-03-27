@@ -1,39 +1,74 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
-import { CONTACT } from '@/lib/nav'
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
 export default function EnContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+  const [csrfToken, setCsrfToken] = useState('')
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
 
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      try {
+        const response = await fetch('/api/csrf')
+        if (response.ok) {
+          const data = await response.json()
+          setCsrfToken(data.token)
+        }
+      } catch (err) {
+        console.error('Failed to fetch CSRF token')
+      }
+    }
+    fetchCsrfToken()
+  }, [])
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    
+    if (!csrfToken) {
+      setError('Security error. Please refresh the page.')
+      return
+    }
+    
     setSending(true)
     setError('')
     const form = e.currentTarget
     const formData = new FormData(form)
 
+    const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
+    const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
+
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
+      name: sanitize(formData.get('name') as string || ''),
+      email: sanitizeEmail(formData.get('email') as string || ''),
       phone: '',
       company: '',
       service: '',
       volume: '',
-      message: formData.get('message') || '',
+      message: sanitize(formData.get('message') as string || ''),
       source: 'contact-form-en',
       language: 'en'
     }
 
+    if (!data.name || !data.email) {
+      setError('Name and email are required.')
+      setSending(false)
+      return
+    }
+
     try {
-      const response = await fetch('http://194.163.187.192:3002/api/contact', {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken
+        },
         body: JSON.stringify(data)
       })
 
@@ -75,7 +110,7 @@ export default function EnContact() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/images/contact-hero.png" alt="Contact Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="/images/contact-hero.webp" alt="Contact Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -112,41 +147,45 @@ export default function EnContact() {
               <p className="text-green-700">We will respond within 2 hours.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
-              <h2 className="text-2xl font-black text-slate-900 mb-6">Get My Free Analysis</h2>
-              
-              <div className="space-y-4 mb-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={4}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-                    placeholder="Tell us about your needs..."
-                  />
-                </div>
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
+            <input type="hidden" name="csrf_token" value={csrfToken} />
+            <h2 className="text-2xl font-black text-slate-900 mb-6">Get My Free Analysis</h2>
+
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  maxLength={100}
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                  placeholder="Your name"
+                />
               </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  maxLength={254}
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  maxLength={2000}
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+                  placeholder="Tell us about your needs..."
+                />
+              </div>
+            </div>
 
               <div className="mb-6">
                 <label className="flex items-start gap-3 cursor-pointer">

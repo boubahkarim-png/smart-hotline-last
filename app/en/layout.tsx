@@ -37,7 +37,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header lang="en"/>
-      <main className="pt-16">{children}</main>
+      <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="en"/>
       <TawkToChat />
     </>

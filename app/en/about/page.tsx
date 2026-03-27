@@ -149,7 +149,7 @@ Our success comes from combining experienced professionals with practical AI too
               </div>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Smart Hotline Team Collaboration" className="rounded-2xl shadow-xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Smart Hotline Team Collaboration" loading="lazy" className="rounded-2xl shadow-xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

@@ -103,7 +103,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+<body>
+      <a href="#main-content" className="skip-link">
+        Aller au contenu principal
+      </a>
+        {children}
+      </body>
       <script
         dangerouslySetInnerHTML={{
           __html: `

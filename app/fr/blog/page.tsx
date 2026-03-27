@@ -234,7 +234,7 @@ Découvrez nos analyses, stratégies et meilleures pratiques pour optimiser votr
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {POSTS.map(({ title, date, cat, img, excerpt }) => (
               <article key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group cursor-pointer">
-                <img src={img} alt={title} className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"/>
+                <img src={img} alt={title} loading="lazy" className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"/>
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{cat}</span>

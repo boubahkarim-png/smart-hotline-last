@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface FormData {
   name: string
@@ -25,29 +25,59 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [error, setError] = useState('')
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false)
+  const [csrfToken, setCsrfToken] = useState('')
 
   const fr = lang === 'fr'
 
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      try {
+        const response = await fetch('/api/csrf')
+        if (response.ok) {
+          const data = await response.json()
+          setCsrfToken(data.token)
+        }
+      } catch (err) {
+        console.error('Failed to fetch CSRF token')
+      }
+    }
+    fetchCsrfToken()
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!acceptedPrivacy) {
       setError(fr ? 'Veuillez accepter la politique de confidentialité.' : 'Please accept the privacy policy.')
+      return
+    }
+
+    if (!csrfToken) {
+      setError(fr ? 'Erreur de sécurité. Veuillez rafraîchir la page.' : 'Security error. Please refresh the page.')
       return
     }
 
     setStatus('sending')
     setError('')
 
+    const sanitizedName = formData.name.trim().replace(/[<>]/g, '')
+    const sanitizedEmail = formData.email.trim().toLowerCase()
+    const sanitizedMessage = formData.message.trim().replace(/[<>]/g, '')
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
+
     try {
-      const response = await fetch('http://194.163.187.192:8090/module/Leads', {
+      const response = await fetch(`${apiUrl}:8090/module/Leads`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken
+        },
         body: JSON.stringify({
-          first_name: formData.name.split(' ')[0] || formData.name,
-          last_name: formData.name.split(' ').slice(1).join(' ') || '',
-          email1: formData.email,
-          description: formData.message,
+          first_name: sanitizedName.split(' ')[0] || sanitizedName,
+          last_name: sanitizedName.split(' ').slice(1).join(' ') || '',
+          email1: sanitizedEmail,
+          description: sanitizedMessage,
           lead_source: formData.source,
           status: 'New',
           assigned_user_id: '1'
@@ -57,8 +87,16 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
       if (!response.ok) {
         const fallbackResponse = await fetch('/api/leads', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
+          headers: { 
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken
+          },
+          body: JSON.stringify({
+            name: sanitizedName,
+            email: sanitizedEmail,
+            message: sanitizedMessage,
+            source: formData.source
+          })
         })
         if (!fallbackResponse.ok) throw new Error('Submission failed')
       }
@@ -73,7 +111,8 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    const value = e.target.value
+    setFormData(prev => ({ ...prev, [e.target.name]: value }))
   }
 
   if (status === 'success') {
@@ -96,6 +135,8 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      <input type="hidden" name="csrf_token" value={csrfToken} />
+      
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1.5">
           {fr ? 'Nom' : 'Name'} *
@@ -104,6 +145,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           type="text"
           name="name"
           required
+          maxLength={100}
           value={formData.name}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
@@ -119,6 +161,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           type="email"
           name="email"
           required
+          maxLength={254}
           value={formData.email}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
@@ -134,6 +177,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
           name="message"
           rows={4}
           required
+          maxLength={2000}
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
@@ -157,7 +201,7 @@ export default function SuiteCRMForm({ lang = 'fr', source = 'website', onSucces
         />
         <label htmlFor="privacy" className="text-sm text-slate-600">
           {fr ? (
-            <>J'accepte la <a href="/fr/confidentialite" className="text-blue-600 hover:underline">politique de confidentialité</a> (RGPD)</>
+            <>J&apos;accepte la <a href="/fr/confidentialite" className="text-blue-600 hover:underline">politique de confidentialité</a> (RGPD)</>
           ) : (
             <>I accept the <a href="/en/privacy" className="text-blue-600 hover:underline">privacy policy</a> (GDPR)</>
           )}

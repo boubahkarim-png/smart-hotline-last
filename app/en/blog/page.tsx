@@ -55,7 +55,7 @@ Smart Hotline Blog
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {POSTS.map(({title, date, cat, img, excerpt}) => (
               <article key={title} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all group cursor-pointer">
-                <img src={img} alt={title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"/>
+                <img src={img} alt={title} loading="lazy" className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"/>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{cat}</span>
@@ -105,7 +105,7 @@ Smart Hotline Blog
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col md:flex-row gap-8 items-center">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Author" className="w-32 h-32 rounded-full object-cover"/>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Author" loading="lazy" className="w-32 h-32 rounded-full object-cover"/>
             <div className="text-center md:text-left">
               <p className="text-blue-600 font-semibold text-sm mb-1">EDITOR'S PICK</p>
               <h3 className="text-2xl font-bold mb-3">Marie Dubois, Head of Customer Success</h3>

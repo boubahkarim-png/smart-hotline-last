@@ -179,11 +179,40 @@ export const DEFAULT_GEO: GeoConfig = {
   country: ''
 }
 
+const GEO_CACHE_KEY = 'smart_hotline_geo_cache'
+const GEO_CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
+
+interface GeoCache {
+  data: GeoConfig
+  timestamp: number
+}
+
 export async function detectGeo(): Promise<GeoConfig> {
+  if (typeof window !== 'undefined') {
+    try {
+      const cached = localStorage.getItem(GEO_CACHE_KEY)
+      if (cached) {
+        const parsed: GeoCache = JSON.parse(cached)
+        if (Date.now() - parsed.timestamp < GEO_CACHE_TTL) {
+          return parsed.data
+        }
+      }
+    } catch {}
+  }
+
   try {
     const r = await fetch('https://ipapi.co/json/')
     const d = await r.json()
-    return COUNTRY_MAP[d.country_code] || { ...DEFAULT_GEO, country: d.country_name || '' }
+    const result = COUNTRY_MAP[d.country_code] || { ...DEFAULT_GEO, country: d.country_name || '' }
+
+    if (typeof window !== 'undefined') {
+      try {
+        const cache: GeoCache = { data: result, timestamp: Date.now() }
+        localStorage.setItem(GEO_CACHE_KEY, JSON.stringify(cache))
+      } catch {}
+    }
+
+    return result
   } catch {
     return DEFAULT_GEO
   }

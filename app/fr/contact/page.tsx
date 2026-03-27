@@ -1,47 +1,81 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
-import { CONTACT } from '@/lib/nav'
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
 export default function FrContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+  const [csrfToken, setCsrfToken] = useState('')
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
 
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      try {
+        const response = await fetch('/api/csrf')
+        if (response.ok) {
+          const data = await response.json()
+          setCsrfToken(data.token)
+        }
+      } catch (err) {
+        console.error('Failed to fetch CSRF token')
+      }
+    }
+    fetchCsrfToken()
+  }, [])
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    
+    if (!csrfToken) {
+      setError('Erreur de sécurité. Veuillez rafraîchir la page.')
+      return
+    }
+    
     setSending(true)
     setError('')
     const form = e.currentTarget
     const formData = new FormData(form)
-    
+
+    const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
+    const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
+    const sanitizePhone = (str: string) => str.replace(/[^\d+\-\s()]/g, '').substring(0, 20)
+
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone') || '',
-      company: formData.get('company') || '',
-      service: formData.get('service') || '',
-      volume: formData.get('volume') || '',
-      message: formData.get('message') || '',
+      name: sanitize(formData.get('name') as string || ''),
+      email: sanitizeEmail(formData.get('email') as string || ''),
+      phone: sanitizePhone(formData.get('phone') as string || ''),
+      company: sanitize(formData.get('company') as string || ''),
+      service: sanitize(formData.get('service') as string || ''),
+      volume: sanitize(formData.get('volume') as string || ''),
+      message: sanitize(formData.get('message') as string || ''),
       source: 'contact-form-fr',
       language: 'fr'
     }
 
+    if (!data.name || !data.email) {
+      setError('Le nom et l\'email sont requis.')
+      setSending(false)
+      return
+    }
+
     try {
-      // Post to VPS webhook which handles SuiteCRM + email notification
-      const response = await fetch('http://194.163.187.192:3002/api/contact', {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfToken
+        },
         body: JSON.stringify(data)
       })
 
       if (response.ok) {
         setSent(true)
       } else {
-        // Fallback: send email via mailto link
         const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
         const body = encodeURIComponent(
           `Nom: ${data.name}\nEmail: ${data.email}\nTéléphone: ${data.phone}\nEntreprise: ${data.company}\nService: ${data.service}\nVolume: ${data.volume}\n\nMessage:\n${data.message}`
@@ -50,7 +84,6 @@ export default function FrContact() {
         setSent(true)
       }
     } catch (err) {
-      // Fallback: send email via mailto link
       const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
       const body = encodeURIComponent(
         `Nom: ${data.name}\nEmail: ${data.email}\nTéléphone: ${data.phone}\nEntreprise: ${data.company}\nService: ${data.service}\nVolume: ${data.volume}\n\nMessage:\n${data.message}`
@@ -58,7 +91,7 @@ export default function FrContact() {
       window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
       setSent(true)
     }
-    
+
     setSending(false)
   }
 
@@ -78,7 +111,7 @@ export default function FrContact() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/images/contact-hero.png" alt="Contactez Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src="/images/contact-hero.webp" alt="Contactez Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -162,6 +195,7 @@ export default function FrContact() {
               onSubmit={handleSubmit}
               className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6"
             >
+              <input type="hidden" name="csrf_token" value={csrfToken} />
               <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -173,10 +207,11 @@ export default function FrContact() {
                 ].map(({ name, label, type, required }) => (
                   <div key={name}>
                     <label className="block text-sm font-semibold text-slate-700 mb-1.5">{label}</label>
-                    <input 
-                      type={type} 
-                      name={name} 
+                    <input
+                      type={type}
+                      name={name}
                       required={required}
+                      maxLength={254}
                       className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
                     />
                   </div>
@@ -185,8 +220,8 @@ export default function FrContact() {
 
               <div className="mb-4">
                 <label className="block text-sm font-semibold text-slate-700 mb-1.5">Service souhaité</label>
-                <select 
-                  name="service" 
+                <select
+                  name="service"
                   className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 bg-slate-50"
                 >
                   <option value="">Sélectionnez...</option>
@@ -202,8 +237,8 @@ export default function FrContact() {
 
               <div className="mb-4">
                 <label className="block text-sm font-semibold text-slate-700 mb-1.5">Volume d&apos;appels estimé</label>
-                <select 
-                  name="volume" 
+                <select
+                  name="volume"
                   className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 bg-slate-50"
                 >
                   <option value="">Sélectionnez...</option>
@@ -216,9 +251,10 @@ export default function FrContact() {
 
               <div className="mb-5">
                 <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
-                <textarea 
-                  name="message" 
+                <textarea
+                  name="message"
                   rows={5}
+                  maxLength={2000}
                   className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
                   placeholder="Décrivez vos besoins, vos horaires, votre secteur..."
                 />

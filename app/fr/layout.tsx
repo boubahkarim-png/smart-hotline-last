@@ -37,7 +37,7 @@ export default function FrLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header lang="fr"/>
-      <main className="pt-16">{children}</main>
+      <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="fr"/>
       <TawkToChat />
     </>

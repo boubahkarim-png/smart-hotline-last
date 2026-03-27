@@ -49,22 +49,24 @@ function PricingSlider({ children, title }: { children: React.ReactNode; title: 
     <div className="relative">
       <h2 className="text-2xl lg:text-3xl font-black text-slate-900 mb-6 text-center">{title}</h2>
       <div className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={() => scroll('left')}
-          className={`w-12 h-12 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110'}`}
-          disabled={!canScrollLeft}
-        >
-          <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-        </button>
+<button
+onClick={() => scroll('left')}
+aria-label="Défiler à gauche"
+className={`w-12 h-12 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110'}`}
+disabled={!canScrollLeft}
+>
+<svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+</button>
       </div>
       <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10">
-        <button
-          onClick={() => scroll('right')}
-          className={`w-12 h-12 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110'}`}
-          disabled={!canScrollRight}
-        >
-          <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-        </button>
+<button
+onClick={() => scroll('right')}
+aria-label="Défiler à droite"
+className={`w-12 h-12 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110'}`}
+disabled={!canScrollRight}
+>
+<svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+</button>
       </div>
       <div
         ref={scrollRef}
@@ -115,7 +117,7 @@ export default function Tarifs() {
             <div className="w-full lg:w-1/2 animate-slide-right">
               <div className="relative float-card">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-30"></div>
-                <img src="/images/pricing-hero.png" alt="Tarifs Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
+                <img src="/images/pricing-hero.webp" alt="Tarifs Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
               </div>
             </div>
           </div>

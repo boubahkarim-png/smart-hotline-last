@@ -101,12 +101,12 @@ export default function Services() {
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">Ce que disent nos clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {TESTIMONIALS.map(({quote, author, role, rating}) => (
-              <div key={author} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="flex mb-4">
-                  {Array.from({length: rating}).map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
-                  ))}
-                </div>
+<div key={author} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+<div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
+{Array.from({length: rating}).map((_, i) => (
+<span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+))}
+</div>
                 <p className="text-gray-600 mb-6 italic">"{quote}"</p>
                 <div className="font-semibold text-gray-900">{author}</div>
                 <div className="text-sm text-gray-500">{role}</div>

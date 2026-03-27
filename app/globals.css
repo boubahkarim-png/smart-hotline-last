@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1e40af;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -305,6 +323,57 @@ body {
 
   .testimonial-card:hover {
     transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-slow-float,
+  .animate-fade-in-up,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale-pop,
+  .animate-glow-pulse,
+  .animate-float-badge,
+  .card-wave,
+  .price-glow,
+  .float-card,
+  .shimmer,
+  .animated-gradient-text {
+    animation: none !important;
+  }
+
+  .stagger-children > * {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .pricing-slide-left,
+  .pricing-slide-right,
+  .pricing-slide-up,
+  .pricing-bounce,
+  .price-number,
+  .word-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .modern-box:hover,
+  .modern-box-dark:hover,
+  .glass-box:hover,
+  .testimonial-card:hover,
+  .card-tilt:hover,
+  .pricing-card-hover:hover,
+  .image-parallax:hover {
+    transform: none !important;
   }
 }
 
