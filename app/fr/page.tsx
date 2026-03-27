@@ -92,7 +92,7 @@ export default function FrHome() {
 <div className="w-full lg:w-1/2 animate-slide-right">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-            <img src="/images/main-hero.jpg"
+            <img src="/smart-hotline-last/images/main-hero.jpg"
             alt="Equipe Smart Hotline"
             className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom"
             style={{maxHeight:'550px', objectFit:'cover'}}/>
@@ -175,7 +175,7 @@ export default function FrHome() {
         <div className="w-full lg:w-1/2 animate-slide-right">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-            <img src="/images/agents-ia-hero.jpg"
+            <img src="/smart-hotline-last/images/agents-ia-hero.jpg"
             alt="Agent IA Sophie"
             className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom"
             style={{maxHeight:'550px', objectFit:'cover'}}/>

@@ -92,7 +92,7 @@ export default function EnHome() {
     <div className="w-full lg:w-1/2 animate-slide-right">
       <div className="relative">
         <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-        <img src="/images/main-hero.jpg"
+        <img src="/smart-hotline-last/images/main-hero.jpg"
         alt="Smart Hotline Team"
         className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom"
         style={{maxHeight:'550px', objectFit:'cover'}}/>
@@ -171,7 +171,7 @@ export default function EnHome() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/images/agents-ia-hero.png"
+              <img src="/smart-hotline-last/images/agents-ia-hero.png"
                 alt="AI Agent Sophie"
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{maxHeight:'500px', objectFit:'cover'}}/>

@@ -117,7 +117,7 @@ export default function Tarifs() {
             <div className="w-full lg:w-1/2 animate-slide-right">
               <div className="relative float-card">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-30"></div>
-                <img src="/images/pricing-hero.webp" alt="Tarifs Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
+                <img src="/smart-hotline-last/images/pricing-hero.webp" alt="Tarifs Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function Privacy() {
 <p className="text-slate-600 text-lg mb-6">Protection and management of your personal data</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/images/main-hero.jpg" alt="Privacy Policy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.jpg" alt="Privacy Policy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>

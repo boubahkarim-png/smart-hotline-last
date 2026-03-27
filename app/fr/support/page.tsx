@@ -64,7 +64,7 @@ export default function Page() {
         <div className="w-full lg:w-1/2 animate-slide-right">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl blur-2xl opacity-20"></div>
-            <img src="/images/support-tech.jpg" alt="Support client" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+            <img src="/smart-hotline-last/images/support-tech.jpg" alt="Support client" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
             <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">

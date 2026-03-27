@@ -119,7 +119,7 @@ export default function Page() {
         <div className="w-full lg:w-1/2 animate-slide-right">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-            <img src="/images/agents-ia-hero.jpg" alt="Agent IA Sophie"
+            <img src="/smart-hotline-last/images/agents-ia-hero.jpg" alt="Agent IA Sophie"
             className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom"
             style={{maxHeight:'550px', objectFit:'cover'}}/>
             <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">

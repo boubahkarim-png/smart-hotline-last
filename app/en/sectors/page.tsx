@@ -49,7 +49,7 @@ Our expertise covers over 20 industries across North America and Europe. Special
 </p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/images/services-hero.jpg" alt="Sectors We Serve" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/services-hero.jpg" alt="Sectors We Serve" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
