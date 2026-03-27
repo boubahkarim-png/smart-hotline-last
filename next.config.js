@@ -2,8 +2,9 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/smart-hotline-last',
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
 }
 module.exports = nextConfig
