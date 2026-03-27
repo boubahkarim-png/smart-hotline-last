@@ -7,7 +7,7 @@ export default function GeoAwareCTA({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
 const { geo, prices, content, loading } = useGeo(lang)
 const showPhone = !loading && geo.showPhone
 const sym = loading ? '' : prices.symbol
-const trialPrice = loading ? '...' : `${sym}${prices.outbound_monthly[0]}`
+const trialPrice = loading ? '...' : `${sym}${prices.outbound_trial}/h`
 const contactHref = lang === 'fr' ? '/fr/contact' : '/en/contact'
 const fr = lang === 'fr'
 
@@ -34,7 +34,7 @@ className="inline-flex items-center justify-center gap-2 border-2 border-white t
 {!loading && (
 <>
 <span className="text-blue-200">
-{fr ? `À partir de ${trialPrice}/mois` : `From ${trialPrice}/month`}
+{fr ? `Essai 2 semaines — ${trialPrice}` : `2-week trial — ${trialPrice}`}
 </span>
 <span className="text-blue-300 text-xs">{content.marketNote}</span>
 </>

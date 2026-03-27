@@ -12,6 +12,15 @@ const TIERS_4 = [
   { name: 'Enterprise', desc: 'Sans limites', badge: 'Meilleure Valeur' },
 ]
 
+const OUTBOUND_TIERS = [
+  { name: 'Découverte', hours: '20h/semaine', i: -1, isTrial: true },
+  { name: 'Starter', hours: '20h/semaine', i: 0 },
+  { name: 'Pro', hours: '40h/semaine', i: 1 },
+  { name: 'Business', hours: '80h/semaine', i: 2, popular: true },
+  { name: 'Premium', hours: '120h/semaine', i: 3 },
+  { name: 'Enterprise', hours: 'Illimité', i: 4 },
+]
+
 function PricingSlider({ children, title }: { children: React.ReactNode; title: string }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -93,7 +102,7 @@ export default function Tarifs() {
                 <span className="animated-gradient-text">Respectent Votre Croissance</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Pas de frais cachés. Pas de surprise. 4 forfaits clairs par service, adaptés à votre pays.
+                Pas de frais cachés. Pas de surprise. Forfaits clairs par service, adaptés à votre pays.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['Sans engagement', 'Annulez quand vous voulez', 'CRM inclus', 'Support FR/EN'].map((b, i) => (
@@ -113,7 +122,7 @@ export default function Tarifs() {
         </div>
       </section>
 
-      {/* OUTBOUND CALLS */}
+      {/* OUTBOUND CALLS - HOURLY RATE */}
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50 overflow-hidden" id="pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -121,32 +130,40 @@ export default function Tarifs() {
               Appels Sortants
             </span>
           </div>
-          <PricingSlider title="Prospection Téléphonique avec CRM + Autodialer">
-            {TIERS_4.map((tier, i) => (
-              <div key={tier.name} className={`flex-shrink-0 w-72 bg-white rounded-2xl p-6 snap-start ${tier.badge === 'Populaire' ? 'border-2 border-emerald-500 shadow-2xl' : 'border border-slate-200 shadow-lg'}`}>
-                {tier.badge && (
+          <PricingSlider title="Prospection Téléphonique - Tarif Horaire (CRM + Autodialer inclus)">
+            {OUTBOUND_TIERS.map((tier, idx) => (
+              <div key={tier.name} className={`flex-shrink-0 w-72 bg-white rounded-2xl p-6 snap-start ${tier.isTrial ? 'border-2 border-amber-400 bg-amber-50' : tier.popular ? 'border-2 border-emerald-500 shadow-2xl' : 'border border-slate-200 shadow-lg'}`}>
+                {tier.isTrial ? (
                   <div className="mb-4">
-                    <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">{tier.badge}</span>
+                    <span className="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Essai 2 semaines</span>
+                  </div>
+                ) : tier.popular && (
+                  <div className="mb-4">
+                    <span className="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Populaire</span>
                   </div>
                 )}
                 <h3 className="font-bold text-xl text-slate-900 mb-1">{tier.name}</h3>
-                <p className="text-slate-500 text-sm mb-4">{tier.desc}</p>
+                <p className="text-slate-500 text-sm mb-4">{tier.hours}</p>
                 <div className="mb-2">
-                  <span className="text-3xl font-black text-emerald-600">{fmt(prices.outbound_monthly[i])}</span>
-                  <span className="text-slate-500">/mois</span>
+                  <span className="text-3xl font-black text-emerald-600">
+                    {tier.isTrial ? fmt(prices.outbound_trial) : fmt(prices.outbound[tier.i])}
+                  </span>
+                  <span className="text-slate-500">/heure</span>
                 </div>
-                <p className="text-slate-600 font-semibold mb-4">{loading ? '...' : `${prices.outbound_hours[i]}h/mois incluses`}</p>
+                {tier.isTrial && (
+                  <p className="text-amber-700 text-sm font-semibold mb-4">OU 1 semaine gratuite</p>
+                )}
                 <ul className="space-y-2 mb-6 text-sm">
                   <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Agent dédié</li>
                   <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> CRM avec autodialer</li>
                   <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Détection répondeur</li>
                   <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Numéro dédié</li>
                   <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Listes B2B/B2C gratuites</li>
-                  {i > 0 && <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Rapports quotidiens</li>}
-                  {i > 1 && <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Manager dédié</li>}
+                  {!tier.isTrial && tier.i > 0 && <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Rapports quotidiens</li>}
+                  {!tier.isTrial && tier.i > 1 && <li className="flex items-center gap-2 text-slate-600"><CheckIcon className="w-4 h-4 text-emerald-600" /> Manager dédié</li>}
                 </ul>
-                <Link href={`/fr/contact?service=outbound&plan=${tier.name.toLowerCase()}`} className={`block text-center py-3 px-4 rounded-xl font-bold ${tier.badge === 'Populaire' ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50'}`}>
-                  Choisir
+                <Link href={`/fr/contact?service=outbound&plan=${tier.name.toLowerCase()}`} className={`block text-center py-3 px-4 rounded-xl font-bold ${tier.isTrial ? 'bg-amber-500 text-white hover:bg-amber-600' : tier.popular ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50'}`}>
+                  {tier.isTrial ? 'Essayer' : 'Choisir'}
                 </Link>
               </div>
             ))}

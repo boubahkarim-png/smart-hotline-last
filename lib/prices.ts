@@ -1,7 +1,9 @@
 
 // ============================================================
 // PRICES — Premium Monthly Packages (4+ tiers per service)
-// All services: Monthly packages with included volume
+// Outbound: HOURLY RATE (unchanged) + CRM + autodialer features
+// Other services: Monthly packages with included volume
+// Geo-adapted pricing per country (not simple conversion)
 // ============================================================
 
 export type Currency = 'CAD' | 'EUR' | 'USD' | 'CHF'
@@ -10,9 +12,9 @@ export interface CurrencyConfig {
   symbol: string
   code: Currency
   locale: string
-  // Outbound human agents - Monthly packages with CRM + autodialer
-  outbound_monthly: number[] // [Starter, Pro, Business, Enterprise]
-  outbound_hours: number[] // included hours per tier
+  // Outbound - HOURLY RATE (per hour, unchanged from original)
+  outbound_trial: number // trial hourly rate
+  outbound: number[] // hourly rates [20h, 40h, 80h, 120h, unlimited tiers]
   // AI voice agents - Monthly packages with included minutes
   ai_monthly: number[] // [Starter, Pro, Business, Enterprise]
   ai_minutes: number[] // included minutes per tier
@@ -33,9 +35,9 @@ export const PRICES_CA: CurrencyConfig = {
   symbol: 'CA$',
   code: 'CAD',
   locale: 'fr-CA',
-  // Outbound - Monthly with CRM + autodialer
-  outbound_monthly: [899, 1599, 2799, 4999],
-  outbound_hours: [20, 40, 80, 160],
+  // Outbound - HOURLY RATE (unchanged)
+  outbound_trial: 15,
+  outbound: [19, 18, 17, 16, 15], // per hour, more hours = lower rate
   // AI Voice Agents - 4 tiers
   ai_monthly: [249, 799, 1999, 3499],
   ai_minutes: [500, 2000, 6000, 15000],
@@ -56,9 +58,9 @@ export const PRICES_EU: CurrencyConfig = {
   symbol: '€',
   code: 'EUR',
   locale: 'fr-FR',
-  // Outbound - Monthly with CRM + autodialer
-  outbound_monthly: [699, 1299, 2299, 3999],
-  outbound_hours: [20, 40, 80, 160],
+  // Outbound - HOURLY RATE (unchanged)
+  outbound_trial: 11,
+  outbound: [13, 12, 11, 10, 9], // per hour, more hours = lower rate
   // AI Voice Agents - 4 tiers
   ai_monthly: [199, 649, 1649, 2899],
   ai_minutes: [500, 2000, 6000, 15000],
@@ -79,9 +81,9 @@ export const PRICES_US: CurrencyConfig = {
   symbol: '$',
   code: 'USD',
   locale: 'en-US',
-  // Outbound - Monthly with CRM + autodialer
-  outbound_monthly: [699, 1299, 2299, 3999],
-  outbound_hours: [20, 40, 80, 160],
+  // Outbound - HOURLY RATE (unchanged)
+  outbound_trial: 12,
+  outbound: [14, 13, 12, 11, 10], // per hour, more hours = lower rate
   // AI Voice Agents - 4 tiers
   ai_monthly: [199, 649, 1649, 2899],
   ai_minutes: [500, 2000, 6000, 15000],
@@ -102,9 +104,9 @@ export const PRICES_CH: CurrencyConfig = {
   symbol: 'CHF ',
   code: 'CHF',
   locale: 'fr-CH',
-  // Outbound - Monthly with CRM + autodialer
-  outbound_monthly: [899, 1599, 2799, 4999],
-  outbound_hours: [20, 40, 80, 160],
+  // Outbound - HOURLY RATE (unchanged)
+  outbound_trial: 14,
+  outbound: [17, 16, 15, 14, 13], // per hour, more hours = lower rate
   // AI Voice Agents - 4 tiers
   ai_monthly: [249, 799, 1999, 3499],
   ai_minutes: [500, 2000, 6000, 15000],
@@ -126,7 +128,7 @@ export const PRICES: Record<Currency, CurrencyConfig> = {
 }
 
 // ============================================================
-// GEO CONFIGURATION
+// GEO CONFIGURATION - Different pricing per region
 // ============================================================
 export interface GeoConfig {
   currency: Currency
