@@ -1,53 +1,17 @@
 # ============================================
 # NETLIFY CONFIGURATION - SMART HOTLINE
-# Free features enabled for optimal SEO/Performance
+# MINIMAL CONFIG - NO BUILD MINUTES WASTED
 # ============================================
 
 [build]
-  command = "npm run build:netlify"
-  publish = "out"
+command = "npm run build:netlify"
+publish = "out"
 
 [build.environment]
-  NODE_VERSION = "20"
-  NEXT_BASEPATH = ""
-  NEXT_PUBLIC_SITE_URL = "https://smart-hotline.com"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
-# ============================================
-# SEO & PERFORMANCE HEADERS (FREE)
-# ============================================
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    # Security headers
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    # Performance caching
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
-
-[[headers]]
-  for = "/_next/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HSTS for HTTPS enforcement
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+NODE_VERSION = "20"
+NEXT_BASEPATH = ""
+NEXT_PUBLIC_SITE_URL = "https://smart-hotline.com"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # ============================================
 # REDIRECTS
@@ -55,68 +19,7 @@
 
 # Root redirect to French
 [[redirects]]
-  from = "/"
-  to = "/fr/"
-  status = 302
-  force = true
-
-# WWW to non-WWW (SEO)
-[[redirects]]
-  from = "https://www.smart-hotline.com/*"
-  to = "https://smart-hotline.com/:splat"
-  status = 301
-  force = true
-
-# Netlify subdomain to custom domain (SEO)
-[[redirects]]
-  from = "https://incredible-sawine-6c4d8a.netlify.app/*"
-  to = "https://smart-hotline.com/:splat"
-  status = 301
-  force = true
-
-# Trailing slash handling
-[[redirects]]
-  from = "/*"
-  to = "/:splat/"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# ============================================
-# PLUGINS (FREE)
-# ============================================
-
-# Lighthouse SEO/Performance testing on each deploy
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  [plugins.inputs]
-    output_path = "reports/lighthouse"
-    [plugins.inputs.thresholds]
-      performance = 0.8
-      accessibility = 0.9
-      best-practices = 0.8
-      seo = 0.9
-
-# Sitemap submission to Google (free)
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-
-# ============================================
-# POST PROCESSING (FREE)
-# ============================================
-
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.images]
-  compress = true
+from = "/"
+to = "/fr/"
+status = 302
+force = true
