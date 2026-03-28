@@ -1,4 +1,5 @@
 'use client'
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useState } from 'react'
 import BlogArticleModal, { type Article } from '@/components/BlogArticleModal'
@@ -840,7 +841,7 @@ export default function BlogFr() {
               </p>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/main-hero.jpg" alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/main-hero.jpg`} alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

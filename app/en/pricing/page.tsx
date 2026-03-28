@@ -1,4 +1,5 @@
 'use client'
+import basePath from '@/lib/basePath'
 
 import { useState, useRef } from 'react'
 import Link from 'next/link'
@@ -117,7 +118,7 @@ export default function Pricing() {
             <div className="w-full lg:w-1/2 animate-slide-right">
               <div className="relative float-card">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-30"></div>
-                <img src="/smart-hotline-last/images/pricing-hero.webp" alt="Smart Hotline Pricing" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
+                <img src={`${basePath}/images/pricing-hero.webp`} alt="Smart Hotline Pricing" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'450px', objectFit:'cover'}}/>
               </div>
             </div>
           </div>

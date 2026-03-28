@@ -1,2 +1,2 @@
-const basePath = process.env.NODE_ENV === 'production' ? '/smart-hotline-last' : ''
+import { basePath } from './siteConfig'
 export default basePath

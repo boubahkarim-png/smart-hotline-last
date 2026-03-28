@@ -1,3 +1,4 @@
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { StarIcon } from '@/components/Icons'
 export const metadata = { title: "About Us | Smart Hotline Agency" }
@@ -15,7 +16,7 @@ export default function About() {
               <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Contact Us</Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/about-hero.jpg" alt="Smart Hotline Team" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/about-hero.jpg`} alt="Smart Hotline Team" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

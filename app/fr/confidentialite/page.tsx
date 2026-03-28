@@ -1,3 +1,4 @@
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 
 export const metadata = { title: "Politique de Confidentialité | Smart Hotline Agency" }
@@ -13,7 +14,7 @@ export default function Confidentialite() {
 <p className="text-slate-600 text-lg mb-6">Protection et gestion de vos données personnelles</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src="/smart-hotline-last/images/main-hero.jpg" alt="Politique de Confidentialité" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/main-hero.jpg`} alt="Politique de Confidentialité" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
