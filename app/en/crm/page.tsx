@@ -22,11 +22,11 @@ const STEPS = [
 ]
 
 const TESTIMONIALS = [
-  {q: "Before, our leads were in 3 different Excel files. Now everything is in one place. We don't lose anything anymore.", name: 'Marie-Claire Beaumont', role: 'Sales Director, Solutions Pro QC', av: 'MB'},
-  {q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy for $500 with emails that no longer existed.", name: 'François Gagnon', role: 'Founder, InnoTech Montreal', av: 'FG'},
-  {q: "We doubled our conversion rate in 4 months. CRM + outbound calls makes a huge difference.", name: 'Isabelle Tremblay', role: 'Sales Manager, Groupe Nordik', av: 'IT'},
-  {q: "The training took 2 hours. Next day, we were operational. It's really not complicated like they said.", name: 'Michael Richard', role: 'CEO, Richard & Sons Construction', av: 'MR'},
-  ]
+{q: "Before, our leads were in 3 different Excel files. Now everything is in one place. We don't lose anything anymore.", name: 'Marie-Claire B.', role: 'Sales Director', av: 'MB'},
+{q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy with emails that no longer existed.", name: 'François G.', role: 'Founder', av: 'FG'},
+{q: "We doubled our conversion rate in 4 months. CRM + outbound calls makes a huge difference.", name: 'Isabelle T.', role: 'Sales Manager', av: 'IT'},
+{q: "The training took 2 hours. Next day, we were operational. It's really not complicated.", name: 'Michael R.', role: 'CEO', av: 'MR'},
+]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -150,7 +150,7 @@ export default function Page() {
               <p className="text-slate-600 text-lg mb-6">We don't just sell you software. We help you structure your sales process from A to Z.</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Training included — no endless learning curves</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>French-speaking support based in Quebec</li>
+                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Dedicated support — fast responses</li>
                 <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Automatic updates, no hidden fees</li>
                 <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Integrated with our outbound calling services</li>
               </ul>

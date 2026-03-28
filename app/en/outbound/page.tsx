@@ -168,7 +168,7 @@ export default function Page() {
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">Our agents are trained to represent your business as if it were their own. Guaranteed results or we adjust.</p>
               <ul className="space-y-4 mb-8">
                 {[
-                  'French-speaking agents from Quebec and France',
+                  'Experienced bilingual agents',
                   'Daily reports with detailed KPIs',
                   'SME pricing — 40-60% cheaper than an employee',
                   'Cancel anytime — no long contracts',

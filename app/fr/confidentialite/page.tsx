@@ -35,7 +35,7 @@ export default function Confidentialite() {
             <p>Nous utilisons des mesures de sécurité conformes aux normes de l&apos;industrie pour protéger vos informations personnelles contre tout accès non autorisé.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">4. Vos droits</h2>
-            <p>Conformément au RGPD et à la Loi 25 (Québec), vous avez le droit d&apos;accéder, corriger ou supprimer vos données personnelles. Contactez-nous à direction@smart-hotline.com.</p>
+            <p>Conformément au RGPD et à la Loi 25, vous avez le droit d&apos;accéder, corriger ou supprimer vos données personnelles. Contactez-nous à direction@smart-hotline.com.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">5. Conservation</h2>
             <p>Vos données sont conservées pendant la durée de notre relation contractuelle, puis archivées conformément aux obligations légales avant suppression définitive.</p>

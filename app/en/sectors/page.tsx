@@ -73,18 +73,18 @@ const SECTOR_ARTICLES: Article[] = [
     date: "March 15, 2026",
     cat: "Restaurants",
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-    excerpt: "Discover how 3 Quebec restaurants doubled their reservations through professional phone management.",
+    excerpt: "Discover how 3  restaurants doubled their reservations through professional phone management.",
     author: "Marie-Chantal Dubois",
     readTime: "6 min",
-    metaDesc: "Restaurant phone outsourcing Quebec: double your reservations, reduce no-shows, capture every call. Case studies and ROI.",
-    keywords: ["restaurant outsourcing", "reservation Quebec", "restaurant customer service", "call center restaurant", "SME restaurant"],
+    metaDesc: "Restaurant phone outsourcing : double your reservations, reduce no-shows, capture every call. Case studies and ROI.",
+    keywords: ["restaurant outsourcing", "reservation ", "restaurant customer service", "call center restaurant", "SME restaurant"],
     content: `<p>Restaurants operate on thin margins with long days. The last thing a restaurateur wants is to answer the phone during service.</p>
 <h2>The Problem We Don't Want to Admit</h2>
 <p>« My servers answer when they can », Pierre, owner of a Plateau bistro, told me. Result: 20% of reservations didn't show up.</p>
 <h2>What Outsourcing Brings</h2>
 <ul><li>Zero missed calls</li><li>Automatic confirmation</li><li>24/7 availability</li><li>Native French service</li></ul>
 <h2>Concrete ROI</h2>
-<p>For a 50-100 cover restaurant: Service cost: $400-800/month. Recovered revenue: $2000+/month. Average ROI: 300% from month one.</p>`
+<p>For a 50-100 cover restaurant: Service cost: -800/month. Recovered revenue: +/month. Average ROI: 300% from month one.</p>`
   },
   {
     slug: 'sector-healthcare-clinics-telephony',
@@ -95,8 +95,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How medical clinics reduce missed calls and improve patient satisfaction.",
     author: "Dr. Jean-Michel Leclerc",
     readTime: "7 min",
-    metaDesc: "Medical clinic phone outsourcing Quebec: 24/7 appointment scheduling, patient reminders, reducing no-shows.",
-    keywords: ["healthcare outsourcing", "medical appointments", "Quebec clinic", "medical telephony", "patient reminders"],
+    metaDesc: "Medical clinic phone outsourcing : 24/7 appointment scheduling, patient reminders, reducing no-shows.",
+    keywords: ["healthcare outsourcing", "medical appointments", " clinic", "medical telephony", "patient reminders"],
     content: `<p>A medical clinic receives an average of 50-100 calls per day.</p>
 <h2>Specific Challenges</h2>
 <ul><li>Privacy - Law 25 compliance required</li><li>Emergencies - Critical call triage</li><li>Availability - Patients calling after hours</li></ul>
@@ -112,8 +112,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How real estate agents double their conversions through professional phone qualification.",
     author: "Francois Martel",
     readTime: "5 min",
-    metaDesc: "Real estate phone outsourcing Quebec: lead qualification, viewing appointments, buyer follow-up.",
-    keywords: ["real estate outsourcing", "lead qualification Quebec", "real estate broker", "viewing appointments"],
+    metaDesc: "Real estate phone outsourcing : lead qualification, viewing appointments, buyer follow-up.",
+    keywords: ["real estate outsourcing", "lead qualification ", "real estate broker", "viewing appointments"],
     content: `<p>In real estate, every call is a potential sale.</p>
 <h2>Our BANQ Method</h2>
 <ul><li>Budget - Pre-approval verification</li><li>Authority - Decision maker identification</li><li>Need - Understanding real needs</li><li>Qualification - Lead scoring</li></ul>
@@ -129,8 +129,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How dealerships improve customer satisfaction and workshop appointments.",
     author: "Sophie Bertrand",
     readTime: "5 min",
-    metaDesc: "Automotive dealership phone outsourcing Quebec: workshop appointments, after-sales service, customer follow-up.",
-    keywords: ["automotive outsourcing", "Quebec dealership", "after-sales service", "workshop appointments"],
+    metaDesc: "Automotive dealership phone outsourcing : workshop appointments, after-sales service, customer follow-up.",
+    keywords: ["automotive outsourcing", " dealership", "after-sales service", "workshop appointments"],
     content: `<p>A dealership loses an average of 25% of its customers each year. The main reason? Poor after-sales service.</p>
 <h2>Measured Results</h2>
 <ul><li>Customer retention: +18%</li><li>Workshop appointments: +40%</li><li>After-sales satisfaction: 68% to 89%</li></ul>`
@@ -144,8 +144,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How law firms manage calls with discretion and efficiency.",
     author: "Claire Dupont",
     readTime: "6 min",
-    metaDesc: "Law firm phone outsourcing Quebec: call filtering, appointment scheduling, legal emergency handling.",
-    keywords: ["legal outsourcing", "Quebec law firm", "notary telephony", "call filtering"],
+    metaDesc: "Law firm phone outsourcing : call filtering, appointment scheduling, legal emergency handling.",
+    keywords: ["legal outsourcing", " law firm", "notary telephony", "call filtering"],
     content: `<p>In the legal field, every call can be a new case.</p>
 <h2>Specific Protocols</h2>
 <ul><li>Emergency identification</li><li>Immediate transfer to lawyer</li><li>Guaranteed confidentiality</li></ul>`
@@ -159,8 +159,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How construction contractors stay in touch with clients and subcontractors.",
     author: "Rejean Lavoie",
     readTime: "5 min",
-    metaDesc: "Construction BTP phone outsourcing Quebec: quote management, site monitoring, subcontractor coordination.",
-    keywords: ["BTP outsourcing", "Quebec construction", "site quotes", "subcontractor follow-up"],
+    metaDesc: "Construction BTP phone outsourcing : quote management, site monitoring, subcontractor coordination.",
+    keywords: ["BTP outsourcing", " construction", "site quotes", "subcontractor follow-up"],
     content: `<p>On a job site, you can't answer the phone. But a contractor who doesn't answer loses contracts.</p>
 <h2>Adapted Solution</h2>
 <p>Our agents are trained in construction terminology. They understand the difference between an emergency and a standard question.</p>`
@@ -174,8 +174,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How startups and SaaS reduce support tickets by 60%.",
     author: "Jean-Michel Leclerc",
     readTime: "6 min",
-    metaDesc: "SaaS technical support outsourcing Quebec: level 1 support, client onboarding, ticket reduction.",
-    keywords: ["tech outsourcing", "SaaS support", "Quebec level 1 support", "client onboarding"],
+    metaDesc: "SaaS technical support outsourcing : level 1 support, client onboarding, ticket reduction.",
+    keywords: ["tech outsourcing", "SaaS support", " level 1 support", "client onboarding"],
     content: `<p>Your developers spend 30% of their time answering simple support questions.</p>
 <h2>Results</h2>
 <ul><li>Level 1 resolved tickets: 65%</li><li>Developer time recovered: 12h/week</li><li>Support satisfaction: +35%</li></ul>`
@@ -189,7 +189,7 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How online stores turn complaints into loyal customers.",
     author: "Marie-Chantal Dubois",
     readTime: "5 min",
-    metaDesc: "E-commerce customer service outsourcing Quebec: returns, order tracking, complaints handling.",
+    metaDesc: "E-commerce customer service outsourcing : returns, order tracking, complaints handling.",
     keywords: ["e-commerce outsourcing", "online store customer service", "product returns", "customer loyalty"],
     content: `<p>In e-commerce, an unhappy customer shares their experience with 15 people.</p>
 <h2>Our CS KPIs</h2>
@@ -204,8 +204,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How schools and training centers manage enrollments.",
     author: "Sophie Bertrand",
     readTime: "5 min",
-    metaDesc: "Education phone outsourcing Quebec: enrollments, parent questions, student follow-up.",
-    keywords: ["education outsourcing", "Quebec school enrollments", "parent follow-up", "training center"],
+    metaDesc: "Education phone outsourcing : enrollments, parent questions, student follow-up.",
+    keywords: ["education outsourcing", " school enrollments", "parent follow-up", "training center"],
     content: `<p>Enrollment periods are hectic for schools.</p>
 <h2>Solution</h2>
 <p>A dedicated service during peak periods. Agents trained on your programs, fees, and enrollment processes.</p>`
@@ -219,8 +219,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "How hotels capture every reservation, even after the front desk closes.",
     author: "Francois Martel",
     readTime: "5 min",
-    metaDesc: "Hospitality phone outsourcing Quebec: 24/7 reservations, concierge, traveler support.",
-    keywords: ["hospitality outsourcing", "Quebec hotel reservations", "concierge", "traveler support"],
+    metaDesc: "Hospitality phone outsourcing : 24/7 reservations, concierge, traveler support.",
+    keywords: ["hospitality outsourcing", " hotel reservations", "concierge", "traveler support"],
     content: `<p>A hotel that doesn't answer at 10pm loses reservations.</p>
 <h2>24/7 Service</h2>
 <p>Our agents answer around the clock, in French and English. Direct integration with your PMS.</p>`
@@ -232,12 +232,12 @@ function CTAButtons({ slug }: { slug: string }) {
   const showPhone = !loading && geo.showPhone
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-6">
-      <Link href={`/en/contact?service=${slug}`}
+      <Link href={`/en/contact?service={slug}`}
         className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-indigo-700 text-center shadow-lg">
         Free Demo
       </Link>
       {showPhone ? (
-        <a href={`tel:${CONTACT.phone}`}
+        <a href={`tel:{CONTACT.phone}`}
           className="border-2 border-indigo-600 text-indigo-600 font-bold px-8 py-4 rounded-2xl hover:bg-indigo-600 hover:text-white transition-all text-center">
           {CONTACT.phoneDisplay}
         </a>
@@ -277,7 +277,7 @@ export default function Sectors() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.jpg`} alt="Diversity of sectors served"
+                <img src={`{basePath}/images/secteurs-hero.jpg`} alt="Diversity of sectors served"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

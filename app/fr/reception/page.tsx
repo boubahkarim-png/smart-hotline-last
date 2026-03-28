@@ -7,16 +7,16 @@ import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon }
 
 const FEATURES = [
   {icon: PhoneIcon, title: 'Réception 24/7', desc: 'Pas de répondeur. Un vrai conseiller répond à chaque appel, même à 3h du matin.'},
-  {icon: ClockIcon, title: 'Moins de 3 sonneries', desc: 'Vos clients n\'attendent pas. On décroche vite, point final.'},
+  {icon: ClockIcon, title: 'Moins de 3 sonneries', desc: "Vos clients n'attendent pas. On décroche vite, point final."},
   {icon: ShieldCheckIcon, title: 'Données sécurisées', desc: 'Tous les messages sont transmis en temps réel. Rien ne se perd.'},
   {icon: UsersIcon, title: 'Équipe dédiée', desc: 'Les mêmes conseillers répondent pour vous. Ils connaissent votre entreprise.'},
 ]
 
 const TESTIMONIALS = [
-  {q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine parce que j'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre Lacroix', role: 'Propriétaire, Bistro du Vieux-Montréal', av: 'PL'},
-  {q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie Mercier', role: 'Directrice, Clinique Médicale Plateau', av: 'SM'},
-  {q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André Dubé', role: 'Gérant, Magasin Électronique QC', av: 'MD'},
-  {q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business. Nos clients sont contents, c'est tout ce qui compte.", name: 'Nathalie Tremblay', role: 'Directrice, Cabinet Juridique Tremblay & Associés', av: 'NT'},
+{q: "Avant, je perdais facilement 10-15 clients par semaine parce que j'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre L.', role: 'Propriétaire, Restaurant', av: 'PL'},
+{q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie M.', role: 'Directrice, Clinique Médicale', av: 'SM'},
+{q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André D.', role: 'Gérant, Commerce', av: 'MD'},
+{q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business. Nos clients sont contents, c'est tout ce qui compte.", name: 'Nathalie T.', role: 'Directrice, Cabinet Juridique', av: 'NT'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -167,12 +167,12 @@ export default function Page() {
               <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Pourquoi nous faire confiance?</h2>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">Nos conseillers sont formés pour représenter votre entreprise comme si c'était la leur. Pas de scripts robots — de vraies conversations.</p>
               <ul className="space-y-4 mb-8">
-                {[
-                  'Conseillers francophones du Québec et de France',
-                  'Messages transmis par SMS, email, ou appel',
-                  'Prix PME — 40-60% moins cher qu\'un employé',
-                  'Annulez quand vous voulez — pas de contrat long',
-                ].map((item, i) => (
+{[
+'Conseillers bilingues expérimentés',
+'Messages transmis par SMS, email, ou appel',
+"Prix PME — 40-60% moins cher qu'un employé",
+'Annulez quand vous voulez — pas de contrat long',
+].map((item, i) => (
                   <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
                     <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
                       <CheckIcon className="w-5 h-5"/>

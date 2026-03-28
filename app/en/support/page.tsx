@@ -13,10 +13,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "We receive product questions all day long. Before, it was chaos in our emails. Now, every request is properly tracked.", name: 'Catherine Rouleau', role: 'Customer Service Manager, Online Store QC', av: 'CR'},
-  {q: "They fixed a 3-week problem in 48 hours. The fact that they speak proper French — that really helps with our clients.", name: 'Jean-François Poissant', role: 'Director, Financial Services MTL', av: 'JP'},
-  {q: "Our customers are more satisfied. We see it in the feedback. Support in French makes all the difference.", name: 'Martine Lévesque', role: 'Founder, Tech Support Quebec', av: 'ML'},
-  {q: "We reduced our response time from 4 days to 2 hours. Our clients can't believe it. The team is super professional.", name: 'Sylvie Bouchard', role: 'Director, Bouchard Software Inc.', av: 'SB'},
+{q: "We receive product questions all day long. Before, it was chaos in our emails. Now, every request is properly tracked.", name: 'Catherine R.', role: 'Customer Service Manager', av: 'CR'},
+{q: "They fixed a 3-week problem in 48 hours. Professional and efficient — that really helps with our clients.", name: 'Jean-François P.', role: 'Director, Financial Services', av: 'JP'},
+{q: "Our customers are more satisfied. We see it in the feedback. Great support makes all the difference.", name: 'Martine L.', role: 'Founder', av: 'ML'},
+{q: "We reduced our response time from 4 days to 2 hours. Our clients can't believe it. The team is super professional.", name: 'Sylvie B.', role: 'Director', av: 'SB'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {

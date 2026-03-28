@@ -76,15 +76,15 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Decouvrez comment 3 restaurants quebecois ont double leurs reservations grace a une gestion telephonique professionnelle.",
     author: "Marie-Chantal Dubois",
     readTime: "6 min",
-    metaDesc: "Externalisation telephonique restauration Quebec: doublez vos reservations, reduisez les no-shows et captez chaque appel. Etudes de cas et ROI.",
-    keywords: ["externalisation restauration", "reservation restaurant Quebec", "service client restaurant", "centre appels restauration", "PME restauration"],
+    metaDesc: "Externalisation telephonique restauration : doublez vos reservations, reduisez les no-shows et captez chaque appel. Etudes de cas et ROI.",
+    keywords: ["externalisation restauration", "reservation restaurant ", "service client restaurant", "centre appels restauration", "PME restauration"],
     content: `<p>La restauration, c'est des marges fines et des journees longues. Le dernier truc qu'un restaurateur veut faire, c'est decrocher le telephone pendant le service.</p>
 <h2>Le probleme qu'on ne veut pas admettre</h2>
 <p>« J'ai mes serveurs qui repondent quand ils peuvent », me disait Pierre, proprietaire d'un bistro du Plateau. Resultat : 20% des reservations ne se presentaient pas.</p>
 <h2>Ce que l'externalisation apporte</h2>
 <ul><li>Zero appel manque</li><li>Confirmation automatique</li><li>Disponibilite 24/7</li><li>Service en francais natif</li></ul>
 <h2>ROI concret</h2>
-<p>Pour un restaurant de 50-100 couverts : Cout du service : 400-800$/mois. Revenus recuperes : 2000$+/mois. ROI moyen : 300% des le premier mois.</p>`
+<p>Pour un restaurant de 50-100 couverts : Cout du service : 400-800/mois. Revenus recuperes : 2000+/mois. ROI moyen : 300% des le premier mois.</p>`
   },
   {
     slug: 'secteur-sante-cliniques-telephonie',
@@ -95,8 +95,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les cliniques medicales reduisent les appels manques et ameliorent la satisfaction patient.",
     author: "Dr. Jean-Michel Leclerc",
     readTime: "7 min",
-    metaDesc: "Externalisation telephonique clinique medicale Quebec: prise de rendez-vous 24/7, rappels patients, reduction des no-shows.",
-    keywords: ["externalisation sante", "prise rendez-vous medical", "clinique Quebec", "telephonie medicale", "rappel patient"],
+    metaDesc: "Externalisation telephonique clinique medicale : prise de rendez-vous 24/7, rappels patients, reduction des no-shows.",
+    keywords: ["externalisation sante", "prise rendez-vous medical", "clinique ", "telephonie medicale", "rappel patient"],
     content: `<p>Une clinique medicale recoit en moyenne 50-100 appels par jour.</p>
 <h2>Les defis specifiques</h2>
 <ul><li>Confidentialite - Conformite Loi 25</li><li>Urgences - Triage des appels critiques</li><li>Disponibilite - Patients apres les heures</li></ul>
@@ -112,8 +112,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les agents immobiliers doublent leurs conversions grace a une qualification telephonique professionnelle.",
     author: "Francois Martel",
     readTime: "5 min",
-    metaDesc: "Externalisation telephonique immobilier Quebec: qualification leads, prise de rendez-vous visite, suivi acheteurs.",
-    keywords: ["externalisation immobilier", "qualification leads Quebec", "courtier immobilier", "prise rendez-vous visite"],
+    metaDesc: "Externalisation telephonique immobilier : qualification leads, prise de rendez-vous visite, suivi acheteurs.",
+    keywords: ["externalisation immobilier", "qualification leads ", "courtier immobilier", "prise rendez-vous visite"],
     content: `<p>Dans l'immobilier, chaque appel est une vente potentielle.</p>
 <h2>Notre methode BANQ</h2>
 <ul><li>Budget - Verification du pre-approve</li><li>Autorite - Identification du decideur</li><li>Need - Comprehension du besoin reel</li><li>Qualification - Scoring du lead</li></ul>
@@ -129,8 +129,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les concessionnaires ameliorent la satisfaction client et les rendez-vous atelier.",
     author: "Sophie Bertrand",
     readTime: "5 min",
-    metaDesc: "Externalisation telephonique concessionnaire automobile Quebec: prise de rendez-vous atelier, SAV, relance clients.",
-    keywords: ["externalisation automobile", "concessionnaire Quebec", "service apres-vente auto", "rendez-vous atelier"],
+    metaDesc: "Externalisation telephonique concessionnaire automobile : prise de rendez-vous atelier, SAV, relance clients.",
+    keywords: ["externalisation automobile", "concessionnaire ", "service apres-vente auto", "rendez-vous atelier"],
     content: `<p>Un concessionnaire perd en moyenne 25% de ses clients chaque annee. La principale raison ? Un service apres-vente defaillant.</p>
 <h2>Resultats mesures</h2>
 <ul><li>Taux de retention client : +18%</li><li>Rendez-vous atelier : +40%</li><li>Satisfaction SAV : 68% a 89%</li></ul>`
@@ -144,8 +144,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les cabinets d'avocats gerent les appels avec discretion et efficacite.",
     author: "Claire Dupont",
     readTime: "6 min",
-    metaDesc: "Externalisation telephonique cabinet avocat Quebec: filtrage d'appels, prise de rendez-vous, gestion urgences juridiques.",
-    keywords: ["externalisation juridique", "cabinet avocat Quebec", "telephonie notaire", "filtrage appels"],
+    metaDesc: "Externalisation telephonique cabinet avocat : filtrage d'appels, prise de rendez-vous, gestion urgences juridiques.",
+    keywords: ["externalisation juridique", "cabinet avocat ", "telephonie notaire", "filtrage appels"],
     content: `<p>Dans le domaine juridique, chaque appel peut etre un nouveau dossier.</p>
 <h2>Protocoles specifiques</h2>
 <ul><li>Identification de l'urgence</li><li>Transfert immediat vers l'avocat</li><li>Confidentialite garantie</li></ul>`
@@ -159,8 +159,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les entrepreneurs en construction gardent le contact avec clients et sous-traitants.",
     author: "Rejean Lavoie",
     readTime: "5 min",
-    metaDesc: "Externalisation telephonique construction BTP Quebec: gestion devis, suivi chantiers, coordination sous-traitants.",
-    keywords: ["externalisation BTP", "construction Quebec", "devis chantier", "suivi sous-traitants"],
+    metaDesc: "Externalisation telephonique construction BTP : gestion devis, suivi chantiers, coordination sous-traitants.",
+    keywords: ["externalisation BTP", "construction ", "devis chantier", "suivi sous-traitants"],
     content: `<p>Sur un chantier, on ne peut pas repondre au telephone. Mais un entrepreneur qui ne repond pas, c'est un contrat perdu.</p>
 <h2>Solution adaptee</h2>
 <p>Nos agents sont formes a la terminologie du batiment. Ils comprennent la difference entre une urgence et une question standard.</p>`
@@ -174,8 +174,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les startups et SaaS reduisent les tickets de support de 60%.",
     author: "Jean-Michel Leclerc",
     readTime: "6 min",
-    metaDesc: "Externalisation support technique SaaS Quebec: support niveau 1, onboarding clients, reduction tickets.",
-    keywords: ["externalisation tech", "support SaaS", "support niveau 1 Quebec", "onboarding clients"],
+    metaDesc: "Externalisation support technique SaaS : support niveau 1, onboarding clients, reduction tickets.",
+    keywords: ["externalisation tech", "support SaaS", "support niveau 1 ", "onboarding clients"],
     content: `<p>Vos developpeurs passent 30% de leur temps a repondre a des questions simples.</p>
 <h2>Resultats</h2>
 <ul><li>Tickets resolus niveau 1 : 65%</li><li>Temps developpeurs recupere : 12h/semaine</li><li>Satisfaction support : +35%</li></ul>`
@@ -189,7 +189,7 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les boutiques en ligne transforment les reclamations en clients fideles.",
     author: "Marie-Chantal Dubois",
     readTime: "5 min",
-    metaDesc: "Externalisation SAV e-commerce Quebec: retours, suivi commandes, reclamations.",
+    metaDesc: "Externalisation SAV e-commerce : retours, suivi commandes, reclamations.",
     keywords: ["externalisation e-commerce", "SAV boutique en ligne", "retours produits", "fidelisation client"],
     content: `<p>En e-commerce, un client mecontent partage son experience avec 15 personnes.</p>
 <h2>Nos KPIs SAV</h2>
@@ -204,8 +204,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les ecoles et centres de formation gerent les inscriptions.",
     author: "Sophie Bertrand",
     readTime: "5 min",
-    metaDesc: "Externalisation telephonique education Quebec: inscriptions, questions parents, suivi eleves.",
-    keywords: ["externalisation education", "inscriptions ecole Quebec", "suivi parents", "centre formation"],
+    metaDesc: "Externalisation telephonique education : inscriptions, questions parents, suivi eleves.",
+    keywords: ["externalisation education", "inscriptions ecole ", "suivi parents", "centre formation"],
     content: `<p>Les periodes d'inscriptions sont infernales pour les ecoles.</p>
 <h2>Solution</h2>
 <p>Un service dedie pendant les periodes de pointe. Agents formes sur vos programmes, tarifs et processus.</p>`
@@ -219,8 +219,8 @@ const SECTOR_ARTICLES: Article[] = [
     excerpt: "Comment les hotels captent chaque reservation, meme apres la reception fermee.",
     author: "Francois Martel",
     readTime: "5 min",
-    metaDesc: "Externalisation telephonique hotellerie Quebec: reservations 24/7, conciergerie, support voyageurs.",
-    keywords: ["externalisation hotellerie", "reservation hotel Quebec", "conciergerie", "support voyageurs"],
+    metaDesc: "Externalisation telephonique hotellerie : reservations 24/7, conciergerie, support voyageurs.",
+    keywords: ["externalisation hotellerie", "reservation hotel ", "conciergerie", "support voyageurs"],
     content: `<p>Un hotel qui ne repond pas a 22h perd des reservations.</p>
 <h2>Service 24/7</h2>
 <p>Nos agents repondent a toute heure, en francais et en anglais. Integration directe avec votre PMS.</p>`
@@ -232,12 +232,12 @@ function CTAButtons({ slug }: { slug: string }) {
   const showPhone = !loading && geo.showPhone
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-6">
-      <Link href={`/fr/contact?service=${slug}`}
+      <Link href={`/fr/contact?service={slug}`}
         className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-indigo-700 text-center shadow-lg">
         Demo Sans Engagement
       </Link>
       {showPhone ? (
-        <a href={`tel:${CONTACT.phone}`}
+        <a href={`tel:{CONTACT.phone}`}
           className="border-2 border-indigo-600 text-indigo-600 font-bold px-8 py-4 rounded-2xl hover:bg-indigo-600 hover:text-white transition-all text-center">
           {CONTACT.phoneDisplay}
         </a>
@@ -277,7 +277,7 @@ export default function Secteurs() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.jpg`} alt="Diversite des secteurs desservis"
+                <img src={`{basePath}/images/secteurs-hero.jpg`} alt="Diversite des secteurs desservis"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

@@ -28,7 +28,7 @@ export default function MentionsLegales() {
             <h2 className="text-2xl font-bold text-gray-900">1. Éditeur du site</h2>
             <p><strong>Smart Hotline Agency</strong></p>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Siège social: Montréal, Québec, Canada</li>
+              <li>Siège social: Canada</li>
               <li>Email: direction@smart-hotline.com</li>
               <li>Téléphone: +1 514 819-0559</li>
               <li>Directeur de la publication: Karim Boubah</li>
@@ -55,7 +55,7 @@ export default function MentionsLegales() {
             <p>Le site peut utiliser des cookies pour améliorer l&apos;expérience utilisateur et mesurer l&apos;audience. Vous pouvez configurer votre navigateur pour refuser les cookies. Pour plus d&apos;informations, consultez notre <Link href="/fr/confidentialite" className="text-blue-700 hover:underline">Politique de Confidentialité</Link>.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">6. Droit applicable</h2>
-            <p>Les présentes mentions légales sont régies par le droit canadien et québécois. En cas de litige, les tribunaux de Montréal, Québec, seront seuls compétents.</p>
+            <p>Les présentes mentions légales sont régies par le droit applicable. En cas de litige, les tribunaux compétents, seront seuls compétents.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">7. Contact</h2>
             <p>Pour toute question concernant ces mentions légales:</p>

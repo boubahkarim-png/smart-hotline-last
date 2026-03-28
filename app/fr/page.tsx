@@ -24,7 +24,7 @@ const MOVING_MESSAGES = [
 "98% de satisfaction client",
 "Réponse en moins de 3 sonneries",
 "Disponible 24/7",
-"Agents francophones natifs",
+"Équipe bilingue",
 "Setup en 48h",
 "Sans engagement longue durée",
 "CRM inclus",
@@ -33,10 +33,10 @@ const MOVING_MESSAGES = [
 ]
 
 const TESTIMONIALS_DATA = [
-{ q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", av: "PL" },
-{ q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", av: "SM" },
-{ q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", av: "MD" },
-{ q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", av: "NT" },
+{ q: "Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre L.", role: "Propriétaire, Restaurant", av: "PL" },
+{ q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie M.", role: "Directrice, Clinique Médicale", av: "SM" },
+{ q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André D.", role: "Gérant, Commerce", av: "MD" },
+{ q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie T.", role: "Directrice, Cabinet Juridique", av: "NT" },
 ]
 
 function CTAButtons() {
@@ -173,10 +173,10 @@ Sophie, l'Agente IA<br/>
 <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Qui Parle comme Nous</span>
 </h2>
 <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-Elle répond en moins de 2 secondes. Avec l'accent de votre région — au choix. Et ça coûte une fraction d'un salaire.
+Elle répond en moins de 2 secondes. Naturelle et efficace. Et ça coûte une fraction d&apos;un salaire.
 </p>
 <ul className="space-y-3 mb-8">
-{['Réponse en moins de 2 secondes', 'Accents adaptés à votre région', 'Transfert vers un humain si compliqué', 'Coût: ~30% d\'un salaire', 'Dispo 24/7'].map((f, i) => (
+{['Réponse en moins de 2 secondes', 'Transfert vers un humain si compliqué', 'Coût: ~30% d\'un salaire', 'Dispo 24/7'].map((f, i) => (
 <li key={i} className="flex items-center gap-3 text-slate-700">
 <span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
 <CheckIcon className="w-4 h-4" />

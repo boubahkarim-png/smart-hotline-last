@@ -13,10 +13,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "I have a restaurant on the Main. Before, I was easily losing 10-15 clients per week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre Lacroix', role: 'Owner, Bistro du Vieux-Montréal', av: 'PL'},
-  {q: "It's not just reception. They take reservations, answer questions, and text me emergencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie Mercier', role: 'Director, Clinique Médicale Plateau', av: 'SM'},
-  {q: "During the holiday rush, they handled over 200 calls per day. My team was calm, clients happy. Truly.", name: 'Marc-André Dubé', role: 'Manager, Électronique QC Store', av: 'MD'},
-  {q: "We tried 3 other services before. This is the only one where the agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie Tremblay', role: 'Director, Cabinet Juridique Tremblay & Associés', av: 'NT'},
+{q: "Before, I was easily losing 10-15 clients per week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre L.', role: 'Owner, Restaurant', av: 'PL'},
+{q: "It's not just reception. They take reservations, answer questions, and text me emergencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie M.', role: 'Director, Medical Clinic', av: 'SM'},
+{q: "During the holiday rush, they handled over 200 calls per day. My team was calm, clients happy. Truly.", name: 'Marc-André D.', role: 'Manager, Retail Store', av: 'MD'},
+{q: "We tried 3 other services before. This is the only one where the agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie T.', role: 'Director, Law Firm', av: 'NT'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -169,7 +169,7 @@ export default function Page() {
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">Our agents are trained to represent your business as if it were their own. No robotic scripts — real conversations.</p>
               <ul className="space-y-4 mb-8">
               {[
-                'French-speaking agents from Quebec and France',
+                'Experienced bilingual agents',
                 'Messages sent by SMS, email, or call',
                 'SME pricing — 40-60% cheaper than an employee',
                 'Cancel anytime — no long contracts',

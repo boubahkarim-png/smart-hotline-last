@@ -35,7 +35,7 @@ export default function Privacy() {
             <p>We use industry-standard security measures to protect your personal information from unauthorized access.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">4. Your Rights</h2>
-            <p>Under GDPR and Law 25 (Quebec), you have the right to access, correct or delete your personal data. Contact us at direction@smart-hotline.com.</p>
+            <p>Under GDPR and applicable privacy laws, you have the right to access, correct or delete your personal data. Contact us at direction@smart-hotline.com.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">5. Retention</h2>
             <p>Your data is retained for the duration of our contractual relationship, then archived according to legal requirements before permanent deletion.</p>

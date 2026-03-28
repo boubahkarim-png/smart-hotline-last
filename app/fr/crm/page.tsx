@@ -13,10 +13,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-{q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire Beaumont', role: 'Directrice commerciale, Solutions Pro QC', av: 'MB'},
-{q: "Les listes B2B qu'ils nous ont fournies? Propres, à jour. Pas comme celles qu'on achetait avant à 500$.", name: 'François Gagnon', role: 'Fondateur, InnoTech Montreal', av: 'FG'},
-{q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle Tremblay', role: 'Responsable ventes, Groupe Nordik', av: 'IT'},
-{q: "La formation a pris 2 heures. Le lendemain, on était opérationnels. Vraiment, c'est pas compliqué.", name: 'Michel Richard', role: 'PDG, Richard & Fils Construction', av: 'MR'},
+{q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire B.', role: 'Directrice commerciale', av: 'MB'},
+{q: "Les listes B2B qu'ils nous ont fournies? Propres, à jour. Pas comme celles qu'on achetait avant.", name: 'François G.', role: 'Fondateur', av: 'FG'},
+{q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle T.', role: 'Responsable ventes', av: 'IT'},
+{q: "La formation a pris 2 heures. Le lendemain, on était opérationnels. Vraiment, c'est pas compliqué.", name: 'Michel R.', role: 'PDG', av: 'MR'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -169,9 +169,9 @@ CRM Intégré &<br/>
 <ul className="space-y-4 mb-8">
 {[
 'Formation incluse — pas de courbes d\'apprentissage interminables',
-'Support francophone basé au Québec',
+'Support dédié — réponses rapides',
 'Mises à jour automatiques, sans frais cachés',
-'Intégré à nos services d\'appels sortants',
+"Intégré à nos services d'appels sortants",
 ].map((item, i) => (
 <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
 <span className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
@@ -237,7 +237,7 @@ Voir tous les tarifs
 </div>
 <div className="max-w-4xl mx-auto px-4 text-center text-white relative">
 <h2 className="text-4xl lg:text-5xl font-black mb-6">Prêt à centraliser vos leads?</h2>
-<p className="text-orange-200 text-xl mb-12 max-w-2xl mx-auto">CRM + listes qualifiées + support francophone. Tout ce qu'il vous faut pour vendre plus.</p>
+<p className="text-orange-200 text-xl mb-12 max-w-2xl mx-auto">CRM + listes qualifiées + support dédié. Tout ce qu'il vous faut pour vendre plus.</p>
 <CTAButtons slug="crm"/>
 <p className="text-orange-300 mt-8 text-lg">
 <Link href="/fr/tarifs" className="underline hover:text-white transition-colors">Voir les tarifs</Link>

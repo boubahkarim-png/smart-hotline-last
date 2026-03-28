@@ -15,13 +15,13 @@ const POSTS: Article[] = [
     author: "Marie-Chantal Dubois",
     readTime: "6 min",
     metaDesc: "Découvrez les 5 raisons stratégiques qui poussent les PME à externaliser leur service client en 2025. Réduction des coûts, flexibilité, expertise et plus encore.",
-    keywords: ["externalisation service client", "PME Québec", "centre d'appels", "réduction coûts", "relation client"],
+    keywords: ["externalisation service client", "PME ", "centre d'appels", "réduction coûts", "relation client"],
     content: `
       <p>On entend souvent parler d'externalisation comme d'une solution pour les grandes entreprises. Pourtant, en 2025, ce sont les PME qui en bénéficient le plus. Pourquoi ? Parce que les ressources sont limitées, mais les attentes des clients, elles, ne le sont pas.</p>
       
       <h2>1. Réduire les coûts sans sacrifier la qualité</h2>
-      <p>C'est simple : embaucher, former et garder une équipe interne coûte cher. Entre les salaires, les avantages sociaux, l'équipement et la gestion, on parle facilement de 45 000$ à 60 000$ par agent par année. Un centre d'appels externe peut réduire ces coûts de 30 à 50%, tout en maintenant — voire en améliorant — la qualité de service.</p>
-      <p>« Au début, j'avais peur qu'on perde le contact avec nos clients », raconte Sophie, propriétaire d'une chaîne de restaurants à Québec. « Mais en fait, nos clients sont mieux servis maintenant. Nos agents dédiés connaissent notre menu par cœur. »</p>
+      <p>C'est simple : embaucher, former et garder une équipe interne coûte cher. Entre les salaires, les avantages sociaux, l'équipement et la gestion, on parle facilement de 45 000 à 60 000 par agent par année. Un centre d'appels externe peut réduire ces coûts de 30 à 50%, tout en maintenant — voire en améliorant — la qualité de service.</p>
+      <p>« Au début, j'avais peur qu'on perde le contact avec nos clients », raconte Sophie, propriétaire d'une chaîne de restaurants à . « Mais en fait, nos clients sont mieux servis maintenant. Nos agents dédiés connaissent notre menu par cœur. »</p>
       
       <h2>2. Une flexibilité que vous ne pouvez pas avoir en interne</h2>
       <p>Votre entreprise connaît des périodes creuses et des pics d'activité ? Bienvenue au club. La différence, c'est qu'avec un partenaire externe, vous payez pour ce que vous utilisez. Besoin de doubler votre capacité pendant les Fêtes ? Possible. Besoin de réduire en juillet quand c'est plus calme ? Tout aussi possible.</p>
@@ -263,15 +263,15 @@ const POSTS: Article[] = [
     author: "Marie-Chantal Dubois",
     readTime: "6 min",
     metaDesc: "Découvrez comment 3 restaurants montréalais ont doublé leurs réservations grâce à un centre d'appels. Témoignages et stratégies applicables.",
-    keywords: ["centre appels restauration", "réservation restaurant", "service client restaurant", "PME restauration Québec"],
+    keywords: ["centre appels restauration", "réservation restaurant", "service client restaurant", "PME restauration "],
     content: `
-      <p>La restauration, c'est des marges fines et des journées longues. Le dernier truc qu'un restaurateur veut faire, c'est décrocher le téléphone pendant le service. Pourtant, chaque appel manqué, c'est potentiellement 150$ de revenu perdu.</p>
+      <p>La restauration, c'est des marges fines et des journées longues. Le dernier truc qu'un restaurateur veut faire, c'est décrocher le téléphone pendant le service. Pourtant, chaque appel manqué, c'est potentiellement 150 de revenu perdu.</p>
       
       <h2>Le problème qu'on ne veut pas admettre</h2>
       <p>« J'ai mes serveurs qui répondent quand ils peuvent », me disait Pierre, propriétaire d'un bistro du Plateau. Problème : ses serveurs étaient débordés, les clients entendaient « allô ? » au milieu du bruit, et les réservations étaient notées sur des bouts de papier qui se perdaient.</p>
-      <p>Résultat : 20% des réservations ne se présentaient pas, et les appels manqués coûtaient environ 2000$ par semaine.</p>
+      <p>Résultat : 20% des réservations ne se présentaient pas, et les appels manqués coûtaient environ 2000 par semaine.</p>
       
-      <h2>Témoignage #1 : Bistro Le Petit Coin (Montréal)</h2>
+      <h2>Témoignage #1 : Bistro Le Petit Coin ()</h2>
       <p><strong>Avant :</strong> 15-20 appels manqués par jour, réservations approximatives, rappels oubliés.</p>
       <p><strong>Solution :</strong> Un numéro dédié, agents formés au menu et aux disponibilités, confirmation automatique par SMS.</p>
       <p><strong>Résultat après 30 jours :</strong></p>
@@ -282,7 +282,7 @@ const POSTS: Article[] = [
       </ul>
       <p>« Ça a changé notre service », raconte Sophie, propriétaire. « Les serveurs peuvent se concentrer sur les clients présents. Le téléphone, c'est géré par des pros. »</p>
       
-      <h2>Témoignage #2 : Pizzeria Napoli (Québec)</h2>
+      <h2>Témoignage #2 : Pizzeria Napoli ()</h2>
       <p><strong>Le défi :</strong> Gérer les commandes de livraison pendant les heures de pointe sans sacrifier le service en salle.</p>
       <p><strong>Solution :</strong> Agents prenant les commandes à distance, intégration avec leur système POS, confirmation automatique de livraison.</p>
       <p><strong>Résultat :</strong></p>
@@ -313,7 +313,7 @@ const POSTS: Article[] = [
       </ul>
       
       <h2>Combien ça coûte vraiment ?</h2>
-      <p>Pour un restaurant moyen (50-100 couverts par jour), un service d'appels coûte entre 300$ et 800$ par mois. À comparer aux 2000$+ de revenus perdus en appels manqués.</p>
+      <p>Pour un restaurant moyen (50-100 couverts par jour), un service d'appels coûte entre 300 et 800 par mois. À comparer aux 2000+ de revenus perdus en appels manqués.</p>
       <p>Le ROI est généralement positif dès le premier mois.</p>
       
       <h2>Conclusion</h2>
@@ -330,12 +330,12 @@ const POSTS: Article[] = [
     author: "Jean-Michel Leclerc",
     readTime: "9 min",
     metaDesc: "Comprendre le RGPD dans le contexte des centres d'appels. Obligations, bonnes pratiques et outils pour rester conforme en 2025.",
-    keywords: ["RGPD centre appels", "protection données", "conformité téléphone", "PIPEDA Québec", "vie privée client"],
+    keywords: ["RGPD centre appels", "protection données", "conformité téléphone", "PIPEDA ", "vie privée client"],
     content: `
       <p>Le RGPD — ou son équivalent québécois, la Loi 25 — fait peur à plusieurs entreprises. Mais en réalité, se conformer n'est pas si compliqué quand on comprend les bases.</p>
       
       <h2>Petit rappel : c'est quoi le RGPD ?</h2>
-      <p>Le Règlement Général sur la Protection des Données s'applique aux entreprises européennes et à celles qui traitent des données de résidents européens. Au Québec, c'est la Loi 25 qui dicte les règles.</p>
+      <p>Le Règlement Général sur la Protection des Données s'applique aux entreprises européennes et à celles qui traitent des données de résidents européens. Au , c'est la Loi 25 qui dicte les règles.</p>
       <p>En pratique, les deux disent la même chose : vous devez protéger les données personnelles de vos clients.</p>
       
       <h2>Les 5 obligations principales pour les centres d'appels</h2>
@@ -400,7 +400,7 @@ const POSTS: Article[] = [
       </ul>
       
       <h2>Qu'est-ce que ça coûte de ne pas se conformer ?</h2>
-      <p>Les amendes peuvent atteindre 4% du chiffre d'affaires mondial (RGPD) ou 25M€ — whichever is higher. Au Québec, la Loi 25 prévoit des amendes pouvant aller jusqu'à 25M$ CAD.</p>
+      <p>Les amendes peuvent atteindre 4% du chiffre d'affaires mondial (RGPD) ou 25M — whichever is higher. Au , la Loi 25 prévoit des amendes pouvant aller jusqu'à 25M CAD.</p>
       <p>Mais le vrai coût, c'est la réputation. Une fuite de données ou une plainte publique peut détruire des années de confiance.</p>
       
       <h2>Comment nous gérons ça chez Smart Hotline</h2>
@@ -448,7 +448,7 @@ const POSTS: Article[] = [
       <p>Méfiez-vous des engagements de 12-24 mois. Votre entreprise évolue, votre partenaire doit s'adapter. Cherchez des contrats mensuels avec préavis court (30 jours).</p>
       
       <h3>3. Disponibilité géographique et linguistique</h3>
-      <p>Si vos clients sont francophones, vous avez besoin d'agents francophones natifs. Si vous opérez au Québec, des agents qui comprennent la culture québécoise font une différence énorme.</p>
+      <p>Si vos clients sont francophones, vous avez besoin d'agents bilingues. Des agents qui comprennent votre culture font une différence énorme.</p>
       
       <h3>4. Technologie et intégrations</h3>
       <p>Le centre utilise-t-il des technologies modernes ? Peut-il s'intégrer à vos outils ? Demandez une démo technique et vérifiez :</p>
@@ -518,17 +518,17 @@ const POSTS: Article[] = [
     excerpt: "Études de cas avec données concrètes : économies réalisées, gains de temps et amélioration du service.",
     author: "Sophie Bertrand",
     readTime: "7 min",
-    metaDesc: "Données réelles sur le ROI de l'externalisation des centres d'appels au Québec. Études de cas PME avec chiffres précis et leçons apprises.",
-    keywords: ["ROI externalisation", "économie centre appels", "PME Québec chiffres", "retour investissement téléphonie"],
+    metaDesc: "Données réelles sur le ROI de l'externalisation des centres d'appels au . Études de cas PME avec chiffres précis et leçons apprises.",
+    keywords: ["ROI externalisation", "économie centre appels", "PME  chiffres", "retour investissement téléphonie"],
     content: `
       <p>On entend souvent que l'externalisation « réduit les coûts ». Mais de combien, exactement ? Nous avons analysé les données de 47 PME québécoises clientes pour vous donner des chiffres réels.</p>
       
       <h2>Méthodologie de notre étude</h2>
-      <p>Période : Janvier 2025 à Décembre 2025. Entreprises : 47 PME (5-200 employés) au Québec. Secteurs : restauration, santé, retail, services professionnels, immobilier. Taille des centres d'appels : 3 à 15 agents dédiés.</p>
+      <p>Période : Janvier 2025 à Décembre 2025. Entreprises : 47 PME (5-200 employés) au . Secteurs : restauration, santé, retail, services professionnels, immobilier. Taille des centres d'appels : 3 à 15 agents dédiés.</p>
       
       <h2>Résultat #1 : Réduction des coûts opérationnels</h2>
       <p><strong>Moyenne :</strong> 38% de réduction des coûts liés à la gestion des appels.</p>
-      <p><strong>Économie moyenne par entreprise :</strong> 47 000$ CAD par année.</p>
+      <p><strong>Économie moyenne par entreprise :</strong> 47 000 CAD par année.</p>
       <p><strong>Comment ?</strong></p>
       <ul>
         <li>Plus de salaires fixes à payer pour les réceptionnistes</li>
@@ -546,7 +546,7 @@ const POSTS: Article[] = [
         <li>Meilleure qualification → taux de conversion amélioré</li>
         <li>Suivi systématique → leads froids réactivés</li>
       </ul>
-      <p><strong>Exemple concret :</strong> Une clinique dentaire de Québec passait de 15 à 27 rendez-vous pris par semaine après externalisation. Impact : +12 rendez-vous × 150$ moyen = +1 800$/semaine = +93 600$/année.</p>
+      <p><strong>Exemple concret :</strong> Une clinique dentaire de  passait de 15 à 27 rendez-vous pris par semaine après externalisation. Impact : +12 rendez-vous × 150 moyen = +1 800/semaine = +93 600/année.</p>
       
       <h2>Résultat #3 : Gain de temps pour les propriétaires</h2>
       <p><strong>Moyenne :</strong> 12 heures par semaine libérées pour les propriétaires/gestionnaires.</p>
@@ -572,7 +572,7 @@ const POSTS: Article[] = [
       </ul>
       
       <h2>Étude de cas détaillée : Immobilière du Quartier</h2>
-      <p><strong>Secteur :</strong> Immobilier résidentiel (Québec)</p>
+      <p><strong>Secteur :</strong> Immobilier résidentiel ()</p>
       <p><strong>Problème initial :</strong> Appels manqués pendant les visites, agents occupés, leads froids non suivis.</p>
       <p><strong>Solution :</strong></p>
       <ul>
@@ -586,7 +586,7 @@ const POSTS: Article[] = [
         <li>Appels manqués : 35% → 0%</li>
         <li>Leads qualifiés par mois : 47 → 89</li>
         <li>Taux de conversion : 12% → 19%</li>
-        <li>CA additionnel : +156 000$</li>
+        <li>CA additionnel : +156 000</li>
       </ul>
       
       <h2>Quand le ROI est négatif (et comment l'éviter)</h2>
@@ -686,7 +686,7 @@ const POSTS: Article[] = [
         <li>Taux de décroché (objectif : 15%+)</li>
         <li>Taux de qualification (objectif : 25%+ des décrochés)</li>
         <li>Taux de conversion (objectif : 10%+ des qualifiés)</li>
-        <li>Coût par acquisition (objectif : < 100$)</li>
+        <li>Coût par acquisition (objectif : < 100)</li>
       </ul>
       
       <h2>Conclusion</h2>
@@ -841,7 +841,7 @@ export default function BlogFr() {
               </p>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/main-hero.jpg`} alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`{basePath}/images/main-hero.jpg`} alt="Blog Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

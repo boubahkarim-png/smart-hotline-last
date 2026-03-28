@@ -16,9 +16,9 @@ const STATS = [
  { value: "50K+", label: "Calls handled/month" },
 ]
 const TESTIMONIALS = [
- { quote: "I have a dental clinic on Saint-Denis. Before, I was losing patients because no one answered during procedures. Now? Zero missed calls. My patients think I have a full-time receptionist.", author: "Marie D.", role: "Dentist, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
- { quote: "Sophie AI reduced my costs by 60%. True. And the funniest part? My clients prefer it. 'Your receptionist is super efficient,' they say. It's a robot, guys!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montreal", rating: 5 },
- { quote: "I'm in construction. My guys are on job sites, they can't answer. Smart Hotline takes calls, qualifies leads. My conversion rate went up 35%. It's measurable.", author: "Sophie M.", role: "Sales Director, BatiPro Quebec — Laval", rating: 5 },
+{ quote: "Before, I was losing patients because no one answered during procedures. Now? Zero missed calls. My patients think I have a full-time receptionist.", author: "Marie D.", role: "Dentist, Park Clinic", rating: 5 },
+{ quote: "Sophie AI reduced my costs by 60%. True. And the funniest part? My clients prefer it. 'Your receptionist is super efficient', they say. It's a robot!", author: "Pierre L.", role: "CEO, TechStart Inc.", rating: 5 },
+{ quote: "I'm in construction. My guys are on job sites, they can't answer. Smart Hotline takes calls, qualifies leads. My conversion rate went up 35%.", author: "Sophie M.", role: "Sales Director, BatiPro", rating: 5 },
 ]
 const STEPS = [
  { num: "01", title: "Free Consultation", desc: "We analyze your needs and goals during a 30-minute call." },

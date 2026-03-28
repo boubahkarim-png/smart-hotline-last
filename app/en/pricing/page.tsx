@@ -379,7 +379,7 @@ export default function Pricing() {
               { q: 'Is there a minimum commitment?', a: 'No, zero commitment. Cancel with 7 days notice.' },
               { q: 'Is CRM really included?', a: 'Yes! SuiteCRM with autodialer, answering machine detection, dedicated number, and free B2B/B2C lists for all outbound packages.' },
               { q: 'Can I change plans?', a: 'Yes, anytime. Prorated billing.' },
-              { q: 'What accents are available?', a: 'Quebec, France, Belgium, Switzerland. Configurable for AI, assigned based on your clientele for agents.' },
+              { q: 'What languages are available?', a: 'French and English. Both for AI and agents, adapting to your callers automatically.' },
             ].map(({ q, a }, i) => (
               <details key={i} className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white transition-colors">

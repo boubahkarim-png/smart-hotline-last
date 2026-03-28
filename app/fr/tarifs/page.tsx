@@ -379,7 +379,7 @@ export default function Tarifs() {
               { q: 'Y a-t-il un engagement minimum?', a: 'Non, zéro engagement. Annulez avec 7 jours de préavis.' },
               { q: 'Le CRM est-il vraiment inclus?', a: 'Oui! SuiteCRM avec autodialer, détection répondeur, numéro dédié, et listes B2B/B2C gratuites pour tous les forfaits outbound.' },
               { q: 'Puis-je changer de forfait?', a: 'Oui, à tout moment. Facturation au prorata.' },
-              { q: 'Quels accents sont disponibles?', a: 'Québec, France, Belgique, Suisse. Configurable pour l\'IA, assigné selon votre clientèle pour les conseillers.' },
+              { q: 'Quelles langues sont disponibles?', a: 'Français et anglais. Pour l\'IA et les conseillers, adaptation automatique selon vos appelants.' },
             ].map(({ q, a }, i) => (
               <details key={i} className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-white transition-colors">

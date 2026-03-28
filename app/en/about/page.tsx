@@ -10,8 +10,8 @@ export default function About() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-[55%]">
               <span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Our Story</span>
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Started From Plateau Mont-Royal<br/>With 3 Clients in 2018</h1>
-              <p className="text-lg text-blue-100 mb-6">Today, we support over 500 SMEs in Quebec and France. But in the beginning, it was just Karim, his laptop, and sleepless nights answering calls from his first clients.</p>
+<h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Started from a Small Office<br/>With 3 Clients in 2018</h1>
+<p className="text-lg text-blue-100 mb-6">Today, we support over 500 SMEs. But in the beginning, it was just Karim, his laptop, and sleepless nights answering calls from his first clients.</p>
               <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Contact Us</Link>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -33,7 +33,7 @@ export default function About() {
               Our Mission and Values
             </h2>
             <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              We help Quebec and French SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
+              We help SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -60,7 +60,7 @@ export default function About() {
       {/* SECTION 3: LIGHT - STATS */}
       <section className="bg-white border-b border-slate-100 py-10">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{n:"2018", l:"Founded in Montreal"},{n:"512", l:"Active SMEs"},{n:"98%", l:"Renew"},{n:"6", l:"French Accents"}].map(({n,l}) => (
+          {[{n:"2018", l:"Founded"},{n:"512", l:"Active SMEs"},{n:"98%", l:"Renew"},{n:"2", l:"Languages"}].map(({n,l}) => (
             <div key={l}>
               <p className="text-4xl font-black text-blue-600">{n}</p>
               <p className="text-slate-500 text-sm mt-1 font-medium">{l}</p>
@@ -85,7 +85,7 @@ export default function About() {
                     2018
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-900">Foundation in Montreal</h3>
+                    <h3 className="font-bold text-slate-900">Foundation</h3>
                     <p className="text-gray-600">With 3 clients and a vision: offer SMEs the same service as large enterprises</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function About() {
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-bold text-slate-900">First Voice AI</h3>
-                    <p className="text-gray-600">Launch of Sophie, our first Quebec voice AI agent</p>
+                    <p className="text-gray-600">Launch of Sophie, our first voice AI agent</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -166,7 +166,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {icon: "🤖", title: "Advanced Voice AI", desc: "Sophie understands context, accents and cultural nuances"},
+              {icon: "🤖", title: "Advanced Voice AI", desc: "Sophie understands context and cultural nuances"},
               {icon: "🔗", title: "Simple Integrations", desc: "Direct connection with your tools: CRM, calendars, help desks"},
               {icon: "📊", title: "Real-time Analytics", desc: "Custom dashboards to track your performance"},
               {icon: "🛡️", title: "Solid Security", desc: "End-to-end encryption and compliance with current standards"},

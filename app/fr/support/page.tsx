@@ -13,10 +13,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-{q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', av: 'CR'},
-{q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', av: 'JP'},
-{q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', av: 'ML'},
-{q: "On a réduit notre temps de réponse de 4 jours à 2 heures. Nos clients n'en reviennent pas. L'équipe est super professionnelle.", name: 'Sylvie Bouchard', role: 'Directrice, Logiciels Bouchard Inc.', av: 'SB'},
+{q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine R.', role: 'Responsable service client', av: 'CR'},
+{q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent bien — ça aide vraiment avec nos clients.", name: 'Jean-François P.', role: 'Directeur, Services Financiers', av: 'JP'},
+{q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Un bon support, ça fait toute la différence.", name: 'Martine L.', role: 'Fondatrice', av: 'ML'},
+{q: "On a réduit notre temps de réponse de 4 jours à 2 heures. Nos clients n'en reviennent pas. L'équipe est super professionnelle.", name: 'Sylvie B.', role: 'Directrice', av: 'SB'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -169,7 +169,7 @@ Support Client<br/>
 <ul className="space-y-4 mb-8">
 {[
 'Équipe formée sur vos produits',
-'Réponses en français du Québec ou de France',
+'Réponses en français ou anglais',
 'Escalade intelligente vers votre équipe',
 'Rapports hebdomadaires sur les tendances',
 ].map((item, i) => (

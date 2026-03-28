@@ -10,8 +10,8 @@ export default function APropos() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-[55%]">
               <span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Parti d'un Plateau Mont-Royal<br/>avec 3 Clients en 2018</h1>
-              <p className="text-lg text-blue-100 mb-6">Aujourd'hui, on accompagne plus de 500 PME au Québec et en France. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
+<h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Parti d'un Petit Bureau<br/>avec 3 Clients en 2018</h1>
+<p className="text-lg text-blue-100 mb-6">Aujourd'hui, on accompagne plus de 500 PME. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
               <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Nous Contacter</Link>
             </div>
             <div className="w-full lg:w-[40%]">
@@ -32,10 +32,10 @@ export default function APropos() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Notre Mission et Nos Valeurs
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Nous aidons les PME québécoises et françaises à prospérer en leur offrant
-              une relation client irréprochable, adaptée à leurs besoins spécifiques.
-            </p>
+<p className="text-blue-200 text-lg max-w-2xl mx-auto">
+Nous aidons les PME à prospérer en leur offrant
+une relation client irréprochable, adaptée à leurs besoins spécifiques.
+</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -61,7 +61,7 @@ export default function APropos() {
       {/* SECTION 3: LIGHT - STATS */}
       <section className="bg-white border-b border-slate-100 py-10">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {[{n:"2018", l:"Fondé à Montréal"},{n:"512", l:"PME actives"},{n:"98%", l:"Renouvellent"},{n:"6", l:"Accents français"}].map(({n,l}) => (
+          {[{n:"2018", l:"Fondé"},{n:"512", l:"PME actives"},{n:"98%", l:"Renouvellent"},{n:"2", l:"Langues"}].map(({n,l}) => (
             <div key={l}>
               <p className="text-4xl font-black text-blue-600">{n}</p>
               <p className="text-slate-500 text-sm mt-1 font-medium">{l}</p>
@@ -86,7 +86,7 @@ export default function APropos() {
                     2018
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-bold text-slate-900">Fondation à Montréal</h3>
+                    <h3 className="font-bold text-slate-900">Fondation</h3>
                     <p className="text-gray-600">Avec 3 clients et une vision: offrir aux PME le même service qu'aux grandes entreprises</p>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function APropos() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {icon: "🤖", title: "IA Vocale Avancée", desc: "Sophie comprend le contexte, les accents et les nuances culturelles"},
+              {icon: "🤖", title: "IA Vocale Avancée", desc: "Sophie comprend le contexte et les nuances culturelles"},
               {icon: "🔗", title: "Intégrations Simples", desc: "Connexion directe avec vos outils: CRM, calendriers, help desks"},
               {icon: "📊", title: "Analytics en Temps Réel", desc: "Tableaux de bord personnalisés pour suivre vos performances"},
               {icon: "🛡️", title: "Sécurité Solide", desc: "Chiffrement de bout en bout et conformité aux normes en vigueur"},

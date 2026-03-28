@@ -28,7 +28,7 @@ export default function Legal() {
             <h2 className="text-2xl font-bold text-gray-900">1. Publisher</h2>
             <p><strong>Smart Hotline Agency</strong></p>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Registered office: Montreal, Quebec, Canada</li>
+              <li>Registered office: Canada</li>
               <li>Email: direction@smart-hotline.com</li>
               <li>Phone: +1 514 819-0559</li>
               <li>Publication Director: Karim Boubah</li>
@@ -55,7 +55,7 @@ export default function Legal() {
             <p>This website may use cookies to improve user experience and measure traffic. You can configure your browser to refuse cookies. For more information, see our <Link href="/en/privacy" className="text-blue-700 hover:underline">Privacy Policy</Link>.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">6. Applicable Law</h2>
-            <p>This legal notice is governed by Canadian and Quebec law. In case of dispute, the courts of Montreal, Quebec, shall have exclusive jurisdiction.</p>
+            <p>This legal notice is governed by applicable law. In case of dispute, the competent courts, shall have exclusive jurisdiction.</p>
 
             <h2 className="text-2xl font-bold text-gray-900">7. Contact</h2>
             <p>For any questions regarding this legal notice:</p>

@@ -11,9 +11,9 @@ date: "March 15, 2026",
 cat: "Strategy",
 img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80",
 excerpt: "Discover why more and more SMEs are choosing to outsource their customer relationships.",
-content: "Outsourcing customer service is experiencing unprecedented growth in 2025. Many SMEs recognize the strategic advantages of this approach, going well beyond simple cost reduction. In this article, we explore the five main reasons pushing Quebec and French companies to take the leap.",
+content: "Outsourcing customer service is experiencing unprecedented growth in 2025. Many SMEs recognize the strategic advantages of this approach, going well beyond simple cost reduction. In this article, we explore the five main reasons pushing  and French companies to take the leap.",
 author: "Marie-Claire Beaumont",
-keywords: "outsourcing, customer service, SME, Quebec, France"
+keywords: "outsourcing, customer service, SME, , "
 },
 {
 title: "AI Agent vs Human Agent: Which to Choose?",
@@ -51,9 +51,9 @@ date: "February 14, 2026",
 cat: "Sectors",
 img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80",
 excerpt: "Testimonials from 3 restaurants that doubled their reservations in 30 days.",
-content: "The restaurant industry faces unique challenges in managing reservations and customer service. Through three concrete testimonials from Montreal restaurants, we show how a call center can save you time and money.",
+content: "The restaurant industry faces unique challenges in managing reservations and customer service. Through three concrete testimonials from  restaurants, we show how a call center can save you time and money.",
 author: "Marie-Lucie Boucher",
-keywords: "restaurant, reservations, call center, Montreal"
+keywords: "restaurant, reservations, call center, "
 },
 {
 title: "GDPR and Call Centers: What You Need to Know",
@@ -76,14 +76,14 @@ author: "François Martel",
 keywords: "call center selection, SME, outsourcing partner"
 },
 {
-title: "Outsourcing ROI: Real Numbers from Quebec Businesses",
+title: "Outsourcing ROI: Real Numbers from  Businesses",
 date: "January 20, 2026",
 cat: "Data",
 img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
 excerpt: "Concrete case studies showing actual returns from outsourcing customer service.",
-content: "What's the real ROI of outsourcing customer service? We analyzed data from 50 Quebec SMEs that outsourced their call handling. Results: average cost reduction of 35%, satisfaction increase of 22%, and average payback period of 4 months. Discover the detailed numbers.",
+content: "What's the real ROI of outsourcing customer service? We analyzed data from 50  SMEs that outsourced their call handling. Results: average cost reduction of 35%, satisfaction increase of 22%, and average payback period of 4 months. Discover the detailed numbers.",
 author: "Isabelle Morin",
-keywords: "ROI, outsourcing, Quebec, cost reduction"
+keywords: "ROI, outsourcing, , cost reduction"
 },
 {
 title: "5 Mistakes to Avoid in Your Outbound Calling Campaigns",
@@ -164,7 +164,7 @@ return (
         </p>
       </div>
       <div className="w-full lg:w-[40%]">
-        <img src={`${basePath}/images/main-hero.jpg`} alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+        <img src={`{basePath}/images/main-hero.jpg`} alt="Smart Hotline Blog" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
       </div>
     </div>
   </div>

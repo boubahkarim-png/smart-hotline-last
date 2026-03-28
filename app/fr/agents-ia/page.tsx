@@ -6,7 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { BoltIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, StarIcon, UsersIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const FEATURES = [
-{icon: BoltIcon, title: 'Réponse instantanée', desc: 'Moins de 2 secondes, 24h/24, 7j/7, sans temps d\'attente.'},
+{icon: BoltIcon, title: 'Réponse instantanée', desc: "Moins de 2 secondes, 24h/24, 7j/7, sans temps d'attente."},
 {icon: CalendarIcon, title: 'Prise de rendez-vous', desc: 'Synchronisé avec Google Calendar, Calendly. Confirmation auto.'},
 {icon: QuestionIcon, title: 'FAQ automatisée', desc: 'Répond aux questions fréquentes : horaires, tarifs, adresse.'},
 {icon: TransferIcon, title: 'Transfert intelligent', desc: 'Détecte les situations complexes, transfert vers conseiller.'},
@@ -55,10 +55,10 @@ return (
 Sophie, votre IA<br/>
 <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">en Français Natif 24/7</span>
 </h1>
-<p className="text-xl text-slate-600 mb-8 leading-relaxed">Elle répond en 2 secondes max. Avec l'accent que vous voulez. Et le meilleur? Vos clients ne savent pas que c'est de l'IA — ils pensent juste que votre réceptionniste est super efficace.</p>
+<p className="text-xl text-slate-600 mb-8 leading-relaxed">Elle répond en 2 secondes max. Naturelle et efficace. Et le meilleur? Vos clients ne savent pas que c'est de l'IA — ils pensent juste que votre réceptionniste est super efficace.</p>
 <CTAButtons slug="ia"/>
 <div className="flex flex-wrap gap-3 mt-6">
-{['Réponse < 2 sec', 'Accent au choix', '24/7 même la nuit', 'Tarif à la minute'].map((b, i) => (
+{['Réponse < 2 sec', '100% naturelle', '24/7 même la nuit', 'Tarif à la minute'].map((b, i) => (
 <span key={b} className={`flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md animate-fade-in-up animate-delay-${(i+2)*100}`}>
 <CheckIcon className="w-5 h-5 text-violet-600" /> {b}
 </span>
@@ -168,9 +168,9 @@ Sophie, votre IA<br/>
 <p className="text-xl text-slate-600 mb-8 leading-relaxed">Sophie ne dort pas, ne prend pas de pauses, et n'a jamais une mauvaise journée. Elle gère le répétitif pour que votre équipe puisse se concentrer sur ce qui compte vraiment.</p>
 <ul className="space-y-4 mb-8">
 {[
-'Accent du Québec, de France, ou Belgique au choix',
+'Conseillers formés à votre entreprise',
 'Transcription et analyse de chaque appel',
-'70% moins cher qu\'une réceptionniste',
+"70% moins cher qu'une réceptionniste",
 'Installation en 24-48h',
 ].map((item, i) => (
 <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
@@ -257,7 +257,7 @@ Voir tous les tarifs
 <div className="space-y-6 stagger-children">
 {[
 {q: "Les appelants sauront-ils que c'est de l'IA?", a: "La plupart ne s'en rendent pas compte. Sophie parle naturellement, gère les interruptions, et ajuste son rythme. Nous avons eu des clients dont les clients complimentent spécifiquement 'votre charmante réceptionniste'."},
-{q: "Quelles langues Sophie parle-t-elle?", a: "Français natif (Québec, France, Belgique), anglais et espagnol. Elle change automatiquement selon la langue utilisée par l'appelant."},
+{q: "Quelles langues Sophie parle-t-elle?", a: "Français et anglais. Elle change automatiquement selon la langue utilisée par l'appelant."},
 {q: "Combien de temps pour installer Sophie?", a: "Généralement 24-48 heures. Nous configurons la voix, le script et la base de connaissances, puis nous testons avec des scénarios réels avant de lancer."},
 {q: "Que se passe-t-il si Sophie est coincée?", a: "Elle transfère vers un humain. C'est le but — gérer le routinier parfaitement, escalader le complexe vers vous."},
 ].map((faq, i) => (

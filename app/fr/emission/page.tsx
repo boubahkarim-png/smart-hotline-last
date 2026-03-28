@@ -168,9 +168,9 @@ Multipliez vos Leads<br/>
 <p className="text-xl text-slate-600 mb-8 leading-relaxed">Nos conseillers sont formés pour représenter votre entreprise comme si c'était la leur. Résultats garantis ou on ajuste.</p>
 <ul className="space-y-4 mb-8">
 {[
-'Conseillers francophones du Québec et de France',
+'Conseillers bilingues expérimentés',
 'Rapports quotidiens avec KPIs détaillés',
-'Prix PME — 40-60% moins cher qu\'un employé',
+"Prix PME — 40-60% moins cher qu'un employé",
 'Annulez quand vous voulez — pas de contrat long',
 ].map((item, i) => (
 <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>

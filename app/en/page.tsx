@@ -22,7 +22,7 @@ const MOVING_MESSAGES = [
 "98% customer satisfaction",
 "Answer in under 3 rings",
 "Available 24/7",
-"Native French speakers",
+"Bilingual team",
 "Setup in 48h",
 "No long-term commitment",
 "CRM included",
@@ -31,10 +31,10 @@ const MOVING_MESSAGES = [
 ]
 
 const TESTIMONIALS_DATA = [
-{ q: "I have a restaurant on the Main. Before, I was easily losing 10-15 customers per week. Now? Zero missed calls.", name: "Pierre Lacroix", role: "Owner, Bistro du Vieux-Montréal", av: "PL" },
-{ q: "It's not just reception. They take reservations, answer questions. It's like having a receptionist, but at a fraction of the cost.", name: "Sophie Mercier", role: "Director, Clinique Médicale Plateau", av: "SM" },
-{ q: "During the holiday rush, they handled over 200 calls per day. My team was calm, customers happy.", name: "Marc-André Dubé", role: "Manager, Électronique QC Store", av: "MD" },
-{ q: "We tried 3 other services before. This is the only one where agents really understand our business.", name: "Nathalie Tremblay", role: "Director, Cabinet Tremblay", av: "NT" },
+{ q: "Before, I was easily losing 10-15 customers per week. Now? Zero missed calls.", name: "Pierre L.", role: "Owner, Restaurant", av: "PL" },
+{ q: "It's not just reception. They take reservations, answer questions. It's like having a receptionist, but at a fraction of the cost.", name: "Sophie M.", role: "Director, Medical Clinic", av: "SM" },
+{ q: "During the holiday rush, they handled over 200 calls per day. My team was calm, customers happy.", name: "Marc-André D.", role: "Manager, Retail Store", av: "MD" },
+{ q: "We tried 3 other services before. This is the only one where agents really understand our business.", name: "Nathalie T.", role: "Director, Law Firm", av: "NT" },
 ]
 
 function CTAButtons() {
@@ -171,10 +171,10 @@ Sophie, the AI Agent<br/>
 <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Who Speaks Like Us</span>
 </h2>
 <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-She answers in under 2 seconds. With your region's accent — your choice. And it costs a fraction of a salary.
+She answers in under 2 seconds. Natural and efficient. And it costs a fraction of a salary.
 </p>
 <ul className="space-y-3 mb-8">
-{['Answers in under 2 seconds', 'Accents adapted to your region', 'Transfer to human if complex', 'Cost: ~30% of a salary', 'Available 24/7'].map((f, i) => (
+{['Answers in under 2 seconds', 'Transfer to human if complex', 'Cost: ~30% of a salary', 'Available 24/7'].map((f, i) => (
 <li key={i} className="flex items-center gap-3 text-slate-700">
 <span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
 <CheckIcon className="w-4 h-4" />

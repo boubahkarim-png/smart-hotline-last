@@ -225,7 +225,7 @@ export default function EnContact() {
             {[
               { q: 'How fast can you start?', a: 'Most clients are operational within 48 hours. We just need your scripts and information.' },
               { q: 'Is there a minimum commitment?', a: 'No long-term contracts. You can stop anytime with 7 days notice.' },
-              { q: 'What languages do you support?', a: 'French (Quebec, France, Belgium), English, and Spanish. Our agents match your clients.' },
+              { q: 'What languages do you support?', a: 'French and English. Our agents match your clients.' },
             ].map(({ q, a }) => (
               <div key={q} className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">{q}</h3>
@@ -271,7 +271,7 @@ export default function EnContact() {
           <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">What Our Clients Say</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { q: "We tried two other call centers before. The difference? Here, agents actually understand our business.", name: "Sarah Mitchell", role: "Owner, TechStart Montreal" },
+              { q: "We tried two other call centers before. The difference? Here, agents actually understand our business.", name: "Sarah M.", role: "Owner, TechStart" },
               { q: "During the snowstorm, they handled 47 calls. Not one missed. That's what convinced me.", name: "Mike Chen", role: "Founder, InnovateQC" },
             ].map(({ q, name, role }) => (
               <div key={name} className="bg-white rounded-xl p-6 border border-slate-100">
@@ -287,14 +287,12 @@ export default function EnContact() {
       {/* SECTION 8: LIGHT - MAP/LOCATION */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black text-slate-900 mb-4">Based in Montreal, Serving All of Canada</h2>
-          <p className="text-slate-600 mb-8">Our team handles calls from coast to coast, 24/7.</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-            <span>📍 Montreal, QC</span>
-            <span>•</span>
-            <span>🇨🇦 All Canadian Provinces</span>
-            <span>•</span>
-            <span>🌍 French & English</span>
+<h2 className="text-2xl font-black text-slate-900 mb-4">Serving Clients Everywhere</h2>
+<p className="text-slate-600 mb-8">Our team handles calls from everywhere, 24/7.</p>
+<div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+<span>📍 Remote Team</span>
+<span>•</span>
+<span>🌍 French & English</span>
           </div>
         </div>
       </section>

@@ -15,9 +15,9 @@ const STATS = [
   { value: "50K+", label: "Appels traites/mois" },
 ]
 const TESTIMONIALS = [
-{ quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
-{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5 },
-{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5 },
+{ quote: "Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc", rating: 5 },
+{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot!", author: "Pierre L.", role: "CEO, TechStart Inc.", rating: 5 },
+{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%.", author: "Sophie M.", role: "Directrice commerciale, BatiPro", rating: 5 },
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
