@@ -11,8 +11,8 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, ClockIcon, StarIcon } from '@/components/Icons'
 
 const SERVICES = [
-{ Icon: PhoneIcon, title: 'Appels Entrants', desc: 'Réception 24/7. Zéro appel manqué.', href: '/fr/reception', bg: 'bg-sky-100', color: 'text-sky-700' },
-{ Icon: MegaphoneIcon, title: 'Appels Sortants', desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
+{ Icon: PhoneIcon, title: 'Réception 24/7', desc: 'Vos téléphonistes, jour et nuit.', href: '/fr/reception', bg: 'bg-sky-100', color: 'text-sky-700' },
+{ Icon: MegaphoneIcon, title: 'Votre Équipe Vente', desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
 { Icon: BotIcon, title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
 { Icon: HeadphonesIcon, title: 'Support Client', desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
 { Icon: DatabaseIcon, title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-orange-100', color: 'text-orange-700' },
@@ -89,7 +89,7 @@ les PME d'Ici
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src="/images/main-hero.jpg" alt="Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/main-hero.jpg" alt="Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
 <div className="flex items-center gap-4">
 <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -191,7 +191,7 @@ Découvrir les Agents IA →
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src="/images/agents-ia-hero.jpg" alt="Agent IA Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src="/smart-hotline-last/images/agents-ia-hero.jpg" alt="Agent IA Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>

@@ -4,13 +4,13 @@ import TawkToChat from '@/components/TawkToChat'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Call Center Quebec | 24/7 Services for SMEs | Smart Hotline",
-  description: "Quebec call center services. 24/7 inbound calls, AI voice agents, customer support. Outsource your customer relations from $11/hr. Free 2-week trial. Montreal, Canada.",
-  keywords: ['call center quebec', 'call center services canada', 'call center outsourcing', 'inbound call center', 'ai voice agents', 'customer support services', 'call center montreal', 'answering service montreal', 'virtual receptionist canada', 'phone answering service', 'customer support outsourcing', 'AI voice agents', 'call center services', 'outsourced customer service'],
+  title: "Smart Hotline | Your 24/7 Phone Partner | Quebec Voice Solutions",
+  description: "Your team of receptionists and phone agents 24/7. AI voice agents, virtual assistants, customer support. Partner with us from $11/hr. Free 2-week trial.",
+  keywords: ['receptionist quebec', 'phone partner', 'ai voice agents', 'virtual receptionist 24/7', 'phone answering service', 'voice solutions canada', 'customer support montreal', 'telephone secretary', 'inbound calls', 'virtual assistant', 'ai phone agent', 'phone support team'],
   robots: 'index, follow',
   openGraph: {
-    title: "Call Center Quebec | 24/7 Services for SMEs | Smart Hotline",
-    description: "Quebec call center services. 24/7 inbound calls, AI voice agents, customer support. Outsource your customer relations from $11/hr.",
+    title: "Smart Hotline | Your 24/7 Phone Partner | Quebec Voice Solutions",
+    description: "Your team of receptionists and phone agents 24/7. AI voice agents, customer support. Partner with us from $11/hr.",
     type: 'website',
     locale: 'en_CA',
     siteName: 'Smart Hotline',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: 'https://boubahkarim-png.github.io/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Smart Hotline - Call Center Quebec',
+        alt: 'Smart Hotline - Your Phone Partner Quebec',
       },
     ],
   },
