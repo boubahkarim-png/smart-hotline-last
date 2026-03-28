@@ -63,7 +63,7 @@ export default function EnContact() {
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(`${API_URL}/leads/contact.php`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
