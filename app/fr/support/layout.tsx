@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: '${siteUrl}/fr/support/',
+    canonical: `${siteUrl}/fr/support/`,
     languages: {
-      'fr-CA': '${siteUrl}/fr/support/',
-      'en-CA': '${siteUrl}/en/support/',
+      'fr-CA': `${siteUrl}/fr/support/`,
+      'en-CA': `${siteUrl}/en/support/`,
     },
   },
 }
