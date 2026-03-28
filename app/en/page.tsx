@@ -70,7 +70,7 @@ return (
 Agents & AI Available 24/7
 </span>
 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
-The Call Center<br/>
+Your 24/7 Phone Partner<br/>
 <span className="bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">That Understands</span><br/>
 Local SMEs
 </h1>

@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7 | Quebec",
   description: "Votre équipe de téléphonistes et réceptionnistes virtuels 24/7. Agents IA vocaux, secrétaires téléphoniques, support client. Devenez partenaire dès 15$/h. Essai gratuit 2 semaines.",
-  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', 'réception d\'appels', 'télésecrétariat', 'assistant vocal ia', 'centre d\'appels partenaire'],
+  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', 'réception d\'appels', 'télésecrétariat', 'assistant vocal ia', 'partenaire téléphonique pme'],
   robots: 'index, follow',
   openGraph: {
     title: "Smart Hotline | Votre Partenaire Téléphonique 24/7 | Quebec",
