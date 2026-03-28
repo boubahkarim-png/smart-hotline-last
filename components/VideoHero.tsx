@@ -1,5 +1,7 @@
 'use client'
 
+import basePath from '@/lib/basePath'
+
 export default function VideoHero() {
   return (
     <section className="relative w-full overflow-hidden rounded-2xl bg-slate-100">
@@ -9,9 +11,9 @@ export default function VideoHero() {
         muted
         playsInline
         className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
-        poster="/smart-hotline-last/images/main-hero.jpg"
+        poster={`${basePath}/images/main-hero.jpg`}
       >
-        <source src="/videos/smart_hotline_promo.webm" type="video/webm" />
+        <source src={`${basePath}/videos/smart_hotline_promo.webm`} type="video/webm" />
         <p>Your browser does not support the video tag.</p>
       </video>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

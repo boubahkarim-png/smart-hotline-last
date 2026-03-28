@@ -1,0 +1,72 @@
+{
+  "project": "smart-hotline-nextjs",
+  "lastUpdated": "2026-03-28",
+  "todo": [
+    {
+      "id": "todo-1",
+      "title": "Fix missing icons",
+      "description": "Identify and fix 5 icons that are not rendering in production build",
+      "priority": "high",
+      "status": "pending",
+      "created": "2026-03-28"
+    },
+    {
+      "id": "todo-2",
+      "title": "Clear build cache",
+      "description": "Run rm -rf .next && rm -rf out to clear all build artifacts",
+      "priority": "medium",
+      "status": "pending",
+      "created": "2026-03-28"
+    },
+    {
+      "id": "todo-3",
+      "title": "Test build",
+      "description": "Run npm run build and verify no errors, check icon rendering",
+      "priority": "high",
+      "status": "pending",
+      "created": "2026-03-28"
+    },
+    {
+      "id": "todo-4",
+      "title": "Deploy to GitHub Pages",
+      "description": "Push changes and trigger GitHub Actions deployment",
+      "priority": "high",
+      "status": "pending",
+      "created": "2026-03-28"
+    },
+    {
+      "id": "todo-5",
+      "title": "Verify live site",
+      "description": "Check https://boubahkarim-png.github.io/smart-hotline-last/fr/ for correct rendering",
+      "priority": "high",
+      "status": "pending",
+      "created": "2026-03-28"
+    }
+  ],
+  "done": [
+    {
+      "id": "done-1",
+      "title": "Contact webhook deployed",
+      "description": "Contact form webhook integration successfully deployed and tested",
+      "priority": "high",
+      "status": "completed",
+      "created": "2026-03-27",
+      "completed": "2026-03-27"
+    },
+    {
+      "id": "done-2",
+      "title": "Canonical URLs fixed",
+      "description": "Fixed canonical URL issues for SEO - all pages now have correct self-referencing canonical tags",
+      "priority": "high",
+      "status": "completed",
+      "created": "2026-03-27",
+      "completed": "2026-03-27"
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "pending": 5,
+    "completed": 2,
+    "completionRate": "28.6%"
+  }
+}
