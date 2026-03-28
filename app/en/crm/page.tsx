@@ -6,239 +6,273 @@ import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const FEATURES = [
-  {'icon': FolderIcon, 'title': 'Lead Management', 'desc': 'Capture, qualification and tracking of all your prospects.'},
-  {'icon': MailIcon, 'title': 'Email Marketing', 'desc': 'Automated campaigns with Mautic. Nurturing and follow-ups.'},
-  {'icon': PhoneIcon, 'title': 'Click-to-call', 'desc': 'Call your prospects in one click from the CRM.'},
-  {'icon': TrendingIcon, 'title': 'Sales Pipeline', 'desc': 'Visualize and manage your sales funnel in real time.'},
-  {'icon': DatabaseIcon, 'title': 'Qualified Lists', 'desc': 'B2B and B2C lists by sector, region, company size.'},
-  {'icon': LinkIcon, 'title': 'Integrations', 'desc': 'Connection with your site, Zapier, Google Workspace and more.'},
-]
-
-const STEPS = [
-  {'n': '1', 't': 'Database Audit', 'd': 'Analysis of existing data and cleanup.'},
-  {'n': '2', 't': 'SuiteCRM Configuration', 'd': 'Module customization based on your sales process.'},
-  {'n': '3', 't': 'Data Import', 'd': 'Migration of contacts and history without data loss.'},
-  {'n': '4', 't': 'Training & Follow-up', 'd': 'Team training and ongoing support.'},
+{icon: FolderIcon, title: 'Lead Management', desc: 'Capture, qualification and tracking of all your prospects.'},
+{icon: MailIcon, title: 'Email Marketing', desc: 'Automated campaigns with Mautic. Nurturing and follow-ups.'},
+{icon: PhoneIcon, title: 'Click-to-call', desc: 'Call your prospects in one click from the CRM.'},
+{icon: TrendingIcon, title: 'Sales Pipeline', desc: 'Visualize and manage your sales funnel in real time.'},
 ]
 
 const TESTIMONIALS = [
 {q: "Before, our leads were in 3 different Excel files. Now everything is in one place. We don't lose anything anymore.", name: 'Marie-Claire B.', role: 'Sales Director', av: 'MB'},
-{q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy with emails that no longer existed.", name: 'François G.', role: 'Founder', av: 'FG'},
+{q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy.", name: 'François G.', role: 'Founder', av: 'FG'},
 {q: "We doubled our conversion rate in 4 months. CRM + outbound calls makes a huge difference.", name: 'Isabelle T.', role: 'Sales Manager', av: 'IT'},
-{q: "The training took 2 hours. Next day, we were operational. It's really not complicated.", name: 'Michael R.', role: 'CEO', av: 'MR'},
+{q: "The training took 2 hours. Next day, we were operational. Really, it's not complicated.", name: 'Michael R.', role: 'CEO', av: 'MR'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
-  const { geo, loading } = useGeo()
-  const showPhone = !loading && geo.showPhone
-  return (
-    <div className="flex flex-col sm:flex-row gap-4 mb-6">
-      <Link href={`/en/contact?service=${slug}`} className="bg-purple-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-purple-700 text-center shadow-lg">
-        Free Demo
-      </Link>
-      {showPhone ? (
-        <a href={`tel:${CONTACT.phone}`} className="border-2 border-purple-600 text-purple-600 font-bold px-8 py-4 rounded-2xl hover:bg-purple-600 hover:text-white transition-all text-center">
-          {CONTACT.phoneDisplay}
-        </a>
-      ) : (
-        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-purple-600 text-purple-600 font-bold px-8 py-4 rounded-2xl hover:bg-purple-600 hover:text-white transition-all text-center">
-          💬 WhatsApp 24/7
-        </a>
-      )}
-    </div>
-  )
+const { geo, loading } = useGeo()
+const showPhone = !loading && geo.showPhone
+return (
+<div className="flex flex-col sm:flex-row gap-4 mb-6">
+<Link href={`/en/contact?service=${slug}`} className="bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-orange-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
+Free Demo
+</Link>
+{showPhone ? (
+<a href={`tel:${CONTACT.phone}`} className="border-2 border-orange-600 text-orange-600 font-bold px-8 py-4 rounded-2xl hover:bg-orange-600 hover:text-white transition-all text-center hover:shadow-xl">
+{CONTACT.phoneDisplay}
+</a>
+) : (
+<a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-orange-600 text-orange-600 font-bold px-8 py-4 rounded-2xl hover:bg-orange-600 hover:text-white transition-all text-center hover:shadow-xl">
+WhatsApp 24/7
+</a>
+)}
+</div>
+)
 }
 
 export default function Page() {
-  return (
-    <>
-      {/* SECTION 1: LIGHT - Hero */}
-      <section className="bg-white text-slate-900 py-16 lg:py-24 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full mb-5">
-                <CRMIcon className="w-4 h-4" /> CRM & Lists
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-                Integrated CRM &<br/>Prospect Lists
-              </h1>
-              <p className="text-lg text-slate-600 mb-8">Centralize your leads, track opportunities and maximize conversions with SuiteCRM and our qualified B2B/B2C lists.</p>
-              <CTAButtons slug="crm"/>
-              <div className="flex flex-wrap gap-3">
-                {['SuiteCRM included', 'B2B/B2C lists', 'Mautic integrated', 'Auto reports'].map(b => (
-                  <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-purple-600" /> {b}</span>
-                ))}
-              </div>
-            </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="relative">
-                <img src={`${basePath}/images/crm-interface.jpg`} alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                      <TrendingIcon className="w-5 h-5 text-purple-600" />
-                    </div>
-                    <div><p className="font-black text-sm">+35% conversion</p><p className="text-slate-500 text-xs">client average</p></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+return (
+<>
+{/* SECTION 1: HERO */}
+<section className="bg-gradient-to-br from-slate-50 via-white to-orange-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+<div className="w-full lg:w-1/2 animate-slide-left">
+<span className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+<CRMIcon className="w-5 h-5" /> CRM & Lists
+</span>
+<h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+Integrated CRM &<br/>
+<span className="bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">Prospect Lists</span>
+</h1>
+<p className="text-xl text-slate-600 mb-8 leading-relaxed">Centralize your leads, track opportunities and maximize conversions with SuiteCRM and our qualified B2B/B2C lists.</p>
+<CTAButtons slug="crm"/>
+<div className="flex flex-wrap gap-3 mt-6">
+{['SuiteCRM included', 'B2B/B2C lists', 'Mautic integrated', 'Auto reports'].map((b, i) => (
+<span key={b} className={`flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md animate-fade-in-up animate-delay-${(i+2)*100}`}>
+<CheckIcon className="w-5 h-5 text-orange-600" /> {b}
+</span>
+))}
+</div>
+</div>
+<div className="w-full lg:w-1/2 animate-slide-right">
+<div className="relative">
+<div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
+<img src={`${basePath}/images/crm-interface.jpg`} alt="CRM dashboard" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
+<div className="flex items-center gap-4">
+<div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
+<TrendingIcon className="w-7 h-7 text-white" />
+</div>
+<div>
+<p className="font-black text-xl">+35% conversion</p>
+<p className="text-slate-500 text-sm">client average</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-      {/* SECTION 2: DARK - Features */}
-      <section className="bg-gradient-to-br from-slate-900 via-purple-950 to-purple-900 text-white py-20 lg:py-24 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-purple-500 opacity-10 rounded-full blur-3xl"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black mb-4">What's Included</h2>
-            <p className="text-purple-200 text-lg max-w-2xl mx-auto">Everything you need to manage your contacts and sales.</p>
-          </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {FEATURES.map(({icon: Icon, title, desc}: any) => (
-          <div key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
-          <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-            <Icon className="w-6 h-6 text-purple-300" />
-          </div>
-          <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-          <p className="text-purple-200 text-sm">{desc}</p>
-        </div>
-        ))}
-      </div>
-        </div>
-      </section>
+{/* SECTION 2: FEATURES */}
+<section className="bg-gradient-to-br from-slate-900 via-orange-950 to-amber-900 text-white py-20 lg:py-28 overflow-hidden relative">
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-orange-500 opacity-10 rounded-full blur-3xl animate-pulse"></div>
+<div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-amber-500 opacity-10 rounded-full blur-3xl"></div>
+</div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div className="text-center mb-16 animate-fade-in-up">
+<h2 className="text-4xl lg:text-5xl font-black mb-4">What's Included</h2>
+<p className="text-orange-200 text-xl max-w-2xl mx-auto">Everything you need to manage your contacts and sales.</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+{FEATURES.map(({icon: Icon, title, desc}, i) => (
+<div key={title} className={`modern-box-dark p-8 text-center hover:scale-105 transition-all duration-500 animate-delay-${(i+1)*100}`}>
+<div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+<Icon className="w-8 h-8 text-white" />
+</div>
+<h3 className="font-bold text-xl text-white mb-3">{title}</h3>
+<p className="text-orange-200 leading-relaxed">{desc}</p>
+</div>
+))}
+</div>
+</div>
+</section>
 
-      {/* SECTION 3: LIGHT - Stats */}
-      <section className="bg-white border-b border-slate-100 py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div><p className="text-4xl font-black text-purple-600">250K+</p><p className="text-slate-500 text-sm mt-1">B2B Contacts</p></div>
-          <div><p className="text-4xl font-black text-purple-600">98%</p><p className="text-slate-500 text-sm mt-1">Verified Data</p></div>
-          <div><p className="text-4xl font-black text-purple-600">+35%</p><p className="text-slate-500 text-sm mt-1">Conversion Rate</p></div>
-          <div><p className="text-4xl font-black text-purple-600">48h</p><p className="text-slate-500 text-sm mt-1">Full Setup</p></div>
-        </div>
-      </section>
+{/* SECTION 3: STATS */}
+<section className="bg-white py-16 border-b border-slate-100">
+<div className="max-w-7xl mx-auto px-4">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">250K+</p>
+<p className="text-slate-600 mt-2 font-medium">B2B Contacts</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">98%</p>
+<p className="text-slate-600 mt-2 font-medium">Verified Data</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">+35%</p>
+<p className="text-slate-600 mt-2 font-medium">Conversion Rate</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">48h</p>
+<p className="text-slate-600 mt-2 font-medium">Full Setup</p>
+</div>
+</div>
+</div>
+</section>
 
-      {/* SECTION 4: LIGHT - How it works */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">How It Works</h2>
-            <div className="w-16 h-1 bg-purple-600 mx-auto rounded"></div>
-          </div>
-          {STEPS.map(({n, t, d}: any) => (
-            <div key={n} className="flex gap-5 mb-8 items-start">
-              <div className="w-12 h-12 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
-              <div className="pt-1">
-                <h3 className="font-bold text-slate-900 text-lg mb-1">{t}</h3>
-                <p className="text-slate-500">{d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+{/* SECTION 4: HOW IT WORKS */}
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+<div className="max-w-6xl mx-auto px-4">
+<div className="text-center mb-16">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">How It Works</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+{[
+{n: '1', t: 'Audit', d: 'Analysis of existing data and cleanup'},
+{n: '2', t: 'Configuration', d: 'Module customization based on your process'},
+{n: '3', t: 'Import', d: 'Migration of contacts without data loss'},
+{n: '4', t: 'Training', d: 'Team training and ongoing support'},
+].map((step, i) => (
+<div key={step.n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
+<div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
+<h3 className="font-bold text-xl text-slate-900 mb-3">{step.t}</h3>
+<p className="text-slate-600 leading-relaxed">{step.d}</p>
+</div>
+))}
+</div>
+</div>
+</section>
 
-      {/* SECTION 5: LIGHT - Benefits */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-14">
-            <div className="w-full lg:w-[55%]">
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">Why Choose Our CRM?</h2>
-              <p className="text-slate-600 text-lg mb-6">We don't just sell you software. We help you structure your sales process from A to Z.</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Training included — no endless learning curves</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Dedicated support — fast responses</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Automatic updates, no hidden fees</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Integrated with our outbound calling services</li>
-              </ul>
-              <Link href="/en/contact?service=crm" className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-purple-700 transition-colors">
-                See a Demo →
-              </Link>
-            </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <ClockIcon className="w-6 h-6 text-purple-600" />
-                  <span className="font-bold text-slate-900">Time Saved</span>
-                </div>
-                <p className="text-slate-600 mb-6">Our clients save an average of 8 hours per week managing their contacts.</p>
-                <div className="flex items-center gap-3 mb-4">
-                  <ShieldCheckIcon className="w-6 h-6 text-purple-600" />
-                  <span className="font-bold text-slate-900">Secure Data</span>
-                </div>
-                <p className="text-slate-600">Hosted in Canada, GDPR and PIPEDA compliant.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* SECTION 5: BENEFITS */}
+<section className="py-20 bg-white">
+<div className="max-w-7xl mx-auto px-4">
+<div className="flex flex-col lg:flex-row items-center gap-16">
+<div className="w-full lg:w-1/2">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Why Choose Our CRM?</h2>
+<p className="text-xl text-slate-600 mb-8 leading-relaxed">We don't just sell you software. We help you structure your sales process from A to Z.</p>
+<ul className="space-y-4 mb-8">
+{[
+'Training included — no endless learning curves',
+'Dedicated support — fast responses',
+'Automatic updates, no hidden fees',
+'Integrated with our outbound calling services',
+].map((item, i) => (
+<li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
+<span className="w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+<CheckIcon className="w-5 h-5"/>
+</span>
+{item}
+</li>
+))}
+</ul>
+<Link href="/en/contact?service=crm" className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+See a Demo
+</Link>
+</div>
+<div className="w-full lg:w-1/2">
+<div className="modern-box p-10 bg-gradient-to-br from-slate-50 to-orange-50">
+<h3 className="font-bold text-2xl text-slate-900 mb-6">Pricing Adapted to Your Growth</h3>
+<p className="text-slate-600 text-lg mb-4">Competitive pricing, no long-term commitment. You pay for what you use.</p>
+<ul className="space-y-3 mb-6">
+<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-orange-600"/> No hidden fees</li>
+<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-orange-600"/> Cancel anytime</li>
+<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-orange-600"/> Support included</li>
+</ul>
+<Link href="/en/pricing" className="text-orange-600 font-bold text-lg hover:underline flex items-center gap-2">
+View all pricing
+</Link>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-      {/* SECTION 6: LIGHT - Testimonials */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
-            <div className="w-16 h-1 bg-purple-600 mx-auto rounded"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                </div>
-                <p className="text-slate-600 mb-5 leading-relaxed italic">"{t.q}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-slate-900 text-sm">{t.name}</p>
-                    <p className="text-slate-500 text-xs">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 6: TESTIMONIALS */}
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-16">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+{TESTIMONIALS.map((t, i) => (
+<div key={i} className={`modern-box p-8 testimonial-card animate-delay-${(i+1)*100}`}>
+<div className="flex gap-1 mb-5">
+{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
+</div>
+<p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
+<div className="flex items-center gap-4">
+<div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
+<div>
+<p className="font-bold text-slate-900">{t.name}</p>
+<p className="text-slate-500 text-sm">{t.role}</p>
+</div>
+</div>
+</div>
+))}
+</div>
+</div>
+</section>
 
-      {/* SECTION 7: DARK - Final CTA */}
-      <section className="bg-gradient-to-br from-slate-900 to-purple-800 py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Centralize Your Leads?</h2>
-          <p className="text-purple-200 text-lg mb-10 max-w-2xl mx-auto">CRM + qualified lists + French-speaking support. Everything you need to sell more.</p>
-          <CTAButtons slug="crm"/>
-          <p className="text-purple-300 text-sm mt-6">
-            <Link href="/en/pricing" className="underline hover:text-white">View all pricing</Link> · <Link href="/en/contact" className="underline hover:text-white">Contact us</Link>
-          </p>
-        </div>
-      </section>
+{/* SECTION 7: FINAL CTA */}
+<section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 py-24 relative overflow-hidden">
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
+</div>
+<div className="max-w-4xl mx-auto px-4 text-center text-white relative">
+<h2 className="text-4xl lg:text-5xl font-black mb-6">Ready to Centralize Your Leads?</h2>
+<p className="text-orange-200 text-xl mb-12 max-w-2xl mx-auto">CRM + qualified lists + dedicated support. Everything you need to sell more.</p>
+<CTAButtons slug="crm"/>
+<p className="text-orange-300 mt-8 text-lg">
+<Link href="/en/pricing" className="underline hover:text-white transition-colors">View Pricing</Link>
+<span className="mx-3">·</span>
+<Link href="/en/contact" className="underline hover:text-white transition-colors">Contact Us</Link>
+</p>
+</div>
+</section>
 
-      {/* SECTION 8: LIGHT - FAQ */}
-      <section className="bg-white py-20 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-slate-600 mb-8">Everything you need to know before getting started.</p>
-          <div className="text-left space-y-4">
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Can I import my existing contacts?</summary>
-              <p className="text-slate-600 mt-2">Yes, we handle the migration. Excel, CSV, Google Contacts, old CRM — we import everything without data loss.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">Are the B2B lists up to date?</summary>
-              <p className="text-slate-600 mt-2">We update them monthly. Bounce rate guaranteed under 5%, or we replace them.</p>
-            </details>
-            <details className="bg-slate-50 rounded-xl p-4 cursor-pointer">
-              <summary className="font-bold text-slate-900">How long does training take?</summary>
-              <p className="text-slate-600 mt-2">About 2 hours. We show you the basics and remain available for questions.</p>
-            </details>
-          </div>
-          <Link href="/en/contact?service=crm" className="inline-block mt-8 bg-purple-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-purple-700">
-            Get Started Now
-          </Link>
-        </div>
-      </section>
-    </>
-  )
+{/* SECTION 8: FAQ */}
+<section className="bg-white py-20">
+<div className="max-w-4xl mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
+</div>
+<div className="space-y-6 stagger-children">
+{[
+{q: "Can I import my existing contacts?", a: "Yes, we handle the migration. Excel, CSV, Google Contacts, old CRM — we import everything without data loss."},
+{q: "Are the B2B lists up to date?", a: "We update them monthly. Bounce rate guaranteed under 5%, otherwise we replace them."},
+{q: "How long does training take?", a: "About 2 hours. We show you the basics, and we're available for questions."},
+].map((faq, i) => (
+<details key={i} className={`modern-box p-6 cursor-pointer animate-delay-${(i+1)*100}`}>
+<summary className="font-bold text-xl text-slate-900">{faq.q}</summary>
+<p className="text-slate-600 mt-4 text-lg leading-relaxed">{faq.a}</p>
+</details>
+))}
+</div>
+<div className="text-center mt-12">
+<Link href="/en/contact?service=crm" className="inline-block bg-gradient-to-r from-orange-600 to-amber-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+Get Started Now
+</Link>
+</div>
+</div>
+</section>
+</>
+)
 }
