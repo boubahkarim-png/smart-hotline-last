@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_CA',
     siteName: 'Smart Hotline',
-    url: 'https://boubahkarim-png.github.io/fr/',
+    url: 'https://smart-hotline.com/fr/',
     images: [
       {
-        url: 'https://boubahkarim-png.github.io/og-image.png',
+        url: 'https://smart-hotline.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Smart Hotline - Votre Partenaire Téléphonique Quebec',
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/fr/',
+    canonical: 'https://smart-hotline.com/fr/',
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/',
+      'fr-CA': 'https://smart-hotline.com/fr/',
+      'en-CA': 'https://smart-hotline.com/en/',
     },
   },
 }

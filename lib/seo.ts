@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import type { Lang } from './i18n'
 
-const BASE_URL = 'https://boubahkarim-png.github.io/smart-hotline-last'
+const BASE_URL = 'https://smart-hotline.com'
 
 export const SEO_FR = {
   title: 'Smart Hotline Agency | Centre d\'Appels & IA pour PME',
   description: 'Externalisez votre relation client avec des conseillers professionnels et agents IA vocaux 24/7. Réception appels, prospection, support client. Essai gratuit 2 semaines.',
   keywords: 'centre d\'appels PME, externalisation relation client, réception téléphonique, agents IA vocaux, support client 24/7, Sophie IA, call center Québec, télésecrétariat, prospection téléphonique',
-  ogImage: '/smart-hotline-last/images/main-hero.jpg',
+  ogImage: '/images/main-hero.jpg',
   twitterCard: 'summary_large_image',
   author: 'Smart Hotline Agency',
   robots: 'index, follow',
@@ -18,7 +18,7 @@ export const SEO_EN = {
   title: 'Smart Hotline Agency | Call Center & AI for SMBs',
   description: 'Outsource your customer relations with professional agents and AI voice assistants 24/7. Call reception, prospecting, customer support. Free 2-week trial.',
   keywords: 'call center SMB, customer service outsourcing, phone reception, AI voice agents, 24/7 support, Sophie AI, call center Quebec, telemarketing, inbound calls',
-  ogImage: '/smart-hotline-last/images/main-hero.jpg',
+  ogImage: '/images/main-hero.jpg',
   twitterCard: 'summary_large_image',
   author: 'Smart Hotline Agency',
   robots: 'index, follow',
@@ -94,7 +94,7 @@ export const JSON_LD_FR = {
   "alternateName": "Smart Hotline",
   "description": SEO_FR.description,
   "url": BASE_URL,
-  "logo": `${BASE_URL}/smart-hotline-last/favicon.ico`,
+  "logo": `${BASE_URL}/favicon.ico`,
   "image": SEO_FR.ogImage,
   "telephone": "+1-514-819-0559",
   "email": "direction@smart-hotline.com",

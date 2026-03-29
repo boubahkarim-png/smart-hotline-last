@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/support/',
+    canonical: 'https://smart-hotline.com/en/support/',
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/support/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/support/',
+      'fr-CA': 'https://smart-hotline.com/fr/support/',
+      'en-CA': 'https://smart-hotline.com/en/support/',
     },
   },
 }
