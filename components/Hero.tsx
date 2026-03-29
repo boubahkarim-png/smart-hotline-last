@@ -77,7 +77,7 @@ export default function Hero({
                 <div className="flex items-center gap-2.5">
                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-lg">✅</div>
                   <div>
-                    <p className="font-bold text-sm">500+ PME</p>
+                    <p className="font-bold text-sm">5000+ PME</p>
                     <p className="text-xs text-gray-500">Font confiance</p>
                   </div>
                 </div>

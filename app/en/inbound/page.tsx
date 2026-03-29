@@ -76,7 +76,7 @@ export default function Page() {
                       <PhoneIcon className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <p className="font-black text-xl">500+ calls/day</p>
+                      <p className="font-black text-xl">5000+ calls/day</p>
                       <p className="text-slate-500 text-sm">managed for our clients</p>
                     </div>
                   </div>

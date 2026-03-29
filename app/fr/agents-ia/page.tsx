@@ -124,7 +124,7 @@ Sophie, votre IA<br/>
 <p className="text-slate-600 mt-2 font-medium">Temps de réponse</p>
 </div>
 <div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">500+</p>
+<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">5000+</p>
 <p className="text-slate-600 mt-2 font-medium">Entreprises servies</p>
 </div>
 <div className="modern-box p-8">

@@ -222,7 +222,7 @@ une relation client irréprochable, adaptée à leurs besoins spécifiques.
         <section className="bg-white py-20 border-t border-slate-100">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Prêt à écrire votre histoire de succès?</h2>
-            <p className="text-slate-600 text-lg mb-8">Comme nos 500+ PME partenaires, découvrez ce qu'une relation client exceptionnelle peut faire pour votre business.</p>
+            <p className="text-slate-600 text-lg mb-8">Comme nos 5000+ PME partenaires, découvrez ce qu'une relation client exceptionnelle peut faire pour votre business.</p>
             <Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Commencer Votre Transformation</Link>
           </div>
         </section>

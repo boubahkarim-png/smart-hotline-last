@@ -93,14 +93,14 @@ export default function GeoWhyUsSection({ lang = 'fr' }: { lang?: 'fr' | 'en' })
   
   const getTitle = () => {
     if (fr) {
-      if (countryCode === 'CA') return `Pourquoi 500+ PME du Quebec nous font confiance`
+      if (countryCode === 'CA') return `Pourquoi 5000+ PME du Quebec nous font confiance`
       if (countryCode === 'FR') return `Pourquoi ${content.stats.clientsCount}+ PME en France nous font confiance`
       if (countryCode === 'BE') return `Pourquoi ${content.stats.clientsCount}+ PME en Belgique nous font confiance`
       if (countryCode === 'CH') return `Pourquoi ${content.stats.clientsCount}+ PME en Suisse nous font confiance`
-      return `Pourquoi 500+ PME nous font confiance`
+      return `Pourquoi 5000+ PME nous font confiance`
     } else {
       if (countryCode === 'US') return `Why ${content.stats.clientsCount}+ US businesses trust us`
-      return `Why 500+ businesses trust us`
+      return `Why 5000+ businesses trust us`
     }
   }
   

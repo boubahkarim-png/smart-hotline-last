@@ -10,7 +10,7 @@ const SERVICES = [
   { icon: "🏭", title: "Industry Expertise", desc: "Specialized solutions for healthcare, real estate, legal, and more.", href: "/en/sectors", color: "orange" },
 ]
 const STATS = [
- { value: "500+", label: "SMEs accompanied" },
+ { value: "5000+", label: "SMEs accompanied" },
  { value: "98%", label: "Client satisfaction" },
  { value: "24/7", label: "Availability" },
  { value: "50K+", label: "Calls handled/month" },

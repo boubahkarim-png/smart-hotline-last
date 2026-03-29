@@ -9,7 +9,7 @@ const SERVICES = [
   { icon: "🗄️", title: "CRM & Listes", desc: "CRM SuiteCRM integre + listes de prospection B2B/B2C qualifiees.", href: "/fr/crm", color: "indigo" },
 ]
 const STATS = [
-  { value: "500+", label: "PME accompagnees" },
+  { value: "5000+", label: "PME accompagnees" },
   { value: "98%", label: "Satisfaction client" },
   { value: "24/7", label: "Disponibilite" },
   { value: "50K+", label: "Appels traites/mois" },

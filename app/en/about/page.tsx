@@ -221,7 +221,7 @@ export default function About() {
       <section className="bg-white py-20 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to write your success story?</h2>
-          <p className="text-slate-600 text-lg mb-8">Like our 500+ partner SMEs, discover what exceptional customer relationships can do for your business.</p>
+          <p className="text-slate-600 text-lg mb-8">Like our 5000+ partner SMEs, discover what exceptional customer relationships can do for your business.</p>
           <Link href="/en/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Start Your Transformation</Link>
         </div>
       </section>

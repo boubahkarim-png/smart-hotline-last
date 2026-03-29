@@ -18,7 +18,7 @@ const SERVICES = [
 ]
 
 const MOVING_MESSAGES = [
-"500+ calls managed daily",
+"5000+ calls managed daily",
 "98% customer satisfaction",
 "Answer in under 3 rings",
 "Available 24/7",
@@ -95,7 +95,7 @@ Local SMEs
 <PhoneIcon className="w-7 h-7 text-white" />
 </div>
 <div>
-<p className="font-black text-xl">500+ calls/day</p>
+<p className="font-black text-xl">5000+ calls/day</p>
 <p className="text-slate-500 text-sm">managed for clients</p>
 </div>
 </div>

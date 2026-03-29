@@ -20,7 +20,7 @@ const SERVICES = [
 ]
 
 const MOVING_MESSAGES = [
-"500+ appels gérés par jour",
+"5000+ appels gérés par jour",
 "98% de satisfaction client",
 "Réponse en moins de 3 sonneries",
 "Disponible 24/7",
@@ -97,7 +97,7 @@ les PME d\'Ici
 <PhoneIcon className="w-7 h-7 text-white" />
 </div>
 <div>
-<p className="font-black text-xl">500+ appels/jour</p>
+<p className="font-black text-xl">5000+ appels/jour</p>
 <p className="text-slate-500 text-sm">gérés pour nos clients</p>
 </div>
 </div>

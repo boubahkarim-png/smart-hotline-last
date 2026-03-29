@@ -22,7 +22,7 @@ const SECTORS = [
 
 const STATS = [
   { value: '20+', label: 'Secteurs desservis' },
-  { value: '500+', label: 'PME accompagnees' },
+  { value: '5000+', label: 'PME accompagnees' },
   { value: '98%', label: 'Taux de satisfaction' },
   { value: '24/7', label: 'Disponibilite' },
 ]

@@ -22,7 +22,7 @@ const SECTORS = [
 
 const STATS = [
   { value: '20+', label: 'Sectors served' },
-  { value: '500+', label: 'SMEs accompanied' },
+  { value: '5000+', label: 'SMEs accompanied' },
   { value: '98%', label: 'Satisfaction rate' },
   { value: '24/7', label: 'Availability' },
 ]

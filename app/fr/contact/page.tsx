@@ -163,7 +163,7 @@ export default function FrContact() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            {n:'500+', l:'PME accompagnées'},
+            {n:'5000+', l:'PME accompagnées'},
             {n:'98%', l:'Taux de satisfaction'},
             {n:'24/7', l:'Disponibilité'},
             {n:'70%', l:'Économie moyenne'}
