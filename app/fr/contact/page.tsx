@@ -1,6 +1,6 @@
 'use client'
 import basePath from '@/lib/basePath'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 
@@ -10,33 +10,12 @@ export default function FrContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
-  const [csrfToken, setCsrfToken] = useState('')
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
 
-  useEffect(() => {
-    async function fetchCsrfToken() {
-      try {
-        const response = await fetch('/api/csrf')
-        if (response.ok) {
-          const data = await response.json()
-          setCsrfToken(data.token)
-        }
-      } catch (err) {
-        console.error('Failed to fetch CSRF token')
-      }
-    }
-    fetchCsrfToken()
-  }, [])
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    
-    if (!csrfToken) {
-      setError('Erreur de sécurité. Veuillez rafraîchir la page.')
-      return
-    }
-    
+
     setSending(true)
     setError('')
     const form = e.currentTarget
@@ -64,12 +43,11 @@ export default function FrContact() {
       return
     }
 
-    try {
+  try {
       const response = await fetch(`${API_URL}/leads/contact.php`, {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': csrfToken
+        headers: {
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
@@ -192,12 +170,11 @@ export default function FrContact() {
               <p className="text-green-700 text-lg">Nous vous répondons sous 2h.</p>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6"
-            >
-              <input type="hidden" name="csrf_token" value={csrfToken} />
-              <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
+<form
+        onSubmit={handleSubmit}
+        className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6"
+      >
+        <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {[
@@ -250,28 +227,18 @@ export default function FrContact() {
                 </select>
               </div>
 
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  maxLength={2000}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-                  placeholder="Décrivez vos besoins, vos horaires, votre secteur..."
-                />
-              </div>
+      <div className="mb-5">
+        <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
+        <textarea
+          name="message"
+          rows={5}
+          maxLength={2000}
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+          placeholder="Décrivez vos besoins, vos horaires, votre secteur..."
+        />
+      </div>
 
-              <div className="mb-6">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
-                  <span className="text-sm text-slate-600">
-                    J&apos;accepte le traitement de mes données conformément à la{' '}
-                    <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
-                  </span>
-                </label>
-              </div>
-
-              {error && (
+      {error && (
                 <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
                   {error}
                 </div>
