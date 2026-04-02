@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: { unoptimized: true },
-  basePath: '/smart-hotline-late2',
-  assetPrefix: '/smart-hotline-late2',
+  basePath: '/smart-hotline-last',
+  assetPrefix: '/smart-hotline-last',
 }
 module.exports = nextConfig
