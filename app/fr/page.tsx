@@ -57,7 +57,7 @@ les PME d&#39;Ici
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/smart-hotline-last/images/main-hero.jpg"
+                <img src="/images/main-hero.jpg"
                   alt="Equipe Smart Hotline"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'420px', objectFit:'cover'}}/>
@@ -188,7 +188,7 @@ return (
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src="/smart-hotline-last/images/agents-ia-hero.jpg"
+              <img src="/images/agents-ia-hero.jpg"
                 alt="Agent IA Sophie"
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
@@ -255,10 +255,10 @@ return (
 <video
   className="w-full aspect-video"
   controls
-  poster="/smart-hotline-last/images/team.webp"
+  poster="/images/team.webp"
   preload="metadata"
 >
-<source src="/smart-hotline-last/videos/smart_hotline_promo.webm" type="video/webm" />
+<source src="/videos/smart_hotline_promo.webm" type="video/webm" />
 <p>Votre navigateur ne supporte pas la lecture vidéo.</p>
 </video>
 </div>

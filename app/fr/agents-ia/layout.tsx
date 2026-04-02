@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/smart-hotline-last/fr/agents-ia/',
+    canonical: 'https://boubahkarim-png.github.io/fr/agents-ia/',
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/smart-hotline-last/fr/agents-ia/',
-      'en-CA': 'https://boubahkarim-png.github.io/smart-hotline-last/en/ai-agents/',
+      'fr-CA': 'https://boubahkarim-png.github.io/fr/agents-ia/',
+      'en-CA': 'https://boubahkarim-png.github.io/en/ai-agents/',
     },
   },
 }

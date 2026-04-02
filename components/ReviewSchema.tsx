@@ -14,7 +14,7 @@ interface ReviewSchemaProps {
   itemDescription?: string
 }
 
-const BASE_URL = 'https://boubahkarim-png.github.io/smart-hotline-last'
+const BASE_URL = 'https://www.smart-hotline.com'
 
 export function ReviewSchema({
   reviews,
