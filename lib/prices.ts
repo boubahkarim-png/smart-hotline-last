@@ -1,7 +1,9 @@
 
 // ============================================================
-// PRICES — Market-adapted pricing per country
-// Based on competitor research: Retell AI, Ruby, Bland, market data
+// PRICES — Premium Monthly Packages (4+ tiers per service)
+// Outbound: HOURLY RATE (unchanged) + CRM + autodialer features
+// Other services: Monthly packages with included volume
+// Geo-adapted pricing per country (not simple conversion)
 // ============================================================
 
 export type Currency = 'CAD' | 'EUR' | 'USD' | 'CHF'
@@ -10,105 +12,112 @@ export interface CurrencyConfig {
   symbol: string
   code: Currency
   locale: string
-  // Outbound human agents per hour (appointment setting)
-  outbound_trial: number
-  outbound: number[] // [Starter 20h, Pro 40h, Business 80h, Enterprise 120h]
-  // AI voice agents per minute
-  // Market: Retell $0.07-0.31/min, Bland $0.07/min base
-  // Our pricing: 30% below market for adoption
-  ai_per_min: number[] // [Starter, Pro, Business, Enterprise]
-  // Inbound monthly packages
-  // Market: Ruby $250/50min, $395/100min, $720/200min
-  // Our pricing: per-call packages (more transparent)
-  inbound: number[] // [Basic 500 calls, Advanced 1500, Premium 2500]
-  // Support monthly (tickets, email, chat)
-  support: number[] // [Basic, Pro, Premium]
-  // CRM monthly
-  crm: number[] // [Starter, Pro, Enterprise]
+  // Outbound - HOURLY RATE (per hour, unchanged from original)
+  outbound_trial: number // trial hourly rate
+  outbound: number[] // hourly rates [20h, 40h, 80h, 120h, unlimited tiers]
+  // AI voice agents - Monthly packages with included minutes
+  ai_monthly: number[] // [Starter, Pro, Business, Enterprise]
+  ai_minutes: number[] // included minutes per tier
+  ai_per_min: number[] // overage rate per tier
+  // Inbound reception - Monthly packages with included calls
+  inbound: number[] // [Starter, Pro, Business, Enterprise]
+  inbound_calls: number[] // included calls per tier
+  inbound_per_call: number[] // overage rate per tier
+  // CRM - Monthly only (no setup fee)
+  crm_monthly: number[] // [Starter, Pro, Business, Enterprise]
+  crm_contacts: number[] // contact limit
 }
 
 // ============================================================
-// CANADA PRICING (CAD)
-// Market: Ruby $250-1725/mo, local call centers $15-25/h
+// CANADA PRICING (CAD) - Premium market
 // ============================================================
 export const PRICES_CA: CurrencyConfig = {
   symbol: 'CA$',
   code: 'CAD',
   locale: 'fr-CA',
-  // Outbound: competitive with local agencies
+  // Outbound - HOURLY RATE (unchanged)
   outbound_trial: 15,
-  outbound: [19, 18, 17, 16], // per hour, volume discounts
-  // AI: 25% below Retell ($0.11-0.31/min)
-  ai_per_min: [0.15, 0.18, 0.14, 0.12],
-  // Inbound: starts at $499 - premium positioning
-  inbound: [499, 749, 999],
-  // Support: multi-channel
-  support: [399, 599, 849],
-  // CRM: aggressive (selected)
-  crm: [149, 289, 449],
+  outbound: [19, 18, 17, 16, 15], // per hour, more hours = lower rate
+  // AI Voice Agents - 4 tiers
+  ai_monthly: [324, 799, 1999, 3499],
+  ai_minutes: [500, 2000, 6000, 15000],
+  ai_per_min: [0.40, 0.32, 0.25, 0.20],
+  // Inbound Reception - 4 tiers
+  inbound: [699, 999, 2499, 4499],
+  inbound_calls: [100, 300, 1000, 2500],
+  inbound_per_call: [6.50, 4.00, 2.50, 2.00],
+  // CRM - Monthly only
+  crm_monthly: [249, 499, 1099, 1999],
+  crm_contacts: [500, 2000, 10000, 50000],
 }
 
 // ============================================================
 // FRANCE/EUROPE PRICING (EUR)
-// Market: French call centers €12-20/h, lower labor costs
 // ============================================================
 export const PRICES_EU: CurrencyConfig = {
   symbol: '€',
   code: 'EUR',
   locale: 'fr-FR',
-  // Outbound: lower than Canada due to labor costs
+  // Outbound - HOURLY RATE (unchanged)
   outbound_trial: 11,
-  outbound: [13, 12, 11, 10],
-  // AI: similar tech costs
-  ai_per_min: [0.12, 0.15, 0.11, 0.09],
-  // Inbound: starts at €399 - premium positioning
-  inbound: [399, 599, 799],
-  // Support
-  support: [319, 479, 699],
-  // CRM: aggressive
-  crm: [119, 229, 359],
+  outbound: [13, 12, 11, 10, 9], // per hour, more hours = lower rate
+  // AI Voice Agents - 4 tiers
+  ai_monthly: [259, 649, 1649, 2899],
+  ai_minutes: [500, 2000, 6000, 15000],
+  ai_per_min: [0.35, 0.28, 0.22, 0.18],
+  // Inbound Reception - 4 tiers
+  inbound: [599, 899, 2199, 3999],
+  inbound_calls: [100, 300, 1000, 2500],
+  inbound_per_call: [5.50, 3.50, 2.20, 1.80],
+  // CRM - Monthly only
+  crm_monthly: [199, 399, 899, 1699],
+  crm_contacts: [500, 2000, 10000, 50000],
 }
 
 // ============================================================
 // USA PRICING (USD)
-// Market: Most competitive, Ruby, AnswerConnect, etc.
 // ============================================================
 export const PRICES_US: CurrencyConfig = {
   symbol: '$',
   code: 'USD',
   locale: 'en-US',
-  // Outbound: competitive with US market
+  // Outbound - HOURLY RATE (unchanged)
   outbound_trial: 12,
-  outbound: [14, 13, 12, 11],
-  // AI: Retell $0.07-0.31/min base
-  ai_per_min: [0.13, 0.16, 0.12, 0.10],
-  // Inbound: starts at $449 - premium positioning
-  inbound: [449, 679, 899],
-  // Support
-  support: [359, 539, 769],
-  // CRM: aggressive
-  crm: [129, 249, 389],
+  outbound: [14, 13, 12, 11, 10], // per hour, more hours = lower rate
+  // AI Voice Agents - 4 tiers
+  ai_monthly: [259, 649, 1649, 2899],
+  ai_minutes: [500, 2000, 6000, 15000],
+  ai_per_min: [0.35, 0.28, 0.22, 0.18],
+  // Inbound Reception - 4 tiers
+  inbound: [599, 899, 2199, 3999],
+  inbound_calls: [100, 300, 1000, 2500],
+  inbound_per_call: [5.50, 3.50, 2.20, 1.80],
+  // CRM - Monthly only
+  crm_monthly: [199, 399, 899, 1699],
+  crm_contacts: [500, 2000, 10000, 50000],
 }
 
 // ============================================================
-// SWITZERLAND PRICING (CHF)
-// Market: Higher wages, premium pricing accepted
+// SWITZERLAND PRICING (CHF) - Premium market
 // ============================================================
 export const PRICES_CH: CurrencyConfig = {
   symbol: 'CHF ',
   code: 'CHF',
   locale: 'fr-CH',
-  // Outbound: premium pricing for Swiss market
+  // Outbound - HOURLY RATE (unchanged)
   outbound_trial: 14,
-  outbound: [17, 16, 15, 14],
-  // AI: similar tech, premium positioning
-  ai_per_min: [0.16, 0.19, 0.14, 0.12],
-  // Inbound: starts at CHF 549 - premium
-  inbound: [549, 819, 1089],
-  // Support
-  support: [439, 659, 929],
-  // CRM: aggressive
-  crm: [159, 309, 479],
+  outbound: [17, 16, 15, 14, 13], // per hour, more hours = lower rate
+  // AI Voice Agents - 4 tiers
+  ai_monthly: [324, 799, 1999, 3499],
+  ai_minutes: [500, 2000, 6000, 15000],
+  ai_per_min: [0.45, 0.35, 0.28, 0.22],
+  // Inbound Reception - 4 tiers
+  inbound: [749, 1099, 2699, 4899],
+  inbound_calls: [100, 300, 1000, 2500],
+  inbound_per_call: [7.00, 4.50, 2.80, 2.20],
+  // CRM - Monthly only
+  crm_monthly: [249, 499, 1099, 1999],
+  crm_contacts: [500, 2000, 10000, 50000],
 }
 
 export const PRICES: Record<Currency, CurrencyConfig> = {
@@ -119,7 +128,7 @@ export const PRICES: Record<Currency, CurrencyConfig> = {
 }
 
 // ============================================================
-// GEO CONFIGURATION
+// GEO CONFIGURATION - Different pricing per region
 // ============================================================
 export interface GeoConfig {
   currency: Currency
@@ -163,18 +172,47 @@ export const COUNTRY_MAP: Record<string, GeoConfig> = {
   IT: { currency: 'EUR', showPhone: false, lang: 'fr', country: 'Italie' },
 }
 
-export const DEFAULT_GEO: GeoConfig = { 
-  currency: 'EUR', 
-  showPhone: false, 
-  lang: 'fr', 
-  country: '' 
+export const DEFAULT_GEO: GeoConfig = {
+  currency: 'EUR',
+  showPhone: false,
+  lang: 'fr',
+  country: ''
+}
+
+const GEO_CACHE_KEY = 'smart_hotline_geo_cache'
+const GEO_CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
+
+interface GeoCache {
+  data: GeoConfig
+  timestamp: number
 }
 
 export async function detectGeo(): Promise<GeoConfig> {
+  if (typeof window !== 'undefined') {
+    try {
+      const cached = localStorage.getItem(GEO_CACHE_KEY)
+      if (cached) {
+        const parsed: GeoCache = JSON.parse(cached)
+        if (Date.now() - parsed.timestamp < GEO_CACHE_TTL) {
+          return parsed.data
+        }
+      }
+    } catch {}
+  }
+
   try {
     const r = await fetch('https://ipapi.co/json/')
     const d = await r.json()
-    return COUNTRY_MAP[d.country_code] || { ...DEFAULT_GEO, country: d.country_name || '' }
+    const result = COUNTRY_MAP[d.country_code] || { ...DEFAULT_GEO, country: d.country_name || '' }
+
+    if (typeof window !== 'undefined') {
+      try {
+        const cache: GeoCache = { data: result, timestamp: Date.now() }
+        localStorage.setItem(GEO_CACHE_KEY, JSON.stringify(cache))
+      } catch {}
+    }
+
+    return result
   } catch {
     return DEFAULT_GEO
   }
