@@ -9,7 +9,7 @@ export default function VideoHero() {
         muted
         playsInline
         className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
-        poster="/smart-hotline-last/images/main-hero.jpg"
+        poster="/images/main-hero.jpg"
       >
         <source src="/videos/smart_hotline_promo.webm" type="video/webm" />
         <p>Your browser does not support the video tag.</p>

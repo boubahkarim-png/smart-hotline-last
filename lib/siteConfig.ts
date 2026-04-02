@@ -1,7 +1,7 @@
 // Centralized site configuration
 // These values are injected at BUILD TIME via environment variables
 
-export const basePath = process.env.NEXT_BASEPATH || '/smart-hotline-last'
+export const basePath = process.env.NEXT_BASEPATH || ''
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boubahkarim-png.github.io'
 
 // Helper for asset paths
