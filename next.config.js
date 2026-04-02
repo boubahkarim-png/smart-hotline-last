@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NEXT_BASEPATH ?? ''
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  images: { unoptimized: true },
-  basePath: '/smart-hotline-last',
-  assetPrefix: '/smart-hotline-last',
+  basePath: basePath,
+  assetPrefix: basePath,
+  images: {
+    unoptimized: true,
+  },
 }
+
 module.exports = nextConfig
