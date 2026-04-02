@@ -1,56 +1,151 @@
-# STATE: smart-hotline-nextjs
-_Last updated: 2026-03-24_
+# Project State: Smart Hotline Next.js Website
 
-## Current State
-ACTIVE PROJECT. Next.js 14.2 website for Smart Hotline Agency deployed on GitHub Pages.
+**Project:** Smart Hotline Next.js Website
+**Core Value:** Bilingual (FR/EN) agency website with geo-aware content, deployed on GitHub Pages
+**Started:** 2026-03-22
 
-**LIVE SITE:** https://boubahkarim-png.github.io/smart-hotline-late2/fr/
+---
 
-**TECH STACK:**
-- Next.js 14.2 + TypeScript + Tailwind v4 (CSS-first)
-- Static export to GitHub Pages
-- Geo-aware content (ipapi.co)
+## Current Position
 
-**FEATURES COMPLETE:**
-- French/English pages with full navigation
-- Geo-aware CTA (phone for CA/US, WhatsApp for others)
-- Tawk.to chat integration
-- Pricing page with currency detection
-- Service pages: reception, emission, agents-ia, support, crm
-- SEO metadata optimized (titles, descriptions, keywords, OpenGraph, alternates)
-- Sitemap.xml with hreflang alternates for FR/EN
-- Robots.txt configured
-- Video infrastructure with GeoAwareVideo component
-- Reusable UI components: Section, SectionTitle, FeaturesGrid, CTASection
-- Harmonized backgrounds (light/dark/muted alternation)
+**Current Phase:** Phase 2 - Content & SEO
+**Current Plan:** All FR and EN service pages complete with 8 sections each
+**Status:** ACTIVE - Live and functional
 
-**CURRENT WORK:**
-- SEO keyword strategy document created
-- Metadata optimized for homepage and layouts
-- EN pages need full translation (most are placeholders)
+**Overall Progress:**
+```
+[████████████████████████████████████░░] 90% (FR and EN pages complete)
+```
 
-## Decisions Made
-- 2026-03-22: Project created from smart-hotline-web
-- 2026-03-23: Tailwind v4 CSS-first approach (no config file)
-- 2026-03-24: Tawk.to chat added to layouts
-- 2026-03-24: Video prompts created in /public/videos/samples/
-- 2026-03-24: Created reusable UI components for consistent sections
-- 2026-03-24: Standardized background pattern: light → dark → muted
-- 2026-03-24: SEO keyword strategy completed
+---
 
-## Current Blockers
-- Video generation requires manual work (browser-based AI tools)
-- EN pages need full content translation
+## Phase Progress
 
-## Next Steps
-1. Complete EN page translations
-2. Generate real promotional videos
-3. Add more testimonials across all pages
-4. Performance optimization
-5. Add metadata to remaining service pages (emission, support, agents-ia)
+| Phase | Status | Progress | Blockers |
+|-------|--------|----------|----------|
+| Phase 1: Core Development | 🟢 Completed | 8/8 | None |
+| Phase 2: Content & SEO | 🟢 Completed | 6/6 | None |
+| Phase 3: Performance | ⚪ Not Started | 0/4 | - |
+| Phase 4: Features | ⚪ Not Started | 0/5 | - |
+
+---
 
 ## Session History
-- 2026-03-24: Video sample prompts created and pushed to GitHub
-- 2026-03-24: .session/STATE.md created (was missing)
-- 2026-03-24: Created UI components, expanded FR/EN pages, harmonized structure
-- 2026-03-24: SEO keyword strategy research completed, document saved to /docs/seo-keyword-strategy.md
+
+### 2026-03-26 Session
+**Completed:**
+- ✅ Removed duplicate FAQ sections from reception and support pages
+- ✅ Fixed wrong button colors in duplicate FAQs
+- ✅ Added 4th testimonial to all FR service pages
+- ✅ Fixed image extensions (.png → .jpg) for all pages
+- ✅ Added 4th testimonial to all EN service pages
+- ✅ Fixed AGENTS.md with correct valid subagent types for Task tool
+- ✅ Verified all FR and EN service pages have exactly 8 sections
+
+**Verification:**
+```bash
+# FR pages
+for page in reception support crm secteurs emission agents-ia; do
+  curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/fr/$page/" | grep -oE '<section[^>]*>' | wc -l
+done
+# All: 8 sections
+
+# EN pages
+for page in inbound support crm sectors outbound ai-agents; do
+  curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/en/$page/" | grep -oE '<section[^>]*>' | wc -l
+done
+# All: 8 sections
+```
+
+---
+
+## Service Page Colors
+
+| Service | FR Color | EN Color | Status |
+|---------|----------|----------|--------|
+| Réception/Inbound | sky-600 | sky-600 | ✅ |
+| Support | emerald-700 | emerald-700 | ✅ |
+| CRM | purple-600 | purple-600 | ✅ |
+| Secteurs/Sectors | amber-600 | amber-600 | ✅ |
+| Émission/Outbound | emerald-600 | emerald-600 | ✅ |
+| Agents IA/AI Agents | violet-600 | violet-600 | ✅ |
+
+---
+
+## Image Assignment
+
+| Service | FR Image | EN Image |
+|---------|----------|----------|
+| Reception/Inbound | reception-hero.jpg | reception-hero.jpg |
+| Support | support-tech.jpg | support-tech.jpg |
+| CRM | crm-interface.jpg | crm-interface.jpg |
+| Secteurs/Sectors | secteurs-hero.jpg | services-hero.jpg |
+| Émission/Outbound | telemarketing.jpg | telemarketing.jpg |
+| Agents IA | agents-ia-hero.jpg | agents-ia-hero.jpg |
+
+---
+
+## Section Pattern
+
+Each service page follows this pattern (L-D-L-L-L-L-D-L):
+1. **LIGHT (bg-white)** - Hero with image
+2. **DARK (bg-gradient)** - Features/Stats
+3. **LIGHT (bg-white)** - Stats
+4. **LIGHT (bg-slate-50)** - How it works
+5. **LIGHT (bg-white)** - Benefits
+6. **LIGHT (bg-slate-50)** - Testimonials (4 boxes)
+7. **DARK (bg-gradient)** - Final CTA
+8. **LIGHT (bg-white)** - FAQ
+
+---
+
+## Accumulated Context
+
+### Key Decisions
+| Decision | Rationale | Date |
+|----------|-----------|------|
+| Tailwind v4 CSS-first | No config file, auto-scans all files | 2026-03-23 |
+| Static export to GitHub Pages | Free hosting, custom domain support | 2026-03-22 |
+| Geo-aware CTA (ipapi.co) | Different contact methods by country | 2026-03-22 |
+| basePath: /smart-hotline-last | Match GitHub repo name | 2026-03-25 |
+| 8 sections per page | L-D-L-L-L-L-D-L pattern | 2026-03-26 |
+| 4 testimonials per page | Even grid requirement (md:grid-cols-4) | 2026-03-26 |
+| .jpg for most images | Original high-quality files | 2026-03-26 |
+
+### Technical Debt
+- ~~Add more testimonials across all pages~~ ✅ DONE
+- ~~Fix image extensions~~ ✅ DONE
+- ~~Align EN pages with FR structure~~ ✅ DONE
+- Generate real promotional videos
+- Performance optimization needed
+
+---
+
+## Deploy Process
+
+```bash
+cd /root/projects/smart-hotline-nextjs
+rm -rf out && npm run build
+touch out/.nojekyll
+git add -A && git commit -m "message"
+git push origin main
+# Auto-deploys via GitHub Actions
+```
+
+### Verification
+```bash
+curl -sL "https://boubahkarim-png.github.io/smart-hotline-last/fr/" | grep -oE '<section[^>]*>' | wc -l
+# Should return 8
+```
+
+---
+
+## Live URLs
+
+- **French**: https://boubahkarim-png.github.io/smart-hotline-last/fr/
+- **English**: https://boubahkarim-png.github.io/smart-hotline-last/en/
+
+---
+
+*State initialized: 2026-03-22*
+*Last updated: 2026-03-26*

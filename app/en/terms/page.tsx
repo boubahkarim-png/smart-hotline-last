@@ -1,3 +1,4 @@
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 
 export const metadata = { title: "Terms & Conditions | Smart Hotline Agency" }
@@ -5,16 +6,19 @@ export const metadata = { title: "Terms & Conditions | Smart Hotline Agency" }
 export default function Terms() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"/>
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-violet-500 opacity-10 rounded-full blur-3xl"/>
-        </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">Terms & Conditions</h1>
-          <p className="text-blue-200 text-lg">Terms and conditions of our services</p>
-        </div>
-      </section>
+<section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="flex flex-col lg:flex-row items-center gap-12">
+<div className="w-full lg:w-[55%]">
+<h1 className="text-4xl lg:text-5xl font-black mb-4">Terms & Conditions</h1>
+<p className="text-slate-600 text-lg mb-6">Terms and conditions of our services</p>
+</div>
+<div className="w-full lg:w-[40%]">
+<img src={`${basePath}/images/main-hero.jpg`} alt="Terms & Conditions" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+</div>
+</div>
+</div>
+</section>
 
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

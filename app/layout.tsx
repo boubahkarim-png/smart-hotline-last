@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Smart Hotline Agency | Centre d'Appels & IA pour PME",
-  description: "Centre d'appels externalisé pour PME. Agents & IA vocaux 24/7.",
+  title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
+  description: "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7.",
 }
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Smart Hotline",
-  "description": "Centre d'appels externalisé pour PME. Réception d'appels 24/7, émission d'appels, agents IA vocaux, support client et intégration CRM.",
+  "description": "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7. Réception d\'appels, émission, support client et intégration CRM.",
   "telephone": "+1-514-819-0559",
   "email": "direction@smart-hotline.com",
   "address": {
@@ -42,7 +42,7 @@ const jsonLd = {
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Call Center Services",
+    "name": "Phone Partner Services",
     "itemListElement": [
       {
         "@type": "Offer",
@@ -103,7 +103,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+<body>
+      <a href="#main-content" className="skip-link">
+        Aller au contenu principal
+      </a>
+        {children}
+      </body>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/69c14d2a91de1e1c374c9f29/1jkdharj3';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+          `,
+        }}
+      />
     </html>
   )
 }

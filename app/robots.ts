@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.smart-hotline.com'
+  const baseUrl = 'https://boubahkarim-png.github.io/smart-hotline-last'
   
   return {
     rules: {

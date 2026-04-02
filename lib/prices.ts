@@ -26,6 +26,8 @@ export interface CurrencyConfig {
   // CRM - Monthly only (no setup fee)
   crm_monthly: number[] // [Starter, Pro, Business, Enterprise]
   crm_contacts: number[] // contact limit
+  // Support - Monthly packages
+  support: number[] // [Basic, Pro, Premium]
 }
 
 // ============================================================
@@ -49,6 +51,8 @@ export const PRICES_CA: CurrencyConfig = {
   // CRM - Monthly only
   crm_monthly: [249, 499, 1099, 1999],
   crm_contacts: [500, 2000, 10000, 50000],
+  // Support - Monthly
+  support: [199, 499, 999],
 }
 
 // ============================================================
@@ -72,6 +76,7 @@ export const PRICES_EU: CurrencyConfig = {
   // CRM - Monthly only
   crm_monthly: [199, 399, 899, 1699],
   crm_contacts: [500, 2000, 10000, 50000],
+  support: [199, 499, 999],
 }
 
 // ============================================================
@@ -95,6 +100,7 @@ export const PRICES_US: CurrencyConfig = {
   // CRM - Monthly only
   crm_monthly: [199, 399, 899, 1699],
   crm_contacts: [500, 2000, 10000, 50000],
+  support: [199, 499, 999],
 }
 
 // ============================================================
@@ -118,6 +124,7 @@ export const PRICES_CH: CurrencyConfig = {
   // CRM - Monthly only
   crm_monthly: [249, 499, 1099, 1999],
   crm_contacts: [500, 2000, 10000, 50000],
+  support: [199, 499, 999],
 }
 
 export const PRICES: Record<Currency, CurrencyConfig> = {

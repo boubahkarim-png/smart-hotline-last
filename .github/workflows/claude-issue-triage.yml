@@ -1,0 +1,46 @@
+name: Claude Issue Triage
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Claude Issue Triage
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            ISSUE NUMBER: ${{ github.event.issue.number }}
+            ISSUE TITLE: ${{ github.event.issue.title }}
+            ISSUE BODY: ${{ github.event.issue.body }}
+            
+            Analyze this issue and:
+            
+            1. **Categorize the issue** - Add appropriate labels:
+               - bug / enhancement / documentation / question
+               - priority: high / medium / low
+               - area: frontend / backend / styling / deployment
+            
+            2. **Check for duplicates** - Search existing issues for similar problems
+            
+            3. **Provide initial response**:
+               - Acknowledge the issue
+               - Ask clarifying questions if needed
+               - Suggest potential solutions if obvious
+            
+            Use `gh issue edit` to add labels and `gh issue comment` to respond.
+          
+          claude_args: |
+            --allowedTools "Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh issue list:*),Bash(gh issue view:*)"

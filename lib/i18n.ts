@@ -5,6 +5,69 @@
 
 export type Lang = 'fr' | 'en'
 
+// Path mappings between FR and EN (for pages with different slugs)
+const PATH_MAPPINGS: Record<string, string> = {
+  // FR -> EN
+  '/fr/reception': '/en/inbound',
+  '/fr/emission': '/en/outbound',
+  '/fr/tarifs': '/en/pricing',
+  '/fr/a-propos': '/en/about',
+  '/fr/agents-ia': '/en/ai-agents',
+  '/fr/mentions-legales': '/en/legal',
+  '/fr/confidentialite': '/en/privacy',
+  '/fr/cgv': '/en/terms',
+  '/fr/secteurs': '/en/sectors',
+  '/fr/services': '/en/services',
+  '/fr/support': '/en/support',
+  '/fr/crm': '/en/crm',
+  '/fr/contact': '/en/contact',
+  '/fr/blog': '/en/blog',
+  '/fr': '/en',
+  
+  // EN -> FR
+  '/en/inbound': '/fr/reception',
+  '/en/outbound': '/fr/emission',
+  '/en/pricing': '/fr/tarifs',
+  '/en/about': '/fr/a-propos',
+  '/en/ai-agents': '/fr/agents-ia',
+  '/en/legal': '/fr/mentions-legales',
+  '/en/privacy': '/fr/confidentialite',
+  '/en/terms': '/fr/cgv',
+  '/en/sectors': '/fr/secteurs',
+  '/en/services': '/fr/services',
+  '/en/support': '/fr/support',
+  '/en/crm': '/fr/crm',
+  '/en/contact': '/fr/contact',
+  '/en/blog': '/fr/blog',
+  '/en': '/fr',
+}
+
+export function getOtherLangPath(pathname: string, currentLang: Lang): string {
+  // Normalize pathname - remove trailing slash and ensure it starts with /
+  let normalizedPath = pathname.replace(/\/$/, '') || '/'
+  
+  // Check if we have a direct mapping
+  if (PATH_MAPPINGS[normalizedPath]) {
+    return PATH_MAPPINGS[normalizedPath]
+  }
+  
+  // Fallback: simple language swap for unmapped paths
+  const otherLang = currentLang === 'fr' ? 'en' : 'fr'
+  const segments = normalizedPath.split('/').filter(Boolean)
+  
+  if (segments.length === 0) {
+    return `/${otherLang}`
+  }
+  
+  if (segments[0] === 'fr' || segments[0] === 'en') {
+    segments[0] = otherLang
+  } else {
+    segments.unshift(otherLang)
+  }
+  
+  return '/' + segments.join('/')
+}
+
 export const T = {
   fr: {
     hero_title: "Centre d'Appels & IA pour PME",

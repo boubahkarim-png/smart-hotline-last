@@ -1,4 +1,5 @@
 'use client'
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
@@ -70,7 +71,7 @@ return (
 Agents & AI Available 24/7
 </span>
 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
-The Call Center<br/>
+Your 24/7 Phone Partner<br/>
 <span className="bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">That Understands</span><br/>
 Local SMEs
 </h1>
@@ -87,7 +88,7 @@ Local SMEs
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src="/images/main-hero.jpg" alt="Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/main-hero.jpg`} alt="Smart Hotline" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
 <div className="flex items-center gap-4">
 <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -189,7 +190,7 @@ Discover AI Agents →
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src="/images/agents-ia-hero.jpg" alt="AI Agent Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/agents-ia-hero.jpg`} alt="AI Agent Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon } from '@/components/Icons'
+import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon } from '@/components/Icons'
 
 const FEATURES = [
   {'icon': TargetIcon, 'title': 'Qualified Leads', 'desc': 'Precise targeting and qualification of each lead before transfer.'},
@@ -17,6 +17,25 @@ const STEPS = [
   {'n': '2', 't': 'Script & Training', 'd': 'Custom script and training on your offer.'},
   {'n': '3', 't': 'Campaign Launch', 'd': 'Start calls according to your schedule.'},
   {'n': '4', 't': 'Reports & Optimization', 'd': 'Daily adjustments to maximize results.'},
+]
+const INDUSTRIES = [
+  {'name': 'Real Estate', 'result': 'Property viewings scheduled'},
+  {'name': 'Insurance', 'result': 'Policy renewal calls'},
+  {'name': 'SaaS & Tech', 'result': 'Demo requests generated'},
+  {'name': 'Professional Services', 'result': 'Consultation bookings'},
+  {'name': 'Healthcare', 'result': 'Patient follow-ups'},
+]
+const RESULTS = [
+  {'value': '15K+', 'label': 'Calls per month'},
+  {'value': '35%', 'label': 'Contact rate'},
+  {'value': '12%', 'label': 'Conversion rate'},
+  {'value': '48h', 'label': 'Campaign launch'},
+]
+const PROCESS = [
+  {'title': 'Discovery Call', 'desc': 'We learn about your goals, target market, and what success looks like for you.'},
+  {'title': 'Custom Strategy', 'desc': 'Tailored targeting, messaging, and agent training for your specific offer.'},
+  {'title': 'Agent Assignment', 'desc': 'Dedicated agents trained on your product and equipped with your scripts.'},
+  {'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -46,6 +65,7 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      {/* Section 1: Hero - Light */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -66,7 +86,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/images/telemarketing.jpg" alt="Outbound calling agent"
+                <img src="/smart-hotline-last/images/telemarketing.jpg" alt="Outbound calling agent"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
@@ -83,6 +103,25 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Section 2: Results Stats - Dark */}
+      <section className="bg-gradient-to-br from-slate-900 to-emerald-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-black text-white mb-2">Results That Speak</h2>
+            <p className="text-emerald-200">Real numbers from real campaigns</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {RESULTS.map(({value, label}) => (
+              <div key={label} className="text-center">
+                <div className="text-4xl lg:text-5xl font-black text-white mb-1">{value}</div>
+                <div className="text-emerald-200 text-sm">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Features - Light */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -103,6 +142,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Section 4: How It Works - Light */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">How It Works</h2>
@@ -118,6 +158,46 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Section 5: Industries - Light */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Industries We Serve</h2>
+            <p className="text-slate-600">Specialized campaigns for every sector</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+            {INDUSTRIES.map(({name, result}) => (
+              <div key={name} className="bg-white rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
+                <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
+                <p className="text-emerald-600 text-sm">{result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Our Process - Light */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Our Process</h2>
+            <p className="text-slate-600">From first call to qualified lead</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PROCESS.map(({title, desc}, i) => (
+              <div key={title} className="relative">
+                <div className="bg-slate-50 rounded-2xl p-6 h-full border border-slate-100">
+                  <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
+                  <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
+                  <p className="text-slate-500 text-sm">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7: CTA - Dark */}
       <section className="bg-gradient-to-br from-slate-900 to-emerald-800 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl font-black mb-3">Ready to Get Started?</h2>
@@ -126,6 +206,54 @@ export default function Page() {
           <p className="text-white text-opacity-60 text-sm mt-4">
             <Link href="/en/pricing" className="underline hover:text-white">View all pricing</Link>
           </p>
+        </div>
+      </section>
+
+      {/* Section 8: FAQ/Benefits - Light */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Why Choose Us</h2>
+            <p className="text-slate-600">What makes our outbound different</p>
+          </div>
+          <div className="space-y-6">
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <BoltIcon className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 mb-1">Fast Setup</h3>
+                <p className="text-slate-500 text-sm">Your campaign goes live within 48 hours. No lengthy onboarding, no complicated setup. Just results.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <UsersIcon className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 mb-1">Dedicated Agents</h3>
+                <p className="text-slate-500 text-sm">Your agents work exclusively on your campaign. They know your product, your market, your goals.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <ShieldCheckIcon className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 mb-1">Quality Guarantee</h3>
+                <p className="text-slate-500 text-sm">Every call is recorded and reviewed. You only pay for qualified leads that meet your criteria.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <AnalyticsIcon className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 mb-1">Full Transparency</h3>
+                <p className="text-slate-500 text-sm">Real-time dashboard, daily reports, call recordings. You see everything, always.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
