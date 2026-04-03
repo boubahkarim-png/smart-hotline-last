@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {icon: PhoneIcon, title: 'Réception 24/7', desc: 'Pas de répondeur. Un vrai conseiller répond à chaque appel, même à 3h du matin.'},
@@ -271,8 +273,15 @@ export default function Page() {
               Démarrer Maintenant
             </Link>
           </div>
-        </div>
-      </section>
-    </>
+		</div>
+		</section>
+		<ServiceSchema name="Réception d'Appels 24/7" description="Service de réception d'appels professionnel avec conseillers francophones 24/7" slug="reception" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+		<FAQSchema faqs={[
+			{ question: "Combien de temps pour démarrer?", answer: "En général 48 heures. On prend le temps de bien comprendre votre entreprise avant de commencer." },
+			{ question: "Est-ce que je peux changer les scripts?", answer: "Absolument. C'est votre entreprise — vous décidez comment on répond. On ajuste quand vous voulez." },
+			{ question: "Comment je reçois les messages?", answer: "Par SMS, email, ou appel — vous choisissez. Les messages urgents sont transmis immédiatement." },
+			{ question: "Les conseillers parlent-ils français?", answer: "Oui, tous nos conseillers sont francophones du Québec ou de France. Ils maîtrisent le français et l'anglais." }
+		]} />
+	</>
   )
 }

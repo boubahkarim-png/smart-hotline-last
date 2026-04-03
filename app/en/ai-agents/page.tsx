@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, BoltIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {'icon': PhoneIcon, 'title': 'Instant Response', 'desc': 'Under 2 seconds, 24/7, no hold time ever.'},
@@ -286,8 +288,15 @@ export default function Page() {
             Get in touch →
           </Link>
         </div>
-      </div>
-    </section>
-    </>
+		</div>
+		</section>
+		<ServiceSchema name="AI Voice Agents" description="AI voice agent Sophie - under 2 second response, 24/7 availability" slug="ai-agents" offers={{ priceFrom: "0.11", priceCurrency: "USD" }} />
+		<FAQSchema faqs={[
+			{ question: "Will callers know they're talking to AI?", answer: "Most don't notice. Sophie speaks naturally, handles interruptions, and adjusts her pace. We've had clients' customers specifically compliment 'your lovely receptionist.'" },
+			{ question: "What languages does Sophie speak?", answer: "Native English, French, and Spanish. She switches automatically based on what the caller uses." },
+			{ question: "How long until Sophie is answering my calls?", answer: "Usually 24-48 hours. We configure the voice, script, and knowledge base, then test with real scenarios before going live." },
+			{ question: "What if Sophie gets stuck?", answer: "She transfers to a human. That's the point — handle the routine stuff perfectly, escalate the tricky stuff to you." }
+		]} />
+	</>
   )
 }

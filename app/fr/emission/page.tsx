@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, ShieldCheckIcon, UsersIcon, ClockIcon, QuestionIcon } from '@/components/Icons'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {'icon': TargetIcon, 'title': 'Leads qualifiés', 'desc': 'Ciblage précis et qualification de chaque lead avant transfert.'},
@@ -283,7 +284,8 @@ export default function Page() {
           <p className="text-slate-500 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
           <CTAButtons slug="emission"/>
         </div>
-      </section>
-    </>
+		</section>
+		<ServiceSchema name="Appels Sortants & Prospection" description="Service de prospection téléphonique et télémarketing avec leads qualifiés et prise de rendez-vous" slug="emission" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
+	</>
   )
 }

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { HeadphonesIcon, MailIcon, ChatIcon, PhoneIcon, CheckIcon, StarIcon, ClockIcon } from '@/components/Icons'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {icon: HeadphonesIcon, title: 'Support multicanal', desc: 'Téléphone, email, chat, WhatsApp — on gère tout depuis une seule interface.'},
@@ -203,7 +204,8 @@ export default function Page() {
           </div>
           <Link href="/fr/contact?service=support" className="inline-block mt-8 bg-teal-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-teal-700">Démarrer Maintenant</Link>
         </div>
-      </section>
-    </>
+		</section>
+		<ServiceSchema name="Support Client Multicanal" description="Support client multicanal - téléphone, email, chat, WhatsApp avec équipe francophone dédiée" slug="support" offers={{ priceFrom: "2.00", priceCurrency: "CAD" }} />
+	</>
   )
 }

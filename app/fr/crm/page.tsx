@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
 {icon: FolderIcon, title: 'Gestion des leads', desc: 'Capture, qualification et suivi de tous vos prospects.'},
@@ -272,7 +273,8 @@ Démarrer Maintenant
 </Link>
 </div>
 </div>
-</section>
-</>
+		</section>
+		<ServiceSchema name="CRM & Listes de Prospects" description="CRM SuiteCRM intégré avec listes B2B/B2C qualifiées et email marketing Mautic" slug="crm" offers={{ priceFrom: "50", priceCurrency: "CAD" }} />
+	</>
 )
 }

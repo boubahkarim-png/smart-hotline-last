@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { BoltIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, StarIcon, UsersIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
 {icon: BoltIcon, title: 'Réponse instantanée', desc: 'Moins de 2 secondes, 24h/24, 7j/7, sans temps d\'attente.'},
@@ -272,8 +274,15 @@ Voir tous les tarifs
 Démarrer Maintenant
 </Link>
 </div>
-</div>
-</section>
-</>
+		</div>
+		</section>
+		<ServiceSchema name="Agents IA Vocaux" description="Assistant vocal IA Sophie - réponse en moins de 2 secondes, 24/7" slug="agents-ia" offers={{ priceFrom: "0.15", priceCurrency: "CAD" }} />
+		<FAQSchema faqs={[
+			{ question: "Les appelants sauront-ils que c'est de l'IA?", answer: "La plupart ne s'en rendent pas compte. Sophie parle naturellement, gère les interruptions, et ajuste son rythme. Nous avons eu des clients dont les clients complimentent spécifiquement 'votre charmante réceptionniste'." },
+			{ question: "Quelles langues Sophie parle-t-elle?", answer: "Français natif (Québec, France, Belgique), anglais et espagnol. Elle change automatiquement selon la langue utilisée par l'appelant." },
+			{ question: "Combien de temps pour installer Sophie?", answer: "Généralement 24-48 heures. Nous configurons la voix, le script et la base de connaissances, puis nous testons avec des scénarios réels avant de lancer." },
+			{ question: "Que se passe-t-il si Sophie est coincée?", answer: "Elle transfère vers un humain. C'est le but — gérer le routinier parfaitement, escalader le complexe vers vous." }
+		]} />
+	</>
 )
 }
