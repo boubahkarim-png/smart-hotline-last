@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/posts'
 
 const BASE_URL = 'https://www.smart-hotline.com'
 
@@ -55,14 +56,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [
-    {
-      url: BASE_URL,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    ...frRoutes,
-    ...enRoutes,
-  ]
+   return [
+     {
+       url: BASE_URL,
+       lastModified,
+       changeFrequency: 'weekly',
+       priority: 1,
+     },
+     ...frRoutes,
+     ...enRoutes,
+     ...getAllPosts('fr').flatMap(post => ({
+       url: `${BASE_URL}/fr/blog/${post.slug}`,
+       lastModified: new Date(post.date),
+       changeFrequency: 'weekly' as const,
+       priority: 0.7,
+       alternates: {
+         languages: {
+           fr: `${BASE_URL}/fr/blog/${post.slug}`,
+           en: post.canonicalSlug ? `${BASE_URL}/en/blog/${post.canonicalSlug}` : undefined,
+         },
+       },
+     })),
+     ...getAllPosts('en').flatMap(post => ({
+       url: `${BASE_URL}/en/blog/${post.slug}`,
+       lastModified: new Date(post.date),
+       changeFrequency: 'weekly' as const,
+       priority: 0.7,
+       alternates: {
+         languages: {
+           fr: post.canonicalSlug ? `${BASE_URL}/fr/blog/${post.canonicalSlug}` : undefined,
+           en: `${BASE_URL}/en/blog/${post.slug}`,
+         },
+       },
+     })),
+   ]
 }

@@ -1,57 +1,10 @@
-'use client'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 import Link from 'next/link'
-import { useState } from 'react'
-
-const POSTS = [
-  { 
-    title: "5 raisons d'externaliser votre service client en 2025", 
-    date: "15 mars 2026", 
-    cat: "Strategie", 
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80", 
-    excerpt: "Découvrez pourquoi de plus en plus de PME font le choix de l'externalisation pour leur relation client.",
-    content: "L'externalisation du service client connaît une croissance sans précédent en 2025. De nombreuses PME reconnaissent les avantages stratégiques de cette approche, allant bien au-delà de la simple réduction de coûts. Dans cet article, nous explorons les cinq raisons principales qui poussent les entreprises québécoises et françaises à franchir le pas."
-  },
-  { 
-    title: "Agent IA vs Agent Humain: lequel choisir?", 
-    date: "8 mars 2026", 
-    cat: "IA", 
-    img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80", 
-    excerpt: "Comparaison complète pour vous aider à faire le bon choix selon votre activité et budget.",
-    content: "L'arrivée des agents IA vocaux a révolutionné l'industrie des centres d'appels. Mais faut-il vraiment choisir entre l'IA et l'humain, ou peut-on bénéficier du meilleur des deux mondes ? Nous analysons en profondeur les forces et limites de chaque approche pour vous aider à prendre une décision éclairée."
-  },
-  { 
-    title: "Comment qualifier vos leads au téléphone: guide complet", 
-    date: "1 mars 2026", 
-    cat: "Prospection", 
-    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80", 
-    excerpt: "Les techniques et scripts utilisés par nos meilleurs conseillers pour qualifier efficacement.",
-    content: "La qualification efficace des leads est l'art de transformer un simple appel téléphonique en opportunité commerciale qualifiée. Dans ce guide complet, nous dévoilons les techniques éprouvées, les scripts gagnants et les stratégies psychologiques utilisés par nos meilleurs conseillers pour maximiser vos taux de conversion."
-  },
-  { 
-    title: "Taux de satisfaction client: les KPIs à surveiller", 
-    date: "22 février 2026", 
-    cat: "Mesure", 
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80", 
-    excerpt: "CSAT, NPS, FCR — comprendre et améliorer vos indicateurs de satisfaction.",
-    content: "Dans un marché où l'expérience client fait la différence, mesurer et améliorer votre satisfaction client n'est plus optionnel. Nous décortiquons les KPIs essentiels (CSAT, NPS, FCR, CES) que toute PME devrait surveiller, avec des conseils pratiques pour les améliorer durablement."
-  },
-  { 
-    title: "Secteur restauration: pourquoi un centre d'appels change tout", 
-    date: "14 février 2026", 
-    cat: "Secteurs", 
-    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80", 
-    excerpt: "Témoignage de 3 restaurants qui ont doublé leurs réservations en 30 jours.",
-    content: "L'industrie de la restauration fait face à des défis uniques en matière de gestion des réservations et du service client. À travers trois témoignages concrets de restaurants montréalais, nous montrons comment un centre d'appels spécialisé peut transformer radicalement votre opérationnel et votre rentabilité."
-  },
-  { 
-    title: "RGPD et centre d'appels: ce qu'il faut savoir", 
-    date: "5 février 2026", 
-    cat: "Conformite", 
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80", 
-    excerpt: "Guide pratique pour rester conforme tout en optimisant votre relation client.",
-    content: "Le RGPD (Règlement Général sur la Protection des Données) représente un défi majeur pour les centres d'appels, mais aussi une opportunité d'améliorer significativement la confiance des clients. Nous vous guidons à travers les exigences essentielles, les bonnes pratiques et les outils techniques pour assurer une conformité totale tout en optimisant votre opérationnel."
-  }
-]
+import basePath from '@/lib/basePath'
+import { getAllPosts, type PostMeta } from '@/lib/posts'
+import { FAQSchema } from '@/components/FAQSchema'
 
 const FAQ = [
   {
@@ -88,7 +41,7 @@ const TESTIMONIALS = [
   {
     quote: "Pendant la tempête du siècle, leurs agents ont assuré une continuité de service parfaite. Aucun appel manqué, aucun client frustré.",
     name: "Sophie Bertrand",
-    role: "Propriaire, Bistro Le Petit Coin",
+    role: "Propriétaire, Bistro Le Petit Coin",
     avatar: "SB"
   }
 ]
@@ -101,9 +54,12 @@ const STATS = [
 ]
 
 export default function BlogFr() {
+  const posts = getAllPosts('fr')
+  const featuredPosts = posts.slice(0, 2)
+
   return (
     <>
-      {/* SECTION 1: LIGHT HERO - Text LEFT, Image concept */}
+      {/* SECTION 1: LIGHT HERO */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -139,21 +95,28 @@ export default function BlogFr() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {POSTS.slice(0, 2).map(({ title, date, cat, img, excerpt }) => (
-              <article key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+            {featuredPosts.map((post: PostMeta) => (
+              <Link 
+                key={post.slug} 
+                href={`/fr/blog/${post.slug}`}
+                className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group"
+              >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{cat}</span>
-                  <span className="text-blue-200 text-xs">{date}</span>
+                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+                  <span className="text-blue-200 text-xs">
+                    {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </span>
                 </div>
-                <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors" dangerouslySetInnerHTML={{__html: title}}/>
-                <p className="text-blue-200 text-sm mb-4" dangerouslySetInnerHTML={{__html: excerpt}}/>
-                <button onClick={(e) => {
-                  e.preventDefault();
-                  alert(`Vous avez cliqué sur "${title}". Fonctionnalité "Lire la suite" à implémenter avec un modal ou une page dédiée.`);
-                }} className="text-blue-200 text-sm font-semibold group-hover:underline">
+                <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+                  {post.title}
+                </h2>
+                <p className="text-blue-200 text-sm mb-4 line-clamp-2">
+                  {post.excerpt}
+                </p>
+                <span className="text-blue-200 text-sm font-semibold group-hover:underline">
                   Lire la suite →
-                </button>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -225,7 +188,7 @@ export default function BlogFr() {
         </div>
       </section>
 
-      {/* SECTION 7: DARK - ALL POSTS WITH POP-UPS */}
+      {/* SECTION 7: DARK - ALL POSTS */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"/>
@@ -241,24 +204,28 @@ export default function BlogFr() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {POSTS.map(({ title, date, cat, img, excerpt }) => (
-              <article key={title} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group cursor-pointer">
-                <img src={img} alt={title} className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"/>
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{cat}</span>
-                    <span className="text-blue-200 text-xs">{date}</span>
-                  </div>
-                  <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors" dangerouslySetInnerHTML={{__html: title}}/>
-                  <p className="text-blue-200 text-sm mb-4" dangerouslySetInnerHTML={{__html: excerpt}}/>
-                  <button onClick={(e) => {
-                    e.preventDefault();
-                    alert(`Vous avez cliqué sur "${title}". Fonctionnalité "Lire la suite" à implémenter avec un modal ou une page dédiée.`);
-                  }} className="text-blue-200 text-sm font-semibold group-hover:underline block w-fit">
-                    Lire la suite →
-                  </button>
+            {posts.map((post: PostMeta) => (
+              <Link 
+                key={post.slug} 
+                href={`/fr/blog/${post.slug}`}
+                className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+                  <span className="text-blue-200 text-xs">
+                    {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </span>
                 </div>
-              </article>
+                <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+                  {post.title}
+                </h2>
+                <p className="text-blue-200 text-sm mb-4 line-clamp-2">
+                  {post.excerpt}
+                </p>
+                <span className="text-blue-200 text-sm font-semibold group-hover:underline">
+                  Lire la suite →
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -277,7 +244,7 @@ export default function BlogFr() {
               Appels Sortants
             </Link>
           </div>
-        </div>
+      </div>
       </section>
     </>
   )

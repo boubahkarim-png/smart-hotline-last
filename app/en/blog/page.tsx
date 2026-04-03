@@ -1,14 +1,24 @@
 import Link from 'next/link'
+import { getAllPosts, type PostMeta } from '@/lib/posts'
+import { FAQSchema } from '@/components/FAQSchema'
 
-export const metadata = { title: "Blog | Smart Hotline Agency" }
-
-const POSTS = [
-  { title: "5 Reasons to Outsource Your Customer Service in 2025", date: "March 15, 2026", cat: "Strategy", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80", excerpt: "Discover why more and more SMEs are choosing to outsource their customer relationships." },
-  { title: "AI Agent vs Human Agent: Which to Choose?", date: "March 8, 2026", cat: "AI", img: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80", excerpt: "Complete comparison to help you make the right choice based on your business and budget." },
-  { title: "How to Qualify Leads Over the Phone: Complete Guide", date: "March 1, 2026", cat: "Prospecting", img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80", excerpt: "Techniques and scripts used by our best advisors to qualify effectively." },
-  { title: "Customer Satisfaction: Key KPIs to Monitor", date: "February 22, 2026", cat: "Metrics", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80", excerpt: "CSAT, NPS, FCR — understand and improve your satisfaction metrics." },
-  { title: "Restaurant Industry: Why a Call Center Changes Everything", date: "February 14, 2026", cat: "Sectors", img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80", excerpt: "Testimonials from 3 restaurants that doubled their reservations in 30 days." },
-  { title: "GDPR and Call Centers: What You Need to Know", date: "February 5, 2026", cat: "Compliance", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80", excerpt: "Practical guide to staying compliant while optimizing customer relationships." },
+const FAQ = [
+  {
+    question: "What types of businesses benefit most from your services?",
+    answer: "Our services are particularly suited for SMEs with 5-200 employees across various sectors: restaurants, retail, professional services, healthcare, technology, and e-commerce. We adapt our solutions according to your size, sector, and specific objectives."
+  },
+  {
+    question: "How do you ensure service quality with your AI agents?",
+    answer: "Our AI agents are continuously supervised and trained. They handle simple, repetitive queries while complex cases are transferred to human agents. We maintain a satisfaction rate above 92% thanks to this hybrid approach."
+  },
+  {
+    question: "What is the typical setup time?",
+    answer: "We are operational within 48 hours of contract signing. This includes script configuration, integration with your existing systems, and training the team dedicated to your account."
+  },
+  {
+    question: "Do you offer flexible contracts without long-term commitments?",
+    answer: "Absolutely! We believe in partnerships based on satisfaction, not binding commitments. Our contracts are renewable monthly with just 30 days' notice."
+  }
 ]
 
 const TOPICS = [
@@ -29,7 +39,15 @@ const CATEGORIES = [
   { name: "Compliance", color: "bg-red-100 text-red-700" },
 ]
 
-export default function Blog() {
+export const metadata = {
+  title: "Blog | Smart Hotline Agency",
+  description: "Tips, strategies and insights to optimize your customer relationships.",
+}
+
+export default function BlogEn() {
+  const posts = getAllPosts('en')
+  const featuredPosts = posts.slice(0, 3)
+
   return (
     <>
       {/* Section 1: DARK - Hero */}
@@ -44,25 +62,41 @@ export default function Blog() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {POSTS.map(({title, date, cat, img, excerpt}) => (
-              <article key={title} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all group cursor-pointer">
-                <img src={img} alt={title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"/>
+            {posts.map((post: PostMeta) => (
+              <Link 
+                key={post.slug} 
+                href={`/en/blog/${post.slug}`}
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all group"
+              >
+                {post.image && (
+                  <img 
+                    src={post.image.startsWith('http') ? post.image : `/images/blog/${post.slug}.jpg`} 
+                    alt={post.title} 
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{cat}</span>
-                    <span className="text-gray-400 text-xs">{date}</span>
+                    <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+                    <span className="text-gray-400 text-xs">
+                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </span>
                   </div>
-                  <h2 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors" dangerouslySetInnerHTML={{__html: title}}/>
-                  <p className="text-gray-500 text-sm mb-4" dangerouslySetInnerHTML={{__html: excerpt}}/>
+                  <h2 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">
+                    {post.excerpt}
+                  </p>
                   <span className="text-blue-600 text-sm font-semibold group-hover:underline">Read more →</span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 3: LIGHT - Newsletter (changed to slate-50) */}
+      {/* Section 3: LIGHT - Newsletter */}
       <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-3">Get Our Weekly Tips</h2>
