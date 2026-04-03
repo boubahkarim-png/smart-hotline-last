@@ -31,10 +31,10 @@ const MOVING_MESSAGES = [
 ]
 
 const TESTIMONIALS_DATA = [
-{ q: "I have a restaurant on the Main. Before, I was easily losing 10-15 customers per week. Now? Zero missed calls.", name: "Pierre Lacroix", role: "Owner, Bistro du Vieux-Montréal", av: "PL" },
-{ q: "It's not just reception. They take reservations, answer questions. It's like having a receptionist, but at a fraction of the cost.", name: "Sophie Mercier", role: "Director, Clinique Médicale Plateau", av: "SM" },
-{ q: "During the holiday rush, they handled over 200 calls per day. My team was calm, customers happy.", name: "Marc-André Dubé", role: "Manager, Électronique QC Store", av: "MD" },
-{ q: "We tried 3 other services before. This is the only one where agents really understand our business.", name: "Nathalie Tremblay", role: "Director, Cabinet Tremblay", av: "NT" },
+{ q: "I have a restaurant on the Main. Before, I was easily losing 10-15 customers per week. Now? Zero missed calls.", name: "Pierre Lacroix", role: "Owner, Bistro du Vieux-Montréal", img: "/images/testimonial-1.jpg", alt: "Portrait of Pierre Lacroix, owner of Bistro du Vieux-Montréal" },
+{ q: "It\'s not just reception. They take reservations, answer questions. It\'s like having a receptionist, but at a fraction of the cost.", name: "Sophie Mercier", role: "Director, Clinique Médicale Plateau", img: "/images/testimonial-sophie.jpg", alt: "Portrait of Sophie Mercier, director of Clinique Médicale Plateau" },
+{ q: "During the holiday rush, they handled over 200 calls per day. My team was calm, customers happy.", name: "Marc-André Dubé", role: "Manager, Électronique QC Store", img: "/images/testimonial-2.jpg", alt: "Portrait of Marc-André Dubé, manager of Électronique QC Store" },
+{ q: "We tried 3 other services before. This is the only one where agents really understand our business.", name: "Nathalie Tremblay", role: "Director, Cabinet Tremblay", img: "/images/testimonial-nathalie.jpg", alt: "Portrait of Nathalie Tremblay, director of Cabinet Tremblay" },
 ]
 
 function CTAButtons() {
@@ -214,7 +214,7 @@ Discover AI Agents →
 </div>
 <p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
 <div className="flex items-center gap-3">
-<div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center font-bold text-white">{t.av}</div>
+<img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
 <div>
 <p className="font-bold text-white text-sm">{t.name}</p>
 <p className="text-slate-400 text-xs">{t.role}</p>

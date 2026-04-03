@@ -33,10 +33,10 @@ const MOVING_MESSAGES = [
 ]
 
 const TESTIMONIALS_DATA = [
-{ q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", av: "PL" },
-{ q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", av: "SM" },
-{ q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", av: "MD" },
-{ q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", av: "NT" },
+{ q: "J\'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", img: "/images/testimonial-1.jpg", alt: "Portrait de Pierre Lacroix, propriétaire du Bistro du Vieux-Montréal" },
+{ q: "C\'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C\'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", img: "/images/testimonial-sophie.jpg", alt: "Portrait de Sophie Mercier, directrice de la Clinique Médicale Plateau" },
+{ q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", img: "/images/testimonial-2.jpg", alt: "Portrait de Marc-André Dubé, gérant du Magasin Électronique QC" },
+{ q: "On a essayé 3 autres services avant. C\'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", img: "/images/testimonial-nathalie.jpg", alt: "Portrait de Nathalie Tremblay, directrice du Cabinet Juridique Tremblay" },
 ]
 
 function CTAButtons() {
@@ -216,7 +216,7 @@ Découvrir les Agents IA →
 </div>
 <p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
 <div className="flex items-center gap-3">
-<div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center font-bold text-white">{t.av}</div>
+<img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
 <div>
 <p className="font-bold text-white text-sm">{t.name}</p>
 <p className="text-slate-400 text-xs">{t.role}</p>

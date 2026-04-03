@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://boubahkarim-png.github.io/smart-hotline-late2/sitemap.xml
+Sitemap: https://www.smart-hotline.com/sitemap.xml
 
 # AI Search Crawlers - All Allowed for Citation
 User-agent: GPTBot
