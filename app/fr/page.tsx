@@ -9,14 +9,15 @@ import GeoComplianceBadge from '@/components/GeoComplianceBadge'
 import ScrollAnimate from '@/components/ScrollAnimate'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, ClockIcon, StarIcon } from '@/components/Icons'
+import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, ClockIcon, StarIcon, BanknoteIcon } from '@/components/Icons'
 
 const SERVICES = [
-{ Icon: PhoneIcon, title: 'Réception 24/7', desc: 'Vos téléphonistes, jour et nuit.', href: '/fr/reception', bg: 'bg-sky-100', color: 'text-sky-700' },
-{ Icon: MegaphoneIcon, title: 'Votre Équipe Vente', desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
-{ Icon: BotIcon, title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
-{ Icon: HeadphonesIcon, title: 'Support Client', desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
-{ Icon: DatabaseIcon, title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-orange-100', color: 'text-orange-700' },
+  { Icon: PhoneIcon, title: 'Réception 24/7', desc: 'Vos téléphonistes, jour et nuit.', href: '/fr/reception', bg: 'bg-sky-100', color: 'text-sky-700' },
+  { Icon: MegaphoneIcon, title: 'Votre Équipe Vente', desc: 'Prospection & leads qualifiés.', href: '/fr/emission', bg: 'bg-emerald-100', color: 'text-emerald-700' },
+  { Icon: BotIcon, title: 'Agents IA Vocaux', desc: 'Sophie répond en 2 sec, 24/7.', href: '/fr/agents-ia', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'Nouveau' },
+  { Icon: HeadphonesIcon, title: 'Support Client', desc: 'Tickets, email, chat, WhatsApp.', href: '/fr/support', bg: 'bg-teal-100', color: 'text-teal-700' },
+  { Icon: DatabaseIcon, title: 'CRM & Listes', desc: 'SuiteCRM + listes B2B/B2C.', href: '/fr/crm', bg: 'bg-orange-100', color: 'text-orange-700' },
+  { Icon: BanknoteIcon, title: 'Nos Tarifs', desc: 'Prix compétitifs, sans engagement.', href: '/fr/tarifs', bg: 'bg-amber-100', color: 'text-amber-700', badge: 'Populaire' },
 ]
 
 const MOVING_MESSAGES = [

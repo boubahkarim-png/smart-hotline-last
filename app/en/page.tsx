@@ -7,14 +7,15 @@ import GeoStats from '@/components/GeoStats'
 import ScrollAnimate from '@/components/ScrollAnimate'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon } from '@/components/Icons'
+import { PhoneIcon, MegaphoneIcon, BotIcon, HeadphonesIcon, DatabaseIcon, CheckIcon, StarIcon, BanknoteIcon } from '@/components/Icons'
 
 const SERVICES = [
-{ Icon: PhoneIcon, title: 'Inbound Calls', desc: '24/7 reception. Zero missed calls.', href: '/en/inbound', bg: 'bg-sky-100', color: 'text-sky-700' },
-{ Icon: MegaphoneIcon, title: 'Outbound Calls', desc: 'Prospecting & qualified leads.', href: '/en/outbound', bg: 'bg-emerald-100', color: 'text-emerald-700' },
-{ Icon: BotIcon, title: 'AI Voice Agents', desc: 'Sophie answers in 2 sec, 24/7.', href: '/en/ai-agents', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'New' },
-{ Icon: HeadphonesIcon, title: 'Client Support', desc: 'Tickets, email, chat, WhatsApp.', href: '/en/support', bg: 'bg-teal-100', color: 'text-teal-700' },
-{ Icon: DatabaseIcon, title: 'CRM & Lists', desc: 'SuiteCRM + B2B/B2C lists.', href: '/en/crm', bg: 'bg-orange-100', color: 'text-orange-700' },
+  { Icon: PhoneIcon, title: 'Inbound Calls', desc: '24/7 reception. Zero missed calls.', href: '/en/inbound', bg: 'bg-sky-100', color: 'text-sky-700' },
+  { Icon: MegaphoneIcon, title: 'Outbound Calls', desc: 'Prospecting & qualified leads.', href: '/en/outbound', bg: 'bg-emerald-100', color: 'text-emerald-700' },
+  { Icon: BotIcon, title: 'AI Voice Agents', desc: 'Sophie answers in 2 sec, 24/7.', href: '/en/ai-agents', bg: 'bg-violet-100', color: 'text-violet-700', badge: 'New' },
+  { Icon: HeadphonesIcon, title: 'Client Support', desc: 'Tickets, email, chat, WhatsApp.', href: '/en/support', bg: 'bg-teal-100', color: 'text-teal-700' },
+  { Icon: DatabaseIcon, title: 'CRM & Lists', desc: 'SuiteCRM + B2B/B2C lists.', href: '/en/crm', bg: 'bg-orange-100', color: 'text-orange-700' },
+  { Icon: BanknoteIcon, title: 'Our Pricing', desc: 'Competitive rates, no commitment.', href: '/en/pricing', bg: 'bg-amber-100', color: 'text-amber-700', badge: 'Popular' },
 ]
 
 const MOVING_MESSAGES = [
