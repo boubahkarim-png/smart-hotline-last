@@ -42,21 +42,52 @@ export default function FrContact() {
     const form = e.currentTarget
     const formData = new FormData(form)
 
-    const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
-    const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
-    const sanitizePhone = (str: string) => str.replace(/[^\d+\-\s()]/g, '').substring(0, 20)
+  const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
+  const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
 
-    const data = {
-      name: sanitize(formData.get('name') as string || ''),
-      email: sanitizeEmail(formData.get('email') as string || ''),
-      phone: sanitizePhone(formData.get('phone') as string || ''),
-      company: sanitize(formData.get('company') as string || ''),
-      service: sanitize(formData.get('service') as string || ''),
-      volume: sanitize(formData.get('volume') as string || ''),
-      message: sanitize(formData.get('message') as string || ''),
-      source: 'contact-form-fr',
-      language: 'fr'
+  const data = {
+    name: sanitize(formData.get('name') as string || ''),
+    email: sanitizeEmail(formData.get('email') as string || ''),
+    phone: '',
+    company: '',
+    service: '',
+    volume: '',
+    message: sanitize(formData.get('message') as string || ''),
+    source: 'contact-form-fr',
+    language: 'fr'
+  }
+
+  if (!data.name || !data.email) {
+    setError('Le nom et l\'email sont requis.')
+    setSending(false)
+    return
+  }
+
+  try {
+    const response = await fetch(`${API_URL}/leads/contact.php`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify(data)
+    })
+
+    if (response.ok) {
+      setSent(true)
+    } else {
+      const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
+      const body = encodeURIComponent(
+        `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+      )
+      window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
+      setSent(true)
     }
+  } catch (err) {
+    const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
+    const body = encodeURIComponent(
+      `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    )
+    window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
+    setSent(true)
+  }
 
     if (!data.name || !data.email) {
       setError('Le nom et l\'email sont requis.')
@@ -192,99 +223,74 @@ export default function FrContact() {
               <p className="text-green-700 text-lg">Nous vous répondons sous 2h.</p>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6"
-            >
-              <input type="hidden" name="csrf_token" value={csrfToken} />
-              <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
+<form
+  onSubmit={handleSubmit}
+  className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8"
+>
+  <input type="hidden" name="csrf_token" value={csrfToken} />
+  <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                {[
-                  { name: 'name', label: 'Nom Complet *', type: 'text', required: true },
-                  { name: 'email', label: 'Email *', type: 'email', required: true },
-                  { name: 'phone', label: 'Téléphone', type: 'tel', required: false },
-                  { name: 'company', label: 'Entreprise', type: 'text', required: false },
-                ].map(({ name, label, type, required }) => (
-                  <div key={name}>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">{label}</label>
-                    <input
-                      type={type}
-                      name={name}
-                      required={required}
-                      maxLength={254}
-                      className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                    />
-                  </div>
-                ))}
-              </div>
+  <div className="space-y-4 mb-6">
+    <div>
+      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom Complet *</label>
+      <input
+        type="text"
+        name="name"
+        required
+        maxLength={100}
+        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+        placeholder="Votre nom"
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
+      <input
+        type="email"
+        name="email"
+        required
+        maxLength={254}
+        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+        placeholder="votre@email.com"
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
+      <textarea
+        name="message"
+        required
+        rows={4}
+        maxLength={2000}
+        className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+        placeholder="Décrivez vos besoins..."
+      />
+    </div>
+  </div>
 
-              <div className="mb-4">
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Service souhaité</label>
-                <select
-                  name="service"
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 bg-slate-50"
-                >
-                  <option value="">Sélectionnez...</option>
-                  <option>Appels Entrants</option>
-                  <option>Appels Sortants</option>
-                  <option>Agents IA Vocaux</option>
-                  <option>Support Client</option>
-                  <option>CRM &amp; Listes</option>
-                  <option>Offre Essai</option>
-                  <option>Sur mesure</option>
-                </select>
-              </div>
+  <div className="mb-6">
+    <label className="flex items-start gap-3 cursor-pointer">
+      <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
+      <span className="text-sm text-slate-600">
+        J&apos;accepte le traitement de mes données conformément à la{' '}
+        <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
+      </span>
+    </label>
+  </div>
 
-              <div className="mb-4">
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Volume d&apos;appels estimé</label>
-                <select
-                  name="volume"
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 bg-slate-50"
-                >
-                  <option value="">Sélectionnez...</option>
-                  <option>Moins de 100 appels/mois</option>
-                  <option>100 – 500 appels/mois</option>
-                  <option>500 – 2 000 appels/mois</option>
-                  <option>Plus de 2 000 appels/mois</option>
-                </select>
-              </div>
+  {error && (
+    <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+      {error}
+    </div>
+  )}
 
-              <div className="mb-5">
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message</label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  maxLength={2000}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-                  placeholder="Décrivez vos besoins, vos horaires, votre secteur..."
-                />
-              </div>
-
-              <div className="mb-6">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
-                  <span className="text-sm text-slate-600">
-                    J&apos;accepte le traitement de mes données conformément à la{' '}
-                    <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
-                  </span>
-                </label>
-              </div>
-
-              {error && (
-                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
-                  {error}
-                </div>
-              )}
-
-              <button 
-                type="submit" 
-                disabled={sending}
-                className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
-              >
-                {sending ? 'Envoi en cours...' : 'Envoyer le Message →'}
-              </button>
-            </form>
+  <button
+    type="submit"
+    disabled={sending}
+    className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
+  >
+    {sending ? 'Envoi en cours...' : 'Envoyer le Message →'}
+  </button>
+  <p className="text-center text-slate-500 text-sm mt-4">Réponse sous 2h • Sans engagement</p>
+</form>
           )}
         </div>
       </section>
