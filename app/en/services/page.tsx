@@ -48,35 +48,35 @@ export default function Services() {
           </div>
         </div>
       </section>
-   {/* SECTION 2: DARK - SERVICES OVERVIEW */}
-   <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-    <div className="max-w-4xl mx-auto px-4 text-center">
-     <h2 className="text-3xl lg:text-4xl font-bold mb-6">Solutions That Truly Make a Difference</h2>
-     <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto"> From answering calls to client follow-up, we manage it all so you can focus on what you do best. </p>
-    </div>
-   </section>
-{/* SECTION 3: DARK - SERVICES GRID */}
-<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl lg:text-4xl font-bold mb-3">Our Services</h2>
-<p className="text-blue-200 text-lg">What we actually do for you and your business</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-{SERVICES.map(({icon, title, desc, href, badge}, i) => (
-<Link key={href} href={href} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all group modern-box animate-delay-${(i+1)*100}`}>
-<div className="text-5xl mb-5">{icon}</div>
-<div className="flex items-center gap-2 mb-3">
-<h2 className="font-bold text-xl text-white">{title}</h2>
-{badge && <span className="text-xs bg-blue-500/30 text-blue-200 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
-</div>
-<p className="text-blue-200 mb-5 text-sm" dangerouslySetInnerHTML={{__html: desc}}/>
-<span className="text-blue-300 font-semibold group-hover:underline">Learn more →</span>
-</Link>
-))}
-</div>
-</div>
-</section>
+ {/* SECTION 2: DARK - SERVICES OVERVIEW */}
+ <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+ <div className="max-w-4xl mx-auto px-4 text-center">
+ <h2 className="text-3xl lg:text-4xl font-bold mb-6">Solutions That Truly Make a Difference</h2>
+ <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto"> From answering calls to client follow-up, we manage it all so you can focus on what you do best. </p>
+ </div>
+ </section>
+ {/* SECTION 3: LIGHT - SERVICES GRID */}
+ <section className="py-20 bg-white">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Our Services</h2>
+ <p className="text-slate-600 text-lg">What we actually do for you and your business</p>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+ {SERVICES.map(({icon, title, desc, href, badge}, i) => (
+ <Link key={href} href={href} className={`bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all group modern-box animate-delay-${(i+1)*100}`}>
+ <div className="text-5xl mb-5">{icon}</div>
+ <div className="flex items-center gap-2 mb-3">
+ <h2 className="font-bold text-xl text-slate-900">{title}</h2>
+ {badge && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
+ </div>
+ <p className="text-slate-600 mb-5 text-sm" dangerouslySetInnerHTML={{__html: desc}}/>
+ <span className="text-blue-600 font-semibold group-hover:underline">Learn more →</span>
+ </Link>
+ ))}
+ </div>
+ </div>
+ </section>
 {/* SECTION 4: LIGHT STATS */}
 <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -90,26 +90,26 @@ export default function Services() {
           </div>
         </div>
       </section>
-      {/* SECTION 5: LIGHT TESTIMONIALS */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
-            {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
-              <div key={author} className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 modern-box animate-delay-${(i+1)*100}`}>
-                <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
-                  {Array.from({length: rating}).map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6 italic">"{quote}"</p>
-                <div className="font-semibold text-gray-900">{author}</div>
-                <div className="text-sm text-gray-500">{role}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ {/* SECTION 5: DARK - TESTIMONIALS */}
+ <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+ <div className="max-w-6xl mx-auto px-4">
+ <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+ {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
+ <div key={author} className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-${(i+1)*100}`}>
+ <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
+ {Array.from({length: rating}).map((_, i) => (
+ <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+ ))}
+ </div>
+ <p className="text-blue-100 mb-6 italic">"{quote}"</p>
+ <div className="font-semibold text-white">{author}</div>
+ <div className="text-sm text-blue-300">{role}</div>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
       {/* SECTION 6: LIGHT HOW IT WORKS */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -126,57 +126,57 @@ export default function Services() {
           </div>
         </div>
       </section>
-   {/* SECTION 7: LIGHT ADDITIONAL VALUE */}
-   <section className="py-20 bg-slate-50">
-    <div className="max-w-6xl mx-auto px-4">
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div className="bg-white rounded-2xl p-8">
-       <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Choose Smart Hotline?</h3>
-       <p className="text-gray-600 mb-6"> We understand the unique challenges of SMEs and offer solutions that adapt to your growth, not the other way around. </p>
-       <ul className="space-y-4">
-        <li className="flex items-center gap-3 text-gray-700">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>24/7 availability, including weekends and holidays</span>
-        </li>
-        <li className="flex items-center gap-3 text-gray-700">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>Quick setup in less than 48 hours</span>
-        </li>
-        <li className="flex items-center gap-3 text-gray-700">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>No long-term commitment</span>
-        </li>
-        <li className="flex items-center gap-3 text-gray-700">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>Transparent reporting and real-time data access</span>
-        </li>
-       </ul>
-      </div>
-      <div className="bg-white rounded-2xl p-8">
-       <h3 className="text-2xl font-bold text-slate-900 mb-4">Concrete Results for Your Business</h3>
-       <p className="text-gray-600 mb-6"> Our clients typically see significant improvement in their efficiency and customer satisfaction within the first few weeks. </p>
-       <ul className="space-y-4 text-gray-700">
-        <li className="flex items-center gap-3">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>Up to 70% reduction in call management costs</span>
-        </li>
-        <li className="flex items-center gap-3">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>Increased customer satisfaction through constant availability</span>
-        </li>
-        <li className="flex items-center gap-3">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>Improved lead qualification for better conversion rates</span>
-        </li>
-        <li className="flex items-center gap-3">
-         <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center"> ✓ </span>
-         <span>More time to focus on your core business</span>
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </section>
+ {/* SECTION 7: DARK ADDITIONAL VALUE */}
+ <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+ <div className="max-w-6xl mx-auto px-4">
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+ <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-100`}>
+ <h3 className="text-2xl font-bold text-white mb-4">Why Choose Smart Hotline?</h3>
+ <p className="text-blue-200 mb-6"> We understand the unique challenges of SMEs and offer solutions that adapt to your growth, not the other way around. </p>
+ <ul className="space-y-4">
+ <li className="flex items-center gap-3 text-blue-100">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>24/7 availability, including weekends and holidays</span>
+ </li>
+ <li className="flex items-center gap-3 text-blue-100">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>Quick setup in less than 48 hours</span>
+ </li>
+ <li className="flex items-center gap-3 text-blue-100">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>No long-term commitment</span>
+ </li>
+ <li className="flex items-center gap-3 text-blue-100">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>Transparent reporting and real-time data access</span>
+ </li>
+ </ul>
+ </div>
+ <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-200`}>
+ <h3 className="text-2xl font-bold text-white mb-4">Concrete Results for Your Business</h3>
+ <p className="text-blue-200 mb-6"> Our clients typically see significant improvement in their efficiency and customer satisfaction within the first few weeks. </p>
+ <ul className="space-y-4 text-blue-100">
+ <li className="flex items-center gap-3">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>Up to 70% reduction in call management costs</span>
+ </li>
+ <li className="flex items-center gap-3">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>Increased customer satisfaction through constant availability</span>
+ </li>
+ <li className="flex items-center gap-3">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>Improved lead qualification for better conversion rates</span>
+ </li>
+ <li className="flex items-center gap-3">
+ <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm"> ✓ </span>
+ <span>More time to focus on your core business</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
    {/* SECTION 8: DARK FINAL CTA */}
    <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
     <div className="max-w-4xl mx-auto px-4 text-center">

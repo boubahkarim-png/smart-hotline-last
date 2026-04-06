@@ -170,42 +170,142 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: LIGHT - FEATURES */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
-            <div className="w-16 h-1 bg-emerald-600 mx-auto rounded"/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FEATURES.map(({icon: Icon, title, desc}: any) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-emerald-700" />
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{title}</h3>
-                <p className="text-slate-500 text-sm">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ {/* SECTION 3: LIGHT - FEATURES */}
+ <section className="py-20 bg-white">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-slate-900 mb-2">Ce qui est inclus</h2>
+ <div className="w-16 h-1 bg-emerald-600 mx-auto rounded"/>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+ {FEATURES.map(({icon: Icon, title, desc}: any) => (
+ <div key={title} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+ <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
+ <Icon className="w-6 h-6 text-emerald-700" />
+ </div>
+ <h3 className="font-bold text-lg text-slate-900 mb-2">{title}</h3>
+ <p className="text-slate-500 text-sm">{desc}</p>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
 
-      {/* SECTION 4: LIGHT - HOW IT WORKS */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">Comment ça fonctionne</h2>
-          {STEPS.map(({n, t, d}: any) => (
-            <div key={n} className="flex gap-5 mb-8 items-start">
-              <div className="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
-              <div className="pt-1">
-                <h3 className="font-bold text-slate-900 text-lg mb-1">{t}</h3>
-                <p className="text-slate-500">{d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+ {/* SECTION 4: DARK - HOW IT WORKS */}
+ <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-white py-20">
+ <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+ <h2 className="text-3xl font-black text-white mb-10 text-center">Comment ça fonctionne</h2>
+ {STEPS.map(({n, t, d}: any) => (
+ <div key={n} className="flex gap-5 mb-8 items-start">
+ <div className="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
+ <div className="pt-1">
+ <h3 className="font-bold text-white text-lg mb-1">{t}</h3>
+ <p className="text-emerald-200">{d}</p>
+ </div>
+ </div>
+ ))}
+ </div>
+ </section>
+
+ {/* SECTION 5: LIGHT - INDUSTRIES */}
+ <section className="py-20 bg-white">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-slate-900 mb-2">Industries que nous servons</h2>
+ <p className="text-slate-600">Campagnes spécialisées pour chaque secteur</p>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+ {INDUSTRIES.map(({name, result}) => (
+ <div key={name} className="bg-slate-50 rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
+ <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
+ <p className="text-emerald-600 text-sm">{result}</p>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
+
+ {/* SECTION 6: DARK - PROCESS */}
+ <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-white mb-2">Notre processus</h2>
+ <p className="text-emerald-200">Du premier appel au lead qualifié</p>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+ {PROCESS.map(({title, desc}, i) => (
+ <div key={title} className="relative">
+ <div className="bg-white/10 backdrop-blur rounded-2xl p-6 h-full border border-white/20">
+ <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
+ <h3 className="font-bold text-white mb-2">{title}</h3>
+ <p className="text-emerald-200 text-sm">{desc}</p>
+ </div>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
+
+ {/* SECTION 7: DARK - TESTIMONIALS */}
+ <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-white mb-3">Ce que nos clients disent vraiment</h2>
+ <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+ {TESTIMONIALS.map(({quote, name, role, initials}) => (
+ <div key={name} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+ <div className="flex gap-0.5 mb-4">
+ {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
+ </div>
+ <p className="text-white mb-5 leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
+ <div className="flex items-center gap-3">
+ <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>
+ <div>
+ <p className="font-bold text-white text-sm">{name}</p>
+ <p className="text-blue-200 text-xs">{role}</p>
+ </div>
+ </div>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
+
+ {/* SECTION 8: LIGHT - FAQ */}
+ <section className="bg-white py-20 border-t border-slate-100">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-slate-900 mb-3">Questions fréquentes</h2>
+ <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
+ </div>
+ <div className="space-y-6">
+ {FAQ.map(({question, answer}, index) => (
+ <div key={index} className="bg-slate-50 rounded-2xl p-6">
+ <div className="flex items-start gap-4 mb-3">
+ <div className="flex-shrink-0">
+ <QuestionIcon className="w-5 h-5 text-emerald-600" />
+ </div>
+ <div>
+ <h3 className="font-bold text-slate-900">{question}</h3>
+ <p className="text-slate-500">{answer}</p>
+ </div>
+ </div>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
+
+ {/* SECTION 9: DARK - FINAL CTA */}
+ <section className="bg-gradient-to-br from-emerald-900 to-emerald-700 text-white py-20">
+ <div className="max-w-4xl mx-auto px-4 text-center">
+ <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à multiplier vos leads?</h2>
+ <p className="text-emerald-100 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
+ <CTAButtons slug="emission"/>
+ </div>
+ </section>
 
       {/* SECTION 4.5: LIGHT - INDUSTRIES */}
       <section className="py-20 bg-slate-50">

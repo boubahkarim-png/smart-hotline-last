@@ -131,37 +131,37 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 4: DARK - How it works */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white py-20 lg:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black mb-4">Comment ça fonctionne</h2>
-            <p className="text-slate-300 text-lg">4 étapes simples pour améliorer votre support client</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
-            <div className="text-center modern-box animate-delay-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">1</div>
-              <h3 className="font-bold text-lg mb-2">Analyse</h3>
-              <p className="text-slate-300 text-sm">On étudie vos types de demandes</p>
-            </div>
-            <div className="text-center modern-box animate-delay-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">2</div>
-              <h3 className="font-bold text-lg mb-2">Base de connaissances</h3>
-              <p className="text-slate-300 text-sm">On crée les réponses pour chaque cas</p>
-            </div>
-            <div className="text-center modern-box animate-delay-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">3</div>
-              <h3 className="font-bold text-lg mb-2">Démarrage</h3>
-              <p className="text-slate-300 text-sm">On prend les appels et emails</p>
-            </div>
-            <div className="text-center modern-box animate-delay-400">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">4</div>
-              <h3 className="font-bold text-lg mb-2">Amélioration</h3>
-              <p className="text-slate-300 text-sm">On ajuste selon vos retours</p>
-            </div>
-          </div>
-        </div>
-      </section>
+ {/* SECTION 4: LIGHT - How it works */}
+ <section className="py-20 bg-white">
+ <div className="max-w-6xl mx-auto px-4">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-slate-900 mb-4">Comment ça fonctionne</h2>
+ <p className="text-slate-600 text-lg">4 étapes simples pour améliorer votre support client</p>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+ <div className="text-center modern-box animate-delay-100">
+ <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">1</div>
+ <h3 className="font-bold text-lg mb-2 text-slate-900">Analyse</h3>
+ <p className="text-slate-600 text-sm">On étudie vos types de demandes</p>
+ </div>
+ <div className="text-center modern-box animate-delay-200">
+ <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">2</div>
+ <h3 className="font-bold text-lg mb-2 text-slate-900">Base de connaissances</h3>
+ <p className="text-slate-600 text-sm">On crée les réponses pour chaque cas</p>
+ </div>
+ <div className="text-center modern-box animate-delay-300">
+ <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">3</div>
+ <h3 className="font-bold text-lg mb-2 text-slate-900">Démarrage</h3>
+ <p className="text-slate-600 text-sm">On prend les appels et emails</p>
+ </div>
+ <div className="text-center modern-box animate-delay-400">
+ <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">4</div>
+ <h3 className="font-bold text-lg mb-2 text-slate-900">Amélioration</h3>
+ <p className="text-slate-600 text-sm">On ajuste selon vos retours</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
       {/* SECTION 5: LIGHT - Value proposition */}
       <section className="py-20 bg-white">

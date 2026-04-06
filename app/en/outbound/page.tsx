@@ -160,23 +160,23 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 5: Industries - Light */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Industries We Serve</h2>
-            <p className="text-slate-600">Specialized campaigns for every sector</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
-            {INDUSTRIES.map(({name, result}) => (
-              <div key={name} className="bg-white rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
-                <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
-                <p className="text-emerald-600 text-sm">{result}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ {/* Section 5: DARK - Industries */}
+ <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-12">
+ <h2 className="text-3xl font-black text-white mb-2">Industries We Serve</h2>
+ <p className="text-emerald-200">Specialized campaigns for every sector</p>
+ </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+ {INDUSTRIES.map(({name, result}) => (
+ <div key={name} className="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all text-center">
+ <h3 className="font-bold text-white mb-1">{name}</h3>
+ <p className="text-emerald-300 text-sm">{result}</p>
+ </div>
+ ))}
+ </div>
+ </div>
+ </section>
 
       {/* Section 6: Our Process - Light */}
       <section className="py-20 bg-white">

@@ -160,49 +160,52 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 5: BENEFITS - Two columns */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Why Trust Us?</h2>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">Our agents are trained to represent your business as if it were their own. No robotic scripts — real conversations.</p>
-              <ul className="space-y-4 mb-8">
-              {[
-                'French-speaking agents from Quebec and France',
-                'Messages sent by SMS, email, or call',
-                'SME pricing — 40-60% cheaper than an employee',
-                'Cancel anytime — no long contracts',
-              ].map((item, i) => (
-                <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
-                  <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                    <CheckIcon className="w-5 h-5"/>
-                  </span>
-                  {item}
-                </li>
-              ))}
-              </ul>
-              <Link href="/en/contact?service=reception" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                See a Demo
-              </Link>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="modern-box p-10 bg-gradient-to-br from-slate-50 to-sky-50">
-                <h3 className="font-bold text-2xl text-slate-900 mb-6">Pricing Adapted to Your Growth</h3>
-                <p className="text-slate-600 text-lg mb-4">Competitive pricing, no long-term commitment. You pay for what you use.</p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> No hidden fees</li>
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> Cancel anytime</li>
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> CRM and autodialer included</li>
-                </ul>
-                <Link href="/en/pricing" className="text-sky-600 font-bold text-lg hover:underline flex items-center gap-2">
-                  View All Pricing
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ {/* SECTION 5: DARK - BENEFITS */}
+ <section className="bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white py-20 relative overflow-hidden">
+ <div className="absolute inset-0 pointer-events-none">
+ <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-sky-500 opacity-10 rounded-full blur-3xl"></div>
+ </div>
+ <div className="max-w-7xl mx-auto px-4 relative">
+ <div className="flex flex-col lg:flex-row items-center gap-16">
+ <div className="w-full lg:w-1/2">
+ <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Trust Us?</h2>
+ <p className="text-xl text-sky-200 mb-8 leading-relaxed">Our agents are trained to represent your business as if it were their own. No robotic scripts — real conversations.</p>
+ <ul className="space-y-4 mb-8">
+ {[
+ 'French-speaking agents from Quebec and France',
+ 'Messages sent by SMS, email, or call',
+ 'SME pricing — 40-60% cheaper than an employee',
+ 'Cancel anytime — no long contracts',
+ ].map((item, i) => (
+ <li key={i} className={`flex items-center gap-4 text-white text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
+ <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+ <CheckIcon className="w-5 h-5"/>
+ </span>
+ {item}
+ </li>
+ ))}
+ </ul>
+ <Link href="/en/contact?service=reception" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+ See a Demo
+ </Link>
+ </div>
+ <div className="w-full lg:w-1/2">
+ <div className="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/20">
+ <h3 className="font-bold text-2xl text-white mb-6">Pricing Adapted to Your Growth</h3>
+ <p className="text-sky-200 text-lg mb-4">Competitive pricing, no long-term commitment. You pay for what you use.</p>
+ <ul className="space-y-3 mb-6">
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> No hidden fees</li>
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Cancel anytime</li>
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> CRM and autodialer included</li>
+ </ul>
+ <Link href="/en/pricing" className="text-sky-400 font-bold text-lg hover:underline flex items-center gap-2">
+ View All Pricing
+ </Link>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
       {/* SECTION 6: TESTIMONIALS - Modern cards */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">

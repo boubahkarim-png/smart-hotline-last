@@ -143,40 +143,43 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 5: LIGHT - Benefits */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-14">
-            <div className="w-full lg:w-[55%]">
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">Why Choose Our CRM?</h2>
-              <p className="text-slate-600 text-lg mb-6">We don't just sell you software. We help you structure your sales process from A to Z.</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Training included — no endless learning curves</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>French-speaking support based in Quebec</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Automatic updates, no hidden fees</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Integrated with our outbound calling services</li>
-              </ul>
-              <Link href="/en/contact?service=crm" className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-purple-700 transition-colors">
-                See a Demo →
-              </Link>
-            </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <ClockIcon className="w-6 h-6 text-purple-600" />
-                  <span className="font-bold text-slate-900">Time Saved</span>
-                </div>
-                <p className="text-slate-600 mb-6">Our clients save an average of 8 hours per week managing their contacts.</p>
-                <div className="flex items-center gap-3 mb-4">
-                  <ShieldCheckIcon className="w-6 h-6 text-purple-600" />
-                  <span className="font-bold text-slate-900">Secure Data</span>
-                </div>
-                <p className="text-slate-600">Hosted in Canada, GDPR and PIPEDA compliant.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ {/* SECTION 5: DARK - Benefits */}
+ <section className="bg-gradient-to-br from-slate-900 via-purple-950 to-purple-900 text-white py-20 relative overflow-hidden">
+ <div className="absolute inset-0 pointer-events-none">
+ <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-purple-500 opacity-10 rounded-full blur-3xl"></div>
+ </div>
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+ <div className="flex flex-col lg:flex-row items-center gap-14">
+ <div className="w-full lg:w-[55%]">
+ <h2 className="text-3xl lg:text-4xl font-black text-white mb-5">Why Choose Our CRM?</h2>
+ <p className="text-purple-200 text-lg mb-6">We don't just sell you software. We help you structure your sales process from A to Z.</p>
+ <ul className="space-y-3 mb-8">
+ <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-purple-500/30 text-purple-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Training included — no endless learning curves</li>
+ <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-purple-500/30 text-purple-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>French-speaking support based in Quebec</li>
+ <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-purple-500/30 text-purple-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Automatic updates, no hidden fees</li>
+ <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-purple-500/30 text-purple-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Integrated with our outbound calling services</li>
+ </ul>
+ <Link href="/en/contact?service=crm" className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-purple-700 transition-colors">
+ See a Demo →
+ </Link>
+ </div>
+ <div className="w-full lg:w-[40%]">
+ <div className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+ <div className="flex items-center gap-3 mb-4">
+ <ClockIcon className="w-6 h-6 text-purple-400" />
+ <span className="font-bold text-white">Time Saved</span>
+ </div>
+ <p className="text-purple-200 mb-6">Our clients save an average of 8 hours per week managing their contacts.</p>
+ <div className="flex items-center gap-3 mb-4">
+ <ShieldCheckIcon className="w-6 h-6 text-purple-400" />
+ <span className="font-bold text-white">Secure Data</span>
+ </div>
+ <p className="text-purple-200">Hosted in Canada, GDPR and PIPEDA compliant.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
       {/* SECTION 6: LIGHT - Testimonials */}
       <section className="py-20 bg-slate-50">

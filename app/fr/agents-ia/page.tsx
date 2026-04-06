@@ -161,49 +161,52 @@ Sophie, votre IA<br/>
 </div>
 </section>
 
-{/* SECTION 5: BENEFITS */}
-<section className="py-20 bg-white">
-<div className="max-w-7xl mx-auto px-4">
-<div className="flex flex-col lg:flex-row items-center gap-16">
-<div className="w-full lg:w-1/2">
-<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Pourquoi choisir Sophie?</h2>
-<p className="text-xl text-slate-600 mb-8 leading-relaxed">Sophie ne dort pas, ne prend pas de pauses, et n'a jamais une mauvaise journée. Elle gère le répétitif pour que votre équipe puisse se concentrer sur ce qui compte vraiment.</p>
-<ul className="space-y-4 mb-8">
-{[
-'Accent du Québec, de France, ou Belgique au choix',
-'Transcription et analyse de chaque appel',
-'70% moins cher qu\'une réceptionniste',
-'Installation en 24-48h',
-].map((item, i) => (
-<li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
-<span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-<CheckIcon className="w-5 h-5"/>
-</span>
-{item}
-</li>
-))}
-</ul>
-<Link href="/fr/contact?service=ia" className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-Voir une démo
-</Link>
-</div>
-<div className="w-full lg:w-1/2">
-<div className="modern-box p-10 bg-gradient-to-br from-slate-50 to-violet-50">
-<h3 className="font-bold text-2xl text-slate-900 mb-6">Des tarifs à la minute</h3>
-<p className="text-slate-600 text-lg mb-4">Vous ne payez que pour ce que vous utilisez. Pas de frais fixes, pas d'engagement.</p>
-<ul className="space-y-3 mb-6">
-<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-violet-600"/> Pas de frais de setup</li>
-<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-violet-600"/> Annulez quand vous voulez</li>
-<li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-violet-600"/> Support inclus</li>
-</ul>
-<Link href="/fr/tarifs" className="text-violet-600 font-bold text-lg hover:underline flex items-center gap-2">
-Voir tous les tarifs
-</Link>
-</div>
-</div>
-</div>
-</div>
-</section>
+ {/* SECTION 5: DARK - BENEFITS */}
+ <section className="bg-gradient-to-br from-slate-900 via-violet-950 to-purple-900 text-white py-20 relative overflow-hidden">
+ <div className="absolute inset-0 pointer-events-none">
+ <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-violet-500 opacity-10 rounded-full blur-3xl"></div>
+ </div>
+ <div className="max-w-7xl mx-auto px-4 relative">
+ <div className="flex flex-col lg:flex-row items-center gap-16">
+ <div className="w-full lg:w-1/2">
+ <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi choisir Sophie?</h2>
+ <p className="text-xl text-violet-200 mb-8 leading-relaxed">Sophie ne dort pas, ne prend pas de pauses, et n\'a jamais une mauvaise journée. Elle gère le répétitif pour que votre équipe puisse se concentrer sur ce qui compte vraiment.</p>
+ <ul className="space-y-4 mb-8">
+ {[
+ 'Accent du Québec, de France, ou Belgique au choix',
+ 'Transcription et analyse de chaque appel',
+ '70% moins cher qu\'une réceptionniste',
+ 'Installation en 24-48h',
+ ].map((item, i) => (
+ <li key={i} className={`flex items-center gap-4 text-white text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
+ <span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+ <CheckIcon className="w-5 h-5"/>
+ </span>
+ {item}
+ </li>
+ ))}
+ </ul>
+ <Link href="/fr/contact?service=ia" className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+ Voir une démo
+ </Link>
+ </div>
+ <div className="w-full lg:w-1/2">
+ <div className="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/20">
+ <h3 className="font-bold text-2xl text-white mb-6">Des tarifs à la minute</h3>
+ <p className="text-violet-200 text-lg mb-4">Vous ne payez que pour ce que vous utilisez. Pas de frais fixes, pas d\'engagement.</p>
+ <ul className="space-y-3 mb-6">
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-violet-400"/> Pas de frais de setup</li>
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-violet-400"/> Annulez quand vous voulez</li>
+ <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-violet-400"/> Support inclus</li>
+ </ul>
+ <Link href="/fr/tarifs" className="text-violet-400 font-bold text-lg hover:underline flex items-center gap-2">
+ Voir tous les tarifs
+ </Link>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
 {/* SECTION 6: TESTIMONIALS */}
 <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
