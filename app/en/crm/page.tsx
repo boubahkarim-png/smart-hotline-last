@@ -116,11 +116,11 @@ export default function Page() {
 
       {/* SECTION 3: LIGHT - Stats */}
       <section className="bg-white border-b border-slate-100 py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div><p className="text-4xl font-black text-purple-600">250K+</p><p className="text-slate-500 text-sm mt-1">B2B Contacts</p></div>
-          <div><p className="text-4xl font-black text-purple-600">98%</p><p className="text-slate-500 text-sm mt-1">Verified Data</p></div>
-          <div><p className="text-4xl font-black text-purple-600">+35%</p><p className="text-slate-500 text-sm mt-1">Conversion Rate</p></div>
-          <div><p className="text-4xl font-black text-purple-600">48h</p><p className="text-slate-500 text-sm mt-1">Full Setup</p></div>
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+          <div className="modern-box animate-delay-100"><p className="text-4xl font-black text-purple-600">250K+</p><p className="text-slate-500 text-sm mt-1">B2B Contacts</p></div>
+          <div className="modern-box animate-delay-200"><p className="text-4xl font-black text-purple-600">98%</p><p className="text-slate-500 text-sm mt-1">Verified Data</p></div>
+          <div className="modern-box animate-delay-300"><p className="text-4xl font-black text-purple-600">+35%</p><p className="text-slate-500 text-sm mt-1">Conversion Rate</p></div>
+          <div className="modern-box animate-delay-400"><p className="text-4xl font-black text-purple-600">48h</p><p className="text-slate-500 text-sm mt-1">Full Setup</p></div>
         </div>
       </section>
 
@@ -185,9 +185,9 @@ export default function Page() {
             <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto rounded"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <div key={i} className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-sm modern-box animate-delay-${(i+1)*100}`}>
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>

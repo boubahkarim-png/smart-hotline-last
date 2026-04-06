@@ -3,7 +3,7 @@ import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { PhoneIcon, MailIcon, ChatIcon, TicketIcon, MobileIcon, AnalyticsIcon, CheckIcon, HeadphonesIcon } from '@/components/Icons'
+import { PhoneIcon, MailIcon, ChatIcon, TicketIcon, MobileIcon, AnalyticsIcon, CheckIcon, HeadphonesIcon, StarIcon, ClockIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
 
@@ -20,6 +20,12 @@ const STEPS = [
   {'n': '2', 't': 'Tool Configuration', 'd': 'Integration of your existing helpdesk or creation.'},
   {'n': '3', 't': 'Team Training', 'd': 'Agents trained on your products, policies and brand tone.'},
   {'n': '4', 't': 'Continuous Quality Follow-up', 'd': 'CSAT monitoring, coaching, weekly reports.'},
+]
+
+const TESTIMONIALS = [
+  {q: "We receive questions about our products all day. Before, it was chaos in emails. Now, every request is properly tracked.", name: 'Catherine Rouleau', role: 'Customer Service Manager, Online Store QC', av: 'CR'},
+  {q: "They fixed a 3-week problem in 48h. The fact that they speak proper French — that really helps with our clients.", name: 'Jean-François Poissant', role: 'Director, Financial Services MTL', av: 'JP'},
+  {q: "Our clients are more satisfied. We see it in the comments. Support in French, it makes all the difference.", name: 'Martine Lévesque', role: 'Founder, Tech Support Quebec', av: 'ML'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -98,12 +104,12 @@ Turn your clients into ambassadors. Our agents handle tickets, emails, chat and 
 <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
+            <h2 className="text-3xl font-black text-slate-900 mb-2">What&apos;s Included</h2>
             <div className="w-16 h-1 bg-teal-600 mx-auto rounded"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FEATURES.map(({icon: Icon, title, desc}: any) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+            {FEATURES.map(({icon: Icon, title, desc}: any, i: number) => (
+              <div key={title} className={`bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all modern-box animate-delay-${(i+1)*100}`}>
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-teal-700" />
                 </div>
@@ -118,15 +124,52 @@ Turn your clients into ambassadors. Our agents handle tickets, emails, chat and 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">How It Works</h2>
-          {STEPS.map(({n, t, d}: any) => (
-            <div key={n} className="flex gap-5 mb-8 items-start">
-              <div className="w-12 h-12 bg-teal-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
-              <div className="pt-1">
-                <h3 className="font-bold text-slate-900 text-lg mb-1">{t}</h3>
-                <p className="text-slate-500">{d}</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+            {STEPS.map(({n, t, d}: any, i: number) => (
+              <div key={n} className={`text-center modern-box animate-delay-${(i+1)*100}`}>
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">{n}</div>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{t}</h3>
+                <p className="text-slate-500 text-sm">{d}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: STATS */}
+      <section className="bg-white border-b border-slate-100 py-10">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+            <div className="modern-box animate-delay-100"><p className="text-4xl font-black text-teal-600">98%</p><p className="text-slate-500 text-sm mt-1">Client satisfaction</p></div>
+            <div className="modern-box animate-delay-200"><p className="text-4xl font-black text-teal-600">&lt; 2h</p><p className="text-slate-500 text-sm mt-1">Response time</p></div>
+            <div className="modern-box animate-delay-300"><p className="text-4xl font-black text-teal-600">50K+</p><p className="text-slate-500 text-sm mt-1">Tickets/month</p></div>
+            <div className="modern-box animate-delay-400"><p className="text-4xl font-black text-teal-600">24/7</p><p className="text-slate-500 text-sm mt-1">Availability</p></div>
+        </div>
+      </section>
+
+      {/* SECTION: TESTIMONIALS */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
+            <div className="w-16 h-1 bg-teal-600 mx-auto rounded"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-sm modern-box animate-delay-${(i+1)*100}`}>
+                <div className="flex gap-0.5 mb-4">
+                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
+                </div>
+                <p className="text-slate-600 mb-5 leading-relaxed italic">"{t.q}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{t.av}</div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm">{t.name}</p>
+                    <p className="text-slate-500 text-xs">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

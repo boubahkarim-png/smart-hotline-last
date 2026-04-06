@@ -111,44 +111,44 @@ Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des
           </div>
         </div>
       </section>
-      <section className="bg-white border-b border-slate-100 py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div><p className="text-4xl font-black text-teal-600">98%</p><p className="text-slate-500 text-sm mt-1">Satisfaction client</p></div>
-          <div><p className="text-4xl font-black text-teal-600">&lt; 2h</p><p className="text-slate-500 text-sm mt-1">Temps de réponse</p></div>
-          <div><p className="text-4xl font-black text-teal-600">50K+</p><p className="text-slate-500 text-sm mt-1">Tickets/mois</p></div>
-          <div><p className="text-4xl font-black text-teal-600">24/7</p><p className="text-slate-500 text-sm mt-1">Disponibilité</p></div>
+<section className="bg-white border-b border-slate-100 py-10">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+            <div className="modern-box animate-delay-100"><p className="text-4xl font-black text-teal-600">98%</p><p className="text-slate-500 text-sm mt-1">Satisfaction client</p></div>
+            <div className="modern-box animate-delay-200"><p className="text-4xl font-black text-teal-600">&lt; 2h</p><p className="text-slate-500 text-sm mt-1">Temps de réponse</p></div>
+            <div className="modern-box animate-delay-300"><p className="text-4xl font-black text-teal-600">50K+</p><p className="text-slate-500 text-sm mt-1">Tickets/mois</p></div>
+            <div className="modern-box animate-delay-400"><p className="text-4xl font-black text-teal-600">24/7</p><p className="text-slate-500 text-sm mt-1">Disponibilité</p></div>
         </div>
-      </section>
-      <section className="py-20 bg-slate-50">
+        </section>
+<section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">Comment ça fonctionne</h2>
             <div className="w-16 h-1 bg-teal-600 mx-auto rounded"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+            <div className="text-center modern-box animate-delay-100">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">1</div>
               <h3 className="font-bold text-slate-900 text-lg mb-2">Analyse</h3>
               <p className="text-slate-500 text-sm">On étudie vos types de demandes</p>
             </div>
-            <div className="text-center">
+            <div className="text-center modern-box animate-delay-200">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">2</div>
               <h3 className="font-bold text-slate-900 text-lg mb-2">Base de connaissances</h3>
               <p className="text-slate-500 text-sm">On crée les réponses pour chaque cas</p>
             </div>
-            <div className="text-center">
+            <div className="text-center modern-box animate-delay-300">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">3</div>
               <h3 className="font-bold text-slate-900 text-lg mb-2">Démarrage</h3>
               <p className="text-slate-500 text-sm">On prend les appels et emails</p>
             </div>
-            <div className="text-center">
+            <div className="text-center modern-box animate-delay-400">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">4</div>
               <h3 className="font-bold text-slate-900 text-lg mb-2">Amélioration</h3>
               <p className="text-slate-500 text-sm">On ajuste selon vos retours</p>
             </div>
           </div>
         </div>
-      </section>
+        </section>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-14">
@@ -176,15 +176,15 @@ Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des
           </div>
         </div>
       </section>
-      <section className="py-20 bg-slate-50">
+<section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">Ce que nos clients disent</h2>
             <div className="w-16 h-1 bg-teal-600 mx-auto rounded"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <div key={i} className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-sm modern-box animate-delay-${(i+1)*100}`}>
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>
@@ -200,7 +200,7 @@ Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des
             ))}
           </div>
         </div>
-      </section>
+        </section>
       <section className="bg-gradient-to-br from-slate-900 to-teal-800 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à améliorer votre support?</h2>
