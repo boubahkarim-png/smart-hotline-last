@@ -55,31 +55,30 @@ export default function Services() {
      <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto"> From answering calls to client follow-up, we manage it all so you can focus on what you do best. </p>
     </div>
    </section>
-      {/* SECTION 3: LIGHT - SERVICES GRID */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Our Services</h2>
-            <p className="text-slate-500 text-lg">What we actually do for you and your business</p>
-            <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-            {SERVICES.map(({icon, title, desc, href, badge}, i) => (
-              <Link key={href} href={href} className={`bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group modern-box animate-delay-${(i+1)*100}`}>
-                <div className="text-5xl mb-5">{icon}</div>
-                <div className="flex items-center gap-2 mb-3">
-                  <h2 className="font-bold text-xl">{title}</h2>
-                  {badge && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
-                </div>
-                <p className="text-gray-500 mb-5" dangerouslySetInnerHTML={{__html: desc}}/>
-                <span className="text-blue-600 font-semibold group-hover:underline">Learn more →</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* SECTION 4: LIGHT STATS */}
-      <section className="py-16 bg-white">
+{/* SECTION 3: DARK - SERVICES GRID */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl lg:text-4xl font-bold mb-3">Our Services</h2>
+<p className="text-blue-200 text-lg">What we actually do for you and your business</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+{SERVICES.map(({icon, title, desc, href, badge}, i) => (
+<Link key={href} href={href} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all group modern-box animate-delay-${(i+1)*100}`}>
+<div className="text-5xl mb-5">{icon}</div>
+<div className="flex items-center gap-2 mb-3">
+<h2 className="font-bold text-xl text-white">{title}</h2>
+{badge && <span className="text-xs bg-blue-500/30 text-blue-200 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
+</div>
+<p className="text-blue-200 mb-5 text-sm" dangerouslySetInnerHTML={{__html: desc}}/>
+<span className="text-blue-300 font-semibold group-hover:underline">Learn more →</span>
+</Link>
+))}
+</div>
+</div>
+</section>
+{/* SECTION 4: LIGHT STATS */}
+<section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
             {STATS.map(({value, label}, i) => (

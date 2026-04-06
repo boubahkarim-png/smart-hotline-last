@@ -8,7 +8,7 @@ const SERVICES = [
   { icon: "🎧", title: "Support Client", desc: "Tickets, email, chat, WhatsApp. Support 5 étoiles pour vos clients.", href: "/fr/support", color: "teal" },
   { icon: "🗄️", title: "CRM & Listes", desc: "CRM SuiteCRM intégré + listes de prospection B2B/B2C qualifiées.", href: "/fr/crm", color: "indigo" },
   { icon: "🏭", title: "Expertise Sectorielle", desc: "Solutions spécialisées pour santé, immobilier, juridique et plus.", href: "/fr/secteurs", color: "orange" },
-  ]
+]
 const STATS = [
   { value: "500+", label: "PME accompagnées" },
   { value: "98%", label: "Satisfaction client" },
@@ -16,9 +16,9 @@ const STATS = [
   { value: "50K+", label: "Appels traités/mois" },
 ]
 const TESTIMONIALS = [
-{ quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
-{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5 },
-{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5 },
+  { quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
+  { quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5 },
+  { quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5 },
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
@@ -29,7 +29,7 @@ const STEPS = [
 export default function Services() {
   return (
     <>
-      {/* SECTION 1: LIGHT HERO - Text LEFT, Image RIGHT */}
+      {/* SECTION 1: LIGHT HERO */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -48,42 +48,32 @@ export default function Services() {
           </div>
         </div>
       </section>
-      
-      {/* SECTION 2: DARK - SERVICES OVERVIEW */}
+
+      {/* SECTION 2: DARK - SERVICES GRID */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Des solutions qui font vraiment la différence</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Du décroché de téléphone au suivi client, on gère tout ça pour que tu puisses te concentrer sur ce que tu fais le mieux.
-          </p>
-        </div>
-      </section>
-      
-      {/* SECTION 3: LIGHT - SERVICES GRID */}
-      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Nos Services</h2>
-            <p className="text-slate-500 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
-            <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Nos Services</h2>
+            <p className="text-blue-200 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
+            <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full mt-4"/>
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-        {SERVICES.map(({icon, title, desc, href, badge}, i) => (
-          <Link key={href} href={href} className={`bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group modern-box animate-delay-${(i+1)*100}`}>
-                <div className="text-5xl mb-5">{icon}</div>
-                <div className="flex items-center gap-2 mb-3">
-                  <h2 className="font-bold text-xl">{title}</h2>
-                  {badge && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+            {SERVICES.map(({icon, title, desc, href, badge}, i) => (
+              <Link key={href} href={href} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all group modern-box animate-delay-${(i+1)*100}`}>
+                <div className="text-4xl mb-4">{icon}</div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-bold text-lg text-white">{title}</h3>
+                  {badge && <span className="text-xs bg-blue-500 text-white px-2 py-0.5 rounded-full font-medium">{badge}</span>}
                 </div>
-                <p className="text-gray-500 mb-5" dangerouslySetInnerHTML={{__html: desc}}/>
-                <span className="text-blue-600 font-semibold group-hover:underline">En savoir plus →</span>
+                <p className="text-blue-200 text-sm mb-4" dangerouslySetInnerHTML={{__html: desc}}/>
+                <span className="text-blue-300 font-semibold group-hover:underline text-sm">En savoir plus →</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
-      
-      {/* SECTION 4: LIGHT STATS */}
+
+      {/* SECTION 3: LIGHT STATS */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
@@ -96,120 +86,104 @@ export default function Services() {
           </div>
         </div>
       </section>
-      
-      {/* SECTION 5: LIGHT TESTIMONIALS */}
-      <section className="py-20 bg-slate-50">
+
+      {/* SECTION 4: DARK TESTIMONIALS */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">Ce que disent nos clients</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">Ce que disent nos clients</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
             {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
-              <div key={author} className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 modern-box animate-delay-${(i+1)*100}`}>
+              <div key={author} className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-${(i+1)*100}`}>
                 <div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
                   {Array.from({length: rating}).map((_, i) => (
                     <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{quote}"</p>
-                <div className="font-semibold text-gray-900">{author}</div>
-                <div className="text-sm text-gray-500">{role}</div>
+                <p className="text-blue-100 mb-6 italic text-sm leading-relaxed">"{quote}"</p>
+                <div className="font-semibold text-white">{author}</div>
+                <div className="text-sm text-blue-300">{role}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      
-      {/* SECTION 6: LIGHT HOW IT WORKS */}
+
+      {/* SECTION 5: LIGHT HOW IT WORKS */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">Comment ça marche?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-slate-900">Comment ça marche?</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">De la consultation initiale au suivi continu, on vous accompagne à chaque étape.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {STEPS.map(({num, title, desc}, i) => (
               <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
                 <div className="text-6xl font-extrabold text-blue-100 mb-3">{num}</div>
-                <h3 className="font-bold text-lg mb-2">{title}</h3>
+                <h3 className="font-bold text-lg mb-2 text-slate-900">{title}</h3>
                 <p className="text-gray-600">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      
-      {/* SECTION 7: LIGHT ADDITIONAL VALUE */}
-      <section className="py-20 bg-slate-50">
+
+      {/* SECTION 6: DARK ADDITIONAL VALUE */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Pourquoi choisir Smart Hotline?</h3>
-              <p className="text-gray-600 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+            <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-100`}>
+              <h3 className="text-2xl font-bold text-white mb-4">Pourquoi choisir Smart Hotline?</h3>
+              <p className="text-blue-200 mb-6">
                 Nous comprenons les défis uniques des PME et offrons des solutions qui s'adaptent
                 à votre croissance, pas l'inverse.
               </p>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Disponibilité 24/7, même les weekends et jours fériés</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Disponibilité 24/7, même les weekends</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Mise en place rapide en moins de 48 heures</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Mise en place rapide en moins de 48h</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
                   <span>Aucun engagement à long terme</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Reporting transparent et accès aux données en temps réel</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Reporting transparent en temps réel</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Résultats concrets pour votre business</h3>
-              <p className="text-gray-600 mb-6">
-                Nos clients voient généralement une amélioration significative de leur efficacité
-                et de leur satisfaction client dès les premières semaines.
+            <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-200`}>
+              <h3 className="text-2xl font-bold text-white mb-4">Résultats concrets</h3>
+              <p className="text-blue-200 mb-6">
+                Nos clients voient une amélioration significative de leur efficacité
+                et satisfaction client dès les premières semaines.
               </p>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Réduction de jusqu'à 70% des coûts liés à la gestion des appels</span>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Jusqu'à 70% de réduction des coûts</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Augmentation de la satisfaction client grâce à une disponibilité constante</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Satisfaction client en hausse constante</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Qualification améliorée des leads pour un meilleur taux de conversion</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Meilleur taux de conversion des leads</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    ✓
-                  </span>
-                  <span>Libération de temps pour vous concentrer sur votre cœur de métier</span>
+                <li className="flex items-center gap-3 text-blue-100">
+                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+                  <span>Temps libéré pour votre cœur de métier</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* SECTION 8: DARK FINAL CTA */}
+
+      {/* SECTION 7: DARK FINAL CTA */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à mieux gérer vos appels?</h2>
