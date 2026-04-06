@@ -121,18 +121,23 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: LIGHT - Stats */}
-      <section className="bg-white border-b border-slate-100 py-12">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-          <div className="modern-box animate-delay-100"><p className="text-4xl font-black text-teal-600">98%</p><p className="text-slate-500 text-sm mt-1">Satisfaction client</p></div>
-          <div className="modern-box animate-delay-200"><p className="text-4xl font-black text-teal-600">&lt; 2h</p><p className="text-slate-500 text-sm mt-1">Temps de réponse</p></div>
-          <div className="modern-box animate-delay-300"><p className="text-4xl font-black text-teal-600">50K+</p><p className="text-slate-500 text-sm mt-1">Tickets/mois</p></div>
-          <div className="modern-box animate-delay-400"><p className="text-4xl font-black text-teal-600">24/7</p><p className="text-slate-500 text-sm mt-1">Disponibilité</p></div>
-        </div>
-      </section>
+{/* SECTION 3: DARK - Stats */}
+<section className="bg-gradient-to-br from-slate-900 via-teal-950 to-indigo-900 text-white py-20 border-t-4 border-teal-600">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-8">
+<h3 className="text-2xl font-bold text-teal-300">Des résultats mesurables</h3>
+</div>
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+<div className="modern-box animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-teal-200 text-sm mt-1">Satisfaction client</p></div>
+<div className="modern-box animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-teal-200 text-sm mt-1">Temps de réponse</p></div>
+<div className="modern-box animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-teal-200 text-sm mt-1">Tickets/mois</p></div>
+<div className="modern-box animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-teal-200 text-sm mt-1">Disponibilité</p></div>
+</div>
+</div>
+</section>
 
- {/* SECTION 4: LIGHT - How it works */}
- <section className="py-20 bg-white">
+{/* SECTION 4: LIGHT - How it works */}
+<section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
  <div className="max-w-6xl mx-auto px-4">
  <div className="text-center mb-12">
  <h2 className="text-3xl font-black text-slate-900 mb-4">Comment ça fonctionne</h2>
@@ -163,31 +168,31 @@ export default function Page() {
  </div>
  </section>
 
-      {/* SECTION 5: LIGHT - Value proposition */}
-      <section className="py-20 bg-white">
+{/* SECTION 5: DARK - Value proposition */}
+<section className="py-24 bg-gradient-to-br from-slate-900 via-teal-950 to-teal-900 text-white border-t-4 border-teal-700">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-14">
             <div className="w-full lg:w-[55%]">
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">Pourquoi externaliser votre support?</h2>
-              <p className="text-slate-600 text-lg mb-6">Un client satisfait revient. Un client frustré parle mal de vous. On s'assure que chaque interaction se passe bien.</p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Équipe formée sur vos produits</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Réponses en français du Québec ou de France</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Escalade intelligente vers votre équipe</li>
-                <li className="flex items-center gap-3 text-slate-700"><span className="w-6 h-6 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Rapports hebdomadaires sur les tendances</li>
-              </ul>
-              <Link href="/fr/contact?service=support" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-teal-700 transition-colors">Voir une démo →</Link>
-            </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-                <h3 className="font-bold text-slate-900 text-lg mb-4">Résultats typiques</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-teal-600"/> +40% satisfaction client</li>
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-teal-600"/> -60% temps de réponse</li>
-                  <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-teal-600"/> Équipe libérée pour les ventes</li>
-                </ul>
-              </div>
-            </div>
+<h2 className="text-3xl lg:text-4xl font-black text-white mb-5">Pourquoi externaliser votre support?</h2>
+<p className="text-teal-200 text-lg mb-6">Un client satisfait revient. Un client frustré parle mal de vous. On s'assure que chaque interaction se passe bien.</p>
+<ul className="space-y-3 mb-8">
+<li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-teal-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Équipe formée sur vos produits</li>
+<li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-teal-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Réponses en français du Québec ou de France</li>
+<li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-teal-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Escalade intelligente vers votre équipe</li>
+<li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-teal-300 rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Rapports hebdomadaires sur les tendances</li>
+</ul>
+<Link href="/fr/contact?service=support" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-teal-700 transition-colors">Voir une démo →</Link>
+</div>
+<div className="w-full lg:w-[40%]">
+<div className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+<h3 className="font-bold text-white text-lg mb-4">Résultats typiques</h3>
+<ul className="space-y-3">
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> +40% satisfaction client</li>
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> -60% temps de réponse</li>
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> Équipe libérée pour les ventes</li>
+</ul>
+</div>
+</div>
           </div>
         </div>
       </section>

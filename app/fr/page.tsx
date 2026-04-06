@@ -155,53 +155,116 @@ les PME d\'Ici
 </ScrollAnimate>
 
 {/* STATS */}
-<section className="bg-white border-b border-slate-100 py-10">
-<GeoStats lang="fr" />
-</section>
-
-{/* AI SECTION */}
-<ScrollAnimate animation="fade-left" delay={1}>
-<section className="py-20 bg-white">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-<div className="w-full lg:w-1/2">
-<span className="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-bold px-4 py-2 rounded-full mb-6 animate-slow-float">
-<span className="w-2.5 h-2.5 bg-violet-500 rounded-full animate-pulse"/>
-Nouveau Service
-</span>
-<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
-Sophie, l'Agente IA<br/>
-<span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Qui Parle comme Nous</span>
-</h2>
-<p className="text-slate-600 text-lg mb-6 leading-relaxed">
-Elle répond en moins de 2 secondes. Avec l'accent de votre région — au choix. Et ça coûte une fraction d'un salaire.
-</p>
-<ul className="space-y-3 mb-8">
-{['Réponse en moins de 2 secondes', 'Accents adaptés à votre région', 'Transfert vers un humain si compliqué', 'Coût: ~30% d\'un salaire', 'Dispo 24/7'].map((f, i) => (
-<li key={i} className="flex items-center gap-3 text-slate-700">
-<span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
-<CheckIcon className="w-4 h-4" />
-</span>
-{f}
-</li>
-))}
-</ul>
-<Link href="/fr/agents-ia" className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-6 py-3.5 rounded-xl font-bold hover:shadow-xl transform hover:-translate-y-1 transition-all">
-Découvrir les Agents IA →
-</Link>
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-16 text-white">
+<div className="max-w-7xl mx-auto px-4">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+<div className="animate-fade-in-up">
+<p className="text-5xl font-black bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">500+</p>
+<p className="text-slate-400 text-sm mt-2">Appels par jour</p>
 </div>
-<div className="w-full lg:w-1/2 animate-slide-right">
-<div className="relative">
-<div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src={`${basePath}/images/agents-ia-hero.webp`} alt="Agent IA Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<div className="animate-fade-in-up" style={{animationDelay: '100ms'}}>
+<p className="text-5xl font-black bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">98%</p>
+<p className="text-slate-400 text-sm mt-2">Satisfaction client</p>
 </div>
+<div className="animate-fade-in-up" style={{animationDelay: '200ms'}}>
+<p className="text-5xl font-black bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">48h</p>
+<p className="text-slate-400 text-sm mt-2">Délai de mise en place</p>
+</div>
+<div className="animate-fade-in-up" style={{animationDelay: '300ms'}}>
+<p className="text-5xl font-black bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">24/7</p>
+<p className="text-slate-400 text-sm mt-2">Disponibilité</p>
 </div>
 </div>
 </div>
 </section>
-</ScrollAnimate>
 
-{/* TESTIMONIALS */}
+      {/* AI SECTION */}
+      <ScrollAnimate animation="fade-left" delay={1}>
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+              <div className="w-full lg:w-1/2">
+                <span className="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-bold px-4 py-2 rounded-full mb-6 animate-slow-float">
+                  <span className="w-2.5 h-2.5 bg-violet-500 rounded-full animate-pulse"/>
+                  Nouveau Service
+                </span>
+                <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
+                  Sophie, l'Agente IA<br/>
+                  <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Qui Parle comme Nous</span>
+                </h2>
+                <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+                  Elle répond en moins de 2 secondes. Avec l'accent de votre région — au choix. Et ça coûte une fraction d'un salaire.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {['Réponse en moins de 2 secondes', 'Accents adaptés à votre région', 'Transfert vers un humain si compliqué', 'Coût: ~30% d\'un salaire', 'Dispo 24/7'].map((f, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-700">
+                      <span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
+                        <CheckIcon className="w-4 h-4" />
+                      </span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/fr/agents-ia" className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-6 py-3.5 rounded-xl font-bold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                  Découvrir les Agents IA →
+                </Link>
+              </div>
+              <div className="w-full lg:w-1/2 animate-slide-right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
+                  <img src={`${basePath}/images/agents-ia-hero.webp`} alt="Agent IA Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimate>
+
+      {/* BENEFITS - DARK */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi Smart Hotline?</h2>
+              <p className="text-xl text-sky-200 mb-8 leading-relaxed">Des conseillers qui représentent votre entreprise comme si c'était la leur. Pas de scripts robots — de vraies conversations.</p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'Conseillers francophones du Québec et de France',
+                  'Messages transmis par SMS, email, ou appel',
+                  'Prix PME — 40-60% moins cher qu\'un employé',
+                  'Annulez quand vous voulez — pas de contrat long',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-4 text-white text-lg">
+                    <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <CheckIcon className="w-5 h-5"/>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/fr/contact" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                Voir une démo
+              </Link>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/20">
+                <h3 className="font-bold text-2xl text-white mb-6">Des tarifs adaptés à votre croissance</h3>
+                <p className="text-sky-200 text-lg mb-4">Tarifs compétitifs, sans engagement longue durée. Vous payez pour ce que vous utilisez.</p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Aucun frais caché</li>
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Annulez quand vous voulez</li>
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> CRM et autodialer inclus</li>
+                </ul>
+                <Link href="/fr/tarifs" className="text-sky-400 font-bold text-lg hover:underline flex items-center gap-2">
+                  Voir tous les tarifs
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
 <ScrollAnimate animation="fade-up" delay={2}>
 <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,16 +293,65 @@ Découvrir les Agents IA →
 </section>
 </ScrollAnimate>
 
+{/* FAQ SECTION */}
+<section className="py-20 bg-white">
+<div className="max-w-4xl mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-slate-900 mb-3">Questions Fréquentes</h2>
+<p className="text-slate-600">Tout ce que vous devez savoir avant de commencer</p>
+<div className="w-16 h-1 bg-sky-600 mx-auto rounded-full mt-4"/>
+</div>
+<div className="space-y-4">
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Combien de temps pour démarrer?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+En moyenne 48 heures. On configure votre ligne, forme nos agents, et vous êtes opérationnel. Pas de mois d'attente comme avec l'embauche d'une réceptionniste.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Est-ce que je peux annuler facilement?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Oui, sans engagement longue durée. Préavis de 30 jours et c'est tout. Pas de pénalités, pas de complications. On garde les choses simples.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Comment ça fonctionne avec mon CRM?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+On s'intègre avec SuiteCRM, HubSpot, Salesforce, et la plupart des CRM. Nos agents entrent les données directement dans votre système existant.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Les agents connaissent vraiment mon business?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Absolument. Formation complète sur vos produits, services, et façon de parler. On ne lit pas un script générique — on parle comme vous.
+</p>
+</details>
+</div>
+</div>
+</section>
+
 {/* FINAL CTA */}
-<section className="bg-white py-20">
-<div className="max-w-4xl mx-auto px-4 text-center">
-<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Prêt à ne plus rater un appel?</h2>
-<p className="text-slate-600 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
+<section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20">
+<div className="max-w-4xl mx-auto px-4 text-center text-white">
+<h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à ne plus rater un appel?</h2>
+<p className="text-sky-200 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href="/fr/contact" className="bg-sky-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-sky-700 shadow-lg">
+<Link href="/fr/contact" className="bg-sky-500 text-white font-bold px-10 py-5 rounded-2xl hover:bg-sky-600 shadow-2xl transition-all">
 Démarrer Maintenant
 </Link>
-<Link href="/fr/tarifs" className="border-2 border-slate-300 text-slate-700 font-bold px-8 py-4 rounded-2xl hover:border-sky-600 hover:text-sky-600 transition-all">
+<Link href="/fr/tarifs" className="border-2 border-white text-white font-bold px-10 py-5 rounded-2xl hover:bg-white hover:text-sky-900 transition-all">
 Voir les Tarifs
 </Link>
 </div>

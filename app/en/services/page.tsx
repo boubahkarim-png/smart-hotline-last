@@ -77,19 +77,19 @@ export default function Services() {
  </div>
  </div>
  </section>
-{/* SECTION 4: LIGHT STATS */}
-<section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
-            {STATS.map(({value, label}, i) => (
-              <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
-                <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{value}</div>
-                <div className="text-gray-600 mt-2">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 4: DARK STATS */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-20 border-t-4 border-blue-600">
+<div className="max-w-7xl mx-auto px-4">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
+{STATS.map(({value, label}, i) => (
+<div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
+<div className="text-4xl lg:text-5xl font-extrabold text-blue-300">{value}</div>
+<div className="text-blue-100 mt-2 font-medium">{label}</div>
+</div>
+))}
+</div>
+</div>
+</section>
  {/* SECTION 5: DARK - TESTIMONIALS */}
  <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
  <div className="max-w-6xl mx-auto px-4">

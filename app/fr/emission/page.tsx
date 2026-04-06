@@ -298,147 +298,19 @@ export default function Page() {
  </div>
  </section>
 
- {/* SECTION 9: DARK - FINAL CTA */}
- <section className="bg-gradient-to-br from-emerald-900 to-emerald-700 text-white py-20">
- <div className="max-w-4xl mx-auto px-4 text-center">
- <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à multiplier vos leads?</h2>
- <p className="text-emerald-100 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
- <CTAButtons slug="emission"/>
- </div>
- </section>
-
-      {/* SECTION 4.5: LIGHT - INDUSTRIES */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Industries que nous servons</h2>
-            <p className="text-slate-600">Campagnes spécialisées pour chaque secteur</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
-            {INDUSTRIES.map(({name, result}) => (
-              <div key={name} className="bg-white rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
-                <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
-                <p className="text-emerald-600 text-sm">{result}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4.6: LIGHT - PROCESS */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Notre processus</h2>
-            <p className="text-slate-600">Du premier appel au lead qualifié</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PROCESS.map(({title, desc}, i) => (
-              <div key={title} className="relative">
-                <div className="bg-slate-50 rounded-2xl p-6 h-full border border-slate-100">
-                  <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
-                  <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
-                  <p className="text-slate-500 text-sm">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: LIGHT - TESTIMONIALS */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
-            <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map(({quote, name, role, initials}) => (
-              <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <div className="flex gap-0.5 mb-4">
-                  {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-amber-400" />)}
-                </div>
-                <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>
-                  <div>
-                    <p className="font-bold text-slate-900 text-sm">{name}</p>
-                    <p className="text-slate-500 text-xs">{role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: LIGHT - FAQ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-3">Questions fréquentes</h2>
-            <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
-          </div>
-          <div className="space-y-6">
-            {FAQ.map(({question, answer}, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-6">
-                <div className="flex items-start gap-4 mb-3">
-                  <div className="flex-shrink-0">
-                    <QuestionIcon className="w-5 h-5 text-emerald-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900">{question}</h3>
-                    <p className="text-slate-500">{answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: DARK - ADDITIONAL BENEFITS */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-3">Avantages supplémentaires</h2>
-            <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <ShieldCheckIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Conformité totale</h3>
-              <p className="text-slate-500 text-sm">Respect des réglementations telemarketing les plus strictes, avec enregistrement conforme et gestion optimale des listes d'exclusion.</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <UsersIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Évolution constante</h3>
-              <p className="text-slate-500 text-sm">Mises à jour régulières des scripts et stratégies basées sur les retours terrain et les meilleures pratiques de l'industrie.</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/30 transition-all">
-              <div className="w-12 h-12 bg-emerald-100/20 rounded-xl flex items-center justify-center mb-4">
-                <ClockIcon className="w-6 h-6 text-emerald-700" />
-              </div>
-              <h3 className="font-bold text-lg text-emerald-700 mb-2">Support dédié</h3>
-              <p className="text-slate-500 text-sm">Équipe de support disponible pour optimiser vos campagnes en temps réel et répondre à toutes vos questions opérationnelles.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 8: LIGHT - FINAL CTA */}
-      <section className="py-20 bg-slate-50">
+      <section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à multiplier vos leads?</h2>
-          <p className="text-slate-500 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
+          <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Prêt à multiplier vos leads?</h2>
+          <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
           <CTAButtons slug="emission"/>
+          <p className="text-slate-500 mt-8 text-lg">
+            <Link href="/fr/tarifs" className="text-emerald-600 font-bold hover:underline">Voir les tarifs</Link>
+            <span className="mx-3">·</span>
+            <Link href="/fr/contact" className="text-emerald-600 font-bold hover:underline">Nous contacter</Link>
+          </p>
         </div>
-		</section>
+      </section>
 <ServiceSchema name="Appels Sortants & Prospection" description="Service de prospection téléphonique et télémarketing avec leads qualifiés et prise de rendez-vous" slug="emission" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
 <FAQSchema faqs={[
   { question: "Comment qualifiez-vous les leads?", answer: "On utilise des critères définis ensemble: budget, autorité, besoin, timing. Chaque lead est validé avant transfert." },

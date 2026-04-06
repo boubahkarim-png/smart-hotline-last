@@ -73,22 +73,25 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SECTION 3: LIGHT STATS */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
-            {STATS.map(({value, label}, i) => (
-              <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
-                <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{value}</div>
-                <div className="text-gray-600 mt-2">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 3: DARK STATS - Changed from light to dark */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-20 border-t-4 border-blue-600">
+<div className="max-w-6xl mx-auto px-4">
+<div className="text-center mb-8">
+<h3 className="text-2xl font-bold text-blue-300 mb-2">Des résultats qui parlent</h3>
+</div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
+{STATS.map(({value, label}, i) => (
+<div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
+<div className="text-4xl lg:text-5xl font-extrabold text-white">{value}</div>
+<div className="text-blue-200 mt-2">{label}</div>
+</div>
+))}
+</div>
+</div>
+</section>
 
- {/* SECTION 4: LIGHT - TESTIMONIALS */}
- <section className="py-20 bg-white">
+{/* SECTION 4: LIGHT - TESTIMONIALS */}
+<section className="py-24 bg-white border-t-4 border-slate-200">
  <div className="max-w-6xl mx-auto px-4">
  <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-slate-900">Ce que disent nos clients</h2>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
@@ -108,18 +111,18 @@ export default function Services() {
  </div>
  </section>
 
-      {/* SECTION 5: LIGHT HOW IT WORKS */}
-      <section className="py-20 bg-white">
+{/* SECTION 5: DARK HOW IT WORKS */}
+<section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white border-t-4 border-slate-700">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-slate-900">Comment ça marche?</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">De la consultation initiale au suivi continu, on vous accompagne à chaque étape.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {STEPS.map(({num, title, desc}, i) => (
-              <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
-                <div className="text-6xl font-extrabold text-blue-100 mb-3">{num}</div>
-                <h3 className="font-bold text-lg mb-2 text-slate-900">{title}</h3>
-                <p className="text-gray-600">{desc}</p>
-              </div>
+<div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
+<div className="text-6xl font-extrabold text-blue-400/30 mb-3">{num}</div>
+<h3 className="font-bold text-lg mb-2 text-white">{title}</h3>
+<p className="text-blue-200">{desc}</p>
+</div>
             ))}
           </div>
         </div>
@@ -183,8 +186,8 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SECTION 7: DARK FINAL CTA */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
+{/* SECTION 7: DARK FINAL CTA */}
+<section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 border-t-8 border-blue-400">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à mieux gérer vos appels?</h2>
           <p className="text-lg text-blue-100 mb-8">Consultation gratuite. Sans engagement. Résultats garantis.</p>

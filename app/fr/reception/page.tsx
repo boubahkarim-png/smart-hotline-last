@@ -113,32 +113,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: STATS - Modern big numbers */}
-      <section className="bg-white py-16 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">99.2%</p>
-              <p className="text-slate-600 mt-2 font-medium">Taux de réponse</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">2.8s</p>
-              <p className="text-slate-600 mt-2 font-medium">Temps de réponse</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">150+</p>
-              <p className="text-slate-600 mt-2 font-medium">Entreprises servies</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">24/7</p>
-              <p className="text-slate-600 mt-2 font-medium">Disponibilité</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* SECTION 3: DARK STATS - Modern big numbers */}
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20 border-t-4 border-sky-600">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-10">
+<h3 className="text-2xl font-bold text-sky-300">Des chiffres qui inspirent confiance</h3>
+</div>
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
+<p className="text-sky-200 mt-2 font-medium">Taux de réponse</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black text-white">2.8s</p>
+<p className="text-sky-200 mt-2 font-medium">Temps de réponse</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black text-white">150+</p>
+<p className="text-sky-200 mt-2 font-medium">Entreprises servies</p>
+</div>
+<div className="modern-box p-8">
+<p className="text-5xl lg:text-6xl font-black text-white">24/7</p>
+<p className="text-sky-200 mt-2 font-medium">Disponibilité</p>
+</div>
+</div>
+</div>
+</section>
 
-      {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+{/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
+<section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Comment ça marche</h2>
@@ -161,49 +164,49 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 5: BENEFITS - Two columns */}
-      <section className="py-20 bg-white">
+{/* SECTION 5: DARK BENEFITS - Two columns */}
+<section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white border-t-4 border-sky-700">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Pourquoi nous faire confiance?</h2>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">Nos conseillers sont formés pour représenter votre entreprise comme si c'était la leur. Pas de scripts robots — de vraies conversations.</p>
-              <ul className="space-y-4 mb-8">
-                {[
-                  'Conseillers francophones du Québec et de France',
-                  'Messages transmis par SMS, email, ou appel',
-                  'Prix PME — 40-60% moins cher qu\'un employé',
-                  'Annulez quand vous voulez — pas de contrat long',
-                ].map((item, i) => (
-                  <li key={i} className={`flex items-center gap-4 text-slate-700 text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
-                    <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                      <CheckIcon className="w-5 h-5"/>
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/fr/contact?service=reception" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                Voir une démo
-              </Link>
-            </div>
+<h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi nous faire confiance?</h2>
+<p className="text-xl text-sky-200 mb-8 leading-relaxed">Nos conseillers sont formés pour représenter votre entreprise comme si c'était la leur. Pas de scripts robots — de vraies conversations.</p>
+<ul className="space-y-4 mb-8">
+{[
+'Conseillers francophones du Québec et de France',
+'Messages transmis par SMS, email, ou appel',
+'Prix PME — 40-60% moins cher qu\'un employé',
+'Annulez quand vous voulez — pas de contrat long',
+].map((item, i) => (
+<li key={i} className={`flex items-center gap-4 text-white text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
+<span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+<CheckIcon className="w-5 h-5"/>
+</span>
+{item}
+</li>
+))}
+</ul>
+<Link href="/fr/contact?service=reception" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+Voir une démo
+</Link>
+</div>
 <div className="w-full lg:w-1/2">
-        <div className="modern-box p-10 bg-gradient-to-br from-slate-50 to-sky-50">
-          <h3 className="font-bold text-2xl text-slate-900 mb-6">Des tarifs adaptés à votre croissance</h3>
-          <p className="text-slate-600 text-lg mb-4">Tarifs compétitifs, sans engagement longue durée. Vous payez pour ce que vous utilisez.</p>
-          <ul className="space-y-3 mb-6">
-            <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> Aucun frais caché</li>
-            <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> Annulez quand vous voulez</li>
-            <li className="flex items-center gap-2 text-slate-700"><CheckIcon className="w-5 h-5 text-sky-600"/> CRM et autodialer inclus</li>
-          </ul>
-          <Link href="/fr/tarifs" className="text-sky-600 font-bold text-lg hover:underline flex items-center gap-2">
-            Voir tous les tarifs
-          </Link>
-        </div>
-      </div>
-          </div>
-        </div>
-      </section>
+<div className="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/20">
+<h3 className="font-bold text-2xl text-white mb-6">Des tarifs adaptés à votre croissance</h3>
+<p className="text-sky-200 text-lg mb-4">Tarifs compétitifs, sans engagement longue durée. Vous payez pour ce que vous utilisez.</p>
+<ul className="space-y-3 mb-6">
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Aucun frais caché</li>
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Annulez quand vous voulez</li>
+<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> CRM et autodialer inclus</li>
+</ul>
+<Link href="/fr/tarifs" className="text-sky-400 font-bold text-lg hover:underline flex items-center gap-2">
+Voir tous les tarifs
+</Link>
+</div>
+</div>
+</div>
+</div>
+</section>
 
       {/* SECTION 6: TESTIMONIALS - Modern cards */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">

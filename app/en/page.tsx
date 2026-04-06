@@ -157,92 +157,136 @@ Local SMEs
 <GeoStats lang="en" />
 </section>
 
-{/* AI SECTION */}
-<ScrollAnimate animation="fade-left" delay={1}>
-<section className="py-20 bg-white">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-<div className="w-full lg:w-1/2">
-<span className="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-bold px-4 py-2 rounded-full mb-6 animate-slow-float">
-<span className="w-2.5 h-2.5 bg-violet-500 rounded-full animate-pulse"/>
-New Service
-</span>
-<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
-Sophie, the AI Agent<br/>
-<span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Who Speaks Like Us</span>
-</h2>
-<p className="text-slate-600 text-lg mb-6 leading-relaxed">
-She answers in under 2 seconds. With your region's accent — your choice. And it costs a fraction of a salary.
-</p>
-<ul className="space-y-3 mb-8">
-{['Answers in under 2 seconds', 'Accents adapted to your region', 'Transfer to human if complex', 'Cost: ~30% of a salary', 'Available 24/7'].map((f, i) => (
-<li key={i} className="flex items-center gap-3 text-slate-700">
-<span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
-<CheckIcon className="w-4 h-4" />
-</span>
-{f}
-</li>
-))}
-</ul>
-<Link href="/en/ai-agents" className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-6 py-3.5 rounded-xl font-bold hover:shadow-xl transform hover:-translate-y-1 transition-all">
-Discover AI Agents →
-</Link>
-</div>
-<div className="w-full lg:w-1/2 animate-slide-right">
-<div className="relative">
-<div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src={`${basePath}/images/agents-ia-hero.webp`} alt="AI Agent Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
-</div>
-</div>
-</div>
-</div>
-</section>
-</ScrollAnimate>
+      {/* AI SECTION */}
+      <ScrollAnimate animation="fade-left" delay={1}>
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+              <div className="w-full lg:w-1/2">
+                <span className="inline-flex items-center gap-2 bg-violet-100 text-violet-700 text-sm font-bold px-4 py-2 rounded-full mb-6 animate-slow-float">
+                  <span className="w-2.5 h-2.5 bg-violet-500 rounded-full animate-pulse"/>
+                  New Service
+                </span>
+                <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-5">
+                  Sophie, the AI Agent<br/>
+                  <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Who Speaks Like Us</span>
+                </h2>
+                <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+                  She answers in under 2 seconds. With your region's accent — your choice. And it costs a fraction of a salary.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {['Answers in under 2 seconds', 'Accents adapted to your region', 'Transfer to human if complex', 'Cost: ~30% of a salary', 'Available 24/7'].map((f, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-700">
+                      <span className="w-6 h-6 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center">
+                        <CheckIcon className="w-4 h-4" />
+                      </span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/en/ai-agents" className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-6 py-3.5 rounded-xl font-bold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                  Discover AI Agents →
+                </Link>
+              </div>
+              <div className="w-full lg:w-1/2 animate-slide-right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
+                  <img src={`${basePath}/images/agents-ia-hero.webp`} alt="AI Agent Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimate>
 
-{/* TESTIMONIALS */}
-<ScrollAnimate animation="fade-up" delay={2}>
-<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
-<div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-{TESTIMONIALS_DATA.map((t, i) => (
-<div key={i} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
-<div className="flex gap-1 mb-4">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-</div>
-<p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
-<div className="flex items-center gap-3">
-<img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
-<div>
-<p className="font-bold text-white text-sm">{t.name}</p>
-<p className="text-slate-400 text-xs">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
-</section>
-</ScrollAnimate>
+      {/* BENEFITS - DARK */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Smart Hotline?</h2>
+              <p className="text-xl text-sky-200 mb-8 leading-relaxed">Representatives who handle your business like it's their own. No robotic scripts — real conversations.</p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'French & English speaking agents',
+                  'Messages via SMS, email, or call',
+                  'SME pricing — 40-60% cheaper than an employee',
+                  'Cancel anytime — no long contracts',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-4 text-white text-lg">
+                    <span className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <CheckIcon className="w-5 h-5"/>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/en/contact" className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                See a Demo
+              </Link>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/20">
+                <h3 className="font-bold text-2xl text-white mb-6">Pricing that scales with you</h3>
+                <p className="text-sky-200 text-lg mb-4">Competitive rates, no long-term commitment. Pay for what you use.</p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> No hidden fees</li>
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> Cancel anytime</li>
+                  <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-sky-400"/> CRM and autodialer included</li>
+                </ul>
+                <Link href="/en/pricing" className="text-sky-400 font-bold text-lg hover:underline flex items-center gap-2">
+                  View all pricing
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-{/* FINAL CTA */}
-<section className="bg-white py-20">
-<div className="max-w-4xl mx-auto px-4 text-center">
-<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Ready to Never Miss a Call?</h2>
-<p className="text-slate-600 text-lg mb-10">Operational in 48h. No long-term commitment. We start whenever you're ready.</p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link href="/en/contact" className="bg-sky-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-sky-700 shadow-lg">
-Start Now
-</Link>
-<Link href="/en/pricing" className="border-2 border-slate-300 text-slate-700 font-bold px-8 py-4 rounded-2xl hover:border-sky-600 hover:text-sky-600 transition-all">
-View Pricing
-</Link>
-</div>
-</div>
-</section>
+      {/* TESTIMONIALS */}
+      <ScrollAnimate animation="fade-up" delay={2}>
+        <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
+              <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {TESTIMONIALS_DATA.map((t, i) => (
+                <div key={i} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
+                  <div className="flex gap-1 mb-4">
+                    {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
+                  <div className="flex items-center gap-3">
+                    <img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
+                    <div>
+                      <p className="font-bold text-white text-sm">{t.name}</p>
+                      <p className="text-slate-400 text-xs">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimate>
+
+      {/* FINAL CTA - DARK */}
+      <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20">
+        <div className="max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Never Miss a Call?</h2>
+          <p className="text-sky-200 text-lg mb-10">Operational in 48h. No long-term commitment. We start whenever you're ready.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/en/contact" className="bg-sky-500 text-white font-bold px-10 py-5 rounded-2xl hover:bg-sky-600 shadow-2xl transition-all">
+              Start Now
+            </Link>
+            <Link href="/en/pricing" className="border-2 border-white text-white font-bold px-10 py-5 rounded-2xl hover:bg-white hover:text-sky-900 transition-all">
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
 </>
 )
 }
