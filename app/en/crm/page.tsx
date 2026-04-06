@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {'icon': FolderIcon, 'title': 'Lead Management', 'desc': 'Capture, qualification and tracking of all your prospects.'},
@@ -73,7 +75,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/crm-interface.jpg`} alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
+                <img src={`${basePath}/images/crm-interface.webp`} alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-2.5">
                     <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
@@ -237,8 +239,15 @@ export default function Page() {
           <Link href="/en/contact?service=crm" className="inline-block mt-8 bg-purple-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-purple-700">
             Get Started Now
           </Link>
-        </div>
-      </section>
-    </>
+</div>
+</section>
+<ServiceSchema name="CRM & Prospect Lists" description="Integrated SuiteCRM with qualified B2B/B2C lists and Mautic email marketing" slug="crm" offers={{ priceFrom: "50", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "Can I import my existing contacts?", answer: "Yes, we handle the migration. Excel, CSV, Google Contacts, old CRM — we import everything without data loss." },
+  { question: "Are the B2B lists up to date?", answer: "We update them monthly. Bounce rate guaranteed under 5%, or we replace them." },
+  { question: "How long does training take?", answer: "About 2 hours. We show you the basics and remain available for questions." },
+  { question: "Is the CRM included with phone plans?", answer: "Yes, basic CRM is included free with all our reception and outbound call packages." }
+]} />
+</>
   )
 }

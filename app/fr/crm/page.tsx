@@ -5,6 +5,7 @@ import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { FAQSchema } from '@/components/FAQSchema'
 
 const FEATURES = [
 {icon: FolderIcon, title: 'Gestion des leads', desc: 'Capture, qualification et suivi de tous vos prospects.'},
@@ -69,7 +70,7 @@ CRM Intégré &<br/>
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src={`${basePath}/images/crm-interface.jpg`} alt="CRM dashboard" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/crm-interface.webp`} alt="CRM dashboard" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
 <div className="flex items-center gap-4">
 <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -274,7 +275,13 @@ Démarrer Maintenant
 </div>
 </div>
 		</section>
-		<ServiceSchema name="CRM & Listes de Prospects" description="CRM SuiteCRM intégré avec listes B2B/B2C qualifiées et email marketing Mautic" slug="crm" offers={{ priceFrom: "50", priceCurrency: "CAD" }} />
-	</>
+<ServiceSchema name="CRM & Listes de Prospects" description="CRM SuiteCRM intégré avec listes B2B/B2C qualifiées et email marketing Mautic" slug="crm" offers={{ priceFrom: "50", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "Est-ce que je peux importer mes contacts existants?", answer: "Oui, on s'occupe de la migration. Excel, CSV, Google Contacts, ancien CRM — on importe tout sans perte de données." },
+  { question: "Les listes B2B sont-elles à jour?", answer: "On les met à jour mensuellement. Taux de rebond garanti sous 5%, sinon on les remplace." },
+  { question: "Combien de temps prend la formation?", answer: "Environ 2 heures. On vous montre les bases, et on reste disponible pour les questions." },
+  { question: "Est-ce que le CRM est inclus dans les forfaits téléphoniques?", answer: "Oui, le CRM de base est inclus gratuitement avec tous nos forfaits de réception et d'émission d'appels." }
+]} />
+</>
 )
 }

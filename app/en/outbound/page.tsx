@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {'icon': TargetIcon, 'title': 'Qualified Leads', 'desc': 'Precise targeting and qualification of each lead before transfer.'},
@@ -86,7 +88,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/images/telemarketing.jpg" alt="Outbound calling agent"
+                <img src="/images/telemarketing.webp" alt="Outbound calling agent"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
@@ -254,8 +256,15 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </>
+</div>
+</section>
+<ServiceSchema name="Outbound Calls & Prospecting" description="Phone prospecting and telemarketing service with qualified leads and appointment setting" slug="outbound" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "How do you qualify leads?", answer: "We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer." },
+  { question: "Do you offer custom scripts?", answer: "Yes, our experts write scripts tailored to your offer and market. We test and optimize continuously." },
+  { question: "How many calls per day?", answer: "One agent can make 50-80 calls per day. We adapt to your goals and processing capacity." },
+  { question: "Can I listen to the calls?", answer: "Yes, all calls are recorded (with consent) and available in your CRM for replay." }
+]} />
+</>
   )
 }

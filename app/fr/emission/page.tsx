@@ -4,6 +4,7 @@ import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, ShieldCheckIcon, UsersIcon, ClockIcon, QuestionIcon } from '@/components/Icons'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { FAQSchema } from '@/components/FAQSchema'
 
 const FEATURES = [
   {'icon': TargetIcon, 'title': 'Leads qualifiés', 'desc': 'Ciblage précis et qualification de chaque lead avant transfert.'},
@@ -112,7 +113,7 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src="/images/telemarketing.jpg" alt="Conseiller appels sortants"
+                <img src="/images/telemarketing.webp" alt="Conseiller appels sortants"
                 className="rounded-2xl shadow-2xl w-full object-cover"
                 style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
@@ -285,7 +286,13 @@ export default function Page() {
           <CTAButtons slug="emission"/>
         </div>
 		</section>
-		<ServiceSchema name="Appels Sortants & Prospection" description="Service de prospection téléphonique et télémarketing avec leads qualifiés et prise de rendez-vous" slug="emission" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
-	</>
+<ServiceSchema name="Appels Sortants & Prospection" description="Service de prospection téléphonique et télémarketing avec leads qualifiés et prise de rendez-vous" slug="emission" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "Comment qualifiez-vous les leads?", answer: "On utilise des critères définis ensemble: budget, autorité, besoin, timing. Chaque lead est validé avant transfert." },
+  { question: "Proposez-vous des scripts sur mesure?", answer: "Oui, nos experts rédigent des scripts adaptés à votre offre et votre marché. On les teste et optimise en continu." },
+  { question: "Combien d'appels par jour?", answer: "Un agent peut effectuer 50-80 appels par jour. On s'adapte à vos objectifs et votre capacité de traitement." },
+  { question: "Puis-je écouter les appels?", answer: "Oui, tous les appels sont enregistrés (avec consentement) et disponibles dans votre CRM pour réécoute." }
+]} />
+</>
   )
 }

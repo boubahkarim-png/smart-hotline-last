@@ -6,6 +6,8 @@ import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import BlogArticleModal, { type Article } from '@/components/BlogArticleModal'
 import { PhoneIcon, QuestionIcon, CheckIcon, ShieldCheckIcon, UsersIcon, ClockIcon, UtensilsIcon, HeartIcon, BuildingIcon, CarIcon, ScaleIcon, HammerIcon, ComputerIcon, CartIcon, GraduationIcon, HotelIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const SECTORS = [
   { icon: UtensilsIcon, name: "Restauration", desc: "Reservations, livraisons, service client. Ne manquez aucune commande.", examples: ["Restaurants", "Traiteurs", "Dark kitchens"] },
@@ -277,7 +279,7 @@ export default function Secteurs() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.jpg`} alt="Diversite des secteurs desservis"
+                <img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversite des secteurs desservis"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
@@ -456,7 +458,7 @@ export default function Secteurs() {
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <ClockIcon className="w-6 h-6 text-indigo-300" />
               </div>
-              <h3 className="font-bold text-lg text-white mb-2">Support dedie</h3>
+              <h3 className="font-bold text-lg text-white mb-2">Support dédié</h3>
               <p className="text-slate-300 text-sm">Equipe de support disponible pour optimiser votre service.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
@@ -473,16 +475,23 @@ export default function Secteurs() {
       {/* SECTION 8: CTA */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Pret a optimiser votre relation client?</h2>
-          <p className="text-slate-500 text-lg mb-10">En place en 48h. Pas d'engagement longue duree. On commence quand vous voulez.</p>
+          <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à optimiser votre relation client?</h2>
+          <p className="text-slate-500 text-lg mb-10">En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.</p>
           <CTAButtons slug="secteurs"/>
         </div>
       </section>
 
-      {/* ARTICLE MODAL */}
-      {selectedArticle && (
-        <BlogArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} />
-      )}
-    </>
+{/* ARTICLE MODAL */}
+{selectedArticle && (
+  <BlogArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} />
+)}
+<ServiceSchema name="Secteurs d'Activité" description="Services téléphoniques adaptés à chaque secteur: restauration, santé, immobilier, juridique, et plus" slug="secteurs" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "Quels secteurs dessert Smart Hotline?", answer: "Nous desservons tous les secteurs: restauration, santé, immobilier, juridique, commerce, éducation, hôtellerie, et plus encore. Chaque secteur bénéficie d'un service adapté." },
+  { question: "Comment adaptez-vous le service à mon secteur?", answer: "On forme nos conseillers aux spécificités de votre industrie: vocabulaire, réglementations, attentes des clients. Votre service est sur mesure." },
+  { question: "Puis-je changer de secteur?", answer: "Oui, votre service évolue avec vous. Si vous diversifiez votre activité, on adapte les scripts et la formation." },
+  { question: "Avez-vous de l'expérience dans mon domaine?", answer: "Avec plus de 150 entreprises servies, nous avons de l'expérience dans la plupart des secteurs. Demandez-nous!" }
+]} />
+</>
   )
 }

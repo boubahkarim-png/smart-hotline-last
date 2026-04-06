@@ -2,17 +2,17 @@ import basePath from '@/lib/basePath'
 import Link from 'next/link'
 export const metadata = { title: "Nos Services | Smart Hotline Agency" }
 const SERVICES = [
-  { icon: "📞", title: "Appels Entrants", desc: "Reception professionnelle 24/7. Ne manquez plus jamais un appel.", href: "/fr/reception", color: "blue" },
-  { icon: "📢", title: "Appels Sortants", desc: "Prospection, telemarketing, prise de RDV. Leads qualifies garantis.", href: "/fr/emission", color: "green" },
-  { icon: "🤖", title: "Agents IA Vocaux", desc: "Sophie repond en 2 sec, 24/7. Jusqu&apos;a 70% moins cher.", href: "/fr/agents-ia", color: "purple", badge: "Nouveau" },
-  { icon: "🎧", title: "Support Client", desc: "Tickets, email, chat, WhatsApp. Support 5 etoiles pour vos clients.", href: "/fr/support", color: "teal" },
-  { icon: "🗄️", title: "CRM & Listes", desc: "CRM SuiteCRM integre + listes de prospection B2B/B2C qualifiees.", href: "/fr/crm", color: "indigo" },
+  { icon: "📞", title: "Appels Entrants", desc: "Réception professionnelle 24/7. Ne manquez plus jamais un appel.", href: "/fr/reception", color: "blue" },
+  { icon: "📢", title: "Appels Sortants", desc: "Prospection, télémarketing, prise de RDV. Leads qualifiés garantis.", href: "/fr/emission", color: "green" },
+  { icon: "🤖", title: "Agents IA Vocaux", desc: "Sophie répond en 2 sec, 24/7. Jusqu'à 70% moins cher.", href: "/fr/agents-ia", color: "purple", badge: "Nouveau" },
+  { icon: "🎧", title: "Support Client", desc: "Tickets, email, chat, WhatsApp. Support 5 étoiles pour vos clients.", href: "/fr/support", color: "teal" },
+  { icon: "🗄️", title: "CRM & Listes", desc: "CRM SuiteCRM intégré + listes de prospection B2B/B2C qualifiées.", href: "/fr/crm", color: "indigo" },
 ]
 const STATS = [
-  { value: "500+", label: "PME accompagnees" },
+  { value: "500+", label: "PME accompagnées" },
   { value: "98%", label: "Satisfaction client" },
-  { value: "24/7", label: "Disponibilite" },
-  { value: "50K+", label: "Appels traites/mois" },
+  { value: "24/7", label: "Disponibilité" },
+  { value: "50K+", label: "Appels traités/mois" },
 ]
 const TESTIMONIALS = [
 { quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
@@ -21,9 +21,9 @@ const TESTIMONIALS = [
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
-  { num: "02", title: "Solution Sur Mesure", desc: "On concoit une strategie adaptee a votre budget et votre secteur." },
-  { num: "03", title: "Deploiement Rapide", desc: "Installation en 24-72h. Formation incluse pour votre equipe." },
-  { num: "04", title: "Suivi Continu", desc: "Rapports mensuels, optimisation constante, support dedie." },
+  { num: "02", title: "Solution Sur Mesure", desc: "On conçoit une stratégie adaptée à votre budget et votre secteur." },
+  { num: "03", title: "Déploiement Rapide", desc: "Installation en 24-72h. Formation incluse pour votre équipe." },
+  { num: "04", title: "Suivi Continu", desc: "Rapports mensuels, optimisation constante, support dédié." },
 ]
 export default function Services() {
   return (
@@ -42,7 +42,7 @@ export default function Services() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/services-hero.jpg`} alt="Nos services Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/services-hero.webp`} alt="Nos services Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ export default function Services() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/services-hero.jpg`} alt="Our Services Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/services-hero.webp`} alt="Our Services Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

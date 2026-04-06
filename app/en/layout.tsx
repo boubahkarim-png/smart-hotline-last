@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TawkToChat from '@/components/TawkToChat'
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "Smart Hotline | Your 24/7 Phone Partner | Quebec Voice Solutions",
@@ -14,10 +15,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_CA',
     siteName: 'Smart Hotline',
-    url: 'https://boubahkarim-png.github.io/en/',
+    url: `${siteUrl}/en/`,
     images: [
       {
-        url: 'https://boubahkarim-png.github.io/og-image.png',
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Smart Hotline - Your Phone Partner Quebec',
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/',
+    canonical: `${siteUrl}/en/`,
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/',
+      'fr-CA': `${siteUrl}/fr/`,
+      'en-CA': `${siteUrl}/en/`,
     },
   },
 }

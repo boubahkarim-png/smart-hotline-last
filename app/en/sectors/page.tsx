@@ -6,6 +6,8 @@ import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import BlogArticleModal, { type Article } from '@/components/BlogArticleModal'
 import { PhoneIcon, QuestionIcon, CheckIcon, ShieldCheckIcon, UsersIcon, ClockIcon, UtensilsIcon, HeartIcon, BuildingIcon, CarIcon, ScaleIcon, HammerIcon, ComputerIcon, CartIcon, GraduationIcon, HotelIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const SECTORS = [
   { icon: UtensilsIcon, name: "Restaurants", desc: "Reservations, delivery, customer service. Never miss an order.", examples: ["Restaurants", "Caterers", "Dark kitchens"] },
@@ -277,7 +279,7 @@ export default function Sectors() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.jpg`} alt="Diversity of sectors served"
+                <img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversity of sectors served"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
@@ -481,8 +483,15 @@ export default function Sectors() {
 
       {/* ARTICLE MODAL */}
       {selectedArticle && (
-        <BlogArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} />
-      )}
-    </>
+<BlogArticleModal article={selectedArticle} onClose={() => setSelectedArticle(null)} />
+)}
+<ServiceSchema name="Industry Sectors" description="Phone services tailored to each sector: restaurants, healthcare, real estate, legal, and more" slug="sectors" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "What sectors does Smart Hotline serve?", answer: "We serve all sectors: restaurants, healthcare, real estate, legal, retail, education, hospitality, and more. Each sector receives customized service." },
+  { question: "How do you adapt service to my sector?", answer: "We train our agents on your industry specifics: vocabulary, regulations, client expectations. Your service is tailored." },
+  { question: "Can I change sectors?", answer: "Yes, your service evolves with you. If you diversify, we adapt scripts and training." },
+  { question: "Do you have experience in my field?", answer: "With over 150 companies served, we have experience in most sectors. Ask us!" }
+]} />
+</>
   )
 }

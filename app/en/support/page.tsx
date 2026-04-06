@@ -1,8 +1,11 @@
 'use client'
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, MailIcon, ChatIcon, TicketIcon, MobileIcon, AnalyticsIcon, CheckIcon, HeadphonesIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {'icon': PhoneIcon, 'title': 'Phone Support', 'desc': 'Inbound calls, escalation, proactive callbacks.'},
@@ -44,46 +47,55 @@ function CTAButtons({ slug }: { slug: string }) {
 }
 
 export default function Page() {
-  return (
-    <>
-      <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-flex items-center gap-2 bg-teal-100 text-teal-700 text-sm px-3 py-1 rounded-full mb-5">
-                <HeadphonesIcon className="w-4 h-4" /> Customer Support
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-                5-Star Support<br/>for Your SME
-              </h1>
-              <p className="text-lg text-slate-600 mb-8">Turn your clients into ambassadors. Our agents handle tickets, emails, chat and calls with excellence and responsiveness.</p>
-              <CTAButtons slug="support"/>
-              <div className="flex flex-wrap gap-3">
-                {['Multi-channel', 'Tickets & Email', 'Live Chat', 'WhatsApp Business'].map(b => (
-                  <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-teal-600" /> {b}</span>
-                ))}
-              </div>
-            </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="relative">
-                <img src="/images/support-tech.jpg" alt="Professional customer support"
-                  className="rounded-2xl shadow-2xl w-full object-cover"
-                  style={{maxHeight:'380px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
-                      <HeadphonesIcon className="w-5 h-5 text-teal-600" />
-                    </div>
-                    <div><p className="font-black text-sm">{"< 4h resolution"}</p><p className="text-slate-500 text-xs">average time</p></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+return (
+<>
+{/* HERO - Unified gradient background */}
+<section className="bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+<div className="w-full lg:w-1/2 animate-slide-left">
+<span className="inline-flex items-center gap-2 bg-teal-100 text-teal-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+<span className="w-2.5 h-2.5 bg-teal-500 rounded-full animate-pulse"/>
+Customer Support
+</span>
+<h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+5-Star Support<br/>
+<span className="bg-gradient-to-r from-teal-600 to-cyan-700 bg-clip-text text-transparent">for Your SME</span>
+</h1>
+<p className="text-lg text-slate-600 mb-8 leading-relaxed">
+Turn your clients into ambassadors. Our agents handle tickets, emails, chat and calls with excellence and responsiveness.
+</p>
+<CTAButtons slug="support"/>
+<div className="flex flex-wrap gap-3">
+{['Multi-channel', 'Tickets & Email', 'Live Chat', 'WhatsApp Business'].map(b => (
+<span key={b} className="flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md">
+<CheckIcon className="w-5 h-5 text-teal-600" /> {b}
+</span>
+))}
+</div>
+</div>
+<div className="w-full lg:w-1/2 animate-slide-right">
+<div className="relative">
+<div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
+<img src={`${basePath}/images/support-tech.webp`} alt="Professional customer support" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
+<div className="flex items-center gap-4">
+<div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
+<HeadphonesIcon className="w-7 h-7 text-white" />
+</div>
+<div>
+<p className="font-black text-xl">{"< 4h resolution"}</p>
+<p className="text-slate-500 text-sm">average time</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-      <section className="py-20 bg-slate-50">
+<section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
@@ -126,8 +138,15 @@ export default function Page() {
           <p className="text-white text-opacity-60 text-sm mt-4">
             <Link href="/en/pricing" className="underline hover:text-white">View all pricing</Link>
           </p>
-        </div>
-      </section>
-    </>
+</div>
+</section>
+<ServiceSchema name="Multichannel Customer Support" description="Multichannel customer support - phone, email, chat, WhatsApp with dedicated team" slug="support" offers={{ priceFrom: "2.00", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "What channels do you support?", answer: "Phone, email, chat on your website, WhatsApp, and even social media. Everything is centralized." },
+  { question: "How do you handle escalations?", answer: "We have a clear protocol. Simple problems = we answer. Complex problems = we transfer to you with full context." },
+  { question: "How long for team training?", answer: "About 1 week. We learn your products, processes, and how you talk to customers." },
+  { question: "Do you offer 24/7 service?", answer: "Yes, our team is available 24/7 to answer your customers, even on holidays." }
+]} />
+</>
   )
 }
