@@ -65,6 +65,28 @@ const FAQ = [
   }
 ]
 
+const INDUSTRIES = [
+  {'name': 'Immobilier', 'result': 'Visites planifiées'},
+  {'name': 'Assurance', 'result': 'Appels de renouvellement'},
+  {'name': 'SaaS & Tech', 'result': 'Demandes de démo'},
+  {'name': 'Services professionnels', 'result': 'Réservations de consultation'},
+  {'name': 'Santé', 'result': 'Suivi patients'},
+]
+
+const RESULTS = [
+  {'value': '15K+', 'label': 'Appels par mois'},
+  {'value': '35%', 'label': 'Taux de contact'},
+  {'value': '12%', 'label': 'Taux de conversion'},
+  {'value': '48h', 'label': 'Lancement campagne'},
+]
+
+const PROCESS = [
+  {'title': 'Appel de découverte', 'desc': 'On apprend vos objectifs, votre marché cible, et ce que le succès signifie pour vous.'},
+  {'title': 'Stratégie personnalisée', 'desc': 'Ciblage, messagerie et formation d\'agents adaptés à votre offre spécifique.'},
+  {'title': 'Attribution d\'agents', 'desc': 'Agents dédiés formés sur votre produit et équipés de vos scripts.'},
+  {'title': 'Mise en service', 'desc': 'Les campagnes démarrent avec suivi en temps réel et mises à jour quotidiennes.'},
+]
+
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
@@ -130,26 +152,18 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK - STATS SECTION */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 text-white py-20 lg:py-24 overflow-hidden relative">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-emerald-500 opacity-10 rounded-full blur-3xl"/>
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-violet-500 opacity-10 rounded-full blur-3xl"/>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black mb-4">
-              Des Résultats Qui Font la Différence
-            </h2>
-            <p className="text-emerald-200 text-lg max-w-2xl mx-auto">
-              Des chiffres concrets qui démontrent l'efficacité de notre approche de prospection
-            </p>
+      {/* SECTION 2: DARK - RESULTS SECTION */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-black text-white mb-2">Des résultats qui parlent</h2>
+            <p className="text-emerald-200">De vrais chiffres de vraies campagnes</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {STATS.map(({value, label}) => (
-              <div key={label}>
-                <p className="text-4xl font-black text-emerald-700">{value}</p>
-                <p className="text-slate-500 text-sm mt-1 font-medium">{label}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {RESULTS.map(({value, label}) => (
+              <div key={label} className="text-center">
+                <div className="text-4xl lg:text-5xl font-black text-white mb-1">{value}</div>
+                <div className="text-emerald-200 text-sm">{label}</div>
               </div>
             ))}
           </div>
@@ -190,6 +204,45 @@ export default function Page() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SECTION 4.5: LIGHT - INDUSTRIES */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Industries que nous servons</h2>
+            <p className="text-slate-600">Campagnes spécialisées pour chaque secteur</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+            {INDUSTRIES.map(({name, result}) => (
+              <div key={name} className="bg-white rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
+                <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
+                <p className="text-emerald-600 text-sm">{result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4.6: LIGHT - PROCESS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Notre processus</h2>
+            <p className="text-slate-600">Du premier appel au lead qualifié</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PROCESS.map(({title, desc}, i) => (
+              <div key={title} className="relative">
+                <div className="bg-slate-50 rounded-2xl p-6 h-full border border-slate-100">
+                  <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
+                  <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
+                  <p className="text-slate-500 text-sm">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -55,78 +55,78 @@ export default function Services() {
      <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto"> From answering calls to client follow-up, we manage it all so you can focus on what you do best. </p>
     </div>
    </section>
-   {/* SECTION 3: LIGHT - SERVICES GRID */}
-   <section className="py-20 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div className="text-center mb-12">
-      <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Our Services</h2>
-      <p className="text-slate-500 text-lg">What we actually do for you and your business</p>
-      <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
-     </div>
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {SERVICES.map(({icon, title, desc, href, badge}) => (
-       <Link key={href} href={href} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group">
-        <div className="text-5xl mb-5">{icon}</div>
-        <div className="flex items-center gap-2 mb-3">
-         <h2 className="font-bold text-xl">{title}</h2>
-         {badge && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
+      {/* SECTION 3: LIGHT - SERVICES GRID */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Our Services</h2>
+            <p className="text-slate-500 text-lg">What we actually do for you and your business</p>
+            <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+            {SERVICES.map(({icon, title, desc, href, badge}, i) => (
+              <Link key={href} href={href} className={`bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group modern-box animate-delay-${(i+1)*100}`}>
+                <div className="text-5xl mb-5">{icon}</div>
+                <div className="flex items-center gap-2 mb-3">
+                  <h2 className="font-bold text-xl">{title}</h2>
+                  {badge && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">{badge}</span>}
+                </div>
+                <p className="text-gray-500 mb-5" dangerouslySetInnerHTML={{__html: desc}}/>
+                <span className="text-blue-600 font-semibold group-hover:underline">Learn more →</span>
+              </Link>
+            ))}
+          </div>
         </div>
-        <p className="text-gray-500 mb-5" dangerouslySetInnerHTML={{__html: desc}}/>
-        <span className="text-blue-600 font-semibold group-hover:underline">Learn more →</span>
-       </Link>
-      ))}
-     </div>
-    </div>
-   </section>
-   {/* SECTION 4: LIGHT STATS */}
-   <section className="py-16 bg-white">
-    <div className="max-w-6xl mx-auto px-4">
-     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      {STATS.map(({value, label}) => (
-       <div key={label}>
-        <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{value}</div>
-        <div className="text-gray-600 mt-2">{label}</div>
-       </div>
-      ))}
-     </div>
-    </div>
-   </section>
-   {/* SECTION 5: LIGHT TESTIMONIALS */}
-   <section className="py-20 bg-slate-50">
-    <div className="max-w-6xl mx-auto px-4">
-     <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-      {TESTIMONIALS.map(({quote, author, role, rating}) => (
-<div key={author} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-<div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
-{Array.from({length: rating}).map((_, i) => (
-<span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-))}
-</div>
-        <p className="text-gray-600 mb-6 italic">"{quote}"</p>
-        <div className="font-semibold text-gray-900">{author}</div>
-        <div className="text-sm text-gray-500">{role}</div>
-       </div>
-      ))}
-     </div>
-    </div>
-   </section>
-   {/* SECTION 6: LIGHT HOW IT WORKS */}
-   <section className="py-20 bg-white">
-    <div className="max-w-6xl mx-auto px-4">
-     <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">How It Works</h2>
-     <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">From initial consultation to ongoing support, we accompany you every step of the way.</p>
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {STEPS.map(({num, title, desc}) => (
-       <div key={num} className="relative">
-        <div className="text-6xl font-extrabold text-blue-100 mb-3">{num}</div>
-        <h3 className="font-bold text-lg mb-2">{title}</h3>
-        <p className="text-gray-600">{desc}</p>
-       </div>
-      ))}
-     </div>
-    </div>
-   </section>
+      </section>
+      {/* SECTION 4: LIGHT STATS */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
+            {STATS.map(({value, label}, i) => (
+              <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
+                <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{value}</div>
+                <div className="text-gray-600 mt-2">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* SECTION 5: LIGHT TESTIMONIALS */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+            {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
+              <div key={author} className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 modern-box animate-delay-${(i+1)*100}`}>
+                <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
+                  {Array.from({length: rating}).map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{quote}"</p>
+                <div className="font-semibold text-gray-900">{author}</div>
+                <div className="text-sm text-gray-500">{role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* SECTION 6: LIGHT HOW IT WORKS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">How It Works</h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">From initial consultation to ongoing support, we accompany you every step of the way.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+            {STEPS.map(({num, title, desc}, i) => (
+              <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
+                <div className="text-6xl font-extrabold text-blue-100 mb-3">{num}</div>
+                <h3 className="font-bold text-lg mb-2">{title}</h3>
+                <p className="text-gray-600">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
    {/* SECTION 7: LIGHT ADDITIONAL VALUE */}
    <section className="py-20 bg-slate-50">
     <div className="max-w-6xl mx-auto px-4">

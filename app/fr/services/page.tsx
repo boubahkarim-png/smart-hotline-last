@@ -67,9 +67,9 @@ export default function Services() {
             <p className="text-slate-500 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {SERVICES.map(({icon, title, desc, href, badge}) => (
-              <Link key={href} href={href} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+        {SERVICES.map(({icon, title, desc, href, badge}, i) => (
+          <Link key={href} href={href} className={`bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl transition-all group modern-box animate-delay-${(i+1)*100}`}>
                 <div className="text-5xl mb-5">{icon}</div>
                 <div className="flex items-center gap-2 mb-3">
                   <h2 className="font-bold text-xl">{title}</h2>
@@ -86,9 +86,9 @@ export default function Services() {
       {/* SECTION 4: LIGHT STATS */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {STATS.map(({value, label}) => (
-              <div key={label}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
+            {STATS.map(({value, label}, i) => (
+              <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
                 <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{value}</div>
                 <div className="text-gray-600 mt-2">{label}</div>
               </div>
@@ -101,14 +101,14 @@ export default function Services() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">Ce que disent nos clients</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {TESTIMONIALS.map(({quote, author, role, rating}) => (
-<div key={author} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-<div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
-{Array.from({length: rating}).map((_, i) => (
-<span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-))}
-</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+            {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
+              <div key={author} className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 modern-box animate-delay-${(i+1)*100}`}>
+                <div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
+                  {Array.from({length: rating}).map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+                  ))}
+                </div>
                 <p className="text-gray-600 mb-6 italic">"{quote}"</p>
                 <div className="font-semibold text-gray-900">{author}</div>
                 <div className="text-sm text-gray-500">{role}</div>
@@ -123,9 +123,9 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">Comment ça marche?</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">De la consultation initiale au suivi continu, on vous accompagne à chaque étape.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {STEPS.map(({num, title, desc}) => (
-              <div key={num} className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+            {STEPS.map(({num, title, desc}, i) => (
+              <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
                 <div className="text-6xl font-extrabold text-blue-100 mb-3">{num}</div>
                 <h3 className="font-bold text-lg mb-2">{title}</h3>
                 <p className="text-gray-600">{desc}</p>
