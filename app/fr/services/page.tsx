@@ -7,7 +7,8 @@ const SERVICES = [
   { icon: "🤖", title: "Agents IA Vocaux", desc: "Sophie répond en 2 sec, 24/7. Jusqu'à 70% moins cher.", href: "/fr/agents-ia", color: "purple", badge: "Nouveau" },
   { icon: "🎧", title: "Support Client", desc: "Tickets, email, chat, WhatsApp. Support 5 étoiles pour vos clients.", href: "/fr/support", color: "teal" },
   { icon: "🗄️", title: "CRM & Listes", desc: "CRM SuiteCRM intégré + listes de prospection B2B/B2C qualifiées.", href: "/fr/crm", color: "indigo" },
-]
+  { icon: "🏭", title: "Expertise Sectorielle", desc: "Solutions spécialisées pour santé, immobilier, juridique et plus.", href: "/fr/secteurs", color: "orange" },
+  ]
 const STATS = [
   { value: "500+", label: "PME accompagnées" },
   { value: "98%", label: "Satisfaction client" },
