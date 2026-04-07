@@ -10,14 +10,11 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center gap-2 font-extrabold text-lg text-blue-400 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white text-xs font-black">SH</span>
-              </div>
-              Smart Hotline
-            </div>
-            <p className="text-slate-400 text-sm">
+<div>
+          <Link href={fr ? '/fr' : '/en'} className="inline-block mb-4">
+            <img src="/logo-icon.svg" alt="Smart Hotline" className="h-10 w-10" />
+          </Link>
+          <p className="text-slate-400 text-sm">
               {fr
                 ? 'Externalisation de relation client pour PME. Conseillers et IA 24/7.'
                 : 'Customer relationship outsourcing for SMBs. Agents and AI 24/7.'}

@@ -40,6 +40,8 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "name": "Smart Hotline",
   "description": "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7. Réception d\'appels, émission, support client et intégration CRM.",
+  "logo": "https://www.smart-hotline.com/logo-smart-hotline.svg",
+  "image": "https://www.smart-hotline.com/logo-full.svg",
   "telephone": "+1-514-819-0559",
   "email": "direction@smart-hotline.com",
   "address": {

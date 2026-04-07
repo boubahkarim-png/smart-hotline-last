@@ -94,7 +94,7 @@ export const JSON_LD_FR = {
   "alternateName": "Smart Hotline",
   "description": SEO_FR.description,
   "url": BASE_URL,
-  "logo": `${BASE_URL}/favicon.ico`,
+  "logo": `${BASE_URL}/logo-smart-hotline.svg`,
   "image": SEO_FR.ogImage,
   "telephone": "+1-514-819-0559",
   "email": "direction@smart-hotline.com",

@@ -37,7 +37,7 @@ export function BlogPostingSchema({ post, url }: BlogPostingSchemaProps) {
       "name": "Smart Hotline",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.smart-hotline.com/logo.png"
+        "url": "https://www.smart-hotline.com/logo-smart-hotline.svg"
       }
     },
     "image": post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`,
