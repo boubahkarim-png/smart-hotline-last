@@ -94,17 +94,18 @@ font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
 ### Logo Versions
 
-1. **Full Logo** (`logo-full.svg`) — 512x512px
-   - Use for: Social media, presentations, large displays
-   - Contains: Icon + wordmark
+1. **Wordmark Logo** (`logo-smart-hotline.svg`) — 280x64px
+- Use for: Website header, emails, documents
+- Contains: Headset icon + "Smart" (gradient) + "Hotline" (solid) + tagline
+- Best for horizontal layouts
 
 2. **Icon Only** (`logo-icon.svg`) — 64x64px
-   - Use for: Favicons, app icons, small spaces
-   - Contains: Stylized phone with sound waves + AI sparkle
+- Use for: Favicons, app icons, small spaces
+- Contains: White headset on gradient blue circle
 
-3. **Header Logo** — Inline version
-   - Text: "Smart Hotline" with icon
-   - Use in: Navigation header
+3. **Full Logo** (`logo-full.svg`) — 400x120px
+- Use for: Social media, presentations, print
+- Contains: Large icon + wordmark + tagline
 
 ### Logo Clear Space
 
