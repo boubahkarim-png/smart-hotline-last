@@ -845,7 +845,7 @@ div[id^="tawk-chat-container"] iframe {
 }
 
 .testimonial-marquee {
-  animation: testimonialSlide 30s linear infinite;
+  animation: testimonialSlide 20s linear infinite;
 }
 
 .testimonial-marquee:hover {

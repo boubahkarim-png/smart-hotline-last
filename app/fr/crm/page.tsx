@@ -117,24 +117,24 @@ CRM Intégré &<br/>
 <section className="bg-gradient-to-br from-slate-900 via-orange-950 to-amber-900 text-white py-20 border-t-4 border-orange-600">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-8">
-<h3 className="text-2xl font-bold text-orange-300">Des chiffres qui comptent</h3>
+<h3 className="text-2xl font-bold text-white">Des chiffres qui comptent</h3>
 </div>
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="modern-box p-8">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
 <p className="text-5xl lg:text-6xl font-black text-white">250K+</p>
-<p className="text-orange-200 mt-2 font-medium">Contacts B2B</p>
+<p className="text-orange-200 mt-2 font-medium text-lg">Contacts B2B</p>
 </div>
-<div className="modern-box p-8">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
 <p className="text-5xl lg:text-6xl font-black text-white">98%</p>
-<p className="text-orange-200 mt-2 font-medium">Données validées</p>
+<p className="text-orange-200 mt-2 font-medium text-lg">Données validées</p>
 </div>
-<div className="modern-box p-8">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
 <p className="text-5xl lg:text-6xl font-black text-white">+35%</p>
-<p className="text-orange-200 mt-2 font-medium">Taux conversion</p>
+<p className="text-orange-200 mt-2 font-medium text-lg">Taux conversion</p>
 </div>
-<div className="modern-box p-8">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
 <p className="text-5xl lg:text-6xl font-black text-white">48h</p>
-<p className="text-orange-200 mt-2 font-medium">Setup complet</p>
+<p className="text-orange-200 mt-2 font-medium text-lg">Setup complet</p>
 </div>
 </div>
 </div>

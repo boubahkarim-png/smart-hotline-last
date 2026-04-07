@@ -6,6 +6,33 @@ import { useGeo } from '@/hooks/useGeo'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
+const TESTIMONIALS_FR = [
+  {
+    quote: "On a essayé deux autres centres d'appels avant. La différence? Ici, les agents comprennent vraiment notre business.",
+    name: "Marie Tremblay",
+    role: "Directrice, TechStart Montréal",
+    image: "testimonial-1.jpg"
+  },
+  {
+    quote: "Pendant la tempête de neige, ils ont géré 47 appels. Pas un seul manqué. Ça m'a convaincu.",
+    name: "Jean-Pierre Dubois",
+    role: "Fondateur, InnovateQC",
+    image: "testimonial-2.jpg"
+  },
+  {
+    quote: "Le service est impeccable. Nos clients ne savent même pas que ce n'est pas notre équipe interne.",
+    name: "Sophie Martin",
+    role: "PDG, SolutionsPro",
+    image: "testimonial-3.jpg"
+  },
+  {
+    quote: "Disponibilité 24/7, réactivité exemplaire. On a gagné 30% de temps sur notre service client.",
+    name: "Michel Lavoie",
+    role: "Gérant, AutoExpert Québec",
+    image: "testimonial-4.jpg"
+  }
+]
+
 export default function FrContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -31,63 +58,31 @@ export default function FrContact() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    
+
     if (!csrfToken) {
       setError('Erreur de sécurité. Veuillez rafraîchir la page.')
       return
     }
-    
+
     setSending(true)
     setError('')
     const form = e.currentTarget
     const formData = new FormData(form)
 
-  const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
-  const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
+    const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
+    const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
 
-  const data = {
-    name: sanitize(formData.get('name') as string || ''),
-    email: sanitizeEmail(formData.get('email') as string || ''),
-    phone: '',
-    company: '',
-    service: '',
-    volume: '',
-    message: sanitize(formData.get('message') as string || ''),
-    source: 'contact-form-fr',
-    language: 'fr'
-  }
-
-  if (!data.name || !data.email) {
-    setError('Le nom et l\'email sont requis.')
-    setSending(false)
-    return
-  }
-
-  try {
-    const response = await fetch(`${API_URL}/leads/contact.php`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
-      body: JSON.stringify(data)
-    })
-
-    if (response.ok) {
-      setSent(true)
-    } else {
-      const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
-      const body = encodeURIComponent(
-        `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
-      )
-      window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
-      setSent(true)
+    const data = {
+      name: sanitize(formData.get('name') as string || ''),
+      email: sanitizeEmail(formData.get('email') as string || ''),
+      phone: '',
+      company: '',
+      service: '',
+      volume: '',
+      message: sanitize(formData.get('message') as string || ''),
+      source: 'contact-form-fr',
+      language: 'fr'
     }
-  } catch (err) {
-    const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
-    const body = encodeURIComponent(
-      `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
-    )
-    window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
-    setSent(true)
-  }
 
     if (!data.name || !data.email) {
       setError('Le nom et l\'email sont requis.')
@@ -98,10 +93,7 @@ export default function FrContact() {
     try {
       const response = await fetch(`${API_URL}/leads/contact.php`, {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': csrfToken
-        },
+        headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
         body: JSON.stringify(data)
       })
 
@@ -110,7 +102,7 @@ export default function FrContact() {
       } else {
         const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
         const body = encodeURIComponent(
-          `Nom: ${data.name}\nEmail: ${data.email}\nTéléphone: ${data.phone}\nEntreprise: ${data.company}\nService: ${data.service}\nVolume: ${data.volume}\n\nMessage:\n${data.message}`
+          `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
         )
         window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
         setSent(true)
@@ -118,7 +110,7 @@ export default function FrContact() {
     } catch (err) {
       const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
       const body = encodeURIComponent(
-        `Nom: ${data.name}\nEmail: ${data.email}\nTéléphone: ${data.phone}\nEntreprise: ${data.company}\nService: ${data.service}\nVolume: ${data.volume}\n\nMessage:\n${data.message}`
+        `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
       )
       window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
       setSent(true)
@@ -190,8 +182,8 @@ export default function FrContact() {
         </div>
       </section>
 
-      {/* SECTION 4: LIGHT - TRUST BADGES */}
-      <section className="py-16 bg-white">
+      {/* SECTION 4: DARK - TRUST BADGES */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             {n:'500+', l:'PME accompagnées'},
@@ -200,8 +192,8 @@ export default function FrContact() {
             {n:'70%', l:'Économie moyenne'}
           ].map(({n,l}) => (
             <div key={l}>
-              <div className="text-4xl lg:text-5xl font-extrabold text-blue-600">{n}</div>
-              <div className="text-gray-600 mt-2">{l}</div>
+              <div className="text-4xl lg:text-5xl font-extrabold text-sky-400">{n}</div>
+              <div className="text-sky-100 mt-2">{l}</div>
             </div>
           ))}
         </div>
@@ -223,134 +215,134 @@ export default function FrContact() {
               <p className="text-green-700 text-lg">Nous vous répondons sous 2h.</p>
             </div>
           ) : (
-<form
-  onSubmit={handleSubmit}
-  className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8"
->
-  <input type="hidden" name="csrf_token" value={csrfToken} />
-  <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8"
+            >
+              <input type="hidden" name="csrf_token" value={csrfToken} />
+              <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
-  <div className="space-y-4 mb-6">
-    <div>
-      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom Complet *</label>
-      <input
-        type="text"
-        name="name"
-        required
-        maxLength={100}
-        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-        placeholder="Votre nom"
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
-      <input
-        type="email"
-        name="email"
-        required
-        maxLength={254}
-        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-        placeholder="votre@email.com"
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
-      <textarea
-        name="message"
-        required
-        rows={4}
-        maxLength={2000}
-        className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-        placeholder="Décrivez vos besoins..."
-      />
-    </div>
-  </div>
+              <div className="space-y-4 mb-6">
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom Complet *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    maxLength={100}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                    placeholder="Votre nom"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    maxLength={254}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                    placeholder="votre@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={4}
+                    maxLength={2000}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+                    placeholder="Décrivez vos besoins..."
+                  />
+                </div>
+              </div>
 
-  <div className="mb-6">
-    <label className="flex items-start gap-3 cursor-pointer">
-      <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
-      <span className="text-sm text-slate-600">
-        J&apos;accepte le traitement de mes données conformément à la{' '}
-        <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
-      </span>
-    </label>
-  </div>
+              <div className="mb-6">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
+                  <span className="text-sm text-slate-600">
+                    J&apos;accepte le traitement de mes données conformément à la{' '}
+                    <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
+                  </span>
+                </label>
+              </div>
 
-  {error && (
-    <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
-      {error}
-    </div>
-  )}
+              {error && (
+                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                  {error}
+                </div>
+              )}
 
-  <button
-    type="submit"
-    disabled={sending}
-    className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
-  >
-    {sending ? 'Envoi en cours...' : 'Envoyer le Message →'}
-  </button>
-  <p className="text-center text-slate-500 text-sm mt-4">Réponse sous 2h • Sans engagement</p>
-</form>
+              <button
+                type="submit"
+                disabled={sending}
+                className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
+              >
+                {sending ? 'Envoi en cours...' : 'Envoyer le Message →'}
+              </button>
+              <p className="text-center text-slate-500 text-sm mt-4">Réponse sous 2h • Sans engagement</p>
+            </form>
           )}
         </div>
       </section>
 
-      {/* SECTION 6: LIGHT - WHY CHOOSE US */}
-      <section className="py-20 bg-white">
+      {/* SECTION 6: DARK - WHY CHOOSE US */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-slate-50 rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Notre Engagement Qualité</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold mb-4">Notre Engagement Qualité</h3>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Disponibilité 24/7, même les weekends et jours fériés</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Aucun engagement à long terme</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Reporting transparent et accès aux données en temps réel</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Amélioration continue basée sur vos retours</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Technologie Qui Marche</h3>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold mb-4">Technologie Qui Marche</h3>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>IA vocale avancée avec compréhension contextuelle</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Intégrations simples avec vos outils existants</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Sécurité solide et conformité RGPD</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <li className="flex items-center gap-3 text-sky-100">
+                  <span className="w-5 h-5 bg-sky-500/30 text-sky-300 rounded-full flex items-center justify-center">
                     ✓
                   </span>
                   <span>Applications mobiles pour gérer votre service où que vous soyez</span>
@@ -361,55 +353,65 @@ export default function FrContact() {
         </div>
       </section>
 
-      {/* SECTION 7: LIGHT - ADDITIONAL INFO */}
-      <section className="py-20 bg-slate-50">
+      {/* SECTION 7: LIGHT - FAQ */}
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Questions Fréquentes</h3>
-              <div className="space-y-3">
-                <div className="text-sm text-gray-700">
-                  <strong>Q:</strong> Combien de temps prend la mise en place ?
-                </div>
-                <div className="text-sm text-gray-600 ml-4">
-                  <strong>R:</strong> Notre service est opérationnel en moins de 48 heures après validation de la solution.
-                </div>
-                <div className="text-sm text-gray-700">
-                  <strong>Q:</strong> Proposez-vous un essai gratuit ?
-                </div>
-                <div className="text-sm text-gray-600 ml-4">
-                  <strong>R:</strong> Oui, nous offrons un essai de 2 semaines à notre tarif d&apos;entrée ou 1 semaine gratuite suivie de 3 semaines payantes.
-                </div>
-                <div className="text-sm text-gray-700">
-                  <strong>Q:</strong> Quel est votre taux de disponibilité ?
-                </div>
-                <div className="text-sm text-gray-600 ml-4">
-                  <strong>R:</strong> Nous garantissons un taux de disponibilité de 99.9% avec une infrastructure redondante.
-                </div>
-                <div className="text-sm text-gray-700">
-                  <strong>Q:</strong> Comment garantissez-vous la qualité du service ?
-                </div>
-                <div className="text-sm text-gray-600 ml-4">
-                  <strong>R:</strong> Grâce à notre recrutement sélectif, formation continue et suivi qualité quotidien.
-                </div>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">Questions Fréquentes</h2>
+          <div className="space-y-4">
+            {[
+              { q: 'Combien de temps prend la mise en place ?', a: 'Notre service est opérationnel en moins de 48 heures après validation de la solution.' },
+              { q: 'Proposez-vous un essai gratuit ?', a: 'Oui, nous offrons un essai de 2 semaines à notre tarif d\'entrée ou 1 semaine gratuite suivie de 3 semaines payantes.' },
+              { q: 'Quel est votre taux de disponibilité ?', a: 'Nous garantissons un taux de disponibilité de 99.9% avec une infrastructure redondante.' },
+              { q: 'Comment garantissez-vous la qualité du service ?', a: 'Grâce à notre recrutement sélectif, formation continue et suivi qualité quotidien.' },
+            ].map(({ q, a }) => (
+              <div key={q} className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{q}</h3>
+                <p className="text-slate-600">{a}</p>
               </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Prêt à commencer ?</h3>
-              <p className="text-gray-600 mb-6">
-Chaque jour que vous attendez, vous manquez potentiellement des appels importants
-et des opportunités. Appelez-nous pour en discuter.
-              </p>
-              <Link href="#contact-form" className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-colors">
-                Réserver un Appel →
-                <span className="ml-2">📞</span>
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 8: DARK - FINAL CTA */}
+      {/* SECTION 8: DARK - TESTIMONIALS MARQUEE */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center">Ce que disent nos clients</h2>
+          <p className="text-sky-200 text-center mt-3">Plus de 500 entreprises nous font confiance</p>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS_FR, ...TESTIMONIALS_FR].map((t, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, starIdx) => (
+                    <svg key={starIdx} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sky-100 italic mb-4">"{t.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={`${basePath}/images/${t.image}`}
+                    alt={t.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-sky-400"
+                  />
+                  <div>
+                    <p className="font-bold text-white">{t.name}</p>
+                    <p className="text-sm text-sky-300">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 9: DARK - FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Prêt à ne plus rater un appel?</h2>

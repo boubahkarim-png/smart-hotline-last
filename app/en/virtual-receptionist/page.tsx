@@ -134,19 +134,19 @@ export default function Page() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
             <div className="modern-box p-8">
               <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">99.2%</p>
-              <p className="text-slate-600 mt-2 font-medium">Answer Rate</p>
+              <p className="text-slate-600 mt-2 font-medium text-lg">Answer Rate</p>
             </div>
             <div className="modern-box p-8">
               <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">2.8s</p>
-              <p className="text-slate-600 mt-2 font-medium">Response Time</p>
+              <p className="text-slate-600 mt-2 font-medium text-lg">Response Time</p>
             </div>
             <div className="modern-box p-8">
               <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">150+</p>
-              <p className="text-slate-600 mt-2 font-medium">Businesses Served</p>
+              <p className="text-slate-600 mt-2 font-medium text-lg">Businesses Served</p>
             </div>
             <div className="modern-box p-8">
               <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">24/7</p>
-              <p className="text-slate-600 mt-2 font-medium">Availability</p>
+              <p className="text-slate-600 mt-2 font-medium text-lg">Availability</p>
             </div>
           </div>
         </div>

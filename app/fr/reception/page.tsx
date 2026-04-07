@@ -116,27 +116,27 @@ export default function Page() {
 {/* SECTION 3: DARK STATS - Modern big numbers */}
 <section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20 border-t-4 border-sky-600">
 <div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-10">
-<h3 className="text-2xl font-bold text-sky-300">Des chiffres qui inspirent confiance</h3>
-</div>
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
-<p className="text-sky-200 mt-2 font-medium">Taux de réponse</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black text-white">2.8s</p>
-<p className="text-sky-200 mt-2 font-medium">Temps de réponse</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black text-white">150+</p>
-<p className="text-sky-200 mt-2 font-medium">Entreprises servies</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black text-white">24/7</p>
-<p className="text-sky-200 mt-2 font-medium">Disponibilité</p>
-</div>
-</div>
+  <div className="text-center mb-10">
+  <h3 className="text-2xl font-bold text-white">Des chiffres qui inspirent confiance</h3>
+  </div>
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+  <p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
+  <p className="text-sky-200 mt-2 font-medium text-lg">Taux de réponse</p>
+  </div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+  <p className="text-5xl lg:text-6xl font-black text-white">2.8s</p>
+  <p className="text-sky-200 mt-2 font-medium text-lg">Temps de réponse</p>
+  </div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+  <p className="text-5xl lg:text-6xl font-black text-white">150+</p>
+  <p className="text-sky-200 mt-2 font-medium text-lg">Entreprises servies</p>
+  </div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+  <p className="text-5xl lg:text-6xl font-black text-white">24/7</p>
+  <p className="text-sky-200 mt-2 font-medium text-lg">Disponibilité</p>
+  </div>
+  </div>
 </div>
 </section>
 

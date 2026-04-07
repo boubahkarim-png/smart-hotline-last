@@ -6,6 +6,33 @@ import { useGeo } from '@/hooks/useGeo'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
+const TESTIMONIALS_EN = [
+  {
+    quote: "We tried two other call centers before. The difference? Here, agents actually understand our business.",
+    name: "Sarah Mitchell",
+    role: "Owner, TechStart Montreal",
+    image: "testimonial-1.jpg"
+  },
+  {
+    quote: "During the snowstorm, they handled 47 calls. Not one missed. That's what convinced me.",
+    name: "Mike Chen",
+    role: "Founder, InnovateQC",
+    image: "testimonial-2.jpg"
+  },
+  {
+    quote: "The service is impeccable. Our clients don't even realize it's not our in-house team.",
+    name: "David Thompson",
+    role: "CEO, SolutionsPro",
+    image: "testimonial-3.jpg"
+  },
+  {
+    quote: "24/7 availability, exceptional responsiveness. We gained 30% time on our customer service.",
+    name: "Jennifer Wilson",
+    role: "Manager, AutoExpert Quebec",
+    image: "testimonial-4.jpg"
+  }
+]
+
 export default function EnContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -31,12 +58,12 @@ export default function EnContact() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    
+
     if (!csrfToken) {
       setError('Security error. Please refresh the page.')
       return
     }
-    
+
     setSending(true)
     setError('')
     const form = e.currentTarget
@@ -66,7 +93,7 @@ export default function EnContact() {
     try {
       const response = await fetch(`${API_URL}/leads/contact.php`, {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'X-CSRF-Token': csrfToken
         },
@@ -97,7 +124,7 @@ export default function EnContact() {
 
   return (
     <>
-{/* SECTION 1: LIGHT HERO - Text LEFT, Image RIGHT */}
+      {/* SECTION 1: LIGHT HERO */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -120,7 +147,7 @@ export default function EnContact() {
       {/* SECTION 2: DARK - CONTACT INFO */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-black mb-8">Get in Touch</h2>
+          <h2 className="text-3xl lg:text-4xl font-black mb-8">Get in Touch</h2>
           <div className="flex flex-col md:flex-row justify-center gap-8">
             <a href="tel:+15148190559" className="flex items-center justify-center gap-3 bg-white/10 px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
               <span className="text-2xl">📞</span>
@@ -148,45 +175,45 @@ export default function EnContact() {
               <p className="text-green-700">We will respond within 2 hours.</p>
             </div>
           ) : (
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
-            <input type="hidden" name="csrf_token" value={csrfToken} />
-            <h2 className="text-2xl font-black text-slate-900 mb-6">Get My Free Analysis</h2>
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
+              <input type="hidden" name="csrf_token" value={csrfToken} />
+              <h2 className="text-2xl font-black text-slate-900 mb-6">Get My Free Analysis</h2>
 
-            <div className="space-y-4 mb-6">
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Name *</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  maxLength={100}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                  placeholder="Your name"
-                />
+              <div className="space-y-4 mb-6">
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    maxLength={100}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    maxLength={254}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={4}
+                    maxLength={2000}
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+                    placeholder="Tell us about your needs..."
+                  />
+                </div>
               </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  maxLength={254}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={4}
-                  maxLength={2000}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-                  placeholder="Tell us about your needs..."
-                />
-              </div>
-            </div>
 
               <div className="mb-6">
                 <label className="flex items-start gap-3 cursor-pointer">
@@ -249,7 +276,60 @@ export default function EnContact() {
         </div>
       </section>
 
-      {/* SECTION 6: DARK - FINAL CTA */}
+      {/* SECTION 6: DARK - TESTIMONIALS MARQUEE */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center">What Our Clients Say</h2>
+          <p className="text-sky-200 text-center mt-3">Trusted by over 500 businesses</p>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS_EN, ...TESTIMONIALS_EN].map((t, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, starIdx) => (
+                    <svg key={starIdx} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sky-100 italic mb-4">"{t.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={`${basePath}/images/${t.image}`}
+                    alt={t.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-sky-400"
+                  />
+                  <div>
+                    <p className="font-bold text-white">{t.name}</p>
+                    <p className="text-sm text-sky-300">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: LIGHT - MAP/LOCATION */}
+      <section className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-black text-slate-900 mb-4">Based in Montreal, Serving All of Canada</h2>
+          <p className="text-slate-600 mb-8">Our team handles calls from coast to coast, 24/7.</p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
+            <span>📍 Montreal, QC</span>
+            <span>•</span>
+            <span>🇨🇦 All Canadian Provinces</span>
+            <span>•</span>
+            <span>🌍 French & English</span>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8: DARK - FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Stop Missing Calls?</h2>
@@ -261,40 +341,6 @@ export default function EnContact() {
             <a href="https://wa.me/15148190559" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
               💬 WhatsApp Us
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: LIGHT - TESTIMONIALS */}
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-black text-slate-900 mb-8 text-center">What Our Clients Say</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { q: "We tried two other call centers before. The difference? Here, agents actually understand our business.", name: "Sarah Mitchell", role: "Owner, TechStart Montreal" },
-              { q: "During the snowstorm, they handled 47 calls. Not one missed. That's what convinced me.", name: "Mike Chen", role: "Founder, InnovateQC" },
-            ].map(({ q, name, role }) => (
-              <div key={name} className="bg-white rounded-xl p-6 border border-slate-100">
-                <p className="text-slate-700 mb-4 italic">"{q}"</p>
-                <p className="font-bold text-slate-900">{name}</p>
-                <p className="text-sm text-slate-500">{role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8: LIGHT - MAP/LOCATION */}
-      <section className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black text-slate-900 mb-4">Based in Montreal, Serving All of Canada</h2>
-          <p className="text-slate-600 mb-8">Our team handles calls from coast to coast, 24/7.</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-500">
-            <span>📍 Montreal, QC</span>
-            <span>•</span>
-            <span>🇨🇦 All Canadian Provinces</span>
-            <span>•</span>
-            <span>🌍 French & English</span>
           </div>
         </div>
       </section>

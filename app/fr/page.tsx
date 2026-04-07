@@ -158,29 +158,29 @@ les PME d\'Ici
         </section>
       </ScrollAnimate>
 
-      {/* STATS - LIGHT */}
-      <section className="bg-white py-16 text-slate-900 border-t-4 border-slate-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="animate-fade-in-up">
-              <p className="text-5xl font-black bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">500+</p>
-              <p className="text-slate-600 text-sm mt-2 font-medium">Appels par jour</p>
-            </div>
-            <div className="animate-fade-in-up" style={{animationDelay: '100ms'}}>
-              <p className="text-5xl font-black bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">98%</p>
-              <p className="text-slate-600 text-sm mt-2 font-medium">Satisfaction client</p>
-            </div>
-            <div className="animate-fade-in-up" style={{animationDelay: '200ms'}}>
-              <p className="text-5xl font-black bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">48h</p>
-              <p className="text-slate-600 text-sm mt-2 font-medium">Délai de mise en place</p>
-            </div>
-            <div className="animate-fade-in-up" style={{animationDelay: '300ms'}}>
-              <p className="text-5xl font-black bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent">24/7</p>
-              <p className="text-slate-600 text-sm mt-2 font-medium">Disponibilité</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* STATS - DARK */}
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 py-16 text-white border-t-4 border-sky-600">
+<div className="max-w-7xl mx-auto px-4">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+<p className="text-5xl font-black text-white">500+</p>
+<p className="text-sky-200 text-lg mt-2 font-medium">Appels par jour</p>
+</div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+<p className="text-5xl font-black text-white">98%</p>
+<p className="text-sky-200 text-lg mt-2 font-medium">Satisfaction client</p>
+</div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+<p className="text-5xl font-black text-white">48h</p>
+<p className="text-sky-200 text-lg mt-2 font-medium">Délai de mise en place</p>
+</div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+<p className="text-5xl font-black text-white">24/7</p>
+<p className="text-sky-200 text-lg mt-2 font-medium">Disponibilité</p>
+</div>
+</div>
+</div>
+</section>
 
       {/* AI SECTION - LIGHT */}
       <ScrollAnimate animation="fade-left" delay={1}>

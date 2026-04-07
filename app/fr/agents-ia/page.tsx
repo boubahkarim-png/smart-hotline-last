@@ -119,19 +119,19 @@ Sophie, votre IA<br/>
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
 <div className="modern-box p-8">
 <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">98%</p>
-<p className="text-slate-600 mt-2 font-medium">Taux de satisfaction</p>
+<p className="text-slate-600 mt-2 font-medium text-lg">Taux de satisfaction</p>
 </div>
 <div className="modern-box p-8">
 <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">2s</p>
-<p className="text-slate-600 mt-2 font-medium">Temps de réponse</p>
+<p className="text-slate-600 mt-2 font-medium text-lg">Temps de réponse</p>
 </div>
 <div className="modern-box p-8">
 <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">500+</p>
-<p className="text-slate-600 mt-2 font-medium">Entreprises servies</p>
+<p className="text-slate-600 mt-2 font-medium text-lg">Entreprises servies</p>
 </div>
 <div className="modern-box p-8">
 <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">24/7</p>
-<p className="text-slate-600 mt-2 font-medium">Disponibilité</p>
+<p className="text-slate-600 mt-2 font-medium text-lg">Disponibilité</p>
 </div>
 </div>
 </div>

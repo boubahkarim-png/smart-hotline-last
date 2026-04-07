@@ -125,13 +125,13 @@ export default function Page() {
 <section className="bg-gradient-to-br from-slate-900 via-teal-950 to-indigo-900 text-white py-20 border-t-4 border-teal-600">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-8">
-<h3 className="text-2xl font-bold text-teal-300">Des résultats mesurables</h3>
+<h3 className="text-2xl font-bold text-white">Des résultats mesurables</h3>
 </div>
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="modern-box animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-teal-200 text-sm mt-1">Satisfaction client</p></div>
-<div className="modern-box animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-teal-200 text-sm mt-1">Temps de réponse</p></div>
-<div className="modern-box animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-teal-200 text-sm mt-1">Tickets/mois</p></div>
-<div className="modern-box animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-teal-200 text-sm mt-1">Disponibilité</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-teal-200 text-lg mt-1">Satisfaction client</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-teal-200 text-lg mt-1">Temps de réponse</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-teal-200 text-lg mt-1">Tickets/mois</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-teal-200 text-lg mt-1">Disponibilité</p></div>
 </div>
 </div>
 </section>

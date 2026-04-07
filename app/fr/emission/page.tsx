@@ -163,7 +163,7 @@ export default function Page() {
             {RESULTS.map(({value, label}) => (
               <div key={label} className="text-center">
                 <div className="text-4xl lg:text-5xl font-black text-white mb-1">{value}</div>
-                <div className="text-emerald-200 text-sm">{label}</div>
+                <div className="text-emerald-200 text-lg">{label}</div>
               </div>
             ))}
           </div>
