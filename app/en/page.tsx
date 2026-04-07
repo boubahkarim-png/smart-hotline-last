@@ -124,42 +124,65 @@ Local SMEs
 </div>
 </section>
 
-{/* SERVICES */}
-<ScrollAnimate animation="fade-up">
-<section className="py-20 bg-slate-50">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-3">Our Solutions</h2>
-<p className="text-slate-500 text-lg">Everything your SME needs for customer relations</p>
-<div className="w-16 h-1 bg-sky-600 mx-auto rounded-full mt-4"/>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-{SERVICES.map(({ Icon, title, desc, href, bg, color, badge }, i) => (
-<Link key={href} href={href} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all group auto-float" style={{animationDelay: `${i * 100}ms`}}>
-<div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
-<Icon className={`w-6 h-6 ${color}`} />
-</div>
-<div className="flex items-start gap-2 mb-2">
-<h3 className="font-bold text-slate-900">{title}</h3>
-{badge && <span className="text-xs bg-violet-100 text-violet-700 px-1.5 py-0.5 rounded-full font-semibold">{badge}</span>}
-</div>
-<p className="text-slate-500 text-sm mb-3">{desc}</p>
-<span className="text-sky-600 text-sm font-semibold group-hover:underline">Learn more →</span>
-</Link>
-))}
-</div>
-</div>
-</section>
-</ScrollAnimate>
+      {/* SERVICES - DARK */}
+      <ScrollAnimate animation="fade-up">
+        <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-blue-950 to-sky-900 text-white border-t-4 border-sky-600 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-sky-500 opacity-10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"></div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">Our Solutions</h2>
+              <p className="text-sky-200 text-lg">Everything your SME needs for customer relations</p>
+              <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full mt-4"/>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SERVICES.map(({ Icon, title, desc, href, bg, color, badge }, i) => (
+                <Link key={href} href={href} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 hover:shadow-xl hover:-translate-y-1 transition-all group" style={{animationDelay: `${i * 100}ms`}}>
+                  <div className={`w-12 h-12 ${bg} rounded-2xl flex items-center justify-center mb-4`}>
+                    <Icon className={`w-6 h-6 ${color}`} />
+                  </div>
+                  <div className="flex items-start gap-2 mb-2">
+                    <h3 className="font-bold text-white">{title}</h3>
+                    {badge && <span className="text-xs bg-violet-500/80 text-white px-1.5 py-0.5 rounded-full font-semibold">{badge}</span>}
+                  </div>
+                  <p className="text-sky-200 text-sm mb-3">{desc}</p>
+                  <span className="text-sky-400 text-sm font-semibold group-hover:underline">Learn more →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimate>
 
-{/* STATS */}
-<section className="bg-white border-b border-slate-100 py-10">
-<GeoStats lang="en" />
-</section>
+      {/* STATS - LIGHT */}
+      <section className="bg-white py-16 text-slate-900 border-t-4 border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in-up">
+              <p className="text-5xl font-black bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">500+</p>
+              <p className="text-slate-600 text-sm mt-2 font-medium">Calls per day</p>
+            </div>
+            <div className="animate-fade-in-up" style={{animationDelay: '100ms'}}>
+              <p className="text-5xl font-black bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">98%</p>
+              <p className="text-slate-600 text-sm mt-2 font-medium">Customer satisfaction</p>
+            </div>
+            <div className="animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <p className="text-5xl font-black bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">48h</p>
+              <p className="text-slate-600 text-sm mt-2 font-medium">Setup time</p>
+            </div>
+            <div className="animate-fade-in-up" style={{animationDelay: '300ms'}}>
+              <p className="text-5xl font-black bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent">24/7</p>
+              <p className="text-slate-600 text-sm mt-2 font-medium">Availability</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* AI SECTION */}
+      {/* AI SECTION - LIGHT */}
       <ScrollAnimate animation="fade-left" delay={1}>
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-slate-50 border-t-4 border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
               <div className="w-full lg:w-1/2">
@@ -172,7 +195,7 @@ Local SMEs
                   <span className="bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">Who Speaks Like Us</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                  She answers in under 2 seconds. With your region's accent — your choice. And it costs a fraction of a salary.
+                  She answers in under 2 seconds. With your region&apos;s accent — your choice. And it costs a fraction of a salary.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {['Answers in under 2 seconds', 'Accents adapted to your region', 'Transfer to human if complex', 'Cost: ~30% of a salary', 'Available 24/7'].map((f, i) => (
@@ -200,7 +223,7 @@ Local SMEs
       </ScrollAnimate>
 
       {/* BENEFITS - DARK */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white border-t-4 border-sky-600">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
@@ -243,9 +266,9 @@ Local SMEs
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS - DARK */}
       <ScrollAnimate animation="fade-up" delay={2}>
-        <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+        <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
@@ -273,7 +296,7 @@ Local SMEs
       </ScrollAnimate>
 
       {/* FINAL CTA - DARK */}
-      <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20">
+      <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20 border-t-4 border-sky-700">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Never Miss a Call?</h2>
           <p className="text-sky-200 text-lg mb-10">Operational in 48h. No long-term commitment. We start whenever you're ready.</p>
