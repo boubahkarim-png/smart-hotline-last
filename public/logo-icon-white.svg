@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White icon for dark backgrounds - no blue circle -->
+  
+  <!-- Headset in white -->
+  <g transform="translate(10, 8)" fill="white">
+    <!-- Headband arc -->
+    <path d="M4 24C4 12 12 4 24 4C36 4 44 12 44 24" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+    
+    <!-- Left earpiece -->
+    <rect x="0" y="22" width="10" height="16" rx="3" fill="white"/>
+    
+    <!-- Right earpiece -->
+    <rect x="38" y="22" width="10" height="16" rx="3" fill="white"/>
+    
+    <!-- Microphone -->
+    <path d="M44 34C44 38 40 42 36 42H32" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="28" cy="42" r="4" fill="white"/>
+  </g>
+</svg>

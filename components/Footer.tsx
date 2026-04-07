@@ -12,7 +12,7 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 <div>
           <Link href={fr ? '/fr' : '/en'} className="inline-block mb-4">
-            <img src="/logo-icon.svg" alt="Smart Hotline" className="h-10 w-10" />
+            <img src="/logo-wordmark-white.svg" alt="Smart Hotline" className="h-12 w-auto" />
           </Link>
           <p className="text-slate-400 text-sm">
               {fr
