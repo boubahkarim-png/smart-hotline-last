@@ -14,11 +14,11 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
           <Link href={fr ? '/fr' : '/en'} className="inline-block mb-4">
             <img src="/logo-wordmark-white.svg" alt="Smart Hotline" className="h-12 w-auto" />
           </Link>
-          <p className="text-slate-400 text-sm">
-              {fr
-                ? 'Externalisation de relation client pour PME. Conseillers et IA 24/7.'
-                : 'Customer relationship outsourcing for SMBs. Agents and AI 24/7.'}
-            </p>
+<p className="text-slate-400 text-sm">
+          {fr
+            ? 'Votre partenaire téléphonique 24/7. Confiez-nous vos appels.'
+            : 'Your 24/7 phone partner. Let us handle your calls.'}
+        </p>
           </div>
 
           <div>
