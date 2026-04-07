@@ -1,158 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/</loc>
+    <loc>https://www.smart-hotline.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/</loc>
+    <loc>https://www.smart-hotline.com/fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/</loc>
+    <loc>https://www.smart-hotline.com/en/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/services/</loc>
+    <loc>https://www.smart-hotline.com/fr/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/services/</loc>
+    <loc>https://www.smart-hotline.com/en/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/tarifs/</loc>
+    <loc>https://www.smart-hotline.com/fr/tarifs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/pricing/</loc>
+    <loc>https://www.smart-hotline.com/en/pricing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/reception/</loc>
+    <loc>https://www.smart-hotline.com/fr/reception/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/inbound/</loc>
+    <loc>https://www.smart-hotline.com/en/inbound/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/emission/</loc>
+    <loc>https://www.smart-hotline.com/fr/emission/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/outbound/</loc>
+    <loc>https://www.smart-hotline.com/en/outbound/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/agents-ia/</loc>
+    <loc>https://www.smart-hotline.com/fr/agents-ia/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/ai-agents/</loc>
+    <loc>https://www.smart-hotline.com/en/ai-agents/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/secteurs/</loc>
+    <loc>https://www.smart-hotline.com/fr/support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/sectors/</loc>
+    <loc>https://www.smart-hotline.com/en/support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/crm/</loc>
+    <loc>https://www.smart-hotline.com/fr/crm/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/crm/</loc>
+    <loc>https://www.smart-hotline.com/en/crm/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/support/</loc>
+    <loc>https://www.smart-hotline.com/fr/secteurs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/support/</loc>
+    <loc>https://www.smart-hotline.com/en/sectors/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/contact/</loc>
+    <loc>https://www.smart-hotline.com/fr/receptionniste-virtuelle/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smart-hotline.com/en/virtual-receptionist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smart-hotline.com/fr/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/contact/</loc>
+    <loc>https://www.smart-hotline.com/en/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/a-propos/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/about/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/mentions-legales/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/legal/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/confidentialite/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/privacy/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/fr/cgv/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://boubahkarim-png.github.io/smart-hotline-late2/en/terms/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>
