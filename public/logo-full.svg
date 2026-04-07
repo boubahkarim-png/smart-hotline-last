@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#gradient1)"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9"/>
+      <stop offset="100%" style="stop-color:#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone handset icon (stylized) -->
+  <path d="M140 160C140 138 158 120 180 120H200C211 120 220 129 220 140V180C220 191 211 200 200 200H180C158 200 140 218 140 240V272C140 294 158 312 180 312H200C211 312 220 321 220 332V372C220 383 211 392 200 392H180C158 392 140 374 140 352V160Z" fill="url(#gradient2)"/>
+  
+  <!-- Sound waves -->
+  <path d="M280 180C300 200 300 312 280 332" stroke="url(#gradient2)" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <path d="M320 150C360 190 360 322 320 362" stroke="url(#gradient2)" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <path d="M360 120C420 180 420 332 360 392" stroke="url(#gradient2)" stroke-width="24" stroke-linecap="round" fill="none"/>
+  
+  <!-- AI sparkle -->
+  <circle cx="400" cy="130" r="12" fill="#FFFFFF"/>
+  <path d="M400 110V150M380 130H420" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+</svg>

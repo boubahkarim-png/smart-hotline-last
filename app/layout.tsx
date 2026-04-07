@@ -4,6 +4,35 @@ import './globals.css'
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
   description: "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7.",
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
+    description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME. Réception, émission, support client.',
+    url: 'https://www.smart-hotline.com',
+    siteName: 'Smart Hotline',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Smart Hotline - Partenaire Téléphonique 24/7',
+      },
+    ],
+    locale: 'fr_CA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
+    description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.',
+    images: ['/twitter-image.png'],
+  },
 }
 
 const jsonLd = {

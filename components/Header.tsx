@@ -48,9 +48,7 @@ export default function Header({ lang }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 gap-6">
           <Link href={lang === 'fr' ? '/fr' : '/en'} className="flex items-center gap-2 font-extrabold text-lg text-blue-800 flex-shrink-0">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
-              <span className="text-white text-xs font-black">SH</span>
-            </div>
+            <img src="/logo-icon.svg" alt="Smart Hotline" className="w-8 h-8" />
             Smart Hotline
           </Link>
 
