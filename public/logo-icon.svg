@@ -1,21 +1,29 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background rounded square -->
-  <rect width="64" height="64" rx="12" fill="url(#grad)"/>
+  <!-- Professional headset icon - clean and recognizable -->
   
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0EA5E9"/>
       <stop offset="100%" style="stop-color:#1E40AF"/>
     </linearGradient>
   </defs>
   
-  <!-- Stylized phone icon -->
-  <path d="M16 14C16 11 19 8 22 8H25C27 8 28 9 28 11V17C28 19 27 20 25 20H22C19 20 16 23 16 26V30C16 33 19 36 22 36H25C27 36 28 37 28 39V45C28 47 27 48 25 48H22C19 48 16 45 16 42V14Z" fill="#FFFFFF"/>
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#iconGrad)"/>
   
-  <!-- Sound waves -->
-  <path d="M34 22C38 26 38 38 34 42" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-  <path d="M40 16C48 24 48 40 40 48" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-  
-  <!-- AI indicator -->
-  <circle cx="52" cy="12" r="4" fill="#FFFFFF"/>
+  <!-- Headset in white -->
+  <g transform="translate(14, 12)" fill="white">
+    <!-- Headband arc -->
+    <path d="M4 24C4 12 12 4 24 4C36 4 44 12 44 24" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+    
+    <!-- Left earpiece -->
+    <rect x="0" y="22" width="10" height="16" rx="3" fill="white"/>
+    
+    <!-- Right earpiece -->
+    <rect x="38" y="22" width="10" height="16" rx="3" fill="white"/>
+    
+    <!-- Microphone -->
+    <path d="M44 34C44 38 40 42 36 42H32" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="28" cy="42" r="4" fill="white"/>
+  </g>
 </svg>
