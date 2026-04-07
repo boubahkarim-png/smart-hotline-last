@@ -15,10 +15,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-{q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire Beaumont', role: 'Directrice commerciale, Solutions Pro QC', av: 'MB'},
-{q: "Les listes B2B qu'ils nous ont fournies? Propres, à jour. Pas comme celles qu'on achetait avant à 500$.", name: 'François Gagnon', role: 'Fondateur, InnoTech Montreal', av: 'FG'},
-{q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle Tremblay', role: 'Responsable ventes, Groupe Nordik', av: 'IT'},
-{q: "La formation a pris 2 heures. Le lendemain, on était opérationnels. Vraiment, c'est pas compliqué.", name: 'Michel Richard', role: 'PDG, Richard & Fils Construction', av: 'MR'},
+{q: "Avant, nos leads étaient dans 3 fichiers Excel différents. Maintenant, tout est au même endroit. On perd plus rien.", name: 'Marie-Claire Beaumont', role: 'Directrice commerciale, Solutions Pro QC', img: '/images/testimonial-marie.jpg'},
+{q: "Les listes B2B qu'ils nous ont fournies? Propres, à jour. Pas comme celles qu'on achetait avant à 500$.", name: 'François Gagnon', role: 'Fondateur, InnoTech Montreal', img: '/images/testimonial-francois.jpg'},
+{q: "On a doublé notre taux de conversion en 4 mois. Le CRM + les appels sortants, ça fait une différence énorme.", name: 'Isabelle Tremblay', role: 'Responsable ventes, Groupe Nordik', img: '/images/testimonial-isabelle.jpg'},
+{q: "La formation a pris 2 heures. Le lendemain, on était opérationnels. Vraiment, c'est pas compliqué.", name: 'Michel Richard', role: 'PDG, Richard & Fils Construction', img: '/images/testimonial-michel.jpg'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -227,13 +227,13 @@ CRM Intégré &<br/>
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>
                 <p className="text-white mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-white">{t.name}</p>
-                    <p className="text-orange-200 text-sm">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-4">
+        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-white">{t.name}</p>
+        <p className="text-orange-200 text-sm">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

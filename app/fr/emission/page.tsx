@@ -34,19 +34,19 @@ const TESTIMONIALS = [
     quote: "Notre nombre de rendez-vous qualifiés a doublé en 2 mois. L'équipe comprend vraiment notre industrie et sait comment parler à nos prospects.",
     name: "Jean-François Lambert",
     role: "Directeur des ventes, Solutions TechPlus",
-    initials: "JFL"
+    img: '/images/testimonial-francois.jpg'
   },
   {
     quote: "La qualité des leads est exceptionnelle. On passe moins de temps à filtrer et plus de temps à conclure des ventes.",
     name: "Marie-Chantal Dubois",
     role: "Propriétaire, Dubois Consulting",
-    initials: "MCD"
+    img: '/images/testimonial-marie.jpg'
   },
   {
     quote: "Le reporting quotidien nous permet d'ajuster notre stratégie en temps réel. C'est un véritable partenariat, pas juste un service.",
     name: "Patrick Gagnon",
     role: "PDG, Gagnon Stratégies",
-    initials: "PG"
+    img: '/images/testimonial-pierre-new.jpg'
   }
 ]
 
@@ -256,21 +256,21 @@ export default function Page() {
         </div>
         <div className="overflow-hidden">
           <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, name, role, initials}, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                </div>
-                <p className="text-white mb-5 leading-relaxed italic">"{quote}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>
-                  <div>
-                    <p className="font-bold text-white text-sm">{name}</p>
-                    <p className="text-blue-200 text-xs">{role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+      <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
+        <div className="flex gap-0.5 mb-4">
+        {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-amber-400" />)}
+        </div>
+        <p className="text-white mb-5 leading-relaxed italic">"{t.quote}"</p>
+        <div className="flex items-center gap-3">
+        <img src={t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+          <p className="font-bold text-white text-sm">{t.name}</p>
+          <p className="text-blue-200 text-xs">{t.role}</p>
+        </div>
+        </div>
+      </div>
+      ))}
           </div>
         </div>
       </section>

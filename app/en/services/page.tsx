@@ -16,9 +16,9 @@ const STATS = [
  { value: "50K+", label: "Calls handled/month" },
 ]
 const TESTIMONIALS = [
- { quote: "I have a dental clinic on Saint-Denis. Before, I was losing patients because no one answered during procedures. Now? Zero missed calls. My patients think I have a full-time receptionist.", author: "Marie D.", role: "Dentist, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
- { quote: "Sophie AI reduced my costs by 60%. True. And the funniest part? My clients prefer it. 'Your receptionist is super efficient,' they say. It's a robot, guys!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montreal", rating: 5 },
- { quote: "I'm in construction. My guys are on job sites, they can't answer. Smart Hotline takes calls, qualifies leads. My conversion rate went up 35%. It's measurable.", author: "Sophie M.", role: "Sales Director, BatiPro Quebec — Laval", rating: 5 },
+{ quote: "I have a dental clinic on Saint-Denis. Before, I was losing patients because no one answered during procedures. Now? Zero missed calls. My patients think I have a full-time receptionist.", author: "Marie D.", role: "Dentist, Clinique du Parc — Plateau Mont-Royal", rating: 5, img: '/images/testimonial-marie.jpg' },
+{ quote: "Sophie AI reduced my costs by 60%. True. And the funniest part? My clients prefer it. 'Your receptionist is super efficient,' they say. It's a robot, guys!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montreal", rating: 5, img: '/images/testimonial-pierre-new.jpg' },
+{ quote: "I'm in construction. My guys are on job sites, they can't answer. Smart Hotline takes calls, qualifies leads. My conversion rate went up 35%. It's measurable.", author: "Sophie M.", role: "Sales Director, BatiPro Quebec — Laval", rating: 5, img: '/images/testimonial-sophie-new.jpg' },
 ]
 const STEPS = [
  { num: "01", title: "Free Consultation", desc: "We analyze your needs and goals during a 30-minute call." },
@@ -97,18 +97,23 @@ export default function Services() {
         </div>
         <div className="overflow-hidden">
           <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, author, role, rating}, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
-                  {Array.from({length: rating}).map((_, j) => (
-                    <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-                  ))}
-                </div>
-                <p className="text-blue-100 mb-6 italic">"{quote}"</p>
-                <div className="font-semibold text-white">{author}</div>
-                <div className="text-sm text-blue-300">{role}</div>
-              </div>
-            ))}
+      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+      <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
+        <div className="flex mb-4" role="img" aria-label={`${t.rating} out of 5 stars`}>
+        {Array.from({length: t.rating}).map((_, j) => (
+        <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+        ))}
+        </div>
+        <p className="text-blue-100 mb-6 italic">"{t.quote}"</p>
+        <div className="flex items-center gap-3 mb-2">
+        <img src={basePath + t.img} alt={t.author} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+        <div className="font-semibold text-white">{t.author}</div>
+        <div className="text-sm text-blue-300">{t.role}</div>
+        </div>
+        </div>
+      </div>
+      ))}
           </div>
         </div>
       </section>

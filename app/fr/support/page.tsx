@@ -15,9 +15,9 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', av: 'CR'},
-  {q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', av: 'JP'},
-  {q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', av: 'ML'},
+{q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', img: '/images/testimonial-1.jpg'},
+{q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', img: '/images/testimonial-2.jpg'},
+{q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', img: '/images/testimonial-3.jpg'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -213,13 +213,13 @@ export default function Page() {
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>
                 <p className="text-blue-100 mb-5 leading-relaxed italic">"{t.q}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-white text-sm">{t.name}</p>
-                    <p className="text-blue-200 text-xs">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-3">
+        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-white text-sm">{t.name}</p>
+        <p className="text-blue-200 text-xs">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

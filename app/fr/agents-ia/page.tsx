@@ -15,10 +15,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-{q: "Sophie a transformé notre service client. On ne rate plus aucun appel, même pendant nos périodes de pointe.", name: 'Marie-Claude Lévesque', role: 'Directrice opérationnelle, Clinique SantéPlus', av: 'MCL'},
-{q: "L'installation a été rapide et l'équipe extrêmement professionnelle. Nos clients pensent que c'est une vraie personne!", name: 'Daniel Bouchard', role: 'Propriétaire, Bouchard Mécanique', av: 'DB'},
-{q: "Le rapport qualité-prix est imbattable. On économise près de 60% comparé à une réceptionniste à temps plein.", name: 'Isabelle Morin', role: 'Comptable associée, Fiduciaire LMN', av: 'IM'},
-{q: "Au début j'étais sceptique. Mais honnêtement? Les clients ne se rendent compte de rien. Ce sont de vraies conversations.", name: 'Pierre Houde', role: 'Gérant, Garage Houde & Fils', av: 'PH'},
+{q: "Sophie a transformé notre service client. On ne rate plus aucun appel, même pendant nos périodes de pointe.", name: 'Marie-Claire Lévesque', role: 'Directrice opérationnelle, Clinique SantéPlus', img: '/images/testimonial-4.jpg'},
+{q: "L'installation a été rapide et l'équipe extrêmement professionnelle. Nos clients pensent que c'est une vraie personne!", name: 'Daniel Bouchard', role: 'Propriétaire, Bouchard Mécanique', img: '/images/testimonial-claude.jpg'},
+{q: "Le rapport qualité-prix est imbattable. On économise près de 60% comparé à une réceptionniste à temps plein.", name: 'Isabelle Morin', role: 'Comptable associée, Fiduciaire LMN', img: '/images/testimonial-isabelle.jpg'},
+{q: "Au début j'étais sceptique. Mais honnêtement? Les clients ne se rendent compte de rien. Ce sont de vraies conversations.", name: 'Pierre Houde', role: 'Gérant, Garage Houde & Fils', img: '/images/testimonial-jean.jpg'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -224,13 +224,13 @@ Sophie, votre IA<br/>
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>
                 <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-slate-900">{t.name}</p>
-                    <p className="text-slate-500 text-sm">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-4">
+        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-slate-900">{t.name}</p>
+        <p className="text-slate-500 text-sm">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

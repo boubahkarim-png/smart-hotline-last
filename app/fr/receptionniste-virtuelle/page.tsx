@@ -15,10 +15,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine parce que j'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre Lacroix', role: 'Propriétaire, Bistro du Vieux-Montréal', av: 'PL'},
-  {q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie Mercier', role: 'Directrice, Clinique Médicale Plateau', av: 'SM'},
-  {q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André Dubé', role: 'Gérant, Magasin Électronique QC', av: 'MD'},
-  {q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business. Nos clients sont contents, c'est tout ce qui compte.", name: 'Nathalie Tremblay', role: 'Directrice, Cabinet Juridique Tremblay & Associés', av: 'NT'},
+{q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine parce que j'étais incapable de répondre. Maintenant? Zéro appel manqué.", name: 'Pierre Lacroix', role: 'Propriétaire, Bistro du Vieux-Montréal', img: '/images/testimonial-pierre-new.jpg'},
+{q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions, et me textent les urgences. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: 'Sophie Mercier', role: 'Directrice, Clinique Médicale Plateau', img: '/images/testimonial-sophie-new.jpg'},
+{q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux. Vraiment.", name: 'Marc-André Dubé', role: 'Gérant, Magasin Électronique QC', img: '/images/testimonial-marc-new.jpg'},
+{q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business. Nos clients sont contents, c'est tout ce qui compte.", name: 'Nathalie Tremblay', role: 'Directrice, Cabinet Juridique Tremblay & Associés', img: '/images/testimonial-nathalie-new.jpg'},
 ]
 
 const FAQS = [
@@ -234,13 +234,13 @@ export default function Page() {
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>
                 <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-slate-900">{t.name}</p>
-                    <p className="text-slate-500 text-sm">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-4">
+        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-slate-900">{t.name}</p>
+        <p className="text-slate-500 text-sm">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

@@ -13,10 +13,10 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  {q: "I have a restaurant on the Main. Before, I was easily losing 10-15 clients per week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre Lacroix', role: 'Owner, Bistro du Vieux-Montréal', av: 'PL'},
-  {q: "It's not just reception. They take reservations, answer questions, and text me emergencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie Mercier', role: 'Director, Clinique Médicale Plateau', av: 'SM'},
-  {q: "During the holiday rush, they handled over 200 calls per day. My team was calm, clients happy. Truly.", name: 'Marc-André Dubé', role: 'Manager, Électronique QC Store', av: 'MD'},
-  {q: "We tried 3 other services before. This is the only one where the agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie Tremblay', role: 'Director, Cabinet Juridique Tremblay & Associés', av: 'NT'},
+{q: "I have a restaurant on the Main. Before, I was easily losing 10-15 clients per week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre Lacroix', role: 'Owner, Bistro du Vieux-Montréal', img: '/images/testimonial-pierre-new.jpg'},
+{q: "It's not just reception. They take reservations, answer questions, and text me emergencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie Mercier', role: 'Director, Clinique Médicale Plateau', img: '/images/testimonial-sophie-new.jpg'},
+{q: "During the holiday rush, they handled over 200 calls per day. My team was calm, clients happy. Truly.", name: 'Marc-André Dubé', role: 'Manager, Électronique QC Store', img: '/images/testimonial-marc-new.jpg'},
+{q: "We tried 3 other services before. This is the only one where the agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie Tremblay', role: 'Director, Cabinet Juridique Tremblay & Associés', img: '/images/testimonial-nathalie-new.jpg'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -223,13 +223,13 @@ export default function Page() {
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>
                 <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-slate-900">{t.name}</p>
-                    <p className="text-slate-500 text-sm">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-4">
+        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-slate-900">{t.name}</p>
+        <p className="text-slate-500 text-sm">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

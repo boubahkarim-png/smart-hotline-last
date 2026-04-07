@@ -1,50 +1,59 @@
 # Project State: Smart Hotline Next.js Website
 
-**Project:** Smart Hotline Next.js Website  
-**Core Value:** Bilingual (FR/EN) agency website with geo-aware content, deployed on GitHub Pages  
-**Started:** 2026-03-22  
+**Project:** Smart Hotline Next.js Website
+**Core Value:** Bilingual (FR/EN) agency website with geo-aware content, deployed on GitHub Pages
+**Started:** 2026-03-22
 
 ---
 
 ## Current Position
 
-**Current Phase:** Phase 2 - Content & SEO (Refinement)  
-**Current Plan:** Alternating dark/light sections across all service pages  
-**Status:** ACTIVE - Fixing section alternation pattern  
+**Current Phase:** Phase 2 - Content & SEO (Complete)
+**Current Plan:** All pages have proper dark/light alternation + auto-sliding testimonials
+**Status:** COMPLETE
 
 **Overall Progress:**
 ```
-[████████████████████████████████████░░] 90% (FR and EN pages complete)
+[████████████████████████████████████████] 100% (All pages complete)
 ```
 
 ---
 
-## Recent Work (2026-04-06)
+## Recent Work (2026-04-07)
 
-### Dark/Light Section Alternation Fix
+### Homepage Redesign + Auto-Sliding Testimonials
 
 **Completed:**
-- ✅ FR support page - Complete rewrite with proper dark/light alternation
-- ✅ EN support page - Complete rewrite with proper dark/light alternation
-- ✅ EN services page - Changed services grid from LIGHT to DARK
+- ✅ FR/EN homepages redesigned with proper dark/light alternation
+- ✅ Services section converted to DARK on homepages
+- ✅ Visual separators (border-t-4) added between all sections
+- ✅ Stats section converted to LIGHT for proper alternation
+- ✅ AI section converted to LIGHT (bg-slate-50)
+- ✅ Added auto-sliding testimonials animation to ALL pages
+- ✅ Testimonials slide right to left infinitely (60s animation)
+- ✅ Pauses on hover for better UX
 - ✅ Built and deployed to production
-- ✅ Verified live site with proper dark gradients
 
-**Pattern Applied:**
-1. **LIGHT** (bg-white) - Hero with image
-2. **DARK** (bg-gradient-to-br from-slate-900) - Features/Services
-3. **LIGHT** (bg-white) - Stats
-4. **DARK** (bg-gradient-to-br from-slate-900) - How it works
-5. **LIGHT** (bg-white) - Value proposition
-6. **DARK** (bg-gradient-to-br from-slate-900) - Testimonials
-7. **DARK** (bg-gradient-to-br from-teal-900) - CTA
-8. **LIGHT** (bg-white) - FAQ
+**Testimonial Animation CSS:**
+```css
+@keyframes testimonialSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.testimonial-marquee {
+  animation: testimonialSlide 60s linear infinite;
+}
+```
 
-**Remaining:**
-- [ ] FR/EN emission pages (outbound calls)
-- [ ] FR/EN reception pages (inbound calls)
-- [ ] FR/EN CRM pages
-- [ ] Other service-specific pages
+**Pages Updated with Auto-Sliding Testimonials:**
+- FR/EN homepages (page.tsx)
+- FR/EN reception/inbound pages
+- FR/EN emission/outbound pages
+- FR/EN CRM pages
+- FR/EN support pages
+- FR/EN agents-ia/ai-agents pages
+- FR/EN services pages
+- FR/EN secteurs/sectors pages
 
 ---
 
@@ -53,64 +62,31 @@
 | Phase | Status | Progress | Blockers |
 |-------|--------|----------|----------|
 | Phase 1: Core Development | 🟢 Completed | 8/8 | None |
-| Phase 2: Content & SEO | 🟢 In Progress | 7/8 | Section alternation |
+| Phase 2: Content & SEO | 🟢 Completed | 8/8 | None |
 | Phase 3: Performance | ⚪ Not Started | 0/4 | - |
 | Phase 4: Features | ⚪ Not Started | 0/5 | - |
 
 ---
 
-## Dark Section Pattern
+## Design Best Practices
 
-```jsx
-<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 modern-box">
-      <h3 className="font-bold text-lg text-white">Title</h3>
-      <p className="text-blue-200 text-sm">Description</p>
-    </div>
-  </div>
-</section>
+### Dark/Light Section Pattern
+```
+1. LIGHT - Hero (bg-gradient-to-br from-slate-50 via-white to-COLOR-50)
+2. DARK - Features/Services (bg-gradient-to-br from-slate-900 via-COLOR-950)
+3. LIGHT - Stats (bg-white)
+4. DARK - How it works (bg-gradient-to-br from-slate-900)
+5. LIGHT - Benefits/Value (bg-slate-50)
+6. DARK - Testimonials with auto-slide (bg-gradient-to-br from-slate-900 via-indigo-950)
+7. DARK - Final CTA (bg-gradient-to-br from-slate-900 via-COLOR-900)
+8. LIGHT - FAQ (bg-white)
 ```
 
-**Key CSS Classes:**
-- Background: `bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900`
-- Text: `text-white`, `text-blue-200`, `text-teal-200`
-- Cards: `bg-white/10 backdrop-blur border-white/20`
-- Hover: `hover:bg-white/15`
-
----
-
-## Light Section Pattern
-
-```jsx
-<section className="bg-white py-20 border-b border-slate-100">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="bg-slate-50 rounded-2xl p-8">
-      <h3 className="font-bold text-slate-900">Title</h3>
-      <p className="text-slate-600">Description</p>
-    </div>
-  </div>
-</section>
-```
-
-**Key CSS Classes:**
-- Background: `bg-white`, `bg-slate-50`, `bg-slate-100`
-- Text: `text-slate-900`, `text-slate-700`, `text-slate-600`
-- Cards: `bg-white`, `bg-slate-50`
-- Borders: `border-slate-100`, `border-slate-200`
-
----
-
-## Service Page Colors
-
-| Service | FR Color | EN Color | Status |
-|---------|----------|----------|--------|
-| Réception/Inbound | sky-600 | sky-600 | ✅ |
-| Support | teal-600 | teal-600 | ✅ Fixed |
-| CRM | orange-600 | orange-600 | ⚠️ Needs fix |
-| Secteurs/Sectors | amber-600 | amber-600 | ✅ |
-| Émission/Outbound | emerald-600 | emerald-600 | ⚠️ Needs fix |
-| Agents IA/AI Agents | violet-600 | violet-600 | ✅ |
+### Key CSS Classes
+- Dark bg: `bg-gradient-to-br from-slate-900 via-COLOR-950 to-COLOR-900`
+- Dark text: `text-white`, `text-COLOR-200`
+- Dark cards: `bg-white/10 backdrop-blur border-white/20`
+- Visual separator: `border-t-4 border-COLOR-600`
 
 ---
 
@@ -119,16 +95,9 @@
 ```bash
 cd /root/projects/smart-hotline-nextjs
 npm run build 2>&1 | tail -20
-git add -A && git commit -m "fix: description"
-git push origin main
+touch out/.nojekyll
+git add -A && git commit -m "message" && git push
 gh workflow run "Deploy to GitHub Pages" --repo boubahkarim-png/smart-hotline-last
-gh run watch --repo boubahkarim-png/smart-hotline-last
-```
-
-### Verification
-```bash
-curl -s https://www.smart-hotline.com/fr/support/ | grep -o 'bg-gradient-to-br[^"]*' | head -5
-curl -s https://www.smart-hotline.com/en/services/ | grep -E '(bg-white|bg-gradient)' | head -10
 ```
 
 ---
@@ -141,5 +110,5 @@ curl -s https://www.smart-hotline.com/en/services/ | grep -E '(bg-white|bg-gradi
 
 ---
 
-*State initialized: 2026-03-22*  
-*Last updated: 2026-04-06*
+*State initialized: 2026-03-22*
+*Last updated: 2026-04-07*

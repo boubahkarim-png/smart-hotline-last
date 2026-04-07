@@ -34,10 +34,10 @@ const MOVING_MESSAGES = [
 ]
 
 const TESTIMONIALS_DATA = [
-{ q: "J\'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", img: "/images/testimonial-1.jpg", alt: "Portrait de Pierre Lacroix, propriétaire du Bistro du Vieux-Montréal" },
-{ q: "C\'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C\'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", img: "/images/testimonial-sophie.jpg", alt: "Portrait de Sophie Mercier, directrice de la Clinique Médicale Plateau" },
-{ q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", img: "/images/testimonial-2.jpg", alt: "Portrait de Marc-André Dubé, gérant du Magasin Électronique QC" },
-{ q: "On a essayé 3 autres services avant. C\'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", img: "/images/testimonial-nathalie.jpg", alt: "Portrait de Nathalie Tremblay, directrice du Cabinet Juridique Tremblay" },
+  { q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", img: "/images/testimonial-pierre-new.jpg", alt: "Portrait de Pierre Lacroix, propriétaire du Bistro du Vieux-Montréal" },
+  { q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", img: "/images/testimonial-sophie-new.jpg", alt: "Portrait de Sophie Mercier, directrice de la Clinique Médicale Plateau" },
+  { q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", img: "/images/testimonial-marc-new.jpg", alt: "Portrait de Marc-André Dubé, gérant du Magasin Électronique QC" },
+  { q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", img: "/images/testimonial-nathalie-new.jpg", alt: "Portrait de Nathalie Tremblay, directrice du Cabinet Juridique Tremblay" },
 ]
 
 function CTAButtons() {

@@ -26,24 +26,9 @@ const FAQ = [
 ]
 
 const TESTIMONIALS = [
-  {
-    quote: "Smart Hotline a transformé notre service client. Nous avons gagné 30% en efficacité et nos clients sont plus satisfaits que jamais.",
-    name: "Marie-Chantal Dubois",
-    role: "Directrice Opérations, Clinique SantéPlus",
-    avatar: "MC"
-  },
-  {
-    quote: "La flexibilité de leur approche hybride IA/humain nous a permis de réduire nos coûts de 40% tout en améliorant notre disponibilité.",
-    name: "Jean-Michel Leclerc",
-    role: "PDG, Boutique Mode Urbaine",
-    avatar: "JL"
-  },
-  {
-    quote: "Pendant la tempête du siècle, leurs agents ont assuré une continuité de service parfaite. Aucun appel manqué, aucun client frustré.",
-    name: "Sophie Bertrand",
-    role: "Propriétaire, Bistro Le Petit Coin",
-    avatar: "SB"
-  }
+  { quote: "Smart Hotline a transformé notre service client. Nous avons gagné 30% en efficacité et nos clients sont plus satisfaits que jamais.", name: "Marie-Chantal Dubois", role: "Directrice Opérations, Clinique SantéPlus", img: "/images/testimonial-marie.jpg" },
+  { quote: "La flexibilité de leur approche hybride IA/humain nous a permis de réduire nos coûts de 40% tout en améliorant notre disponibilité.", name: "Jean-Michel Leclerc", role: "PDG, Boutique Mode Urbaine", img: "/images/testimonial-jean.jpg" },
+  { quote: "Pendant la tempête du siècle, leurs agents ont assuré une continuité de service parfaite. Aucun appel manqué, aucun client frustré.", name: "Claude Bertrand", role: "Propriétaire, Bistro Le Petit Coin", img: "/images/testimonial-claude.jpg" }
 ]
 
 const STATS = [
@@ -152,22 +137,24 @@ export default function BlogFr() {
         </div>
       </section>
 
-      {/* SECTION 5: LIGHT - TESTIMONIALS */}
-      <section className="bg-white py-20">
+      {/* SECTION 5: LIGHT - TESTIMONIALS AUTO-SLIDE */}
+      <section className="bg-white py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent</h2>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map(({ quote, name, role, avatar }) => (
-              <div key={name} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
-                <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
+                <p className="text-slate-700 mb-5 leading-relaxed italic">"{t.quote}"</p>
                 <div className="flex items-center gap-3 mt-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{avatar}</div>
+                  <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
                   <div>
-                    <p className="font-bold text-slate-900 text-sm">{name}</p>
-                    <p className="text-slate-500 text-xs">{role}</p>
+                    <p className="font-bold text-slate-900 text-sm">{t.name}</p>
+                    <p className="text-slate-500 text-xs">{t.role}</p>
                   </div>
                 </div>
               </div>

@@ -30,30 +30,30 @@ const STATS = [
 ]
 
 const TESTIMONIALS = [
-  {
-    quote: "Smart Hotline comprend vraiment notre secteur de la restauration. Ils gerent nos reservations et nos livraisons avec une efficacite impressionnante.",
-    name: "Marie-Lucie Boucher",
-    role: "Proprietaire, Restaurant Le Petit Jerome",
-    initials: "MLB"
-  },
-  {
-    quote: "Grace a leur service d'emission d'appels, nous avons augmente nos prises de rendez-vous de 60% en 3 mois.",
-    name: "Thomas Girard",
-    role: "Directeur, Clinique Medicale Plus",
-    initials: "TG"
-  },
-  {
-    quote: "Dans notre domaine juridique, chaque appel compte. Ils filtrent parfaitement les urgences et prennent les rendez-vous comme il faut.",
-    name: "Claire Dupont",
-    role: "Associee, Cabinet Dupont & Mercier",
-    initials: "CD"
-  },
-  {
-    quote: "On est dans le BTP, c'est pas toujours evident de gerer les appels sur les chantiers. Eux, ils captent notre realite et ca fait toute la difference.",
-    name: "Rejean Lavoie",
-    role: "Proprietaire, Construction Lavoie",
-    initials: "RL"
-  }
+{
+quote: "Smart Hotline comprend vraiment notre secteur de la restauration. Ils gerent nos reservations et nos livraisons avec une efficacite impressionnante.",
+name: "Marie-Lucie Boucher",
+role: "Proprietaire, Restaurant Le Petit Jerome",
+img: '/images/testimonial-1.jpg'
+},
+{
+quote: "Grace a leur service d'emission d'appels, nous avons augmente nos prises de rendez-vous de 60% en 3 mois.",
+name: "Thomas Girard",
+role: "Directeur, Clinique Medicale Plus",
+img: '/images/testimonial-2.jpg'
+},
+{
+quote: "Dans notre domaine juridique, chaque appel compte. Ils filtrent parfaitement les urgences et prennent les rendez-vous comme il faut.",
+name: "Claire Dupont",
+role: "Associee, Cabinet Dupont & Mercier",
+img: '/images/testimonial-3.jpg'
+},
+{
+quote: "On est dans le BTP, c'est pas toujours evident de gerer les appels sur les chantiers. Eux, ils captent notre realite et ca fait toute la difference.",
+name: "Rejean Lavoie",
+role: "Proprietaire, Construction Lavoie",
+img: '/images/testimonial-4.jpg'
+}
 ]
 
 const FAQ = [
@@ -390,18 +390,18 @@ export default function Secteurs() {
         </div>
         <div className="overflow-hidden">
           <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, name, role, initials}, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-indigo-400" />)}
-                </div>
-                <p className="text-slate-700 mb-5 leading-relaxed italic">"{quote}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>
-                  <div>
-                    <p className="font-bold text-slate-900 text-sm">{name}</p>
-                    <p className="text-slate-500 text-xs">{role}</p>
-                  </div>
+      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+      <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
+        <div className="flex gap-0.5 mb-4">
+        {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-indigo-400" />)}
+        </div>
+        <p className="text-slate-700 mb-5 leading-relaxed italic">"{t.quote}"</p>
+        <div className="flex items-center gap-3">
+        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-slate-900 text-sm">{t.name}</p>
+        <p className="text-slate-500 text-xs">{t.role}</p>
+        </div>
                 </div>
               </div>
             ))}

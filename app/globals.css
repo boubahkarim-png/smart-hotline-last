@@ -837,7 +837,7 @@ div[id^="tawk-chat-container"] iframe {
   animation-play-state: paused;
 }
 
-/* ===== TESTIMONIAL AUTO-SLIDE (SLOW) ===== */
+/* ===== TESTIMONIAL AUTO-SLIDE (FASTER) ===== */
 
 @keyframes testimonialSlide {
   0% { transform: translateX(0); }
@@ -845,7 +845,7 @@ div[id^="tawk-chat-container"] iframe {
 }
 
 .testimonial-marquee {
-  animation: testimonialSlide 60s linear infinite;
+  animation: testimonialSlide 30s linear infinite;
 }
 
 .testimonial-marquee:hover {

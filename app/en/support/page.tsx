@@ -23,9 +23,9 @@ const STEPS = [
 ]
 
 const TESTIMONIALS = [
-  {q: "We receive questions about our products all day. Before, it was chaos in emails. Now, every request is properly tracked.", name: 'Catherine Rouleau', role: 'Customer Service Manager, Online Store QC', av: 'CR'},
-  {q: "They fixed a 3-week problem in 48h. The fact that they speak proper French — that really helps with our clients.", name: 'Jean-François Poissant', role: 'Director, Financial Services MTL', av: 'JP'},
-  {q: "Our clients are more satisfied. We see it in the comments. Support in French, it makes all the difference.", name: 'Martine Lévesque', role: 'Founder, Tech Support Quebec', av: 'ML'},
+{q: "We receive questions about our products all day. Before, it was chaos in emails. Now, every request is properly tracked.", name: 'Catherine Rouleau', role: 'Customer Service Manager, Online Store QC', img: '/images/testimonial-1.jpg'},
+{q: "They fixed a 3-week problem in 48h. The fact that they speak proper French — that really helps with our clients.", name: 'Jean-François Poissant', role: 'Director, Financial Services MTL', img: '/images/testimonial-2.jpg'},
+{q: "Our clients are more satisfied. We see it in the comments. Support in French, it makes all the difference.", name: 'Martine Lévesque', role: 'Founder, Tech Support Quebec', img: '/images/testimonial-3.jpg'},
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -203,13 +203,13 @@ export default function Page() {
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>
                 <p className="text-blue-100 mb-5 leading-relaxed italic">"{t.q}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{t.av}</div>
-                  <div>
-                    <p className="font-bold text-white text-sm">{t.name}</p>
-                    <p className="text-blue-200 text-xs">{t.role}</p>
-                  </div>
-                </div>
+      <div className="flex items-center gap-3">
+        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+        <p className="font-bold text-white text-sm">{t.name}</p>
+        <p className="text-blue-200 text-xs">{t.role}</p>
+        </div>
+      </div>
               </div>
             ))}
           </div>

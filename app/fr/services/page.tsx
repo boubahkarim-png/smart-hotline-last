@@ -16,9 +16,9 @@ const STATS = [
   { value: "50K+", label: "Appels traités/mois" },
 ]
 const TESTIMONIALS = [
-  { quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5 },
-  { quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5 },
-  { quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5 },
+{ quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5, img: '/images/testimonial-marie.jpg' },
+{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5, img: '/images/testimonial-pierre-new.jpg' },
+{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5, img: '/images/testimonial-sophie-new.jpg' },
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
@@ -97,18 +97,23 @@ export default function Services() {
         </div>
         <div className="overflow-hidden">
           <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, author, role, rating}, i) => (
-              <div key={i} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
-                  {Array.from({length: rating}).map((_, j) => (
-                    <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-                  ))}
-                </div>
-                <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{quote}"</p>
-                <div className="font-semibold text-slate-900">{author}</div>
-                <div className="text-sm text-slate-500">{role}</div>
-              </div>
-            ))}
+      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+      <div key={i} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
+        <div className="flex mb-4" role="img" aria-label={`${t.rating} sur 5 étoiles`}>
+        {Array.from({length: t.rating}).map((_, j) => (
+        <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+        ))}
+        </div>
+        <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{t.quote}"</p>
+        <div className="flex items-center gap-3 mb-2">
+        <img src={basePath + t.img} alt={t.author} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <div>
+        <div className="font-semibold text-slate-900">{t.author}</div>
+        <div className="text-sm text-slate-500">{t.role}</div>
+        </div>
+        </div>
+      </div>
+      ))}
           </div>
         </div>
       </section>
