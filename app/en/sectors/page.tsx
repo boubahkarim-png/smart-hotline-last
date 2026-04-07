@@ -380,20 +380,22 @@ export default function Sectors() {
         </div>
       </section>
 
-      {/* SECTION 5: TESTIMONIALS */}
-      <section className="py-20 bg-slate-50">
+      {/* SECTION 5: TESTIMONIALS AUTO-SLIDE */}
+      <section className="py-20 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-3">What our clients really say</h2>
             <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"/>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {TESTIMONIALS.map(({quote, name, role, initials}) => (
-              <div key={name} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-all">
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, name, role, initials}, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
                 <div className="flex gap-0.5 mb-4">
-                  {[CheckIcon, CheckIcon, CheckIcon, CheckIcon, CheckIcon].map((Icon, i) => <Icon key={i} className="w-5 h-5 text-indigo-400" />)}
+                  {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-indigo-400" />)}
                 </div>
-                <p className="text-slate-700 mb-5 leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
+                <p className="text-slate-700 mb-5 leading-relaxed italic">"{quote}"</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center font-bold text-white text-sm">{initials}</div>
                   <div>

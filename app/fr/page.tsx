@@ -268,34 +268,36 @@ les PME d\'Ici
         </div>
       </section>
 
-      {/* TESTIMONIALS - DARK */}
+      {/* TESTIMONIALS - DARK WITH AUTO-SLIDE */}
       <ScrollAnimate animation="fade-up" delay={2}>
-        <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl font-black mb-3">Ce que nos clients disent</h2>
-<div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-{TESTIMONIALS_DATA.map((t, i) => (
-<div key={i} className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all">
-<div className="flex gap-1 mb-4">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-</div>
-<p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
-<div className="flex items-center gap-3">
-<img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
-<div>
-<p className="font-bold text-white text-sm">{t.name}</p>
-<p className="text-slate-400 text-xs">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
-</section>
-</ScrollAnimate>
+        <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-black mb-3">Ce que nos clients disent</h2>
+              <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
+            </div>
+          </div>
+          <div className="overflow-hidden">
+            <div className="testimonial-track testimonial-marquee">
+              {[...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA].map((t, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
+                  <div className="flex gap-1 mb-4">
+                    {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
+                  <div className="flex items-center gap-3">
+                    <img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
+                    <div>
+                      <p className="font-bold text-white text-sm">{t.name}</p>
+                      <p className="text-slate-400 text-xs">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimate>
 
       {/* FAQ SECTION - LIGHT */}
       <section className="py-20 bg-white border-t-4 border-slate-200">

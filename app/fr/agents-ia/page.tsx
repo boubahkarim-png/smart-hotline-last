@@ -208,32 +208,34 @@ Sophie, votre IA<br/>
  </div>
  </section>
 
-{/* SECTION 6: TESTIMONIALS */}
-<section className="py-20 bg-gradient-to-br from-slate-50 to-white">
-<div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-16">
-<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
-<div className="w-24 h-1.5 bg-gradient-to-r from-violet-600 to-purple-700 mx-auto rounded-full"></div>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-{TESTIMONIALS.map((t, i) => (
-<div key={i} className={`modern-box p-8 testimonial-card animate-delay-${(i+1)*100}`}>
-<div className="flex gap-1 mb-5">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-</div>
-<p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-<div className="flex items-center gap-4">
-<div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-<div>
-<p className="font-bold text-slate-900">{t.name}</p>
-<p className="text-slate-500 text-sm">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
-</section>
+      {/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-violet-600 to-purple-700 mx-auto rounded-full"></div>
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
+                <div className="flex gap-1 mb-5">
+                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
+                </div>
+                <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
+                  <div>
+                    <p className="font-bold text-slate-900">{t.name}</p>
+                    <p className="text-slate-500 text-sm">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 {/* SECTION 7: FINAL CTA */}
 <section className="bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 py-24 relative overflow-hidden">

@@ -181,16 +181,18 @@ export default function Page() {
  </div>
  </section>
 
-      {/* SECTION 6: LIGHT - Testimonials */}
-      <section className="py-20 bg-slate-50">
+      {/* SECTION 6: LIGHT - Testimonials AUTO-SLIDE */}
+      <section className="py-20 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">What Our Clients Say</h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto rounded"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-sm modern-box animate-delay-${(i+1)*100}`}>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>

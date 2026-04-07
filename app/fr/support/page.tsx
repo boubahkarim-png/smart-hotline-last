@@ -197,16 +197,18 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 6: DARK - Testimonials */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+      {/* SECTION 6: DARK - Testimonials AUTO-SLIDE */}
+      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black mb-4">Ce que nos clients disent</h2>
             <p className="text-blue-200 text-lg">Des résultats concrets pour des entreprises comme la vôtre</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 modern-box animate-delay-${(i+1)*100}`}>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>

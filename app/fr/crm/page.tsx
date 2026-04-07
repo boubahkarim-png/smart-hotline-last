@@ -211,32 +211,34 @@ CRM Intégré &<br/>
  </div>
  </section>
 
-{/* SECTION 6: DARK TESTIMONIALS */}
-<section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white border-t-4 border-indigo-700">
-<div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-16">
-<h2 className="text-4xl lg:text-5xl font-black text-white mb-4">Ce que nos clients disent</h2>
-<div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-600 mx-auto rounded-full"></div>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-{TESTIMONIALS.map((t, i) => (
-<div key={i} className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all modern-box animate-delay-${(i+1)*100}`}>
-<div className="flex gap-1 mb-5">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-</div>
-<p className="text-white mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-<div className="flex items-center gap-4">
-<div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
-<div>
-<p className="font-bold text-white">{t.name}</p>
-<p className="text-orange-200 text-sm">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
-</section>
+      {/* SECTION 6: DARK TESTIMONIALS AUTO-SLIDE */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white border-t-4 border-indigo-700 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">Ce que nos clients disent</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-600 mx-auto rounded-full"></div>
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
+                <div className="flex gap-1 mb-5">
+                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
+                </div>
+                <p className="text-white mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-700 rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">{t.av}</div>
+                  <div>
+                    <p className="font-bold text-white">{t.name}</p>
+                    <p className="text-orange-200 text-sm">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 {/* SECTION 7: FINAL CTA */}
 <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 py-24 relative overflow-hidden">

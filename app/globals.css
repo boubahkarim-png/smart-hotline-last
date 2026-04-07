@@ -837,6 +837,27 @@ div[id^="tawk-chat-container"] iframe {
   animation-play-state: paused;
 }
 
+/* ===== TESTIMONIAL AUTO-SLIDE (SLOW) ===== */
+
+@keyframes testimonialSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.testimonial-marquee {
+  animation: testimonialSlide 60s linear infinite;
+}
+
+.testimonial-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Duplicate testimonials for seamless loop */
+.testimonial-track {
+  display: flex;
+  gap: 2rem;
+}
+
 /* ===== SCROLLBAR HIDE ===== */
 
 .scrollbar-hide {

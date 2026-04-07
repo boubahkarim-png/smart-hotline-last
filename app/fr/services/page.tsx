@@ -90,26 +90,28 @@ export default function Services() {
 </div>
 </section>
 
-{/* SECTION 4: LIGHT - TESTIMONIALS */}
-<section className="py-24 bg-white border-t-4 border-slate-200">
- <div className="max-w-6xl mx-auto px-4">
- <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-slate-900">Ce que disent nos clients</h2>
- <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
- {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
- <div key={author} className={`bg-slate-50 rounded-2xl p-8 border border-slate-100 modern-box animate-delay-${(i+1)*100}`}>
- <div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
- {Array.from({length: rating}).map((_, i) => (
- <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
- ))}
- </div>
- <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{quote}"</p>
- <div className="font-semibold text-slate-900">{author}</div>
- <div className="text-sm text-slate-500">{role}</div>
- </div>
- ))}
- </div>
- </div>
- </section>
+      {/* SECTION 4: LIGHT - TESTIMONIALS AUTO-SLIDE */}
+      <section className="py-24 bg-white border-t-4 border-slate-200 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-slate-900">Ce que disent nos clients</h2>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, author, role, rating}, i) => (
+              <div key={i} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
+                <div className="flex mb-4" role="img" aria-label={`${rating} sur 5 étoiles`}>
+                  {Array.from({length: rating}).map((_, j) => (
+                    <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+                  ))}
+                </div>
+                <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{quote}"</p>
+                <div className="font-semibold text-slate-900">{author}</div>
+                <div className="text-sm text-slate-500">{role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 {/* SECTION 5: DARK HOW IT WORKS */}
 <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white border-t-4 border-slate-700">

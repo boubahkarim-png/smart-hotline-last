@@ -208,16 +208,18 @@ Voir tous les tarifs
 </div>
 </section>
 
-      {/* SECTION 6: TESTIMONIALS - Modern cards */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+      {/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className={`modern-box p-8 testimonial-card animate-delay-${(i+1)*100}`}>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
                 <div className="flex gap-1 mb-5">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>

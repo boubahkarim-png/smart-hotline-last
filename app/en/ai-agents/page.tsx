@@ -209,33 +209,12 @@ export default function Page() {
               <p className="text-slate-600">{desc}</p>
             </div>
           ))}
-        </div>
       </div>
-    </section>
+      </div>
+      </section>
 
- {/* Section 5: DARK - Testimonials */}
- <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
- <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="text-center mb-12">
- <h2 className="text-3xl font-black text-white mb-2">What Our Clients Say</h2>
- <p className="text-slate-300">Real results from real businesses.</p>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
- {TESTIMONIALS.map(({quote, author, role}) => (
- <div key={author} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
- <p className="text-white mb-4 italic">"{quote}"</p>
- <div className="border-t border-white/20 pt-4">
- <p className="font-bold text-white">{author}</p>
- <p className="text-sm text-slate-300">{role}</p>
- </div>
- </div>
- ))}
- </div>
- </div>
- </section>
-
-    {/* Section 6: How It Works - Light (bg-white) */}
-    <section className="py-20 bg-white">
+      {/* Section 6: How It Works - Light (bg-white) */}
+      <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">How It Works</h2>
         {STEPS.map(({n, t, d}: any) => (

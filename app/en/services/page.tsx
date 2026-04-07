@@ -90,26 +90,28 @@ export default function Services() {
 </div>
 </div>
 </section>
- {/* SECTION 5: DARK - TESTIMONIALS */}
- <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
- <div className="max-w-6xl mx-auto px-4">
- <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
- <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
- {TESTIMONIALS.map(({quote, author, role, rating}, i) => (
- <div key={author} className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-${(i+1)*100}`}>
- <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
- {Array.from({length: rating}).map((_, i) => (
- <span key={i} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
- ))}
- </div>
- <p className="text-blue-100 mb-6 italic">"{quote}"</p>
- <div className="font-semibold text-white">{author}</div>
- <div className="text-sm text-blue-300">{role}</div>
- </div>
- ))}
- </div>
- </div>
- </section>
+      {/* SECTION 5: DARK - TESTIMONIALS AUTO-SLIDE */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+        </div>
+        <div className="overflow-hidden">
+          <div className="testimonial-track testimonial-marquee">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map(({quote, author, role, rating}, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
+                <div className="flex mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
+                  {Array.from({length: rating}).map((_, j) => (
+                    <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
+                  ))}
+                </div>
+                <p className="text-blue-100 mb-6 italic">"{quote}"</p>
+                <div className="font-semibold text-white">{author}</div>
+                <div className="text-sm text-blue-300">{role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* SECTION 6: LIGHT HOW IT WORKS */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
