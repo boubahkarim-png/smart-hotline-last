@@ -80,29 +80,39 @@ export default function BlogFr() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredPosts.map((post: PostMeta) => (
-              <Link 
-                key={post.slug} 
-                href={`/fr/blog/${post.slug}`}
-                className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
-                  <span className="text-blue-200 text-xs">
-                    {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
-                  </span>
-                </div>
-                <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                <p className="text-blue-200 text-sm mb-4 line-clamp-2">
-                  {post.excerpt}
-                </p>
-                <span className="text-blue-200 text-sm font-semibold group-hover:underline">
-                  Lire la suite →
+        {featuredPosts.map((post: PostMeta) => (
+          <Link
+            key={post.slug}
+            href={`/fr/blog/${post.slug}`}
+            className="bg-white/5 backdrop-blur rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/50 transition-all group"
+          >
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+                <span className="text-blue-200 text-xs">
+                  {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
-              </Link>
-            ))}
+              </div>
+              <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+                {post.title}
+              </h2>
+              <p className="text-blue-200 text-sm mb-4 line-clamp-2">
+                {post.excerpt}
+              </p>
+              <span className="text-blue-200 text-sm font-semibold group-hover:underline">
+                Lire la suite →
+              </span>
+            </div>
+          </Link>
+        ))}
           </div>
         </div>
       </section>
@@ -191,29 +201,39 @@ export default function BlogFr() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post: PostMeta) => (
-              <Link 
-                key={post.slug} 
-                href={`/fr/blog/${post.slug}`}
-                className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all group"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
-                  <span className="text-blue-200 text-xs">
-                    {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
-                  </span>
-                </div>
-                <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                <p className="text-blue-200 text-sm mb-4 line-clamp-2">
-                  {post.excerpt}
-                </p>
-                <span className="text-blue-200 text-sm font-semibold group-hover:underline">
-                  Lire la suite →
+        {posts.map((post: PostMeta) => (
+          <Link
+            key={post.slug}
+            href={`/fr/blog/${post.slug}`}
+            className="bg-white/5 backdrop-blur rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/50 transition-all group"
+          >
+            <div className="relative h-40 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            </div>
+            <div className="p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+                <span className="text-blue-200 text-xs">
+                  {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
                 </span>
-              </Link>
-            ))}
+              </div>
+              <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+                {post.title}
+              </h2>
+              <p className="text-blue-200 text-sm mb-4 line-clamp-2">
+                {post.excerpt}
+              </p>
+              <span className="text-blue-200 text-sm font-semibold group-hover:underline">
+                Lire la suite →
+              </span>
+            </div>
+          </Link>
+        ))}
           </div>
         </div>
       </section>
