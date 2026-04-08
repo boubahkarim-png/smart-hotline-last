@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://www.smart-hotline.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Smart Hotline - Partenaire Téléphonique 24/7',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
     description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.',
-    images: ['/twitter-image.png'],
+    images: ['https://www.smart-hotline.com/twitter-image.png'],
   },
 }
 
