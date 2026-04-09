@@ -27,7 +27,7 @@ jobs:
       
       - run: npm ci
 
-      - run: npm run build:github
+      - run: npm run build:netlify
 
       - run: touch out/.nojekyll
 
