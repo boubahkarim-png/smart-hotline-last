@@ -101,12 +101,9 @@ export function GeoContactCTA({ lang = 'fr' }: GeoContactInfoProps) {
     )
   }
   
+  // For non-Canada/USA visitors: Show only WhatsApp button
   return (
     <div className="flex flex-col sm:flex-row gap-3">
-      <a href={`mailto:${info.email}`} className="flex items-center justify-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
-        <span>📧</span>
-        <span>{isEn ? 'Send a Message' : 'Envoyer un Email'}</span>
-      </a>
       <a href={info.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-green-700 transition-colors">
         <span>💬</span>
         <span>WhatsApp</span>

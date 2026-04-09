@@ -174,7 +174,7 @@ export default function EnContact() {
           ) : (
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
               <input type="hidden" name="csrf_token" value={csrfToken} />
-              <h2 className="text-2xl font-black text-slate-900 mb-6">Get My Free Analysis</h2>
+              <h2 className="text-2xl font-black text-slate-900 mb-6">Send a Message</h2>
 
               <div className="space-y-4 mb-6">
                 <div>
@@ -223,7 +223,7 @@ export default function EnContact() {
                 disabled={sending}
                 className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
               >
-                {sending ? 'Sending...' : 'Get My Free Analysis →'}
+                {sending ? 'Sending...' : 'Send Message →'}
               </button>
               <p className="text-center text-slate-500 text-sm mt-4">Response within 2h • No commitment required</p>
             </form>
