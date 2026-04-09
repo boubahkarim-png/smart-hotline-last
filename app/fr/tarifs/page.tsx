@@ -351,8 +351,8 @@ export default function Tarifs() {
               <Link href="/fr/contact" className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
                 Nous Contacter
               </Link>
-              <a href="mailto:contact@smarthotline.ca" className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 font-semibold px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors">
-                contact@smarthotline.ca
+              <a href="mailto:direction@smart-hotline.com" className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 font-semibold px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                direction@smart-hotline.com
               </a>
             </div>
           </div>

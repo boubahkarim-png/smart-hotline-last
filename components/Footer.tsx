@@ -47,9 +47,9 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
               {fr ? 'Contact' : 'Contact'}
             </h3>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <ObfuscatedEmail email="contact@smart-hotline.com" className="text-slate-400 hover:text-white transition-colors" />
-              </li>
+        <li>
+          <ObfuscatedEmail email="direction@smart-hotline.com" className="text-slate-400 hover:text-white transition-colors" />
+        </li>
               <li>
                 <a href="https://wa.me/15148190559" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   💬 WhatsApp: +1 514 819-0559
