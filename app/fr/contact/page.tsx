@@ -3,6 +3,7 @@ import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
+import { GeoContactInfo, GeoContactCTA } from '@/components/GeoContactInfo'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
@@ -150,6 +151,16 @@ export default function FrContact() {
             ou simplement envie de discuter de vos besoins en relation client,
             notre équipe est prête à vous répondre.
           </p>
+          
+          {/* GEO-AWARE CONTACT INFO */}
+          <div className="max-w-md mx-auto mt-8">
+            <GeoContactInfo />
+          </div>
+          
+          {/* GEO-AWARE CTA BUTTONS */}
+          <div className="mt-8 flex justify-center">
+            <GeoContactCTA />
+          </div>
         </div>
       </section>
 
