@@ -3,6 +3,7 @@ import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
+import { GeoContactInfo, GeoContactCTA } from '@/components/GeoContactInfo'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
 
@@ -144,26 +145,22 @@ export default function EnContact() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK - CONTACT INFO */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black mb-8">Get in Touch</h2>
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-            <a href="tel:+15148190559" className="flex items-center justify-center gap-3 bg-white/10 px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
-              <span className="text-2xl">📞</span>
-              <span>+1 514 819-0559</span>
-            </a>
-            <a href="https://wa.me/15148190559" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white/10 px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
-              <span className="text-2xl">💬</span>
-              <span>WhatsApp 24/7</span>
-            </a>
-            <a href="mailto:direction@smart-hotline.com" className="flex items-center justify-center gap-3 bg-white/10 px-6 py-4 rounded-xl hover:bg-white/20 transition-colors">
-              <span className="text-2xl">✉️</span>
-              <span>Email Us</span>
-            </a>
-          </div>
-        </div>
-      </section>
+{/* SECTION 2: DARK - CONTACT INFO */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
+<div className="max-w-4xl mx-auto px-4 text-center">
+<h2 className="text-3xl lg:text-4xl font-black mb-8">Get in Touch</h2>
+
+{/* GEO-AWARE CONTACT INFO */}
+<div className="max-w-md mx-auto">
+<GeoContactInfo lang="en" />
+</div>
+
+{/* GEO-AWARE CTA BUTTONS */}
+<div className="mt-8 flex justify-center">
+<GeoContactCTA lang="en" />
+</div>
+</div>
+</section>
 
       {/* SECTION 3: LIGHT - FORM */}
       <section id="contact-form" className="bg-slate-50 py-20">
@@ -215,23 +212,13 @@ export default function EnContact() {
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
-                  <span className="text-sm text-slate-600">
-                    I accept the processing of my data in accordance with the{' '}
-                    <Link href="/en/privacy" className="text-blue-600 underline">privacy policy</Link>.
-                  </span>
-                </label>
-              </div>
+{error && (
+<div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+{error}
+</div>
+)}
 
-              {error && (
-                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
-                  {error}
-                </div>
-              )}
-
-              <button
+<button
                 type="submit"
                 disabled={sending}
                 className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"

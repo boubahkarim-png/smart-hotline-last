@@ -152,15 +152,15 @@ export default function FrContact() {
             notre équipe est prête à vous répondre.
           </p>
           
-          {/* GEO-AWARE CONTACT INFO */}
-          <div className="max-w-md mx-auto mt-8">
-            <GeoContactInfo />
-          </div>
-          
-          {/* GEO-AWARE CTA BUTTONS */}
-          <div className="mt-8 flex justify-center">
-            <GeoContactCTA />
-          </div>
+{/* GEO-AWARE CONTACT INFO */}
+<div className="max-w-md mx-auto mt-8">
+<GeoContactInfo lang="fr" />
+</div>
+
+{/* GEO-AWARE CTA BUTTONS */}
+<div className="mt-8 flex justify-center">
+<GeoContactCTA lang="fr" />
+</div>
         </div>
       </section>
 
@@ -269,23 +269,13 @@ export default function FrContact() {
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600"/>
-                  <span className="text-sm text-slate-600">
-                    J&apos;accepte le traitement de mes données conformément à la{' '}
-                    <Link href="/fr/confidentialite" className="text-blue-600 underline">politique de confidentialité</Link>.
-                  </span>
-                </label>
-              </div>
+{error && (
+<div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+{error}
+</div>
+)}
 
-              {error && (
-                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
-                  {error}
-                </div>
-              )}
-
-              <button
+<button
                 type="submit"
                 disabled={sending}
                 className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"
