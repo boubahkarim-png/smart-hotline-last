@@ -65,29 +65,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
      },
      ...frRoutes,
      ...enRoutes,
-     ...getAllPosts('fr').flatMap(post => ({
-       url: `${BASE_URL}/fr/blog/${post.slug}`,
-       lastModified: new Date(post.date),
-       changeFrequency: 'weekly' as const,
-       priority: 0.7,
-       alternates: {
-         languages: {
-           fr: `${BASE_URL}/fr/blog/${post.slug}`,
-           en: post.canonicalSlug ? `${BASE_URL}/en/blog/${post.canonicalSlug}` : undefined,
-         },
-       },
-     })),
-     ...getAllPosts('en').flatMap(post => ({
-       url: `${BASE_URL}/en/blog/${post.slug}`,
-       lastModified: new Date(post.date),
-       changeFrequency: 'weekly' as const,
-       priority: 0.7,
-       alternates: {
-         languages: {
-           fr: post.canonicalSlug ? `${BASE_URL}/fr/blog/${post.canonicalSlug}` : undefined,
-           en: `${BASE_URL}/en/blog/${post.slug}`,
-         },
-       },
-     })),
+...getAllPosts('fr').flatMap(post => {
+    const languages: Record<string, string> = {
+      fr: `${BASE_URL}/fr/blog/${post.slug}`,
+    }
+    if (post.canonicalSlug) {
+      languages.en = `${BASE_URL}/en/blog/${post.canonicalSlug}`
+    }
+    return {
+      url: `${BASE_URL}/fr/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+      alternates: { languages },
+    }
+  }),
+  ...getAllPosts('en').flatMap(post => {
+    const languages: Record<string, string> = {
+      en: `${BASE_URL}/en/blog/${post.slug}`,
+    }
+    if (post.canonicalSlug) {
+      languages.fr = `${BASE_URL}/fr/blog/${post.canonicalSlug}`
+    }
+    return {
+      url: `${BASE_URL}/en/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+      alternates: { languages },
+    }
+  }),
    ]
 }
