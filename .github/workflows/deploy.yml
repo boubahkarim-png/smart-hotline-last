@@ -20,14 +20,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-      
-      - run: npm ci
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
 
-      - run: npm run build:netlify
+    - run: npm ci
+
+    - name: Build with production URL
+      env:
+        NEXT_PUBLIC_SITE_URL: https://www.smart-hotline.com
+      run: npm run build:netlify
 
       - run: touch out/.nojekyll
 
