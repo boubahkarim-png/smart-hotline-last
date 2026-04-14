@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "Multichannel Customer Support | Quebec Call Center | Smart Hotline",
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/support/',
+    canonical: `${siteUrl}/en/support/`,
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/support/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/support/',
+      'fr-CA': `${siteUrl}/fr/support/`,
+      'en-CA': `${siteUrl}/en/support/`,
     },
   },
 }

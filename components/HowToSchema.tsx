@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import { siteUrl } from '@/lib/siteConfig'
 
 interface HowToStep {
   name: string
@@ -16,8 +17,6 @@ interface HowToSchemaProps {
     value: string
   }
 }
-
-const BASE_URL = 'https://boubahkarim-png.github.io/smart-hotline-late2'
 
 export function HowToSchema({
   name,
@@ -39,13 +38,13 @@ export function HowToSchema({
         "value": estimatedCost.value
       }
     }),
-    "step": steps.map((step, index) => ({
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": step.name,
-      "text": step.text,
-      ...(step.image && { "image": `${BASE_URL}${step.image}` })
-    })),
+  "step": steps.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.name,
+    "text": step.text,
+    ...(step.image && { "image": `${siteUrl}${step.image}` })
+  })),
     "supply": {
       "@type": "HowToSupply",
       "name": "Phone line or existing business number"

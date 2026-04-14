@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "CRM & B2B/B2C Lists | SuiteCRM | Smart Hotline Quebec",
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/crm/',
+    canonical: `${siteUrl}/en/crm/`,
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/crm/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/crm/',
+      'fr-CA': `${siteUrl}/fr/crm/`,
+      'en-CA': `${siteUrl}/en/crm/`,
     },
   },
 }

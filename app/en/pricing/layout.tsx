@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec",
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/pricing/',
+    canonical: `${siteUrl}/en/pricing/`,
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/tarifs/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/pricing/',
+      'fr-CA': `${siteUrl}/fr/tarifs/`,
+      'en-CA': `${siteUrl}/en/pricing/`,
     },
   },
 }

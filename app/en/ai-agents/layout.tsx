@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "AI Voice Agents | Sophie answers in 2 sec | Smart Hotline Quebec",
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/en/ai-agents/',
+    canonical: `${siteUrl}/en/ai-agents/`,
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/fr/agents-ia/',
-      'en-CA': 'https://boubahkarim-png.github.io/en/ai-agents/',
+      'fr-CA': `${siteUrl}/fr/agents-ia/`,
+      'en-CA': `${siteUrl}/en/ai-agents/`,
     },
   },
 }
