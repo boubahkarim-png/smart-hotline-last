@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
@@ -135,11 +136,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
 <body>
+      <GoogleAnalytics />
       <a href="#main-content" className="skip-link">
         Aller au contenu principal
       </a>
-        {children}
-      </body>
+      {children}
+    </body>
       <script
         dangerouslySetInnerHTML={{
           __html: `
