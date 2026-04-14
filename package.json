@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "build:github": "NEXT_BASEPATH='/smart-hotline-last' NEXT_PUBLIC_SITE_URL='https://boubahkarim-png.github.io' next build",
-    "build:netlify": "NEXT_BASEPATH='' NEXT_PUBLIC_SITE_URL='https://smart-hotline.com' next build",
+    "build:netlify": "NEXT_BASEPATH='' next build",
     "deploy": "npm run build:github && touch out/.nojekyll",
     "export": "next build"
   },
