@@ -19,24 +19,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '22'
-        cache: 'npm'
 
-    - run: npm ci
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
 
-    - name: Build with production URL
-      env:
-        NEXT_PUBLIC_SITE_URL: https://www.smart-hotline.com
-      run: npm run build:netlify
+      - run: npm ci
+
+      - name: Build with production URL
+        env:
+          NEXT_PUBLIC_SITE_URL: https://www.smart-hotline.com
+        run: npm run build:netlify
 
       - run: touch out/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
