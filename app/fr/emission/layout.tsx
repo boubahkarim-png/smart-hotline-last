@@ -4,7 +4,7 @@ import type { Metadata} from 'next'
 export const metadata: Metadata = {
   title: "Émission d'Appels & Prospection | Partenaire Téléphonique Quebec | Smart Hotline",
   description: "Service d'émission d'appels pour PME. Leads qualifiés, prise de rendez-vous, prospection téléphonique. Scripts optimisés. À partir de 15$/h. Essai gratuit.",
-  keywords: ['émission appels', 'prospection téléphonique', 'leads qualifiés', 'call center outbound', 'prise rendez-vous quebec'],
+  keywords: ['émission appels', 'prospection téléphonique', 'leads qualifiés', 'call center outbound', 'prise rendez-vous quebec', 'appel sortant prospection', 'centre d\'appels émission pme', 'service télémarketing externalisé', 'prospection b2b quebec', 'génération de leads montreal'],
   openGraph: {
     title: "Émission d'Appels & Prospection | Partenaire Téléphonique Quebec | Smart Hotline",
     description: "Service d'émission d'appels pour PME. Leads qualifiés, prise de rendez-vous, prospection téléphonique.",

@@ -65,6 +65,15 @@
 
 ## Pending
 
+### SEO Keyword Expansion - COMPLETED (April 15, 2026)
+1. ✅ Expanded keywords in seo.ts (100+ keywords FR/EN)
+2. ✅ Added hidden keyword div in layout.tsx (SEO crawlable)
+3. ✅ Updated service page layouts with targeted keywords:
+   - /fr/reception + /en/inbound (reception/call answering)
+   - /fr/emission + /en/outbound (outbound/lead generation)
+   - /fr/agents-ia + /en/ai-agents (AI voice agents)
+4. ✅ Location pages verified (Montreal FR/EN)
+
 ### SuiteCRM Web Interface
 - SuiteCRM installer incomplete (returns 500)
 - Full installation requires ~200 database tables

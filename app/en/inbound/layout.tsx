@@ -4,7 +4,7 @@ import { siteUrl } from '@/lib/siteConfig'
 export const metadata: Metadata = {
   title: "Inbound Call Center 24/7 | Quebec Call Center | Smart Hotline",
   description: "24/7 inbound call center for SMEs. Zero missed calls. Bilingual agents, custom scripts. From $11/hr. Free 2-week trial.",
-  keywords: ['inbound call center', '24/7 reception', 'call answering service', 'phone answering quebec', 'inbound calls sme'],
+  keywords: ['inbound call center', '24/7 reception', 'call answering service', 'phone answering quebec', 'inbound calls sme', 'call center quebec', 'after hours answering service', 'virtual receptionist montreal', 'phone answering service canada', '24/7 inbound call center', 'bilingual call center quebec'],
   openGraph: {
     title: "Inbound Call Center 24/7 | Quebec Call Center | Smart Hotline",
     description: "24/7 inbound call center for SMEs. Zero missed calls. Bilingual agents, custom scripts.",

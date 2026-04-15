@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "Agents IA Vocaux | Sophie répond en 2 sec | Smart Hotline Quebec",
   description: "Agents IA vocaux 24/7. Sophie répond en moins de 2 secondes. Français natif Quebec, France. Jusqu'à 70% moins cher qu'un conseiller. Essai gratuit.",
-  keywords: ['agents ia vocaux', 'intelligence artificielle téléphonique', 'sophie ia', 'répondeur automatique ia', 'call center ia quebec'],
+  keywords: ['agents ia vocaux', 'intelligence artificielle téléphonique', 'sophie ia', 'répondeur automatique ia', 'call center ia quebec', 'agent ia répondeur téléphonique', 'assistants vocaux ia entreprises', 'robots téléphoniques intelligents', 'ia pour centre d\'appels', 'agent vocal intelligent quebec'],
   openGraph: {
     title: "Agents IA Vocaux | Sophie répond en 2 sec | Smart Hotline Quebec",
     description: "Agents IA vocaux 24/7. Sophie répond en moins de 2 secondes. Français natif Quebec, France.",
