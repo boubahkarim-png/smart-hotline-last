@@ -14,7 +14,7 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
           <Link href={fr ? '/fr' : '/en'} className="inline-block mb-4">
             <img src="/logo-wordmark-white.svg" alt="Smart Hotline" className="h-12 w-auto" />
           </Link>
-<p className="text-slate-400 text-sm">
+<p className="text-slate-300 text-sm">
           {fr
             ? 'Votre partenaire téléphonique 24/7. Confiez-nous vos appels.'
             : 'Your 24/7 phone partner. Let us handle your calls.'}
@@ -26,9 +26,9 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
               {fr ? 'Navigation' : 'Navigation'}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href={fr ? '/fr' : '/en'} className="text-slate-400 hover:text-white transition-colors">{fr ? 'Accueil' : 'Home'}</Link></li>
-              <li><Link href={fr ? '/fr/tarifs' : '/en/pricing'} className="text-slate-400 hover:text-white transition-colors">{fr ? 'Tarifs' : 'Pricing'}</Link></li>
-              <li><Link href={fr ? '/fr/contact' : '/en/contact'} className="text-slate-400 hover:text-white transition-colors">{fr ? 'Contact' : 'Contact'}</Link></li>
+<li><Link href={fr ? '/fr' : '/en'} className="text-slate-300 hover:text-white transition-colors">{fr ? 'Accueil' : 'Home'}</Link></li>
+    <li><Link href={fr ? '/fr/tarifs' : '/en/pricing'} className="text-slate-300 hover:text-white transition-colors">{fr ? 'Tarifs' : 'Pricing'}</Link></li>
+    <li><Link href={fr ? '/fr/contact' : '/en/contact'} className="text-slate-300 hover:text-white transition-colors">{fr ? 'Contact' : 'Contact'}</Link></li>
             </ul>
           </div>
 
@@ -37,8 +37,8 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
               {fr ? 'Légal' : 'Legal'}
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href={fr ? '/fr/mentions-legales' : '/en/legal'} className="text-slate-400 hover:text-white transition-colors">{fr ? 'Mentions légales' : 'Legal Notice'}</Link></li>
-              <li><Link href={fr ? '/fr/confidentialite' : '/en/privacy'} className="text-slate-400 hover:text-white transition-colors">{fr ? 'Confidentialité' : 'Privacy'}</Link></li>
+<li><Link href={fr ? '/fr/mentions-legales' : '/en/legal'} className="text-slate-300 hover:text-white transition-colors">{fr ? 'Mentions légales' : 'Legal Notice'}</Link></li>
+    <li><Link href={fr ? '/fr/confidentialite' : '/en/privacy'} className="text-slate-300 hover:text-white transition-colors">{fr ? 'Confidentialité' : 'Privacy'}</Link></li>
             </ul>
           </div>
 
@@ -46,9 +46,9 @@ export default function Footer({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
             <h3 className="font-semibold text-sm uppercase tracking-wider text-slate-300 mb-3">
               {fr ? 'Contact' : 'Contact'}
             </h3>
-            <ul className="space-y-2 text-sm text-slate-400">
-        <li>
-          <ObfuscatedEmail email="direction@smart-hotline.com" className="text-slate-400 hover:text-white transition-colors" />
+<ul className="space-y-2 text-sm text-slate-300">
+      <li>
+        <ObfuscatedEmail email="direction@smart-hotline.com" className="text-slate-300 hover:text-white transition-colors" />
         </li>
               <li>
                 <a href="https://wa.me/15148190559" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">

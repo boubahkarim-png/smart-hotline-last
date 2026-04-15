@@ -70,7 +70,7 @@ Sophie, votre IA<br/>
 <div className="w-full lg:w-1/2 animate-slide-right">
 <div className="relative">
 <div className="absolute -inset-4 bg-gradient-to-r from-violet-400 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-<img src={`${basePath}/images/agents-ia-hero.webp`} alt="Agent IA Sophie" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/agents-ia-hero.webp`} alt="Agent IA Sophie" loading="lazy" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
 <div className="flex items-center gap-4">
 <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -225,7 +225,7 @@ Sophie, votre IA<br/>
                 </div>
                 <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
       <div className="flex items-center gap-4">
-        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+        <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-14 h-14 rounded-xl object-cover shadow-lg" />
         <div>
         <p className="font-bold text-slate-900">{t.name}</p>
         <p className="text-slate-500 text-sm">{t.role}</p>

@@ -79,7 +79,7 @@ export default function Page() {
             <div className="w-full lg:w-[40%]">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
-                <img src={`${basePath}/images/support-tech.webp`} alt="Support client" className="relative rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+                <img src={`${basePath}/images/support-tech.webp`} alt="Support client" loading="lazy" className="relative rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 modern-box">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -214,7 +214,7 @@ export default function Page() {
                 </div>
                 <p className="text-blue-100 mb-5 leading-relaxed italic">"{t.q}"</p>
       <div className="flex items-center gap-3">
-        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
         <div>
         <p className="font-bold text-white text-sm">{t.name}</p>
         <p className="text-blue-200 text-xs">{t.role}</p>

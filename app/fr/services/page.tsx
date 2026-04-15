@@ -43,7 +43,7 @@ export default function Services() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/services-hero.webp`} alt="Nos services Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/services-hero.webp`} alt="Nos services Smart Hotline" loading="lazy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Services() {
         </div>
         <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{t.quote}"</p>
         <div className="flex items-center gap-3 mb-2">
-        <img src={basePath + t.img} alt={t.author} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <img src={basePath + t.img} alt={t.author} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
         <div>
         <div className="font-semibold text-slate-900">{t.author}</div>
         <div className="text-sm text-slate-500">{t.role}</div>

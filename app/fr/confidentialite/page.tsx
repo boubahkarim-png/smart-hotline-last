@@ -14,7 +14,7 @@ export default function Confidentialite() {
 <p className="text-slate-600 text-lg mb-6">Protection et gestion de vos données personnelles</p>
 </div>
 <div className="w-full lg:w-[40%]">
-<img src={`${basePath}/images/main-hero.webp`} alt="Politique de Confidentialité" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/main-hero.webp`} alt="Politique de Confidentialité" loading="lazy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
 </div>
 </div>
 </div>
@@ -23,7 +23,7 @@ export default function Confidentialite() {
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
-            <p className="text-sm text-gray-500">Dernière mise à jour: 1er janvier 2026</p>
+            <p className="text-sm text-gray-600">Dernière mise à jour: 1er janvier 2026</p>
 
             <h2 className="text-2xl font-bold text-gray-900">1. Collecte des données</h2>
             <p>Smart Hotline Agency collecte uniquement les informations nécessaires à la fourniture de ses services: nom, email, téléphone, nom d&apos;entreprise et informations relatives à vos besoins en communication.</p>

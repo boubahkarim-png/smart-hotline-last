@@ -279,9 +279,9 @@ export default function Secteurs() {
             </div>
             <div className="w-full lg:w-[40%]">
               <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversite des secteurs desservis"
-                  className="rounded-2xl shadow-2xl w-full object-cover"
-                  style={{maxHeight:'550px', objectFit:'cover'}}/>
+<img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversite des secteurs desservis" loading="lazy"
+              className="rounded-2xl shadow-2xl w-full object-cover"
+              style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-2.5">
                     <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
@@ -397,7 +397,7 @@ export default function Secteurs() {
         </div>
         <p className="text-slate-700 mb-5 leading-relaxed italic">"{t.quote}"</p>
         <div className="flex items-center gap-3">
-        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+        <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
         <div>
         <p className="font-bold text-slate-900 text-sm">{t.name}</p>
         <p className="text-slate-500 text-xs">{t.role}</p>

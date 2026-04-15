@@ -74,9 +74,14 @@ export function generateMetadata(lang: Lang): Metadata {
       description: seo.description,
       images: [seo.ogImage]
     },
-    verification: {
-      google: 'YOUR_GOOGLE_VERIFICATION_CODE',
-    },
+  verification: {
+    // TODO: Replace with your actual Google Search Console verification code
+    // Get it from: https://search.google.com/search-console
+    // Steps: Add property → Enter URL → Verify via HTML tag
+    // The verification code is the content attribute value from:
+    // <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+  },
     other: {
       'geo.region': 'CA-QC',
       'geo.placename': 'Montreal',

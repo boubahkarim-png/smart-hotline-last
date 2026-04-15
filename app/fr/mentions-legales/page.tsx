@@ -23,7 +23,7 @@ export default function MentionsLegales() {
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
-            <p className="text-sm text-gray-500">Dernière mise à jour: 1er janvier 2026</p>
+            <p className="text-sm text-gray-600">Dernière mise à jour: 1er janvier 2026</p>
             
             <h2 className="text-2xl font-bold text-gray-900">1. Éditeur du site</h2>
             <p><strong>Smart Hotline Agency</strong></p>

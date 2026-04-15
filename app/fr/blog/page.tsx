@@ -90,6 +90,7 @@ export default function BlogFr() {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -161,7 +162,7 @@ export default function BlogFr() {
               <div key={i} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
                 <p className="text-slate-700 mb-5 leading-relaxed italic">"{t.quote}"</p>
                 <div className="flex items-center gap-3 mt-4">
-                  <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
+                  <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <p className="font-bold text-slate-900 text-sm">{t.name}</p>
                     <p className="text-slate-500 text-xs">{t.role}</p>
@@ -211,6 +212,7 @@ export default function BlogFr() {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

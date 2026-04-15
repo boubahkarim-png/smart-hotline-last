@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { BlogPostingSchema } from '@/components/BlogPostingSchema'
+import { FAQSchema } from '@/components/FAQSchema'
 import type { Metadata } from 'next'
 import basePath from '@/lib/basePath'
 
@@ -44,6 +45,7 @@ function getPostBySlug(slug: string) {
       image: data.image,
       tags: data.tags || [],
       canonicalSlug: data.canonicalSlug,
+      faqs: data.faqs || null,
     },
     content,
   }
@@ -146,6 +148,9 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       <BlogPostingSchema post={post.meta} url={postUrl} />
+      {post.meta.faqs && post.meta.faqs.length > 0 && (
+        <FAQSchema faqs={post.meta.faqs} />
+      )}
 
       {/* HERO */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-sky-50 text-slate-900 py-16 lg:py-24 border-b border-slate-100">

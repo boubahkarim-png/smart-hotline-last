@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
-import TawkToChat from '@/components/TawkToChat'
 
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
@@ -190,7 +189,7 @@ const howToJsonLd = {
       "@type": "HowToStep",
       "position": 1,
       "name": "Appel de découverte",
-      "text": "Appelez-nous au +1 514 819-0559 ou réservez une consultation de 30 minutes via Calendry pour discuter de vos besoins."
+      "text": "Appelez-nous au +1 514 819-0559 ou réservez une consultation de 30 minutes via Calendly pour discuter de vos besoins."
     },
     {
       "@type": "HowToStep",
@@ -261,12 +260,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <GoogleAnalytics />
-        <TawkToChat />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
         {children}
       </body>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69c14d2a91de1e1c374c9f29/1jkdharj3';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+`,
+        }}
+      />
     </html>
   )
 }

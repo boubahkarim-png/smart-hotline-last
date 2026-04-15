@@ -16,7 +16,7 @@ interface ServiceSchemaProps {
   availableLanguage?: string[]
 }
 
-const BASE_URL = 'https://boubahkarim-png.github.io/smart-hotline-late2'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.smart-hotline.com'
 
 export function ServiceSchema({
   name,

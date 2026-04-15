@@ -4,8 +4,11 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { GeoContactInfo, GeoContactCTA } from '@/components/GeoContactInfo'
+import { CaptchaField } from '@/components/CaptchaField'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://app.smart-hotline.com'
+const RATE_LIMIT_KEY = 'smart-hotline-submissions'
+const MAX_SUBMISSIONS_PER_HOUR = 10
 
 const TESTIMONIALS_FR = [
   {
@@ -34,41 +37,75 @@ const TESTIMONIALS_FR = [
   }
 ]
 
+function getSubmissionCount(): { count: number; resetTime: number } {
+  if (typeof window === 'undefined') return { count: 0, resetTime: Date.now() + 3600000 }
+  
+  const stored = localStorage.getItem(RATE_LIMIT_KEY)
+  if (!stored) return { count: 0, resetTime: Date.now() + 3600000 }
+  
+  try {
+    const data = JSON.parse(stored)
+    if (Date.now() > data.resetTime) {
+      return { count: 0, resetTime: Date.now() + 3600000 }
+    }
+    return data
+  } catch {
+    return { count: 0, resetTime: Date.now() + 3600000 }
+  }
+}
+
+function incrementSubmissionCount() {
+  if (typeof window === 'undefined') return
+  const current = getSubmissionCount()
+  localStorage.setItem(RATE_LIMIT_KEY, JSON.stringify({
+    count: current.count + 1,
+    resetTime: current.resetTime
+  }))
+}
+
 export default function FrContact() {
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
-  const [csrfToken, setCsrfToken] = useState('')
+  const [rateLimited, setRateLimited] = useState(false)
+  const [remainingSubmissions, setRemainingSubmissions] = useState(MAX_SUBMISSIONS_PER_HOUR)
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
 
   useEffect(() => {
-    async function fetchCsrfToken() {
-      try {
-        const response = await fetch('/api/csrf')
-        if (response.ok) {
-          const data = await response.json()
-          setCsrfToken(data.token)
-        }
-      } catch (err) {
-        console.error('Failed to fetch CSRF token')
-      }
-    }
-    fetchCsrfToken()
+    const { count, resetTime } = getSubmissionCount()
+    const remaining = MAX_SUBMISSIONS_PER_HOUR - count
+    setRemainingSubmissions(Math.max(0, remaining))
+    setRateLimited(count >= MAX_SUBMISSIONS_PER_HOUR)
   }, [])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    if (!csrfToken) {
-      setError('Erreur de sécurité. Veuillez rafraîchir la page.')
+    if (rateLimited) {
+      setError('Trop de soumissions. Veuillez attendre avant de réessayer.')
+      return
+    }
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const honeypot = formData.get('website') as string
+    const formTimestamp = parseInt(formData.get('form_timestamp') as string || '0')
+
+    if (honeypot) {
+      setError('Erreur de vérification. Veuillez réessayer.')
+      return
+    }
+
+    const timeDiff = Date.now() - formTimestamp
+    if (timeDiff < 2000 || timeDiff > 3600000) {
+      setError('Le formulaire a expiré. Veuillez rafraîchir la page.')
       return
     }
 
     setSending(true)
     setError('')
-    const form = e.currentTarget
-    const formData = new FormData(form)
 
     const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
     const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
@@ -94,12 +131,14 @@ export default function FrContact() {
     try {
       const response = await fetch(`${API_URL}/leads/contact.php`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
 
       if (response.ok) {
+        incrementSubmissionCount()
         setSent(true)
+        setRemainingSubmissions(prev => Math.max(0, prev - 1))
       } else {
         const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
         const body = encodeURIComponent(
@@ -136,7 +175,7 @@ export default function FrContact() {
               </Link>
             </div>
             <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/contact-hero.webp`} alt="Contactez Smart Hotline" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+              <img src={`${basePath}/images/contact-hero.webp`} alt="Contactez Smart Hotline" loading="lazy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>
@@ -151,16 +190,16 @@ export default function FrContact() {
             ou simplement envie de discuter de vos besoins en relation client,
             notre équipe est prête à vous répondre.
           </p>
-          
-{/* GEO-AWARE CONTACT INFO */}
-<div className="max-w-md mx-auto mt-8">
-<GeoContactInfo lang="fr" />
-</div>
 
-{/* GEO-AWARE CTA BUTTONS */}
-<div className="mt-8 flex justify-center">
-<GeoContactCTA lang="fr" />
-</div>
+          {/* GEO-AWARE CONTACT INFO */}
+          <div className="max-w-md mx-auto mt-8">
+            <GeoContactInfo lang="fr" />
+          </div>
+
+          {/* GEO-AWARE CTA BUTTONS */}
+          <div className="mt-8 flex justify-center">
+            <GeoContactCTA lang="fr" />
+          </div>
         </div>
       </section>
 
@@ -230,7 +269,14 @@ export default function FrContact() {
               onSubmit={handleSubmit}
               className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8"
             >
-              <input type="hidden" name="csrf_token" value={csrfToken} />
+              <CaptchaField onValidChange={() => {}} />
+
+              {rateLimited && (
+                <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-xl text-amber-800">
+                  Trop de soumissions. Veuillez attendre avant de réessayer.
+                </div>
+              )}
+
               <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
               <div className="space-y-4 mb-6">
@@ -269,13 +315,13 @@ export default function FrContact() {
                 </div>
               </div>
 
-{error && (
-<div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
-{error}
-</div>
-)}
+              {error && (
+                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                  {error}
+                </div>
+              )}
 
-<button
+              <button
                 type="submit"
                 disabled={sending}
                 className="w-full bg-blue-700 text-white font-black py-4 rounded-xl hover:bg-blue-800 transition-colors disabled:opacity-50 text-lg shadow-lg"

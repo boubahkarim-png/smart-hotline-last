@@ -7,9 +7,11 @@ interface FAQItem {
 
 interface FAQSchemaProps {
   faqs: FAQItem[]
+  id?: string
 }
 
-export function FAQSchema({ faqs }: FAQSchemaProps) {
+export function FAQSchema({ faqs, id }: FAQSchemaProps) {
+  const schemaId = id || `faq-schema-${Math.random().toString(36).slice(2, 10)}`
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -25,7 +27,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
 
   return (
     <Script
-      id="faq-schema"
+      id={schemaId}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

@@ -69,11 +69,14 @@ export default function BlogEn() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all group"
               >
                 {post.image && (
-                  <img 
-                    src={post.image.startsWith('http') ? post.image : `/images/blog/${post.slug}.jpg`} 
-                    alt={post.title} 
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+<img
+              src={post.image.startsWith('http') ? post.image : `/images/blog/${post.slug}.jpg`}
+              alt={post.title}
+              width="400"
+              height="192"
+              loading="lazy"
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
                 )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -85,7 +88,7 @@ export default function BlogEn() {
                   <h2 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                     {post.title}
                   </h2>
-                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                     {post.excerpt}
                   </p>
                   <span className="text-blue-600 text-sm font-semibold group-hover:underline">Read more →</span>
@@ -130,7 +133,7 @@ export default function BlogEn() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col md:flex-row gap-8 items-center">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Author" className="w-32 h-32 rounded-full object-cover"/>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Author" loading="lazy" className="w-32 h-32 rounded-full object-cover"/>
             <div className="text-center md:text-left">
               <p className="text-blue-600 font-semibold text-sm mb-1">EDITOR'S PICK</p>
               <h3 className="text-2xl font-bold mb-3">Marie Dubois, Head of Customer Success</h3>
