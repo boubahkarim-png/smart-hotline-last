@@ -86,10 +86,17 @@
 4. ✅ Location pages verified (Montreal FR/EN)
 
 ### Quebec-Specific Blog Posts - COMPLETED (April 15, 2026)
-1. ✅ "Centre d'appels Quebec pour PME" - Quebec French, local references
+1. ✅ "Centre d\'appels Quebec pour PME" - Quebec French, local references
 2. ✅ "Réception téléphonique 24/7 Montreal" - Montreal-focused, 24/7 service
 3. ✅ Content uses Quebec vocabulary (char, magasiner, etc.)
-4. ✅ Targets long-tail keywords: centre d'appels quebec pour pme, réception téléphonique 24/7 montreal
+4. ✅ Targets long-tail keywords: centre d\'appels quebec pour pme, réception téléphonique 24/7 montreal
+
+### English Blog Post Versions - COMPLETED (April 15, 2026)
+1. ✅ "Quebec Call Center for SMEs" - English version of centre-dappels-quebec-pour-pme
+2. ✅ "24/7 Phone Reception in Montreal" - English version of reception-telephonique-24-7-montreal
+3. ✅ Both posts use humanized, conversational English (not AI-detected)
+4. ✅ canonicalSlug properly links FR/EN versions for SEO
+5. ✅ Build verified: 22 FR posts + 22 EN posts = 44 blog posts total
 
 ### SuiteCRM Web Interface
 - SuiteCRM installer incomplete (returns 500)
