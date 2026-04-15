@@ -65,6 +65,17 @@
 
 ## Pending
 
+### Directory Submissions for Backlinks (Manual Step Required)
+- Directory submission data prepared in `/docs/directory-submissions.md`
+- Playwright browser automation not available on this system (OpenSUSE)
+- **Manual submission needed to**:
+  1. LiveBusiness.ca (Quebec category)
+  2. CanadianBusinessDirectory.ca
+  3. TheBusiness.ca (bilingual)
+  4. FreeBizAds.ca/quebec
+  5. BizLocal.ca
+  6. MySheriff.ca/quebec
+
 ### SEO Keyword Expansion - COMPLETED (April 15, 2026)
 1. ✅ Expanded keywords in seo.ts (100+ keywords FR/EN)
 2. ✅ Added hidden keyword div in layout.tsx (SEO crawlable)
@@ -73,6 +84,12 @@
    - /fr/emission + /en/outbound (outbound/lead generation)
    - /fr/agents-ia + /en/ai-agents (AI voice agents)
 4. ✅ Location pages verified (Montreal FR/EN)
+
+### Quebec-Specific Blog Posts - COMPLETED (April 15, 2026)
+1. ✅ "Centre d'appels Quebec pour PME" - Quebec French, local references
+2. ✅ "Réception téléphonique 24/7 Montreal" - Montreal-focused, 24/7 service
+3. ✅ Content uses Quebec vocabulary (char, magasiner, etc.)
+4. ✅ Targets long-tail keywords: centre d'appels quebec pour pme, réception téléphonique 24/7 montreal
 
 ### SuiteCRM Web Interface
 - SuiteCRM installer incomplete (returns 500)
