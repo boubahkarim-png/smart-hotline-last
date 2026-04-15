@@ -40,14 +40,36 @@
 | llms.txt | ✅ AI search optimized |
 | Google Search Console | ✅ Verified |
 
+## Accomplished (Continued)
+
+### Lead Capture System - OPERATIONAL (April 15, 2026)
+1. ✅ Database tables created: `suitecrm.leads` + `suitecrm.leads_audit` with full schema
+2. ✅ API endpoint working: `https://app.smart-hotline.com/api/leads/contact.php`
+3. ✅ Database insertion verified: UUID-based lead storage
+4. ✅ Email fallback working: Sends to `direction@smart-hotline.com` if DB fails
+5. ✅ Website forms (FR/EN) connected and tested end-to-end
+6. ✅ CORS configured for `https://www.smart-hotline.com`
+
+### Database Schema
+| Table | Purpose |
+|-------|---------|
+| `leads` | Main lead storage (36 columns including id, first_name, last_name, email1, phone_work, company, etc.) |
+| `leads_audit` | Audit trail for lead actions |
+
+### API Endpoint Details
+- **URL**: `https://app.smart-hotline.com/api/leads/contact.php`
+- **Method**: POST (JSON)
+- **Required Fields**: `name`, `email`
+- **Optional Fields**: `phone`, `company`, `service`, `message`, `source`, `language`
+- **Response**: JSON with `success`, `id`, `method` (database/email)
+
 ## Pending
 
-### SuiteCRM Integration
-- Database `suitecrm` created with user `suitecrm`
-- Tables `leads` and `leads_audit` created manually
-- API endpoint `/srv/www/htdocs/api/leads/contact.php` working
-- **NOT COMPLETED**: SuiteCRM web installation wizard (browser automation timed out)
-- **Alternative**: Continue with custom API endpoint or retry SuiteCRM installation
+### SuiteCRM Web Interface
+- SuiteCRM installer incomplete (returns 500)
+- Full installation requires ~200 database tables
+- **Current Status**: Lead capture works via custom API without SuiteCRM UI
+- **Next Steps**: Run full web installer OR continue with custom API approach
 
 ## Key Files
 - `/app/layout.tsx` — Root layout with SEO schemas + Tawk.to script
@@ -62,6 +84,29 @@
 | Widget ID | `1jkdharj3` |
 | Dashboard | https://dashboard.tawk.to |
 | Embed URL | `https://embed.tawk.to/69c14d2a91de1e1c374c9f29/1jkdharj3` |
+
+---
+## Server Configuration
+
+### Lead Capture API Location
+| Path | Description |
+|------|-------------|
+| `/srv/www/htdocs/api/leads/contact.php` | Main lead capture endpoint |
+| `/srv/www/htdocs/api/leads/test_db.php` | Database connection test |
+| `/srv/www/htdocs/api/leads/debug_insert.php` | Debug insert script |
+
+### Database Credentials
+| Item | Value |
+|------|-------|
+| Database | `suitecrm` |
+| User | `suitecrm` |
+| Password | `SuiteCRM2024!` |
+
+### SuiteCRM Configuration
+| File | Status |
+|------|--------|
+| `/srv/www/htdocs/suitecrm/config.php` | `installer_locked => true` |
+| `/srv/www/htdocs/suitecrm/config_si.php` | `setup_db_drop_tables => true` |
 
 ---
 **Last updated**: April 15, 2026
