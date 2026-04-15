@@ -25,6 +25,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Smart Hotline | Your 24/7 Phone Partner | Quebec",
+    description: "Receptionists, phone agents, and AI voice agents 24/7 for SMEs.",
+    images: [`${siteUrl}/og-image.png`],
+  },
   alternates: {
     canonical: `${siteUrl}/en/`,
     languages: {

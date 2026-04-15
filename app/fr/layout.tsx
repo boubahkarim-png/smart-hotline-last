@@ -25,6 +25,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Smart Hotline | Votre Partenaire Téléphonique 24/7 | Quebec",
+    description: "Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.",
+    images: [`${siteUrl}/og-image.png`],
+  },
   alternates: {
     canonical: `${siteUrl}/fr/`,
     languages: {

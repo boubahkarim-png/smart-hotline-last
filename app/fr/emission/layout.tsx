@@ -5,12 +5,28 @@ export const metadata: Metadata = {
   title: "Émission d'Appels & Prospection | Partenaire Téléphonique Quebec | Smart Hotline",
   description: "Service d'émission d'appels pour PME. Leads qualifiés, prise de rendez-vous, prospection téléphonique. Scripts optimisés. À partir de 15$/h. Essai gratuit.",
   keywords: ['émission appels', 'prospection téléphonique', 'leads qualifiés', 'call center outbound', 'prise rendez-vous quebec', 'appel sortant prospection', 'centre d\'appels émission pme', 'service télémarketing externalisé', 'prospection b2b quebec', 'génération de leads montreal'],
+  robots: 'index, follow',
   openGraph: {
     title: "Émission d'Appels & Prospection | Partenaire Téléphonique Quebec | Smart Hotline",
     description: "Service d'émission d'appels pour PME. Leads qualifiés, prise de rendez-vous, prospection téléphonique.",
     type: 'website',
     locale: 'fr_CA',
     siteName: 'Smart Hotline',
+    url: `${siteUrl}/fr/emission/`,
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Émission d\'appels et prospection - Smart Hotline Quebec',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Émission d'Appels & Prospection | Smart Hotline Quebec",
+    description: "Service d'émission d'appels pour PME. Leads qualifiés, prise de rendez-vous.",
+    images: [`${siteUrl}/og-image.png`],
   },
   alternates: {
     canonical: `${siteUrl}/fr/emission/`,
