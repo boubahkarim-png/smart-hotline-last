@@ -49,8 +49,8 @@ return (
 <section className="bg-gradient-to-br from-slate-50 via-white to-orange-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-<div className="w-full lg:w-1/2 animate-slide-left">
-<span className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+<div className="w-full lg:w-[40%] animate-slide-left">
+						<span className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
 <CRMIcon className="w-5 h-5" /> CRM & Listes
 </span>
 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
@@ -67,9 +67,9 @@ CRM Intégré &<br/>
 ))}
 </div>
 </div>
-<div className="w-full lg:w-1/2 animate-slide-right">
-<div className="relative">
-<div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
+<div className="w-full lg:w-[60%] animate-slide-right">
+						<div className="relative">
+							<div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
 <img src={`${basePath}/images/crm-interface.webp`} alt="CRM dashboard" loading="lazy" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
 <div className="flex items-center gap-4">

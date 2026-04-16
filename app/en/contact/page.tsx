@@ -165,8 +165,8 @@ const data = {
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
+<div className="w-full lg:w-[40%]">
+								<h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
                 Contact Us
               </h1>
               <p className="text-lg text-slate-600 mb-8">Free consultation — response within 2h. Our team is ready to answer all your questions.</p>
@@ -174,8 +174,8 @@ const data = {
                 Send Message →
               </Link>
             </div>
-            <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/contact-hero.webp`} alt="Contact Smart Hotline" width="800" height="380" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<div className="w-full lg:w-[60%]">
+								<img src={`${basePath}/images/contact-hero.webp`} alt="Contact Smart Hotline" width="800" height="380" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

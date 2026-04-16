@@ -118,8 +118,8 @@ export default function Page() {
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full mb-5">
+<div className="w-full lg:w-[40%]">
+						<span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full mb-5">
                 <TargetIcon className="w-4 h-4" /> Appels Sortants
               </span>
               <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
@@ -133,9 +133,9 @@ export default function Page() {
                 ))}
               </div>
             </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="relative">
-<img src="/images/telemarketing.webp" alt="Conseiller appels sortants" loading="lazy"
+<div className="w-full lg:w-[60%]">
+						<div className="relative">
+							<img src="/images/telemarketing.webp" alt="Conseiller appels sortants" loading="lazy"
               className="rounded-2xl shadow-2xl w-full object-cover"
               style={{maxHeight:'380px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">

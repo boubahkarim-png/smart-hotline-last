@@ -70,23 +70,23 @@ export default function Page() {
       {/* Section 1: Hero - Light */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full mb-5">
-                <TargetIcon className="w-4 h-4" /> Outbound Calls
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-                Multiply Your Leads<br/>with Our Agents
-              </h1>
-              <p className="text-lg text-slate-600 mb-8">Prospecting, telemarketing, appointment setting. Our expert agents turn your targets into clients with measurable results.</p>
-              <CTAButtons slug="emission"/>
-              <div className="flex flex-wrap gap-3">
-                {['Qualified leads', 'CRM included', 'Optimized scripts', 'Daily reporting'].map(b => (
-                  <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-emerald-600" /> {b}</span>
-                ))}
-              </div>
-            </div>
-            <div className="w-full lg:w-[40%]">
+<div className="flex flex-col lg:flex-row items-center gap-12">
+			<div className="w-full lg:w-[40%]">
+				<span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full mb-5">
+					<TargetIcon className="w-4 h-4" /> Outbound Calls
+				</span>
+				<h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
+					Multiply Your Leads<br/>with Our Agents
+				</h1>
+				<p className="text-lg text-slate-600 mb-8">Prospecting, telemarketing, appointment setting. Our expert agents turn your targets into clients with measurable results.</p>
+				<CTAButtons slug="emission"/>
+				<div className="flex flex-wrap gap-3">
+					{['Qualified leads', 'CRM included', 'Optimized scripts', 'Daily reporting'].map(b => (
+						<span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-emerald-600" /> {b}</span>
+					))}
+				</div>
+			</div>
+			<div className="w-full lg:w-[60%]">
               <div className="relative">
                 <img src="/images/telemarketing.webp" alt="Outbound calling agent"
                   className="rounded-2xl shadow-2xl w-full object-cover"

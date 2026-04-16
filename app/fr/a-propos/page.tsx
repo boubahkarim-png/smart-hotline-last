@@ -8,14 +8,14 @@ export default function APropos() {
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
+<div className="w-full lg:w-[40%]">
+						<span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Parti d'un Plateau Mont-Royal<br/>avec 3 Clients en 2018</h1>
               <p className="text-lg text-blue-100 mb-6">Aujourd'hui, on accompagne plus de 500 PME au Québec et en France. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
               <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Nous Contacter</Link>
             </div>
-            <div className="w-full lg:w-[40%]">
-              <img src={`${basePath}/images/about-hero.webp`} alt="Equipe Smart Hotline" loading="lazy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
+<div className="w-full lg:w-[60%]">
+						<img src={`${basePath}/images/about-hero.webp`} alt="Equipe Smart Hotline" loading="lazy" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
             </div>
           </div>
         </div>

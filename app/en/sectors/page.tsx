@@ -262,8 +262,8 @@ export default function Sectors() {
       <section className="bg-white text-slate-900 py-16 lg:py-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-[55%]">
-              <span className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm px-3 py-1 rounded-full mb-5">
+<div className="w-full lg:w-[40%]">
+							<span className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 text-sm px-3 py-1 rounded-full mb-5">
                 <PhoneIcon className="w-4 h-4" /> Business Sectors
               </span>
               <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
@@ -277,9 +277,9 @@ export default function Sectors() {
                 ))}
               </div>
             </div>
-            <div className="w-full lg:w-[40%]">
-              <div className="relative">
-                <img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversity of sectors served"
+<div className="w-full lg:w-[60%]">
+							<div className="relative">
+								<img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversity of sectors served"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
