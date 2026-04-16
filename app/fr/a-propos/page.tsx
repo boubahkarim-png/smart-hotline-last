@@ -218,14 +218,39 @@ export default function APropos() {
           </div>
         </section>
       
-        {/* SECTION 8: LIGHT - FINAL CTA */}
-        <section className="bg-white py-20 border-t border-slate-100">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Prêt à écrire votre histoire de succès?</h2>
-            <p className="text-slate-600 text-lg mb-8">Comme nos 500+ PME partenaires, découvrez ce qu'une relation client exceptionnelle peut faire pour votre business.</p>
-            <Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Commencer Votre Transformation</Link>
-          </div>
-        </section>
+{/* SECTION 8: LIGHT - FAQ */}
+<section className="bg-slate-50 py-20 border-t border-slate-100">
+<div className="max-w-4xl mx-auto px-4">
+<h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Questions Fréquentes</h2>
+<div className="space-y-4">
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">Qu'est-ce qui différencie Smart Hotline des autres centres d'appels?</summary>
+<p className="mt-4 text-slate-600">Nous nous spécialisons dans les PME québécoises et françaises avec des agents natifs francophones qui comprennent les accents locaux et les nuances culturelles. Nos agents sont formés spécifiquement pour votre secteur, pas avec des scripts génériques.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">Combien de temps faut-il pour commencer?</summary>
+<p className="mt-4 text-slate-600">La plupart des clients sont opérationnels en 5-10 jours ouvrables. Cela inclut la formation des agents, la personnalisation des scripts et l'intégration CRM. Pour les besoins urgents, nous pouvons accélérer le processus.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">Offrez-vous des contrats ou est-ce mensuel?</summary>
+<p className="mt-4 text-slate-600">Nous offrons des conditions flexibles. Commencez par un essai de 2 semaines, puis choisissez parmi nos forfaits hebdomadaires (20h, 40h, 80h, 120h). Pas d'engagement à long terme - nous méritons votre confiance chaque mois.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">Comment assurez-vous la sécurité des données?</summary>
+<p className="mt-4 text-slate-600">Nous respectons le RGPD, la Loi 25 du Québec et utilisons un chiffrement de bout en bout. Tous les appels sont enregistrés de manière sécurisée et l'accès est strictement contrôlé. Nous signons des accords de confidentialité avec chaque client.</p>
+</details>
+</div>
+</div>
+</section>
+
+{/* SECTION 9: LIGHT - FINAL CTA */}
+<section className="bg-white py-20 border-t border-slate-100">
+<div className="max-w-4xl mx-auto px-4 text-center">
+<h2 className="text-3xl font-bold text-slate-900 mb-3">Prêt à écrire votre histoire de succès?</h2>
+<p className="text-slate-600 text-lg mb-8">Comme nos 500+ PME partenaires, découvrez ce qu'une relation client exceptionnelle peut faire pour votre business.</p>
+<Link href="/fr/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Commencer Votre Transformation</Link>
+</div>
+</section>
     </>
   )
 }

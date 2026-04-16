@@ -217,14 +217,39 @@ export default function About() {
         </div>
       </section>
 
-      {/* SECTION 8: LIGHT - FINAL CTA */}
-      <section className="bg-white py-20 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to write your success story?</h2>
-          <p className="text-slate-600 text-lg mb-8">Like our 500+ partner SMEs, discover what exceptional customer relationships can do for your business.</p>
-          <Link href="/en/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Start Your Transformation</Link>
-        </div>
-      </section>
+{/* SECTION 8: LIGHT - FAQ */}
+<section className="bg-slate-50 py-20 border-t border-slate-100">
+<div className="max-w-4xl mx-auto px-4">
+<h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+<div className="space-y-4">
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">What makes Smart Hotline different from other call centers?</summary>
+<p className="mt-4 text-slate-600">We specialize in Quebec and French SMEs with native French-speaking agents who understand local accents and cultural nuances. Our agents are trained specifically for your industry, not generic scripts.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">How quickly can you start handling our calls?</summary>
+<p className="mt-4 text-slate-600">Most clients are operational within 5-10 business days. This includes agent training, script customization, and CRM integration. For urgent needs, we can expedite the process.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">Do you offer contracts or is it month-to-month?</summary>
+<p className="mt-4 text-slate-600">We offer flexible terms. Start with a 2-week trial, then choose from weekly packages (20h, 40h, 80h, 120h). No long-term lock-in required - we earn your business every month.</p>
+</details>
+<details className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-all">
+<summary className="font-bold text-slate-900 cursor-pointer">How do you ensure data security and privacy?</summary>
+<p className="mt-4 text-slate-600">We comply with GDPR, Quebec's Law 25, and use end-to-end encryption. All calls are recorded securely, and access is strictly controlled. We sign confidentiality agreements with every client.</p>
+</details>
+</div>
+</div>
+</section>
+
+{/* SECTION 9: LIGHT - FINAL CTA */}
+<section className="bg-white py-20 border-t border-slate-100">
+<div className="max-w-4xl mx-auto px-4 text-center">
+<h2 className="text-3xl font-bold text-slate-900 mb-3">Ready to write your success story?</h2>
+<p className="text-slate-600 text-lg mb-8">Like our 500+ partner SMEs, discover what exceptional customer relationships can do for your business.</p>
+<Link href="/en/contact" className="bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 inline-block">Start Your Transformation</Link>
+</div>
+</section>
     </>
   )
 }
