@@ -258,6 +258,55 @@ export default function Page() {
           </div>
 </div>
 </section>
+
+{/* FAQ SECTION - LIGHT */}
+<section className="py-20 bg-slate-50 border-t border-slate-200">
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-slate-900 mb-2">Frequently Asked Questions</h2>
+<p className="text-slate-600">Common questions about our outbound service</p>
+<div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full mt-4"/>
+</div>
+<div className="space-y-4">
+<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+How do you qualify leads?
+<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer to ensure quality.
+</p>
+</details>
+<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Do you offer custom scripts?
+<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Yes, our experts write scripts tailored to your offer and market. We test and optimize continuously for best results.
+</p>
+</details>
+<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+How many calls per day?
+<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+One agent can make 50-80 calls per day. We adapt to your goals and processing capacity.
+</p>
+</details>
+<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Can I listen to the calls?
+<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Yes, all calls are recorded (with consent) and available in your CRM for replay. Full transparency is our standard.
+</p>
+</details>
+</div>
+</div>
+</section>
 <ServiceSchema name="Outbound Calls & Prospecting" description="Phone prospecting and telemarketing service with qualified leads and appointment setting" slug="outbound" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
 <FAQSchema faqs={[
   { question: "How do you qualify leads?", answer: "We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer." },

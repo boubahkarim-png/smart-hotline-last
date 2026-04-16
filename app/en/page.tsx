@@ -292,13 +292,62 @@ Local SMEs
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-      </ScrollAnimate>
+</div>
+</div>
+</section>
+</ScrollAnimate>
 
-      {/* FINAL CTA - DARK */}
-      <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20 border-t-4 border-sky-700">
+{/* FAQ SECTION - LIGHT */}
+<section className="py-20 bg-white border-t-4 border-slate-200">
+<div className="max-w-4xl mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-slate-900 mb-3">Frequently Asked Questions</h2>
+<p className="text-slate-600">Everything you need to know before getting started</p>
+<div className="w-16 h-1 bg-sky-600 mx-auto rounded-full mt-4"/>
+</div>
+<div className="space-y-4">
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+How long to get started?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+On average 48 hours. We configure your line, train our agents, and you&apos;re operational. No months of waiting like hiring a receptionist.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Can I cancel easily?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Yes, no long-term commitment. 30 days notice and that&apos;s it. No penalties, no complications. We keep things simple.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+How does it work with my CRM?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+We integrate with SuiteCRM, HubSpot, Salesforce, and most CRMs. Our agents enter data directly into your existing system.
+</p>
+</details>
+<details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+<summary className="font-bold text-slate-900 flex justify-between items-center">
+Do agents really know my business?
+<span className="text-sky-600 group-open:rotate-180 transition-transform">▼</span>
+</summary>
+<p className="text-slate-600 mt-4 leading-relaxed">
+Absolutely. Complete training on your products, services, and way of speaking. We don&apos;t read a generic script — we speak like you.
+</p>
+</details>
+</div>
+</div>
+</section>
+
+{/* FINAL CTA - DARK */}
+<section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-20 border-t-4 border-sky-700">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Never Miss a Call?</h2>
           <p className="text-sky-200 text-lg mb-10">Operational in 48h. No long-term commitment. We start whenever you're ready.</p>
