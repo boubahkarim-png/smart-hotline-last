@@ -5,13 +5,13 @@ import type { Metadata } from 'next'
 import { siteUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: "Smart Hotline | Your 24/7 Phone Partner | Quebec Voice Solutions",
-  description: "Your team of receptionists and phone agents 24/7. AI voice agents, virtual assistants, customer support. Partner with us from $11/hr. Free 2-week trial.",
+  title: "Smart Hotline | 24/7 Phone Partner Quebec",
+  description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr. Free 2-week trial — no commitment.",
   keywords: ['receptionist quebec', 'phone partner', 'ai voice agents', 'virtual receptionist 24/7', 'phone answering service', 'voice solutions canada', 'customer support montreal', 'telephone secretary', 'inbound calls', 'virtual assistant', 'ai phone agent', 'phone support team'],
   robots: 'index, follow',
   openGraph: {
-    title: "Smart Hotline | Your 24/7 Phone Partner | Quebec Voice Solutions",
-    description: "Your team of receptionists and phone agents 24/7. AI voice agents, customer support. Partner with us from $11/hr.",
+    title: "Smart Hotline | 24/7 Phone Partner Quebec",
+    description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr.",
     type: 'website',
     locale: 'en_CA',
     siteName: 'Smart Hotline',
@@ -21,21 +21,23 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Smart Hotline - Your Phone Partner Quebec',
+        alt: 'Smart Hotline - 24/7 Phone Partner Quebec',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Smart Hotline | Your 24/7 Phone Partner | Quebec",
+    title: "Smart Hotline | 24/7 Phone Partner Quebec",
     description: "Receptionists, phone agents, and AI voice agents 24/7 for SMEs.",
     images: [`${siteUrl}/og-image.png`],
+    site: '@SmartHotline',
   },
   alternates: {
     canonical: `${siteUrl}/en/`,
     languages: {
       'fr-CA': `${siteUrl}/fr/`,
       'en-CA': `${siteUrl}/en/`,
+      'x-default': `${siteUrl}/fr/`,
     },
   },
 }

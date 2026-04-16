@@ -239,7 +239,7 @@ const breadcrumbJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -261,13 +261,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 <body>
 <GoogleAnalytics />
 <a href="#main-content" className="skip-link">
-Aller au contenu principal
-</a>
-{/* Hidden SEO keywords - invisible to users but crawlable by search engines */}
-<div aria-hidden="true" style={{position: 'absolute', width: '1px', height: '1px', padding: '0', margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: '0'}}>
-Centre d&apos;appels Quebec, centre d&apos;appels Montreal, call center Quebec, call center Montreal, réception d&apos;appels 24/7, externalisation centre d&apos;appels, agents IA vocaux, support client Quebec, call center services Canada, inbound call center, outbound call center, virtual receptionist, AI voice agents, customer support outsourcing, telemarketing Quebec, télésecrétariat, prospection téléphonique, centre d&apos;appels PME, service téléconseiller, call center francophone, bilingual call center, centre d&apos;appels Laval, centre d&apos;appels Gatineau, call center Toronto, call center Vancouver, appointment scheduling service, lead generation call center, after hours answering service, 24/7 phone answering, CRM integration, SuiteCRM Quebec.
-</div>
-{children}
+      Aller au contenu principal
+      </a>
+      {children}
 </body>
       <script
         dangerouslySetInnerHTML={{
