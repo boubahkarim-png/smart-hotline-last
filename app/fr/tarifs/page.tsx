@@ -164,26 +164,9 @@ export default function Tarifs() {
                 features={features}
               />
             ))}
-          </PricingSlider>
+		</PricingSlider>
 
-          {/* SUPPORT */}
-          <PricingSlider title="Support Client" subtitle="Tickets, email, chat — multi-canal" accentColor="bg-cyan-600">
-            {[
-              { name: "Basic", desc: "Jusqu'à 300 tickets/mois", i: 0, features: ["Email + téléphone", "Rapport mensuel", "Réponse < 8h"] },
-              { name: "Pro", desc: "Jusqu'à 800 tickets/mois", i: 1, popular: true, features: ["Tout Basic +", "Chat live", "Réponse < 4h"] },
-              { name: "Premium", desc: "Volume illimité", i: 2, features: ["Tout Pro +", "WhatsApp Business", "Réponse < 2h"] },
-            ].map(({ name, desc, i, popular, features }) => (
-              <PricingCard key={name}
-                name={name} desc={desc}
-                price={fmt(prices.support[i])} unit="mois"
-                popular={popular} accent="bg-cyan-600"
-                ctaHref={`/fr/contact?plan=support-${name.toLowerCase()}`}
-                features={features}
-              />
-            ))}
-          </PricingSlider>
-
-          {/* CRM */}
+		{/* CRM */}
           <PricingSlider title="CRM & Listes" subtitle="SuiteCRM intégré + listes de prospection" accentColor="bg-indigo-600">
             {[
               { name: "Starter", desc: "500 contacts/mois", i: 0, features: ["CRM SuiteCRM", "500 leads/mois", "Intégration email"] },
