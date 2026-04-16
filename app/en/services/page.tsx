@@ -181,11 +181,59 @@ export default function Services() {
  </li>
  </ul>
  </div>
- </div>
- </div>
- </section>
-   {/* SECTION 8: DARK FINAL CTA */}
-   <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
+</div>
+            </div>
+        </section>
+        {/* SECTION 8: LIGHT - FAQ */}
+        <section className="py-20 bg-white border-t-4 border-slate-200">
+            <div className="max-w-4xl mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-black text-slate-900 mb-3">Frequently Asked Questions</h2>
+                    <p className="text-slate-600">Everything you need to know about our services</p>
+                    <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mt-4"/>
+                </div>
+                <div className="space-y-4">
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            How quickly can you start?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            Most clients are operational within 48 hours. We configure your lines, train our agents, and you&apos;re ready. No weeks of waiting like hiring in-house staff.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Can I combine multiple services?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            Absolutely! Many clients combine inbound reception with outbound prospecting and AI agents. We create custom packages that fit your exact needs and budget.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            What&apos;s included in the CRM?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            SuiteCRM with custom configuration for your business, call recording, lead tracking, reporting dashboard, and mobile app access. No extra setup fees.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Do you serve my industry?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            We specialize in healthcare, real estate, legal, restaurants, automotive, and professional services. Our agents receive industry-specific training for your sector.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        {/* SECTION 9: DARK FINAL CTA */}
+        <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
     <div className="max-w-4xl mx-auto px-4 text-center">
      <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Transform Your Customer Relationships?</h2>
      <p className="text-lg text-blue-100 mb-8">Free consultation. No commitment. Guaranteed results.</p>

@@ -110,17 +110,17 @@ export default function FrContact() {
     const sanitize = (str: string) => str.trim().replace(/[<>]/g, '').substring(0, 500)
     const sanitizeEmail = (str: string) => str.trim().toLowerCase().substring(0, 254)
 
-    const data = {
-      name: sanitize(formData.get('name') as string || ''),
-      email: sanitizeEmail(formData.get('email') as string || ''),
-      phone: '',
-      company: '',
-      service: '',
-      volume: '',
-      message: sanitize(formData.get('message') as string || ''),
-      source: 'contact-form-fr',
-      language: 'fr'
-    }
+const data = {
+                name: sanitize(formData.get('name') as string || ''),
+                email: sanitizeEmail(formData.get('email') as string || ''),
+                phone: sanitize(formData.get('phone') as string || ''),
+                company: sanitize(formData.get('company') as string || ''),
+                service: sanitize(formData.get('service') as string || ''),
+                volume: sanitize(formData.get('volume') as string || ''),
+                message: sanitize(formData.get('message') as string || ''),
+                source: 'contact-form-fr',
+                language: 'fr'
+            }
 
     if (!data.name || !data.email) {
       setError('Le nom et l\'email sont requis.')
@@ -279,41 +279,93 @@ export default function FrContact() {
 
               <h2 className="text-2xl font-black text-slate-900 mb-6">Envoyez-nous un Message</h2>
 
-              <div className="space-y-4 mb-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom Complet *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    maxLength={100}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                    placeholder="Votre nom"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    maxLength={254}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={4}
-                    maxLength={2000}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
-                    placeholder="Décrivez vos besoins..."
-                  />
-                </div>
-              </div>
+<div className="space-y-4 mb-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nom Complet *</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    maxLength={100}
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                                    placeholder="Votre nom"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Entreprise</label>
+                                <input
+                                    type="text"
+                                    name="company"
+                                    maxLength={100}
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                                    placeholder="Votre entreprise"
+                                />
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Email *</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    maxLength={254}
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                                    placeholder="votre@email.com"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-1.5">Téléphone</label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    maxLength={20}
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                                    placeholder="+1 514 123-4567"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">Service d'intérêt</label>
+                            <select
+                                name="service"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                            >
+                                <option value="">Sélectionnez un service...</option>
+                                <option value="reception">Appels Entrants / Réception 24/7</option>
+                                <option value="emission">Appels Sortants / Prospection</option>
+                                <option value="agents-ia">Agents IA Vocaux</option>
+                                <option value="support">Support Client</option>
+                                <option value="crm">CRM & Listes</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">Volume d'appels estimé</label>
+                            <select
+                                name="volume"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900 bg-slate-50"
+                            >
+                                <option value="">Sélectionnez le volume...</option>
+                                <option value="small">Moins de 50 appels/mois</option>
+                                <option value="medium">50-200 appels/mois</option>
+                                <option value="large">200-500 appels/mois</option>
+                                <option value="enterprise">500+ appels/mois</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">Message *</label>
+                            <textarea
+                                name="message"
+                                required
+                                rows={4}
+                                maxLength={2000}
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 resize-none text-slate-900 bg-slate-50"
+                                placeholder="Décrivez vos besoins..."
+                            />
+                        </div>
+                    </div>
 
               {error && (
                 <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">

@@ -189,12 +189,61 @@ export default function Services() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
+</div>
+            </div>
+        </section>
 
-{/* SECTION 7: DARK FINAL CTA */}
-<section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 border-t-8 border-blue-400">
+        {/* SECTION 7: LIGHT - FAQ */}
+        <section className="py-20 bg-white border-t-4 border-slate-200">
+            <div className="max-w-4xl mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-black text-slate-900 mb-3">Questions Fréquentes</h2>
+                    <p className="text-slate-600">Tout ce que vous devez savoir sur nos services</p>
+                    <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mt-4"/>
+                </div>
+                <div className="space-y-4">
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Combien de temps pour démarrer?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            La plupart de nos clients sont opérationnels en 48 heures. On configure vos lignes, forme nos agents, et vous êtes prêt. Pas de semaines d&apos;attente comme avec l&apos;embauche.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Puis-je combiner plusieurs services?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            Absolument! Plusieurs clients combinent réception entrante, prospection sortante et agents IA. On crée des forfaits sur mesure selon vos besoins et budget.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Qu&apos;est-ce qui est inclus dans le CRM?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            SuiteCRM configuré pour votre entreprise, enregistrement d&apos;appels, suivi des leads, tableau de bord, et application mobile. Aucun frais d&apos;installation supplémentaire.
+                        </p>
+                    </details>
+                    <details className="bg-slate-50 rounded-2xl p-6 cursor-pointer group">
+                        <summary className="font-bold text-slate-900 flex justify-between items-center">
+                            Desservez-vous mon industrie?
+                            <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p className="text-slate-600 mt-4 leading-relaxed">
+                            On se spécialise en santé, immobilier, juridique, restauration, automobile et services professionnels. Nos agents reçoivent une formation spécifique à votre secteur.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        {/* SECTION 8: DARK FINAL CTA */}
+        <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 border-t-8 border-blue-400">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à mieux gérer vos appels?</h2>
           <p className="text-lg text-blue-100 mb-8">Consultation gratuite. Sans engagement. Résultats garantis.</p>
