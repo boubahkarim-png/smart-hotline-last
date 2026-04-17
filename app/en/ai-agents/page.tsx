@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, AnalyticsIcon, CheckIcon, BoltIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 
 const FEATURES = [
   {'icon': PhoneIcon, 'title': 'Instant Response', 'desc': 'Under 2 seconds, 24/7, no hold time ever.'},
@@ -269,8 +270,27 @@ export default function Page() {
         </div>
 		</div>
 		</section>
-		<ServiceSchema name="AI Voice Agents" description="AI voice agent Sophie - under 2 second response, 24/7 availability" slug="ai-agents" offers={{ priceFrom: "0.11", priceCurrency: "USD" }} />
-		<FAQSchema faqs={[
+<ServiceSchema name="AI Voice Agents" description="AI voice agent Sophie - under 2 second response, 24/7 availability" slug="ai-agents" offers={{ priceFrom: "0.11", priceCurrency: "USD" }} />
+<AIAgentSchema
+name="Sophie"
+description="Professional AI voice assistant for SMBs. Answers calls in under 2 seconds, 24/7, with native French (Quebec, France, Belgium, Switzerland) and English accents."
+capabilities={[
+"Instant call answering",
+"Automated appointment booking",
+"FAQ automation",
+"Smart transfer to humans",
+"Message taking and notifications",
+"Real-time analytics",
+"CRM integration",
+"Multilingual support"
+]}
+responseTime="2 seconds"
+availability="24/7, 365 days a year"
+languages={["French (Quebec)", "French (France)", "French (Belgium)", "French (Switzerland)", "English (North American)"]}
+pricingModel="per-minute billing"
+startingPrice={{ amount: "0.08", currency: "CAD", unit: "minute" }}
+/>
+<FAQSchema faqs={[
 			{ question: "Will callers know they're talking to AI?", answer: "Most don't notice. Sophie speaks naturally, handles interruptions, and adjusts her pace. We've had clients' customers specifically compliment 'your lovely receptionist.'" },
 			{ question: "What languages does Sophie speak?", answer: "Native English, French, and Spanish. She switches automatically based on what the caller uses." },
 			{ question: "How long until Sophie is answering my calls?", answer: "Usually 24-48 hours. We configure the voice, script, and knowledge base, then test with real scenarios before going live." },
