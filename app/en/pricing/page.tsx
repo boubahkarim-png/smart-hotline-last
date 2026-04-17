@@ -1,4 +1,5 @@
 'use client'
+import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { StarIcon } from '@/components/Icons'
@@ -76,13 +77,37 @@ export default function Pricing() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-extrabold mb-4">Transparent Pricing</h1>
-          <p className="text-xl text-blue-200 mb-4">20 to 40% cheaper than market rates</p>
-          <p className="text-blue-300 text-sm">Prices automatically adjusted to your region</p>
+    {/* SECTION 1: HERO - Modern design with image */}
+    <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="w-full lg:w-[40%]">
+            <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
+              💰 Transparent Pricing
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+              20 to 40%<br/>
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">Cheaper Than Market</span>
+            </h1>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">Prices automatically adjusted to your region. No hidden fees, no surprises.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="#pricing" className="bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl hover:bg-blue-800 text-center shadow-xl">
+                View Plans
+              </Link>
+              <Link href="/en/contact" className="border-2 border-blue-700 text-blue-700 font-bold px-8 py-4 rounded-2xl hover:bg-blue-700 hover:text-white transition-all text-center">
+                Get Custom Quote
+              </Link>
+            </div>
+          </div>
+          <div className="w-full lg:w-[60%]">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl blur-2xl opacity-20"></div>
+              <img src={`${basePath}/images/pricing-hero.webp`} alt="Transparent pricing plans" className="relative rounded-3xl shadow-2xl w-full object-cover" style={{maxHeight:'500px', objectFit:'cover'}}/>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
