@@ -123,7 +123,24 @@ const jsonLd = {
     "ratingValue": "4.9",
     "reviewCount": "500",
     "bestRating": "5"
-  }
+  },
+  "knowsAbout": [
+    "AI Voice Agents",
+    "Call Center Services",
+    "Phone Answering Service",
+    "Virtual Receptionist",
+    "Customer Support Automation",
+    "French Language AI",
+    "Appointment Scheduling AI",
+    "24/7 Phone Support",
+    "B2B Lead Generation",
+    "CRM Integration",
+    "ViciDial",
+    "Asterisk PBX",
+    "Voice AI Technology",
+    "Quebec Business Services",
+    "SMB Phone Solutions"
+  ]
 }
 
 const faqJsonLd = {
