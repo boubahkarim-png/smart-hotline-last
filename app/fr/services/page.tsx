@@ -54,7 +54,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-3">Nos Services</h2>
-            <p className="text-blue-200 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
+            <p className="text-slate-100 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
             <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full mt-4"/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
@@ -65,8 +65,8 @@ export default function Services() {
                   <h3 className="font-bold text-lg text-white">{title}</h3>
                   {badge && <span className="text-xs bg-blue-500 text-white px-2 py-0.5 rounded-full font-medium">{badge}</span>}
                 </div>
-                <p className="text-blue-200 text-sm mb-4" dangerouslySetInnerHTML={{__html: desc}}/>
-                <span className="text-blue-300 font-semibold group-hover:underline text-sm">En savoir plus →</span>
+                <p className="text-slate-100 text-sm mb-4" dangerouslySetInnerHTML={{__html: desc}}/>
+                <span className="text-white font-semibold group-hover:underline text-sm">En savoir plus →</span>
               </Link>
             ))}
           </div>
@@ -77,13 +77,13 @@ export default function Services() {
 <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-20 border-t-4 border-blue-600">
 <div className="max-w-6xl mx-auto px-4">
 <div className="text-center mb-8">
-<h3 className="text-2xl font-bold text-blue-300 mb-2">Des résultats qui parlent</h3>
+<h3 className="text-2xl font-bold text-white mb-2">Des résultats qui parlent</h3>
 </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children">
 {STATS.map(({value, label}, i) => (
 <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
 <div className="text-4xl lg:text-5xl font-extrabold text-white">{value}</div>
-<div className="text-blue-200 mt-2">{label}</div>
+<div className="text-slate-100 mt-2">{label}</div>
 </div>
 ))}
 </div>
@@ -128,7 +128,7 @@ export default function Services() {
 <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
 <div className="text-6xl font-extrabold text-blue-400/30 mb-3">{num}</div>
 <h3 className="font-bold text-lg mb-2 text-white">{title}</h3>
-<p className="text-blue-200">{desc}</p>
+<p className="text-slate-100">{desc}</p>
 </div>
             ))}
           </div>
@@ -141,53 +141,53 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
             <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-100`}>
               <h3 className="text-2xl font-bold text-white mb-4">Pourquoi choisir Smart Hotline?</h3>
-              <p className="text-blue-200 mb-6">
-                Nous comprenons les défis uniques des PME et offrons des solutions qui s'adaptent
-                à votre croissance, pas l'inverse.
-              </p>
+<p className="text-slate-100 mb-6">
+        Nous comprenons les défis uniques des PME et offrons des solutions qui s'adaptent
+        à votre croissance, pas l'inverse.
+        </p>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Disponibilité 24/7, même les weekends</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Mise en place rapide en moins de 48h</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Aucun engagement à long terme</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Reporting transparent en temps réel</span>
-                </li>
+<li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Disponibilité 24/7, même les weekends</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Mise en place rapide en moins de 48h</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Aucun engagement à long terme</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Reporting transparent en temps réel</span>
+        </li>
               </ul>
             </div>
             <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-200`}>
               <h3 className="text-2xl font-bold text-white mb-4">Résultats concrets</h3>
-              <p className="text-blue-200 mb-6">
-                Nos clients voient une amélioration significative de leur efficacité
-                et satisfaction client dès les premières semaines.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Jusqu'à 70% de réduction des coûts</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Satisfaction client en hausse constante</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Meilleur taux de conversion des leads</span>
-                </li>
-                <li className="flex items-center gap-3 text-blue-100">
-                  <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
-                  <span>Temps libéré pour votre cœur de métier</span>
-                </li>
-              </ul>
+<p className="text-slate-100 mb-6">
+        Nos clients voient une amélioration significative de leur efficacité
+        et satisfaction client dès les premières semaines.
+        </p>
+        <ul className="space-y-4">
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Jusqu'à 70% de réduction des coûts</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Satisfaction client en hausse constante</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Meilleur taux de conversion des leads</span>
+        </li>
+        <li className="flex items-center gap-3 text-white">
+        <span className="w-5 h-5 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm">✓</span>
+        <span>Temps libéré pour votre cœur de métier</span>
+        </li>
+        </ul>
             </div>
 </div>
             </div>
@@ -246,7 +246,7 @@ export default function Services() {
         <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 border-t-8 border-blue-400">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Prêt à mieux gérer vos appels?</h2>
-          <p className="text-lg text-blue-100 mb-8">Consultation gratuite. Sans engagement. Résultats garantis.</p>
+          <p className="text-lg text-white mb-8">Consultation gratuite. Sans engagement. Résultats garantis.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">Consultation Gratuite</Link>
             <Link href="/fr/tarifs" className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 inline-block">Voir nos tarifs</Link>

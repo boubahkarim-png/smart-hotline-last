@@ -52,7 +52,7 @@ export default function Privacy() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-2xl lg:text-3xl font-black mb-4">Questions About Your Data?</h2>
-          <p className="text-blue-200 mb-8">Our team is available to answer all your questions about data protection.</p>
+          <p className="text-white mb-8">Our team is available to answer all your questions about data protection.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="mailto:direction@smart-hotline.com" className="inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 py-3.5 rounded-xl font-bold hover:bg-slate-100 transition-colors">
               Contact Us

@@ -311,7 +311,7 @@ export default function Sectors() {
             {STATS.map(({value, label}) => (
               <div key={label}>
                 <p className="text-4xl font-black text-indigo-400">{value}</p>
-                <p className="text-slate-300 text-sm mt-1 font-medium">{label}</p>
+                <p className="text-slate-100 text-sm mt-1 font-medium">{label}</p>
               </div>
             ))}
           </div>
@@ -446,29 +446,29 @@ export default function Sectors() {
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <ShieldCheckIcon className="w-6 h-6 text-indigo-300" />
               </div>
-              <h3 className="font-bold text-lg text-white mb-2">Full Compliance</h3>
-              <p className="text-slate-300 text-sm">Meeting the strictest regulations in every sector.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-              <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
-                <UsersIcon className="w-6 h-6 text-indigo-300" />
-              </div>
-              <h3 className="font-bold text-lg text-white mb-2">Constant Evolution</h3>
-              <p className="text-slate-300 text-sm">Regular updates based on field feedback.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-              <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
-                <ClockIcon className="w-6 h-6 text-indigo-300" />
-              </div>
-              <h3 className="font-bold text-lg text-white mb-2">Dedicated Support</h3>
-              <p className="text-slate-300 text-sm">Support team available to optimize your service.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-              <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
-                <CheckIcon className="w-6 h-6 text-indigo-300" />
-              </div>
-              <h3 className="font-bold text-lg text-white mb-2">Quality Guarantee</h3>
-              <p className="text-slate-300 text-sm">Guaranteed SLA and real-time performance tracking.</p>
+<h3 className="font-bold text-lg text-white mb-2">Full Compliance</h3>
+						<p className="text-slate-100 text-sm">Meeting the strictest regulations in every sector.</p>
+					</div>
+					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
+							<UsersIcon className="w-6 h-6 text-indigo-300" />
+						</div>
+						<h3 className="font-bold text-lg text-white mb-2">Constant Evolution</h3>
+						<p className="text-slate-100 text-sm">Regular updates based on field feedback.</p>
+					</div>
+					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
+							<ClockIcon className="w-6 h-6 text-indigo-300" />
+						</div>
+						<h3 className="font-bold text-lg text-white mb-2">Dedicated Support</h3>
+						<p className="text-slate-100 text-sm">Support team available to optimize your service.</p>
+					</div>
+					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
+							<CheckIcon className="w-6 h-6 text-indigo-300" />
+						</div>
+						<h3 className="font-bold text-lg text-white mb-2">Quality Guarantee</h3>
+						<p className="text-slate-100 text-sm">Guaranteed SLA and real-time performance tracking.</p>
             </div>
           </div>
         </div>

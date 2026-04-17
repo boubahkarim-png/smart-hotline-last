@@ -338,7 +338,7 @@ const data = {
             ].map(({ q, a }) => (
               <div key={q} className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">{q}</h3>
-                <p className="text-blue-200">{a}</p>
+                <p className="text-slate-100">{a}</p>
               </div>
             ))}
           </div>
@@ -415,7 +415,7 @@ const data = {
       <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Stop Missing Calls?</h2>
-          <p className="text-blue-200 mb-8">Join 500+ businesses that never miss an opportunity.</p>
+          <p className="text-slate-100 mb-8">Join 500+ businesses that never miss an opportunity.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15148190559" className="bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               📞 Call Now: +1 514 819-0559

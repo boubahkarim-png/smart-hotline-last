@@ -209,7 +209,7 @@ export default function Pricing() {
           {/* Custom */}
           <div className="text-center bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl p-12 text-white">
             <h3 className="text-2xl font-bold mb-3">Need higher volume or a custom solution?</h3>
-            <p className="text-blue-200 mb-8">We create personalized offers for large teams and specific needs.</p>
+            <p className="text-white mb-8">We create personalized offers for large teams and specific needs.</p>
             <Link href="/en/contact?plan=custom"
               className="inline-block bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               Request a Quote
@@ -317,7 +317,7 @@ export default function Pricing() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Reduce Your Costs by 40%?</h2>
-          <p className="text-blue-200 text-lg mb-8">Free 2-week trial. No commitment. Guaranteed results.</p>
+          <p className="text-white text-lg mb-8">Free 2-week trial. No commitment. Guaranteed results.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/en/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               Request a Free Quote
@@ -327,7 +327,7 @@ export default function Pricing() {
               +1 514 819-0559
             </a>
           </div>
-          <p className="text-blue-300 text-sm mt-8">Open 24/7 — Immediate response</p>
+          <p className="text-slate-100 text-sm mt-8">Open 24/7 — Immediate response</p>
         </div>
       </section>
     </>

@@ -185,11 +185,11 @@ const data = {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Nous sommes là pour vous aider</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Que vous ayez une question sur nos services, besoin d&apos;une démonstration,
-            ou simplement envie de discuter de vos besoins en relation client,
-            notre équipe est prête à vous répondre.
-          </p>
+<p className="text-lg text-white mb-8 max-w-2xl mx-auto">
+Que vous ayez une question sur nos services, besoin d'une démonstration,
+ou simplement envie de discuter de vos besoins en relation client,
+notre équipe est prête à vous répondre.
+</p>
 
           {/* GEO-AWARE CONTACT INFO */}
           <div className="max-w-md mx-auto mt-8">
@@ -514,9 +514,9 @@ const data = {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Prêt à ne plus rater un appel?</h2>
-          <p className="text-lg text-blue-100 mb-8">
-            En place en 48h. Pas d&apos;engagement longue durée. On commence quand vous voulez.
-          </p>
+<p className="text-lg text-white mb-8">
+En place en 48h. Pas d'engagement longue durée. On commence quand vous voulez.
+</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#contact-form" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 inline-block">
               Consultation Gratuite

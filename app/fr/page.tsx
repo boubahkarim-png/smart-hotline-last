@@ -284,7 +284,7 @@ les PME d\'Ici
                   <div className="flex gap-1 mb-4">
                     {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                   </div>
-                  <p className="text-slate-300 mb-4 leading-relaxed italic">"{t.q}"</p>
+                  <p className="text-slate-100 mb-4 leading-relaxed italic">"{t.q}"</p>
                   <div className="flex items-center gap-3">
                     <img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
                     <div>

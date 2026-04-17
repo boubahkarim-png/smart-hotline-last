@@ -105,29 +105,29 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 2: DARK - Features */}
-      <section className="bg-gradient-to-br from-slate-900 via-teal-950 to-teal-900 text-white py-20 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black mb-4">What&apos;s Included</h2>
-            <p className="text-teal-200 text-lg max-w-2xl mx-auto">Complete multichannel support for your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-            {FEATURES.map(({icon: Icon, title, desc}: any, i: number) => (
-              <div key={title} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all modern-box animate-delay-${(i+1)*100}`}>
-                <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-teal-300" />
-                </div>
-                <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-                <p className="text-teal-200 text-sm">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 2: DARK - Features */}
+<section className="bg-gradient-to-br from-slate-900 via-teal-950 to-teal-900 text-white py-20 lg:py-24 relative overflow-hidden">
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
+</div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div className="text-center mb-12">
+<h2 className="text-3xl lg:text-4xl font-black mb-4">What&apos;s Included</h2>
+<p className="text-slate-100 text-lg max-w-2xl mx-auto">Complete multichannel support for your business</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+{FEATURES.map(({icon: Icon, title, desc}: any, i: number) => (
+<div key={title} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all modern-box animate-delay-${(i+1)*100}`}>
+<div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-4">
+<Icon className="w-6 h-6 text-white" />
+</div>
+<h3 className="font-bold text-lg text-white mb-2">{title}</h3>
+<p className="text-slate-100 text-sm">{desc}</p>
+</div>
+))}
+</div>
+</div>
+</section>
 
       {/* SECTION 3: LIGHT - Stats */}
       <section className="bg-white border-b border-slate-100 py-12">
@@ -139,24 +139,24 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 4: DARK - How it works */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white py-20 lg:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black mb-4">How It Works</h2>
-            <p className="text-slate-300 text-lg">4 steps to transform your customer support</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
-            {STEPS.map(({n, t, d}: any, i: number) => (
-              <div key={n} className={`text-center modern-box animate-delay-${(i+1)*100}`}>
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">{n}</div>
-                <h3 className="font-bold text-lg mb-2">{t}</h3>
-                <p className="text-slate-300 text-sm">{d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 4: DARK - How it works */}
+<section className="bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white py-20 lg:py-24">
+<div className="max-w-6xl mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black mb-4">How It Works</h2>
+<p className="text-slate-100 text-lg">4 steps to transform your customer support</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
+{STEPS.map(({n, t, d}: any, i: number) => (
+<div key={n} className={`text-center modern-box animate-delay-${(i+1)*100}`}>
+<div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-black shadow-lg">{n}</div>
+<h3 className="font-bold text-lg mb-2">{t}</h3>
+<p className="text-slate-100 text-sm">{d}</p>
+</div>
+))}
+</div>
+</div>
+</section>
 
       {/* SECTION 5: LIGHT - Value proposition */}
       <section className="py-20 bg-white">
@@ -187,44 +187,44 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 6: DARK - Testimonials AUTO-SLIDE */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black mb-4">What Our Clients Say</h2>
-            <p className="text-blue-200 text-lg">Real results for businesses like yours</p>
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                </div>
-                <p className="text-blue-100 mb-5 leading-relaxed italic">"{t.q}"</p>
-      <div className="flex items-center gap-3">
-        <img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
-        <div>
-        <p className="font-bold text-white text-sm">{t.name}</p>
-        <p className="text-blue-200 text-xs">{t.role}</p>
-        </div>
-      </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 6: DARK - Testimonials AUTO-SLIDE */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black mb-4">What Our Clients Say</h2>
+<p className="text-slate-100 text-lg">Real results for businesses like yours</p>
+</div>
+</div>
+<div className="overflow-hidden">
+<div className="testimonial-track testimonial-marquee">
+{[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+<div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
+<div className="flex gap-0.5 mb-4">
+{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
+</div>
+<p className="text-slate-100 mb-5 leading-relaxed italic">"{t.q}"</p>
+<div className="flex items-center gap-3">
+<img src={basePath + t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover shadow-lg" />
+<div>
+<p className="font-bold text-white text-sm">{t.name}</p>
+<p className="text-slate-100 text-xs">{t.role}</p>
+</div>
+</div>
+</div>
+))}
+</div>
+</div>
+</section>
 
-      {/* SECTION 7: DARK - CTA */}
-      <section className="bg-gradient-to-br from-teal-900 to-teal-700 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Improve Your Support?</h2>
-          <p className="text-teal-100 text-lg mb-10 max-w-2xl mx-auto">More satisfied clients, less stress for your team. Let&apos;s start together.</p>
-          <CTAButtons slug="support"/>
-          <p className="text-teal-200 text-sm mt-6"><Link href="/en/pricing" className="underline hover:text-white">View pricing</Link> · <Link href="/en/contact" className="underline hover:text-white">Contact us</Link></p>
-        </div>
-      </section>
+{/* SECTION 7: DARK - CTA */}
+<section className="bg-gradient-to-br from-teal-900 to-teal-700 text-white py-20">
+<div className="max-w-4xl mx-auto px-4 text-center">
+<h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Improve Your Support?</h2>
+<p className="text-white text-lg mb-10 max-w-2xl mx-auto">More satisfied clients, less stress for your team. Let&apos;s start together.</p>
+<CTAButtons slug="support"/>
+<p className="text-slate-100 text-sm mt-6"><Link href="/en/pricing" className="underline hover:text-white">View pricing</Link> · <Link href="/en/contact" className="underline hover:text-white">Contact us</Link></p>
+</div>
+</section>
 
       {/* SECTION 8: LIGHT - FAQ */}
       <section className="bg-white py-20 border-t border-slate-100">

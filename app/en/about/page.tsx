@@ -9,9 +9,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
 <div className="w-full lg:w-[40%]">
-						<span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Our Story</span>
+						<span className="inline-block bg-blue-500 bg-opacity-50 text-white text-sm px-3 py-1 rounded-full mb-5">Our Story</span>
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Started From Plateau Mont-Royal<br/>With 3 Clients in 2018</h1>
-              <p className="text-lg text-blue-100 mb-6">Today, we support over 500 SMEs in Quebec and France. But in the beginning, it was just Karim, his laptop, and sleepless nights answering calls from his first clients.</p>
+              <p className="text-lg text-white mb-6">Today, we support over 500 SMEs in Quebec and France. But in the beginning, it was just Karim, his laptop, and sleepless nights answering calls from his first clients.</p>
               <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Contact Us</Link>
             </div>
 <div className="w-full lg:w-[60%]">
@@ -32,9 +32,9 @@ export default function About() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Our Mission and Values
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              We help Quebec and French SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
-            </p>
+<p className="text-slate-100 text-lg max-w-2xl mx-auto">
+  We help Quebec and French SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
+</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -50,7 +50,7 @@ export default function About() {
                   <span className="text-green-400 text-2xl">{icon}</span>
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                <p className="text-blue-200 text-sm">{desc}</p>
+                <p className="text-slate-100 text-sm">{desc}</p>
               </div>
             ))}
           </div>
@@ -196,9 +196,9 @@ export default function About() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Impact On Your Business
             </h2>
-            <p className="text-blue-200 text-lg">
-              Concrete results our clients measure every day
-            </p>
+<p className="text-slate-100 text-lg">
+  Concrete results our clients measure every day
+</p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -210,7 +210,7 @@ export default function About() {
             ].map(({value, label}) => (
               <div key={label} className="text-center">
                 <div className="text-4xl lg:text-5xl font-extrabold text-blue-400">{value}</div>
-                <div className="text-blue-200 mt-2">{label}</div>
+                <div className="text-slate-100 mt-2">{label}</div>
               </div>
             ))}
           </div>

@@ -174,7 +174,7 @@ export default function MontrealPage() {
             {MONTREAL_STATS.map(({value, label}) => (
               <div key={label}>
                 <p className="text-4xl font-black text-indigo-400">{value}</p>
-                <p className="text-slate-300 text-sm mt-1">{label}</p>
+                <p className="text-slate-100 text-sm mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -242,28 +242,28 @@ export default function MontrealPage() {
                 <UsersIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Bilingues Natifs</h3>
-              <p className="text-slate-300 text-sm">Français et anglais parfaits. Aucun accent, aucune hésitation.</p>
+              <p className="text-slate-100 text-sm">Français et anglais parfaits. Aucun accent, aucune hésitation.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <CheckIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Loi 25 Conforme</h3>
-              <p className="text-slate-300 text-sm">Protection des données conforme aux exigences québécoises.</p>
+              <p className="text-slate-100 text-sm">Protection des données conforme aux exigences québécoises.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <ClockIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Disponibilité 24/7</h3>
-              <p className="text-slate-300 text-sm">Même après les heures, même les week-ends. Toujours là.</p>
+              <p className="text-slate-100 text-sm">Même après les heures, même les week-ends. Toujours là.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <BuildingIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Compréhension Locale</h3>
-              <p className="text-slate-300 text-sm">On connaît Montréal, ses quartiers, ses codes culturels.</p>
+              <p className="text-slate-100 text-sm">On connaît Montréal, ses quartiers, ses codes culturels.</p>
             </div>
           </div>
         </div>

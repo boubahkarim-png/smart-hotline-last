@@ -9,9 +9,9 @@ export default function APropos() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
 <div className="w-full lg:w-[40%]">
-						<span className="inline-block bg-blue-500 bg-opacity-50 text-blue-100 text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
+						<span className="inline-block bg-blue-500 bg-opacity-50 text-white text-sm px-3 py-1 rounded-full mb-5">Notre Histoire</span>
               <h1 className="text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">Parti d'un Plateau Mont-Royal<br/>avec 3 Clients en 2018</h1>
-              <p className="text-lg text-blue-100 mb-6">Aujourd'hui, on accompagne plus de 500 PME au Québec et en France. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
+              <p className="text-lg text-white mb-6">Aujourd'hui, on accompagne plus de 500 PME au Québec et en France. Mais au début, c'était juste Karim, son laptop, et des nuits blanches à répondre aux appels de ses premiers clients.</p>
               <Link href="/fr/contact" className="bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 inline-block">Nous Contacter</Link>
             </div>
 <div className="w-full lg:w-[60%]">
@@ -32,10 +32,10 @@ export default function APropos() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Notre Mission et Nos Valeurs
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Nous aidons les PME québécoises et françaises à prospérer en leur offrant
-              une relation client irréprochable, adaptée à leurs besoins spécifiques.
-            </p>
+<p className="text-slate-100 text-lg max-w-2xl mx-auto">
+Nous aidons les PME québécoises et françaises à prospérer en leur offrant
+une relation client irréprochable, adaptée à leurs besoins spécifiques.
+</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -51,7 +51,7 @@ export default function APropos() {
                   <span className="text-green-400 text-2xl">{icon}</span>
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                <p className="text-blue-200 text-sm">{desc}</p>
+                <p className="text-slate-100 text-sm">{desc}</p>
               </div>
             ))}
           </div>
@@ -197,9 +197,9 @@ export default function APropos() {
               <h2 className="text-3xl lg:text-4xl font-black mb-4">
                 L'Impact Sur Votre Business
               </h2>
-              <p className="text-blue-200 text-lg">
-                Des résultats concrets que nos clients mesurent chaque jour
-              </p>
+<p className="text-slate-100 text-lg">
+Des résultats concrets que nos clients mesurent chaque jour
+</p>
               <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -211,7 +211,7 @@ export default function APropos() {
               ].map(({value, label}) => (
                 <div key={label} className="text-center">
                   <div className="text-4xl lg:text-5xl font-extrabold text-blue-400">{value}</div>
-                  <div className="text-blue-200 mt-2">{label}</div>
+                  <div className="text-slate-100 mt-2">{label}</div>
                 </div>
               ))}
             </div>

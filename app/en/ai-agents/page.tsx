@@ -118,24 +118,24 @@ export default function Page() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2">
             <h2 className="text-3xl lg:text-4xl font-black mb-6">Why Businesses Are Switching to AI Voice Agents</h2>
-            <p className="text-lg text-slate-300 mb-6">Let's be honest — missed calls are missed money. Every time a potential client hits voicemail, there's a good chance they're calling your competitor next.</p>
-            <p className="text-lg text-slate-300 mb-6">Sophie doesn't sleep, doesn't take breaks, and never has a bad day. She handles the repetitive stuff so your team can focus on what actually needs human attention.</p>
+<p className="text-lg text-slate-100 mb-6">Let's be honest — missed calls are missed money. Every time a potential client hits voicemail, there's a good chance they're calling your competitor next.</p>
+			<p className="text-lg text-slate-100 mb-6">Sophie doesn't sleep, doesn't take breaks, and never has a bad day. She handles the repetitive stuff so your team can focus on what actually needs human attention.</p>
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="bg-white/10 backdrop-blur rounded-xl p-4">
                 <p className="text-3xl font-black text-violet-400">70%</p>
-                <p className="text-sm text-slate-300">Lower cost than hiring</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
-                <p className="text-3xl font-black text-violet-400">0</p>
-                <p className="text-sm text-slate-300">Missed calls</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
-                <p className="text-3xl font-black text-violet-400">2s</p>
-                <p className="text-sm text-slate-300">Average pickup time</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-4">
-                <p className="text-3xl font-black text-violet-400">24/7</p>
-                <p className="text-sm text-slate-300">Always available</p>
+<p className="text-sm text-slate-100">Lower cost than hiring</p>
+			</div>
+			<div className="bg-white/10 backdrop-blur rounded-xl p-4">
+				<p className="text-3xl font-black text-violet-400">0</p>
+				<p className="text-sm text-slate-100">Missed calls</p>
+			</div>
+			<div className="bg-white/10 backdrop-blur rounded-xl p-4">
+				<p className="text-3xl font-black text-violet-400">2s</p>
+				<p className="text-sm text-slate-100">Average pickup time</p>
+			</div>
+			<div className="bg-white/10 backdrop-blur rounded-xl p-4">
+				<p className="text-3xl font-black text-violet-400">24/7</p>
+				<p className="text-sm text-slate-100">Always available</p>
               </div>
             </div>
           </div>

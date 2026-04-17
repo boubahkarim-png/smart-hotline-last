@@ -311,7 +311,7 @@ export default function Secteurs() {
             {STATS.map(({value, label}) => (
               <div key={label}>
                 <p className="text-4xl font-black text-indigo-400">{value}</p>
-                <p className="text-slate-300 text-sm mt-1 font-medium">{label}</p>
+                <p className="text-slate-100 text-sm mt-1 font-medium">{label}</p>
               </div>
             ))}
           </div>
@@ -447,28 +447,28 @@ export default function Secteurs() {
                 <ShieldCheckIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Conformite totale</h3>
-              <p className="text-slate-300 text-sm">Respect des regulations les plus strictes dans chaque secteur.</p>
+              <p className="text-slate-100 text-sm">Respect des regulations les plus strictes dans chaque secteur.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <UsersIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Evolution constante</h3>
-              <p className="text-slate-300 text-sm">Mises a jour regulieres basees sur les retours terrain.</p>
+              <p className="text-slate-100 text-sm">Mises a jour regulieres basees sur les retours terrain.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <ClockIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Support dédié</h3>
-              <p className="text-slate-300 text-sm">Equipe de support disponible pour optimiser votre service.</p>
+              <p className="text-slate-100 text-sm">Equipe de support disponible pour optimiser votre service.</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
               <div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
                 <CheckIcon className="w-6 h-6 text-indigo-300" />
               </div>
               <h3 className="font-bold text-lg text-white mb-2">Garantie qualite</h3>
-              <p className="text-slate-300 text-sm">SLA garanti et suivi des performances en temps reel.</p>
+              <p className="text-slate-100 text-sm">SLA garanti et suivi des performances en temps reel.</p>
             </div>
           </div>
         </div>

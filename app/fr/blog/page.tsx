@@ -75,9 +75,9 @@ export default function BlogFr() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Articles à la Une
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Sélection de nos meilleurs articles pour inspirer votre stratégie de relation client
-            </p>
+<p className="text-slate-100 text-lg max-w-2xl mx-auto">
+			Sélection de nos meilleurs articles pour inspirer votre stratégie de relation client
+			</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {featuredPosts.map((post: PostMeta) => (
@@ -98,27 +98,27 @@ export default function BlogFr() {
             <div className="p-6">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
-                <span className="text-blue-200 text-xs">
-                  {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
-                </span>
+<span className="text-slate-100 text-xs">
+				{new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+				</span>
               </div>
-              <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
-                {post.title}
-              </h2>
-              <p className="text-blue-200 text-sm mb-4 line-clamp-2">
-                {post.excerpt}
-              </p>
-              <span className="text-blue-200 text-sm font-semibold group-hover:underline">
-                Lire la suite →
-              </span>
-            </div>
-          </Link>
-        ))}
-          </div>
-        </div>
-      </section>
+<h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+		{post.title}
+		</h2>
+		<p className="text-slate-100 text-sm mb-4 line-clamp-2">
+		{post.excerpt}
+		</p>
+		<span className="text-slate-100 text-sm font-semibold group-hover:underline">
+		Lire la suite →
+		</span>
+		</div>
+		</Link>
+		))}
+		</div>
+		</div>
+		</section>
 
-      {/* SECTION 3: LIGHT - NEWSLETTER */}
+		{/* SECTION 3: LIGHT - NEWSLETTER */}
       <section className="bg-white border-b border-slate-100 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-3 text-slate-900">Recevez nos conseils chaque semaine</h2>
@@ -197,9 +197,9 @@ export default function BlogFr() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Tous nos Articles
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Explorez notre collection complète d'articles sur la relation client, l'IA vocale et la prospection téléphonique
-            </p>
+<p className="text-slate-100 text-lg max-w-2xl mx-auto">
+			Explorez notre collection complète d'articles sur la relation client, l'IA vocale et la prospection téléphonique
+			</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post: PostMeta) => (
@@ -220,31 +220,31 @@ export default function BlogFr() {
             <div className="p-5">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
-                <span className="text-blue-200 text-xs">
-                  {new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
-                </span>
+<span className="text-slate-100 text-xs">
+				{new Date(post.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}
+				</span>
               </div>
-              <h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
-                {post.title}
-              </h2>
-              <p className="text-blue-200 text-sm mb-4 line-clamp-2">
-                {post.excerpt}
-              </p>
-              <span className="text-blue-200 text-sm font-semibold group-hover:underline">
-                Lire la suite →
-              </span>
-            </div>
-          </Link>
-        ))}
-          </div>
-        </div>
-      </section>
+<h2 className="font-bold text-white mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+		{post.title}
+		</h2>
+		<p className="text-slate-100 text-sm mb-4 line-clamp-2">
+		{post.excerpt}
+		</p>
+		<span className="text-slate-100 text-sm font-semibold group-hover:underline">
+		Lire la suite →
+		</span>
+		</div>
+		</Link>
+		))}
+		</div>
+		</div>
+		</section>
 
-      {/* SECTION 8: DARK - CTA */}
+		{/* SECTION 8: DARK - CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à améliorer votre relation client ?</h2>
-          <p className="text-blue-200 text-lg mb-10">Découvrez comment nos solutions peuvent transformer votre entreprise.</p>
+          <p className="text-slate-100 text-lg mb-10">Découvrez comment nos solutions peuvent transformer votre entreprise.</p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <Link href="/fr/reception" className="flex-1 bg-white/20 backdrop-blur hover:bg-white/25 text-white font-bold px-6 py-3 rounded-xl hover:bg-white/30 transition-all border border-white/20">
               Appels Entrants

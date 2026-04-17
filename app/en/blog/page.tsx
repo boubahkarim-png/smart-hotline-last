@@ -54,7 +54,7 @@ export default function BlogEn() {
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-extrabold mb-5">Smart Hotline Blog</h1>
-          <p className="text-lg text-blue-100">Tips, strategies and insights to optimize your customer relationships.</p>
+          <p className="text-lg text-white">Tips, strategies and insights to optimize your customer relationships.</p>
         </div>
       </section>
 
@@ -116,7 +116,7 @@ export default function BlogEn() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-white mb-3">Popular Topics</h2>
-            <p className="text-slate-300">Browse our most read subjects</p>
+            <p className="text-slate-100">Browse our most read subjects</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {TOPICS.map(({name, count}) => (
@@ -162,7 +162,7 @@ export default function BlogEn() {
       <section className="bg-gradient-to-r from-blue-700 to-blue-900 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Experience?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">Join 200+ businesses that improved their customer satisfaction by 40% with our call center solutions.</p>
+          <p className="text-white mb-8 max-w-2xl mx-auto">Join 200+ businesses that improved their customer satisfaction by 40% with our call center solutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/en/contact" className="bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">Get a Free Quote</Link>
             <Link href="/en/services" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">See Our Services</Link>

@@ -52,7 +52,7 @@ export default function Confidentialite() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-2xl lg:text-3xl font-black mb-4">Questions sur vos données?</h2>
-          <p className="text-blue-200 mb-8">Notre équipe est disponible pour répondre à toutes vos questions sur la protection de vos données.</p>
+          <p className="text-slate-100 mb-8">Notre équipe est disponible pour répondre à toutes vos questions sur la protection de vos données.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="mailto:direction@smart-hotline.com" className="inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 py-3.5 rounded-xl font-bold hover:bg-slate-100 transition-colors">
               Nous contacter
