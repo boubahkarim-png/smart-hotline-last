@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 
@@ -43,7 +44,7 @@ const jsonLd = {
   "description": "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7. Réception d'appels, émission, support client et intégration CRM.",
   "logo": "https://www.smart-hotline.com/logo-smart-hotline.svg",
   "image": "https://www.smart-hotline.com/logo-full.svg",
-  "telephone": "+1-514-819-0559",
+  "telephone": "+1-514,819,0559",
   "email": "direction@smart-hotline.com",
   "address": {
     "@type": "PostalAddress",
@@ -184,7 +185,7 @@ const faqJsonLd = {
       "name": "Smart Hotline fonctionne-t-il en français?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui, Smart Hotline dispose d'agents francophones natifs du Québec, de France, de Belgique et de Suisse. L'assistante vocale IA Sophie parle également les deux langues avec les accents régionaux."
+        "text": "Oui, Smart Hotline dispose d'agents francophones natifs du Québec, de France, deBelgique et de Suisse. L'assistante vocale IA Sophie parle également les deux langues avec les accents régionaux."
       }
     }
   ]
@@ -206,7 +207,7 @@ const howToJsonLd = {
       "@type": "HowToStep",
       "position": 1,
       "name": "Appel de découverte",
-      "text": "Appelez-nous au +1 514 819-0559 ou réservez une consultation de 30 minutes via Calendly pour discuter de vos besoins."
+      "text": "Appelez-nous au +1 514 819,0559 ou réservez une consultation de 30 minutes via Calendly pour discuter de vos besoins."
     },
     {
       "@type": "HowToStep",
@@ -275,13 +276,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       </head>
-<body>
-<GoogleAnalytics />
-<a href="#main-content" className="skip-link">
-      Aller au contenu principal
-      </a>
-      {children}
-</body>
+      <body>
+        <GoogleAnalytics />
+        <Script src="/scripts/webmcp.js" strategy="afterInteractive" />
+        <a href="#main-content" className="skip-link">
+          Aller au contenu principal
+        </a>
+        {children}
+      </body>
       <script
         dangerouslySetInnerHTML={{
           __html: `

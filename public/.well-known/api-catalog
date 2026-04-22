@@ -1,0 +1,33 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.smart-hotline.com/",
+      "api": [
+        {"href": "https://www.smart-hotline.com/fr/", "type": "text/html", "rel": "page", "title": "Accueil FR"},
+        {"href": "https://www.smart-hotline.com/en/", "type": "text/html", "rel": "page", "title": "Home EN"},
+        {"href": "https://www.smart-hotline.com/fr/reception/", "type": "text/html", "rel": "service", "title": "Réception d'appels"},
+        {"href": "https://www.smart-hotline.com/en/inbound/", "type": "text/html", "rel": "service", "title": "Inbound Call Reception"},
+        {"href": "https://www.smart-hotline.com/fr/emission/", "type": "text/html", "rel": "service", "title": "Émission d'appels"},
+        {"href": "https://www.smart-hotline.com/en/outbound/", "type": "text/html", "rel": "service", "title": "Outbound Calling"},
+        {"href": "https://www.smart-hotline.com/fr/agents-ia/", "type": "text/html", "rel": "service", "title": "Agents IA"},
+        {"href": "https://www.smart-hotline.com/en/ai-agents/", "type": "text/html", "rel": "service", "title": "AI Voice Agents"},
+        {"href": "https://www.smart-hotline.com/fr/crm/", "type": "text/html", "rel": "service", "title": "Intégration CRM"},
+        {"href": "https://www.smart-hotline.com/en/crm/", "type": "text/html", "rel": "service", "title": "CRM Integration"},
+        {"href": "https://www.smart-hotline.com/fr/support/", "type": "text/html", "rel": "service", "title": "Support Client"},
+        {"href": "https://www.smart-hotline.com/en/support/", "type": "text/html", "rel": "service", "title": "Customer Support"},
+        {"href": "https://www.smart-hotline.com/fr/tarifs/", "type": "text/html", "rel": "pricing", "title": "Tarifs"},
+        {"href": "https://www.smart-hotline.com/en/pricing/", "type": "text/html", "rel": "pricing", "title": "Pricing"},
+        {"href": "https://www.smart-hotline.com/fr/contact/", "type": "text/html", "rel": "contact", "title": "Contact"},
+        {"href": "https://www.smart-hotline.com/en/contact/", "type": "text/html", "rel": "contact", "title": "Contact"},
+        {"href": "https://www.smart-hotline.com/fr/blog/", "type": "text/html", "rel": "blog", "title": "Blog FR"},
+        {"href": "https://www.smart-hotline.com/en/blog/", "type": "text/html", "rel": "blog", "title": "Blog EN"},
+        {"href": "https://www.smart-hotline.com/llms.txt", "type": "text/plain", "rel": "ai-content", "title": "LLMs.txt"},
+        {"href": "https://www.smart-hotline.com/.well-known/api-catalog", "type": "application/linkset+json", "rel": "service-desc", "title": "API Catalog"},
+        {"href": "https://www.smart-hotline.com/.well-known/oauth-authorization-server", "type": "application/json", "rel": "oauth-authorization-server", "title": "OAuth Authorization Server"},
+        {"href": "https://www.smart-hotline.com/.well-known/oauth-protected-resource", "type": "application/json", "rel": "oauth-protected-resource", "title": "OAuth Protected Resource"},
+        {"href": "https://www.smart-hotline.com/.well-known/mcp/server-card.json", "type": "application/json", "rel": "mcp-server", "title": "MCP Server Card"},
+        {"href": "https://www.smart-hotline.com/.well-known/agent-skills/index.json", "type": "application/json", "rel": "agent-skills", "title": "Agent Skills Index"}
+      ]
+    }
+  ]
+}

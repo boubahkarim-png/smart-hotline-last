@@ -1,0 +1,9 @@
+{
+  "resource": "https://www.smart-hotline.com",
+  "authorization_servers": [{
+    "url": "https://www.smart-hotline.com/.well-known/oauth-authorization-server"
+  }],
+  "scopes_supported": ["read", "write"],
+  "bearer_methods_supported": ["Bearer"],
+  "resource_documentation": "https://www.smart-hotline.com/docs/api"
+}

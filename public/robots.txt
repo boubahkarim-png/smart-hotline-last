@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Content-Signal: ai-train=no; search=yes; ai-input=no
 
 Sitemap: https://www.smart-hotline.com/sitemap.xml
 
