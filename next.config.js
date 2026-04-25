@@ -3,6 +3,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: process.env.NEXT_BASEPATH || '',
+  assetPrefix: process.env.NEXT_BASEPATH || '',
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
