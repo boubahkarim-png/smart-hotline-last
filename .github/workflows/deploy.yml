@@ -25,20 +25,12 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
-      - run: npm ci
+- run: npm ci
 
-      - name: Build with production URL
-        env:
-          NEXT_PUBLIC_SITE_URL: https://www.smart-hotline.com
-        run: npm run build:netlify
+- name: Build for GitHub Pages
+  run: npm run build:github
 
-    - run: touch out/.nojekyll
-
-    - name: Generate markdown versions for content negotiation
-      run: node scripts/generate-markdown.js
-
-    - name: Copy _headers for static hosting
-      run: cp public/_headers out/_headers
+- run: touch out/.nojekyll
 
     - name: Setup Pages
         uses: actions/configure-pages@v4

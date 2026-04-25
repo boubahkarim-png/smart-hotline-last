@@ -20,37 +20,6 @@ const nextConfig = {
     ],
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'Link', value: '</.well-known/api-catalog>; rel="api-catalog"' },
-          { key: 'Link', value: '</docs/api>; rel="service-doc"' },
-          { key: 'Link', value: '</.well-known/mcp/server-card.json>; rel="mcp-server"' },
-          { key: 'Link', value: '</.well-known/agent-card.json>; rel="a2a"' },
-        ],
-      },
-      {
-        source: '/.well-known/api-catalog',
-        headers: [
-          { key: 'Content-Type', value: 'application/linkset+json' },
-        ],
-      },
-      {
-        source: '/.well-known/mcp/server-card.json',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-        ],
-      },
-      {
-        source: '/.well-known/agent-card.json',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-        ],
-      },
-    ]
-  },
 }
 
 module.exports = nextConfig
