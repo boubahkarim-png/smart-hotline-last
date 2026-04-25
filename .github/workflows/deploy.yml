@@ -32,9 +32,15 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://www.smart-hotline.com
         run: npm run build:netlify
 
-      - run: touch out/.nojekyll
+    - run: touch out/.nojekyll
 
-      - name: Setup Pages
+    - name: Generate markdown versions for content negotiation
+      run: node scripts/generate-markdown.js
+
+    - name: Copy _headers for static hosting
+      run: cp public/_headers out/_headers
+
+    - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact

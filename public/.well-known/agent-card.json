@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ohmyopencode/skills/main/schemas/a2a-agent-card.json",
+  "name": "Smart Hotline Agency",
+  "version": "1.0.0",
+  "description": "Montreal-based call center and AI voice agent provider for SMBs. Offers 24/7 professional phone answering, outbound calling, AI voice assistant (Sophie), customer support, and CRM integration across Canada, France, Belgium, Switzerland, and the USA.",
+  "url": "https://www.smart-hotline.com",
+  "provider": {
+    "name": "Smart Hotline Agency",
+    "url": "https://www.smart-hotline.com",
+    "email": "direction@smart-hotline.com",
+    "phone": "+1-514-819-0559"
+  },
+  "supportedInterfaces": [
+    {
+      "type": "https",
+      "url": "https://www.smart-hotline.com"
+    },
+    {
+      "type": "a2a",
+      "url": "https://www.smart-hotline.com/.well-known/agent-card.json"
+    },
+    {
+      "type": "mcp",
+      "url": "https://www.smart-hotline.com/.well-known/mcp/server-card.json"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "lead-generation",
+      "name": "Lead Generation",
+      "description": "B2B and B2C prospect list building, qualification, and enrichment. Automated lead capture via web forms, phone inquiries, and CRM integration with SuiteCRM."
+    },
+    {
+      "id": "cold-calling",
+      "name": "Cold Calling",
+      "description": "Professional outbound calling campaigns with trained agents. Script customization, call scheduling, objection handling, and real-time reporting via ViciDial dialer."
+    },
+    {
+      "id": "appointment-scheduling",
+      "name": "Appointment Scheduling",
+      "description": "AI-powered and human appointment booking, confirmation calls, reminder sequences, and calendar integration. Reduces no-shows by 40%."
+    },
+    {
+      "id": "crm-integration",
+      "name": "CRM Integration",
+      "description": "SuiteCRM hosting and integration, lead pipeline management, contact synchronization, email marketing via Mautic, and data enrichment services."
+    },
+    {
+      "id": "call-answering",
+      "name": "24/7 Call Answering",
+      "description": "Professional phone answering service with zero missed calls guarantee. Custom scripts branded to your business, intelligent call routing, message taking and immediate notification."
+    },
+    {
+      "id": "ai-voice-agent",
+      "name": "AI Voice Agent - Sophie",
+      "description": "AI-powered phone answering in under 2 seconds. Native French (Quebec, France, Belgium, Switzerland) and English. FAQ automation, intelligent handoff to human agents, message transcription and analytics."
+    },
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "description": "Multi-channel support via phone, email, live chat, and WhatsApp Business. Ticket management and tracking with SLA options of 2h, 4h, 8h response times."
+    }
+  ]
+}

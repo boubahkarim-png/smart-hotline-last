@@ -1,79 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/ohmyopencode/skills/main/schemas/mcp-server-card.json",
-  "name": "Smart Hotline Agent Server",
-  "description": "Smart Hotline Agency's agent server for call center and AI voice agent services",
+  "serverInfo": {
+    "name": "Smart Hotline Agency",
+    "version": "1.0.0",
+    "description": "AI-powered call center and lead generation agency for Canadian SMEs"
+  },
   "url": "https://www.smart-hotline.com",
-  "version": "1.0.0",
   "contact": {
     "email": "direction@smart-hotline.com",
     "phone": "+1-514-819-0559"
   },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://www.smart-hotline.com/api/mcp"
+  },
   "capabilities": {
-    "tools": [
-      {
-        "name": "get-pricing",
-        "description": "Retrieve pricing information for Smart Hotline services",
-        "inputSchema": {
-          "type": "object",
-          "properties": {
-            "service": {
-              "type": "string",
-              "enum": ["inbound", "outbound", "ai-voice", "crm-integration"]
-            }
-          },
-          "required": ["service"]
-        }
-      },
-      {
-        "name": "check-availability",
-        "description": "Check service availability for a specific date and time",
-        "inputSchema": {
-          "type": "object",
-          "properties": {
-            "date": {
-              "type": "string",
-              "format": "date"
-            },
-            "time": {
-              "type": "string",
-              "format": "time"
-            }
-          },
-          "required": ["date", "time"]
-        }
-      },
-      {
-        "name": "request-demo",
-        "description": "Request a demo of Smart Hotline services",
-        "inputSchema": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string",
-              "format": "email"
-            },
-            "phone": {
-              "type": "string"
-            }
-          },
-          "required": ["name", "email", "phone"]
-        }
-      }
-    ],
-    "resources": [
-      {
-        "name": "services-catalog",
-        "description": "Catalog of available services",
-        "url": "https://www.smart-hotline.com/services"
-      },
-      {
-        "name": "llms-txt",
-        "description": "Legacy LLM service (text-based)",
-        "url": "https://www.smart-hotline.com/llms-txt"
-      }
-    ]
+    "tools": true,
+    "resources": true,
+    "prompts": false
   }
 }

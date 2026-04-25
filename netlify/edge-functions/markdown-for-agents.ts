@@ -14,12 +14,14 @@ export default async function handler(request, context) {
 
   const html = await response.text();
   const markdown = htmlToMarkdown(html);
+  const estimatedTokens = Math.ceil(markdown.length / 4);
 
   return new Response(markdown, {
     status: response.status,
     headers: {
       'content-type': 'text/markdown; charset=utf-8',
       'x-content-mode': 'markdown-for-agents',
+      'x-markdown-tokens': String(estimatedTokens),
       'cache-control': 'public, max-age=3600, must-revalidate',
     },
   });

@@ -4,13 +4,13 @@
 # ============================================
 
 [build]
-  command = "npm run build:netlify"
-  publish = "out"
+command = "npm ci && npm run build:netlify"
+publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
   NEXT_BASEPATH = ""
-  NEXT_PUBLIC_SITE_URL = "https://smart-hotline.com"
+  NEXT_PUBLIC_SITE_URL = "https://www.smart-hotline.com"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # ============================================
@@ -56,11 +56,13 @@ Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 [[headers]]
 for = "/*"
 [headers.values]
-Link = """\
-</.well-known/api-catalog>; rel="service-desc"; type="application/linkset+json",\
+  Link = """\
+</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json",\
+</docs/api>; rel="service-doc"; type="text/html",\
 </.well-known/oauth-authorization-server>; rel="oauth-authorization-server"; type="application/json",\
 </.well-known/oauth-protected-resource>; rel="oauth-protected-resource"; type="application/json",\
 </.well-known/mcp/server-card.json>; rel="mcp-server"; type="application/json",\
+</.well-known/agent-card.json>; rel="a2a"; type="application/json",\
 </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json",\
 </llms.txt>; rel="ai-content"; type="text/plain"\
 """
@@ -100,10 +102,16 @@ Content-Type = "application/json"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
-for = "/.well-known/agent-skills/*"
-[headers.values]
-Content-Type = "text/markdown"
-Cache-Control = "public, max-age=3600, must-revalidate"
+  for = "/.well-known/agent-skills/*"
+  [headers.values]
+  Content-Type = "text/markdown"
+  Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/.well-known/agent-card.json"
+  [headers.values]
+  Content-Type = "application/json"
+  Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
 for = "/llms.txt"
@@ -117,24 +125,10 @@ Cache-Control = "public, max-age=3600, must-revalidate"
 
 # Root redirect to French
 [[redirects]]
-  from = "/"
-  to = "/fr/"
-  status = 302
-  force = true
-
-# WWW to non-WWW (SEO)
-[[redirects]]
-  from = "https://www.smart-hotline.com/*"
-  to = "https://smart-hotline.com/:splat"
-  status = 301
-  force = true
-
-# Netlify subdomain to custom domain (SEO)
-[[redirects]]
-  from = "https://incredible-sawine-6c4d8a.netlify.app/*"
-  to = "https://smart-hotline.com/:splat"
-  status = 301
-  force = true
+from = "/"
+to = "/fr/"
+status = 302
+force = true
 
 # Trailing slash handling
 [[redirects]]
@@ -142,25 +136,6 @@ Cache-Control = "public, max-age=3600, must-revalidate"
   to = "/:splat/"
   status = 200
   conditions = {Role = ["admin"]}
-
-# ============================================
-# PLUGINS (FREE)
-# ============================================
-
-# Lighthouse SEO/Performance testing on each deploy
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  [plugins.inputs]
-    output_path = "reports/lighthouse"
-    [plugins.inputs.thresholds]
-      performance = 0.8
-      accessibility = 0.9
-      best-practices = 0.8
-      seo = 0.9
-
-# Sitemap submission to Google (free)
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
 
 # ============================================
 # EDGE FUNCTIONS

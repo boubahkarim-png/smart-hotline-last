@@ -271,11 +271,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-      </head>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+    />
+    <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json" />
+    <link rel="service-doc" href="/docs/api" type="text/html" />
+    <link rel="mcp-server" href="/.well-known/mcp/server-card.json" type="application/json" />
+    <link rel="a2a" href="/.well-known/agent-card.json" type="application/json" />
+    <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
+    <link rel="ai-content" href="/llms.txt" type="text/plain" />
+    </head>
       <body>
         <GoogleAnalytics />
         <Script src="/scripts/webmcp.js" strategy="afterInteractive" />
