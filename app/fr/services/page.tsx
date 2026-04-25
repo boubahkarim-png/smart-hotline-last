@@ -54,7 +54,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-3">Nos Services</h2>
-            <p className="text-slate-100 text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
+            <p className="text-white text-lg">Ce qu'on fait vraiment pour toi et ton business</p>
             <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full mt-4"/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
@@ -65,7 +65,7 @@ export default function Services() {
                   <h3 className="font-bold text-lg text-white">{title}</h3>
                   {badge && <span className="text-xs bg-blue-500 text-white px-2 py-0.5 rounded-full font-medium">{badge}</span>}
                 </div>
-                <p className="text-slate-100 text-sm mb-4" dangerouslySetInnerHTML={{__html: desc}}/>
+                <p className="text-white text-sm mb-4" dangerouslySetInnerHTML={{__html: desc}}/>
                 <span className="text-white font-semibold group-hover:underline text-sm">En savoir plus →</span>
               </Link>
             ))}
@@ -83,7 +83,7 @@ export default function Services() {
 {STATS.map(({value, label}, i) => (
 <div key={label} className={`modern-box animate-delay-${(i+1)*100}`}>
 <div className="text-4xl lg:text-5xl font-extrabold text-white">{value}</div>
-<div className="text-slate-100 mt-2">{label}</div>
+<div className="text-white mt-2">{label}</div>
 </div>
 ))}
 </div>
@@ -128,7 +128,7 @@ export default function Services() {
 <div key={num} className={`relative modern-box animate-delay-${(i+1)*100}`}>
 <div className="text-6xl font-extrabold text-blue-400/30 mb-3">{num}</div>
 <h3 className="font-bold text-lg mb-2 text-white">{title}</h3>
-<p className="text-slate-100">{desc}</p>
+<p className="text-white">{desc}</p>
 </div>
             ))}
           </div>
@@ -141,7 +141,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
             <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-100`}>
               <h3 className="text-2xl font-bold text-white mb-4">Pourquoi choisir Smart Hotline?</h3>
-<p className="text-slate-100 mb-6">
+<p className="text-white mb-6">
         Nous comprenons les défis uniques des PME et offrons des solutions qui s'adaptent
         à votre croissance, pas l'inverse.
         </p>
@@ -166,7 +166,7 @@ export default function Services() {
             </div>
             <div className={`bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 modern-box animate-delay-200`}>
               <h3 className="text-2xl font-bold text-white mb-4">Résultats concrets</h3>
-<p className="text-slate-100 mb-6">
+<p className="text-white mb-6">
         Nos clients voient une amélioration significative de leur efficacité
         et satisfaction client dès les premières semaines.
         </p>

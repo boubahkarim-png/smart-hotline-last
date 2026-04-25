@@ -112,7 +112,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl lg:text-5xl font-black mb-4">Ce qui est inclus</h2>
-            <p className="text-slate-100 text-xl max-w-2xl mx-auto">Tout ce qu'il faut pour une réception professionnelle de vos appels.</p>
+            <p className="text-white text-xl max-w-2xl mx-auto">Tout ce qu'il faut pour une réception professionnelle de vos appels.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {FEATURES.map(({icon: Icon, title, desc}, i) => (
@@ -121,7 +121,7 @@ export default function Page() {
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-white mb-3">{title}</h3>
-                <p className="text-slate-100 leading-relaxed">{desc}</p>
+                <p className="text-white leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -254,7 +254,7 @@ export default function Page() {
         </div>
         <div className="max-w-4xl mx-auto px-4 text-center text-white relative">
           <h2 className="text-4xl lg:text-5xl font-black mb-6">Prêt à améliorer votre réception?</h2>
-          <p className="text-slate-100 text-xl mb-12 max-w-2xl mx-auto">Essai gratuit de 2 semaines. Sans engagement. On commence quand vous voulez.</p>
+          <p className="text-white text-xl mb-12 max-w-2xl mx-auto">Essai gratuit de 2 semaines. Sans engagement. On commence quand vous voulez.</p>
           <CTAButtons slug="receptionniste-virtuelle"/>
           <p className="text-white mt-8 text-lg">
             <Link href="/fr/tarifs" className="underline hover:text-white transition-colors">Voir les tarifs</Link>

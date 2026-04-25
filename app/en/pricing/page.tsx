@@ -109,7 +109,7 @@ export default function Pricing() {
       </div>
     </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* OUTBOUND */}
@@ -313,7 +313,21 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* FINAL CTA SECTION */}
+      {/* SECTION 6: Custom Pricing CTA - DARK */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-blue-900">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">Higher Volume or Custom Solution?</h2>
+          <p className="text-white text-lg mb-8">We create custom offers for large teams and specific needs. Have a particular project? Let&apos;s talk.</p>
+          <Link href="/en/contact?plan=custom"
+            className="inline-flex items-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
+            Request a Custom Quote
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </Link>
+          <p className="text-white text-sm mt-6">Response within 24h — no commitment</p>
+        </div>
+      </section>
+
+      {/* SECTION 7: Final CTA - DARK */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Ready to Reduce Your Costs by 40%?</h2>
@@ -327,7 +341,43 @@ export default function Pricing() {
               +1 514 819-0559
             </a>
           </div>
-          <p className="text-slate-100 text-sm mt-8">Open 24/7 — Immediate response</p>
+          <p className="text-white text-sm mt-8">Open 24/7 — Immediate response</p>
+        </div>
+      </section>
+
+      {/* SECTION 8: Our Commitments - LIGHT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-3">Our Commitments</h2>
+            <p className="text-slate-500">Why over 500 SMEs stay with us</p>
+            <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { icon: '🛡️', t: 'Protected Data', d: 'Local hosting, E2E encryption, GDPR and Law 25. Your info never leaves our secure servers.' },
+              { icon: '⚡', t: 'Available 24/7/365', d: 'Your calls are answered even when you sleep. Weekends, holidays, 3am — we\'re here.' },
+              { icon: '💰', t: 'Transparent Pricing', d: 'No hidden fees, no surprises. You know exactly what you pay before signing.' },
+              { icon: '🤝', t: 'Flexible Contract', d: 'Zero forced commitment. 7 days notice and you\'re free. We prefer to keep you by choice, not by force.' },
+            ].map(({ icon, t, d }) => (
+              <div key={t} className="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all">
+                <div className="text-4xl mb-4">{icon}</div>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{t}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-slate-400 text-sm mb-6">Questions? We respond in under 2h on average.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/en/contact" className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-800 transition-colors">
+                Contact Us
+              </Link>
+              <a href="mailto:direction@smart-hotline.com" className="inline-flex items-center justify-center gap-2 border-2 border-slate-200 text-slate-600 font-semibold px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                direction@smart-hotline.com
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

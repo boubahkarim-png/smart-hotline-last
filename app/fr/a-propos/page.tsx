@@ -32,7 +32,7 @@ export default function APropos() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Notre Mission et Nos Valeurs
             </h2>
-<p className="text-slate-100 text-lg max-w-2xl mx-auto">
+<p className="text-white text-lg max-w-2xl mx-auto">
 Nous aidons les PME québécoises et françaises à prospérer en leur offrant
 une relation client irréprochable, adaptée à leurs besoins spécifiques.
 </p>
@@ -51,7 +51,7 @@ une relation client irréprochable, adaptée à leurs besoins spécifiques.
                   <span className="text-green-400 text-2xl">{icon}</span>
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                <p className="text-slate-100 text-sm">{desc}</p>
+                <p className="text-slate-200 text-sm">{desc}</p>
               </div>
             ))}
           </div>
@@ -197,8 +197,8 @@ une relation client irréprochable, adaptée à leurs besoins spécifiques.
               <h2 className="text-3xl lg:text-4xl font-black mb-4">
                 L'Impact Sur Votre Business
               </h2>
-<p className="text-slate-100 text-lg">
-Des résultats concrets que nos clients mesurent chaque jour
+<p className="text-white text-lg">
+            Des résultats concrets que nos clients mesurent chaque jour
 </p>
               <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
             </div>
@@ -211,7 +211,7 @@ Des résultats concrets que nos clients mesurent chaque jour
               ].map(({value, label}) => (
                 <div key={label} className="text-center">
                   <div className="text-4xl lg:text-5xl font-extrabold text-blue-400">{value}</div>
-                  <div className="text-slate-100 mt-2">{label}</div>
+                  <div className="text-white mt-2">{label}</div>
                 </div>
               ))}
             </div>

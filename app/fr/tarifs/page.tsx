@@ -302,13 +302,13 @@ export default function Tarifs() {
       <section className="py-20 bg-gradient-to-br from-slate-800 to-blue-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">Volume supérieur ou solution sur mesure?</h2>
-          <p className="text-slate-100 text-lg mb-8">On crée des offres personnalisées pour les grandes équipes et les besoins spécifiques. Vous avez un projet particulier? On en parle.</p>
+          <p className="text-white text-lg mb-8">On crée des offres personnalisées pour les grandes équipes et les besoins spécifiques. Vous avez un projet particulier? On en parle.</p>
           <Link href="/fr/contact?plan=sur-mesure"
             className="inline-flex items-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
             Demander un Devis Personnalisé
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
-          <p className="text-slate-100 text-sm mt-6">Réponse sous 24h — sans engagement</p>
+          <p className="text-white text-sm mt-6">Réponse sous 24h — sans engagement</p>
         </div>
       </section>
 
@@ -316,7 +316,7 @@ export default function Tarifs() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à économiser 40% sur vos appels?</h2>
-          <p className="text-slate-100 text-lg mb-8">Essai de 2 semaines. Si c'est pas pour vous, on vous laisse tranquille. Pas de pression.</p>
+          <p className="text-white text-lg mb-8">Essai de 2 semaines. Si c'est pas pour vous, on vous laisse tranquille. Pas de pression.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/fr/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               Demander un Devis Gratuit
@@ -326,7 +326,7 @@ export default function Tarifs() {
               +1 514 819-0559
             </a>
           </div>
-          <p className="text-slate-100 text-sm mt-8">Ouvert 24/7 - Réponse immédiate</p>
+          <p className="text-white text-sm mt-8">Ouvert 24/7 - Réponse immédiate</p>
         </div>
       </section>
 

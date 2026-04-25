@@ -105,7 +105,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 <div className="text-center mb-12">
 <h2 className="text-3xl lg:text-4xl font-black mb-4">Canaux de support</h2>
-<p className="text-slate-100 text-lg max-w-2xl mx-auto">On répond partout où vos clients vous contactent.</p>
+<p className="text-white text-lg max-w-2xl mx-auto">On répond partout où vos clients vous contactent.</p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             {FEATURES.map(({icon: Icon, title, desc}, i) => (
@@ -114,7 +114,7 @@ export default function Page() {
 <Icon className="w-6 h-6 text-white" />
 </div>
 <h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-<p className="text-slate-100 text-sm">{desc}</p>
+<p className="text-white text-sm">{desc}</p>
 </div>
             ))}
           </div>
@@ -128,10 +128,10 @@ export default function Page() {
 <h3 className="text-2xl font-bold text-white">Des résultats mesurables</h3>
 </div>
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-slate-100 text-lg mt-1">Satisfaction client</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-slate-100 text-lg mt-1">Temps de réponse</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-slate-100 text-lg mt-1">Tickets/mois</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-slate-100 text-lg mt-1">Disponibilité</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-white text-lg mt-1">Satisfaction client</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-white text-lg mt-1">Temps de réponse</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-white text-lg mt-1">Tickets/mois</p></div>
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-white text-lg mt-1">Disponibilité</p></div>
 </div>
 </div>
 </section>
@@ -174,7 +174,7 @@ export default function Page() {
           <div className="flex flex-col lg:flex-row items-center gap-14">
             <div className="w-full lg:w-[55%]">
 <h2 className="text-3xl lg:text-4xl font-black text-white mb-5">Pourquoi externaliser votre support?</h2>
-<p className="text-slate-100 text-lg mb-6">Un client satisfait revient. Un client frustré parle mal de vous. On s'assure que chaque interaction se passe bien.</p>
+<p className="text-white text-lg mb-6">Un client satisfait revient. Un client frustré parle mal de vous. On s'assure que chaque interaction se passe bien.</p>
 <ul className="space-y-3 mb-8">
 <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-white rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Équipe formée sur vos produits</li>
 <li className="flex items-center gap-3 text-white"><span className="w-6 h-6 bg-teal-500/30 text-white rounded-full flex items-center justify-center"><CheckIcon className="w-4 h-4"/></span>Réponses en français du Québec ou de France</li>
@@ -202,7 +202,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">
 <h2 className="text-3xl font-black mb-4">Ce que nos clients disent</h2>
-<p className="text-slate-100 text-lg">Des résultats concrets pour des entreprises comme la vôtre</p>
+<p className="text-white text-lg">Des résultats concrets pour des entreprises comme la vôtre</p>
 </div>
         </div>
         <div className="overflow-hidden">
@@ -212,12 +212,12 @@ export default function Page() {
                 <div className="flex gap-0.5 mb-4">
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
                 </div>
-<p className="text-slate-100 mb-5 leading-relaxed italic">"{t.q}"</p>
+<p className="text-white mb-5 leading-relaxed italic">"{t.q}"</p>
 <div className="flex items-center gap-3">
 <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
 <div>
 <p className="font-bold text-white text-sm">{t.name}</p>
-<p className="text-slate-100 text-xs">{t.role}</p>
+<p className="text-white text-xs">{t.role}</p>
 </div>
 </div>
               </div>
@@ -232,7 +232,7 @@ export default function Page() {
 <h2 className="text-3xl lg:text-4xl font-black mb-4">Prêt à améliorer votre support?</h2>
 <p className="text-white text-lg mb-10 max-w-2xl mx-auto">Des clients plus satisfaits, moins de stress pour votre équipe. On commence ensemble.</p>
 <CTAButtons slug="support"/>
-<p className="text-slate-100 text-sm mt-6"><Link href="/fr/tarifs" className="underline hover:text-white">Voir les tarifs</Link> · <Link href="/fr/contact" className="underline hover:text-white">Nous contacter</Link></p>
+<p className="text-white text-sm mt-6"><Link href="/fr/tarifs" className="underline hover:text-white">Voir les tarifs</Link> · <Link href="/fr/contact" className="underline hover:text-white">Nous contacter</Link></p>
 </div>
 </section>
 

@@ -266,7 +266,7 @@ export default function Page() {
         <img src={t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
         <div>
           <p className="font-bold text-white text-sm">{t.name}</p>
-          <p className="text-slate-100 text-xs">{t.role}</p>
+          <p className="text-white text-xs">{t.role}</p>
         </div>
         </div>
       </div>

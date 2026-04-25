@@ -116,7 +116,7 @@ export default function BlogEn() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-white mb-3">Popular Topics</h2>
-            <p className="text-slate-100">Browse our most read subjects</p>
+            <p className="text-white">Browse our most read subjects</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {TOPICS.map(({name, count}) => (

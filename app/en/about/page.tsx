@@ -32,8 +32,8 @@ export default function About() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Our Mission and Values
             </h2>
-<p className="text-slate-100 text-lg max-w-2xl mx-auto">
-  We help Quebec and French SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
+<p className="text-white text-lg max-w-2xl mx-auto">
+            We help Quebec and French SMEs thrive by offering them impeccable customer relationships adapted to their specific needs.
 </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,7 +50,7 @@ export default function About() {
                   <span className="text-green-400 text-2xl">{icon}</span>
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{title}</h3>
-                <p className="text-slate-100 text-sm">{desc}</p>
+                <p className="text-slate-200 text-sm">{desc}</p>
               </div>
             ))}
           </div>
@@ -196,8 +196,8 @@ export default function About() {
             <h2 className="text-3xl lg:text-4xl font-black mb-4">
               Impact On Your Business
             </h2>
-<p className="text-slate-100 text-lg">
-  Concrete results our clients measure every day
+<p className="text-white text-lg">
+            Concrete results our clients measure every day
 </p>
             <div className="w-16 h-1 bg-blue-700 mx-auto rounded-full mt-4"/>
           </div>
@@ -210,7 +210,7 @@ export default function About() {
             ].map(({value, label}) => (
               <div key={label} className="text-center">
                 <div className="text-4xl lg:text-5xl font-extrabold text-blue-400">{value}</div>
-                <div className="text-slate-100 mt-2">{label}</div>
+                <div className="text-white mt-2">{label}</div>
               </div>
             ))}
           </div>

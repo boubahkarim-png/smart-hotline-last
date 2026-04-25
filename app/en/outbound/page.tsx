@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
-import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon } from '@/components/Icons'
+import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon, QuestionIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
 
@@ -34,10 +34,25 @@ const RESULTS = [
   {'value': '48h', 'label': 'Campaign launch'},
 ]
 const PROCESS = [
-  {'title': 'Discovery Call', 'desc': 'We learn about your goals, target market, and what success looks like for you.'},
-  {'title': 'Custom Strategy', 'desc': 'Tailored targeting, messaging, and agent training for your specific offer.'},
-  {'title': 'Agent Assignment', 'desc': 'Dedicated agents trained on your product and equipped with your scripts.'},
-  {'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
+{'title': 'Discovery Call', 'desc': 'We learn about your goals, target market, and what success looks like for you.'},
+{'title': 'Custom Strategy', 'desc': 'Tailored targeting, messaging, and agent training for your specific offer.'},
+{'title': 'Agent Assignment', 'desc': 'Dedicated agents trained on your product and equipped with your scripts.'},
+{'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
+]
+
+const FAQ = [
+{
+question: "How do you qualify leads?",
+answer: "We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer to ensure quality."
+},
+{
+question: "Do you offer custom scripts?",
+answer: "Yes, our experts write scripts tailored to your offer and market. We test and optimize continuously for best results."
+},
+{
+question: "How many calls per day?",
+answer: "One agent can make 50-80 calls per day. We adapt to your goals and processing capacity."
+}
 ]
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -105,8 +120,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 2: Results Stats - Dark */}
-      <section className="bg-gradient-to-br from-slate-900 to-emerald-800 py-16">
+{/* Section 2: Results Stats - Dark */}
+<section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-black text-white mb-2">Results That Speak</h2>
@@ -123,8 +138,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 3: Features - Light */}
-      <section className="py-20 bg-slate-50">
+{/* Section 3: Features - Light */}
+<section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-slate-900 mb-2">What's Included</h2>
@@ -144,169 +159,130 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 4: How It Works - Light */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-slate-900 mb-10 text-center">How It Works</h2>
-          {STEPS.map(({n, t, d}: any) => (
-            <div key={n} className="flex gap-5 mb-8 items-start">
-              <div className="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
-              <div className="pt-1">
-                <h3 className="font-bold text-slate-900 text-lg mb-1">{t}</h3>
-                <p className="text-slate-500">{d}</p>
-              </div>
-            </div>
-          ))}
+{/* Section 4: How It Works - Dark */}
+<section className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-white py-20">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-black text-white mb-10 text-center">How It Works</h2>
+    {STEPS.map(({n, t, d}: any) => (
+      <div key={n} className="flex gap-5 mb-8 items-start">
+        <div className="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl flex-shrink-0 shadow-md">{n}</div>
+        <div className="pt-1">
+          <h3 className="font-bold text-white text-lg mb-1">{t}</h3>
+          <p className="text-emerald-200">{d}</p>
         </div>
-      </section>
-
- {/* Section 5: DARK - Industries */}
- <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20">
- <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="text-center mb-12">
- <h2 className="text-3xl font-black text-white mb-2">Industries We Serve</h2>
- <p className="text-emerald-200">Specialized campaigns for every sector</p>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
- {INDUSTRIES.map(({name, result}) => (
- <div key={name} className="bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all text-center">
- <h3 className="font-bold text-white mb-1">{name}</h3>
- <p className="text-emerald-300 text-sm">{result}</p>
- </div>
- ))}
- </div>
- </div>
- </section>
-
-      {/* Section 6: Our Process - Light */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Our Process</h2>
-            <p className="text-slate-600">From first call to qualified lead</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PROCESS.map(({title, desc}, i) => (
-              <div key={title} className="relative">
-                <div className="bg-slate-50 rounded-2xl p-6 h-full border border-slate-100">
-                  <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
-                  <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
-                  <p className="text-slate-500 text-sm">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 7: CTA - Dark */}
-      <section className="bg-gradient-to-br from-slate-900 to-emerald-800 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-black mb-3">Ready to Get Started?</h2>
-          <p className="text-white text-opacity-80 mb-8">2-week trial — no commitment.</p>
-          <CTAButtons slug="emission"/>
-          <p className="text-white text-opacity-60 text-sm mt-4">
-            <Link href="/en/pricing" className="underline hover:text-white">View all pricing</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Section 8: FAQ/Benefits - Light */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Why Choose Us</h2>
-            <p className="text-slate-600">What makes our outbound different</p>
-          </div>
-          <div className="space-y-6">
-            <div className="flex gap-4 items-start">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <BoltIcon className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 mb-1">Fast Setup</h3>
-                <p className="text-slate-500 text-sm">Your campaign goes live within 48 hours. No lengthy onboarding, no complicated setup. Just results.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <UsersIcon className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 mb-1">Dedicated Agents</h3>
-                <p className="text-slate-500 text-sm">Your agents work exclusively on your campaign. They know your product, your market, your goals.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <ShieldCheckIcon className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 mb-1">Quality Guarantee</h3>
-                <p className="text-slate-500 text-sm">Every call is recorded and reviewed. You only pay for qualified leads that meet your criteria.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <AnalyticsIcon className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div>
-                <h3 className="font-bold text-slate-900 mb-1">Full Transparency</h3>
-                <p className="text-slate-500 text-sm">Real-time dashboard, daily reports, call recordings. You see everything, always.</p>
-              </div>
-            </div>
-          </div>
-</div>
+      </div>
+    ))}
+  </div>
 </section>
 
-{/* FAQ SECTION - LIGHT */}
-<section className="py-20 bg-slate-50 border-t border-slate-200">
-<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="text-center mb-12">
-<h2 className="text-3xl font-black text-slate-900 mb-2">Frequently Asked Questions</h2>
-<p className="text-slate-600">Common questions about our outbound service</p>
-<div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full mt-4"/>
-</div>
-<div className="space-y-4">
-<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
-<summary className="font-bold text-slate-900 flex justify-between items-center">
-How do you qualify leads?
-<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
-</summary>
-<p className="text-slate-600 mt-4 leading-relaxed">
-We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer to ensure quality.
-</p>
-</details>
-<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
-<summary className="font-bold text-slate-900 flex justify-between items-center">
-Do you offer custom scripts?
-<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
-</summary>
-<p className="text-slate-600 mt-4 leading-relaxed">
-Yes, our experts write scripts tailored to your offer and market. We test and optimize continuously for best results.
-</p>
-</details>
-<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
-<summary className="font-bold text-slate-900 flex justify-between items-center">
-How many calls per day?
-<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
-</summary>
-<p className="text-slate-600 mt-4 leading-relaxed">
-One agent can make 50-80 calls per day. We adapt to your goals and processing capacity.
-</p>
-</details>
-<details className="bg-white rounded-2xl p-6 cursor-pointer group border border-slate-100">
-<summary className="font-bold text-slate-900 flex justify-between items-center">
-Can I listen to the calls?
-<span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
-</summary>
-<p className="text-slate-600 mt-4 leading-relaxed">
-Yes, all calls are recorded (with consent) and available in your CRM for replay. Full transparency is our standard.
-</p>
-</details>
-</div>
-</div>
+{/* Section 5: LIGHT - Industries */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-black text-slate-900 mb-2">Industries We Serve</h2>
+      <p className="text-slate-600">Specialized campaigns for every sector</p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+      {INDUSTRIES.map(({name, result}) => (
+        <div key={name} className="bg-slate-50 rounded-xl p-5 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all text-center">
+          <h3 className="font-bold text-slate-900 mb-1">{name}</h3>
+          <p className="text-emerald-600 text-sm">{result}</p>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>
+
+{/* Section 6: DARK - Process */}
+<section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-black text-white mb-2">Our Process</h2>
+      <p className="text-emerald-200">From first call to qualified lead</p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {PROCESS.map(({title, desc}, i) => (
+        <div key={title} className="relative">
+          <div className="bg-white/10 backdrop-blur rounded-2xl p-6 h-full border border-white/20">
+            <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold mb-4">{i + 1}</div>
+            <h3 className="font-bold text-white mb-2">{title}</h3>
+            <p className="text-emerald-200 text-sm">{desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Section 7: DARK - Testimonials Auto-Slide */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-black text-white mb-3">What Our Clients Say</h2>
+      <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
+    </div>
+  </div>
+  <div className="overflow-hidden">
+    <div className="testimonial-track testimonial-marquee">
+      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+        <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
+          <div className="flex gap-0.5 mb-4">
+            {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-amber-400" />)}
+          </div>
+          <p className="text-white mb-5 leading-relaxed italic">"{t.quote}"</p>
+          <div className="flex items-center gap-3">
+            <img src={t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
+            <div>
+              <p className="font-bold text-white text-sm">{t.name}</p>
+              <p className="text-slate-100 text-xs">{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Section 8: LIGHT - FAQ */}
+<section className="bg-white py-20 border-t border-slate-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-black text-slate-900 mb-3">Frequently Asked Questions</h2>
+      <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
+    </div>
+    <div className="space-y-6">
+      {FAQ.map(({question, answer}, index) => (
+        <div key={index} className="bg-slate-50 rounded-2xl p-6">
+          <div className="flex items-start gap-4 mb-3">
+            <div className="flex-shrink-0">
+              <QuestionIcon className="w-5 h-5 text-emerald-600" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900">{question}</h3>
+              <p className="text-slate-500">{answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Section 9: LIGHT - Final CTA */}
+<section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 py-24">
+  <div className="max-w-4xl mx-auto px-4 text-center">
+    <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6">Ready to Multiply Your Leads?</h2>
+    <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Setup in 48h. No long-term commitment. We start whenever you want.</p>
+    <CTAButtons slug="emission"/>
+    <p className="text-slate-500 mt-8 text-lg">
+      <Link href="/en/pricing" className="text-emerald-600 font-bold hover:underline">View pricing</Link>
+      <span className="mx-3">·</span>
+      <Link href="/en/contact" className="text-emerald-600 font-bold hover:underline">Contact us</Link>
+    </p>
+  </div>
+</section>
+
+
 <ServiceSchema name="Outbound Calls & Prospecting" description="Phone prospecting and telemarketing service with qualified leads and appointment setting" slug="outbound" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
 <FAQSchema faqs={[
   { question: "How do you qualify leads?", answer: "We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer." },

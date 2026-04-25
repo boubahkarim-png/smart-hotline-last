@@ -195,10 +195,46 @@ const data = {
           <div className="mt-8 flex justify-center">
             <GeoContactCTA lang="en" />
           </div>
-        </div>
-      </section>
+</div>
+</section>
 
-      {/* SECTION 3: LIGHT - FORM */}
+{/* SECTION 3: LIGHT - HOW WE HELP */}
+<section className="py-20 bg-white">
+<div className="max-w-4xl mx-auto px-4">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="text-center">
+<h3 className="text-2xl font-bold text-slate-900 mb-4">Free Analysis</h3>
+<p className="text-gray-600">
+30-minute consultation to understand your specific needs
+and propose an adapted solution.
+</p>
+</div>
+<div className="text-center">
+<h3 className="text-2xl font-bold text-slate-900 mb-4">Quick Setup</h3>
+<p className="text-gray-600">
+Operational in less than 48 hours after solution validation.
+Training included for your team.
+</p>
+</div>
+<div className="text-center">
+<h3 className="text-2xl font-bold text-slate-900 mb-4">Continuous Support</h3>
+<p className="text-gray-600">
+Monthly reports, constant optimization and dedicated support
+to guarantee your long-term success.
+</p>
+</div>
+<div className="text-center">
+<h3 className="text-2xl font-bold text-slate-900 mb-4">Transparent Pricing</h3>
+<p className="text-gray-600">
+No hidden fees, no surprises. Clear pricing adapted to
+your actual needs.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+{/* SECTION 4: LIGHT - FORM */}
       <section id="contact-form" className="bg-slate-50 py-20">
         <div className="max-w-2xl mx-auto px-4">
           {sent ? (
@@ -326,7 +362,7 @@ const data = {
         </div>
       </section>
 
-      {/* SECTION 4: DARK - FAQ */}
+      {/* SECTION 5: DARK - FAQ */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-8 text-center">Common Questions</h2>
@@ -338,14 +374,14 @@ const data = {
             ].map(({ q, a }) => (
               <div key={q} className="bg-white/10 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">{q}</h3>
-                <p className="text-slate-100">{a}</p>
+                <p className="text-slate-200">{a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: LIGHT - TRUST */}
+      {/* SECTION 6: LIGHT - TRUST */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-black text-slate-900 mb-4">Why Businesses Choose Us</h2>
@@ -358,7 +394,7 @@ const data = {
         </div>
       </section>
 
-      {/* SECTION 6: DARK - TESTIMONIALS MARQUEE */}
+      {/* SECTION 7: DARK - TESTIMONIALS MARQUEE */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-center">What Our Clients Say</h2>
@@ -396,7 +432,7 @@ const data = {
         </div>
       </section>
 
-      {/* SECTION 7: LIGHT - MAP/LOCATION */}
+      {/* SECTION 8: LIGHT - MAP/LOCATION */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-black text-slate-900 mb-4">Based in Montreal, Serving All of Canada</h2>
@@ -411,11 +447,11 @@ const data = {
         </div>
       </section>
 
-      {/* SECTION 8: DARK - FINAL CTA */}
+      {/* SECTION 9: DARK - FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Stop Missing Calls?</h2>
-          <p className="text-slate-100 mb-8">Join 500+ businesses that never miss an opportunity.</p>
+          <p className="text-white mb-8">Join 500+ businesses that never miss an opportunity.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+15148190559" className="bg-white text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
               📞 Call Now: +1 514 819-0559

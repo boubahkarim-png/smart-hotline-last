@@ -174,7 +174,7 @@ export default function MontrealPage() {
             {MONTREAL_STATS.map(({value, label}) => (
               <div key={label}>
                 <p className="text-4xl font-black text-indigo-400">{value}</p>
-                <p className="text-slate-100 text-sm mt-1">{label}</p>
+                <p className="text-slate-200 text-sm mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -242,28 +242,28 @@ export default function MontrealPage() {
                 <UsersIcon className="w-6 h-6 text-indigo-300" />
               </div>
 <h3 className="font-bold text-lg text-white mb-2">Native Bilinguals</h3>
-						<p className="text-slate-100 text-sm">Perfect French and English. No accent, no hesitation.</p>
+						<p className="text-slate-200 text-sm">Perfect French and English. No accent, no hesitation.</p>
 					</div>
 					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
 						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
 							<CheckIcon className="w-6 h-6 text-indigo-300" />
 						</div>
 						<h3 className="font-bold text-lg text-white mb-2">Law 25 Compliant</h3>
-						<p className="text-slate-100 text-sm">Data protection meeting Quebec requirements.</p>
+						<p className="text-slate-200 text-sm">Data protection meeting Quebec requirements.</p>
 					</div>
 					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
 						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
 							<ClockIcon className="w-6 h-6 text-indigo-300" />
 						</div>
 						<h3 className="font-bold text-lg text-white mb-2">24/7 Availability</h3>
-						<p className="text-slate-100 text-sm">After hours, weekends, always there.</p>
+						<p className="text-slate-200 text-sm">After hours, weekends, always there.</p>
 					</div>
 					<div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
 						<div className="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-4">
 							<BuildingIcon className="w-6 h-6 text-indigo-300" />
 						</div>
 						<h3 className="font-bold text-lg text-white mb-2">Local Understanding</h3>
-						<p className="text-slate-100 text-sm">We know Montreal, its neighborhoods, its culture.</p>
+						<p className="text-slate-200 text-sm">We know Montreal, its neighborhoods, its culture.</p>
             </div>
           </div>
         </div>

@@ -112,7 +112,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl lg:text-5xl font-black mb-4">What's Included</h2>
-            <p className="text-slate-100 text-xl max-w-2xl mx-auto">Everything you need for professional call handling.</p>
+            <p className="text-white text-xl max-w-2xl mx-auto">Everything you need for professional call handling.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {FEATURES.map(({icon: Icon, title, desc}, i) => (
@@ -121,7 +121,7 @@ export default function Page() {
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-white mb-3">{title}</h3>
-                <p className="text-slate-100 leading-relaxed">{desc}</p>
+                <p className="text-white leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -220,7 +220,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 6: TESTIMONIALS */}
+{/* SECTION 6: TESTIMONIALS */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -234,13 +234,13 @@ export default function Page() {
                   {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
                 </div>
                 <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-      <div className="flex items-center gap-4">
-        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-        <div>
-        <p className="font-bold text-slate-900">{t.name}</p>
-        <p className="text-slate-500 text-sm">{t.role}</p>
-        </div>
-      </div>
+                <div className="flex items-center gap-4">
+                  <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
+                  <div>
+                    <p className="font-bold text-slate-900">{t.name}</p>
+                    <p className="text-slate-500 text-sm">{t.role}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -254,9 +254,9 @@ export default function Page() {
         </div>
         <div className="max-w-4xl mx-auto px-4 text-center text-white relative">
           <h2 className="text-4xl lg:text-5xl font-black mb-6">Ready to Improve Your Reception?</h2>
-          <p className="text-slate-100 text-xl mb-12 max-w-2xl mx-auto">2-week free trial. No commitment. We start whenever you want.</p>
-          <CTAButtons slug="virtual-receptionist"/>
-          <p className="text-slate-100 mt-8 text-lg">
+<p className="text-white text-xl mb-12 max-w-2xl mx-auto">2-week free trial. No commitment. We start whenever you want.</p>
+    <CTAButtons slug="virtual-receptionist"/>
+    <p className="text-white mt-8 text-lg">
             <Link href="/en/pricing" className="underline hover:text-white transition-colors">See pricing</Link>
             <span className="mx-3">·</span>
             <Link href="/en/contact" className="underline hover:text-white transition-colors">Contact us</Link>

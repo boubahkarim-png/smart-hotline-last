@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon } from '@/components/Icons'
+import { FAQSchema } from '@/components/FAQSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 const FEATURES = [
   {icon: PhoneIcon, title: '24/7 Reception', desc: 'No voicemail. A real agent answers every call, even at 3 AM.'},
@@ -112,32 +114,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: STATS - Modern big numbers */}
-      <section className="bg-white py-16 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">99.2%</p>
-              <p className="text-slate-600 mt-2 font-medium">Answer Rate</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">2.8s</p>
-              <p className="text-slate-600 mt-2 font-medium">Response Time</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">150+</p>
-              <p className="text-slate-600 mt-2 font-medium">Businesses Served</p>
-            </div>
-            <div className="modern-box p-8">
-              <p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">24/7</p>
-              <p className="text-slate-600 mt-2 font-medium">Availability</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* SECTION 3: DARK STATS - Modern big numbers */}
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20 border-t-4 border-sky-600">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-10">
+      <h3 className="text-2xl font-bold text-white">Numbers that inspire confidence</h3>
+    </div>
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
+        <p className="text-sky-200 mt-2 font-medium text-lg">Answer Rate</p>
+      </div>
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <p className="text-5xl lg:text-6xl font-black text-white">2.8s</p>
+        <p className="text-sky-200 mt-2 font-medium text-lg">Response Time</p>
+      </div>
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <p className="text-5xl lg:text-6xl font-black text-white">150+</p>
+        <p className="text-sky-200 mt-2 font-medium text-lg">Businesses Served</p>
+      </div>
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        <p className="text-5xl lg:text-6xl font-black text-white">24/7</p>
+        <p className="text-sky-200 mt-2 font-medium text-lg">Availability</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">How It Works</h2>
@@ -161,13 +166,10 @@ export default function Page() {
       </section>
 
  {/* SECTION 5: DARK - BENEFITS */}
- <section className="bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white py-20 relative overflow-hidden">
- <div className="absolute inset-0 pointer-events-none">
- <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-sky-500 opacity-10 rounded-full blur-3xl"></div>
- </div>
- <div className="max-w-7xl mx-auto px-4 relative">
- <div className="flex flex-col lg:flex-row items-center gap-16">
- <div className="w-full lg:w-1/2">
+<section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white border-t-4 border-sky-700">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-1/2">
  <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Trust Us?</h2>
  <p className="text-xl text-sky-200 mb-8 leading-relaxed">Our agents are trained to represent your business as if it were their own. No robotic scripts — real conversations.</p>
  <ul className="space-y-4 mb-8">
@@ -253,32 +255,39 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 8: FAQ - Modern expandable */}
-      <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
-          </div>
-          <div className="space-y-6 stagger-children">
-          {[
-            {q: "How long to get started?", a: "Usually 48 hours. We take the time to understand your business well before starting."},
-            {q: "Can I change the scripts?", a: "Absolutely. It's your business — you decide how we answer. We adjust whenever you want."},
-            {q: "How do I receive messages?", a: "By SMS, email, or call — you choose. Urgent messages are transmitted immediately."},
-          ].map((faq, i) => (
-            <details key={i} className={`modern-box p-6 cursor-pointer animate-delay-${(i+1)*100}`}>
-              <summary className="font-bold text-xl text-slate-900">{faq.q}</summary>
-              <p className="text-slate-600 mt-4 text-lg leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/en/contact?service=reception" className="inline-block bg-gradient-to-r from-sky-600 to-blue-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-              Start Now
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+{/* SECTION 8: FAQ - Modern expandable */}
+<section className="bg-white py-20">
+  <div className="max-w-4xl mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
+      <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
+    </div>
+    <div className="space-y-6 stagger-children">
+      {[
+        {q: "How long to get started?", a: "Usually 48 hours. We take the time to understand your business well before starting."},
+        {q: "Can I change the scripts?", a: "Absolutely. It's your business — you decide how we answer. We adjust whenever you want."},
+        {q: "How do I receive messages?", a: "By SMS, email, or call — you choose. Urgent messages are transmitted immediately."},
+      ].map((faq, i) => (
+        <details key={i} className={`modern-box p-6 cursor-pointer animate-delay-${(i+1)*100}`}>
+          <summary className="font-bold text-xl text-slate-900">{faq.q}</summary>
+          <p className="text-slate-600 mt-4 text-lg leading-relaxed">{faq.a}</p>
+        </details>
+      ))}
+    </div>
+    <div className="text-center mt-12">
+      <Link href="/en/contact?service=reception" className="inline-block bg-gradient-to-r from-sky-600 to-blue-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+        Start Now
+      </Link>
+    </div>
+  </div>
+</section>
+<ServiceSchema name="Inbound Calls 24/7" description="Professional inbound call service with French-speaking agents 24/7" slug="inbound" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+<FAQSchema faqs={[
+  { question: "How long to get started?", answer: "Usually 48 hours. We take the time to understand your business well before starting." },
+  { question: "Can I change the scripts?", answer: "Absolutely. It's your business — you decide how we answer. We adjust whenever you want." },
+  { question: "How do I receive messages?", answer: "By SMS, email, or call — you choose. Urgent messages are transmitted immediately." },
+  { question: "Do the agents speak French?", answer: "Yes, all our agents are French-speaking from Quebec or France. They master both French and English." }
+]} />
+</>
   )
 }
