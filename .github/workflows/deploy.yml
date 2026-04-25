@@ -25,14 +25,14 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
-- run: npm ci
+      - run: npm ci
 
-- name: Build for GitHub Pages
-  run: npm run build:github
+      - name: Build for GitHub Pages
+        run: npm run build:github
 
-- run: touch out/.nojekyll
+      - run: touch out/.nojekyll
 
-    - name: Setup Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
