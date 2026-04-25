@@ -40,6 +40,27 @@ const PROCESS = [
 {'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
 ]
 
+const TESTIMONIALS = [
+  {
+    quote: "Our number of qualified appointments doubled in 2 months. The team really understands our industry and knows how to talk to our prospects.",
+    name: "Jean-François Lambert",
+    role: "Sales Director, Solutions TechPlus",
+    img: '/images/testimonial-francois.jpg'
+  },
+  {
+    quote: "The lead quality is exceptional. We spend less time filtering and more time closing deals.",
+    name: "Marie-Chantal Dubois",
+    role: "Owner, Dubois Consulting",
+    img: '/images/testimonial-marie.jpg'
+  },
+  {
+    quote: "Daily reporting lets us adjust our strategy in real time. It's a true partnership, not just a service.",
+    name: "Patrick Gagnon",
+    role: "CEO, Gagnon Stratégies",
+    img: '/images/testimonial-pierre-new.jpg'
+  }
+]
+
 const FAQ = [
 {
 question: "How do you qualify leads?",
