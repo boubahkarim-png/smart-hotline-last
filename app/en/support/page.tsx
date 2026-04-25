@@ -11,7 +11,7 @@ const FEATURES = [
 {icon: HeadphonesIcon, title: 'Multichannel Support', desc: 'Phone, email, chat, WhatsApp — we handle everything from a single interface.'},
 {icon: MailIcon, title: 'Organized Tickets', desc: 'Every request becomes a ticket. Nothing gets lost, everything is tracked.'},
 {icon: ChatIcon, title: 'Real-Time Chat', desc: 'Instant responses for customers who prefer to write.'},
-{icon: PhoneIcon, title: 'Dedicated Line', desc: 'A number for your support. We answer in your company's name.'},
+{icon: PhoneIcon, title: 'Dedicated Line', desc: "A number for your support. We answer in your company's name."},
 ]
 
 const TESTIMONIALS = [
