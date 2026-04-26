@@ -1,5 +1,5 @@
-import GeoTestimonials from '@/components/GeoTestimonials'
 'use client'
+import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
