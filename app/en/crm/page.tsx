@@ -213,15 +213,15 @@ See all pricing
 </section>
 
 {/* SECTION 6: DARK TESTIMONIALS AUTO-SLIDE */}
-<section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white border-t-4 border-indigo-700 overflow-hidden">
-<div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-16">
-<h2 className="text-4xl lg:text-5xl font-black text-white mb-4">What Our Clients Say</h2>
-<div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-600 mx-auto rounded-full"></div>
-</div>
-</div>
-<GeoTestimonials lang="en" theme="dark" layout="marquee" cardSize="sm" roleColor="text-orange-300 text-sm" basePath={basePath} />
-</section>
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
+          </div>
+        </div>
+        <GeoTestimonials lang="en" theme="light" layout="marquee" basePath={basePath} />
+      </section>
 
 {/* SECTION 7: FINAL CTA */}
 <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 py-24 relative overflow-hidden">

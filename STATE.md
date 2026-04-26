@@ -87,11 +87,48 @@
 | Dashboard | https://dashboard.tawk.to |
 | Embed URL | `https://embed.tawk.to/69c14d2a91de1e1c374c9f29/1jkdharj3` |
 
-## Recent Commits (April 16, 2026)
-1. `d2bfc85` - feat: Add FAQ sections to about/a-propos pages for SEO
-2. `81946c2` - feat: Add 7-field contact forms and FAQ sections to services pages
-3. `647a7cc` - Add FAQ sections to EN homepage and outbound page
-4. `b6ef7b2` - Fix basePath for GitHub Pages
+## Agent Readiness - COMPLETED (April 26, 2026)
+1. ✅ `.well-known/agent-card.json` — A2A Agent Card (7 skills, 3 interfaces)
+2. ✅ `.well-known/api-catalog` — API Catalog (linkset+json format)
+3. ✅ `.well-known/agent-skills/index.json` — 4 skills (inbound, outbound, ai-voice, crm)
+4. ✅ `.well-known/mcp/server-card.json` — MCP Server Card (3 tools)
+5. ✅ `.well-known/oauth-authorization-server` — OAuth 2.0 discovery
+6. ✅ `.well-known/oauth-protected-resource` — OAuth resource metadata
+7. ✅ `robots.txt` — Content-Signal directive + AI crawler rules
+8. ✅ `llms.txt` — AI-optimized content
+9. ✅ `public/_headers` — GitHub Pages headers (Link + Content-Type)
+
+### isitagentready.com Score: 2/5 Bot-Aware (GitHub Pages)
+- **PASS**: robots.txt, sitemap, AI bot rules, Content-Signal, api-catalog, oauth, MCP, A2A, agent-skills, webMCP
+- **FAIL**: Link headers (GitHub Pages can't serve custom response headers)
+- **FAIL**: Markdown negotiation (GitHub Pages can't run edge functions)
+- **NOTE**: Both failing checks require Netlify — netlify.toml + edge function are prepared
+
+### Geo-Localized Testimonials - COMPLETED (April 26, 2026)
+1. ✅ GeoTestimonials component on ALL 21 service pages
+2. ✅ 6 countries: Canada, France, Belgium, Switzerland, USA, UK
+3. ✅ Bilingual FR/EN testimonials per country
+
+### Oracle Audit Fixes - COMPLETED (April 26, 2026)
+1. ✅ netlify.toml: Removed Role=["admin"] from redirect (was blocking public)
+2. ✅ netlify.toml: Single-line TOML Link headers (multi-line unreliable)
+3. ✅ edge function: Scoped to /fr/* + /en/* + static asset guard
+4. ✅ netlify.toml: Cache-Control immutable only for static assets
+5. ✅ netlify.toml: NODE_VERSION 22
+6. ✅ netlify.toml: Removed dead /docs/api Link header
+7. ✅ public/_headers: Restored for GitHub Pages, removed dead /docs/api link
+
+## Deployment Status
+- **Current**: GitHub Pages (boubahkarim-png/smart-hotline-last, main branch)
+- **Netlify site created**: smart-hotline-prod (ID: 7d77bfb5-9d2c-4243-8646-cda6b3f92d7d)
+- **Netlify blocked**: Domain www.smart-hotline.com owned by another Netlify account
+- **Netlify token**: nfp_iV1xL6MQawZ6R4vRHJPhYKBMkW7uoXYG016c (free, expires)
+
+## Recent Commits (April 26, 2026)
+1. `7ef1925` - fix: restore _headers for GitHub Pages, remove dead /docs/api Link header
+2. `36a7955` - chore: commit all pending changes (deploy workflow)
+3. `cb13c79` - chore: commit pending changes (edge function + _headers + netlify.toml fixes)
+4. `e53a2ca` - chore: commit pending changes (netlify.toml rewrite + docs)
 
 ---
-**Last updated**: April 16, 2026
+**Last updated**: April 26, 2026

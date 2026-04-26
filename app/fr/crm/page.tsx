@@ -9,10 +9,19 @@ import { FAQSchema } from '@/components/FAQSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
-{icon: FolderIcon, title: 'Gestion des leads', desc: 'Capture, qualification et suivi de tous vos prospects.'},
-{icon: MailIcon, title: 'Email marketing', desc: 'Campagnes automatisées avec Mautic. Nurturing et relances.'},
-{icon: PhoneIcon, title: 'Click-to-call', desc: 'Appelez vos prospects en un clic depuis le CRM.'},
-{icon: TrendingIcon, title: 'Pipeline de ventes', desc: 'Visualisez et gérez votre tunnel de vente en temps réel.'},
+  {icon: FolderIcon, title: 'Gestion des leads', desc: 'Capture, qualification et suivi de tous vos prospects.'},
+  {icon: MailIcon, title: 'Email marketing', desc: 'Campagnes automatisées avec Mautic. Nurturing et relances.'},
+  {icon: PhoneIcon, title: 'Click-to-call', desc: 'Appelez vos prospects en un clic depuis le CRM.'},
+  {icon: TrendingIcon, title: 'Pipeline de ventes', desc: 'Visualisez et gérez votre tunnel de vente en temps réel.'},
+  {icon: DatabaseIcon, title: 'Listes qualifiées', desc: 'Listes B2B et B2C par secteur, région et taille d\'entreprise.'},
+  {icon: LinkIcon, title: 'Intégrations', desc: 'Connexion avec votre site, Zapier, Google Workspace et plus.'},
+]
+
+const STEPS = [
+  {n: '1', t: 'Audit', d: "Analyse de vos données existantes et nettoyage."},
+  {n: '2', t: 'Configuration', d: "Personnalisation des modules selon votre processus."},
+  {n: '3', t: 'Import', d: "Migration de vos contacts sans perte de données."},
+  {n: '4', t: 'Formation', d: "Formation de votre équipe et support continu."},
 ]
 
 
@@ -143,12 +152,7 @@ CRM Intégré &<br/>
 <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-{[
-{n: '1', t: 'Audit', d: "Analyse de vos données existantes et nettoyage"},
-{n: '2', t: 'Configuration', d: "Personnalisation des modules selon votre processus"},
-{n: '3', t: 'Import', d: "Migration de vos contacts sans perte de données"},
-{n: '4', t: 'Formation', d: "Formation de votre équipe et support continu"},
-].map((step, i) => (
+        {STEPS.map(({n, t, d}: any, i: number) => (
 <div key={step.n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
 <h3 className="font-bold text-xl text-slate-900 mb-3">{step.t}</h3>
@@ -207,15 +211,15 @@ CRM Intégré &<br/>
  </section>
 
 {/* SECTION 6: DARK TESTIMONIALS AUTO-SLIDE */}
-<section className="py-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white border-t-4 border-indigo-700 overflow-hidden">
-<div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-16">
-<h2 className="text-4xl lg:text-5xl font-black text-white mb-4">Ce que nos clients disent</h2>
-<div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-600 mx-auto rounded-full"></div>
-</div>
-</div>
-<GeoTestimonials lang="fr" theme="dark" layout="marquee" cardSize="sm" roleColor="text-orange-300 text-sm" basePath={basePath} />
-</section>
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
+          </div>
+        </div>
+        <GeoTestimonials lang="fr" theme="light" layout="marquee" basePath={basePath} />
+      </section>
 
 {/* SECTION 7: FINAL CTA */}
 <section className="bg-gradient-to-br from-slate-900 via-orange-900 to-amber-900 py-24 relative overflow-hidden">

@@ -109,29 +109,32 @@ Sophie, votre IA<br/>
 </div>
 </section>
 
-{/* SECTION 3: STATS */}
-<section className="bg-white py-16 border-b border-slate-100">
-<div className="max-w-7xl mx-auto px-4">
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">98%</p>
-<p className="text-slate-600 mt-2 font-medium text-lg">Taux de satisfaction</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">2s</p>
-<p className="text-slate-600 mt-2 font-medium text-lg">Temps de réponse</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">500+</p>
-<p className="text-slate-600 mt-2 font-medium text-lg">Entreprises servies</p>
-</div>
-<div className="modern-box p-8">
-<p className="text-5xl lg:text-6xl font-black bg-gradient-to-r from-violet-600 to-purple-700 bg-clip-text text-transparent">24/7</p>
-<p className="text-slate-600 mt-2 font-medium text-lg">Disponibilité</p>
-</div>
-</div>
-</div>
-</section>
+{/* SECTION 3: DARK STATS */}
+      <section className="bg-gradient-to-br from-slate-900 via-violet-950 to-purple-900 text-white py-20 border-t-4 border-violet-600">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white">Des résultats qui parlent</h3>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <p className="text-5xl lg:text-6xl font-black text-white">98%</p>
+              <p className="text-violet-200 mt-2 font-medium text-lg">Taux de satisfaction</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <p className="text-5xl lg:text-6xl font-black text-white">2s</p>
+              <p className="text-violet-200 mt-2 font-medium text-lg">Temps de réponse</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <p className="text-5xl lg:text-6xl font-black text-white">500+</p>
+              <p className="text-violet-200 mt-2 font-medium text-lg">Entreprises servies</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <p className="text-5xl lg:text-6xl font-black text-white">24/7</p>
+              <p className="text-violet-200 mt-2 font-medium text-lg">Disponibilité</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 {/* SECTION 4: HOW IT WORKS */}
 <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
