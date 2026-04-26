@@ -1,0 +1,148 @@
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+const SUPPORTED_LANGS = ['fr', 'en']
+const DEFAULT_LANG = 'fr'
+
+const AGENT_DISCOVERY_LINKS = [
+  '</.well-known/api-catalog>; rel="api-catalog"',
+  '</docs/api>; rel="service-doc"',
+  '</.well-known/mcp/server-card.json>; rel="mcp-server"',
+  '</.well-known/agent-card.json>; rel="a2a"',
+]
+
+function getPreferredLanguage(acceptLanguage: string | null): string {
+  if (!acceptLanguage) return DEFAULT_LANG
+
+  const languages = acceptLanguage.split(',').map(lang => {
+    const [code] = lang.trim().split('-')
+    return code.toLowerCase()
+  })
+
+  for (const lang of languages) {
+    if (SUPPORTED_LANGS.includes(lang)) {
+      return lang
+    }
+  }
+
+  return DEFAULT_LANG
+}
+
+function htmlToMarkdown(html: string): string {
+  let text = html
+
+  text = text.replace(/<head[^>]*>[\s\S]*?<\/head>/gi, '')
+  text = text.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+  text = text.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+  text = text.replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
+  text = text.replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
+  text = text.replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, '')
+  text = text.replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, '')
+  text = text.replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
+
+  text = text.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '\n# $1\n')
+  text = text.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n')
+  text = text.replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '\n### $1\n')
+  text = text.replace(/<h4[^>]*>([\s\S]*?)<\/h4>/gi, '\n#### $1\n')
+  text = text.replace(/<h5[^>]*>([\s\S]*?)<\/h5>/gi, '\n##### $1\n')
+  text = text.replace(/<h6[^>]*>([\s\S]*?)<\/h6>/gi, '\n###### $1\n')
+
+  text = text.replace(/<a[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, '[$2]($1)')
+  text = text.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, '**$1**')
+  text = text.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, '**$1**')
+  text = text.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, '*$1*')
+  text = text.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, '*$1*')
+
+  text = text.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, function (match, content) {
+    const cleaned = content.replace(/<[^>]+>/g, '').trim()
+    return '- ' + cleaned + '\n'
+  })
+
+  text = text.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '\n$1\n')
+  text = text.replace(/<br\s*\/?>/gi, '\n')
+  text = text.replace(/<hr\s*\/?>/gi, '\n---\n')
+
+  text = text.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, function (match, content) {
+    return content.split('\n').map(function (line) { return '> ' + line }).join('\n')
+  })
+
+  text = text.replace(/<img[^>]*alt="([^"]*)"[^>]*>/gi, '![$1]')
+  text = text.replace(/<img[^>]*>/gi, '')
+
+  text = text.replace(/<[^>]+>/g, '')
+
+  text = text.replace(/&amp;/g, '&')
+  text = text.replace(/&lt;/g, '<')
+  text = text.replace(/&gt;/g, '>')
+  text = text.replace(/&quot;/g, '"')
+  text = text.replace(/&#39;/g, "'")
+  text = text.replace(/&nbsp;/g, ' ')
+
+  text = text.replace(/\n{3,}/g, '\n\n')
+  text = text.trim()
+
+  return text
+}
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  const acceptHeader = request.headers.get('accept') || ''
+
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/images') ||
+    pathname.startsWith('/videos') ||
+    pathname.startsWith('/docs/api') ||
+    pathname.includes('.') ||
+    pathname.startsWith('/api')
+  ) {
+    const response = NextResponse.next()
+    AGENT_DISCOVERY_LINKS.forEach(link => {
+      response.headers.append('Link', link)
+    })
+    return response
+  }
+
+  if (acceptHeader.includes('text/markdown')) {
+    const response = NextResponse.next()
+    AGENT_DISCOVERY_LINKS.forEach(link => {
+      response.headers.append('Link', link)
+    })
+    response.headers.set('x-prefer-markdown', 'true')
+    return response
+  }
+
+  const langMatch = pathname.match(/^\/(fr|en)(\/|$)/)
+
+  if (langMatch) {
+    const response = NextResponse.next()
+    AGENT_DISCOVERY_LINKS.forEach(link => {
+      response.headers.append('Link', link)
+    })
+    return response
+  }
+
+  if (pathname === '/' || pathname === '') {
+    const acceptLanguage = request.headers.get('accept-language')
+    const preferredLang = getPreferredLanguage(acceptLanguage)
+    const url = request.nextUrl.clone()
+    url.pathname = `/${preferredLang}`
+    const response = NextResponse.redirect(url)
+    AGENT_DISCOVERY_LINKS.forEach(link => {
+      response.headers.append('Link', link)
+    })
+    return response
+  }
+
+  const url = request.nextUrl.clone()
+  url.pathname = `/${DEFAULT_LANG}${pathname}`
+  const response = NextResponse.redirect(url)
+  AGENT_DISCOVERY_LINKS.forEach(link => {
+    response.headers.append('Link', link)
+  })
+  return response
+}
+
+export const config = {
+  matcher: ['/((?!_next|images|videos|api|favicon.ico|.*\\..*).*)']
+}
