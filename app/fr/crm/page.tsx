@@ -153,10 +153,10 @@ CRM Intégré &<br/>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
         {STEPS.map(({n, t, d}: any, i: number) => (
-<div key={step.n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
-<div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
-<h3 className="font-bold text-xl text-slate-900 mb-3">{step.t}</h3>
-<p className="text-slate-600 leading-relaxed">{step.d}</p>
+          <div key={n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
+            <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{n}</div>
+            <h3 className="font-bold text-xl text-slate-900 mb-3">{t}</h3>
+            <p className="text-slate-600 leading-relaxed">{d}</p>
 </div>
 ))}
 </div>
