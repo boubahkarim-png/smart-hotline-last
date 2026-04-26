@@ -1,4 +1,12 @@
+const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp|avif|mp4|webm|json|xml|txt|map)$/i;
+
 export default async function handler(request, context) {
+  const url = new URL(request.url);
+
+  if (STATIC_EXTENSIONS.test(url.pathname)) {
+    return context.next();
+  }
+
   const accept = request.headers.get('accept') || '';
 
   if (!accept.includes('text/markdown')) {
@@ -83,6 +91,4 @@ function htmlToMarkdown(html) {
   return text;
 }
 
-export const config = {
-  path: '/*',
-};
+

@@ -1,7 +1,6 @@
 # ============================================
 # NETLIFY CONFIGURATION - SMART HOTLINE
-# Production-ready for www.smart-hotline.com
-# Fixes applied: 7 critical issues from audit
+# www.smart-hotline.com — production
 # ============================================
 
 [build]
@@ -26,7 +25,6 @@ X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-# FIX #4: Cache-Control for /* must NOT be immutable — HTML pages need revalidation
 Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
@@ -50,9 +48,8 @@ for = "/videos/*"
 Cache-Control = "public, max-age=31536000, immutable"
 
 # ============================================
-# AGENT-DISCOVERY HEADERS (RFC 8288 Link Headers)
-# FIX #2: Single-line string — multi-line TOML syntax is unreliable
-# FIX #6: Removed dead /docs/api link (page doesn't exist yet)
+# RFC 8288 LINK HEADERS — agent discovery
+# WARNING: single-line string required (multi-line TOML is unreliable)
 # ============================================
 
 [[headers]]
@@ -114,17 +111,15 @@ Cache-Control = "public, max-age=3600, must-revalidate"
 
 # ============================================
 # REDIRECTS
-# FIX #1: Removed Role=["admin"] condition that blocked public access
+# WARNING: do NOT add Role conditions — blocks public access
 # ============================================
 
-# Root redirect to French (primary language)
 [[redirects]]
 from = "/"
 to = "/fr/"
 status = 302
 force = true
 
-# Language-based redirect for French browsers
 [[redirects]]
 from = "/*"
 to = "/fr/:splat"
@@ -132,7 +127,6 @@ status = 302
 force = false
 conditions = {Language = ["fr"]}
 
-# Language-based redirect for English browsers
 [[redirects]]
 from = "/*"
 to = "/en/:splat"
@@ -140,16 +134,13 @@ status = 302
 force = false
 conditions = {Language = ["en"]}
 
-# Default fallback redirect to French
 [[redirects]]
 from = "/*"
 to = "/fr/:splat"
 status = 302
 
 # ============================================
-# EDGE FUNCTIONS
-# FIX #3: Scoped to HTML pages only — avoids intercepting static assets
-# Netlify edge functions use excludedPath to skip static files
+# EDGE FUNCTIONS — scoped to HTML pages only
 # ============================================
 
 [[edge_functions]]
@@ -161,7 +152,7 @@ function = "markdown-for-agents"
 path = "/en/*"
 
 # ============================================
-# POST PROCESSING (FREE)
+# POST PROCESSING
 # ============================================
 
 [build.processing]
