@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
+import basePath from '@/lib/basePath'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon, QuestionIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
@@ -82,18 +83,18 @@ function CTAButtons({ slug }: { slug: string }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/en/contact?service=${slug}`}
-        className="bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-emerald-700 text-center shadow-lg">
+        className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-emerald-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Free Demo
       </Link>
       {showPhone ? (
         <a href={`tel:${CONTACT.phone}`}
-          className="border-2 border-emerald-600 text-emerald-600 font-bold px-7 py-3.5 rounded-xl hover:bg-emerald-600 hover:text-white transition-all text-center">
+        className="border-2 border-emerald-600 text-emerald-600 font-bold px-8 py-4 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all text-center hover:shadow-xl">
           {CONTACT.phoneDisplay}
         </a>
       ) : (
         <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
-          className="border-2 border-emerald-600 text-emerald-600 font-bold px-7 py-3.5 rounded-xl hover:bg-emerald-600 hover:text-white transition-all text-center">
-          💬 WhatsApp 24/7
+        className="border-2 border-emerald-600 text-emerald-600 font-bold px-8 py-4 rounded-2xl hover:bg-emerald-600 hover:text-white transition-all text-center hover:shadow-xl">
+          WhatsApp 24/7
         </a>
       )}
     </div>
@@ -103,43 +104,48 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
-      {/* Section 1: Hero - Light */}
-      <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex flex-col lg:flex-row items-center gap-12">
-			<div className="w-full lg:w-[40%]">
-				<span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full mb-5">
-					<TargetIcon className="w-4 h-4" /> Outbound Calls
-				</span>
-				<h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-					Multiply Your Leads<br/>with Our Agents
-				</h1>
-				<p className="text-lg text-slate-600 mb-8">Prospecting, telemarketing, appointment setting. Our expert agents turn your targets into clients with measurable results.</p>
-				<CTAButtons slug="emission"/>
-				<div className="flex flex-wrap gap-3">
-					{['Qualified leads', 'CRM included', 'Optimized scripts', 'Daily reporting'].map(b => (
-						<span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-emerald-600" /> {b}</span>
-					))}
-				</div>
-			</div>
-			<div className="w-full lg:w-[60%]">
-              <div className="relative">
-                <img src="/images/telemarketing.webp" alt="Outbound calling agent"
-                  className="rounded-2xl shadow-2xl w-full object-cover"
-                  style={{maxHeight:'380px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <TrendingIcon className="w-5 h-5 text-emerald-600" />
-                    </div>
-                    <div><p className="font-black text-sm">+40% more leads</p><p className="text-slate-500 text-xs">on average</p></div>
-                  </div>
-                </div>
+{/* Section 1: HERO - Modern design with bigger image */}
+<section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="w-full lg:w-[40%] animate-slide-left">
+        <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+          <PhoneIcon className="w-5 h-5" /> Outbound Calls
+        </span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+          Multiply Your Leads<br/>
+          <span className="bg-gradient-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent">with Our Agents</span>
+        </h1>
+        <p className="text-xl text-slate-600 mb-8 leading-relaxed">Prospecting, telemarketing, appointment setting. Our expert agents turn your targets into clients with measurable results.</p>
+        <CTAButtons slug="emission"/>
+        <div className="flex flex-wrap gap-3 mt-6">
+        {['Qualified leads', 'CRM included', 'Optimized scripts', 'Daily reporting'].map((b, i) => (
+          <span key={b} className={`flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md animate-fade-in-up animate-delay-${(i+2)*100}`}><CheckIcon className="w-5 h-5 text-emerald-600" /> {b}</span>
+        ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-[60%] animate-slide-right">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-green-500 rounded-3xl blur-2xl opacity-20"></div>
+          <img src={`${basePath}/images/telemarketing.webp`} alt="Outbound calling agent" loading="lazy"
+          className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom"
+          style={{maxHeight:'550px', objectFit:'cover'}}/>
+          <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                <TrendingIcon className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <p className="font-black text-xl">+40% more leads</p>
+                <p className="text-slate-500 text-sm">on average</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 {/* Section 2: Results Stats - Dark */}
 <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 py-16">

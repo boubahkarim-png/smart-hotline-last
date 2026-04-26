@@ -25,16 +25,16 @@ function CTAButtons({ slug }: { slug: string }) {
   const showPhone = !loading && geo.showPhone
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-6">
-      <Link href={`/fr/contact?service=${slug}`} className="bg-teal-600 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-teal-700 text-center shadow-lg">
+      <Link href={`/fr/contact?service=${slug}`} className="bg-teal-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-teal-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Démo Sans Engagement
       </Link>
       {showPhone ? (
-        <a href={`tel:${CONTACT.phone}`} className="border-2 border-white text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-all text-center">
+        <a href={`tel:${CONTACT.phone}`} className="border-2 border-teal-600 text-teal-600 font-bold px-8 py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition-all text-center hover:shadow-xl">
           {CONTACT.phoneDisplay}
         </a>
       ) : (
-        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-all text-center">
-          💬 WhatsApp 24/7
+        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-teal-600 text-teal-600 font-bold px-8 py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition-all text-center hover:shadow-xl">
+          WhatsApp 24/7
         </a>
       )}
     </div>
@@ -44,58 +44,50 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
-      {/* SECTION 1: LIGHT - Hero */}
-      <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex flex-col lg:flex-row items-center gap-12">
-			<div className="w-full lg:w-[40%]">
-				<span className="inline-flex items-center gap-2 bg-teal-100 text-teal-700 text-sm font-semibold px-4 py-2 rounded-full mb-6">
-					<span className="w-2.5 h-2.5 bg-teal-500 rounded-full animate-pulse"/>
-					Support Client
-				</span>
-				<h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-					Support Client<br/>
-					<span className="bg-gradient-to-r from-teal-600 to-cyan-700 bg-clip-text text-transparent">Qui Ressemble à Vous</span>
-				</h1>
-				<p className="text-lg text-slate-600 mb-8">
-					Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des réponses rapides, en français, par des vrais humains.
-				</p>
-				<div className="flex flex-col sm:flex-row gap-4 mb-6">
-					<Link href="/fr/contact?service=support" className="bg-teal-600 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-teal-700 text-center shadow-lg">
-						Démo Sans Engagement
-					</Link>
-					<a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-teal-600 text-teal-600 font-bold px-7 py-3.5 rounded-xl hover:bg-teal-600 hover:text-white transition-all text-center">
-						💬 WhatsApp 24/7
-					</a>
-				</div>
-				<div className="flex flex-wrap gap-3">
-					{['Multicanal', 'Tickets organisés', 'Réponses < 2h', 'Équipe dédiée'].map(b => (
-						<span key={b} className="flex items-center gap-2 bg-slate-100 text-slate-700 text-sm font-medium px-4 py-2 rounded-full">
-							<CheckIcon className="w-5 h-5 text-teal-600" /> {b}
-						</span>
-					))}
-				</div>
-			</div>
-			<div className="w-full lg:w-[60%]">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
-                <img src={`${basePath}/images/support-tech.webp`} alt="Support client" loading="lazy" className="relative rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'380px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 modern-box">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <ClockIcon className="w-7 h-7 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-black text-xl">Réponse &lt; 2h</p>
-                      <p className="text-slate-500 text-sm">en moyenne</p>
-                    </div>
-                  </div>
-                </div>
+{/* SECTION 1: HERO - Modern design with bigger image */}
+<section className="bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="w-full lg:w-[40%] animate-slide-left">
+        <span className="inline-flex items-center gap-2 bg-teal-100 text-teal-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+          <HeadphonesIcon className="w-5 h-5" /> Support Client
+        </span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+          Support Client<br/>
+          <span className="bg-gradient-to-r from-teal-600 to-cyan-700 bg-clip-text text-transparent">Qui Ressemble à Vous</span>
+        </h1>
+        <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+          Téléphone, email, chat, WhatsApp — on gère tout. Vos clients obtiennent des réponses rapides, en français, par des vrais humains.
+        </p>
+        <CTAButtons slug="support"/>
+        <div className="flex flex-wrap gap-3 mt-6">
+          {['Multicanal', 'Tickets organisés', 'Réponses < 2h', 'Équipe dédiée'].map((b, i) => (
+            <span key={b} className={`flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md animate-fade-in-up animate-delay-${(i+2)*100}`}>
+              <CheckIcon className="w-5 h-5 text-teal-600" /> {b}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-[60%] animate-slide-right">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
+          <img src={`${basePath}/images/support-tech.webp`} alt="Support client" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+          <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
+                <HeadphonesIcon className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <p className="font-black text-xl">Réponse &lt; 2h</p>
+                <p className="text-slate-500 text-sm">en moyenne</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SECTION 2: DARK - Features */}
       <section className="bg-gradient-to-br from-slate-900 via-teal-950 to-teal-900 text-white py-20 lg:py-24 relative overflow-hidden">

@@ -35,18 +35,18 @@ function CTAButtons({ slug }: { slug: string }) {
   const showPhone = !loading && geo.showPhone
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-6">
-      <Link href={`/en/contact?service=${slug}`} className="bg-purple-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-purple-700 text-center shadow-lg">
-        Free Demo
-      </Link>
-      {showPhone ? (
-        <a href={`tel:${CONTACT.phone}`} className="border-2 border-purple-600 text-purple-600 font-bold px-8 py-4 rounded-2xl hover:bg-purple-600 hover:text-white transition-all text-center">
-          {CONTACT.phoneDisplay}
-        </a>
-      ) : (
-        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-purple-600 text-purple-600 font-bold px-8 py-4 rounded-2xl hover:bg-purple-600 hover:text-white transition-all text-center">
-          💬 WhatsApp 24/7
-        </a>
-      )}
+    <Link href={`/en/contact?service=${slug}`} className="bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-orange-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
+      Free Demo
+    </Link>
+    {showPhone ? (
+      <a href={`tel:${CONTACT.phone}`} className="border-2 border-orange-600 text-orange-600 font-bold px-8 py-4 rounded-2xl hover:bg-orange-600 hover:text-white transition-all text-center hover:shadow-xl">
+        {CONTACT.phoneDisplay}
+      </a>
+    ) : (
+      <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-orange-600 text-orange-600 font-bold px-8 py-4 rounded-2xl hover:bg-orange-600 hover:text-white transition-all text-center hover:shadow-xl">
+        WhatsApp 24/7
+      </a>
+    )}
     </div>
   )
 }
@@ -54,34 +54,43 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
-{/* SECTION 1: HERO */}
-<section className="bg-gradient-to-br from-slate-50 via-white to-orange-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
+      {/* SECTION 1: HERO - Modern design with bigger image */}
+      <section className="bg-gradient-to-br from-slate-50 via-white to-orange-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-<div className="w-full lg:w-[40%]">
-							<span className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full mb-5">
-                <CRMIcon className="w-4 h-4" /> CRM & Lists
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="w-full lg:w-[40%] animate-slide-left">
+              <span className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 animate-slow-float">
+                <CRMIcon className="w-5 h-5" /> CRM & Lists
               </span>
-              <h1 className="text-4xl lg:text-5xl font-black mb-5 leading-tight text-slate-900">
-                Integrated CRM &<br/>Prospect Lists
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
+                Integrated CRM &<br/>
+                <span className="bg-gradient-to-r from-orange-600 to-amber-700 bg-clip-text text-transparent">Prospect Lists</span>
               </h1>
-              <p className="text-lg text-slate-600 mb-8">Centralize your leads, track opportunities and maximize conversions with SuiteCRM and our qualified B2B/B2C lists.</p>
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                Centralize your leads, track opportunities and maximize conversions with SuiteCRM and our qualified B2B/B2C lists.
+              </p>
               <CTAButtons slug="crm"/>
-              <div className="flex flex-wrap gap-3">
-                {['SuiteCRM included', 'B2B/B2C lists', 'Mautic integrated', 'Auto reports'].map(b => (
-                  <span key={b} className="flex items-center gap-1 bg-slate-100 text-slate-700 text-sm px-3 py-1.5 rounded-full"><CheckIcon className="w-4 h-4 text-purple-600" /> {b}</span>
+              <div className="flex flex-wrap gap-3 mt-6">
+                {['SuiteCRM included', 'B2B/B2C lists', 'Mautic integrated', 'Auto reports'].map((b, i) => (
+                  <span key={b} className={`flex items-center gap-2 bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-md animate-fade-in-up animate-delay-${(i+2)*100}`}>
+                    <CheckIcon className="w-5 h-5 text-orange-600" /> {b}
+                  </span>
                 ))}
               </div>
             </div>
-<div className="w-full lg:w-[60%]">
-							<div className="relative">
-								<img src={`${basePath}/images/crm-interface.webp`} alt="CRM dashboard" className="rounded-2xl shadow-2xl w-full object-cover" style={{maxHeight:'550px', objectFit:'cover'}}/>
-                <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                      <TrendingIcon className="w-5 h-5 text-purple-600" />
+            <div className="w-full lg:w-[60%] animate-slide-right">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-amber-500 rounded-3xl blur-2xl opacity-20"></div>
+                <img src={`${basePath}/images/crm-interface.webp`} alt="CRM dashboard" loading="lazy" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+                <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <TrendingIcon className="w-7 h-7 text-white" />
                     </div>
-                    <div><p className="font-black text-sm">+35% conversion</p><p className="text-slate-500 text-xs">client average</p></div>
+                    <div>
+                      <p className="font-black text-xl">+35% conversion</p>
+                      <p className="text-slate-500 text-sm">client average</p>
+                    </div>
                   </div>
                 </div>
               </div>
