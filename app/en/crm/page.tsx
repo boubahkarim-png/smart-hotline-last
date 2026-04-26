@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
   {'icon': FolderIcon, 'title': 'Lead Management', 'desc': 'Capture, qualification and tracking of all your prospects.'},
@@ -23,12 +24,6 @@ const STEPS = [
   {'n': '4', 't': 'Training & Follow-up', 'd': 'Team training and ongoing support.'},
 ]
 
-const TESTIMONIALS = [
-{q: "Before, our leads were in 3 different Excel files. Now everything is in one place. We don't lose anything anymore.", name: 'Marie-Claire Beaumont', role: 'Sales Director, Solutions Pro QC', img: '/images/testimonial-marie.jpg'},
-{q: "The B2B lists they provided? Clean, up-to-date. Not like the ones we used to buy for $500 with emails that no longer existed.", name: 'François Gagnon', role: 'Founder, InnoTech Montreal', img: '/images/testimonial-francois.jpg'},
-{q: "We doubled our conversion rate in 4 months. CRM + outbound calls makes a huge difference.", name: 'Isabelle Tremblay', role: 'Sales Manager, Groupe Nordik', img: '/images/testimonial-isabelle.jpg'},
-{q: "The training took 2 hours. Next day, we were operational. It's really not complicated like they said.", name: 'Michael Richard', role: 'CEO, Richard & Sons Construction', img: '/images/testimonial-michel.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -225,25 +220,7 @@ See all pricing
 <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-600 mx-auto rounded-full"></div>
 </div>
 </div>
-<div className="overflow-hidden">
-<div className="testimonial-track testimonial-marquee">
-{[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-<div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
-<div className="flex gap-1 mb-5">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-</div>
-<p className="text-white mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-<div className="flex items-center gap-4">
-<img src={basePath + t.img} alt={t.name} loading="lazy" className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-<div>
-<p className="font-bold text-white">{t.name}</p>
-<p className="text-orange-200 text-sm">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
+<GeoTestimonials lang="en" theme="dark" layout="marquee" cardSize="sm" roleColor="text-orange-300 text-sm" basePath={basePath} />
 </section>
 
 {/* SECTION 7: FINAL CTA */}

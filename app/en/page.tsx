@@ -4,6 +4,7 @@ import Link from 'next/link'
 import GeoAwareCTA from '@/components/GeoAwareCTA'
 import GeoHeroSubtitle from '@/components/GeoHeroSubtitle'
 import GeoStats from '@/components/GeoStats'
+import GeoTestimonials from '@/components/GeoTestimonials'
 import ScrollAnimate from '@/components/ScrollAnimate'
 import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
@@ -31,12 +32,6 @@ const MOVING_MESSAGES = [
 "Competitive pricing",
 ]
 
-const TESTIMONIALS_DATA = [
-  { q: "I have a restaurant on the Main. Before, I was easily losing 10-15 customers per week. Now? Zero missed calls.", name: "Pierre Lacroix", role: "Owner, Bistro du Vieux-Montréal", img: "/images/testimonial-pierre-new.jpg", alt: "Portrait of Pierre Lacroix, owner of Bistro du Vieux-Montréal" },
-  { q: "It's not just reception. They take reservations, answer questions. It's like having a receptionist, but at a fraction of the cost.", name: "Sophie Mercier", role: "Director, Clinique Médicale Plateau", img: "/images/testimonial-sophie-new.jpg", alt: "Portrait of Sophie Mercier, director of Clinique Médicale Plateau" },
-  { q: "During the holiday rush, they handled over 200 calls per day. My team was calm, customers happy.", name: "Marc-André Dubé", role: "Manager, Électronique QC Store", img: "/images/testimonial-marc-new.jpg", alt: "Portrait of Marc-André Dubé, manager of Électronique QC Store" },
-  { q: "We tried 3 other services before. This is the only one where agents really understand our business.", name: "Nathalie Tremblay", role: "Director, Cabinet Tremblay", img: "/images/testimonial-nathalie-new.jpg", alt: "Portrait of Nathalie Tremblay, director of Cabinet Tremblay" },
-]
 
 function CTAButtons() {
 const { geo, loading } = useGeo()
@@ -266,34 +261,16 @@ Local SMEs
         </div>
       </section>
 
-      {/* TESTIMONIALS - DARK WITH AUTO-SLIDE */}
-      <ScrollAnimate animation="fade-up" delay={2}>
-        <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
-              <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
-            </div>
-          </div>
-          <div className="overflow-hidden">
-            <div className="testimonial-track testimonial-marquee">
-              {[...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA].map((t, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                  </div>
-                  <p className="text-white mb-4 leading-relaxed italic">"{t.q}"</p>
-                  <div className="flex items-center gap-3">
-                    <img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
-                    <div>
-                      <p className="font-bold text-white text-sm">{t.name}</p>
-                      <p className="text-slate-200 text-xs">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+{/* TESTIMONIALS - DARK WITH AUTO-SLIDE */}
+<ScrollAnimate animation="fade-up" delay={2}>
+<section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black mb-3">What Our Clients Say</h2>
+<div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
 </div>
 </div>
+<GeoTestimonials lang="en" theme="dark" layout="marquee" cardSize="sm" basePath={basePath} />
 </section>
 </ScrollAnimate>
 

@@ -1,3 +1,4 @@
+import GeoTestimonials from '@/components/GeoTestimonials'
 'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
@@ -29,32 +30,6 @@ const STATS = [
   { value: '24/7', label: 'Disponibilite' },
 ]
 
-const TESTIMONIALS = [
-{
-quote: "Smart Hotline comprend vraiment notre secteur de la restauration. Ils gerent nos reservations et nos livraisons avec une efficacite impressionnante.",
-name: "Marie-Lucie Boucher",
-role: "Proprietaire, Restaurant Le Petit Jerome",
-img: '/images/testimonial-1.jpg'
-},
-{
-quote: "Grace a leur service d'emission d'appels, nous avons augmente nos prises de rendez-vous de 60% en 3 mois.",
-name: "Thomas Girard",
-role: "Directeur, Clinique Medicale Plus",
-img: '/images/testimonial-2.jpg'
-},
-{
-quote: "Dans notre domaine juridique, chaque appel compte. Ils filtrent parfaitement les urgences et prennent les rendez-vous comme il faut.",
-name: "Claire Dupont",
-role: "Associee, Cabinet Dupont & Mercier",
-img: '/images/testimonial-3.jpg'
-},
-{
-quote: "On est dans le BTP, c'est pas toujours evident de gerer les appels sur les chantiers. Eux, ils captent notre realite et ca fait toute la difference.",
-name: "Rejean Lavoie",
-role: "Proprietaire, Construction Lavoie",
-img: '/images/testimonial-4.jpg'
-}
-]
 
 const FAQ = [
   {
@@ -380,34 +355,16 @@ export default function Secteurs() {
         </div>
       </section>
 
-      {/* SECTION 5: TESTIMONIALS AUTO-SLIDE */}
-      <section className="py-20 bg-slate-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
-            <div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"/>
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-      <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-        <div className="flex gap-0.5 mb-4">
-        {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-indigo-400" />)}
-        </div>
-        <p className="text-slate-700 mb-5 leading-relaxed italic">"{t.quote}"</p>
-        <div className="flex items-center gap-3">
-        <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
-        <div>
-        <p className="font-bold text-slate-900 text-sm">{t.name}</p>
-        <p className="text-slate-500 text-xs">{t.role}</p>
-        </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 5: TESTIMONIALS AUTO-SLIDE */}
+<section className="py-20 bg-slate-50 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-slate-900 mb-3">Ce que nos clients disent vraiment</h2>
+<div className="w-16 h-1 bg-indigo-600 mx-auto rounded-full"/>
+</div>
+</div>
+<GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="sm" basePath={basePath} />
+</section>
 
       {/* SECTION 6: FAQ */}
       <section className="py-20 bg-white">

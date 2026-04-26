@@ -7,6 +7,7 @@ import { BoltIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, Analyt
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
 import { AIAgentSchema } from '@/components/AIAgentSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
 {icon: BoltIcon, title: 'Instant Response', desc: 'Under 2 seconds, 24/7, no hold time ever.'},
@@ -15,12 +16,6 @@ const FEATURES = [
 {icon: TransferIcon, title: 'Smart Transfer', desc: 'Detects complex situations, transfers to advisor.'},
 ]
 
-const TESTIMONIALS = [
-{q: "Sophie transformed our customer service. We don't miss any calls anymore, even during peak periods.", name: 'Marie-Claire Lévesque', role: 'Operations Director, Clinique SantéPlus', img: '/images/testimonial-4.jpg'},
-{q: "Installation was fast and the team extremely professional. Our clients think it's a real person!", name: 'Daniel Bouchard', role: 'Owner, Bouchard Mécanique', img: '/images/testimonial-claude.jpg'},
-{q: "The value for money is unbeatable. We save nearly 60% compared to a full-time receptionist.", name: 'Isabelle Morin', role: 'Associate Accountant, Fiduciaire LMN', img: '/images/testimonial-isabelle.jpg'},
-{q: "At first I was skeptical. But honestly? Clients don't notice a thing. These are real conversations.", name: 'Pierre Houde', role: 'Manager, Garage Houde & Fils', img: '/images/testimonial-jean.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
 const { geo, loading } = useGeo()
@@ -228,25 +223,7 @@ View all pricing
 <div className="w-24 h-1.5 bg-gradient-to-r from-violet-600 to-purple-700 mx-auto rounded-full"></div>
 </div>
 </div>
-<div className="overflow-hidden">
-<div className="testimonial-track testimonial-marquee">
-{[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-<div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-<div className="flex gap-1 mb-5">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-</div>
-<p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-<div className="flex items-center gap-4">
-<img src={basePath + t.img} alt={t.name} loading="lazy" className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-<div>
-<p className="font-bold text-slate-900">{t.name}</p>
-<p className="text-slate-500 text-sm">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
+<GeoTestimonials lang="en" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
 </section>
 
 {/* SECTION 7: FINAL CTA */}

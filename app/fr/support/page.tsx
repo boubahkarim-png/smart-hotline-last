@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { HeadphonesIcon, MailIcon, ChatIcon, PhoneIcon, CheckIcon, StarIcon, ClockIcon } from '@/components/Icons'
 import { ServiceSchema } from '@/components/ServiceSchema'
 import { FAQSchema } from '@/components/FAQSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
   {icon: HeadphonesIcon, title: 'Support multicanal', desc: 'Téléphone, email, chat, WhatsApp — on gère tout depuis une seule interface.'},
@@ -14,11 +15,6 @@ const FEATURES = [
   {icon: PhoneIcon, title: 'Ligne dédiée', desc: 'Un numéro pour votre support. On répond au nom de votre entreprise.'},
 ]
 
-const TESTIMONIALS = [
-{q: "On reçoit des questions sur nos produits toute la journée. Avant, c'était le chaos dans les emails. Maintenant, chaque demande est bien tracée.", name: 'Catherine Rouleau', role: 'Responsable service client, Boutique en ligne QC', img: '/images/testimonial-1.jpg'},
-{q: "Ils ont réglé un problème de 3 semaines en 48h. Le fait qu'ils parlent français correctement — ça aide vraiment avec nos clients.", name: 'Jean-François Poissant', role: 'Directeur, Services Financiers MTL', img: '/images/testimonial-2.jpg'},
-{q: "Nos clients sont plus satisfaits. On le voit dans les commentaires. Le support en français, ça fait toute la différence.", name: 'Martine Lévesque', role: 'Fondatrice, Tech Support Quebec', img: '/images/testimonial-3.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -189,34 +185,16 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 6: DARK - Testimonials AUTO-SLIDE */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
+{/* SECTION 6: DARK - Testimonials AUTO-SLIDE */}
+<section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">
 <h2 className="text-3xl font-black mb-4">Ce que nos clients disent</h2>
 <p className="text-white text-lg">Des résultats concrets pour des entreprises comme la vôtre</p>
 </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                </div>
-<p className="text-white mb-5 leading-relaxed italic">"{t.q}"</p>
-<div className="flex items-center gap-3">
-<img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
-<div>
-<p className="font-bold text-white text-sm">{t.name}</p>
-<p className="text-white text-xs">{t.role}</p>
 </div>
-</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<GeoTestimonials lang="fr" theme="dark" layout="marquee" cardSize="sm" basePath={basePath} />
+</section>
 
 {/* SECTION 7: DARK - CTA */}
 <section className="bg-gradient-to-br from-teal-900 to-teal-700 text-white py-20">

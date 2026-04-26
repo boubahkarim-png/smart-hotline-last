@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon, MessageIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
   {icon: PhoneIcon, title: 'Professional Reception', desc: 'A real agent answers every call with your company name.'},
@@ -14,12 +15,6 @@ const FEATURES = [
   {icon: UsersIcon, title: 'Dedicated Team', desc: 'The same agents answer for you. They know your business.'},
 ]
 
-const TESTIMONIALS = [
-{q: "I have a restaurant on the Main. Before, I was easily losing 10-15 customers a week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre Lacroix', role: 'Owner, Bistro du Vieux-Montréal', img: '/images/testimonial-pierre-new.jpg'},
-{q: "It's not just reception. They take reservations, answer questions, and text me urgencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie Mercier', role: 'Director, Clinique Médicale Plateau', img: '/images/testimonial-sophie-new.jpg'},
-{q: "During the holiday rush, they handled over 200 calls a day. My team was calm, customers happy. Really.", name: 'Marc-André Dubé', role: 'Manager, Magasin Électronique QC', img: '/images/testimonial-marc-new.jpg'},
-{q: "We tried 3 other services before. This is the only one where agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie Tremblay', role: 'Director, Cabinet Juridique Tremblay & Associés', img: '/images/testimonial-nathalie-new.jpg'},
-]
 
 const FAQS = [
   {question: "What's the difference from an answering machine?", answer: "A real agent answers in person, understands context, and transmits urgent messages immediately. No hold music, no voicemail."},
@@ -221,31 +216,15 @@ export default function Page() {
       </section>
 
 {/* SECTION 6: TESTIMONIALS */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-teal-600 to-emerald-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className={`modern-box p-8 testimonial-card animate-delay-${(i+1)*100}`}>
-                <div className="flex gap-1 mb-5">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-                </div>
-                <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-                <div className="flex items-center gap-4">
-                  <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-                  <div>
-                    <p className="font-bold text-slate-900">{t.name}</p>
-                    <p className="text-slate-500 text-sm">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-16">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-teal-600 to-emerald-600 mx-auto rounded-full"></div>
+</div>
+<GeoTestimonials lang="en" theme="light" layout="grid" cardSize="lg" basePath={basePath} />
+</div>
+</section>
 
       {/* SECTION 7: FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-teal-900 to-emerald-900 py-24 relative overflow-hidden">

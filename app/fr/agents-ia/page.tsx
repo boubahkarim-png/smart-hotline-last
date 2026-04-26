@@ -7,6 +7,7 @@ import { BoltIcon, CalendarIcon, QuestionIcon, TransferIcon, MessageIcon, Analyt
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
 import { AIAgentSchema } from '@/components/AIAgentSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
 {icon: BoltIcon, title: 'Réponse instantanée', desc: 'Moins de 2 secondes, 24h/24, 7j/7, sans temps d\'attente.'},
@@ -15,12 +16,6 @@ const FEATURES = [
 {icon: TransferIcon, title: 'Transfert intelligent', desc: 'Détecte les situations complexes, transfert vers conseiller.'},
 ]
 
-const TESTIMONIALS = [
-{q: "Sophie a transformé notre service client. On ne rate plus aucun appel, même pendant nos périodes de pointe.", name: 'Marie-Claire Lévesque', role: 'Directrice opérationnelle, Clinique SantéPlus', img: '/images/testimonial-4.jpg'},
-{q: "L'installation a été rapide et l'équipe extrêmement professionnelle. Nos clients pensent que c'est une vraie personne!", name: 'Daniel Bouchard', role: 'Propriétaire, Bouchard Mécanique', img: '/images/testimonial-claude.jpg'},
-{q: "Le rapport qualité-prix est imbattable. On économise près de 60% comparé à une réceptionniste à temps plein.", name: 'Isabelle Morin', role: 'Comptable associée, Fiduciaire LMN', img: '/images/testimonial-isabelle.jpg'},
-{q: "Au début j'étais sceptique. Mais honnêtement? Les clients ne se rendent compte de rien. Ce sont de vraies conversations.", name: 'Pierre Houde', role: 'Gérant, Garage Houde & Fils', img: '/images/testimonial-jean.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
 const { geo, loading } = useGeo()
@@ -209,34 +204,16 @@ Sophie, votre IA<br/>
  </div>
  </section>
 
-      {/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-violet-600 to-purple-700 mx-auto rounded-full"></div>
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-1 mb-5">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-                </div>
-                <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-      <div className="flex items-center gap-4">
-        <img src={basePath + t.img} alt={t.name} loading="lazy" className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-        <div>
-        <p className="font-bold text-slate-900">{t.name}</p>
-        <p className="text-slate-500 text-sm">{t.role}</p>
-        </div>
-      </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-16">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-violet-600 to-purple-700 mx-auto rounded-full"></div>
+</div>
+</div>
+<GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
+</section>
 
 {/* SECTION 7: FINAL CTA */}
 <section className="bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 py-24 relative overflow-hidden">

@@ -33,12 +33,6 @@ const MOVING_MESSAGES = [
 "Tarifs compétitifs",
 ]
 
-const TESTIMONIALS_DATA = [
-  { q: "J'ai un resto sur la Main. Avant, je perdais facilement 10-15 clients par semaine. Maintenant? Zéro appel manqué.", name: "Pierre Lacroix", role: "Propriétaire, Bistro du Vieux-Montréal", img: "/images/testimonial-pierre-new.jpg", alt: "Portrait de Pierre Lacroix, propriétaire du Bistro du Vieux-Montréal" },
-  { q: "C'est pas juste de la réception. Ils prennent les réservations, répondent aux questions. C'est comme avoir une réceptionniste, mais à fraction du prix.", name: "Sophie Mercier", role: "Directrice, Clinique Médicale Plateau", img: "/images/testimonial-sophie-new.jpg", alt: "Portrait de Sophie Mercier, directrice de la Clinique Médicale Plateau" },
-  { q: "Pendant le rush du temps des fêtes, ils ont géré plus de 200 appels par jour. Mon équipe était tranquille, les clients heureux.", name: "Marc-André Dubé", role: "Gérant, Magasin Électronique QC", img: "/images/testimonial-marc-new.jpg", alt: "Portrait de Marc-André Dubé, gérant du Magasin Électronique QC" },
-  { q: "On a essayé 3 autres services avant. C'est le seul où les conseillers comprennent vraiment notre business.", name: "Nathalie Tremblay", role: "Directrice, Cabinet Juridique Tremblay", img: "/images/testimonial-nathalie-new.jpg", alt: "Portrait de Nathalie Tremblay, directrice du Cabinet Juridique Tremblay" },
-]
 
 function CTAButtons() {
 const { geo, loading } = useGeo()
@@ -268,36 +262,18 @@ les PME d\'Ici
         </div>
       </section>
 
-      {/* TESTIMONIALS - DARK WITH AUTO-SLIDE */}
-      <ScrollAnimate animation="fade-up" delay={2}>
-        <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-black mb-3">Ce que nos clients disent</h2>
-              <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
-            </div>
-          </div>
-          <div className="overflow-hidden">
-            <div className="testimonial-track testimonial-marquee">
-              {[...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA].map((t, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
-                  <div className="flex gap-1 mb-4">
-                    {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-                  </div>
-                  <p className="text-white mb-4 leading-relaxed italic">"{t.q}"</p>
-                  <div className="flex items-center gap-3">
-                    <img src={basePath + t.img} alt={t.alt} className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20" />
-                    <div>
-                      <p className="font-bold text-white text-sm">{t.name}</p>
-                      <p className="text-slate-200 text-xs">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </ScrollAnimate>
+{/* TESTIMONIALS - DARK WITH AUTO-SLIDE */}
+<ScrollAnimate animation="fade-up" delay={2}>
+<section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-indigo-900 text-white py-20 border-t-4 border-indigo-700 overflow-hidden">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black mb-3">Ce que nos clients disent</h2>
+<div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"/>
+</div>
+</div>
+<GeoTestimonials lang="fr" theme="dark" layout="marquee" cardSize="sm" basePath={basePath} />
+</section>
+</ScrollAnimate>
 
       {/* FAQ SECTION - LIGHT */}
       <section className="py-20 bg-white border-t-4 border-slate-200">

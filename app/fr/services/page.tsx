@@ -1,3 +1,4 @@
+import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 export const metadata = { title: "Nos Services | Smart Hotline Agency" }
@@ -14,11 +15,6 @@ const STATS = [
   { value: "98%", label: "Satisfaction client" },
   { value: "24/7", label: "Disponibilité" },
   { value: "50K+", label: "Appels traités/mois" },
-]
-const TESTIMONIALS = [
-{ quote: "J'ai un cabinet dentaire sur Saint-Denis. Avant, je perdais des patients parce que personne répondait pendant les soins. Maintenant? Zéro appel manqué. Mes patients pensent que j'ai une réceptionniste à temps plein.", author: "Marie D.", role: "Dentiste, Clinique du Parc — Plateau Mont-Royal", rating: 5, img: '/images/testimonial-marie.jpg' },
-{ quote: "L'IA Sophie a réduit mes coûts de 60%. Vrai. Et le plus drôle? Mes clients préfèrent. 'Votre réceptionniste est super efficace', ils disent. C'est un robot, les gars!", author: "Pierre L.", role: "CEO, TechStart Inc. — Mile-End, Montréal", rating: 5, img: '/images/testimonial-pierre-new.jpg' },
-{ quote: "Je suis dans la construction. Mes gars sont sur les chantiers, ils peuvent pas répondre. Smart Hotline prend les appels, qualifie les leads. Mon taux de conversion a monté de 35%. C'est mesurable.", author: "Sophie M.", role: "Directrice commerciale, BatiPro Québec — Laval", rating: 5, img: '/images/testimonial-sophie-new.jpg' },
 ]
 const STEPS = [
   { num: "01", title: "Consultation Gratuite", desc: "On analyse vos besoins et objectifs lors d'un appel de 30 minutes." },
@@ -90,33 +86,13 @@ export default function Services() {
 </div>
 </section>
 
-      {/* SECTION 4: LIGHT - TESTIMONIALS AUTO-SLIDE */}
-      <section className="py-24 bg-white border-t-4 border-slate-200 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-slate-900">Ce que disent nos clients</h2>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-      <div key={i} className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-        <div className="flex mb-4" role="img" aria-label={`${t.rating} sur 5 étoiles`}>
-        {Array.from({length: t.rating}).map((_, j) => (
-        <span key={j} className="text-yellow-400 text-xl" aria-hidden="true">★</span>
-        ))}
-        </div>
-        <p className="text-slate-700 mb-6 italic text-sm leading-relaxed">"{t.quote}"</p>
-        <div className="flex items-center gap-3 mb-2">
-        <img src={basePath + t.img} alt={t.author} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
-        <div>
-        <div className="font-semibold text-slate-900">{t.author}</div>
-        <div className="text-sm text-slate-500">{t.role}</div>
-        </div>
-        </div>
-      </div>
-      ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 4: LIGHT - TESTIMONIALS AUTO-SLIDE */}
+<section className="py-24 bg-white border-t-4 border-slate-200 overflow-hidden">
+<div className="max-w-6xl mx-auto px-4">
+<h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-slate-900">Ce que disent nos clients</h2>
+</div>
+<GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="sm" basePath={basePath} />
+</section>
 
 {/* SECTION 5: DARK HOW IT WORKS */}
 <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white border-t-4 border-slate-700">

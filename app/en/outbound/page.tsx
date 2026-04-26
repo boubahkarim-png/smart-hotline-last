@@ -6,6 +6,7 @@ import basePath from '@/lib/basePath'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon, UsersIcon, BoltIcon, ShieldCheckIcon, QuestionIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
   {'icon': TargetIcon, 'title': 'Qualified Leads', 'desc': 'Precise targeting and qualification of each lead before transfer.'},
@@ -41,26 +42,6 @@ const PROCESS = [
 {'title': 'Go Live', 'desc': 'Campaigns launch with real-time tracking and daily performance updates.'},
 ]
 
-const TESTIMONIALS = [
-  {
-    quote: "Our number of qualified appointments doubled in 2 months. The team really understands our industry and knows how to talk to our prospects.",
-    name: "Jean-François Lambert",
-    role: "Sales Director, Solutions TechPlus",
-    img: '/images/testimonial-francois.jpg'
-  },
-  {
-    quote: "The lead quality is exceptional. We spend less time filtering and more time closing deals.",
-    name: "Marie-Chantal Dubois",
-    role: "Owner, Dubois Consulting",
-    img: '/images/testimonial-marie.jpg'
-  },
-  {
-    quote: "Daily reporting lets us adjust our strategy in real time. It's a true partnership, not just a service.",
-    name: "Patrick Gagnon",
-    role: "CEO, Gagnon Stratégies",
-    img: '/images/testimonial-pierre-new.jpg'
-  }
-]
 
 const FAQ = [
 {
@@ -243,31 +224,13 @@ export default function Page() {
 
 {/* Section 7: DARK - Testimonials Auto-Slide */}
 <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-black text-white mb-3">What Our Clients Say</h2>
-      <div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
-    </div>
-  </div>
-  <div className="overflow-hidden">
-    <div className="testimonial-track testimonial-marquee">
-      {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-        <div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all min-w-[320px] max-w-[320px] flex-shrink-0">
-          <div className="flex gap-0.5 mb-4">
-            {[1,2,3,4,5].map(s => <CheckIcon key={s} className="w-5 h-5 text-amber-400" />)}
-          </div>
-          <p className="text-white mb-5 leading-relaxed italic">"{t.quote}"</p>
-          <div className="flex items-center gap-3">
-            <img src={t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
-            <div>
-              <p className="font-bold text-white text-sm">{t.name}</p>
-              <p className="text-slate-100 text-xs">{t.role}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-black text-white mb-3">What Our Clients Say</h2>
+<div className="w-16 h-1 bg-emerald-600 mx-auto rounded-full"/>
+</div>
+</div>
+<GeoTestimonials lang="en" theme="dark" layout="marquee" cardSize="sm" basePath={basePath} />
 </section>
 
 {/* Section 8: LIGHT - FAQ */}

@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { HeadphonesIcon, MailIcon, ChatIcon, PhoneIcon, CheckIcon, StarIcon, ClockIcon } from '@/components/Icons'
 import { ServiceSchema } from '@/components/ServiceSchema'
 import { FAQSchema } from '@/components/FAQSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
 {icon: HeadphonesIcon, title: 'Multichannel Support', desc: 'Phone, email, chat, WhatsApp — we handle everything from a single interface.'},
@@ -14,11 +15,6 @@ const FEATURES = [
 {icon: PhoneIcon, title: 'Dedicated Line', desc: "A number for your support. We answer in your company's name."},
 ]
 
-const TESTIMONIALS = [
-{q: "We receive questions about our products all day. Before, it was chaos in emails. Now, every request is properly tracked.", name: 'Catherine Rouleau', role: 'Customer Service Manager, Online Store QC', img: '/images/testimonial-1.jpg'},
-{q: "They fixed a 3-week problem in 48h. The fact that they speak proper French — that really helps with our clients.", name: 'Jean-François Poissant', role: 'Director, Financial Services MTL', img: '/images/testimonial-2.jpg'},
-{q: "Our clients are more satisfied. We see it in the comments. Support in French, it makes all the difference.", name: 'Martine Lévesque', role: 'Founder, Tech Support Quebec', img: '/images/testimonial-3.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -197,25 +193,7 @@ return (
 <p className="text-slate-200 text-lg">Real results for businesses like yours</p>
 </div>
 </div>
-<div className="overflow-hidden">
-<div className="testimonial-track testimonial-marquee">
-{[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-<div key={i} className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 min-w-[320px] max-w-[320px] flex-shrink-0">
-<div className="flex gap-0.5 mb-4">
-{[1,2,3,4,5].map(s => <StarIcon key={s} className="w-5 h-5 text-amber-400" />)}
-</div>
-<p className="text-slate-200 mb-5 leading-relaxed italic">"{t.q}"</p>
-<div className="flex items-center gap-3">
-<img src={basePath + t.img} alt={t.name} loading="lazy" className="w-10 h-10 rounded-full object-cover shadow-lg" />
-<div>
-<p className="font-bold text-white text-sm">{t.name}</p>
-<p className="text-slate-200 text-xs">{t.role}</p>
-</div>
-</div>
-</div>
-))}
-</div>
-</div>
+<GeoTestimonials lang="en" theme="dark" layout="marquee" cardSize="sm" basePath={basePath} />
 </section>
 
 {/* SECTION 7: DARK - CTA */}

@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
   {icon: PhoneIcon, title: '24/7 Reception', desc: 'No voicemail. A real agent answers every call, even at 3 AM.'},
@@ -14,12 +15,6 @@ const FEATURES = [
   {icon: UsersIcon, title: 'Dedicated Team', desc: 'The same agents answer for you. They know your business.'},
 ]
 
-const TESTIMONIALS = [
-{q: "I have a restaurant on the Main. Before, I was easily losing 10-15 clients per week because I couldn't answer. Now? Zero missed calls.", name: 'Pierre Lacroix', role: 'Owner, Bistro du Vieux-Montréal', img: '/images/testimonial-pierre-new.jpg'},
-{q: "It's not just reception. They take reservations, answer questions, and text me emergencies. It's like having a receptionist, but at a fraction of the cost.", name: 'Sophie Mercier', role: 'Director, Clinique Médicale Plateau', img: '/images/testimonial-sophie-new.jpg'},
-{q: "During the holiday rush, they handled over 200 calls per day. My team was calm, clients happy. Truly.", name: 'Marc-André Dubé', role: 'Manager, Électronique QC Store', img: '/images/testimonial-marc-new.jpg'},
-{q: "We tried 3 other services before. This is the only one where the agents really understand our business. Our clients are happy, that's all that matters.", name: 'Nathalie Tremblay', role: 'Director, Cabinet Juridique Tremblay & Associés', img: '/images/testimonial-nathalie-new.jpg'},
-]
 
 function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
@@ -209,34 +204,16 @@ export default function Page() {
  </div>
  </section>
 
-      {/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="testimonial-track testimonial-marquee">
-            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-lg min-w-[320px] max-w-[320px] flex-shrink-0">
-                <div className="flex gap-1 mb-5">
-                  {[1,2,3,4,5].map(s => <StarIcon key={s} className="w-6 h-6 text-amber-400" />)}
-                </div>
-                <p className="text-slate-700 mb-6 leading-relaxed text-lg italic">"{t.q}"</p>
-      <div className="flex items-center gap-4">
-        <img src={basePath + t.img} alt={t.name} className="w-14 h-14 rounded-xl object-cover shadow-lg" />
-        <div>
-        <p className="font-bold text-slate-900">{t.name}</p>
-        <p className="text-slate-500 text-sm">{t.role}</p>
-        </div>
-      </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SECTION 6: TESTIMONIALS - AUTO-SLIDE */}
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+<div className="max-w-7xl mx-auto px-4">
+<div className="text-center mb-16">
+<h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">What Our Clients Say</h2>
+<div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
+</div>
+</div>
+<GeoTestimonials lang="en" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
+</section>
 
       {/* SECTION 7: FINAL CTA - Gradient */}
       <section className="bg-gradient-to-br from-slate-900 via-sky-900 to-blue-900 py-24 relative overflow-hidden">
