@@ -170,32 +170,21 @@ Sophie, Your AI<br/>
 <div className="w-full lg:w-1/2">
 <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Choose Sophie?</h2>
 <p className="text-xl text-violet-200 mb-8 leading-relaxed">Sophie doesn't sleep, doesn't take breaks, and never has a bad day. She handles the repetitive stuff so your team can focus on what really matters.</p>
-<ul className="space-y-4 mb-8">
-<li className="flex items-center gap-4 text-white text-lg">
-<span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-<CheckIcon className="w-5 h-5"/>
-</span>
-Quebec, France, or Belgium accent available
-</li>
-<li className="flex items-center gap-4 text-white text-lg">
-<span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-<CheckIcon className="w-5 h-5"/>
-</span>
-Transcription and analysis of every call
-</li>
-<li className="flex items-center gap-4 text-white text-lg">
-<span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-<CheckIcon className="w-5 h-5"/>
-</span>
-70% cheaper than a receptionist
-</li>
-<li className="flex items-center gap-4 text-white text-lg">
-<span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-<CheckIcon className="w-5 h-5"/>
-</span>
-Installation in 24-48h
-</li>
-</ul>
+        <ul className="space-y-4 mb-8">
+          {[ 
+            'Quebec, France, or Belgium accent available', 
+            'Transcription and analysis of every call', 
+            '70% cheaper than a receptionist', 
+            'Installation in 24-48h',
+          ].map((item, i) => (
+            <li key={i} className={`flex items-center gap-4 text-white text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
+              <span className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                <CheckIcon className="w-5 h-5"/>
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
 <Link href="/en/contact?service=ia" className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-purple-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
 See a Demo
 </Link>
