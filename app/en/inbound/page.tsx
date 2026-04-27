@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
@@ -66,7 +67,7 @@ export default function Page() {
             <div className="w-full lg:w-[60%] animate-slide-right">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
-                <img src={`${basePath}/images/reception-hero.webp`} alt="Inbound Calls" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
+                <img src={`${basePath}/images/reception-hero.webp`} alt="Inbound Calls" loading="lazy" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -110,11 +111,11 @@ export default function Page() {
       </section>
 
 {/* SECTION 3: DARK STATS - Modern big numbers */}
-<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20 border-t-4 border-sky-600">
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20">
   <div className="max-w-7xl mx-auto px-4">
-    <div className="text-center mb-10">
-      <h3 className="text-2xl font-bold text-white">Numbers that inspire confidence</h3>
-    </div>
+<div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white">Numbers that inspire confidence</h3>
+      </div>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
         <p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
@@ -136,9 +137,9 @@ export default function Page() {
   </div>
 </section>
 
-      {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
-        <div className="max-w-6xl mx-auto px-4">
+  {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
+  <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+    <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">How It Works</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
@@ -161,8 +162,11 @@ export default function Page() {
       </section>
 
  {/* SECTION 5: DARK - BENEFITS */}
-<section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white border-t-4 border-sky-700">
-        <div className="max-w-7xl mx-auto px-4">
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white py-20 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-sky-500 opacity-10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 relative">
           <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2">
  <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Trust Us?</h2>
@@ -259,6 +263,25 @@ export default function Page() {
   </div>
 </section>
 <ServiceSchema name="Inbound Calls 24/7" description="Professional inbound call service with French-speaking agents 24/7" slug="inbound" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+      <AIAgentSchema
+        name="Inbound Call Agent"
+        description="Professional inbound call answering service for SMEs. French-speaking agents answer calls in under 3 rings, 24/7, with real-time message transmission."
+        capabilities={[
+          "24/7 live call answering",
+          "Custom call scripts",
+          "Real-time message delivery",
+          "Dedicated agent assignment",
+          "SMS, email, and call forwarding",
+          "CRM integration",
+          "Bilingual French and English support",
+          "Daily reporting and adjustments"
+        ]}
+        responseTime="Under 3 rings"
+        availability="24/7, 365 days a year"
+        languages={["French (Quebec)", "French (France)", "English (North America)"]}
+        pricingModel="per-call pricing"
+        startingPrice={{ amount: "1.50", currency: "CAD", unit: "call" }}
+      />
 <FAQSchema faqs={[
   { question: "How long to get started?", answer: "Usually 48 hours. We take the time to understand your business well before starting." },
   { question: "Can I change the scripts?", answer: "Absolutely. It's your business — you decide how we answer. We adjust whenever you want." },

@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, PhoneIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
@@ -41,6 +42,7 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      {/* SECTION 1: HERO */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -83,6 +85,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SECTION 2: FEATURES */}
       <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20 lg:py-28 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-emerald-500 opacity-10 rounded-full blur-3xl animate-pulse"></div>
@@ -96,7 +99,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {FEATURES.map(({icon: Icon, title, desc}, i) => (
               <div key={title} className={`modern-box-dark p-8 text-center hover:scale-105 transition-all duration-500 animate-delay-${(i+1)*100}`}>
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-white mb-3">{title}</h3>
@@ -107,9 +110,10 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SECTION 3: DARK STATS */}
       <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900 text-white py-20 border-t-4 border-emerald-600">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white">Results That Speak</h3>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
@@ -133,7 +137,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
+      {/* SECTION 4: HOW IT WORKS */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">How It Works</h2>
@@ -156,8 +161,13 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900 text-white border-t-4 border-emerald-700">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* SECTION 5: DARK - BENEFITS */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-emerald-500 opacity-10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Why Trust Us?</h2>
@@ -177,7 +187,7 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              <Link href="/en/contact?service=emission" className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <Link href="/en/contact?service=emission" className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
                 See a Demo
               </Link>
             </div>
@@ -199,6 +209,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SECTION 6: TESTIMONIALS */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -206,9 +217,10 @@ export default function Page() {
             <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-700 mx-auto rounded-full"></div>
           </div>
         </div>
-        <GeoTestimonials lang="en" theme="light" layout="marquee" basePath={basePath} />
+        <GeoTestimonials lang="en" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
       </section>
 
+      {/* SECTION 7: FINAL CTA */}
       <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-green-900 py-24 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-emerald-500 opacity-10 rounded-full blur-3xl"></div>
@@ -225,6 +237,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SECTION 8: FAQ */}
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -244,13 +257,25 @@ export default function Page() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/en/contact?service=emission" className="inline-block bg-gradient-to-r from-emerald-600 to-green-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+            <Link href="/en/contact?service=emission" className="inline-block bg-gradient-to-r from-emerald-600 to-green-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
               Start Now
             </Link>
           </div>
         </div>
       </section>
+
+      {/* SCHEMAS */}
       <ServiceSchema name="Outbound Calls & Prospecting" description="Phone prospecting and telemarketing service with qualified leads and appointment setting" slug="outbound" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
+      <AIAgentSchema
+        name="Smart Outbound Agents"
+        description="Professional outbound calling agents for lead generation and appointment setting. Trained in Quebec French and France French, with CRM integration and real-time analytics."
+        capabilities={["Lead qualification", "Appointment setting", "CRM integration", "Multi-channel outreach (call, SMS, email)", "Real-time reporting", "Script optimization", "Bilingual support (FR/EN)"]}
+        responseTime="Immediate"
+        availability="24/7, 365 days per year"
+        languages={["French (Quebec)", "French (France)", "English"]}
+        pricingModel="pay per use"
+        startingPrice={{ amount: "3.00", currency: "CAD", unit: "lead" }}
+      />
       <FAQSchema faqs={[
         { question: "How do you qualify leads?", answer: "We use criteria defined together: budget, authority, need, timing. Each lead is validated before transfer." },
         { question: "Do you offer custom scripts?", answer: "Yes, our experts write scripts tailored to your offer and market. We test and optimize continuously." },

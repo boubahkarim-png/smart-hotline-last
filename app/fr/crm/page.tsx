@@ -5,6 +5,7 @@ import { useGeo } from '@/hooks/useGeo'
 import { CONTACT } from '@/lib/nav'
 import { FolderIcon, MailIcon, PhoneIcon, TrendingIcon, DatabaseIcon, LinkIcon, CheckIcon, DatabaseIcon as CRMIcon, StarIcon, ClockIcon, ShieldCheckIcon } from '@/components/Icons'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 import { FAQSchema } from '@/components/FAQSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
@@ -17,12 +18,6 @@ const FEATURES = [
   {icon: LinkIcon, title: 'Intégrations', desc: 'Connexion avec votre site, Zapier, Google Workspace et plus.'},
 ]
 
-const STEPS = [
-  {n: '1', t: 'Audit', d: "Analyse de vos données existantes et nettoyage."},
-  {n: '2', t: 'Configuration', d: "Personnalisation des modules selon votre processus."},
-  {n: '3', t: 'Import', d: "Migration de vos contacts sans perte de données."},
-  {n: '4', t: 'Formation', d: "Formation de votre équipe et support continu."},
-]
 
 
 function CTAButtons({ slug }: { slug: string }) {
@@ -145,18 +140,23 @@ CRM Intégré &<br/>
 </section>
 
 {/* SECTION 4: HOW IT WORKS */}
-<section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
+<section className="py-20 bg-gradient-to-br from-slate-50 to-white">
 <div className="max-w-6xl mx-auto px-4">
 <div className="text-center mb-16">
 <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Comment ça marche</h2>
 <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-        {STEPS.map(({n, t, d}: any, i: number) => (
-          <div key={n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
-            <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{n}</div>
-            <h3 className="font-bold text-xl text-slate-900 mb-3">{t}</h3>
-            <p className="text-slate-600 leading-relaxed">{d}</p>
+{[
+{ n: '1', t: 'Audit', d: "Analyse de vos données existantes et nettoyage." },
+{ n: '2', t: 'Configuration', d: "Personnalisation des modules selon votre processus." },
+{ n: '3', t: 'Import', d: "Migration de vos contacts sans perte de données." },
+{ n: '4', t: 'Formation', d: "Formation de votre équipe et support continu." },
+].map((step, i) => (
+<div key={step.n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
+<div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
+<h3 className="font-bold text-xl text-slate-900 mb-3">{step.t}</h3>
+<p className="text-slate-600 leading-relaxed">{step.d}</p>
 </div>
 ))}
 </div>
@@ -165,10 +165,11 @@ CRM Intégré &<br/>
 
  {/* SECTION 5: DARK - BENEFITS */}
  <section className="bg-gradient-to-br from-slate-900 via-orange-950 to-amber-900 text-white py-20 relative overflow-hidden">
- <div className="absolute inset-0 pointer-events-none">
- <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
- </div>
- <div className="max-w-7xl mx-auto px-4 relative">
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-orange-500 opacity-10 rounded-full blur-3xl"></div>
+<div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-amber-500 opacity-10 rounded-full blur-3xl"></div>
+</div>
+<div className="max-w-7xl mx-auto px-4 relative">
  <div className="flex flex-col lg:flex-row items-center gap-16">
  <div className="w-full lg:w-1/2">
  <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi choisir notre CRM?</h2>
@@ -218,7 +219,7 @@ CRM Intégré &<br/>
             <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-700 mx-auto rounded-full"></div>
           </div>
         </div>
-        <GeoTestimonials lang="fr" theme="light" layout="marquee" basePath={basePath} />
+        <GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
       </section>
 
 {/* SECTION 7: FINAL CTA */}
@@ -265,6 +266,25 @@ Démarrer Maintenant
 </div>
 		</section>
 <ServiceSchema name="CRM & Listes de Prospects" description="CRM SuiteCRM intégré avec listes B2B/B2C qualifiées et email marketing Mautic" slug="crm" offers={{ priceFrom: "50", priceCurrency: "CAD" }} />
+<AIAgentSchema
+name="CRM SuiteCRM"
+description="CRM intégré avec gestion de leads, email marketing Mautic, listes B2B/B2C qualifiées et click-to-call pour PME canadiennes."
+capabilities={[
+"Gestion des leads et contacts",
+"Email marketing automatisé avec Mautic",
+"Click-to-call intégré",
+"Pipeline de ventes en temps réel",
+"Listes B2B/B2C qualifiées",
+"Intégrations Zapier, Google Workspace",
+"Rapports et analytics automatiques",
+"Support francophone au Québec"
+]}
+responseTime="immédiat"
+availability="24/7, support francophone Québec"
+languages={["Français", "Anglais"]}
+pricingModel="forfait mensuel"
+startingPrice={{ amount: "50", currency: "CAD", unit: "mois" }}
+/>
 <FAQSchema faqs={[
   { question: "Est-ce que je peux importer mes contacts existants?", answer: "Oui, on s'occupe de la migration. Excel, CSV, Google Contacts, ancien CRM — on importe tout sans perte de données." },
   { question: "Les listes B2B sont-elles à jour?", answer: "On les met à jour mensuellement. Taux de rebond garanti sous 5%, sinon on les remplace." },

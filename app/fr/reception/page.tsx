@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { PhoneIcon, ClockIcon, ShieldCheckIcon, CheckIcon, StarIcon, UsersIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
@@ -19,19 +20,18 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mb-6">
+    <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
       <Link href={`/fr/contact?service=${slug}`} className="bg-sky-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-sky-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
-        Démo Sans Engagement
+        Demander un devis gratuit
       </Link>
-      {showPhone ? (
+      {showPhone && (
         <a href={`tel:${CONTACT.phone}`} className="border-2 border-sky-600 text-sky-600 font-bold px-8 py-4 rounded-2xl hover:bg-sky-600 hover:text-white transition-all text-center hover:shadow-xl">
-          {CONTACT.phoneDisplay}
-        </a>
-      ) : (
-        <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-sky-600 text-sky-600 font-bold px-8 py-4 rounded-2xl hover:bg-sky-600 hover:text-white transition-all text-center hover:shadow-xl">
-          WhatsApp 24/7
+          Appeler {CONTACT.phone}
         </a>
       )}
+      <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="border-2 border-sky-600 text-sky-600 font-bold px-8 py-4 rounded-2xl hover:bg-sky-600 hover:text-white transition-all text-center hover:shadow-xl">
+        WhatsApp
+      </a>
     </div>
   )
 }
@@ -108,11 +108,11 @@ export default function Page() {
       </section>
 
 {/* SECTION 3: DARK STATS - Modern big numbers */}
-<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-900 text-white py-20 border-t-4 border-sky-600">
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-sky-900 text-white py-20 border-t-4 border-sky-600">
 <div className="max-w-7xl mx-auto px-4">
-  <div className="text-center mb-10">
-  <h3 className="text-2xl font-bold text-white">Des chiffres qui inspirent confiance</h3>
-  </div>
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white">Des chiffres qui inspirent confiance</h3>
+      </div>
   <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
   <p className="text-5xl lg:text-6xl font-black text-white">99.2%</p>
@@ -135,7 +135,7 @@ export default function Page() {
 </section>
 
 {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
-<section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Comment ça marche</h2>
@@ -159,10 +159,14 @@ export default function Page() {
       </section>
 
 {/* SECTION 5: DARK BENEFITS - Two columns */}
-<section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white border-t-4 border-sky-700">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="w-full lg:w-1/2">
+<section className="bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white py-20 relative overflow-hidden">
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-sky-500 opacity-10 rounded-full blur-3xl"></div>
+<div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-3xl"></div>
+</div>
+<div className="max-w-7xl mx-auto px-4 relative">
+<div className="flex flex-col lg:flex-row items-center gap-16">
+<div className="w-full lg:w-1/2">
 <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi nous faire confiance?</h2>
 <p className="text-xl text-sky-200 mb-8 leading-relaxed">Nos conseillers sont formés pour représenter votre entreprise comme si c'était la leur. Pas de scripts robots — de vraies conversations.</p>
 <ul className="space-y-4 mb-8">
@@ -210,7 +214,7 @@ Voir tous les tarifs
 <div className="w-24 h-1.5 bg-gradient-to-r from-sky-600 to-blue-700 mx-auto rounded-full"></div>
 </div>
 </div>
-<GeoTestimonials lang="fr" theme="light" layout="marquee" basePath={basePath} />
+    <GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
 </section>
 
       {/* SECTION 7: FINAL CTA - Gradient */}
@@ -256,8 +260,27 @@ Voir tous les tarifs
           </div>
 		</div>
 		</section>
-		<ServiceSchema name="Réception d'Appels 24/7" description="Service de réception d'appels professionnel avec conseillers francophones 24/7" slug="reception" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
-		<FAQSchema faqs={[
+<ServiceSchema name="Réception d'Appels 24/7" description="Service de réception d'appels professionnel avec conseillers francophones 24/7" slug="reception" offers={{ priceFrom: "1.50", priceCurrency: "CAD" }} />
+      <AIAgentSchema
+        name="Réception d'Appels Smart Hotline"
+        description="Service de réception d'appels professionnel avec conseillers francophones 24/7. Réponse en moins de 3 sonneries, messages transmis en temps réel, équipe dédiée formée pour votre entreprise."
+        capabilities={[
+          "Réception d'appels 24/7",
+          "Réponse en moins de 3 sonneries",
+          "Messages transmis en temps réel",
+          "Équipe dédiée et formée",
+          "Scripts personnalisés",
+          "Suivi et rapports quotidiens",
+          "Intégration CRM",
+          "Support multicanal (SMS, email, appel)"
+        ]}
+        responseTime="moins de 3 sonneries"
+        availability="24/7, 365 jours par année"
+        languages={["Français (Québec)", "Français (France)", "Anglais (Amérique du Nord)"]}
+        pricingModel="facturation à l'appel"
+        startingPrice={{ amount: "1.50", currency: "CAD", unit: "appel" }}
+      />
+      <FAQSchema faqs={[
 			{ question: "Combien de temps pour démarrer?", answer: "En général 48 heures. On prend le temps de bien comprendre votre entreprise avant de commencer." },
 			{ question: "Est-ce que je peux changer les scripts?", answer: "Absolument. C'est votre entreprise — vous décidez comment on répond. On ajuste quand vous voulez." },
 			{ question: "Comment je reçois les messages?", answer: "Par SMS, email, ou appel — vous choisissez. Les messages urgents sont transmis immédiatement." },

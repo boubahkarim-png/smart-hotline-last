@@ -6,6 +6,7 @@ import { CONTACT } from '@/lib/nav'
 import { TargetIcon, TrendingIcon, FolderIcon, CalendarIcon, AnalyticsIcon, GlobeIcon, CheckIcon, ShieldCheckIcon, UsersIcon, ClockIcon, PhoneIcon } from '@/components/Icons'
 import { FAQSchema } from '@/components/FAQSchema'
 import { ServiceSchema } from '@/components/ServiceSchema'
+import { AIAgentSchema } from '@/components/AIAgentSchema'
 import GeoTestimonials from '@/components/GeoTestimonials'
 
 const FEATURES = [
@@ -41,7 +42,7 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
-      {/* SECTION 1: HERO - Modern design with bigger image */}
+      {/* SECTION 1: HERO */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -51,7 +52,7 @@ export default function Page() {
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-slate-900">
                 Multipliez vos Leads,<br/>
-                <span className="bg-gradient-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent">Zéro Effort</span>
+                <span className="bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent">Zéro Effort</span>
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">Prospection, télémarketing, prise de rendez-vous. Nos conseillers connaissent l'art de décrocher des rendez-vous — sans faire peur à vos prospects.</p>
               <CTAButtons slug="emission"/>
@@ -65,11 +66,11 @@ export default function Page() {
             </div>
             <div className="w-full lg:w-[60%] animate-slide-right">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-green-500 rounded-3xl blur-2xl opacity-20"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl blur-2xl opacity-20"></div>
                 <img src={`${basePath}/images/telemarketing.webp`} alt="Conseiller appels sortants" loading="lazy" className="relative rounded-3xl shadow-2xl w-full object-cover hero-image-zoom" style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-6 -left-6 bg-white text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-100 animate-float-badge modern-box">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
                       <TrendingIcon className="w-7 h-7 text-white" />
                     </div>
                     <div>
@@ -84,11 +85,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 2: FEATURES - Modern cards with animations */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-emerald-900 text-white py-20 lg:py-28 overflow-hidden relative">
+      {/* SECTION 2: FEATURES */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-900 text-white py-20 lg:py-28 overflow-hidden relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-emerald-500 opacity-10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-green-500 opacity-10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -98,7 +99,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {FEATURES.map(({icon: Icon, title, desc}, i) => (
               <div key={title} className={`modern-box-dark p-8 text-center hover:scale-105 transition-all duration-500 animate-delay-${(i+1)*100}`}>
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-white mb-3">{title}</h3>
@@ -109,10 +110,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 3: DARK STATS - Modern big numbers with glass cards */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900 text-white py-20 border-t-4 border-emerald-600">
+      {/* SECTION 3: DARK STATS */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-900 text-white py-20 border-t-4 border-emerald-600">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white">Des résultats qui parlent</h3>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
@@ -136,12 +137,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 4: HOW IT WORKS - Modern numbered cards */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-white border-t-4 border-slate-200">
+      {/* SECTION 4: HOW IT WORKS */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Comment ça fonctionne</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-700 mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-teal-700 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
             {[
@@ -151,7 +152,7 @@ export default function Page() {
               {n: '4', t: 'Rapports & optimisation', d: "Ajustements quotidiens pour maximiser les résultats."},
             ].map((step, i) => (
               <div key={step.n} className={`modern-box p-8 text-center animate-delay-${(i+1)*100}`}>
-                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
+                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-700 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-black shadow-xl">{step.n}</div>
                 <h3 className="font-bold text-xl text-slate-900 mb-3">{step.t}</h3>
                 <p className="text-slate-600 leading-relaxed">{step.d}</p>
               </div>
@@ -160,9 +161,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 5: DARK BENEFITS - Two columns with pricing card */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-emerald-950 to-green-900 text-white border-t-4 border-emerald-700">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* SECTION 5: DARK - BENEFITS */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-900 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-emerald-500 opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">Pourquoi nous faire confiance?</h2>
@@ -175,14 +179,14 @@ export default function Page() {
                   'Annulez quand vous voulez — pas de contrat long',
                 ].map((item, i) => (
                   <li key={i} className={`flex items-center gap-4 text-white text-lg animate-fade-in-up animate-delay-${(i+1)*100}`}>
-                    <span className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 text-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <span className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
                       <CheckIcon className="w-5 h-5"/>
                     </span>
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="/fr/contact?service=emission" className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <Link href="/fr/contact?service=emission" className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
                 Voir une démo
               </Link>
             </div>
@@ -209,14 +213,14 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Ce que nos clients disent</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-700 mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-teal-700 mx-auto rounded-full"></div>
           </div>
         </div>
-        <GeoTestimonials lang="fr" theme="light" layout="marquee" basePath={basePath} />
+        <GeoTestimonials lang="fr" theme="light" layout="marquee" cardSize="lg" basePath={basePath} />
       </section>
 
-      {/* SECTION 7: FINAL CTA - Gradient */}
-      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-green-900 py-24 relative overflow-hidden">
+      {/* SECTION 7: FINAL CTA */}
+      <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 py-24 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-emerald-500 opacity-10 rounded-full blur-3xl"></div>
         </div>
@@ -232,12 +236,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 8: FAQ - Modern expandable */}
+      {/* SECTION 8: FAQ */}
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4">Questions fréquentes</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-700 mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-teal-700 mx-auto rounded-full"></div>
           </div>
           <div className="space-y-6 stagger-children">
             {[
@@ -252,13 +256,32 @@ export default function Page() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/fr/contact?service=emission" className="inline-block bg-gradient-to-r from-emerald-600 to-green-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+            <Link href="/fr/contact?service=emission" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold px-10 py-5 rounded-2xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
               Démarrer Maintenant
             </Link>
           </div>
         </div>
       </section>
       <ServiceSchema name="Appels Sortants & Prospection" description="Service de prospection téléphonique et télémarketing avec leads qualifiés et prise de rendez-vous" slug="emission" offers={{ priceFrom: "3.00", priceCurrency: "CAD" }} />
+      <AIAgentSchema
+        name="Émission Pro"
+        description="Service d'appels sortants IA pour PME. Prospection téléphonique, qualification de leads et prise de rendez-vous automatisée avec conseillers francophones du Québec et de France."
+        capabilities={[
+          "Prospection téléphonique ciblée",
+          "Qualification de leads automatisée",
+          "Prise de rendez-vous confirmée",
+          "Scripts de conversion optimisés",
+          "CRM et autodialer intégrés",
+          "Rapports KPIs détaillés",
+          "Multi-canal appels, SMS, email",
+          "Suivi et optimisation quotidienne"
+        ]}
+        responseTime="48 heures pour lancement"
+        availability="Heures ouvrables, 5 jours par semaine"
+        languages={["Français (Québec)", "Français (France)", "Anglais (Amérique du Nord)"]}
+        pricingModel="facturation au forfait mensuel"
+        startingPrice={{ amount: "3.00", currency: "CAD", unit: "lead qualifié" }}
+      />
       <FAQSchema faqs={[
         { question: "Comment qualifiez-vous les leads?", answer: "On utilise des critères définis ensemble: budget, autorité, besoin, timing. Chaque lead est validé avant transfert." },
         { question: "Proposez-vous des scripts sur mesure?", answer: "Oui, nos experts rédigent des scripts adaptés à votre offre et votre marché. On les teste et optimise en continu." },
