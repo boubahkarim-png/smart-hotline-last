@@ -95,17 +95,17 @@ return (
 <h2 className="text-3xl lg:text-4xl font-black mb-4">Support Channels</h2>
 <p className="text-white text-lg max-w-2xl mx-auto">We answer everywhere your customers contact you.</p>
 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
-{FEATURES.map(({icon: Icon, title, desc}, i) => (
-<div key={title} className={`bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all modern-box animate-delay-${(i+1)*100}`}>
-<div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-4">
-<Icon className="w-6 h-6 text-white" />
-</div>
-<h3 className="font-bold text-lg text-white mb-2">{title}</h3>
-<p className="text-slate-200 text-sm">{desc}</p>
-</div>
-))}
-</div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+        {FEATURES.map(({icon: Icon, title, desc}, i) => (
+          <div key={title} className={`modern-box-dark p-8 text-center hover:scale-105 transition-all duration-500 animate-delay-${(i+1)*100}`}>
+            <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <Icon className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="font-bold text-xl text-white mb-3">{title}</h3>
+            <p className="text-teal-200 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
 </div>
 </section>
 
@@ -115,12 +115,12 @@ return (
 <div className="text-center mb-8">
 <h3 className="text-2xl font-bold text-white">Measurable Results</h3>
 </div>
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-slate-200 text-lg mt-1">Client Satisfaction</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-slate-200 text-lg mt-1">Response Time</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-slate-200 text-lg mt-1">Tickets/Month</p></div>
-<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-slate-200 text-lg mt-1">Availability</p></div>
-</div>
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center stagger-children">
+        <div className="modern-box-dark p-8 animate-delay-100"><p className="text-4xl font-black text-white">98%</p><p className="text-teal-200 text-lg mt-1">Client Satisfaction</p></div>
+        <div className="modern-box-dark p-8 animate-delay-200"><p className="text-4xl font-black text-white">&lt; 2h</p><p className="text-teal-200 text-lg mt-1">Response Time</p></div>
+        <div className="modern-box-dark p-8 animate-delay-300"><p className="text-4xl font-black text-white">50K+</p><p className="text-teal-200 text-lg mt-1">Tickets/Month</p></div>
+        <div className="modern-box-dark p-8 animate-delay-400"><p className="text-4xl font-black text-white">24/7</p><p className="text-teal-200 text-lg mt-1">Availability</p></div>
+      </div>
 </div>
 </section>
 
@@ -171,16 +171,16 @@ return (
 </ul>
 <Link href="/en/contact?service=support" className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-teal-700 transition-colors">See a demo →</Link>
 </div>
-<div className="w-full lg:w-[40%]">
-<div className="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
-<h3 className="font-bold text-white text-lg mb-4">Typical Results</h3>
-<ul className="space-y-3">
-<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> +40% client satisfaction</li>
-<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> -60% response time</li>
-<li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> Team freed for sales</li>
-</ul>
-</div>
-</div>
+      <div className="w-full lg:w-[40%]">
+        <div className="modern-box-dark p-8">
+          <h3 className="font-bold text-white text-lg mb-4">Typical Results</h3>
+          <ul className="space-y-3">
+            <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> +40% client satisfaction</li>
+            <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> -60% response time</li>
+            <li className="flex items-center gap-2 text-white"><CheckIcon className="w-5 h-5 text-teal-400"/> Team freed for sales</li>
+          </ul>
+        </div>
+      </div>
 </div>
 </div>
 </section>
