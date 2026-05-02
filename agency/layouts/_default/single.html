@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article>
+    <!-- Dynamic Hero -->
+    {{ $hero := .Params.hero | default "/images/services-hero.jpg" }}
+    <header class="relative py-32 bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="{{ $hero }}" class="w-full h-full object-cover" alt="{{ .Title }}">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">{{ .Title }}</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">{{ .Description }}</p>
+        </div>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-4 py-20">
+        <div class="prose prose-lg prose-slate max-w-none 
+            prose-headings:text-primary-900 prose-headings:font-bold
+            prose-a:text-primary-600 prose-strong:text-slate-900">
+            {{ .Content }}
+        </div>
+        
+        {{ if eq .Section "solutions" }}
+        <div class="mt-20 p-10 bg-primary-50 rounded-3xl border border-primary-100 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold text-primary-900 mb-2">Prêt à optimiser votre service ?</h3>
+                <p class="text-primary-700">Demandez une consultation gratuite et personnalisée dès aujourd'hui.</p>
+            </div>
+            <a href="/contact" class="bg-primary-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-700 transition shadow-xl shadow-primary-200 shrink-0">
+                Obtenir un Devis
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</article>
+{{ end }}

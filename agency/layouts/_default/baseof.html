@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "fr" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+                            400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+                            800: '#075985', 900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    {{ partial "header.html" . }}
+
+    <main class="min-h-screen pt-20">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 lg:col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="{{ "images/logo.png" | relURL }}" class="h-10 brightness-0 invert" alt="">
+                    <span class="text-white text-xl font-bold">Smart Hotline</span>
+                </div>
+                <p class="mb-6 leading-relaxed">Partenaire privilégié pour l'externalisation de vos services clients et le déploiement d'agents IA innovants.</p>
+                <div class="flex space-x-4">
+                    <a href="{{ .Site.Params.social.linkedin }}" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition"><i class="fab fa-linkedin-in text-white"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Nos Solutions</h4>
+                <ul class="space-y-3">
+                    {{ range .Site.Menus.main }}
+                        {{ if eq .Identifier "solutions" }}
+                            {{ range .Children }}
+                            <li><a href="{{ .URL }}" class="hover:text-primary-400 transition">{{ .Name }}</a></li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Entreprise</h4>
+                <ul class="space-y-3">
+                    <li><a href="/a-propos/" class="hover:text-primary-400 transition">À Propos</a></li>
+                    <li><a href="/secteurs/" class="hover:text-primary-400 transition">Secteurs</a></li>
+                    <li><a href="/tarifs/" class="hover:text-primary-400 transition">Nos Tarifs</a></li>
+                    <li><a href="/contact/" class="hover:text-primary-400 transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Coordonnées</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt text-primary-500 mt-1 mr-3"></i> Paris, France / Montréal, Canada</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt text-primary-500 mr-3"></i> +1-514-819-0559</li>
+                    <li class="flex items-center"><i class="fas fa-envelope text-primary-500 mr-3"></i> direction@smart-hotline.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-slate-800 flex flex-col md:row justify-between items-center text-xs">
+            <p>&copy; {{ now.Year }} Smart Hotline Agency. Expert BPO & AI Voice. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

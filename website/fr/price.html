@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs | Smart Hotline - Services de Téléphonie pour PME</title>
+<meta name="description" content="Tarifs compétitifs pour services de téléphonie: appels sortants, appels entrants, CRM, support client. Formules flexibles avec essai gratuit pour PME en Europe, Canada et USA.">
+<meta name="keywords" content="tarifs téléphonie, prix appels sortants, prix appels entrants, tarifs CRM, tarifs support client, formules PME, centre d'appels tarifs">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.smart-hotline.com/fr/tarifs">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Geo-Pricing -->
+<script src="../assets/geo-pricing.js"></script>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+dark: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a' }
+},
+fontFamily: { 'sans': ['Inter', 'ui-sans-serif', 'system-ui'] }
+}
+}
+}
+</script>
+
+<style>
+.gradient-text { background: linear-gradient(135deg, #0ea5e9, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.scroll-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.scroll-reveal.active { opacity: 1; transform: translateY(0); }
+.pricing-card { transition: all 0.3s ease; position: relative; overflow: visible; }
+.pricing-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+.popular-badge { position: absolute; top: -10px; right: 20px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; z-index: 10; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); }
+.service-tab { transition: all 0.3s ease; }
+.service-tab.active { background: #0ea5e9; color: white; }
+.service-content { display: none; }
+.service-content.active { display: block; }
+.trial-banner { background: linear-gradient(135deg, #10b981, #059669); }
+.currency-badge { display: inline-block; padding: 4px 12px; background: #f0f9ff; border-radius: 20px; font-size: 0.875rem; font-weight: 600; color: #0284c7; margin-left: 8px; }
+@media (max-width: 768px) {
+.pricing-container { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+.pricing-card { min-width: 300px; scroll-snap-align: start; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Service",
+"name": "Smart Hotline Services de Téléphonie",
+"description": "Services de téléphonie professionnels pour PME incluant appels sortants, appels entrants, CRM et support client.",
+"provider": { "@type": "Organization", "name": "Smart Hotline Agency", "url": "https://www.smart-hotline.com" },
+"areaServed": ["Canada", "France", "Suisse", "Belgique", "États-Unis"]
+}
+</script>
+</head>
+<body class="font-sans text-gray-800">
+
+<div id="header-container"></div>
+
+<section class="pt-28 pb-12 bg-gradient-to-br from-primary-50 to-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-10">
+<h1 class="text-4xl md:text-5xl font-bold mb-4"><span class="gradient-text">Tarifs Transparents</span></h1>
+<p class="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">Des formules flexibles adaptées aux PME. Les prix s'ajustent automatiquement selon votre région.</p>
+<div class="inline-flex items-center bg-primary-100 rounded-full px-4 py-2">
+<i class="fas fa-map-marker-alt text-primary-600 mr-2"></i>
+<span class="text-primary-800">Région détectée:</span>
+<span class="font-semibold text-primary-900 ml-2" data-currency-name>Euro</span>
+<span class="currency-badge" data-currency-symbol>€</span>
+</div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+<div class="trial-banner rounded-xl p-6 text-white shadow-lg hover-lift">
+<div class="flex items-start">
+<div class="flex-shrink-0 bg-white dark:bg-dark-800/20 rounded-full p-3 mr-4"><i class="fas fa-gift text-2xl"></i></div>
+<div>
+<h3 class="text-xl font-bold mb-2">1 Semaine GRATUITE</h3>
+<p class="text-white/90 mb-3">Obtenez 7 jours gratuits avec votre premier mois d'abonnement.</p>
+<a href="contact.html?trial=1semaine" class="inline-block bg-white dark:bg-dark-800 text-green-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Profiter <i class="fas fa-arrow-right ml-2"></i></a>
+</div>
+</div>
+</div>
+
+<div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-6 text-white shadow-lg hover-lift">
+<div class="flex items-start">
+<div class="flex-shrink-0 bg-white dark:bg-dark-800/20 rounded-full p-3 mr-4"><i class="fas fa-calendar-check text-2xl"></i></div>
+<div>
+<h3 class="text-xl font-bold mb-2">2 Semaines Test</h3>
+<p class="text-white/90 mb-3">Testez nos services pendant 2 semaines sans engagement.</p>
+<a href="contact.html?trial=2semaines" class="inline-block bg-white dark:bg-dark-800 text-blue-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Commencer <i class="fas fa-arrow-right ml-2"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-6 bg-white dark:bg-dark-800 border-b">
+<div class="container mx-auto px-6">
+<div class="flex flex-wrap justify-center gap-3">
+<button onclick="showService('outbound')" class="service-tab active px-5 py-2.5 rounded-lg font-semibold transition-colors" data-service="outbound"><i class="fas fa-phone-volume mr-2"></i>Appels Sortants</button>
+<button onclick="showService('inbound')" class="service-tab px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="inbound"><i class="fas fa-phone-alt mr-2"></i>Appels Entrants</button>
+<button onclick="showService('support')" class="service-tab px-5 py-2.5 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors" data-service="support"><i class="fas fa-headset mr-2"></i>Support</button>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-white dark:bg-dark-800 scroll-reveal">
+<div class="container mx-auto px-6">
+
+<div id="outbound-content" class="service-content active mb-12">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold mb-2">Tarifs Appels Sortants</h2>
+<p class="text-gray-600">Services de télémarketing professionnel avec tarifs horaires</p>
+</div>
+<div class="pricing-container flex md:grid md:grid-cols-4 gap-6 pb-4">
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Starter</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="outbound" data-price-plan="starter" data-price-type="price">15</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/heure · 20h/sem</span>
+</div>
+<ul class="space-y-2 text-gray-600 text-sm mb-5">
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Distribution automatique</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Rapports mensuels</li>
+</ul>
+<a href="contact.html?plan=outbound-starter" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-xl p-6 border-2 border-primary-500">
+<div class="popular-badge">Plus Populaire</div>
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Professional</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="outbound" data-price-plan="professional" data-price-type="price">17</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/heure · 40h/sem</span>
+</div>
+<ul class="space-y-2 text-gray-600 text-sm mb-5">
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Numérotation avancée</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Support 24/7 prioritaire</li>
+</ul>
+<a href="contact.html?plan=outbound-professional" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Business</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="outbound" data-price-plan="business" data-price-type="price">16</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/heure · 60h/sem</span>
+</div>
+<ul class="space-y-2 text-gray-600 text-sm mb-5">
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Équipe dédiée</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Formation incluse</li>
+</ul>
+<a href="contact.html?plan=outbound-business" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Enterprise</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="outbound" data-price-plan="enterprise" data-price-type="price">14</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/heure · 80h+/sem</span>
+</div>
+<ul class="space-y-2 text-gray-600 text-sm mb-5">
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Trunk SIP inclus</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 mr-2 text-xs"></i>Gestionnaire de compte</li>
+</ul>
+<a href="contact.html?plan=outbound-enterprise" class="block text-center px-4 py-2 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800">Nous Contacter</a>
+</div>
+</div>
+</div>
+
+<div id="inbound-content" class="service-content mb-12">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold mb-2">Tarifs Appels Entrants</h2>
+<p class="text-gray-600">Ne manquez plus aucun appel avec notre service de réception</p>
+</div>
+<div class="pricing-container flex md:grid md:grid-cols-3 gap-6 pb-4">
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Basic</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="inbound" data-price-plan="basic" data-price-type="price">149</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · 500 appels</span>
+</div>
+<a href="contact.html?plan=inbound-basic" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-xl p-6 border-2 border-primary-500">
+<div class="popular-badge">Plus Populaire</div>
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Advanced</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="inbound" data-price-plan="advanced" data-price-type="price">249</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · 1500 appels</span>
+</div>
+<a href="contact.html?plan=inbound-advanced" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Premium</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="inbound" data-price-plan="premium" data-price-type="price">349</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · 2500 appels</span>
+</div>
+<a href="contact.html?plan=inbound-premium" class="block text-center px-4 py-2 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800">Nous Contacter</a>
+</div>
+</div>
+</div>
+
+<div id="support-content" class="service-content mb-12">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold mb-2">Tarifs Support Client</h2>
+<p class="text-gray-600">Service client professionnel pour votre entreprise</p>
+</div>
+<div class="pricing-container flex md:grid md:grid-cols-3 gap-6 pb-4">
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Basic</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="support" data-price-plan="basic" data-price-type="price">199</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · Heures ouvrées</span>
+</div>
+<a href="contact.html?plan=support-basic" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-xl p-6 border-2 border-primary-500">
+<div class="popular-badge">Plus Populaire</div>
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Professional</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="support" data-price-plan="professional" data-price-type="price">299</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · Horaires étendus</span>
+</div>
+<a href="contact.html?plan=support-professional" class="block text-center px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700">Choisir</a>
+</div>
+
+<div class="pricing-card bg-white dark:bg-dark-800 rounded-xl shadow-lg p-6 border border-gray-100">
+<h4 class="text-lg font-bold mb-3 text-center text-gray-800">Enterprise</h4>
+<div class="text-center mb-5">
+<div class="text-3xl font-bold text-primary-600"><span data-price-service="support" data-price-plan="enterprise" data-price-type="price">499</span><span data-currency-symbol>€</span></div>
+<span class="text-gray-500 text-sm">/mois · 24/7</span>
+</div>
+<a href="contact.html?plan=support-enterprise" class="block text-center px-4 py-2 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-800">Nous Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-12 bg-gradient-to-r from-purple-600 to-indigo-600 scroll-reveal">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="text-white mb-6 md:mb-0">
+<h2 class="text-2xl md:text-3xl font-bold mb-2">Agents Vocaux IA</h2>
+<p class="text-white/80">Automatisez vos appels avec des agents IA intelligents. Disponibles 24/7.</p>
+</div>
+<a href="ai-agents.html" class="inline-block bg-white dark:bg-dark-800 text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">En Savoir Plus <i class="fas fa-arrow-right ml-2"></i></a>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-gray-50 scroll-reveal">
+<div class="container mx-auto px-6">
+<div class="text-center mb-10"><h2 class="text-3xl font-bold mb-4">Questions Fréquentes</h2></div>
+<div class="max-w-3xl mx-auto space-y-4">
+<div class="bg-white dark:bg-dark-800 rounded-lg shadow p-5">
+<button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(this)"><span class="font-semibold text-gray-800">Puis-je changer de formule ?</span><i class="fas fa-chevron-down text-primary-600 transition-transform"></i></button>
+<div class="hidden mt-4 text-gray-600">Vous pouvez changer de formule à tout moment. Les changements prennent effet au début du prochain cycle de facturation.</div>
+</div>
+<div class="bg-white dark:bg-dark-800 rounded-lg shadow p-5">
+<button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(this)"><span class="font-semibold text-gray-800">Y a-t-il des frais d'installation ?</span><i class="fas fa-chevron-down text-primary-600 transition-transform"></i></button>
+<div class="hidden mt-4 text-gray-600">Aucun frais d'installation. Nous vous assistons gratuitement pour la mise en place.</div>
+</div>
+<div class="bg-white dark:bg-dark-800 rounded-lg shadow p-5">
+<button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(this)"><span class="font-semibold text-gray-800">Puis-je tester avant de m'engager ?</span><i class="fas fa-chevron-down text-primary-600 transition-transform"></i></button>
+<div class="hidden mt-4 text-gray-600">Absolument ! Nous proposons deux options : 1 semaine gratuite avec votre premier mois, ou 2 semaines de test sans engagement.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-primary-600 text-white scroll-reveal">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Prêt à Optimiser Votre Communication ?</h2>
+<p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">Contactez-nous pour une consultation gratuite.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="contact.html" class="inline-block px-8 py-4 bg-white dark:bg-dark-800 text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"><i class="fas fa-calendar-alt mr-2"></i>Réserver</a>
+<a href="https://wa.me/15148190559" target="_blank" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold hover:bg-white dark:bg-dark-800 hover:text-primary-600 transition-colors"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div>
+<div class="flex items-center space-x-2 mb-4">
+<div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold">SH</div>
+<span class="text-xl font-bold">Agence Smart Hotline</span>
+</div>
+<p class="text-gray-400">Services de telephonie professionnelle pour PME en Europe, Canada et USA.</p>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Services</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="services.html" class="hover:text-white transition-colors">Tous les Services</a></li>
+<li><a href="reception.html" class="hover:text-white transition-colors">Reception d'Appels</a></li>
+<li><a href="emission.html" class="hover:text-white transition-colors">Emission d'Appels</a></li>
+<li><a href="support.html" class="hover:text-white transition-colors">Support Client</a></li>
+<li><a href="crm-lists.html" class="hover:text-white transition-colors">CRM & Listes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Entreprise</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="about.html" class="hover:text-white transition-colors">A Propos</a></li>
+<li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+<li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+<li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Contact</h3>
+<div class="space-y-3 text-gray-400">
+<p><i class="fab fa-whatsapp mr-2"></i>WhatsApp: +1 514 819 0559</p>
+<p><i class="fas fa-envelope mr-2"></i>direction@smart-hotline.com</p>
+<p><i class="fas fa-globe mr-2"></i>smart-hotline.com</p>
+<p><i class="fas fa-calendar mr-2"></i><a href="https://calendly.com/boubah-karim/30min" class="hover:text-white">Prendre RDV</a></p>
+</div>
+<div class="flex space-x-4 mt-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+<p>&copy; 2024 Agence Smart Hotline. Tous droits reserves.</p>
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/15148190559?text=Bonjour,%20je%20suis%20intéressé%20par%20vos%20services" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 hover:scale-110 transition-all"><i class="fab fa-whatsapp text-2xl"></i></a>
+
+<script>
+function showService(service) {
+document.querySelectorAll('.service-content').forEach(c => c.classList.remove('active'));
+document.querySelectorAll('.service-tab').forEach(t => { t.classList.remove('active'); t.classList.add('bg-gray-200', 'text-gray-700'); });
+const content = document.getElementById(service + '-content');
+if (content) content.classList.add('active');
+const tab = document.querySelector(`[data-service="${service}"]`);
+if (tab) { tab.classList.add('active'); tab.classList.remove('bg-gray-200', 'text-gray-700'); }
+}
+function toggleFAQ(button) {
+const content = button.nextElementSibling;
+const icon = button.querySelector('i');
+content.classList.toggle('hidden');
+icon.classList.toggle('rotate-180');
+}
+document.getElementById('mobileMenuToggle').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }}); }, { threshold: 0.1 });
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+</script>
+<script src="../assets/partials.js"></script>
+</body>
+</html>

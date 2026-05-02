@@ -1,0 +1,304 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-03-21",
+  "regions": {
+    "EUR": {
+      "name": "Euro Zone",
+      "currency": "EUR",
+      "symbol": "€",
+      "countries": ["FR", "BE", "LU", "DE", "NL", "ES", "IT", "PT", "AT", "IE", "GR", "FI", "SK", "SI", "EE", "LV", "LT", "CY", "MT"],
+      "trialOptions": {
+        "option1": {
+          "en": "1 week free with your first month",
+          "fr": "1 semaine gratuite avec votre premier mois"
+        },
+        "option2": {
+          "en": "2 weeks test without commitment",
+          "fr": "2 semaines test sans engagement"
+        }
+      },
+      "services": {
+        "outbound": {
+          "starter": {
+            "pricePerHour": 15,
+            "hoursPerWeek": 20,
+            "monthlyEstimate": 300,
+            "features": ["automatic_distribution", "schedule_optimization", "monthly_reports", "email_phone_support"]
+          },
+          "professional": {
+            "pricePerHour": 17,
+            "hoursPerWeek": 40,
+            "monthlyEstimate": 580,
+            "popular": true,
+            "features": ["advanced_numbering", "custom_scripts", "conversion_optimization", "priority_24_7_support"]
+          },
+          "business": {
+            "pricePerHour": 16,
+            "hoursPerWeek": 80,
+            "monthlyEstimate": 1100,
+            "features": ["multiple_numbers", "sip_trunk", "dedicated_team", "continuous_training"]
+          },
+          "enterprise": {
+            "pricePerHour": 14,
+            "hoursPerWeek": 120,
+            "monthlyEstimate": 1680,
+            "features": ["unlimited_numbers", "full_customization", "account_manager", "sla_guarantee"]
+          }
+        },
+        "inbound": {
+          "basic": {
+            "monthlyPrice": 149,
+            "callsIncluded": 500,
+            "overagePerCall": 0.30,
+            "features": ["call_routing", "voicemail", "business_hours", "email_notifications"]
+          },
+          "advanced": {
+            "monthlyPrice": 249,
+            "callsIncluded": 1500,
+            "overagePerCall": 0.25,
+            "popular": true,
+            "features": ["ivr_menu", "call_recording", "crm_integration", "sms_notifications", "after_hours"]
+          },
+          "premium": {
+            "monthlyPrice": 349,
+            "callsIncluded": 2500,
+            "overagePerCall": 0.20,
+            "features": ["priority_routing", "real_time_analytics", "api_access", "dedicated_number", "24_7_support"]
+          }
+        },
+        "support": {
+          "basic": {
+            "monthlyPrice": 199,
+            "hoursIncluded": 8,
+            "channels": ["email", "phone"],
+            "availability": "business_hours"
+          },
+          "professional": {
+            "monthlyPrice": 299,
+            "hoursIncluded": 20,
+            "channels": ["email", "phone", "chat"],
+            "availability": "extended_hours",
+            "popular": true
+          },
+          "enterprise": {
+            "monthlyPrice": 499,
+            "hoursIncluded": 40,
+            "channels": ["email", "phone", "chat", "social"],
+            "availability": "24_7",
+            "features": ["dedicated_team", "priority_escalation", "custom_training"]
+          }
+        },
+        "ai_agents": {
+          "starter": {
+            "monthlyPrice": 299,
+            "minutesIncluded": 1000,
+            "features": ["basic_ivr", "call_routing", "transcription", "basic_analytics"]
+          },
+          "professional": {
+            "monthlyPrice": 599,
+            "minutesIncluded": 3000,
+            "features": ["advanced_ivr", "multilingual", "crm_integration", "sentiment_analysis", "custom_voice"],
+            "popular": true
+          },
+          "enterprise": {
+            "monthlyPrice": "custom",
+            "minutesIncluded": "unlimited",
+            "features": ["full_customization", "api_access", "dedicated_support", "sla_guarantee", "custom_integrations"]
+          }
+        }
+      }
+    },
+    "CHF": {
+      "name": "Switzerland",
+      "currency": "CHF",
+      "symbol": "CHF",
+      "countries": ["CH", "LI"],
+      "trialOptions": {
+        "option1": {
+          "en": "1 week free with your first month",
+          "fr": "1 semaine gratuite avec votre premier mois"
+        },
+        "option2": {
+          "en": "2 weeks test without commitment",
+          "fr": "2 semaines test sans engagement"
+        }
+      },
+      "services": {
+        "outbound": {
+          "starter": { "pricePerHour": 16, "hoursPerWeek": 20, "monthlyEstimate": 320 },
+          "professional": { "pricePerHour": 18, "hoursPerWeek": 40, "monthlyEstimate": 620, "popular": true },
+          "business": { "pricePerHour": 17, "hoursPerWeek": 80, "monthlyEstimate": 1170 },
+          "enterprise": { "pricePerHour": 15, "hoursPerWeek": 120, "monthlyEstimate": 1800 }
+        },
+        "inbound": {
+          "basic": { "monthlyPrice": 159, "callsIncluded": 500 },
+          "advanced": { "monthlyPrice": 269, "callsIncluded": 1500, "popular": true },
+          "premium": { "monthlyPrice": 379, "callsIncluded": 2500 }
+        },
+        "support": {
+          "basic": { "monthlyPrice": 219 },
+          "professional": { "monthlyPrice": 329, "popular": true },
+          "enterprise": { "monthlyPrice": 549 }
+        },
+        "ai_agents": {
+          "starter": { "monthlyPrice": 329, "minutesIncluded": 1000 },
+          "professional": { "monthlyPrice": 659, "minutesIncluded": 3000, "popular": true },
+          "enterprise": { "monthlyPrice": "custom", "minutesIncluded": "unlimited" }
+        }
+      }
+    },
+    "CAD": {
+      "name": "Canada",
+      "currency": "CAD",
+      "symbol": "$",
+      "countries": ["CA"],
+      "trialOptions": {
+        "option1": {
+          "en": "1 week free with your first month",
+          "fr": "1 semaine gratuite avec votre premier mois"
+        },
+        "option2": {
+          "en": "2 weeks test without commitment",
+          "fr": "2 semaines test sans engagement"
+        }
+      },
+      "services": {
+        "outbound": {
+          "starter": { "pricePerHour": 22, "hoursPerWeek": 20, "monthlyEstimate": 440 },
+          "professional": { "pricePerHour": 24, "hoursPerWeek": 40, "monthlyEstimate": 830, "popular": true },
+          "business": { "pricePerHour": 23, "hoursPerWeek": 80, "monthlyEstimate": 1580 },
+          "enterprise": { "pricePerHour": 21, "hoursPerWeek": 120, "monthlyEstimate": 2400 }
+        },
+        "inbound": {
+          "basic": { "monthlyPrice": 199, "callsIncluded": 500 },
+          "advanced": { "monthlyPrice": 329, "callsIncluded": 1500, "popular": true },
+          "premium": { "monthlyPrice": 459, "callsIncluded": 2500 }
+        },
+        "support": {
+          "basic": { "monthlyPrice": 269 },
+          "professional": { "monthlyPrice": 399, "popular": true },
+          "enterprise": { "monthlyPrice": 669 }
+        },
+        "ai_agents": {
+          "starter": { "monthlyPrice": 399, "minutesIncluded": 1000 },
+          "professional": { "monthlyPrice": 799, "minutesIncluded": 3000, "popular": true },
+          "enterprise": { "monthlyPrice": "custom", "minutesIncluded": "unlimited" }
+        }
+      }
+    },
+    "USD": {
+      "name": "United States / International",
+      "currency": "USD",
+      "symbol": "$",
+      "countries": ["US"],
+      "default": true,
+      "trialOptions": {
+        "option1": {
+          "en": "1 week free with your first month",
+          "fr": "1 semaine gratuite avec votre premier mois"
+        },
+        "option2": {
+          "en": "2 weeks test without commitment",
+          "fr": "2 semaines test sans engagement"
+        }
+      },
+      "services": {
+        "outbound": {
+          "starter": { "pricePerHour": 19, "hoursPerWeek": 20, "monthlyEstimate": 380 },
+          "professional": { "pricePerHour": 17, "hoursPerWeek": 40, "monthlyEstimate": 580, "popular": true },
+          "business": { "pricePerHour": 16, "hoursPerWeek": 80, "monthlyEstimate": 1100 },
+          "enterprise": { "pricePerHour": 15, "hoursPerWeek": 120, "monthlyEstimate": 1650 }
+        },
+        "inbound": {
+          "basic": { "monthlyPrice": 149, "callsIncluded": 500 },
+          "advanced": { "monthlyPrice": 249, "callsIncluded": 1500, "popular": true },
+          "premium": { "monthlyPrice": 349, "callsIncluded": 2500 }
+        },
+        "support": {
+          "basic": { "monthlyPrice": 199 },
+          "professional": { "monthlyPrice": 299, "popular": true },
+          "enterprise": { "monthlyPrice": 499 }
+        },
+        "ai_agents": {
+          "starter": { "monthlyPrice": 299, "minutesIncluded": 1000 },
+          "professional": { "monthlyPrice": 599, "minutesIncluded": 3000, "popular": true },
+          "enterprise": { "monthlyPrice": "custom", "minutesIncluded": "unlimited" }
+        }
+      }
+    }
+  },
+  "features": {
+    "automatic_distribution": {
+      "en": "Automatic distribution system",
+      "fr": "Système de distribution automatique"
+    },
+    "schedule_optimization": {
+      "en": "Schedule optimization",
+      "fr": "Optimisation des horaires"
+    },
+    "monthly_reports": {
+      "en": "Monthly reports",
+      "fr": "Rapports mensuels"
+    },
+    "email_phone_support": {
+      "en": "Email and phone support",
+      "fr": "Support email et téléphone"
+    },
+    "advanced_numbering": {
+      "en": "Advanced numbering strategy",
+      "fr": "Stratégie de numérotation avancée"
+    },
+    "custom_scripts": {
+      "en": "Custom script management",
+      "fr": "Gestion de scripts personnalisés"
+    },
+    "conversion_optimization": {
+      "en": "Conversion optimization",
+      "fr": "Optimisation des conversions"
+    },
+    "priority_24_7_support": {
+      "en": "Priority 24/7 support",
+      "fr": "Support prioritaire 24/7"
+    },
+    "multiple_numbers": {
+      "en": "Multiple numbers and SIP trunk",
+      "fr": "Numéros multiples et trunk SIP"
+    },
+    "dedicated_team": {
+      "en": "Dedicated team included",
+      "fr": "Équipe dédiée incluse"
+    },
+    "continuous_training": {
+      "en": "Continuous training and optimization",
+      "fr": "Formation continue et optimisation"
+    },
+    "call_routing": {
+      "en": "Call routing",
+      "fr": "Routage d'appels"
+    },
+    "voicemail": {
+      "en": "Voicemail",
+      "fr": "Messagerie vocale"
+    },
+    "business_hours": {
+      "en": "Business hours coverage",
+      "fr": "Couverture heures ouvrables"
+    },
+    "ivr_menu": {
+      "en": "IVR menu",
+      "fr": "Menu SVI"
+    },
+    "call_recording": {
+      "en": "Call recording",
+      "fr": "Enregistrement d'appels"
+    },
+    "crm_integration": {
+      "en": "CRM integration",
+      "fr": "Intégration CRM"
+    },
+    "real_time_analytics": {
+      "en": "Real-time analytics",
+      "fr": "Analytique en temps réel"
+    }
+  }
+}

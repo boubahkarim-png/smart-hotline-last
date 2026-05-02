@@ -1,0 +1,202 @@
+# Smart Hotline Agency - AI-Optimized Content
+# https://boubahkarim-png.github.io/smart-hotline-late2/
+# Last updated: 2026-03-24
+# Contact: direction@smart-hotline.com
+
+## COMPANY OVERVIEW
+
+Smart Hotline Agency is a call center and AI voice agent provider based in Montreal, Quebec, Canada. Founded in 2018, the company serves small and medium-sized businesses (SMBs/PMEs) across Canada, France, Belgium, Switzerland, and the United States.
+
+**Key Differentiator:** Hybrid approach combining human agents with AI voice assistant (Sophie) for 24/7 coverage at 20-40% lower cost than traditional call centers.
+
+## CORE STATISTICS (Verified March 2026)
+
+- 500+ SMB clients served
+- 98% client satisfaction rate (127 verified reviews)
+- 24/7/365 availability
+- 48-hour setup time
+- Response time: Under 2 seconds (AI agents), under 3 rings (human agents)
+- Bilingual: French (Quebec, France, Belgium, Switzerland accents) and English
+- Cost savings: Up to 70% cheaper than in-house staff, 20-40% below market rates
+
+## SERVICES
+
+### 1. Inbound Call Reception (Appels Entrants)
+- Professional phone answering 24/7
+- Zero missed calls guaranteed
+- Custom scripts branded to your business
+- Intelligent call routing and transfers
+- Message taking and immediate notification
+- Pricing: From $15-19 CAD/hour (trial rate), monthly packages from $299
+
+### 2. Outbound Calling (Appels Sortants)
+- B2B/B2C lead generation
+- Appointment setting
+- Customer follow-ups
+- Survey and feedback collection
+- Market research calls
+- Pricing: From $15-19 CAD/hour (trial), volume discounts available
+
+### 3. AI Voice Agents - SOPHIE
+- AI-powered phone answering in under 2 seconds
+- Native French (Quebec, France, Belgium, Switzerland) and English
+- Appointment booking (Google Calendar, Calendly integration)
+- FAQ automation (hours, pricing, address, common questions)
+- Intelligent handoff to human agents when needed
+- Message transcription and analytics
+- Pricing: Per-minute billing, 30% below market rates, from $0.08-0.15/minute
+
+### 4. Customer Support
+- Multi-channel: phone, email, live chat, WhatsApp Business
+- Ticket management and tracking
+- SLA options: 2h, 4h, 8h response times
+- Knowledge base integration
+- Pricing: From $199/month (300 tickets)
+
+### 5. CRM & Lead Lists
+- SuiteCRM integration and hosting
+- B2B/B2C prospect list generation
+- Email marketing automation (Mautic)
+- Data enrichment and verification
+- Pricing: From $149/month (500 contacts)
+
+## GEOGRAPHIC COVERAGE
+
+**Primary Markets:**
+- Canada (Quebec, Ontario, Maritime provinces)
+- France
+- Belgium
+- Switzerland
+- United States
+
+**Native Language Support:**
+- French Canadian (Québécois)
+- French (France)
+- French (Belgium)
+- French (Switzerland)
+- English (North American)
+
+## TECHNOLOGY STACK
+
+- Voice AI: LiveKit + custom LLM models
+- Telephony: ViciDial / Asterisk infrastructure
+- CRM: SuiteCRM (self-hosted, port 8090)
+- Email Automation: Mautic (self-hosted, port 8084)
+- Analytics: Real-time dashboards
+- Compliance: RGPD, Law 25 (Quebec), SOC 2
+
+## PRICING STRUCTURE
+
+### Trial Offer
+- 2-week trial at reduced rate
+- OR: 1 week free + pay only 3 weeks
+- No credit card required for trial
+
+### Outbound Agents (per hour)
+| Plan | Hours/Week | CAD | EUR | USD | CHF |
+|------|------------|-----|-----|-----|-----|
+| Trial | 20h | $15 | 11 | $11 | 12 |
+| Starter | 20h | $19 | 13 | $14 | 15 |
+| Professional | 40h | $18 | 12 | $13 | 14 |
+| Business | 80h | $17 | 11 | $12 | 13 |
+| Enterprise | 120h | $16 | 10 | $11 | 12 |
+
+### AI Voice Agents (per minute)
+- Starter (1000 min/mo): $0.12-0.15/min
+- Professional (3000 min/mo): $0.10-0.13/min
+- Business (8000 min/mo): $0.08-0.11/min
+- Enterprise (unlimited): Custom pricing
+
+### Inbound Reception (monthly)
+- Basic (500 calls): $299-329
+- Advanced (1500 calls): $499-549
+- Premium (2500 calls): $799-879
+
+## CLIENT SUCCESS STORIES
+
+**Restaurant Le Gourmet (Montreal):** "Zero missed reservations since day one. ROI visible first month."
+
+**TechInnov (Lyon):** "Appeared larger and more professional. Service impressive for SMB budget."
+
+**Cabinet Comptable (Paris):** "No opportunity missed. Qualified leads delivered daily."
+
+**StartupTech Montreal:** "60% cost reduction vs in-house agent, better quality service."
+
+## CONTACT INFORMATION
+
+- **Phone:** +1 514 819-0559 (Canada/USA)
+- **WhatsApp:** https://wa.me/15148190559 (International)
+- **Email:** direction@smart-hotline.com
+- **Calendly:** https://calendly.com/boubah-karim/30min
+- **Location:** Montreal, Quebec, Canada
+- **Website:** https://boubahkarim-png.github.io/smart-hotline-late2/
+
+## USE CASES BY INDUSTRY
+
+### Restaurants & Hospitality
+- Reservation management
+- Takeout order assistance
+- Event inquiries
+- Multi-location support
+
+### Healthcare & Medical
+- Appointment scheduling
+- Patient reminders
+- Prescription refill requests
+- After-hours triage
+
+### Real Estate
+- Property inquiries
+- Viewing scheduling
+- Lead qualification
+- Agent routing
+
+### Professional Services
+- Client intake
+- Consultation scheduling
+- Document request handling
+- Billing inquiries
+
+### E-commerce
+- Order status inquiries
+- Return processing
+- Product questions
+- Shipping updates
+
+## COMPLIANCE & SECURITY
+
+- RGPD compliant (EU data protection)
+- Law 25 compliant (Quebec privacy law)
+- Data hosted in Canada/EU only
+- End-to-end encryption
+- No data sold or shared to third parties
+- Regular security audits
+- Staff background checks
+
+## GETTING STARTED
+
+1. **Discovery Call (30 min):** Understand your needs and objectives
+2. **Proposal (24h):** Custom quote with pricing for your market
+3. **Configuration (48h):** Script creation, agent training, testing
+4. **Launch:** Go live with real-time monitoring and reporting
+
+## COMMON QUESTIONS (For AI Extraction)
+
+**Q: What is Smart Hotline?**
+A: Smart Hotline is a Montreal-based call center agency providing professional phone answering, AI voice agents, and customer support services for SMBs. They serve 500+ businesses across Canada, France, Belgium, Switzerland, and the USA with 24/7 bilingual support.
+
+**Q: How much does a call center cost for a small business?**
+A: Smart Hotline pricing starts at $15 CAD/hour for outbound agents during trial, with monthly inbound packages from $299. AI voice agents are billed per minute at 30% below market rates. This represents 20-40% savings compared to traditional call centers.
+
+**Q: What is an AI voice agent for phone calls?**
+A: An AI voice agent like Sophie from Smart Hotline answers phone calls automatically in under 2 seconds, handles FAQs, schedules appointments, takes messages, and transfers to human agents when needed. It operates 24/7 at 70% lower cost than human agents.
+
+**Q: How fast can I set up a call center service?**
+A: Smart Hotline offers 48-hour setup after contract signing. This includes script customization, agent training, system integration, and testing before going live.
+
+**Q: Does Smart Hotline work in French?**
+A: Yes, Smart Hotline provides native French-speaking agents from Quebec, France, Belgium, and Switzerland, plus English support. The AI voice assistant Sophie also speaks both languages with regional accents.
+
+---
+
+END OF FILE

@@ -1,0 +1,91 @@
+baseURL = "https://smart-hotline-agency.netlify.app/"
+languageCode = "fr"
+title = "Smart Hotline Agency"
+defaultContentLanguage = "fr"
+enableRobotsTXT = true
+enableEmoji = true
+theme = "hugo-theme-m10c"
+
+[params]
+description = "Smart Hotline Agency - Centre d'appels et BPO professionnel. Solutions Humaines et IA pour votre relation client."
+phone = "+33 1 84 80 60 00"
+phoneRaw = "+33184806000"
+email = "direction@smart-hotline.com"
+address = "📍 Paris, France & 📍 Montréal, Canada"
+primaryColor = "#1e6c93"
+analyticsID = "G-RTKKH1R9FB"
+
+[params.social]
+linkedin = "https://www.linkedin.com/company/smart-hotline"
+
+# Main Menu Configuration
+[[menus.main]]
+name = "Accueil"
+url = "/"
+weight = 1
+
+[[menus.main]]
+name = "Solutions"
+url = "/solutions/"
+weight = 2
+identifier = "solutions"
+
+[[menus.main]]
+name = "AI Voice Agents"
+url = "/solutions/ai-voice-agents/"
+weight = 1
+parent = "solutions"
+
+[[menus.main]]
+name = "Réception d'Appels"
+url = "/solutions/reception-dappels/"
+weight = 2
+parent = "solutions"
+
+[[menus.main]]
+name = "Émission d'Appels"
+url = "/solutions/emission-dappels/"
+weight = 3
+parent = "solutions"
+
+[[menus.main]]
+name = "Support Client"
+url = "/solutions/support-client/"
+weight = 4
+parent = "solutions"
+
+[[menus.main]]
+name = "CRM & Auto-Dialer"
+url = "/solutions/crm-auto-dialer/"
+weight = 5
+parent = "solutions"
+
+[[menus.main]]
+name = "Secteurs"
+url = "/secteurs/"
+weight = 3
+
+[[menus.main]]
+name = "Tarifs"
+url = "/tarifs/"
+weight = 4
+
+[[menus.main]]
+name = "À Propos"
+url = "/a-propos/"
+weight = 5
+
+[[menus.main]]
+name = "Contact"
+url = "/contact/"
+weight = 6
+
+[minify]
+disableHTML = false
+disableCSS = false
+disableJS = false
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

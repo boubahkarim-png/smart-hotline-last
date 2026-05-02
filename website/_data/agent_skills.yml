@@ -1,0 +1,7 @@
+$schema: "https://agentskills.io/schemas/index/v0.2.0.json"
+skills:
+  - name: "website-agent"
+    type: "web"
+    description: "Smart Hotline website navigation and information retrieval"
+    url: "https://smart-hotline.com/.well-known/agent-skills/website-agent.json"
+    digest: "sha256:TODO_calculate_hash_of_implementation"

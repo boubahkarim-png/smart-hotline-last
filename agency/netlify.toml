@@ -1,0 +1,17 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.140.2"
+  HUGO_EXTENDED = "true"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/accueil"
+  to = "/"
+  status = 301

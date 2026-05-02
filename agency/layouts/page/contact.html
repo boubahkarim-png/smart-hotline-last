@@ -1,0 +1,102 @@
+{{ define "main" }}
+<section class="section page-section">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">{{ .Title }}</span>
+    </nav>
+
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="section-intro">{{ . }}</div>{{ end }}
+
+    <div class="contact-layout">
+      <div class="contact-form-wrapper">
+        <h2>Envoyez-nous un message</h2>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none;">
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+              <label for="company">Entreprise</label>
+              <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+33 1 XX XX XX XX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service">
+              <option value="">-- Sélectionnez un service --</option>
+              <option value="reception">Réception d'appels</option>
+              <option value="emission">Émission d'appels</option>
+              <option value="support">Support Client</option>
+              <option value="chat">Chat & Ticketing</option>
+              <option value="crm">CRM & Auto-Dialer</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre besoin..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+        </form>
+      </div>
+
+      <aside class="contact-sidebar">
+        <div class="contact-info-card">
+          <h3>Nos coordonnées</h3>
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon">&#9742;</span>
+              <div>
+                <strong>Téléphone</strong><br>
+                <a href="tel:{{ .Site.Params.phoneRaw }}">{{ .Site.Params.phone }}</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <div>
+                <strong>Email</strong><br>
+                <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">&#9873;</span>
+              <div>
+                <strong>Adresse</strong><br>
+                {{ .Site.Params.address }}
+              </div>
+            </li>
+          </ul>
+          <div class="contact-hours">
+            <h4>Horaires d'ouverture</h4>
+            <p>Centre d'appels : 24h/24, 7j/7<br>
+            Bureaux : Lun-Ven 9h-18h</p>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div id="map" style="width:100%;height:250px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;border-radius:8px;">
+            <span style="color:#666;">Google Maps - 12 Rue de la Performance, 75008 Paris</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+{{ end }}

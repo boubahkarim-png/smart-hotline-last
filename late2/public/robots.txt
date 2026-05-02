@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boubahkarim-png.github.io/smart-hotline-late2/sitemap.xml
+
+# AI Search Crawlers - All Allowed for Citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Training Crawlers - Blocked (optional, business decision)
+# User-agent: CCBot
+# Disallow: /
+
+# llms.txt location
+# LLMs-txt: /llms.txt

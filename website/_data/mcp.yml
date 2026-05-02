@@ -1,0 +1,25 @@
+mcp:
+  serverInfo:
+    name: "smart-hotline-website"
+    title: "Smart Hotline Agency Website"
+    version: "1.0.0"
+    description: "Official website for Smart Hotline Agency services"
+    homepage: "https://smart-hotline.com"
+  transport:
+    type: "streamable-http"
+    endpoint: "/mcp"
+  capabilities:
+    resources: true
+    tools: false
+    prompts: false
+  resources:
+    - name: "site-content"
+      title: "Site Content"
+      uri: "resource://site/content"
+      description: "Markdown content of the site"
+      mimeType: "text/markdown"
+    - name: "api-catalog"
+      title: "API Catalog"
+      uri: "resource://api-catalog"
+      description: "Linked APIs per RFC 9727"
+      mimeType: "application/linkset+json"

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url=fr/index.html">
+<script>
+fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{
+  const en=['US','GB','AU','NZ','IE'];
+  if(en.includes(d.country_code)) window.location='en/index.html';
+  else window.location='fr/index.html';
+}).catch(()=>window.location='fr/index.html');
+</script>
+</head><body></body></html>

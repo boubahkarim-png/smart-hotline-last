@@ -1,0 +1,59 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="footer-heading">Smart Hotline Agency</h3>
+        <p class="footer-about">Centre d'appels professionnel offrant des solutions sur mesure pour optimiser votre relation client. Plus de 15 ans d'expertise au service de votre performance.</p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="/solutions/reception-dappels/">Réception d'appels</a></li>
+          <li><a href="/solutions/emission-dappels/">Émission d'appels</a></li>
+          <li><a href="/solutions/support-client/">Support Client</a></li>
+          <li><a href="/solutions/chat-ticket/">Chat & Ticketing</a></li>
+          <li><a href="/solutions/crm-auto-dialer/">CRM & Auto-Dialer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-contact">
+          <li>
+            <span class="contact-icon">&#9742;</span>
+            <a href="tel:{{ .Site.Params.phoneRaw }}">{{ .Site.Params.phone }}</a>
+          </li>
+          <li>
+            <span class="contact-icon">&#9993;</span>
+            <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+          </li>
+          <li>
+            <span class="contact-icon">&#9873;</span>
+            <span>{{ .Site.Params.address }}</span>
+          </li>
+        </ul>
+        <div class="social-links">
+          {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">in</a>{{ end }}
+          {{ with .Site.Params.social.twitter }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Twitter" class="social-link">tw</a>{{ end }}
+          {{ with .Site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">fb</a>{{ end }}
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">Informations</h3>
+        <ul class="footer-links">
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/carrieres/">Carrières</a></li>
+          <li><a href="/partenariat/">Partenariat</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. Tous droits réservés.</p>
+      <p class="footer-legal">
+        <a href="/mentions-legales/">Mentions légales</a> |
+        <a href="/politique-confidentialite/">Politique de confidentialité</a>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://boubahkarim-png.github.io/smart-hotline-late2/sitemap.xml

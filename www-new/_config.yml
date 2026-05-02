@@ -1,0 +1,22 @@
+# Configuration pour GitHub Pages
+title: Smart Hotline Agency
+description: Services de communication téléphonique pour PME
+baseurl: ""     # hosting at repo root
+url: ""         # set to your custom domain when ready, e.g. https://smart-hotline.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Exclude from processing (keep minimal)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+
+# Include any extra files needed (if you use _redirects, keep it)
+include:
+  - _redirects
