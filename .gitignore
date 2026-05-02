@@ -3,3 +3,6 @@ node_modules/
 *.log
 __pycache__/
 .DS_Store
+hosts.yml
+*.env
+.config/gh/
