@@ -1,0 +1,17 @@
+{
+  "model_profile": "balanced",
+  "commit_docs": true,
+  "search_gitignored": false,
+  "branching_strategy": "auto",
+  "phase_branch_template": "feat/phase-{phase}",
+  "milestone_branch_template": "feat/{milestone}",
+  "quick_branch_template": "fix/{slug}",
+  "workflow": {
+    "research": true,
+    "plan_check": true,
+    "verifier": true,
+    "nyquist_validation": true
+  },
+  "parallelization": 2,
+  "brave_search": true
+}
