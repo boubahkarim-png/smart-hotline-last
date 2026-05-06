@@ -26,8 +26,10 @@ jobs:
           cache: 'npm'
       
       - run: npm ci
+        working-directory: ./www-new/projects/smart-hotline-web
       
       - run: npm run build
+        working-directory: ./www-new/projects/smart-hotline-web
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -35,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./www-new/projects/smart-hotline-web/out
 
   deploy:
     environment:
