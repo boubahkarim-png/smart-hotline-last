@@ -31,7 +31,7 @@ jobs:
         working-directory: ./www-new/projects/smart-hotline-web
       
       - name: Copy CNAME
-        run: cp CNAME out/
+        run: cp www-new/projects/smart-hotline-web/CNAME www-new/projects/smart-hotline-web/out/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
