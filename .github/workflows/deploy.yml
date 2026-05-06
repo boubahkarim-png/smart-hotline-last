@@ -22,14 +22,17 @@ jobs:
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: '20'
+          cache: false
       
       - run: npm ci
         working-directory: ./www-new/projects/smart-hotline-web
       
       - run: npm run build
         working-directory: ./www-new/projects/smart-hotline-web
+      
+      - name: Copy CNAME
+        run: cp www-new/projects/smart-hotline-web/CNAME www-new/projects/smart-hotline-web/out/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
