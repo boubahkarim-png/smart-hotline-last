@@ -1,0 +1,12 @@
+{
+  "issuer": "https://www.smart-hotline.com",
+  "authorization_endpoint": "https://www.smart-hotline.com/oauth/authorize",
+  "token_endpoint": "https://www.smart-hotline.com/oauth/token",
+  "registration_endpoint": "https://www.smart-hotline.com/oauth/register",
+  "scopes_supported": ["read", "write"],
+  "response_types_supported": ["code", "token"],
+  "grant_types_supported": ["authorization_code", "implicit"],
+  "token_endpoint_auth_methods_supported": ["client_secret_basic"],
+  "code_challenge_methods_supported": ["S256", "plain"],
+  "service_documentation": "https://www.smart-hotline.com/docs/oauth"
+}

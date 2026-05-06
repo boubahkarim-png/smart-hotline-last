@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ohmyopencode/skills/main/schemas/mcp-server-card.json",
+  "serverInfo": {
+    "name": "Smart Hotline Agency",
+    "version": "1.0.0",
+    "description": "AI-powered call center and lead generation agency for Canadian SMEs"
+  },
+  "url": "https://www.smart-hotline.com",
+  "contact": {
+    "email": "direction@smart-hotline.com",
+    "phone": "+1-514-819-0559"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://www.smart-hotline.com/api/mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}

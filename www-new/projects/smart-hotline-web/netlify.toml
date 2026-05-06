@@ -1,0 +1,173 @@
+# ============================================
+# NETLIFY CONFIGURATION - SMART HOTLINE
+# www.smart-hotline.com — production
+# ============================================
+
+[build]
+command = "npm ci && npm run build:netlify"
+publish = "out"
+
+[build.environment]
+NODE_VERSION = "22"
+NEXT_BASEPATH = ""
+NEXT_PUBLIC_SITE_URL = "https://www.smart-hotline.com"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# ============================================
+# SECURITY + PERFORMANCE HEADERS
+# ============================================
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/_next/static/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/images/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/videos/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# ============================================
+# RFC 8288 LINK HEADERS — agent discovery
+# WARNING: single-line string required (multi-line TOML is unreliable)
+# ============================================
+
+[[headers]]
+for = "/*"
+[headers.values]
+Link = "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/oauth-authorization-server>; rel=\"oauth-authorization-server\"; type=\"application/json\", </.well-known/oauth-protected-resource>; rel=\"oauth-protected-resource\"; type=\"application/json\", </.well-known/mcp/server-card.json>; rel=\"mcp-server\"; type=\"application/json\", </.well-known/agent-card.json>; rel=\"a2a\"; type=\"application/json\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\"; type=\"application/json\", </llms.txt>; rel=\"ai-content\"; type=\"text/plain\""
+
+# ============================================
+# .WELL-KNOWN CONTENT-TYPE HEADERS
+# ============================================
+
+[[headers]]
+for = "/.well-known/api-catalog"
+[headers.values]
+Content-Type = "application/linkset+json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/oauth-authorization-server"
+[headers.values]
+Content-Type = "application/json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/oauth-protected-resource"
+[headers.values]
+Content-Type = "application/json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/mcp/server-card.json"
+[headers.values]
+Content-Type = "application/json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/agent-skills/index.json"
+[headers.values]
+Content-Type = "application/json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/agent-skills/*"
+[headers.values]
+Content-Type = "text/markdown"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/.well-known/agent-card.json"
+[headers.values]
+Content-Type = "application/json"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+for = "/llms.txt"
+[headers.values]
+Content-Type = "text/plain"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ============================================
+# REDIRECTS
+# WARNING: do NOT add Role conditions — blocks public access
+# ============================================
+
+[[redirects]]
+from = "/"
+to = "/fr/"
+status = 302
+force = true
+
+[[redirects]]
+from = "/*"
+to = "/fr/:splat"
+status = 302
+force = false
+conditions = {Language = ["fr"]}
+
+[[redirects]]
+from = "/*"
+to = "/en/:splat"
+status = 302
+force = false
+conditions = {Language = ["en"]}
+
+[[redirects]]
+from = "/*"
+to = "/fr/:splat"
+status = 302
+
+# ============================================
+# EDGE FUNCTIONS — scoped to HTML pages only
+# ============================================
+
+[[edge_functions]]
+function = "markdown-for-agents"
+path = "/fr/*"
+
+[[edge_functions]]
+function = "markdown-for-agents"
+path = "/en/*"
+
+# ============================================
+# POST PROCESSING
+# ============================================
+
+[build.processing]
+skip_processing = false
+
+[build.processing.css]
+bundle = true
+minify = true
+
+[build.processing.js]
+bundle = true
+minify = true
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.images]
+compress = true

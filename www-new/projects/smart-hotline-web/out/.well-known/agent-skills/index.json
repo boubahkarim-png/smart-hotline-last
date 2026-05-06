@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agentskills.org/schema/index/v0.2",
+  "name": "Smart Hotline Agency",
+  "description": "Call center and AI voice agent services — inbound reception, outbound calling, AI voice agents, and CRM integration for SMBs",
+  "url": "https://www.smart-hotline.com",
+  "skills": [
+    {
+      "name": "inbound-reception",
+      "type": "service",
+      "description": "Professional 24/7 inbound call reception with human and AI agents",
+      "url": "https://www.smart-hotline.com/.well-known/agent-skills/inbound-reception.md",
+      "digest": "sha256-664f193bb0b3af49b16c371babf47197e90d5326e623fcdfa708822fd6eaf58c"
+    },
+    {
+      "name": "outbound-calling",
+      "type": "service",
+      "description": "Professional outbound calling campaigns for lead generation and follow-up",
+      "url": "https://www.smart-hotline.com/.well-known/agent-skills/outbound-calling.md",
+      "digest": "sha256-467b3457f8581812fd884fd5a9c8ebcf6416ead5a8d260727ab2d05dd843a949"
+    },
+    {
+      "name": "ai-voice-agents",
+      "type": "service",
+      "description": "AI-powered voice agent Sophie for 24/7 automated call handling",
+      "url": "https://www.smart-hotline.com/.well-known/agent-skills/ai-voice-agents.md",
+      "digest": "sha256-9ebda066215b5a38b314c60b7bf090f919a7d894b29a07bdc86353b3141e7f13"
+    },
+    {
+      "name": "crm-integration",
+      "type": "service",
+      "description": "CRM integration services connecting call center operations with business systems",
+      "url": "https://www.smart-hotline.com/.well-known/agent-skills/crm-integration.md",
+      "digest": "sha256-198b46134c09b71d7562e429ee96f52e489771f47536d00d948ddf5de94ff85d"
+    }
+  ]
+}
