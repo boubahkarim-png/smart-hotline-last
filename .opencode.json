@@ -1,0 +1,14 @@
+{
+  "model": "meta/llama-4-maverick-17b-128e-instruct",
+  "provider": {
+    "nvidia": {
+      "baseURL": "https://integrate.api.nvidia.com/v1",
+      "apiKey": "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"
+    }
+  },
+  "plugin": [
+    "oh-my-openagent@latest",
+    "@tarquinen/opencode-dcp@latest",
+    "opencode-supermemory@latest"
+  ]
+}
