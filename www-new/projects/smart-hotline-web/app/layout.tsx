@@ -257,7 +257,7 @@ const breadcrumbJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

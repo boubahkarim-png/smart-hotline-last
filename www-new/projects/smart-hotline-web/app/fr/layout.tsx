@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import TawkToChat from '@/components/TawkToChat'
+import LangSetter from '@/components/LangSetter'
 import type { Metadata } from 'next'
 import { siteUrl } from '@/lib/siteConfig'
 
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
 export default function FrLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <LangSetter lang="fr" />
       <Header lang="fr"/>
       <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="fr"/>
