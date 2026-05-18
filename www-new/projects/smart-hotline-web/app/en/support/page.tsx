@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Multichannel Customer Support | Quebec Canada",
   description: "Multichannel customer support: phone, email, chat, WhatsApp. Responses within 2h. 98% CSAT score. From $11/hr. Free 2-week trial.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

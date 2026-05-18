@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Réception d'Appels 24/7 | Zéro Appel Manqué",
   description: "Service de réception d'appels 24/7 pour PME. Réponse en moins de 3 sonneries. Conseillers bilingues. Essai gratuit 2 semaines.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

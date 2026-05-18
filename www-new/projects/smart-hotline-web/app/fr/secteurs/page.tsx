@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Solutions par Secteur d'Activité pour PME",
   description: "Solutions de centre d'appels adaptées à chaque secteur: restauration, santé, finance, immobilier, services juridiques, e-commerce.",
 }
 
+'use client'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'

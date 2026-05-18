@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Appels Sortants PME | Prospection & Leads Qualifiés",
   description: "Service d'appels sortants pour PME. Prospection téléphonique, prise de rendez-vous, leads qualifiés. Scripts optimisés. À partir de 15$/h.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

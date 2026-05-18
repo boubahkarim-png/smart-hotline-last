@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "AI Voice Agents | Sophie answers in 2 sec | Smart Hotline Quebec",
   description: "Smart Hotline's AI voice agent Sophie answers in 2 seconds. Native French Quebec, France. Up to 70% cheaper than traditional agents. Free trial.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

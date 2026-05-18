@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | CRM & List Integration for SMEs",
   description: "SuiteCRM integration, qualified B2B/B2C prospect lists, Mautic email marketing. Complete lead and pipeline management. Setup included.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

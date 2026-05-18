@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Tarifs Centre d'Appels PME | À partir de 15$/h",
   description: "Tarifs transparents pour centre d'appels PME. À partir de 15$/h. Forfaits flexibles 20h à 120h/semaine. CAD, EUR, USD, CHF acceptés.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Contact | Consultation Gratuite pour PME",
   description: "Contactez Smart Hotline. Consultation gratuite sans engagement. Réponse sous 2h. Démarrez votre essai gratuit de 2 semaines.",
 }
 
+'use client'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'

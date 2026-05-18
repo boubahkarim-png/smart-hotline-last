@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | 24/7 Phone Partner Quebec",
   description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr. Free 2-week trial — no commitment.",
 }
 
+'use client'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'

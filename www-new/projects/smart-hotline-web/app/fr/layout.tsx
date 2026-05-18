@@ -44,10 +44,10 @@ export const metadata: Metadata = {
 }
 
 export default function FrLayout({ children }: { children: React.ReactNode }) {
-  return (
+return (
     <>
       <LangSetter lang="fr" />
-      <Header lang="fr"/>
+      <Header lang="fr" otherLangHref="/en"/>
       <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="fr"/>
       <TawkToChat />

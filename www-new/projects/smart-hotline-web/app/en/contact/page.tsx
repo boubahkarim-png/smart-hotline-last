@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Contact Us | Free Consultation for Your Business Phone Needs",
   description: "Contact Smart Hotline. Free consultation, no commitment. Response within 2h. Start your 2-week free trial today. Phone: +1 (514) 819-0559.",
 }
 
+'use client'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'

@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | CRM & Listes B2B/B2C | SuiteCRM Intégré",
   description: "SuiteCRM intégré, listes B2B/B2C qualifiées, email marketing Mautic. Gérez votre pipeline de A à Z. Installation incluse.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Agent IA Vocal Sophie | Réponse en 2 secondes",
   description: "Sophie, votre agente IA vocale 24/7. Répond en français natif (Québec, France, Belgique, Suisse). Jusqu'à 70% moins cher. Essai gratuit.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

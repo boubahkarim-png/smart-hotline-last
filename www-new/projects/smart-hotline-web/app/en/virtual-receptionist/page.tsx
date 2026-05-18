@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | Virtual Receptionist Services | Quebec Canada",
   description: "Professional virtual receptionist services for SMEs. 24/7 bilingual FR/EN agents. Answer in under 3 rings. From $11/hr. Free trial.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

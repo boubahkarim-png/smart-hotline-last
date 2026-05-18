@@ -1,10 +1,9 @@
-'use client'
-
 export const metadata = {
   title: "Smart Hotline | 24/7 Inbound Call Center for SMEs Quebec",
   description: "24/7 inbound call center for SMEs. Zero missed calls. Bilingual FR/EN agents, custom scripts. From $11/hr. Free 2-week trial.",
 }
 
+'use client'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
