@@ -1,7 +1,6 @@
-import { getPageMetadata } from '@/lib/seo'
-
 export const metadata = {
-  ...getPageMetadata('pricing', 'en'),
+  title: "Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec",
+  description: "Transparent call center pricing for SMEs. From $11/hr. Free 2-week trial. Flexible plans 20h to 120h/week. CAD, EUR, USD, CHF accepted.",
 }
 
 'use client'
