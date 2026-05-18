@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Popup from '@/components/Popup'
 import TawkToChat from '@/components/TawkToChat'
+import LangSetter from '@/components/LangSetter'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,10 +17,15 @@ export const metadata: Metadata = {
     siteName: 'Smart Hotline',
   },
   alternates: {
-    canonical: 'https://boubahkarim-png.github.io/smart-hotline-late2/fr/',
+    canonical: 'https://www.smart-hotline.com/fr/',
     languages: {
-      'fr-CA': 'https://boubahkarim-png.github.io/smart-hotline-late2/fr/',
-      'en-CA': 'https://boubahkarim-png.github.io/smart-hotline-late2/en/',
+      'fr-CA': 'https://www.smart-hotline.com/fr/',
+      'fr-FR': 'https://www.smart-hotline.com/fr/',
+      'fr-BE': 'https://www.smart-hotline.com/fr/',
+      'fr-CH': 'https://www.smart-hotline.com/fr/',
+      'en-CA': 'https://www.smart-hotline.com/en/',
+      'en-US': 'https://www.smart-hotline.com/en/',
+      'x-default': 'https://www.smart-hotline.com/fr/',
     },
   },
 }
@@ -27,11 +33,12 @@ export const metadata: Metadata = {
 export default function FrLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-    <Header lang="fr" otherLangHref="/en"/>
-    <main className="pt-16">{children}</main>
-    <Footer lang="fr"/>
-    <Popup lang="fr"/>
-    <TawkToChat />
+      <LangSetter lang="fr" />
+      <Header lang="fr" otherLangHref="/en"/>
+      <main className="pt-16">{children}</main>
+      <Footer lang="fr"/>
+      <Popup lang="fr"/>
+      <TawkToChat />
     </>
   )
 }

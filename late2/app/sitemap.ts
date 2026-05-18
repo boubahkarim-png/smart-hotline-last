@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://boubahkarim-png.github.io/smart-hotline-late2'
+const BASE_URL = 'https://www.smart-hotline.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

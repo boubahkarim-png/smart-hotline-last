@@ -1,3 +1,9 @@
+import { getPageMetadata } from '@/lib/seo'
+
+export const metadata = {
+  ...getPageMetadata('pricing', 'en'),
+}
+
 'use client'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'

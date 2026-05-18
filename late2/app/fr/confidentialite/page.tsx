@@ -1,8 +1,12 @@
 import Link from 'next/link'
 
-export const metadata = { title: "Politique de Confidentialité | Smart Hotline Agency" }
+import { getPageMetadata } from '@/lib/seo'
 
-export default function Confidentialite() {
+export const metadata = {
+  ...getPageMetadata('privacy', 'fr'),
+}
+
+export default function FrConfidentialite() {
   return (
     <>
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">

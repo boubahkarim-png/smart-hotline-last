@@ -1,8 +1,12 @@
 import Link from 'next/link'
 
-export const metadata = { title: "CGV | Smart Hotline Agency" }
+import { getPageMetadata } from '@/lib/seo'
 
-export default function CGV() {
+export const metadata = {
+  ...getPageMetadata('terms', 'fr'),
+}
+
+export default function FrCgv() {
   return (
     <>
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-blue-900 text-white py-20 lg:py-24 overflow-hidden relative">

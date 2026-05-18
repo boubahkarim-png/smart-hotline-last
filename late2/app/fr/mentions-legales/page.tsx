@@ -1,6 +1,10 @@
 import Link from 'next/link'
 
-export const metadata = { title: "Mentions Légales | Smart Hotline Agency" }
+import { getPageMetadata } from '@/lib/seo'
+
+export const metadata = {
+  ...getPageMetadata('legal', 'fr'),
+}
 
 export default function MentionsLegales() {
   return (
