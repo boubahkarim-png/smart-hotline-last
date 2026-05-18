@@ -24,10 +24,13 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
+          cache-dependency-path: 'late2/package-lock.json'
       
       - run: npm ci
+        working-directory: ./late2
       
       - run: npm run build
+        working-directory: ./late2
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -35,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./late2/out
 
   deploy:
     environment:
