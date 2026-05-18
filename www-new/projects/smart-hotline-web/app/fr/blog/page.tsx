@@ -1,3 +1,9 @@
+
+export const metadata = {
+  title: "Smart Hotline | Blog | Centre d'Appels & IA Vocale pour PME",
+  description: "Conseils et guides pour externaliser votre relation client. Centre d'appels, IA vocale, télésecrétariat pour PME. Blog Smart Hotline.",
+}
+
 import GeoTestimonials from '@/components/GeoTestimonials'
 import fs from 'fs'
 import path from 'path'

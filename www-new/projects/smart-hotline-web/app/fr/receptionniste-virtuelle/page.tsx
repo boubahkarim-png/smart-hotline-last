@@ -1,4 +1,10 @@
 'use client'
+
+export const metadata = {
+  title: "Smart Hotline | Télésecrétariat & Réceptionniste Virtuelle PME",
+  description: "Service de télésecrétariat pour PME. Réceptionniste virtuelle 24/7. Bilingue FR/EN. À partir de 15$/h. Essai gratuit 2 semaines.",
+}
+
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
