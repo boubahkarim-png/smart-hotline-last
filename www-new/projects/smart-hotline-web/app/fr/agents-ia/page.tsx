@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -22,7 +21,6 @@ function CTAButtons({ slug }: { slug: string }) {
 const { geo, loading } = useGeo()
 const showPhone = !loading && geo.showPhone
 return (
-<PageMeta title="Smart Hotline | Agent IA Vocal Sophie | Réponse en 2 secondes" description="Sophie, votre agente IA vocale 24/7. Répond en français natif (Québec, France, Belgique, Suisse). Jusqu'à 70% moins cher. Essai gratuit." />
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
 <Link href={`/fr/contact?service=${slug}`} className="bg-violet-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-violet-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
 Démo Sans Engagement
@@ -42,7 +40,9 @@ WhatsApp 24/7
 
 export default function Page() {
 return (
-<>
+    <>
+      <PageMeta title="Smart Hotline | Agent IA Vocal Sophie | Réponse en 2 secondes" description="Sophie, votre agente IA vocale 24/7. Répond en français natif (Québec, France, Belgique, Suisse). Jusqu'à 70% moins cher. Essai gratuit." />
+
 {/* SECTION 1: HERO */}
 <section className="bg-gradient-to-br from-slate-50 via-white to-violet-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -28,7 +27,6 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <PageMeta title="Smart Hotline | Virtual Receptionist Services | Quebec Canada" description="Professional virtual receptionist services for SMEs. 24/7 bilingual FR/EN agents. Answer in under 3 rings. From $11/hr. Free trial." />
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/en/contact?service=${slug}`} className="bg-teal-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-teal-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Free Demo
@@ -49,6 +47,8 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      <PageMeta title="Smart Hotline | Virtual Receptionist Services | Quebec Canada" description="Professional virtual receptionist services for SMEs. 24/7 bilingual FR/EN agents. Answer in under 3 rings. From $11/hr. Free trial." />
+
       <ServiceSchema
         name="Virtual Receptionist"
         description="Virtual receptionist service for SMBs. Professional agents who answer your calls 24/7, take messages and transmit information in real-time."

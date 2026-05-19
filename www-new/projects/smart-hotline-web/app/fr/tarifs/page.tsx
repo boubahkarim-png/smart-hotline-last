@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -78,6 +77,8 @@ export default function Tarifs() {
 
   return (
     <>
+      <PageMeta title="Smart Hotline | Tarifs Centre d'Appels PME | À partir de 15$/h" description="Tarifs transparents pour centre d'appels PME. À partir de 15$/h. Forfaits flexibles 20h à 120h/semaine. CAD, EUR, USD, CHF acceptés." />
+
     {/* SECTION 1: HERO - Modern design with image */}
     <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -41,6 +40,8 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      <PageMeta title="Smart Hotline | Support Client Multicanal | 98% Satisfaction" description="Support client multicanal: téléphone, email, chat, WhatsApp. Réponse sous 2h. 98% de satisfaction. Externalisez votre support client." />
+
 {/* SECTION 1: HERO - Modern design with bigger image */}
 <section className="bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

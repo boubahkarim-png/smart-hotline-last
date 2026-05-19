@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -23,7 +22,6 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <PageMeta title="Smart Hotline | Outbound Call Center | Lead Generation Quebec" description="Outbound call center for SMEs. Qualified leads, appointment setting, phone prospecting. Optimized scripts. From $11/hr. Free trial." />
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/en/contact?service=${slug}`} className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-emerald-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Free Demo
@@ -44,6 +42,8 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      <PageMeta title="Smart Hotline | Outbound Call Center | Lead Generation Quebec" description="Outbound call center for SMEs. Qualified leads, appointment setting, phone prospecting. Optimized scripts. From $11/hr. Free trial." />
+
       {/* SECTION 1: HERO */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-emerald-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

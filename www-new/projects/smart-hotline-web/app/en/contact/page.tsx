@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import { useState, useEffect } from 'react'
@@ -136,8 +135,9 @@ const data = {
   }
 
   return (
-    <PageMeta title="Contact Us | Free Consultation for Your Business Phone Needs" description="Contact Smart Hotline. Free consultation, no commitment. Response within 2h. Start your 2-week free trial today. Phone: +1 (514) 819-0559." />
-      <>
+    <>
+      <PageMeta title="Contact Us | Free Consultation for Your Business Phone Needs" description="Contact Smart Hotline. Free consultation, no commitment. Response within 2h. Start your 2-week free trial today. Phone: +1 (514) 819-0559." />
+
       {/* SECTION 1: LIGHT HERO */}
       <section className="bg-white text-slate-900 py-20 lg:py-28 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

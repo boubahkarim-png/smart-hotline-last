@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -21,7 +20,6 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <PageMeta title="Smart Hotline | Réception d'Appels 24/7 | Zéro Appel Manqué" description="Service de réception d'appels 24/7 pour PME. Réponse en moins de 3 sonneries. Conseillers bilingues. Essai gratuit 2 semaines." />
       <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
       <Link href={`/fr/contact?service=${slug}`} className="bg-sky-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-sky-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Demander un devis gratuit
@@ -41,6 +39,8 @@ function CTAButtons({ slug }: { slug: string }) {
 export default function Page() {
   return (
     <>
+      <PageMeta title="Smart Hotline | Réception d'Appels 24/7 | Zéro Appel Manqué" description="Service de réception d'appels 24/7 pour PME. Réponse en moins de 3 sonneries. Conseillers bilingues. Essai gratuit 2 semaines." />
+
       {/* SECTION 1: HERO - Modern design with bigger image */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-sky-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

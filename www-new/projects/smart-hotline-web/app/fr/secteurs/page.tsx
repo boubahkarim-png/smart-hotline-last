@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
@@ -209,7 +208,6 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <PageMeta title="Smart Hotline | Solutions par Secteur d'Activité pour PME" description="Solutions de centre d'appels adaptées à chaque secteur: restauration, santé, finance, immobilier, services juridiques, e-commerce." />
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/fr/contact?service=${slug}`}
         className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-indigo-700 text-center shadow-lg">
@@ -235,6 +233,8 @@ export default function Secteurs() {
 
   return (
     <>
+      <PageMeta title="Smart Hotline | Solutions par Secteur d'Activité pour PME" description="Solutions de centre d'appels adaptées à chaque secteur: restauration, santé, finance, immobilier, services juridiques, e-commerce." />
+
       {/* SECTION 1: LIGHT HERO */}
       <section className="bg-white text-slate-900 py-16 lg:py-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

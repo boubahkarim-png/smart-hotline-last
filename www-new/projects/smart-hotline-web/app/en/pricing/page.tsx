@@ -1,5 +1,4 @@
 'use client'
-import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -11,7 +10,6 @@ function PricingSlider({
   title: string, subtitle?: string, accentColor: string, children: React.ReactNode
 }) {
   return (
-    <PageMeta title="Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec" description="Transparent call center pricing for SMEs. From $11/hr. Free 2-week trial. Flexible plans 20h to 120h/week. CAD, EUR, USD, CHF accepted." />
       <div className="mb-20">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-slate-900 mb-2">{title}</h2>
@@ -79,6 +77,8 @@ export default function Pricing() {
 
   return (
     <>
+      <PageMeta title="Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec" description="Transparent call center pricing for SMEs. From $11/hr. Free 2-week trial. Flexible plans 20h to 120h/week. CAD, EUR, USD, CHF accepted." />
+
     {/* SECTION 1: HERO - Modern design with image */}
     <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-900 py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
