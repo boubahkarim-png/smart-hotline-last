@@ -47,7 +47,7 @@ export default function FrLayout({ children }: { children: React.ReactNode }) {
 return (
     <>
       <LangSetter lang="fr" />
-      <Header lang="fr" otherLangHref="/en"/>
+      <Header lang="fr" />
       <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="fr"/>
       <TawkToChat />

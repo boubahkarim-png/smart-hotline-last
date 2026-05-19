@@ -47,7 +47,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
 return (
     <>
       <LangSetter lang="en" />
-      <Header lang="en" otherLangHref="/fr"/>
+      <Header lang="en" />
       <main id="main-content" className="pt-16">{children}</main>
       <Footer lang="en"/>
       <TawkToChat />
