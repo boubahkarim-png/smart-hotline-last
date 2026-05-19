@@ -1,9 +1,5 @@
-export const metadata = {
-  title: "Smart Hotline | Agent IA Vocal Sophie | Réponse en 2 secondes",
-  description: "Sophie, votre agente IA vocale 24/7. Répond en français natif (Québec, France, Belgique, Suisse). Jusqu'à 70% moins cher. Essai gratuit.",
-}
-
 'use client'
+import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -26,7 +22,8 @@ function CTAButtons({ slug }: { slug: string }) {
 const { geo, loading } = useGeo()
 const showPhone = !loading && geo.showPhone
 return (
-<div className="flex flex-col sm:flex-row gap-4 mb-6">
+<PageMeta title="Smart Hotline | Agent IA Vocal Sophie | Réponse en 2 secondes" description="Sophie, votre agente IA vocale 24/7. Répond en français natif (Québec, France, Belgique, Suisse). Jusqu'à 70% moins cher. Essai gratuit." />
+      <div className="flex flex-col sm:flex-row gap-4 mb-6">
 <Link href={`/fr/contact?service=${slug}`} className="bg-violet-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-violet-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
 Démo Sans Engagement
 </Link>

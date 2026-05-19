@@ -1,9 +1,5 @@
-export const metadata = {
-  title: "Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec",
-  description: "Transparent call center pricing for SMEs. From $11/hr. Free 2-week trial. Flexible plans 20h to 120h/week. CAD, EUR, USD, CHF accepted.",
-}
-
 'use client'
+import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -15,7 +11,8 @@ function PricingSlider({
   title: string, subtitle?: string, accentColor: string, children: React.ReactNode
 }) {
   return (
-    <div className="mb-20">
+    <PageMeta title="Call Center Pricing for SMEs | From $11/hr | Smart Hotline Quebec" description="Transparent call center pricing for SMEs. From $11/hr. Free 2-week trial. Flexible plans 20h to 120h/week. CAD, EUR, USD, CHF accepted." />
+      <div className="mb-20">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-slate-900 mb-2">{title}</h2>
         {subtitle && <p className="text-slate-500">{subtitle}</p>}

@@ -1,9 +1,5 @@
-export const metadata = {
-  title: "Smart Hotline | 24/7 Phone Partner Quebec",
-  description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr. Free 2-week trial — no commitment.",
-}
-
 'use client'
+import PageMeta from '@/components/PageMeta'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
@@ -213,7 +209,8 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mb-6">
+    <PageMeta title="Smart Hotline | 24/7 Phone Partner Quebec" description="Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr. Free 2-week trial — no commitment." />
+      <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/en/contact?service=${slug}`}
         className="bg-indigo-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-indigo-700 text-center shadow-lg">
         Free Demo

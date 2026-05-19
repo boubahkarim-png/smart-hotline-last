@@ -1,9 +1,5 @@
-export const metadata = {
-  title: "Smart Hotline | Télésecrétariat & Réceptionniste Virtuelle PME",
-  description: "Service de télésecrétariat pour PME. Réceptionniste virtuelle 24/7. Bilingue FR/EN. À partir de 15$/h. Essai gratuit 2 semaines.",
-}
-
 'use client'
+import PageMeta from '@/components/PageMeta'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
 import { useGeo } from '@/hooks/useGeo'
@@ -32,7 +28,8 @@ function CTAButtons({ slug }: { slug: string }) {
   const { geo, loading } = useGeo()
   const showPhone = !loading && geo.showPhone
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mb-6">
+    <PageMeta title="Smart Hotline | Télésecrétariat & Réceptionniste Virtuelle PME" description="Service de télésecrétariat pour PME. Réceptionniste virtuelle 24/7. Bilingue FR/EN. À partir de 15$/h. Essai gratuit 2 semaines." />
+      <div className="flex flex-col sm:flex-row gap-4 mb-6">
       <Link href={`/fr/contact?service=${slug}`} className="bg-teal-600 text-white font-bold px-8 py-4 rounded-2xl hover:bg-teal-700 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 btn-ripple">
         Démo Sans Engagement
       </Link>
