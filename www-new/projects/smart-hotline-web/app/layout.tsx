@@ -34,9 +34,12 @@ export const metadata: Metadata = {
     title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
     description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.',
     images: ['https://www.smart-hotline.com/twitter-image.png'],
+    site: '@SmartHotline',
   },
+  other: {
+    'google-site-verification': '05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg'
+  }
 }
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",

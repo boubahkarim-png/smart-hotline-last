@@ -41,9 +41,6 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/og-image.png`],
     site: '@SmartHotline',
   },
-  other: {
-    'google-site-verification': '05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg'
-  }
 }
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
