@@ -80,7 +80,7 @@ export function generateMetadata(lang: Lang): Metadata {
     // Steps: Add property → Enter URL → Verify via HTML tag
     // The verification code is the content attribute value from:
     // <meta name="google-site-verification" content="YOUR_CODE_HERE" />
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
     other: {
       'geo.region': 'CA-QC',
