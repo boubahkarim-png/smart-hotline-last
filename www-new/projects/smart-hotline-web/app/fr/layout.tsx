@@ -8,8 +8,7 @@ import { siteUrl } from '@/lib/siteConfig'
 export const metadata: Metadata = {
   title: "Smart Hotline | Partenaire Téléphonique 24/7 Québec",
   description: "Ne ratez plus aucun appel. Téléphonistes 24/7 et agents IA vocaux pour PME québécoises. À partir de 15$/h. Essai gratuit 2 semaines — sans engagement.",
-  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', 'réception d\'appels', 'télésecrétariat', 'assistant vocal ia', 'partenaire téléphonique pme'],\n  alternates: {
-    canonical: `${siteUrl}/fr/`,
+  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', "réception d'appels", 'télésecrétariat', 'assistant vocal ia', 'partenaire téléphonique pme'],\n    canonical: `${siteUrl}/fr/`,
     languages: {
       'fr-CA': `${siteUrl}/fr/`,
       'en-CA': `${siteUrl}/en/`,
