@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr. Free 2-week trial — no commitment.",
   keywords: ['receptionist quebec', 'phone partner', 'ai voice agents', 'virtual receptionist 24/7', 'phone answering service', 'voice solutions canada', 'customer support montreal', 'telephone secretary', 'inbound calls', 'virtual assistant', 'ai phone agent', 'phone support team'],
   robots: 'index, follow',
+  alternates: {
+    canonical: `${siteUrl}/en/`,
+    languages: {
+      'fr-CA': `${siteUrl}/fr/`,
+      'en-CA': `${siteUrl}/en/`,
+      'x-default': `${siteUrl}/fr/`,
+    },
+  },
   openGraph: {
     title: "Smart Hotline | 24/7 Phone Partner Quebec",
     description: "Never miss a call. 24/7 receptionists and AI voice agents for SMEs. From $11/hr.",
@@ -33,14 +41,9 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/og-image.png`],
     site: '@SmartHotline',
   },
-  alternates: {
-    canonical: `${siteUrl}/en/`,
-    languages: {
-      'fr-CA': `${siteUrl}/fr/`,
-      'en-CA': `${siteUrl}/en/`,
-      'x-default': `${siteUrl}/fr/`,
-    },
-  },
+  other: {
+    'google-site-verification': '05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg'
+  }
 }
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {

@@ -8,8 +8,16 @@ import { siteUrl } from '@/lib/siteConfig'
 export const metadata: Metadata = {
   title: "Smart Hotline | Partenaire Téléphonique 24/7 Québec",
   description: "Ne ratez plus aucun appel. Téléphonistes 24/7 et agents IA vocaux pour PME québécoises. À partir de 15$/h. Essai gratuit 2 semaines — sans engagement.",
-  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', 'réception d\'appels', 'télésecrétariat', 'assistant vocal ia', 'partenaire téléphonique pme'],
+  keywords: ['réceptionniste quebec', 'téléphoniste pme', 'agents ia vocaux', 'réception téléphonique 24/7', 'secrétaire virtuelle', 'service téléphonique quebec', 'support client montreal', 'voice solutions', 'partenaire téléphonique', 'réception d\\'appels', 'télésecrétariat', 'assistant vocal ia', 'partenaire téléphonique pme'],
   robots: 'index, follow',
+  alternates: {
+    canonical: `${siteUrl}/fr/`,
+    languages: {
+      'fr-CA': `${siteUrl}/fr/`,
+      'en-CA': `${siteUrl}/en/`,
+      'x-default': `${siteUrl}/fr/`,
+    },
+  },
   openGraph: {
     title: "Smart Hotline | Partenaire Téléphonique 24/7 Québec",
     description: "Ne ratez plus aucun appel. Téléphonistes 24/7 et agents IA vocaux pour PME québécoises. À partir de 15$/h.",
@@ -33,14 +41,9 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/og-image.png`],
     site: '@SmartHotline',
   },
-  alternates: {
-    canonical: `${siteUrl}/fr/`,
-    languages: {
-      'fr-CA': `${siteUrl}/fr/`,
-      'en-CA': `${siteUrl}/en/`,
-      'x-default': `${siteUrl}/fr/`,
-    },
-  },
+  other: {
+    'google-site-verification': '05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg'
+  }
 }
 
 export default function FrLayout({ children }: { children: React.ReactNode }) {
