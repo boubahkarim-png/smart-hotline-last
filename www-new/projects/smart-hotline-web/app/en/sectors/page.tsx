@@ -1,4 +1,5 @@
 'use client'
+import PageMeta from '@/components/PageMeta'
 import GeoTestimonials from '@/components/GeoTestimonials'
 import basePath from '@/lib/basePath'
 import Link from 'next/link'
