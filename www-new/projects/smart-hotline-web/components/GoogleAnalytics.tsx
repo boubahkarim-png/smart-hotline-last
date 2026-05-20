@@ -22,7 +22,6 @@ export default function GoogleAnalytics() {
     }
   }, [])
 
-  // Always render a small test indicator to verify component is loaded
   return (
     <>
       <Script
@@ -40,23 +39,6 @@ export default function GoogleAnalytics() {
           })
         `}
       </Script>
-      <div 
-        data-testid="google-analytics-component"
-        style={{
-          position: 'fixed',
-          bottom: '10px',
-          right: '10px',
-          background: '#dc3545',
-          color: 'white',
-          padding: '2px 6px',
-          borderRadius: '3px',
-          fontSize: '10px',
-          zIndex: 9999,
-          fontFamily: 'Arial, sans-serif'
-        }}
-      >
-        GA
-      </div>
     </>
   )
 }
