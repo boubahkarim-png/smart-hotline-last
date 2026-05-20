@@ -290,6 +290,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <GoogleAnalytics />
         <Script src="/scripts/webmcp.js" strategy="afterInteractive" />
+        <CookieConsent />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
