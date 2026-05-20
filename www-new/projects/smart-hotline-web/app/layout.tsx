@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import CookieConsent from '@/components/CookieConsent'
 
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
