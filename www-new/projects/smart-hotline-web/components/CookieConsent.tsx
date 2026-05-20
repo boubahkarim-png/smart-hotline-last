@@ -1,4 +1,3 @@
-'use client'
 import { useEffect, useState } from 'react'
 
 export default function CookieConsent() {
@@ -11,8 +10,8 @@ export default function CookieConsent() {
   })
 
   useEffect(() => {
-    // Add test indicator to verify component is loaded
-    if (typeof window !== 'undefined' && showBanner === false) {
+    // ALWAYS add test indicator to verify component is loaded
+    if (typeof window !== 'undefined') {
       const testDiv = document.createElement('div')
       testDiv.id = 'cookie-consent-test-indicator'
       testDiv.style.position = 'fixed'
@@ -22,7 +21,7 @@ export default function CookieConsent() {
       testDiv.style.color = 'white'
       testDiv.style.padding = '10px'
       testDiv.style.zIndex = '9999'
-      testDiv.textContent = 'CookieConsent Loaded (Test Indicator)'
+      testDiv.textContent = 'CookieConsent Loaded'
       document.body.appendChild(testDiv)
     }
   }, [])
@@ -37,9 +36,10 @@ export default function CookieConsent() {
     setShowBanner(true)
   }
 
-  if (showBanner) {
-    return null
-  }
+  // Always show the banner for testing - remove this in production
+  // if (showBanner) {
+  //   return null
+  // }
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 text-white p-4 z-50 flex flex-col items-center sm:flex-row sm:justify-between">
