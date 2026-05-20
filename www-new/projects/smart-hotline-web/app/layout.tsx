@@ -1,296 +1,206 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-import CookieConsent from '@/components/CookieConsent'
+import dynamic from 'next/dynamic'
+
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false })
+const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false })
 
 export const metadata: Metadata = {
   title: "Smart Hotline | Votre Partenaire Téléphonique 24/7",
   description: "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7.",
   icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
-  openGraph: {
-    title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
-    description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME. Réception, émission, support client.',
-    url: 'https://www.smart-hotline.com',
-    siteName: 'Smart Hotline',
-    images: [
-      {
-        url: 'https://www.smart-hotline.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Smart Hotline - Partenaire Téléphonique 24/7',
-      },
-    ],
-    locale: 'fr_CA',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
-    description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.',
-    images: ['https://www.smart-hotline.com/twitter-image.png'],
-    site: '@SmartHotline',
-  },
-  other: {
-    'google-site-verification': '05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg'
-  }
-}
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Smart Hotline",
-  "description": "Partenaire téléphonique pour PME. Téléphonistes, réceptionnistes et agents IA vocaux 24/7. Réception d'appels, émission, support client et intégration CRM.",
-  "logo": "https://www.smart-hotline.com/logo-smart-hotline.svg",
-  "image": "https://www.smart-hotline.com/logo-full.svg",
-  "telephone": "+1-514,819,0559",
-  "email": "direction@smart-hotline.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Montreal",
-    "addressRegion": "QC",
-    "addressCountry": "CA"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "45.5017",
-    "longitude": "-73.5673"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Canada"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "priceRange": "$$",
-  "currenciesAccepted": "CAD",
-  "paymentAccepted": "Credit Card, Invoice",
-  "sameAs": [
-    "https://wa.me/15148190559"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Phone Partner Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Réception d'Appels 24/7",
-          "description": "Réception professionnelle d'appels entrants pour PME"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Émission d'Appels",
-          "description": "Appels sortants pour prospection et fidélisation"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Agents IA Vocaux",
-          "description": "Intelligence artificielle vocale répondant en 2 secondes"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Support Client",
-          "description": "Support multicanal: téléphone, email, chat, WhatsApp"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Intégration CRM",
-          "description": "Connexion aux CRM et gestion de listes B2B/B2C"
-        }
-      }
-    ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "500",
-    "bestRating": "5"
-  },
-  "knowsAbout": [
-    "AI Voice Agents",
-    "Call Center Services",
-    "Phone Answering Service",
-    "Virtual Receptionist",
-    "Customer Support Automation",
-    "French Language AI",
-    "Appointment Scheduling AI",
-    "24/7 Phone Support",
-    "B2B Lead Generation",
-    "CRM Integration",
-    "ViciDial",
-    "Asterisk PBX",
-    "Voice AI Technology",
-    "Quebec Business Services",
-    "SMB Phone Solutions"
-  ]
 }
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Combien coûte un centre d'appels pour une PME?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Les tarifs Smart Hotline commencent à 15$ CAD/heure pour les agents sortants en période d'essai. Les forfaits mensuels de réception d'appels débutent à 299$. Les agents IA vocaux sont facturés à la minute, 30% sous les tarifs du marché."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Qu'est-ce qu'un agent IA vocal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Un agent IA vocal comme Sophie de Smart Hotline répond automatiquement aux appels en moins de 2 secondes. Il gère les FAQ, prend des rendez-vous, enregistre les messages et transfère vers un humain si nécessaire."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quel est le délai de mise en place?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Smart Hotline offre une mise en service en 48 heures après signature du contrat. Cela inclut la personnalisation des scripts, la formation des agents, l'intégration système et les tests."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Proposez-vous un essai gratuit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, nous offrons un essai de 2 semaines à notre tarif d'entrée, ou 1 semaine gratuite suivie de 3 semaines payantes. Aucune carte de crédit requise."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Smart Hotline fonctionne-t-il en français?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, Smart Hotline dispose d'agents francophones natifs du Québec, de France, deBelgique et de Suisse. L'assistante vocale IA Sophie parle également les deux langues avec les accents régionaux."
-      }
-    }
-  ]
-}
-
-const howToJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Comment démarrer avec Smart Hotline",
-  "description": "Guide étape par étape pour mettre en place un service de centre d'appels pour votre PME",
-  "totalTime": "PT48H",
-  "estimatedCost": {
-    "@type": "MonetaryAmount",
-    "currency": "CAD",
-    "value": "0"
-  },
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Appel de découverte",
-      "text": "Appelez-nous au +1 514 819,0559 ou réservez une consultation de 30 minutes via Calendly pour discuter de vos besoins."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "Recevoir le devis",
-      "text": "Nous vous envoyons un devis personnalisé sous 24 heures avec les tarifs adaptés à votre marché."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Configuration",
-      "text": "Nos équipes configurent vos scripts, forment les agents et testent le service."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Mise en ligne",
-      "text": "Votre service est actif avec monitoring en temps réel et rapports."
-    }
-  ]
-}
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://www.smart-hotline.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://www.smart-hotline.com/fr/services/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Tarifs",
-      "item": "https://www.smart-hotline.com/fr/tarifs/"
-    }
-  ]
-}
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="en">
       <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.smart-hotline.com/" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.smart-hotline.com/" />
+        <meta property="og:title" content="Smart Hotline | Votre Partenaire Téléphonique 24/7" />
+        <meta property="og:description" content="Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME. Réception, émission, support client." />
+        <meta property="og:image" content="https://www.smart-hotline.com/og-image.png" />
+        <meta property="og:locale" content="fr_FR" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.smart-hotline.com/" />
+        <meta property="twitter:title" content="Smart Hotline | Votre Partenaire Téléphonique 24/7" />
+        <meta property="twitter:description" content="Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME. Réception, émission, support client." />
+        <meta property="twitter:image" content="https://www.smart-hotline.com/og-image.png" />
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Smart Hotline",
+              "image": [
+                "https://www.smart-hotline.com/og-image.png"
+              ],
+              "@id": "https://www.smart-hotline.com/",
+              "url": "https://www.smart-hotline.com/",
+              "telephone": "+1-514-XXX-XXXX",
+              "priceRange": "$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Rue Example",
+                "addressLocality": "Montréal",
+                "postalCode": "H1H 1H1",
+                "addressCountry": "CA"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.5017",
+                "longitude": "-73.5673"
+              },
+              "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }],
+              "sameAs": [
+                "https://www.facebook.com/SmartHotline",
+                "https://www.linkedin.com/company/smart-hotline",
+                "https://www.instagram.com/smarthotline/"
+              ]
+            })
+          }}
+        />
+        
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [{
+                "@type": "Question",
+                "name": "Qu'est-ce que Smart Hotline ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Smart Hotline est un service de téléphonie 24/7 pour les PME offrant des téléphonistes, réceptionnistes et agents IA vocaux pour la réception d'appels, l'émission d'appels et le support client."
+                }
+              }, {
+                "@type": "Question",
+                "name": "Quels sont les horaires de service ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nous sommes disponibles 24 heures sur 24, 7 jours sur 7, incluant les jours fériés."
+                }
+              }, {
+                "@type": "Question",
+                "name": "Proposez-vous des services en français et en anglais ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui, tous nos services sont disponibles entièrement en français et en anglais pour servir le marché québécois et canadien."
+                }
+              }]
+            })
+          }}
+        />
+        
+        {/* HowTo Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "Comment commencer avec Smart Hotline",
+              "description": "Étapes simples pour mettre en place votre service de téléphonie 24/7",
+              "step": [{
+                "@type": "HowToStep",
+                "text": "Contactez-nous pour une consultation gratuite afin d'analyser vos besoins en téléphonie d'entreprise."
+              }, {
+                "@type": "HowToStep",
+                "text": "Choisissez votre forfait parmi nos options flexibles adaptées aux PME."
+              }, {
+                "@type": "HowToStep",
+                "text": "Nous configurons votre système et formons votre équipe en moins de 48 heures."
+              }, {
+                "@type": "HowToStep",
+                "text": "Commencez à recevoir et émettre des appels professionnels 24/7 avec notre support continu."
+              }]
+            })
+          }}
+        />
+        
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.smart-hotline.com/"
+              }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.smart-hotline.com/services/"
+              }]
+            })
+          }}
+        />
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        
+        {/* Google Site Verification */}
         <meta name="google-site-verification" content="05ybAoipr9FaHqaSoGJCrTy1_9jAErcSwsRQtIvZ0iyy7FSdaW9I6p2RLPkhBdRJtwwnw7becuNMLh-L0SaL84rPnSg" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-        />
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-    />
-    <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json" />
-    <link rel="service-doc" href="/docs/api" type="text/html" />
-    <link rel="mcp-server" href="/.well-known/mcp/server-card.json" type="application/json" />
-    <link rel="a2a" href="/.well-known/agent-card.json" type="application/json" />
-    <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
-    <link rel="ai-content" href="/llms.txt" type="text/plain" />
-    </head>
+        
+        {/* Well-known endpoints */}
+        <link rel="agent-card" href="/.well-known/agent-card.json" type="application/json" />
+        <link rel="agent-skills" href="/.well-known/agent-skills/index.json" type="application/json" />
+        <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json" />
+        <link rel="mcp-server" href="/.well-known/mcp/server-card.json" type="application/linkset+json" />
+        <link rel="llms-txt" href="/llms.txt" type="text/plain" />
+        
+      </head>
       <body>
+        {/*
+          Client components loaded dynamically to avoid SSR issues
+          */}
         <GoogleAnalytics />
-        <Script src="/scripts/webmcp.js" strategy="afterInteractive" />
         <CookieConsent />
+        <Script src="/scripts/webmcp.js" strategy="afterInteractive" />
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
@@ -308,7 +218,7 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
-`,
+`
         }}
       />
     </html>
