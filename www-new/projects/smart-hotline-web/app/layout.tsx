@@ -8,6 +8,7 @@ const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr:
 const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false })
 const LangSetter = dynamic(() => import('@/components/LangSetter'), { ssr: false })
 const CleanupTestIds = dynamic(() => import('@/components/CleanupTestIds'), { ssr: false })
+const RemoveDebugText = dynamic(() => import('@/components/RemoveDebugText'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
@@ -61,6 +62,8 @@ export default function RootLayout({
         <GoogleAnalytics />
         {/* Cleanup component to remove any injected test IDs */}
         <CleanupTestIds />
+        {/* Remove debug text component */}
+        <RemoveDebugText />
         {children}
       </body>
     </html>
