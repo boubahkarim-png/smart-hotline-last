@@ -257,7 +257,7 @@ export default function Sectors() {
             </div>
 <div className="w-full lg:w-[60%]">
 							<div className="relative">
-								<img src={`${basePath}/images/secteurs-hero.jpg`} alt="Diversity of sectors served"
+								<img src={`${basePath}/images/secteurs-hero.webp`} alt="Diversity of sectors served"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                   style={{maxHeight:'550px', objectFit:'cover'}}/>
                 <div className="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-xl p-3.5 shadow-xl border border-slate-100">
