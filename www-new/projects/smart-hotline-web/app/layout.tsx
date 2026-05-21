@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     site: '@SmartHotline',
     title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
     description: 'Téléphonistes, réceptionnistes et agents IA vocaux 24/7 pour PME.',
-    image: 'https://www.smart-hotline.com/twitter-image.png'
+    images: [
+      {
+        url: 'https://www.smart-hotline.com/twitter-image.png'
+      }
+    ]
   },
   icons: {
     icon: '/favicon.ico',
