@@ -4,11 +4,12 @@ import './globals.css'
 import dynamic from 'next/dynamic'
 
 // Dynamic imports with ssr: false to ensure client-side rendering
-const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false })
-const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false })
-const LangSetter = dynamic(() => import('@/components/LangSetter'), { ssr: false })
-const CleanupTestIds = dynamic(() => import('@/components/CleanupTestIds'), { ssr: false })
-const RemoveDebugText = dynamic(() => import('@/components/RemoveDebugText'), { ssr: false })
+const CookieConsent = dynamic(() => import('../components/CookieConsent'), { ssr: false })
+const GoogleAnalytics = dynamic(() => import('../components/GoogleAnalytics'), { ssr: false })
+const LangSetter = dynamic(() => import('../components/LangSetter'), { ssr: false })
+const CleanupTestIds = dynamic(() => import('../components/CleanupTestIds'), { ssr: false })
+const RemoveDebugText = dynamic(() => import('../components/RemoveDebugText'), { ssr: false })
+const RemoveDebugTextEarly = dynamic(() => import('../components/RemoveDebugTextEarly'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Smart Hotline | Votre Partenaire Téléphonique 24/7',
@@ -55,6 +56,8 @@ export default function RootLayout({
   return (
     <html lang="fr-CA">
       <body>
+        {/* Early cleanup - runs before interactive to remove injected debug text */}
+        <RemoveDebugTextEarly />
         {/* Language setter - runs on every route change to set lang attribute */}
         <LangSetter lang="fr-CA" />
         {/* Main components */}
@@ -65,7 +68,7 @@ export default function RootLayout({
         {/* Remove debug text component */}
         <RemoveDebugText />
         {children}
-      </body>
+      }
     </html>
   )
 }
