@@ -116,19 +116,19 @@ const data = {
         setSent(true)
         setRemainingSubmissions(prev => Math.max(0, prev - 1))
       } else {
-        const subject = encodeURIComponent(`Demande de contact - ${data.name}`);
+        const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
         const body = encodeURIComponent(
-          `Nom: ${data.name}\\nEmail: ${data.email}\\n\\nMessage:\\n${data.message}`
-        );
-        window.location.href = `mailto:boubah.karim@gmail.com?subject=${subject}&body=${body}`;
-        setSent(true);
+          `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+        )
+        window.location.href = `mailto:boubah.karim@gmail.com?subject=${subject}&body=${body}`
+        setSent(true)
       }
     } catch (err) {
       const subject = encodeURIComponent(`Demande de contact - ${data.name}`)
       const body = encodeURIComponent(
         `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
       )
-      window.location.href = `mailto:direction@smart-hotline.com?subject=${subject}&body=${body}`
+      window.location.href = `mailto:boubah.karim@gmail.com?subject=${subject}&body=${body}`
       setSent(true)
     }
 
