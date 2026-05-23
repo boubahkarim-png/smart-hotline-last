@@ -20,6 +20,7 @@ export const NAV_FR: NavItem[] = [
     ],
   },
   { label: 'Tarifs', href: '/fr/tarifs' },
+  { label: 'Secteurs', href: '/fr/secteurs' },
   { label: 'À Propos', href: '/fr/a-propos' },
   { label: 'Blog', href: '/fr/blog' },
   { label: 'Contact', href: '/fr/contact' },

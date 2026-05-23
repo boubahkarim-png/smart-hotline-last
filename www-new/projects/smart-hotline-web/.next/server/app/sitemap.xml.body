@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 <loc>https://www.smart-hotline.com</loc>
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
@@ -10,7 +10,7 @@
 <loc>https://www.smart-hotline.com/fr</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
@@ -18,7 +18,7 @@
 <loc>https://www.smart-hotline.com/fr/reception</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/reception" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/inbound" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -26,7 +26,7 @@
 <loc>https://www.smart-hotline.com/fr/emission</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/emission" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/outbound" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -34,7 +34,7 @@
 <loc>https://www.smart-hotline.com/fr/agents-ia</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/agents-ia" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/ai-agents" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -42,7 +42,7 @@
 <loc>https://www.smart-hotline.com/fr/support</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/support" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/support" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -50,7 +50,7 @@
 <loc>https://www.smart-hotline.com/fr/crm</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/crm" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/crm" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -58,7 +58,7 @@
 <loc>https://www.smart-hotline.com/fr/tarifs</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/tarifs" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/pricing" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -66,7 +66,7 @@
 <loc>https://www.smart-hotline.com/fr/contact</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/contact" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/contact" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -74,7 +74,7 @@
 <loc>https://www.smart-hotline.com/fr/a-propos</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/a-propos" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/about" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -82,7 +82,7 @@
 <loc>https://www.smart-hotline.com/fr/services</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/services" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/services" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -90,7 +90,7 @@
 <loc>https://www.smart-hotline.com/fr/secteurs</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/secteurs" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/sectors" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -98,7 +98,7 @@
 <loc>https://www.smart-hotline.com/fr/blog</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/blog" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/blog" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -106,7 +106,7 @@
 <loc>https://www.smart-hotline.com/fr/mentions-legales</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/mentions-legales" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/legal" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -114,7 +114,7 @@
 <loc>https://www.smart-hotline.com/fr/confidentialite</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/confidentialite" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/privacy" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -122,7 +122,7 @@
 <loc>https://www.smart-hotline.com/fr/cgv</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/cgv" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/terms" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -130,7 +130,7 @@
 <loc>https://www.smart-hotline.com/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
@@ -138,7 +138,7 @@
 <loc>https://www.smart-hotline.com/en/inbound</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/reception" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/inbound" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -146,7 +146,7 @@
 <loc>https://www.smart-hotline.com/en/outbound</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/emission" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/outbound" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -154,7 +154,7 @@
 <loc>https://www.smart-hotline.com/en/ai-agents</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/agents-ia" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/ai-agents" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -162,7 +162,7 @@
 <loc>https://www.smart-hotline.com/en/support</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/support" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/support" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -170,7 +170,7 @@
 <loc>https://www.smart-hotline.com/en/crm</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/crm" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/crm" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -178,7 +178,7 @@
 <loc>https://www.smart-hotline.com/en/pricing</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/tarifs" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/pricing" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -186,7 +186,7 @@
 <loc>https://www.smart-hotline.com/en/contact</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/contact" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/contact" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -194,7 +194,7 @@
 <loc>https://www.smart-hotline.com/en/about</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/a-propos" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/about" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -202,7 +202,7 @@
 <loc>https://www.smart-hotline.com/en/services</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/services" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/services" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -210,7 +210,7 @@
 <loc>https://www.smart-hotline.com/en/sectors</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/secteurs" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/sectors" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -218,7 +218,7 @@
 <loc>https://www.smart-hotline.com/en/blog</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/blog" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/blog" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -226,7 +226,7 @@
 <loc>https://www.smart-hotline.com/en/legal</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/mentions-legales" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/legal" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -234,7 +234,7 @@
 <loc>https://www.smart-hotline.com/en/privacy</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/confidentialite" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/privacy" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -242,7 +242,7 @@
 <loc>https://www.smart-hotline.com/en/terms</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://www.smart-hotline.com/fr/cgv" />
 <xhtml:link rel="alternate" hreflang="en" href="https://www.smart-hotline.com/en/terms" />
-<lastmod>2026-05-23T19:00:15.596Z</lastmod>
+<lastmod>2026-05-07T01:03:18.477Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
